@@ -144,3 +144,4 @@ Problem: I have some other problem not listed above.
 Solution: Check the Greenbolt Studios website at: 
 http://greenboltstudios.proboards.com
 
+Readme file by RealNetworks, edited by Greenbolt Studios
