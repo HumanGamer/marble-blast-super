@@ -10,7 +10,7 @@ function playMissionGui::onWake(%this)
 function PM_StartMission()
 {
    %id = PM_missionList.getSelectedId();
-   %mission = getField(PM_missionList.getRowTextById(%id), 1);
+   %mission = PM_missionList.getRowTextById(%id);//getField(PM_missionList.getRowTextById(%id), 1);
    $LastMissionId = %id;
    $LastMissionType = %mission.type;
 
@@ -54,11 +54,11 @@ function buildMissionList()
          %file !$= ""; %file = findNextFile($Server::MissionFileSpec))
    {
       if (strStr(%file, "CVS/") == -1 && strStr(%file, "common/") == -1)
-         {
+      {
          %mission = getMissionObject(%file);
          if (%mission.type $= $MissionType)
          {
-            PM_missionList.addRow(%index,%mission.level TAB %mission);
+            PM_missionList.addRow(%index, %mission);
             %index++;
          }
       }
@@ -66,18 +66,19 @@ function buildMissionList()
    PM_missionList.sortNumerical(0);
    %group = "MTYPE_" @ $MissionType;
    sortByLevel(%group);
+   sortByLevel(%group);
    //%level = $pref::QualifiedLevel[$MissionType] - 1;
    //if (%level >= %group.getCount())
    //   %level = %group.getCount() - 1;
    //PM_setSelected(%level);
    if ($LastMissionId $= "" || $LastMissionType !$= $MissionType)
-      $LastMissionId = 1;   
+      $LastMissionId = 0;   
    if ($LastMissionId >= %group.getCount())
       $LastMissionId = %group.getCount();
-   if ($LastMissionId < 1)
-      $LastMissionId = 1;
-   PM_setSelected($LastMissionId - 1);
-   LB_SetSelected($LastMissionId - 1);
+   if ($LastMissionId < 0)
+      $LastMissionId = 0;
+   PM_setSelected($LastMissionId);
+   LB_SetSelected($LastMissionId);
 }
 
 function sortByLevel(%group)
@@ -142,10 +143,17 @@ function PM_setSelected(%index)
       PM_level_fgnd.setText("<color:FFFFFF><font:DomCasualD:24><just:center>" @ $MissionType);
       return;
    }
-   %mission = %group.getObject(%index);
-   %name = "<color:000000><spush><font:Arial:20>" @ %mission.name @ "<spop><lmargin:10>\n\n";
+   //%mission = %group.getObject(%index);
+   %mission = PM_missionList.getRowTextById(%index);//getField(PM_missionList.getRowTextById(%index), 1);
+   %name = "<color:000000><spush><font:Arial Bold:24>" @ %mission.name @ "<spop><lmargin:10>\n\n";
    if (%mission.time)
       %qualify = "<spush><font:Arial:20><lmargin:0>Spare Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n\n";
+   if (%mission.artist !$= "")
+   {
+      %author = "<spush><font:Arial Bold:18>" @ %mission.artist @ "<spop>\n\n";
+   } else {
+      %author = "<spush><font:Arial Bold:18>" @ "Unknown Artist" @ "<spop>\n\n";
+   }
    %desc = %mission.desc @ "\n\n";
    %best = "<spush><font:Arial:20>Your best times:<spop><lmargin:10><tab:0,130,180><font:Arial Bold:14>\n";
    getBestTimes(%mission.file);
@@ -159,7 +167,7 @@ function PM_setSelected(%index)
       %time = %time @ "\n";
       %total = %total @ %time;
    }
-   PM_description.setText(%name @ %qualify @ %desc @ %best @ %total);
+   PM_description.setText(%name @ %qualify @ %desc @ %author @ %best @ %total);
    %bmp = strreplace(%mission.file, ".mis", "");
    PM_preview.setBitmap(%bmp);
    if (%index <= 0) PM_prev.setActive(false); else PM_prev.setActive(true);
@@ -168,7 +176,7 @@ function PM_setSelected(%index)
    PM_next.command = "PM_setSelected(" @ %index + 1 @ ");";
    PM_level_bkgnd.setText("<color:000000><font:DomCasualD:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
    PM_level_fgnd.setText("<color:FFFFFF><font:DomCasualD:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
-   PM_missionList.setSelectedRow(%index);
+   PM_missionList.setSelectedById(%index);
    if (%index > $pref::QualifiedLevel[$MissionType] && !$testCheats)
    {
       PM_play.setActive(false);

@@ -45,8 +45,6 @@ function escapeToLobby()
 {
    cancel($Multiplayer::UpdateSchedule);
    
-   $escapeEnd = true;
-   
    endMission();
    
    Canvas.setContent(LobbyGui);

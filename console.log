@@ -1,6 +1,6 @@
-//-------------------------- 8/31/2014 -- 17:42:07 -----
+//-------------------------- 8/31/2014 -- 19:33:01 -----
 Processor Init:
-   Intel Pentium III, 2445 Mhz
+   Intel Pentium III, 2492 Mhz
    FPU detected
    MMX detected
    SSE detected
@@ -24,7 +24,9 @@ Missing file: common/defaults.cs!
 Loading compiled script marble/main.cs.
 Loading compiled script marble/client/defaults.cs.
 Loading compiled script marble/server/defaults.cs.
+Compiling marble/client/prefs.cs...
 Loading compiled script marble/client/prefs.cs.
+Compiling marble/server/prefs.cs...
 Loading compiled script marble/server/prefs.cs.
 Missing file: marble/referrer.cs!
 
@@ -154,6 +156,7 @@ Loading compiled script marble/client/ui/MarbleSelectGui.gui.
 Loading compiled script marble/client/ui/playerListGui.gui.
 Loading compiled script marble/client/ui/gemPopupGui.gui.
 Loading compiled script marble/client/ui/lobbyGui.gui.
+Compiling marble/client/ui/MultiplayerExitGui.gui...
 Loading compiled script marble/client/ui/MultiplayerExitGui.gui.
 Loading compiled script marble/client/scripts/client.cs.
 Loading compiled script marble/client/scripts/helpCredits.cs.
@@ -169,18 +172,24 @@ Loading compiled script marble/client/scripts/centerPrint.cs.
 Loading compiled script marble/client/scripts/game.cs.
 Loading compiled script marble/client/scripts/version.cs.
 Loading compiled script marble/client/scripts/demo.cs.
+Loading compiled script marble/client/scripts/playMissionGui.cs.
 Loading compiled script marble/client/scripts/multiplayer.cs.
 Loading compiled script marble/client/scripts/playerListGui.cs.
 Loading compiled script marble/client/scripts/gemPopupGui.cs.
 Loading compiled script marble/client/scripts/radar.cs.
 Loading compiled script marble/client/scripts/lobby.cs.
 Loading compiled script marble/client/scripts/multiplayerExitGui.cs.
+Compiling marble/client/scripts/default.bind.cs...
 Loading compiled script marble/client/scripts/default.bind.cs.
 Loading compiled script marble/client/config.cs.
 Binding server port to default IP
 UDP initialized on port 0
 Set::getObject index out of range.
+Set::getObject index out of range.
 Engine initialized...
+Debugger connection from 127.0.0.1
+Set::getObject index out of range.
+Set::getObject index out of range.
 Set::getObject index out of range.
 Set::getObject index out of range.
 Exporting server prefs...
@@ -231,8 +240,8 @@ Loading compiled script marble/server/scripts/multiplayer.cs.
 Executing marble/data/missions/multiplayer/multiplayer_map3.mis.
 *** Mission loaded
 Connect request from: IPX:3030223B:0D0A20202020:8224
-Connection established 1999
-CADD: 2000 local
+Connection established 2002
+CADD: 2003 local
 Mapping string: ServerMessage to index: 0
 Mapping string: MsgConnectionError to index: 1
 Mapping string: MsgClientJoin to index: 2
@@ -272,37 +281,563 @@ Mapping string: MissionStartPhase3 to index: 12
 Mapping string: MissionStartPhase3Ack to index: 3
 Mapping string: MissionStart to index: 13
 Mapping string: ClearRadar to index: 14
+Mapping string: SetMode to index: 15
+Mapping string: GetMarbleSkin to index: 16
+Mapping string: UpdateRadarObject to index: 17
+Mapping string: SetMarbleSkin to index: 4
 *** Initial Control Object
 Activating DirectInput...
 keyboard0 input device acquired.
 pushDialog(): Invalid control: MainChatHud
-Mapping string: SetMode to index: 15
-Mapping string: GetMarbleSkin to index: 16
-Mapping string: UpdateRadarObject to index: 17
 Mapping string: SetGhostScale to index: 18
 Mapping string: ResetTimer to index: 19
 Mapping string: SetMessage to index: 20
 Mapping string: SetTime to index: 21
 Mapping string: SetGemCount to index: 22
 Mapping string: SetMaxGems to index: 23
-Mapping string: SetMarbleSkin to index: 4
 Mapping string: base to index: 24
-Mapping string: red to index: 25
+Mapping string: yellow to index: 25
+Mapping string: red to index: 26
+Mapping string: UpdateTransform to index: 5
+*** ENDING MISSION
+*** ENDING MISSION
+endGame: No game running!
+popDialog(): Invalid control: MainChatHud
+Set::getObject index out of range.
+Set::getObject index out of range.
+common/server/missionLoad.cs (155): Unable to find object: 'MissionGroup' attempting to call function 'delete'
+common/server/missionLoad.cs (156): Unable to find object: 'MissionCleanup' attempting to call function 'delete'
+Mapping string: ResetGhostVars to index: 27
+Mapping string: SetPowerUp to index: 28
+Mapping string: MissionEnd to index: 29
+marble/server/scripts/multiplayer.cs (50): Unable to find object: '' attempting to call function 'setTransform'
+*** LOADING MISSION: marble/data/missions/multiplayer/multiplayer_map3.mis
+*** Stage 1 load
+Mapping string: ClearCenterPrint to index: 30
+Mapping string: ClearBottomPrint to index: 31
+*** Stage 2 load
+Executing marble/data/missions/multiplayer/multiplayer_map3.mis.
+*** Mission loaded
+*** Sending mission load to client: marble/data/missions/multiplayer/multiplayer_map3.mis
+*** New Mission: marble/data/missions/multiplayer/multiplayer_map3.mis
+*** Phase 1: Download Datablocks & Targets
+Mapping string: GameStart to index: 1
+*** Phase 2: Download Ghost Objects
+Ghost Always objects received.
+*** Phase 3: Mission Lighting
+*** Initial Control Object
+pushDialog(): Invalid control: MainChatHud
+Mapping string: blue to index: 3
+popDialog(): Invalid control: MainChatHud
+CDROP: 2003 IPX:3030223B:0D0A20202020:8224
+Exporting server prefs...
+Set::getObject index out of range.
+Set::getObject index out of range.
+Set::getObject index out of range.
+Set::getObject index out of range.
+Exporting server prefs...
+Loading compiled script marble/server/scripts/audioProfiles.cs.
+Loading compiled script marble/server/scripts/camera.cs.
+Loading compiled script marble/server/scripts/markers.cs.
+... Shape with old version.
+Loading compiled script marble/server/scripts/triggers.cs.
+Loading compiled script marble/server/scripts/inventory.cs.
+Loading compiled script marble/server/scripts/shapeBase.cs.
+Loading compiled script marble/server/scripts/staticShape.cs.
+Loading compiled script marble/server/scripts/item.cs.
+Loading compiled script marble/server/scripts/marble.cs.
+ParticleEmitterData(MarbleTrailEmitter) period < 1 ms
+ParticleEmitterData(MarbleTrailEmitter) thetaMin > thetaMax
+Loading compiled script marble/server/scripts/ghost.cs.
+Loading compiled script marble/server/scripts/gems.cs.
+Loading compiled script marble/server/scripts/powerUps.cs.
+Warning: shape marble/data/shapes/items/superspeed.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/items/timetravel.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/buttons.cs.
+Loading compiled script marble/server/scripts/hazards.cs.
+Warning: shape marble/data/shapes/hazards/trapdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/pads.cs.
+Warning: shape marble/data/shapes/pads/startarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/endarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/bumpers.cs.
+Warning: shape marble/data/shapes/bumpers/pball_tri.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/signs.cs.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/finishlinesign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/fireworks.cs.
+Loading compiled script marble/server/scripts/beams.cs.
+Attempting to re-link namespace GemBeam from StaticShapeData to GemBeam with non-zero refcount.
+Attempting to re-link namespace PadBeam from StaticShapeData to PadBeam with non-zero refcount.
+Loading compiled script marble/server/scripts/pathedInteriors.cs.
+Loading compiled script marble/server/scripts/multiplayer.cs.
+*** LOADING MISSION: marble/data/missions/beginner/wgu.mis
+*** Stage 1 load
+*** Stage 2 load
+Executing marble/data/missions/beginner/wgu.mis.
+marble/server/scripts/pads.cs (0): Unable to find object: 'MissionCleanup' attempting to call function 'add'
+*** Mission loaded
+Connect request from: IPX:0A202020:6E6577204D69:29555
+Connection established 2663
+CADD: 2664 local
+Mapping string: ServerMessage to index: 0
+Mapping string: MsgConnectionError to index: 1
+Mapping string: MsgClientJoin to index: 2
+Mapping string: CheckVersion to index: 3
+Mapping string: AddPlayer to index: 4
+Mapping string: CheckVersion to index: 0
+*** Sending mission load to client: marble/data/missions/beginner/wgu.mis
+Mapping string: MsgLoadInfo to index: 5
+Mapping string: MsgLoadInfoDone to index: 6
+Mapping string: MissionStartPhase1 to index: 7
+*** New Mission: marble/data/missions/beginner/wgu.mis
+*** Phase 1: Download Datablocks & Targets
+Mapping string: MissionStartPhase1Ack to index: 1
+Warning: shape marble/data/shapes/items/superspeed.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/items/timetravel.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/hazards/trapdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/startarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/endarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/bumpers/pball_tri.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/finishlinesign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Mapping string: MissionStartPhase2 to index: 8
+*** Phase 2: Download Ghost Objects
+Mapping string: MissionStartPhase2Ack to index: 2
+Ghost Always objects received.
+Mapping string: MissionStartPhase3 to index: 9
+*** Phase 3: Mission Lighting
+Mapping string: MissionStartPhase3Ack to index: 3
+Mapping string: MissionStart to index: 10
+Mapping string: ClearRadar to index: 11
+Mapping string: SetMode to index: 12
+Mapping string: GetMarbleSkin to index: 13
+Mapping string: SetGhostScale to index: 14
+Mapping string: GameStart to index: 15
+Mapping string: UpdateTransform to index: 16
+Mapping string: ResetTimer to index: 17
+Mapping string: SetMessage to index: 18
+Mapping string: SetGemCount to index: 19
+Mapping string: SetMaxGems to index: 20
+Mapping string: SetMarbleSkin to index: 4
+*** Initial Control Object
+pushDialog(): Invalid control: MainChatHud
+Mapping string: Matt to index: 21
+Mapping string: base to index: 22
+Mapping string: red to index: 23
+Mapping string: yellow to index: 24
+Mapping string: UpdateTransform to index: 5
+keyboard0 input device unacquired.
+Mapping string: StartTimer to index: 25
+==>echo($escapeend);
+0
+keyboard0 input device acquired.
+Mapping string: AddHelpLine to index: 26
+Mapping string: MsgItemPickup to index: 27
+Mapping string: You picked up a gem.  %1 gems to go! to index: 28
+Mapping string: You picked up %1 to index: 29
+Mapping string: SetGravityDir to index: 30
+Mapping string: You picked up a gem.  Only one gem to go! to index: 31
+Mapping string: OOBUpdate to index: 1
+Mapping string: OOBClick to index: 6
+Mapping string: SetPowerUp to index: 2
+Mapping string: SetTime to index: 3
+Mapping string: ResetOOB to index: 5
+Mapping string: MsgHaveAllGems to index: 6
+Mapping string: You have all the gems, head for the finish! to index: 7
+ Marble powerUpId to do: 1
+Mapping string: UseCurrentPowerUp to index: 7
+marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
+Mapping string: MsgRaceOver to index: 8
+Mapping string: Congratulations! You've finished! to index: 9
+Mapping string: StopTimer to index: 10
+marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
+marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
+Mapping string: GameEnd to index: 12
+popDialog(): Invalid control: MainChatHud
+CDROP: 2664 IPX:0A202020:6E6577204D69:29555
+Exporting server prefs...
+Set::getObject index out of range.
+Set::getObject index out of range.
+Exporting server prefs...
+Loading compiled script marble/server/scripts/audioProfiles.cs.
+Loading compiled script marble/server/scripts/camera.cs.
+Loading compiled script marble/server/scripts/markers.cs.
+... Shape with old version.
+Loading compiled script marble/server/scripts/triggers.cs.
+Loading compiled script marble/server/scripts/inventory.cs.
+Loading compiled script marble/server/scripts/shapeBase.cs.
+Loading compiled script marble/server/scripts/staticShape.cs.
+Loading compiled script marble/server/scripts/item.cs.
+Loading compiled script marble/server/scripts/marble.cs.
+ParticleEmitterData(MarbleTrailEmitter) period < 1 ms
+ParticleEmitterData(MarbleTrailEmitter) thetaMin > thetaMax
+Loading compiled script marble/server/scripts/ghost.cs.
+Loading compiled script marble/server/scripts/gems.cs.
+Loading compiled script marble/server/scripts/powerUps.cs.
+Warning: shape marble/data/shapes/items/superspeed.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/items/timetravel.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/buttons.cs.
+Loading compiled script marble/server/scripts/hazards.cs.
+Warning: shape marble/data/shapes/hazards/trapdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/pads.cs.
+Warning: shape marble/data/shapes/pads/startarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/endarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/bumpers.cs.
+Warning: shape marble/data/shapes/bumpers/pball_tri.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/signs.cs.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/finishlinesign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/fireworks.cs.
+Loading compiled script marble/server/scripts/beams.cs.
+Attempting to re-link namespace GemBeam from StaticShapeData to GemBeam with non-zero refcount.
+Attempting to re-link namespace PadBeam from StaticShapeData to PadBeam with non-zero refcount.
+Loading compiled script marble/server/scripts/pathedInteriors.cs.
+Loading compiled script marble/server/scripts/multiplayer.cs.
+*** LOADING MISSION: marble/data/missions/beginner/natureroute.mis
+*** Stage 1 load
+*** Stage 2 load
+Executing marble/data/missions/beginner/natureroute.mis.
+marble/server/scripts/pads.cs (0): Unable to find object: 'MissionCleanup' attempting to call function 'add'
+*** Mission loaded
+Connect request from: IPX:35223B0D:0A2020202020:25376
+Connection established 2877
+CADD: 2878 local
+Mapping string: ServerMessage to index: 0
+Mapping string: MsgConnectionError to index: 1
+Mapping string: MsgClientJoin to index: 2
+Mapping string: CheckVersion to index: 3
+Mapping string: AddPlayer to index: 4
+Mapping string: CheckVersion to index: 0
+*** Sending mission load to client: marble/data/missions/beginner/natureroute.mis
+Mapping string: MsgLoadInfo to index: 5
+Mapping string: MsgLoadInfoDone to index: 6
+Mapping string: MissionStartPhase1 to index: 7
+*** New Mission: marble/data/missions/beginner/natureroute.mis
+*** Phase 1: Download Datablocks & Targets
+Mapping string: MissionStartPhase1Ack to index: 1
+Warning: shape marble/data/shapes/items/superspeed.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/items/timetravel.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/hazards/trapdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/startarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/endarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/bumpers/pball_tri.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/finishlinesign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Mapping string: MissionStartPhase2 to index: 8
+*** Phase 2: Download Ghost Objects
+Mapping string: MissionStartPhase2Ack to index: 2
+Ghost Always objects received.
+Mapping string: MissionStartPhase3 to index: 9
+*** Phase 3: Mission Lighting
+Mapping string: MissionStartPhase3Ack to index: 3
+Mapping string: MissionStart to index: 10
+Mapping string: ClearRadar to index: 11
+Mapping string: SetMode to index: 12
+Mapping string: GetMarbleSkin to index: 13
+Mapping string: SetGhostScale to index: 14
+Mapping string: GameStart to index: 15
+Mapping string: UpdateTransform to index: 16
+Mapping string: ResetTimer to index: 17
+Mapping string: SetMessage to index: 18
+Mapping string: SetGemCount to index: 19
+Mapping string: SetMaxGems to index: 20
+Mapping string: AddHelpLine to index: 21
+Mapping string: SetMarbleSkin to index: 4
+*** Initial Control Object
+pushDialog(): Invalid control: MainChatHud
+Mapping string: Matt to index: 22
+Mapping string: base to index: 23
+Mapping string: orange to index: 24
+Mapping string: turquoise to index: 25
 Mapping string: yellow to index: 26
 Mapping string: UpdateTransform to index: 5
 Mapping string: StartTimer to index: 27
-Mapping string: SetPowerUp to index: 28
-Mapping string: MsgItemPickup to index: 29
-Mapping string: You picked up %1 to index: 30
+Mapping string: MsgItemPickup to index: 28
+Mapping string: You picked up %1 to index: 29
+Mapping string: IncBonusTime to index: 30
+Mapping string: You picked up a gem.  %1 gems to go! to index: 31
+Mapping string: MsgMissingGems to index: 1
+Mapping string: You can't finish without all the gems!! to index: 2
+Mapping string: SetPowerUp to index: 3
+ Marble powerUpId to do: 1
 Mapping string: UseCurrentPowerUp to index: 6
-Used Blast
+marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
+Mapping string: You picked up a gem.  Only one gem to go! to index: 5
+Mapping string: OOBUpdate to index: 6
+Mapping string: OOBClick to index: 7
+Mapping string: SetGravityDir to index: 7
+Mapping string: SetTime to index: 8
+Mapping string: ResetOOB to index: 9
  Marble powerUpId to do: 1
 marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
-Mapping string: RemoveRadarObject to index: 31
-Mapping string: ShowGemPickup to index: 1
-Mapping string: UpdateScore to index: 3
+ Marble powerUpId to do: 1
+marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
+ Marble powerUpId to do: 1
+marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
+ Marble powerUpId to do: 1
+marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
+ Marble powerUpId to do: 1
+marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
+ Marble powerUpId to do: 1
+marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
+ Marble powerUpId to do: 1
+marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
+marble/client/scripts/default.bind.cs (33): Unable to find object: 'ExitGameText' attempting to call function 'setText'
 popDialog(): Invalid control: MainChatHud
-CDROP: 2000 IPX:3030223B:0D0A20202020:8224
+CDROP: 2878 IPX:35223B0D:0A2020202020:25376
+Exporting server prefs...
+Set::getObject index out of range.
+Set::getObject index out of range.
+Exporting server prefs...
+Loading compiled script marble/server/scripts/audioProfiles.cs.
+Loading compiled script marble/server/scripts/camera.cs.
+Loading compiled script marble/server/scripts/markers.cs.
+... Shape with old version.
+Loading compiled script marble/server/scripts/triggers.cs.
+Loading compiled script marble/server/scripts/inventory.cs.
+Loading compiled script marble/server/scripts/shapeBase.cs.
+Loading compiled script marble/server/scripts/staticShape.cs.
+Loading compiled script marble/server/scripts/item.cs.
+Loading compiled script marble/server/scripts/marble.cs.
+ParticleEmitterData(MarbleTrailEmitter) period < 1 ms
+ParticleEmitterData(MarbleTrailEmitter) thetaMin > thetaMax
+Loading compiled script marble/server/scripts/ghost.cs.
+Loading compiled script marble/server/scripts/gems.cs.
+Loading compiled script marble/server/scripts/powerUps.cs.
+Warning: shape marble/data/shapes/items/superspeed.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/items/timetravel.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/buttons.cs.
+Loading compiled script marble/server/scripts/hazards.cs.
+Warning: shape marble/data/shapes/hazards/trapdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/pads.cs.
+Warning: shape marble/data/shapes/pads/startarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/endarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/bumpers.cs.
+Warning: shape marble/data/shapes/bumpers/pball_tri.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/signs.cs.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/finishlinesign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/fireworks.cs.
+Loading compiled script marble/server/scripts/beams.cs.
+Attempting to re-link namespace GemBeam from StaticShapeData to GemBeam with non-zero refcount.
+Attempting to re-link namespace PadBeam from StaticShapeData to PadBeam with non-zero refcount.
+Loading compiled script marble/server/scripts/pathedInteriors.cs.
+Loading compiled script marble/server/scripts/multiplayer.cs.
+*** LOADING MISSION: marble/data/missions/beginner/gcota.mis
+*** Stage 1 load
+*** Stage 2 load
+Executing marble/data/missions/beginner/gcota.mis.
+marble/server/scripts/pads.cs (0): Unable to find object: 'MissionCleanup' attempting to call function 'add'
+*** Mission loaded
+Connect request from: IPX:3231202D:31342E393535:57
+Connection established 3253
+CADD: 3254 local
+Mapping string: ServerMessage to index: 0
+Mapping string: MsgConnectionError to index: 1
+Mapping string: MsgClientJoin to index: 2
+Mapping string: CheckVersion to index: 3
+Mapping string: AddPlayer to index: 4
+Mapping string: CheckVersion to index: 0
+*** Sending mission load to client: marble/data/missions/beginner/gcota.mis
+Mapping string: MsgLoadInfo to index: 5
+Mapping string: MsgLoadInfoDone to index: 6
+Mapping string: MissionStartPhase1 to index: 7
+*** New Mission: marble/data/missions/beginner/gcota.mis
+*** Phase 1: Download Datablocks & Targets
+Mapping string: MissionStartPhase1Ack to index: 1
+Warning: shape marble/data/shapes/items/superspeed.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/items/timetravel.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/hazards/trapdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/startarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/endarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/bumpers/pball_tri.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/finishlinesign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Mapping string: MissionStartPhase2 to index: 8
+*** Phase 2: Download Ghost Objects
+Mapping string: MissionStartPhase2Ack to index: 2
+Ghost Always objects received.
+Mapping string: MissionStartPhase3 to index: 9
+*** Phase 3: Mission Lighting
+Mapping string: MissionStartPhase3Ack to index: 3
+Mapping string: MissionStart to index: 10
+Mapping string: ClearRadar to index: 11
+Mapping string: SetMode to index: 12
+Mapping string: GetMarbleSkin to index: 13
+Mapping string: SetGhostScale to index: 14
+Mapping string: GameStart to index: 15
+Mapping string: UpdateTransform to index: 16
+Mapping string: ResetTimer to index: 17
+Mapping string: SetMessage to index: 18
+Mapping string: SetGemCount to index: 19
+Mapping string: SetMaxGems to index: 20
+Mapping string: SetMarbleSkin to index: 4
+*** Initial Control Object
+pushDialog(): Invalid control: MainChatHud
+Mapping string: Matt to index: 21
+Mapping string: base to index: 22
+Mapping string: green to index: 23
+Mapping string: black to index: 24
+Mapping string: UpdateTransform to index: 5
+Mapping string: StartTimer to index: 25
+Mapping string: AddHelpLine to index: 26
+Mapping string: MsgItemPickup to index: 27
+Mapping string: You picked up a gem.  %1 gems to go! to index: 28
+Mapping string: UseCurrentPowerUp to index: 6
+marble/server/scripts/marble.cs (404): Unable to find object: '' attempting to call function 'usePowerUp'
+Mapping string: SetPowerUp to index: 29
+Mapping string: OOBUpdate to index: 30
+Mapping string: OOBClick to index: 7
+Mapping string: SetGravityDir to index: 31
+Mapping string: SetTime to index: 1
+Mapping string: ResetOOB to index: 2
+marble/client/scripts/default.bind.cs (33): Unable to find object: 'ExitGameText' attempting to call function 'setText'
+popDialog(): Invalid control: MainChatHud
+CDROP: 3254 IPX:3231202D:31342E393535:57
+Exporting server prefs...
+Set::getObject index out of range.
+Set::getObject index out of range.
+Exporting server prefs...
+Loading compiled script marble/server/scripts/audioProfiles.cs.
+Loading compiled script marble/server/scripts/camera.cs.
+Loading compiled script marble/server/scripts/markers.cs.
+... Shape with old version.
+Loading compiled script marble/server/scripts/triggers.cs.
+Loading compiled script marble/server/scripts/inventory.cs.
+Loading compiled script marble/server/scripts/shapeBase.cs.
+Loading compiled script marble/server/scripts/staticShape.cs.
+Loading compiled script marble/server/scripts/item.cs.
+Loading compiled script marble/server/scripts/marble.cs.
+ParticleEmitterData(MarbleTrailEmitter) period < 1 ms
+ParticleEmitterData(MarbleTrailEmitter) thetaMin > thetaMax
+Loading compiled script marble/server/scripts/ghost.cs.
+Loading compiled script marble/server/scripts/gems.cs.
+Loading compiled script marble/server/scripts/powerUps.cs.
+Warning: shape marble/data/shapes/items/superspeed.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/items/timetravel.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/buttons.cs.
+Loading compiled script marble/server/scripts/hazards.cs.
+Warning: shape marble/data/shapes/hazards/trapdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/pads.cs.
+Warning: shape marble/data/shapes/pads/startarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/endarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/bumpers.cs.
+Warning: shape marble/data/shapes/bumpers/pball_tri.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/signs.cs.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/finishlinesign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/fireworks.cs.
+Loading compiled script marble/server/scripts/beams.cs.
+Attempting to re-link namespace GemBeam from StaticShapeData to GemBeam with non-zero refcount.
+Attempting to re-link namespace PadBeam from StaticShapeData to PadBeam with non-zero refcount.
+Loading compiled script marble/server/scripts/pathedInteriors.cs.
+Loading compiled script marble/server/scripts/multiplayer.cs.
+*** LOADING MISSION: marble/data/missions/beginner/ftrack.mis
+*** Stage 1 load
+*** Stage 2 load
+Executing marble/data/missions/beginner/ftrack.mis.
+marble/server/scripts/pads.cs (0): Unable to find object: 'MissionCleanup' attempting to call function 'add'
+*** Mission loaded
+Connect request from: IPX:2020207D:3B0D0A202020:25966
+Connection established 3551
+CADD: 3552 local
+Mapping string: ServerMessage to index: 0
+Mapping string: MsgConnectionError to index: 1
+Mapping string: MsgClientJoin to index: 2
+Mapping string: CheckVersion to index: 3
+Mapping string: AddPlayer to index: 4
+Mapping string: CheckVersion to index: 0
+*** Sending mission load to client: marble/data/missions/beginner/ftrack.mis
+Mapping string: MsgLoadInfo to index: 5
+Mapping string: MsgLoadInfoDone to index: 6
+Mapping string: MissionStartPhase1 to index: 7
+*** New Mission: marble/data/missions/beginner/ftrack.mis
+*** Phase 1: Download Datablocks & Targets
+Mapping string: MissionStartPhase1Ack to index: 1
+Warning: shape marble/data/shapes/items/superspeed.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/items/timetravel.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/hazards/trapdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/startarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/endarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/bumpers/pball_tri.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/finishlinesign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Mapping string: MissionStartPhase2 to index: 8
+*** Phase 2: Download Ghost Objects
+Mapping string: MissionStartPhase2Ack to index: 2
+Ghost Always objects received.
+Mapping string: MissionStartPhase3 to index: 9
+*** Phase 3: Mission Lighting
+Mapping string: MissionStartPhase3Ack to index: 3
+Mapping string: MissionStart to index: 10
+Mapping string: ClearRadar to index: 11
+Mapping string: SetMode to index: 12
+Mapping string: GetMarbleSkin to index: 13
+Mapping string: SetGhostScale to index: 14
+Mapping string: GameStart to index: 15
+Mapping string: UpdateTransform to index: 16
+Mapping string: ResetTimer to index: 17
+Mapping string: SetMessage to index: 18
+Mapping string: SetGemCount to index: 19
+Mapping string: SetMaxGems to index: 20
+Mapping string: SetMarbleSkin to index: 4
+*** Initial Control Object
+pushDialog(): Invalid control: MainChatHud
+Mapping string: Matt to index: 21
+Mapping string: purple to index: 22
+Mapping string: base to index: 23
+Mapping string: orange to index: 24
+Mapping string: yellow to index: 25
+Mapping string: blue to index: 26
+Mapping string: UpdateTransform to index: 5
+Mapping string: StartTimer to index: 27
+Mapping string: AddHelpLine to index: 28
+Mapping string: MsgItemPickup to index: 29
+Mapping string: You picked up a gem.  %1 gems to go! to index: 30
+Mapping string: You picked up a gem.  Only one gem to go! to index: 31
+Mapping string: MsgHaveAllGems to index: 1
+Mapping string: You have all the gems, head for the finish! to index: 2
+Mapping string: MsgRaceOver to index: 3
+Mapping string: Congratulations! You've finished! to index: 5
+Mapping string: StopTimer to index: 6
+Mapping string: GameEnd to index: 7
+popDialog(): Invalid control: MainChatHud
+CDROP: 3552 IPX:2020207D:3B0D0A202020:25966
+Exporting server prefs...
+Set::getObject index out of range.
+Set::getObject index out of range.
 Exporting server prefs...
 Exporting client prefs
 Exporting server prefs
