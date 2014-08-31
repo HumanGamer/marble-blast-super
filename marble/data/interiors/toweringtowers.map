@@ -1,0 +1,943 @@
+// This map has been written by the Torque Constructor
+// For more information see http://www.garagegames.com
+
+{
+   "classname" "worldspawn"
+   "detail_number" "0"
+   "min_pixels" "250"
+   "geometry_scale" "32"
+   "light_geometry_scale" "32"
+   "ambient_color" "0 0 0"
+   "emergency_ambient_color" "0 0 0"
+   "mapversion" "220"
+
+   // Brush 1
+   {
+      ( 96 -128 -48 ) ( 96 -128 80 ) ( 96 -64 80 ) levelcreating/grid_multiplayer_wall [ 0 1 0 384 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 -128 -48 ) ( 32 -64 -48 ) ( 32 -64 80 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 -64 -48 ) ( 96 -64 -48 ) ( 96 -64 80 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 -128 -48 ) ( 32 -128 80 ) ( 96 -128 80 ) levelcreating/grid_multiplayer_wall [ 1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 -128 80 ) ( 32 -64 80 ) ( 96 -64 80 ) levelcreating/grid_wavy2 [ 1 0 0 448 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+      ( 32 -128 -48 ) ( 96 -128 -48 ) ( 96 -64 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+   }
+
+   // Brush 2
+   {
+      ( 352 -384 -48 ) ( 352 -384 176 ) ( 352 -192 176 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 -384 -48 ) ( -224 -192 -48 ) ( -224 -192 176 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 -192 -48 ) ( 352 -192 -48 ) ( 352 -192 176 ) levelcreating/pattern_cool2 [ -1 0 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 -384 -48 ) ( -224 -384 176 ) ( 352 -384 176 ) levelcreating/grid_multiplayer_wall [ 1 0 0 64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 -384 176 ) ( -224 -192 176 ) ( 352 -192 176 ) levelcreating/grid_wavy2 [ 1 0 0 64 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( -224 -384 -48 ) ( 352 -384 -48 ) ( 352 -192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 320 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 3
+   {
+      ( 544 -192 -48 ) ( 544 -192 176 ) ( 544 0 176 ) levelcreating/grid_multiplayer_wall [ 0 1 0 384 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 160 -192 -48 ) ( 160 0 -48 ) ( 160 0 176 ) levelcreating/pattern_cool2 [ 0 -1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 160 0 -48 ) ( 544 0 -48 ) ( 544 0 176 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 160 -192 -48 ) ( 160 -192 176 ) ( 544 -192 176 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -320 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 160 -192 176 ) ( 160 0 176 ) ( 544 0 176 ) levelcreating/grid_wavy2 [ 1 0 0 -320 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+      ( 160 -192 -48 ) ( 544 -192 -48 ) ( 544 0 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+   }
+
+   // Brush 4
+   {
+      ( -32 -192 -48 ) ( -32 -192 176 ) ( -32 0 176 ) levelcreating/pattern_cool2 [ 0 1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -192 -48 ) ( -416 0 -48 ) ( -416 0 176 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 64 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -416 0 -48 ) ( -32 0 -48 ) ( -32 0 176 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -192 -48 ) ( -416 -192 176 ) ( -32 -192 176 ) levelcreating/grid_multiplayer_wall [ 1 0 0 832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -192 176 ) ( -416 0 176 ) ( -32 0 176 ) levelcreating/grid_wavy2 [ 1 0 0 832 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+      ( -416 -192 -48 ) ( -32 -192 -48 ) ( -32 0 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -448 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+   }
+
+   // Brush 5
+   {
+      ( 352 0 -48 ) ( 352 0 176 ) ( 352 192 176 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 0 -48 ) ( -224 192 -48 ) ( -224 192 176 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 192 -48 ) ( 352 192 -48 ) ( 352 192 176 ) levelcreating/grid_multiplayer_wall [ -1 0 0 832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 0 -48 ) ( -224 0 176 ) ( 352 0 176 ) levelcreating/pattern_cool2 [ 1 0 0 64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 0 176 ) ( -224 192 176 ) ( 352 192 176 ) levelcreating/grid_wavy2 [ 1 0 0 64 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( -224 0 -48 ) ( 352 0 -48 ) ( 352 192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 320 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 6
+   {
+      ( 96 -64 -48 ) ( 96 -64 80 ) ( 96 0 80 ) levelcreating/grid_multiplayer_wall [ 0 1 0 256 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 -64 -48 ) ( 32 0 -48 ) ( 32 0 80 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 0 -48 ) ( 96 0 -48 ) ( 96 0 80 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 -64 -48 ) ( 32 -64 80 ) ( 96 -64 80 ) levelcreating/grid_multiplayer_wall [ 1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 -64 80 ) ( 32 0 80 ) ( 96 0 80 ) levelcreating/pattern_cool1 [ 1 0 0 448 ] [ 0 -1 0 -256 ] 0 0.5 0.5
+      ( 32 -64 -48 ) ( 96 -64 -48 ) ( 96 0 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 -1 0 -256 ] 0 0.5 0.5
+   }
+
+   // Brush 7
+   {
+      ( 160 -64 -48 ) ( 160 -64 80 ) ( 160 0 80 ) levelcreating/grid_multiplayer_wall [ 0 1 0 256 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 -64 -48 ) ( 96 0 -48 ) ( 96 0 80 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 0 -48 ) ( 160 0 -48 ) ( 160 0 80 ) levelcreating/grid_multiplayer_wall [ -1 0 0 64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 -64 -48 ) ( 96 -64 80 ) ( 160 -64 80 ) levelcreating/grid_multiplayer_wall [ 1 0 0 320 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 -64 80 ) ( 96 0 80 ) ( 160 0 80 ) levelcreating/pattern_cool1 [ 1 0 0 320 ] [ 0 -1 0 -256 ] 0 0.5 0.5
+      ( 96 -64 -48 ) ( 160 -64 -48 ) ( 160 0 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 64 ] [ 0 -1 0 -256 ] 0 0.5 0.5
+   }
+
+   // Brush 8
+   {
+      ( 160 -128 -48 ) ( 160 -128 80 ) ( 160 -64 80 ) levelcreating/grid_multiplayer_wall [ 0 1 0 384 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 -128 -48 ) ( 96 -64 -48 ) ( 96 -64 80 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 -64 -48 ) ( 160 -64 -48 ) ( 160 -64 80 ) levelcreating/grid_multiplayer_wall [ -1 0 0 64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 -128 -48 ) ( 96 -128 80 ) ( 160 -128 80 ) levelcreating/grid_multiplayer_wall [ 1 0 0 320 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 -128 80 ) ( 96 -64 80 ) ( 160 -64 80 ) levelcreating/pattern_cool1 [ 1 0 0 320 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+      ( 96 -128 -48 ) ( 160 -128 -48 ) ( 160 -64 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 64 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+   }
+
+   // Brush 9
+   {
+      ( 160 -192 -48 ) ( 160 -192 80 ) ( 160 -128 80 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 -192 -48 ) ( 96 -128 -48 ) ( 96 -128 80 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 -128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 -128 -48 ) ( 160 -128 -48 ) ( 160 -128 80 ) levelcreating/grid_multiplayer_wall [ -1 0 0 64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 -192 -48 ) ( 96 -192 80 ) ( 160 -192 80 ) levelcreating/grid_multiplayer_wall [ 1 0 0 320 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 96 -192 80 ) ( 96 -128 80 ) ( 160 -128 80 ) levelcreating/pattern_cool1 [ 1 0 0 320 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( 96 -192 -48 ) ( 160 -192 -48 ) ( 160 -128 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 64 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 10
+   {
+      ( 32 -64 -48 ) ( 32 -64 80 ) ( 32 0 80 ) levelcreating/grid_multiplayer_wall [ 0 1 0 256 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -64 -48 ) ( -32 0 -48 ) ( -32 0 80 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 0 -48 ) ( 32 0 -48 ) ( 32 0 80 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -192 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -64 -48 ) ( -32 -64 80 ) ( 32 -64 80 ) levelcreating/grid_multiplayer_wall [ 1 0 0 576 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -64 80 ) ( -32 0 80 ) ( 32 0 80 ) levelcreating/pattern_cool1 [ 1 0 0 576 ] [ 0 -1 0 -256 ] 0 0.5 0.5
+      ( -32 -64 -48 ) ( 32 -64 -48 ) ( 32 0 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -192 ] [ 0 -1 0 -256 ] 0 0.5 0.5
+   }
+
+   // Brush 11
+   {
+      ( 32 -128 -48 ) ( 32 -128 80 ) ( 32 -64 80 ) levelcreating/grid_multiplayer_wall [ 0 1 0 384 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -128 -48 ) ( -32 -64 -48 ) ( -32 -64 80 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -64 -48 ) ( 32 -64 -48 ) ( 32 -64 80 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -192 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -128 -48 ) ( -32 -128 80 ) ( 32 -128 80 ) levelcreating/grid_multiplayer_wall [ 1 0 0 576 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -128 80 ) ( -32 -64 80 ) ( 32 -64 80 ) levelcreating/pattern_cool1 [ 1 0 0 576 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+      ( -32 -128 -48 ) ( 32 -128 -48 ) ( 32 -64 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -192 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+   }
+
+   // Brush 12
+   {
+      ( 32 -192 -48 ) ( 32 -192 80 ) ( 32 -128 80 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -192 -48 ) ( -32 -128 -48 ) ( -32 -128 80 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 -128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -128 -48 ) ( 32 -128 -48 ) ( 32 -128 80 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -192 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -192 -48 ) ( -32 -192 80 ) ( 32 -192 80 ) levelcreating/grid_multiplayer_wall [ 1 0 0 576 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -192 80 ) ( -32 -128 80 ) ( 32 -128 80 ) levelcreating/pattern_cool1 [ 1 0 0 576 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( -32 -192 -48 ) ( 32 -192 -48 ) ( 32 -128 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -192 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 13
+   {
+      ( 96 -192 -48 ) ( 96 -192 80 ) ( 96 -128 80 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 -192 -48 ) ( 32 -128 -48 ) ( 32 -128 80 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 -128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 -128 -48 ) ( 96 -128 -48 ) ( 96 -128 80 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 -192 -48 ) ( 32 -192 80 ) ( 96 -192 80 ) levelcreating/grid_multiplayer_wall [ 1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 -192 80 ) ( 32 -128 80 ) ( 96 -128 80 ) levelcreating/pattern_cool1 [ 1 0 0 448 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( 32 -192 -48 ) ( 96 -192 -48 ) ( 96 -128 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 27
+   {
+      ( 544 0 -48 ) ( 544 0 576 ) ( 544 64 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 0 -48 ) ( 480 64 -48 ) ( 480 64 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 64 -48 ) ( 544 64 -48 ) ( 544 64 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 0 -48 ) ( 480 0 576 ) ( 544 0 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -320 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 0 576 ) ( 480 64 576 ) ( 544 64 576 ) levelcreating/grid_wavy2 [ 1 0 0 -320 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( 480 0 -48 ) ( 544 0 -48 ) ( 544 64 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 28
+   {
+      ( 544 128 -48 ) ( 544 128 576 ) ( 544 192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -256 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 128 -48 ) ( 480 192 -48 ) ( 480 192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1728 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 192 -48 ) ( 544 192 -48 ) ( 544 192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 128 -48 ) ( 480 128 576 ) ( 544 128 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -320 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 128 576 ) ( 480 192 576 ) ( 544 192 576 ) levelcreating/grid_wavy2 [ 1 0 0 -320 ] [ 0 -1 0 256 ] 0 0.5 0.5
+      ( 480 128 -48 ) ( 544 128 -48 ) ( 544 192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 -1 0 256 ] 0 0.5 0.5
+   }
+
+   // Brush 29
+   {
+      ( 416 0 -48 ) ( 416 0 576 ) ( 416 64 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 0 -48 ) ( 352 64 -48 ) ( 352 64 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 64 -48 ) ( 416 64 -48 ) ( 416 64 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 0 -48 ) ( 352 0 576 ) ( 416 0 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 0 576 ) ( 352 64 576 ) ( 416 64 576 ) levelcreating/grid_wavy2 [ 1 0 0 -64 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( 352 0 -48 ) ( 416 0 -48 ) ( 416 64 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 31
+   {
+      ( 416 128 -48 ) ( 416 128 576 ) ( 416 192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -256 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 128 -48 ) ( 352 192 -48 ) ( 352 192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1728 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 192 -48 ) ( 416 192 -48 ) ( 416 192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 128 -48 ) ( 352 128 576 ) ( 416 128 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 128 576 ) ( 352 192 576 ) ( 416 192 576 ) levelcreating/grid_wavy2 [ 1 0 0 -64 ] [ 0 -1 0 256 ] 0 0.5 0.5
+      ( 352 128 -48 ) ( 416 128 -48 ) ( 416 192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 -1 0 256 ] 0 0.5 0.5
+   }
+
+   // Brush 33
+   {
+      ( 480 0 240 ) ( 480 0 416 ) ( 480 64 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 0 240 ) ( 416 64 240 ) ( 416 64 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 64 240 ) ( 480 64 240 ) ( 480 64 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 0 240 ) ( 416 0 416 ) ( 480 0 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -192 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 0 416 ) ( 416 64 416 ) ( 480 64 416 ) levelcreating/grid_wavy2 [ 1 0 0 -192 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( 416 0 240 ) ( 480 0 240 ) ( 480 64 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 43
+   {
+      ( 480 0 480 ) ( 480 0 576 ) ( 480 64 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 0 480 ) ( 416 64 480 ) ( 416 64 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1472 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 64 480 ) ( 480 64 480 ) ( 480 64 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 0 480 ) ( 416 0 576 ) ( 480 0 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -192 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 0 576 ) ( 416 64 576 ) ( 480 64 576 ) levelcreating/grid_wavy2 [ 1 0 0 -192 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( 416 0 480 ) ( 480 0 480 ) ( 480 64 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 44
+   {
+      ( 544 64 240 ) ( 544 64 416 ) ( 544 128 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 64 240 ) ( 480 128 240 ) ( 480 128 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1600 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 128 240 ) ( 544 128 240 ) ( 544 128 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 64 240 ) ( 480 64 416 ) ( 544 64 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -320 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 64 416 ) ( 480 128 416 ) ( 544 128 416 ) levelcreating/grid_wavy2 [ 1 0 0 -320 ] [ 0 -1 0 128 ] 0 0.5 0.5
+      ( 480 64 240 ) ( 544 64 240 ) ( 544 128 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 -1 0 128 ] 0 0.5 0.5
+   }
+
+   // Brush 45
+   {
+      ( 544 64 480 ) ( 544 64 576 ) ( 544 128 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -128 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 480 64 480 ) ( 480 128 480 ) ( 480 128 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1600 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 480 128 480 ) ( 544 128 480 ) ( 544 128 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 480 64 480 ) ( 480 64 576 ) ( 544 64 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -320 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 480 64 576 ) ( 480 128 576 ) ( 544 128 576 ) levelcreating/grid_wavy2 [ 1 0 0 -320 ] [ 0 -1 0 128 ] 0 0.5 0.5
+      ( 480 64 480 ) ( 544 64 480 ) ( 544 128 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 -1 0 128 ] 0 0.5 0.5
+   }
+
+   // Brush 46
+   {
+      ( 416 64 240 ) ( 416 64 416 ) ( 416 128 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 64 240 ) ( 352 128 240 ) ( 352 128 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1600 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 128 240 ) ( 416 128 240 ) ( 416 128 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 64 240 ) ( 352 64 416 ) ( 416 64 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 64 416 ) ( 352 128 416 ) ( 416 128 416 ) levelcreating/grid_wavy2 [ 1 0 0 -64 ] [ 0 -1 0 128 ] 0 0.5 0.5
+      ( 352 64 240 ) ( 416 64 240 ) ( 416 128 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 -1 0 128 ] 0 0.5 0.5
+   }
+
+   // Brush 47
+   {
+      ( 416 64 480 ) ( 416 64 576 ) ( 416 128 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -128 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 352 64 480 ) ( 352 128 480 ) ( 352 128 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1600 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 352 128 480 ) ( 416 128 480 ) ( 416 128 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 352 64 480 ) ( 352 64 576 ) ( 416 64 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -64 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 352 64 576 ) ( 352 128 576 ) ( 416 128 576 ) levelcreating/grid_wavy2 [ 1 0 0 -64 ] [ 0 -1 0 128 ] 0 0.5 0.5
+      ( 352 64 480 ) ( 416 64 480 ) ( 416 128 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 -1 0 128 ] 0 0.5 0.5
+   }
+
+   // Brush 48
+   {
+      ( 480 128 240 ) ( 480 128 416 ) ( 480 192 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -256 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 128 240 ) ( 416 192 240 ) ( 416 192 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1728 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 192 240 ) ( 480 192 240 ) ( 480 192 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 128 240 ) ( 416 128 416 ) ( 480 128 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -192 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 128 416 ) ( 416 192 416 ) ( 480 192 416 ) levelcreating/grid_wavy2 [ 1 0 0 -192 ] [ 0 -1 0 256 ] 0 0.5 0.5
+      ( 416 128 240 ) ( 480 128 240 ) ( 480 192 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 -1 0 256 ] 0 0.5 0.5
+   }
+
+   // Brush 49
+   {
+      ( 480 128 480 ) ( 480 128 576 ) ( 480 192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -256 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 128 480 ) ( 416 192 480 ) ( 416 192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1728 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 192 480 ) ( 480 192 480 ) ( 480 192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 128 480 ) ( 416 128 576 ) ( 480 128 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -192 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 128 576 ) ( 416 192 576 ) ( 480 192 576 ) levelcreating/grid_wavy2 [ 1 0 0 -192 ] [ 0 -1 0 256 ] 0 0.5 0.5
+      ( 416 128 480 ) ( 480 128 480 ) ( 480 192 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 -1 0 256 ] 0 0.5 0.5
+   }
+
+   // Brush 50
+   {
+      ( -224 0 -48 ) ( -224 0 576 ) ( -224 64 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 0 -48 ) ( -288 64 -48 ) ( -288 64 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 64 -48 ) ( -224 64 -48 ) ( -224 64 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 0 -48 ) ( -288 0 576 ) ( -224 0 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 0 576 ) ( -288 64 576 ) ( -224 64 576 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( -288 0 -48 ) ( -224 0 -48 ) ( -224 64 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 51
+   {
+      ( -224 128 -48 ) ( -224 128 576 ) ( -224 192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -256 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 128 -48 ) ( -288 192 -48 ) ( -288 192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1728 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 192 -48 ) ( -224 192 -48 ) ( -224 192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 128 -48 ) ( -288 128 576 ) ( -224 128 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 128 576 ) ( -288 192 576 ) ( -224 192 576 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 256 ] 0 0.5 0.5
+      ( -288 128 -48 ) ( -224 128 -48 ) ( -224 192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 256 ] 0 0.5 0.5
+   }
+
+   // Brush 52
+   {
+      ( -352 0 -48 ) ( -352 0 576 ) ( -352 64 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 0 -48 ) ( -416 64 -48 ) ( -416 64 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 64 -48 ) ( -352 64 -48 ) ( -352 64 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 0 -48 ) ( -416 0 576 ) ( -352 0 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 0 576 ) ( -416 64 576 ) ( -352 64 576 ) levelcreating/grid_wavy2 [ 1 0 0 1472 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( -416 0 -48 ) ( -352 0 -48 ) ( -352 64 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 53
+   {
+      ( -352 128 -48 ) ( -352 128 576 ) ( -352 192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -256 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 128 -48 ) ( -416 192 -48 ) ( -416 192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1728 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 192 -48 ) ( -352 192 -48 ) ( -352 192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 128 -48 ) ( -416 128 576 ) ( -352 128 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 128 576 ) ( -416 192 576 ) ( -352 192 576 ) levelcreating/grid_wavy2 [ 1 0 0 1472 ] [ 0 -1 0 256 ] 0 0.5 0.5
+      ( -416 128 -48 ) ( -352 128 -48 ) ( -352 192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 -1 0 256 ] 0 0.5 0.5
+   }
+
+   // Brush 54
+   {
+      ( -288 0 240 ) ( -288 0 416 ) ( -288 64 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 0 240 ) ( -352 64 240 ) ( -352 64 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 64 240 ) ( -288 64 240 ) ( -288 64 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 0 240 ) ( -352 0 416 ) ( -288 0 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1344 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 0 416 ) ( -352 64 416 ) ( -288 64 416 ) levelcreating/grid_wavy2 [ 1 0 0 1344 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( -352 0 240 ) ( -288 0 240 ) ( -288 64 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 55
+   {
+      ( -288 0 480 ) ( -288 0 576 ) ( -288 64 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 0 480 ) ( -352 64 480 ) ( -352 64 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1472 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 64 480 ) ( -288 64 480 ) ( -288 64 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 0 480 ) ( -352 0 576 ) ( -288 0 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1344 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 0 576 ) ( -352 64 576 ) ( -288 64 576 ) levelcreating/grid_wavy2 [ 1 0 0 1344 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( -352 0 480 ) ( -288 0 480 ) ( -288 64 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 56
+   {
+      ( -224 64 240 ) ( -224 64 416 ) ( -224 128 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 64 240 ) ( -288 128 240 ) ( -288 128 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1600 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 128 240 ) ( -224 128 240 ) ( -224 128 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 64 240 ) ( -288 64 416 ) ( -224 64 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 64 416 ) ( -288 128 416 ) ( -224 128 416 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 128 ] 0 0.5 0.5
+      ( -288 64 240 ) ( -224 64 240 ) ( -224 128 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 128 ] 0 0.5 0.5
+   }
+
+   // Brush 57
+   {
+      ( -224 64 480 ) ( -224 64 576 ) ( -224 128 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -128 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -288 64 480 ) ( -288 128 480 ) ( -288 128 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1600 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -288 128 480 ) ( -224 128 480 ) ( -224 128 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -288 64 480 ) ( -288 64 576 ) ( -224 64 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -288 64 576 ) ( -288 128 576 ) ( -224 128 576 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 128 ] 0 0.5 0.5
+      ( -288 64 480 ) ( -224 64 480 ) ( -224 128 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 128 ] 0 0.5 0.5
+   }
+
+   // Brush 58
+   {
+      ( -352 64 240 ) ( -352 64 416 ) ( -352 128 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 64 240 ) ( -416 128 240 ) ( -416 128 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1600 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 128 240 ) ( -352 128 240 ) ( -352 128 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 64 240 ) ( -416 64 416 ) ( -352 64 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 64 416 ) ( -416 128 416 ) ( -352 128 416 ) levelcreating/grid_wavy2 [ 1 0 0 1472 ] [ 0 -1 0 128 ] 0 0.5 0.5
+      ( -416 64 240 ) ( -352 64 240 ) ( -352 128 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 -1 0 128 ] 0 0.5 0.5
+   }
+
+   // Brush 59
+   {
+      ( -352 64 480 ) ( -352 64 576 ) ( -352 128 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -128 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -416 64 480 ) ( -416 128 480 ) ( -416 128 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1600 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -416 128 480 ) ( -352 128 480 ) ( -352 128 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -416 64 480 ) ( -416 64 576 ) ( -352 64 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1472 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -416 64 576 ) ( -416 128 576 ) ( -352 128 576 ) levelcreating/grid_wavy2 [ 1 0 0 1472 ] [ 0 -1 0 128 ] 0 0.5 0.5
+      ( -416 64 480 ) ( -352 64 480 ) ( -352 128 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 -1 0 128 ] 0 0.5 0.5
+   }
+
+   // Brush 60
+   {
+      ( -288 128 240 ) ( -288 128 416 ) ( -288 192 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -256 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 128 240 ) ( -352 192 240 ) ( -352 192 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1728 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 192 240 ) ( -288 192 240 ) ( -288 192 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 128 240 ) ( -352 128 416 ) ( -288 128 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1344 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 128 416 ) ( -352 192 416 ) ( -288 192 416 ) levelcreating/grid_wavy2 [ 1 0 0 1344 ] [ 0 -1 0 256 ] 0 0.5 0.5
+      ( -352 128 240 ) ( -288 128 240 ) ( -288 192 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 -1 0 256 ] 0 0.5 0.5
+   }
+
+   // Brush 61
+   {
+      ( -288 128 480 ) ( -288 128 576 ) ( -288 192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -256 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 128 480 ) ( -352 192 480 ) ( -352 192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1728 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 192 480 ) ( -288 192 480 ) ( -288 192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 128 480 ) ( -352 128 576 ) ( -288 128 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1344 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 128 576 ) ( -352 192 576 ) ( -288 192 576 ) levelcreating/grid_wavy2 [ 1 0 0 1344 ] [ 0 -1 0 256 ] 0 0.5 0.5
+      ( -352 128 480 ) ( -288 128 480 ) ( -288 192 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 -1 0 256 ] 0 0.5 0.5
+   }
+
+   // Brush 62
+   {
+      ( -224 -384 -48 ) ( -224 -384 576 ) ( -224 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -384 -48 ) ( -288 -320 -48 ) ( -288 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -320 -48 ) ( -224 -320 -48 ) ( -224 -320 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -384 -48 ) ( -288 -384 576 ) ( -224 -384 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -384 576 ) ( -288 -320 576 ) ( -224 -320 576 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( -288 -384 -48 ) ( -224 -384 -48 ) ( -224 -320 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 63
+   {
+      ( -224 -256 -48 ) ( -224 -256 576 ) ( -224 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -256 -48 ) ( -288 -192 -48 ) ( -288 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 960 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -192 -48 ) ( -224 -192 -48 ) ( -224 -192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -256 -48 ) ( -288 -256 576 ) ( -224 -256 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -256 576 ) ( -288 -192 576 ) ( -224 -192 576 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( -288 -256 -48 ) ( -224 -256 -48 ) ( -224 -192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 64
+   {
+      ( -352 -384 -48 ) ( -352 -384 576 ) ( -352 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -384 -48 ) ( -416 -320 -48 ) ( -416 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -320 -48 ) ( -352 -320 -48 ) ( -352 -320 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -384 -48 ) ( -416 -384 576 ) ( -352 -384 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -384 576 ) ( -416 -320 576 ) ( -352 -320 576 ) levelcreating/grid_wavy2 [ 1 0 0 1472 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( -416 -384 -48 ) ( -352 -384 -48 ) ( -352 -320 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 65
+   {
+      ( -352 -256 -48 ) ( -352 -256 576 ) ( -352 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -256 -48 ) ( -416 -192 -48 ) ( -416 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 960 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -192 -48 ) ( -352 -192 -48 ) ( -352 -192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -256 -48 ) ( -416 -256 576 ) ( -352 -256 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -256 576 ) ( -416 -192 576 ) ( -352 -192 576 ) levelcreating/grid_wavy2 [ 1 0 0 1472 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( -416 -256 -48 ) ( -352 -256 -48 ) ( -352 -192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 66
+   {
+      ( -288 -384 240 ) ( -288 -384 416 ) ( -288 -320 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 -384 240 ) ( -352 -320 240 ) ( -352 -320 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 -320 240 ) ( -288 -320 240 ) ( -288 -320 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 -384 240 ) ( -352 -384 416 ) ( -288 -384 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1344 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 -384 416 ) ( -352 -320 416 ) ( -288 -320 416 ) levelcreating/grid_wavy2 [ 1 0 0 1344 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( -352 -384 240 ) ( -288 -384 240 ) ( -288 -320 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 67
+   {
+      ( -288 -384 480 ) ( -288 -384 576 ) ( -288 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 -384 480 ) ( -352 -320 480 ) ( -352 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 704 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 -320 480 ) ( -288 -320 480 ) ( -288 -320 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 -384 480 ) ( -352 -384 576 ) ( -288 -384 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1344 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 -384 576 ) ( -352 -320 576 ) ( -288 -320 576 ) levelcreating/grid_wavy2 [ 1 0 0 1344 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( -352 -384 480 ) ( -288 -384 480 ) ( -288 -320 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 68
+   {
+      ( -224 -320 240 ) ( -224 -320 416 ) ( -224 -256 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 640 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -320 240 ) ( -288 -256 240 ) ( -288 -256 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -256 240 ) ( -224 -256 240 ) ( -224 -256 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -320 240 ) ( -288 -320 416 ) ( -224 -320 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -288 -320 416 ) ( -288 -256 416 ) ( -224 -256 416 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+      ( -288 -320 240 ) ( -224 -320 240 ) ( -224 -256 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+   }
+
+   // Brush 69
+   {
+      ( -224 -320 480 ) ( -224 -320 576 ) ( -224 -256 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 640 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -288 -320 480 ) ( -288 -256 480 ) ( -288 -256 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 832 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -288 -256 480 ) ( -224 -256 480 ) ( -224 -256 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -288 -320 480 ) ( -288 -320 576 ) ( -224 -320 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -288 -320 576 ) ( -288 -256 576 ) ( -224 -256 576 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+      ( -288 -320 480 ) ( -224 -320 480 ) ( -224 -256 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+   }
+
+   // Brush 70
+   {
+      ( -352 -320 240 ) ( -352 -320 416 ) ( -352 -256 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 640 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -320 240 ) ( -416 -256 240 ) ( -416 -256 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -256 240 ) ( -352 -256 240 ) ( -352 -256 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -320 240 ) ( -416 -320 416 ) ( -352 -320 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1472 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 -320 416 ) ( -416 -256 416 ) ( -352 -256 416 ) levelcreating/grid_wavy2 [ 1 0 0 1472 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+      ( -416 -320 240 ) ( -352 -320 240 ) ( -352 -256 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+   }
+
+   // Brush 71
+   {
+      ( -352 -320 480 ) ( -352 -320 576 ) ( -352 -256 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 640 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -416 -320 480 ) ( -416 -256 480 ) ( -416 -256 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 832 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -416 -256 480 ) ( -352 -256 480 ) ( -352 -256 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -416 -320 480 ) ( -416 -320 576 ) ( -352 -320 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1472 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -416 -320 576 ) ( -416 -256 576 ) ( -352 -256 576 ) levelcreating/grid_wavy2 [ 1 0 0 1472 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+      ( -416 -320 480 ) ( -352 -320 480 ) ( -352 -256 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+   }
+
+   // Brush 72
+   {
+      ( -288 -256 240 ) ( -288 -256 416 ) ( -288 -192 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 -256 240 ) ( -352 -192 240 ) ( -352 -192 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 960 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 -192 240 ) ( -288 -192 240 ) ( -288 -192 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 -256 240 ) ( -352 -256 416 ) ( -288 -256 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1344 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 -256 416 ) ( -352 -192 416 ) ( -288 -192 416 ) levelcreating/grid_wavy2 [ 1 0 0 1344 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( -352 -256 240 ) ( -288 -256 240 ) ( -288 -192 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 73
+   {
+      ( -288 -256 480 ) ( -288 -256 576 ) ( -288 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 -256 480 ) ( -352 -192 480 ) ( -352 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 960 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 -192 480 ) ( -288 -192 480 ) ( -288 -192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 -256 480 ) ( -352 -256 576 ) ( -288 -256 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1344 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( -352 -256 576 ) ( -352 -192 576 ) ( -288 -192 576 ) levelcreating/grid_wavy2 [ 1 0 0 1344 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( -352 -256 480 ) ( -288 -256 480 ) ( -288 -192 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 74
+   {
+      ( 544 -384 -48 ) ( 544 -384 576 ) ( 544 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -384 -48 ) ( 480 -320 -48 ) ( 480 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -320 -48 ) ( 544 -320 -48 ) ( 544 -320 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -384 -48 ) ( 480 -384 576 ) ( 544 -384 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -320 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -384 576 ) ( 480 -320 576 ) ( 544 -320 576 ) levelcreating/grid_wavy2 [ 1 0 0 -320 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( 480 -384 -48 ) ( 544 -384 -48 ) ( 544 -320 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 75
+   {
+      ( 544 -256 -48 ) ( 544 -256 576 ) ( 544 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -256 -48 ) ( 480 -192 -48 ) ( 480 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 960 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -192 -48 ) ( 544 -192 -48 ) ( 544 -192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -256 -48 ) ( 480 -256 576 ) ( 544 -256 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -320 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -256 576 ) ( 480 -192 576 ) ( 544 -192 576 ) levelcreating/grid_wavy2 [ 1 0 0 -320 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( 480 -256 -48 ) ( 544 -256 -48 ) ( 544 -192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 76
+   {
+      ( 416 -384 -48 ) ( 416 -384 576 ) ( 416 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -384 -48 ) ( 352 -320 -48 ) ( 352 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -320 -48 ) ( 416 -320 -48 ) ( 416 -320 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -384 -48 ) ( 352 -384 576 ) ( 416 -384 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -384 576 ) ( 352 -320 576 ) ( 416 -320 576 ) levelcreating/grid_wavy2 [ 1 0 0 -64 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( 352 -384 -48 ) ( 416 -384 -48 ) ( 416 -320 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 77
+   {
+      ( 416 -256 -48 ) ( 416 -256 576 ) ( 416 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -256 -48 ) ( 352 -192 -48 ) ( 352 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 960 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -192 -48 ) ( 416 -192 -48 ) ( 416 -192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -256 -48 ) ( 352 -256 576 ) ( 416 -256 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -256 576 ) ( 352 -192 576 ) ( 416 -192 576 ) levelcreating/grid_wavy2 [ 1 0 0 -64 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( 352 -256 -48 ) ( 416 -256 -48 ) ( 416 -192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 78
+   {
+      ( 480 -384 240 ) ( 480 -384 416 ) ( 480 -320 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 -384 240 ) ( 416 -320 240 ) ( 416 -320 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 -320 240 ) ( 480 -320 240 ) ( 480 -320 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 -384 240 ) ( 416 -384 416 ) ( 480 -384 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -192 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 -384 416 ) ( 416 -320 416 ) ( 480 -320 416 ) levelcreating/grid_wavy2 [ 1 0 0 -192 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( 416 -384 240 ) ( 480 -384 240 ) ( 480 -320 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 79
+   {
+      ( 480 -384 480 ) ( 480 -384 576 ) ( 480 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 -384 480 ) ( 416 -320 480 ) ( 416 -320 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 704 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 -320 480 ) ( 480 -320 480 ) ( 480 -320 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 -384 480 ) ( 416 -384 576 ) ( 480 -384 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -192 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 -384 576 ) ( 416 -320 576 ) ( 480 -320 576 ) levelcreating/grid_wavy2 [ 1 0 0 -192 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( 416 -384 480 ) ( 480 -384 480 ) ( 480 -320 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 80
+   {
+      ( 544 -320 240 ) ( 544 -320 416 ) ( 544 -256 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 640 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -320 240 ) ( 480 -256 240 ) ( 480 -256 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -256 240 ) ( 544 -256 240 ) ( 544 -256 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -320 240 ) ( 480 -320 416 ) ( 544 -320 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -320 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 480 -320 416 ) ( 480 -256 416 ) ( 544 -256 416 ) levelcreating/grid_wavy2 [ 1 0 0 -320 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+      ( 480 -320 240 ) ( 544 -320 240 ) ( 544 -256 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+   }
+
+   // Brush 81
+   {
+      ( 544 -320 480 ) ( 544 -320 576 ) ( 544 -256 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 640 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 480 -320 480 ) ( 480 -256 480 ) ( 480 -256 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 832 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 480 -256 480 ) ( 544 -256 480 ) ( 544 -256 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 480 -320 480 ) ( 480 -320 576 ) ( 544 -320 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -320 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 480 -320 576 ) ( 480 -256 576 ) ( 544 -256 576 ) levelcreating/grid_wavy2 [ 1 0 0 -320 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+      ( 480 -320 480 ) ( 544 -320 480 ) ( 544 -256 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+   }
+
+   // Brush 82
+   {
+      ( 416 -320 240 ) ( 416 -320 416 ) ( 416 -256 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 640 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -320 240 ) ( 352 -256 240 ) ( 352 -256 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 832 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -256 240 ) ( 416 -256 240 ) ( 416 -256 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -320 240 ) ( 352 -320 416 ) ( 416 -320 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 352 -320 416 ) ( 352 -256 416 ) ( 416 -256 416 ) levelcreating/grid_wavy2 [ 1 0 0 -64 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+      ( 352 -320 240 ) ( 416 -320 240 ) ( 416 -256 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+   }
+
+   // Brush 83
+   {
+      ( 416 -320 480 ) ( 416 -320 576 ) ( 416 -256 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 640 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 352 -320 480 ) ( 352 -256 480 ) ( 352 -256 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 832 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 352 -256 480 ) ( 416 -256 480 ) ( 416 -256 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 352 -320 480 ) ( 352 -320 576 ) ( 416 -320 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -64 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 352 -320 576 ) ( 352 -256 576 ) ( 416 -256 576 ) levelcreating/grid_wavy2 [ 1 0 0 -64 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+      ( 352 -320 480 ) ( 416 -320 480 ) ( 416 -256 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 448 ] [ 0 -1 0 -640 ] 0 0.5 0.5
+   }
+
+   // Brush 84
+   {
+      ( 480 -256 240 ) ( 480 -256 416 ) ( 480 -192 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 -256 240 ) ( 416 -192 240 ) ( 416 -192 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 960 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 -192 240 ) ( 480 -192 240 ) ( 480 -192 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 -256 240 ) ( 416 -256 416 ) ( 480 -256 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -192 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 -256 416 ) ( 416 -192 416 ) ( 480 -192 416 ) levelcreating/grid_wavy2 [ 1 0 0 -192 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( 416 -256 240 ) ( 480 -256 240 ) ( 480 -192 240 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 85
+   {
+      ( 480 -256 480 ) ( 480 -256 576 ) ( 480 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 -256 480 ) ( 416 -192 480 ) ( 416 -192 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 960 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 -192 480 ) ( 480 -192 480 ) ( 480 -192 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 -256 480 ) ( 416 -256 576 ) ( 480 -256 576 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -192 ] [ 0 0 -1 384 ] 0 0.5 0.5
+      ( 416 -256 576 ) ( 416 -192 576 ) ( 480 -192 576 ) levelcreating/grid_wavy2 [ 1 0 0 -192 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( 416 -256 480 ) ( 480 -256 480 ) ( 480 -192 480 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 86
+   {
+      ( 480 -192 400 ) ( 480 -192 416 ) ( 480 0 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 -192 400 ) ( 416 0 400 ) ( 416 0 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1344 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 0 400 ) ( 480 0 400 ) ( 480 0 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 -192 400 ) ( 416 -192 416 ) ( 480 -192 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -192 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 416 -192 416 ) ( 416 0 416 ) ( 480 0 416 ) levelcreating/pattern_neutral1 [ 1 0 0 -192 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( 416 -192 400 ) ( 480 -192 400 ) ( 480 0 400 ) levelcreating/grid_multiplayer_wall [ -1 0 0 576 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+   }
+
+   // Brush 87
+   {
+      ( -288 -192 400 ) ( -288 -192 416 ) ( -288 0 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 -192 400 ) ( -352 0 400 ) ( -352 0 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1344 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 0 400 ) ( -288 0 400 ) ( -288 0 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 -192 400 ) ( -352 -192 416 ) ( -288 -192 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1344 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -352 -192 416 ) ( -352 0 416 ) ( -288 0 416 ) levelcreating/pattern_neutral1 [ 1 0 0 1344 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( -352 -192 400 ) ( -288 -192 400 ) ( -288 0 400 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -960 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+   }
+
+   // Brush 88
+   {
+      ( 352 -320 400 ) ( 352 -320 416 ) ( 352 -256 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 384 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 -320 400 ) ( -224 -256 400 ) ( -224 -256 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 -256 400 ) ( 352 -256 400 ) ( 352 -256 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 -320 400 ) ( -224 -320 416 ) ( 352 -320 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1056 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 -320 416 ) ( -224 -256 416 ) ( 352 -256 416 ) levelcreating/pattern_neutral1 [ 1 0 0 1056 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+      ( -224 -320 400 ) ( 352 -320 400 ) ( 352 -256 400 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 -1 0 -384 ] 0 0.5 0.5
+   }
+
+   // Brush 89
+   {
+      ( 352 64 400 ) ( 352 64 416 ) ( 352 128 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -384 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 64 400 ) ( -224 128 400 ) ( -224 128 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1856 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 128 400 ) ( 352 128 400 ) ( 352 128 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 64 400 ) ( -224 64 416 ) ( 352 64 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1056 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -224 64 416 ) ( -224 128 416 ) ( 352 128 416 ) levelcreating/pattern_neutral1 [ 1 0 0 1056 ] [ 0 -1 0 384 ] 0 0.5 0.5
+      ( -224 64 400 ) ( 352 64 400 ) ( 352 128 400 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 -1 0 384 ] 0 0.5 0.5
+   }
+
+   // Brush 90
+   {
+      ( -32 0 176 ) ( -32 0 688 ) ( -32 64 688 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( -96 0 176 ) ( -96 64 176 ) ( -96 64 688 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1472 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( -96 64 176 ) ( -32 64 176 ) ( -32 64 688 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -448 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( -96 0 176 ) ( -96 0 688 ) ( -32 0 688 ) levelcreating/grid_multiplayer_wall [ 1 0 0 832 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( -96 0 688 ) ( -96 64 688 ) ( -32 64 688 ) levelcreating/grid_wavy2 [ 1 0 0 832 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( -96 0 176 ) ( -32 0 176 ) ( -32 64 176 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -448 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 91
+   {
+      ( 224 0 176 ) ( 224 0 688 ) ( 224 64 688 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( 160 0 176 ) ( 160 64 176 ) ( 160 64 688 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1472 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( 160 64 176 ) ( 224 64 176 ) ( 224 64 688 ) levelcreating/grid_multiplayer_wall [ -1 0 0 64 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( 160 0 176 ) ( 160 0 688 ) ( 224 0 688 ) levelcreating/grid_multiplayer_wall [ 1 0 0 320 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( 160 0 688 ) ( 160 64 688 ) ( 224 64 688 ) levelcreating/grid_wavy2 [ 1 0 0 320 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( 160 0 176 ) ( 224 0 176 ) ( 224 64 176 ) levelcreating/grid_multiplayer_wall [ -1 0 0 64 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 92
+   {
+      ( -32 -256 176 ) ( -32 -256 688 ) ( -32 -192 688 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( -96 -256 176 ) ( -96 -192 176 ) ( -96 -192 688 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 960 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( -96 -192 176 ) ( -32 -192 176 ) ( -32 -192 688 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -448 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( -96 -256 176 ) ( -96 -256 688 ) ( -32 -256 688 ) levelcreating/grid_multiplayer_wall [ 1 0 0 832 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( -96 -256 688 ) ( -96 -192 688 ) ( -32 -192 688 ) levelcreating/grid_wavy2 [ 1 0 0 832 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( -96 -256 176 ) ( -32 -256 176 ) ( -32 -192 176 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -448 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 93
+   {
+      ( 224 -256 176 ) ( 224 -256 688 ) ( 224 -192 688 ) levelcreating/grid_multiplayer_wall [ 0 1 0 512 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( 160 -256 176 ) ( 160 -192 176 ) ( 160 -192 688 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 960 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( 160 -192 176 ) ( 224 -192 176 ) ( 224 -192 688 ) levelcreating/grid_multiplayer_wall [ -1 0 0 64 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( 160 -256 176 ) ( 160 -256 688 ) ( 224 -256 688 ) levelcreating/grid_multiplayer_wall [ 1 0 0 320 ] [ 0 0 -1 352 ] 0 0.5 0.5
+      ( 160 -256 688 ) ( 160 -192 688 ) ( 224 -192 688 ) levelcreating/grid_wavy2 [ 1 0 0 320 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+      ( 160 -256 176 ) ( 224 -256 176 ) ( 224 -192 176 ) levelcreating/grid_multiplayer_wall [ -1 0 0 64 ] [ 0 -1 0 -512 ] 0 0.5 0.5
+   }
+
+   // Brush 94
+   {
+      ( 160 -192 400 ) ( 160 -192 416 ) ( 160 0 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -192 400 ) ( -32 0 400 ) ( -32 0 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1344 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 0 400 ) ( 160 0 400 ) ( 160 0 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -192 400 ) ( -32 -192 416 ) ( 160 -192 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -192 416 ) ( -32 0 416 ) ( 160 0 416 ) levelcreating/grid_wavy2 [ 1 0 0 448 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( -32 -192 400 ) ( 160 -192 400 ) ( 160 0 400 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+   }
+
+   // Brush 95
+   {
+      ( 160 0 400 ) ( 160 0 416 ) ( 160 64 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -256 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 0 400 ) ( -32 64 400 ) ( -32 64 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1728 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 64 400 ) ( 160 64 400 ) ( 160 64 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 0 400 ) ( -32 0 416 ) ( 160 0 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 0 416 ) ( -32 64 416 ) ( 160 64 416 ) levelcreating/pattern_warm1 [ 1 0 0 448 ] [ 0 -1 0 256 ] 0 0.5 0.5
+      ( -32 0 400 ) ( 160 0 400 ) ( 160 64 400 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 -1 0 256 ] 0 0.5 0.5
+   }
+
+   // Brush 96
+   {
+      ( 160 -256 400 ) ( 160 -256 416 ) ( 160 -192 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 256 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -256 400 ) ( -32 -192 400 ) ( -32 -192 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1216 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -192 400 ) ( 160 -192 400 ) ( 160 -192 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -256 400 ) ( -32 -256 416 ) ( 160 -256 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 448 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -32 -256 416 ) ( -32 -192 416 ) ( 160 -192 416 ) levelcreating/pattern_warm1 [ 1 0 0 448 ] [ 0 -1 0 -256 ] 0 0.5 0.5
+      ( -32 -256 400 ) ( 160 -256 400 ) ( 160 -192 400 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 -1 0 -256 ] 0 0.5 0.5
+   }
+
+   // Brush 97
+   {
+      ( 224 -192 400 ) ( 224 -192 416 ) ( 224 0 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 160 -192 400 ) ( 160 0 400 ) ( 160 0 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1344 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 160 0 400 ) ( 224 0 400 ) ( 224 0 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 320 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 160 -192 400 ) ( 160 -192 416 ) ( 224 -192 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 64 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 160 -192 416 ) ( 160 0 416 ) ( 224 0 416 ) levelcreating/pattern_warm1 [ 1 0 0 64 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( 160 -192 400 ) ( 224 -192 400 ) ( 224 0 400 ) levelcreating/grid_multiplayer_wall [ -1 0 0 320 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+   }
+
+   // Brush 98
+   {
+      ( -32 -192 400 ) ( -32 -192 416 ) ( -32 0 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 128 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -96 -192 400 ) ( -96 0 400 ) ( -96 0 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1344 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -96 0 400 ) ( -32 0 400 ) ( -32 0 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -192 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -96 -192 400 ) ( -96 -192 416 ) ( -32 -192 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 576 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -96 -192 416 ) ( -96 0 416 ) ( -32 0 416 ) levelcreating/pattern_warm1 [ 1 0 0 576 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( -96 -192 400 ) ( -32 -192 400 ) ( -32 0 400 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -192 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+   }
+
+   // Brush 100
+   {
+      ( -224 -384 -96 ) ( -224 -384 -48 ) ( -224 -192 -48 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -416 -384 -96 ) ( -416 -192 -96 ) ( -416 -192 -48 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 64 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -416 -192 -96 ) ( -224 -192 -96 ) ( -224 -192 -48 ) levelcreating/pattern_cool2 [ -1 0 0 -1152 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -416 -384 -96 ) ( -416 -384 -48 ) ( -224 -384 -48 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -416 -384 -48 ) ( -416 -192 -48 ) ( -224 -192 -48 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( -416 -384 -96 ) ( -224 -384 -96 ) ( -224 -192 -96 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 101
+   {
+      ( -416 -384 -96 ) ( -416 -384 -48 ) ( -416 192 -48 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -608 -384 -96 ) ( -608 192 -96 ) ( -608 192 -48 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 64 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -608 192 -96 ) ( -416 192 -96 ) ( -416 192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -608 -384 -96 ) ( -608 -384 -48 ) ( -416 -384 -48 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1600 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -608 -384 -48 ) ( -608 192 -48 ) ( -416 192 -48 ) levelcreating/grid_wavy2 [ 1 0 0 1600 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( -608 -384 -96 ) ( -416 -384 -96 ) ( -416 192 -96 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1216 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 102
+   {
+      ( -224 0 -96 ) ( -224 0 -48 ) ( -224 192 -48 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -416 0 -96 ) ( -416 192 -96 ) ( -416 192 -48 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 832 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -416 192 -96 ) ( -224 192 -96 ) ( -224 192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -416 0 -96 ) ( -416 0 -48 ) ( -224 0 -48 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -416 0 -48 ) ( -416 192 -48 ) ( -224 192 -48 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( -416 0 -96 ) ( -224 0 -96 ) ( -224 192 -96 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 103
+   {
+      ( 544 192 -96 ) ( 544 192 -48 ) ( 544 384 -48 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -384 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -608 192 -96 ) ( -608 384 -96 ) ( -608 384 -48 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1216 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -608 384 -96 ) ( 544 384 -96 ) ( 544 384 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -608 192 -96 ) ( -608 192 -48 ) ( 544 192 -48 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -608 192 -48 ) ( -608 384 -48 ) ( 544 384 -48 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 384 ] 0 0.5 0.5
+      ( -608 192 -96 ) ( 544 192 -96 ) ( 544 384 -96 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 384 ] 0 0.5 0.5
+   }
+
+   // Brush 104
+   {
+      ( 736 -384 -96 ) ( 736 -384 -48 ) ( 736 192 -48 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 544 -384 -96 ) ( 544 192 -96 ) ( 544 192 -48 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 64 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 544 192 -96 ) ( 736 192 -96 ) ( 736 192 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 1216 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 544 -384 -96 ) ( 544 -384 -48 ) ( 736 -384 -48 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -704 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 544 -384 -48 ) ( 544 192 -48 ) ( 736 192 -48 ) levelcreating/grid_wavy2 [ 1 0 0 -704 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( 544 -384 -96 ) ( 736 -384 -96 ) ( 736 192 -96 ) levelcreating/grid_multiplayer_wall [ -1 0 0 1088 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 105
+   {
+      ( 544 -576 -96 ) ( 544 -576 -48 ) ( 544 -384 -48 ) levelcreating/grid_multiplayer_wall [ 0 1 0 1152 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -608 -576 -96 ) ( -608 -384 -96 ) ( -608 -384 -48 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 -320 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -608 -384 -96 ) ( 544 -384 -96 ) ( 544 -384 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( -608 -576 -96 ) ( -608 -576 -48 ) ( 544 -576 -48 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1216 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( -608 -576 -48 ) ( -608 -384 -48 ) ( 544 -384 -48 ) levelcreating/grid_wavy2 [ 1 0 0 1216 ] [ 0 -1 0 -1152 ] 0 0.5 0.5
+      ( -608 -576 -96 ) ( 544 -576 -96 ) ( 544 -384 -96 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -832 ] [ 0 -1 0 -1152 ] 0 0.5 0.5
+   }
+
+   // Brush 106
+   {
+      ( 544 -384 -96 ) ( 544 -384 -48 ) ( 544 -192 -48 ) levelcreating/grid_multiplayer_wall [ 0 1 0 768 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 352 -384 -96 ) ( 352 -192 -96 ) ( 352 -192 -48 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 64 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 352 -192 -96 ) ( 544 -192 -96 ) ( 544 -192 -48 ) levelcreating/pattern_cool2 [ -1 0 0 384 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 352 -384 -96 ) ( 352 -384 -48 ) ( 544 -384 -48 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -320 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 352 -384 -48 ) ( 352 -192 -48 ) ( 544 -192 -48 ) levelcreating/grid_wavy2 [ 1 0 0 -320 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+      ( 352 -384 -96 ) ( 544 -384 -96 ) ( 544 -192 -96 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 -1 0 -768 ] 0 0.5 0.5
+   }
+
+   // Brush 107
+   {
+      ( 544 0 -96 ) ( 544 0 -48 ) ( 544 192 -48 ) levelcreating/grid_multiplayer_wall [ 0 1 0 0 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 352 0 -96 ) ( 352 192 -96 ) ( 352 192 -48 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 832 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 352 192 -96 ) ( 544 192 -96 ) ( 544 192 -48 ) levelcreating/pattern_cool2 [ -1 0 0 384 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 352 0 -96 ) ( 352 0 -48 ) ( 544 0 -48 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -320 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 352 0 -48 ) ( 352 192 -48 ) ( 544 192 -48 ) levelcreating/grid_wavy2 [ 1 0 0 -320 ] [ 0 -1 0 0 ] 0 0.5 0.5
+      ( 352 0 -96 ) ( 544 0 -96 ) ( 544 192 -96 ) levelcreating/grid_multiplayer_wall [ -1 0 0 704 ] [ 0 -1 0 0 ] 0 0.5 0.5
+   }
+
+   // Brush 108
+   {
+      ( 736 192 -96 ) ( 736 192 -48 ) ( 736 384 -48 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -384 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 544 192 -96 ) ( 544 384 -96 ) ( 544 384 -48 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1216 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 544 384 -96 ) ( 736 384 -96 ) ( 736 384 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 544 192 -96 ) ( 544 192 -48 ) ( 736 192 -48 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -704 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 544 192 -48 ) ( 544 384 -48 ) ( 736 384 -48 ) levelcreating/grid_wavy2 [ 1 0 0 -704 ] [ 0 -1 0 384 ] 0 0.5 0.5
+      ( 544 192 -96 ) ( 736 192 -96 ) ( 736 384 -96 ) levelcreating/grid_multiplayer_wall [ -1 0 0 1088 ] [ 0 -1 0 384 ] 0 0.5 0.5
+   }
+
+   // Brush 109
+   {
+      ( 736 -576 -96 ) ( 736 -576 -48 ) ( 736 -384 -48 ) levelcreating/grid_multiplayer_wall [ 0 1 0 1152 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 544 -576 -96 ) ( 544 -384 -96 ) ( 544 -384 -48 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 -320 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 544 -384 -96 ) ( 736 -384 -96 ) ( 736 -384 -48 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -1088 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 544 -576 -96 ) ( 544 -576 -48 ) ( 736 -576 -48 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -704 ] [ 0 0 -1 -192 ] 0 0.5 0.5
+      ( 544 -576 -48 ) ( 544 -384 -48 ) ( 736 -384 -48 ) levelcreating/grid_wavy2 [ 1 0 0 -704 ] [ 0 -1 0 -1152 ] 0 0.5 0.5
+      ( 544 -576 -96 ) ( 736 -576 -96 ) ( 736 -384 -96 ) levelcreating/grid_multiplayer_wall [ -1 0 0 1088 ] [ 0 -1 0 -1152 ] 0 0.5 0.5
+   }
+
+   // Brush 114
+   {
+      ( -96 -256 688 ) ( -96 64 688 ) ( -96 64 816 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1344 ] [ 0 0 -1 704 ] 0 0.5 0.5
+      ( -96 64 688 ) ( -64 64 688 ) ( -64 64 816 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 0 -1 704 ] 0 0.5 0.5
+      ( -96 -256 688 ) ( -96 -256 816 ) ( -64 -256 816 ) levelcreating/grid_multiplayer_wall [ 1 0 0 448 ] [ 0 0 -1 704 ] 0 0.5 0.5
+      ( -96 -256 816 ) ( -96 64 816 ) ( -64 64 816 ) levelcreating/grid_wavy2 [ 1 0 0 448 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( -96 -256 688 ) ( -64 -256 688 ) ( -64 64 688 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( -64 -256 688 ) ( -64 -256 816 ) ( -64 64 816 ) levelcreating/grid_multiplayer_wall [ 0 -1.25 0 1296 ] [ 0 0 -2 2208 ] 0 0.5 0.5
+   }
+
+   // Brush 115
+   {
+      ( -64 64 688 ) ( 192 64 688 ) ( 192 64 816 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 0 -1 704 ] 0 0.5 0.5
+      ( 192 32 816 ) ( 192 64 816 ) ( 192 64 688 ) levelcreating/grid_multiplayer_wall [ 0 1 0 128 ] [ 0 0 -1 704 ] 0 0.5 0.5
+      ( -64 64 816 ) ( 192 64 816 ) ( 192 32 816 ) levelcreating/grid_wavy2 [ 1 0 0 448 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( 192 32 688 ) ( 192 64 688 ) ( -64 64 688 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( -64 32 688 ) ( -64 64 688 ) ( -64 64 816 ) levelcreating/grid_multiplayer_wall [ 0 -1.25 0 1296 ] [ 0 0 -2 2208 ] 0 0.5 0.5
+      ( -64 32 688 ) ( -64 32 816 ) ( 192 32 816 ) levelcreating/grid_multiplayer_wall [ -1.25 0 0 -32 ] [ 0 0 -2 2208 ] 0 0.5 0.5
+   }
+
+   // Brush 116
+   {
+      ( -64 -256 816 ) ( 192 -256 816 ) ( 192 -256 688 ) levelcreating/grid_multiplayer_wall [ 1 0 0 448 ] [ 0 0 -1 704 ] 0 0.5 0.5
+      ( 192 -256 688 ) ( 192 -256 816 ) ( 192 -224 816 ) levelcreating/grid_multiplayer_wall [ 0 1 0 128 ] [ 0 0 -1 704 ] 0 0.5 0.5
+      ( 192 -224 816 ) ( 192 -256 816 ) ( -64 -256 816 ) levelcreating/grid_wavy2 [ 1 0 0 448 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( -64 -256 688 ) ( 192 -256 688 ) ( 192 -224 688 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -64 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( -64 -256 688 ) ( -64 -224 688 ) ( -64 -224 816 ) levelcreating/grid_multiplayer_wall [ 0 -1.25 0 1296 ] [ 0 0 -2 2208 ] 0 0.5 0.5
+      ( -64 -224 688 ) ( 192 -224 688 ) ( 192 -224 816 ) levelcreating/grid_multiplayer_wall [ 1.25 0 0 416 ] [ 0 0 -2 2208 ] 0 0.5 0.5
+   }
+
+   // Brush 120
+   {
+      ( 192 -256 688 ) ( 192 64 688 ) ( 192 64 816 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1344 ] [ 0 0 -1 704 ] 0 0.5 0.5
+      ( 192 64 688 ) ( 224 64 688 ) ( 224 64 816 ) levelcreating/grid_multiplayer_wall [ -1 0 0 512 ] [ 0 0 -1 704 ] 0 0.5 0.5
+      ( 192 -256 688 ) ( 192 -256 816 ) ( 224 -256 816 ) levelcreating/grid_multiplayer_wall [ 1 0 0 -128 ] [ 0 0 -1 704 ] 0 0.5 0.5
+      ( 192 -256 816 ) ( 192 64 816 ) ( 224 64 816 ) levelcreating/grid_wavy2 [ 1 0 0 -128 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( 192 -256 688 ) ( 224 -256 688 ) ( 224 64 688 ) levelcreating/grid_multiplayer_wall [ -1 0 0 512 ] [ 0 -1 0 -128 ] 0 0.5 0.5
+      ( 224 -256 688 ) ( 224 -256 816 ) ( 224 64 816 ) levelcreating/grid_multiplayer_wall [ 0 -1.25 0 1296 ] [ 0 0 -2 2208 ] 0 0.5 0.5
+   }
+
+   // Brush 121
+   {
+      ( 96 128 400 ) ( 96 128 416 ) ( 96 384 416 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -512 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 128 400 ) ( 32 384 400 ) ( 32 384 416 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 1984 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 384 400 ) ( 96 384 400 ) ( 96 384 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 128 400 ) ( 32 128 416 ) ( 96 128 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1056 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 128 416 ) ( 32 384 416 ) ( 96 384 416 ) levelcreating/pattern_neutral1 [ 1 0 0 1056 ] [ 0 -1 0 512 ] 0 0.5 0.5
+      ( 32 128 400 ) ( 96 128 400 ) ( 96 384 400 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 -1 0 512 ] 0 0.5 0.5
+   }
+
+   // Brush 122
+   {
+      ( 96 384 400 ) ( 96 384 416 ) ( 96 448 432 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -1024 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 384 400 ) ( 32 448 416 ) ( 32 448 432 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 2496 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 448 416 ) ( 96 448 416 ) ( 96 448 432 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 384 400 ) ( 32 384 416 ) ( 96 384 416 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1056 ] [ 0 0 -1 -96 ] 0 0.5 0.5
+      ( 32 384 416 ) ( 32 448 432 ) ( 96 448 432 ) levelcreating/pattern_neutral1 [ 1 0 0 1056 ] [ 0 -1 0 1024 ] 0 0.5 0.5
+      ( 32 384 400 ) ( 96 384 400 ) ( 96 448 416 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 -1 0 1024 ] 0 0.5 0.5
+   }
+
+   // Brush 123
+   {
+      ( 96 448 416 ) ( 96 448 432 ) ( 96 512 464 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -1152 ] [ 0 0 -1 -64 ] 0 0.5 0.5
+      ( 32 448 416 ) ( 32 512 448 ) ( 32 512 464 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 2624 ] [ 0 0 -1 -64 ] 0 0.5 0.5
+      ( 32 512 448 ) ( 96 512 448 ) ( 96 512 464 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 0 -1 -64 ] 0 0.5 0.5
+      ( 32 448 416 ) ( 32 448 432 ) ( 96 448 432 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1056 ] [ 0 0 -1 -64 ] 0 0.5 0.5
+      ( 32 448 432 ) ( 32 512 464 ) ( 96 512 464 ) levelcreating/pattern_neutral1 [ 1 0 0 1056 ] [ 0 -1 0 1152 ] 0 0.5 0.5
+      ( 32 448 416 ) ( 96 448 416 ) ( 96 512 448 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 -1 0 1152 ] 0 0.5 0.5
+   }
+
+   // Brush 124
+   {
+      ( 96 512 448 ) ( 96 512 464 ) ( 96 576 512 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -1280 ] [ 0 0 -1 0 ] 0 0.5 0.5
+      ( 32 512 448 ) ( 32 576 496 ) ( 32 576 512 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 2752 ] [ 0 0 -1 0 ] 0 0.5 0.5
+      ( 32 576 496 ) ( 96 576 496 ) ( 96 576 512 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 0 -1 0 ] 0 0.5 0.5
+      ( 32 512 448 ) ( 32 512 464 ) ( 96 512 464 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1056 ] [ 0 0 -1 0 ] 0 0.5 0.5
+      ( 32 512 464 ) ( 32 576 512 ) ( 96 576 512 ) levelcreating/pattern_neutral1 [ 1 0 0 1056 ] [ 0 -1 0 1280 ] 0 0.5 0.5
+      ( 32 512 448 ) ( 96 512 448 ) ( 96 576 496 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 -1 0 1280 ] 0 0.5 0.5
+   }
+
+   // Brush 125
+   {
+      ( 96 576 496 ) ( 96 576 512 ) ( 96 640 576 ) levelcreating/grid_multiplayer_wall [ 0 1 0 -1408 ] [ 0 0 -1 96 ] 0 0.5 0.5
+      ( 32 576 496 ) ( 32 640 560 ) ( 32 640 576 ) levelcreating/grid_multiplayer_wall [ 0 -1 0 2880 ] [ 0 0 -1 96 ] 0 0.5 0.5
+      ( 32 640 560 ) ( 96 640 560 ) ( 96 640 576 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 0 -1 96 ] 0 0.5 0.5
+      ( 32 576 496 ) ( 32 576 512 ) ( 96 576 512 ) levelcreating/grid_multiplayer_wall [ 1 0 0 1056 ] [ 0 0 -1 96 ] 0 0.5 0.5
+      ( 32 576 512 ) ( 32 640 576 ) ( 96 640 576 ) levelcreating/pattern_neutral1 [ 1 0 0 1056 ] [ 0 -1 0 1408 ] 0 0.5 0.5
+      ( 32 576 496 ) ( 96 576 496 ) ( 96 640 560 ) levelcreating/grid_multiplayer_wall [ -1 0 0 -672 ] [ 0 -1 0 1408 ] 0 0.5 0.5
+   }
+}

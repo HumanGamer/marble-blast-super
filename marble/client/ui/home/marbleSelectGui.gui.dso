@@ -1,0 +1,113 @@
+!
+A%
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+$
+ÿ
+ÿ
+ÿ
+$
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+$
+
+
+
+
+
+
+µ
+
+
+
+
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(MarbleSelectGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "62 53";
+      extent = "513 370";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "common/ui/dialog";
+      wrap = "0";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "401 346";
+      extent = "140 30";
+      minExtent = "8 8";
+      visible = "1";
+      command = "MarbleSelectGui::nextmarble();";
+      helpTag = "0";
+      text = "Next";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      repeatPeriod = "1000";
+      repeatDecay = "1";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "114 346";
+      extent = "140 30";
+      minExtent = "8 8";
+      visible = "1";
+      command = "MarbleSelectGui::prevmarble();";
+      helpTag = "0";
+      text = "Prev";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      repeatPeriod = "1000";
+      repeatDecay = "1";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "256 346";
+      extent = "140 30";
+      minExtent = "8 8";
+      visible = "1";
+      command = "MessageCallback(MarbleSelectGui,MarbleSelectGui.callback);";
+      helpTag = "0";
+      text = "OK";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      repeatPeriod = "1000";
+      repeatDecay = "1";
+   };
+};
+//--- OBJECT WRITE END ---

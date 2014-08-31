@@ -1,0 +1,48 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(GemPopUpGui) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = getRes();
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+      noCursor = "1";
+      
+   new GuiControl(GemPopUpContainer) {
+      profile = "GuiModelessDialogProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "0 0";
+      extent = getRes();
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      
+      new GuiMLTextCtrl(GemPopUpText_Shadow) {
+         profile = "GuiGemPopUpTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "1 1";
+         extent = getRes();
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+      };   
+      
+      new GuiMLTextCtrl(GemPopUpText) {
+         profile = "GuiGemPopUpTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = getRes();
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+      };  
+   
+   };
+      
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,179 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(MarbleSelectGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./marblebg.jpg";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiChunkedBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "7 10";
+      extent = "626 460";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./Home/homegui";
+      useVariable = "0";
+      tile = "0";
+
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "67 82";
+         extent = "513 376";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./marblesector/marble_gui";
+         wrap = "0";
+      };
+      new GuiObjectView(MarbleSelectPreview) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "205 151";
+         extent = "245 220";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         cameraZRot = "0";
+         forceFOV = "0";
+         skin = "base";
+         cameraRotX = "0";
+         cameraZRotSpeed = "0.001";
+         orbitDistance = "1.2";
+         autoSize = "1";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "266 341";
+         extent = "137 60";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.setContent(playmissiongui);";
+         helpTag = "0";
+         text = "home";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./home/back";
+      };
+      new GuiBitmapButtonCtrl(MS_Next) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "451 319";
+         extent = "74 89";
+         minExtent = "8 8";
+         visible = "1";
+         command = "MarbleSelectGui.SelectMarble(24);";
+         helpTag = "0";
+         text = "next";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./play/next";
+      };
+      new GuiBitmapButtonCtrl(MS_Prev) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "135 325";
+         extent = "74 84";
+         minExtent = "8 8";
+         visible = "1";
+         command = "MarbleSelectGui.SelectMarble(22);";
+         helpTag = "0";
+         text = "prev";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./play/prev";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function initMS()
+{
+   if (isObject(MS_skinGroup))
+      MS_skinGroup.delete();
+   new SimGroup(MS_skinGroup);
+   MarbleSelectGui.AddMarbles();
+}
+
+function MarbleSelectGui::onWake(%this)
+{
+   %this.buildSkinList();
+}
+
+function MarbleSelectGui::buildSkinList(%this)
+{
+   %this.SelectMarble($pref::MarbleIndex);
+}
+
+function MarbleSelectGui::SelectMarble(%this, %index)
+{
+   %skin = MS_skinGroup.getObject(%index).skin;
+   MarbleSelectPreview.setModel("marble/data/shapes/balls/marble.dts", %skin);
+   $pref::MarbleIndex = %index;
+   MS_Prev.setActive(true);
+   MS_Next.setActive(true);
+   if (%index <= 0) MS_Prev.setActive(false);
+   if (%index >= MS_skinGroup.getCount() - 1) MS_Next.setActive(false);
+   MS_Prev.command = "MarbleSelectGui.SelectMarble("@%index-1@");";
+   MS_Next.command = "MarbleSelectGui.SelectMarble("@%index+1@");";
+}
+
+function MarbleSelectGui::AddMarble(%this, %skin)
+{
+   MS_skinGroup.add(new SimObject(){skin=%skin;});
+}
+
+function MarbleSelectGui::GetMarble(%this, %index)
+{
+   return MS_skinGroup.getObject(%index).skin;
+}
+
+function MarbleSelectGui::AddMarbles(%this)
+{
+   %this.AddMarble("base");
+   %this.AddMarble("blue");
+   %this.AddMarble("red");
+   %this.AddMarble("purple");
+   %this.AddMarble("gold");
+   %this.AddMarble("orange");
+   %this.AddMarble("teal");
+   %this.AddMarble("pink");
+   %this.AddMarble("yellow");
+   %this.AddMarble("blah");
+   %this.AddMarble("blueabstract");
+   %this.AddMarble("tealabstract");
+   %this.AddMarble("yellowabstract");
+   %this.AddMarble("greenabstract");
+   %this.AddMarble("redabstract");
+   %this.AddMarble("rscribble");
+   %this.AddMarble("tscribble");
+   %this.AddMarble("bscribble");
+   %this.AddMarble("blackscribble");
+   %this.AddMarble("yscribble");
+   %this.AddMarble("oscribble");
+   %this.AddMarble("gscribble");
+   %this.AddMarble("pscribble");
+   %this.AddMarble("marble01.normal");
+}

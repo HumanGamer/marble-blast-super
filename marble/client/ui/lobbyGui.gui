@@ -1,0 +1,136 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(LobbyGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./background";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiBitmapCtrl(LobbyContainer) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "55 60";
+      extent = "530 360";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./lobby/lobby";
+      wrap = "0";
+
+      new GuiBitmapCtrl(LB_Preview) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "230 40";
+         extent = "220 165";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "~/data/missions/multiplayer/coldblueness";
+         wrap = "0";
+      };
+      new GuiBitmapButtonCtrl(LB_Next) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "350 255";
+         extent = "100 30";
+         minExtent = "8 8";
+         visible = "1";
+         command = "LB_setSelected(3);";
+         helpTag = "0";
+         text = "Next";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+      };
+      new GuiBitmapButtonCtrl(LB_Prev) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "230 255";
+         extent = "100 30";
+         minExtent = "8 8";
+         visible = "1";
+         command = "LB_setSelected(1);";
+         helpTag = "0";
+         text = "Prev";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+      };
+      new GuiBitmapButtonCtrl(LB_Play) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "230 215";
+         extent = "220 30";
+         minExtent = "8 8";
+         visible = "1";
+         command = "LB_HostSelected();";
+         helpTag = "0";
+         text = "Play";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+      };
+      new GuiMLTextCtrl(LB_Level_Name) {
+         profile = "GuiBigTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "71 44";
+         extent = "144 91";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiTextListCtrl(LB_PlayerList) {
+         profile = "GuiTextListProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "68 138";
+         extent = "274 16";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         enumerate = "0";
+         resizeCell = "0";
+         columns = "0 19 100";
+         fitParentWidth = "0";
+         clipColumnText = "0";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+      };
+      new GuiBitmapButtonCtrl(LB_Disconnect) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "230 289";
+         extent = "220 30";
+         minExtent = "8 8";
+         visible = "1";
+         command = "disconnect();";
+         helpTag = "0";
+         text = "Disconnect";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

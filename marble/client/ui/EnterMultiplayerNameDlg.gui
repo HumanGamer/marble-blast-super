@@ -1,0 +1,120 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(EnterMultiplayerNameDlg) {
+   profile = "GuiDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "173 135";
+      extent = "294 209";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./multiplayer/bg";
+      wrap = "0";
+
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 146";
+         extent = "145 61";
+         minExtent = "8 8";
+         visible = "1";
+         command = "EnterMultiplayerNameDlg.hide();";
+         helpTag = "0";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./multiplayer/back";
+      };
+      new GuiBitmapButtonCtrl(MultiplayerNameButton) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "144 146";
+         extent = "151 60";
+         minExtent = "8 8";
+         visible = "1";
+         command = "continueConnect(\"\");";
+         helpTag = "0";
+         text = "Button";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./multiplayer/ok";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "0 96";
+         extent = "295 52";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./multiplayer/enterip";
+         wrap = "0";
+      };
+      new GuiMLTextCtrl(MultiplayerNameText) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "94 79";
+         extent = "345 14";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiTextEditCtrl(MultiplayerNameEdit) {
+         profile = "GuiBigTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "21 105";
+         extent = "252 36";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$pref::Multiplayer::Name";
+         altCommand = "continueConnect(\"\");";
+         helpTag = "0";
+         maxLength = "200000";
+         maxPixelWidth = "200000";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function EnterMultiplayerNameDlg::show(%this, %var, %command, %text)
+{
+   MultiplayerNameButton.command = %command;
+   MultiplayerNameEdit.altCommand = %command;
+   MultiplayerNameEdit.variable = %var;
+   eval("%val = " @ %var @ ";");
+   MultiplayerNameEdit.setText(%val);
+   MultiplayerNameText.setText(%text);
+   Canvas.pushDialog(EnterMultiplayerNameDlg);
+}
+
+function EnterMultiplayerNameDlg::hide(%this)
+{
+   Canvas.popDialog(EnterMultiplayerNameDlg);
+   disconnect();
+}

@@ -1,0 +1,22 @@
+Added Gem Beams For Multiplayer
+Added Pad Beams For Singleplayer
+
+Old Multiplayer levels are no longer compatible, please look at my "Neighbourhood" Level to see how to make levels compatible with it.
+
+Basic Gem Radar - Not Finished (Not sure how to make it better - code wise)
+
+Added Random Spawns to Multiplayer
+On out of bounds will spawn to closest spawn
+All Player Spawns must be in a simgroup called "SpawnPoints"
+All Gem Spawns must be in a simgroup called "GemSpawns"
+
+for gems: group="#"; is no longer used as it finds the closest gems by distance
+
+PlayerList with score
+
+When going out of bounds you can no longer use the powerup.
+Also, to avoid using the powerup on spawn, skipping the out of bounds screen is now triggered by the jump key and not the powerup key
+
+Fixed Various PlayMissionGui issues
+
+PS: You can use my level as an official one if you'd like. It was one of my custom levels ported from MBU.

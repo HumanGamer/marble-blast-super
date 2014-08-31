@@ -1,0 +1,29 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(LoadingGui) {
+   profile = "GuiContentProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./loadingbg.jpg";
+   useVariable = "0";
+   tile = "0";
+      qLineCount = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "222 201";
+      extent = "195 77";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./loading/loading";
+      wrap = "0";
+   };
+};
+//--- OBJECT WRITE END ---

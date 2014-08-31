@@ -1,0 +1,102 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(MultiplayerGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./multiplayerbg.jpg";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "relative";
+      vertSizing = "relative";
+      position = "167 6";
+      extent = "461 440";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./Home/homegui";
+      wrap = "0";
+
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "305 46";
+         extent = "146 45";
+         minExtent = "8 8";
+         visible = "1";
+         command = "$pref::Multiplayer::isMultiplayer=1; PMSetMissionTab(\"Multiplayer\"); connectTo();";
+         helpTag = "0";
+         text = "highscore";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./home/join";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "312 -5";
+         extent = "143 63";
+         minExtent = "8 8";
+         visible = "1";
+         command = "$pref::Multiplayer::isMultiplayer=1; PMSetMissionTab(\"Multiplayer\"); Canvas.setContent(LobbyGui);";
+         helpTag = "0";
+         text = "highscore";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./home/host";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "325 391";
+         extent = "147 49";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.setContent(mainMenuGui);";
+         helpTag = "0";
+         text = "highscore";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./home/back";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "291 72";
+         extent = "163 75";
+         minExtent = "8 8";
+         visible = "1";
+         command = "$pref::Multiplayer::isMultiplayer=1; PMSetMissionTab(\"Multiplayer\"); Canvas.setContent(playMissionGUI);";
+         helpTag = "0";
+         text = "quick";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./home/quick";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function MultiplayerGui::onWake(%this)
+{
+   enterMPName();
+}

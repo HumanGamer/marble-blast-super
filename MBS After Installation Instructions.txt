@@ -1,0 +1,78 @@
+================================
+
+Marble Blast Super - After Installation Instructions
+
+Marble Blast Super (C) Greenbolt Studios 2014
+Marble Blast Gold (C) GarageGames and Monster Studios 2003
+
+================================
+
+Thank you for installing Marble Blast Super.
+
+Please copy & paste the following files to the MBS directory.
+(If you do not have some of them in MBG, DO NOT worry about them.)
+(You may either have the non-ignition version OR the ignition version, so some of the files below will not appear.):
+
+================================
+
+To the folder
+.\Marble Blast Super :
+
+NON-IGNITION VERSION:
+
+getdxver.exe
+glu2d3d.dll
+INSTALL.LOG
+launch.ini
+license.txt
+main.cs
+marbleblast.exe
+ogg.dll
+openal32.dll
+opengl2d3d.dll
+readme.txt
+setup.ini
+theUninstallFile.txt
+theUninstallFile0.txt
+Unwise.exe
+version.txt
+vorbis.dll
+
+IGNITION VERSION:
+
+getdxver.exe
+glu2d3d.dll
+ignition
+main.cs
+MarbleBlastGold.exe
+ogg.dll
+OpenAL32.dll
+opengl2d3d.dll
+README.txt
+uninst-mb.exe
+vorbis.dll
+
+================================
+
+To the folder
+.\Marble Blast Super\marble\client\ui :
+
+NON-IGNITION VERSION:
+
+ignitionstatusgui.gui.dso
+
+IGNITION VERSION:
+
+ignitionGui.gui.dso
+ignitionstatusgui.gui.dso
+
+================================
+
+To the folder
+.\Marble Blast Super\marble\client\scripts :
+
+NON-IGNITION VERSION:
+
+demo.cs
+
+================================

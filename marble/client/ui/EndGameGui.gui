@@ -1,0 +1,76 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(EndGameGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+      useVariable = "0";
+      tile = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "77 -58";
+      extent = "485 596";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./endgame/playGui.png";
+      wrap = "0";
+
+      new GuiMLTextCtrl(EndGameGuiDescription) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "43 74";
+         extent = "429 367";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "241 461";
+         extent = "99 66";
+         minExtent = "8 8";
+         visible = "1";
+         command = "setPlayMissionGui2();";
+         accelerator = "enter";
+         helpTag = "0";
+         text = "play";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./endgame/continue";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "342 461";
+         extent = "102 66";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.popDialog(EndGameGui);restartLevel();";
+         helpTag = "0";
+         text = "Prev";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./endgame/replay";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

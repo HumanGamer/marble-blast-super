@@ -1,0 +1,108 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(MultiplayerExitGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiBitmapCtrl(MultiplayerExitContainer) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "160 120";
+      extent = "320 240";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./exitmp/exit_bg";
+      wrap = "0";
+
+      new GuiBitmapButtonCtrl(MPE_Lobby) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "186 182";
+         extent = "121 45";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.popDialog(MultiplayerExitGui);escapeToLobby();";
+         helpTag = "0";
+         text = "Lobby";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./exitmp/lobby";
+      };
+      new GuiBitmapButtonCtrl(MPE_Exit) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 191";
+         extent = "154 42";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.popDialog(MultiplayerExitGui);disconnect();";
+         helpTag = "0";
+         text = "Exit";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./exitmp/exit";
+      };
+      new GuiBitmapButtonCtrl(MPE_Resume) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "22 77";
+         extent = "285 48";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.popDialog(MultiplayerExitGui);";
+         helpTag = "0";
+         text = "Resume";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./exitmp/resume";
+      };
+      new GuiBitmapButtonCtrl(MPE_Restart) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "21 130";
+         extent = "286 42";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.popDialog(MultiplayerExitGui);restartLevel();";
+         helpTag = "0";
+         text = "Restart";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./exitmp/restart";
+      };
+      new GuiMLTextCtrl(MPE_Text) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 19";
+         extent = "267 14";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+         text = "What would you like to do?";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

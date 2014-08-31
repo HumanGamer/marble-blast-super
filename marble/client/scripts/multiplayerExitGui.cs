@@ -1,0 +1,4 @@
+function MultiplayerExitGui::onWake(%this)
+{
+   
+}

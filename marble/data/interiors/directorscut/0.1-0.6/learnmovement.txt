@@ -1,0 +1,43 @@
+C:/Documents and Settings/stewart/Desktop/Marble Blast Super/marble/data/interiors/learnmovement.dif
+
+
+
+Constructor Version: 1.0.3
+
+
+
+Date: 2013/04/28 13:44:50
+
+
+Detail Level 0
+
+
+
+  Zones:         1
+
+  Points:        46
+
+  Surfaces:      28
+
+  Null Surfaces: 0
+
+  BSP Nodes:     34
+
+
+
+  Textures From Brushes:
+
+
+
+    GRID_COOL3
+
+
+
+  Static Meshes and Textures:
+
+
+
+    -- None --
+
+
+

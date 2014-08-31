@@ -1,0 +1,90 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(MOTDGui) {
+   profile = "GuiDialogProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+      bitmap = "./background.jpg";
+      useVariable = "0";
+      tile = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "215 159";
+      extent = "186 219";
+      minExtent = "48 92";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "common/ui/dialog";
+      wrap = "0";
+         canClose = "0";
+         maxLength = "255";
+         resizeWidth = "1";
+         canMinimize = "0";
+         resizeHeight = "1";
+         canMaximize = "0";
+         canMove = "1";
+         minSize = "50 50";
+
+      new GuiMLTextCtrl(MOTDGuiText) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "58 29";
+         extent = "312 14";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+   };
+   new GuiScrollCtrl() {
+      profile = "GuiScrollProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "242 180";
+      extent = "134 177";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      willFirstRespond = "1";
+      hScrollBar = "alwaysOn";
+      vScrollBar = "alwaysOn";
+      constantThumbHeight = "0";
+      childMargin = "0 0";
+
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "2 2";
+         extent = "101 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Muahaha Im copying Spy47...";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "5 19";
+         extent = "99 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Spy47 cause i can...";
+         maxLength = "255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

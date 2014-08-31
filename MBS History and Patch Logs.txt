@@ -1,0 +1,331 @@
+=========================================================
+BETA 2.2.2
+August 31, 2014
+
+- Skail joins the team
+- New shell by Skail
+- 1 new hard level: Frozen Run
+- Bumper texture replaced with original bumper texture
+- Tornado fan loop replaced with original fan loop
+
+=========================================================
+BETA 2.2.1
+August 30, 2014
+
+- Unfinished multiplayer lobby
+- Unfinished bugfix for playMissionGui.gui
+
+=========================================================
+BETA 2.2
+August 30, 2014
+
+- Added gem beams, random spawns, and playerlist for multiplayer
+- Added pad beams for singleplayer
+- 15 new skyboxes
+- 3 new multiplayer levels: Lunatic Cube, Neighbourhood, and Towering Pillars
+- 2 removed multiplayer levels: Playground of Confusion and Cold Blueness
+- Out of Bounds will spawn to closest spawn
+- Cannot use powerup when going OOB
+- Skipping OOB screen now triggered by the jump key instead of the powerup key to avoid using the powerup on spawn
+- Unfinished gem radar
+- Fixed various playMissionGui.gui issues
+
+=========================================================
+BETA 2.1
+August 23, 2014
+
+- 2 new Beginner levels and 1 new Medium level
+- 2 new (working) resolutions
+- Totally redone theme
+- Improvements to Options and Marble Selector
+- New colors for textures
+- New backgrounds
+- Asphalt and Plasma Floor frictions
+
+=========================================================
+BETA 2.0.1
+August 20, 2014
+
+- Organization of interiors
+- Level fixes
+- Director's Cut changes
+- 9 levels readded
+
+=========================================================
+BETA 2.0
+August 19, 2014
+
+- All levels before 2.0 S1 removed except for Gravity Hazard Rush
+- 4 new Beginner levels
+- 3 new frictions: Mud, Bouncy Floor, and Sticky Substance
+- Brighter grass
+- Water animations
+- New jump sound
+- Transparency background for timer
+- Camera position changed to look Marble Blast Ultra style
+- New wall texture
+- New Rear View window color
+- Incomplete fixes to options screen
+
+=========================================================
+BETA 1.9.2.1.1
+June 16, 2014
+
+- Main menu and options menu changes
+- Retextured "How to: Hazards"
+- Rear-view changes
+
+=========================================================
+BETA 1.9.2.1
+June 16, 2014
+
+- Level modifications
+- Level select changes
+- Director's Cut changes
+
+=========================================================
+BETA 1.9.2
+June 16, 2014
+
+- New background screens
+- Level select changes
+- Moved "Party Pooper" to Medium
+- Moved "Elevation" to Advanced
+- Organized Advanced levels
+- Removed fake finish in "How To: Edge-Hits"
+- Fixed end pad in "How To: SuperSpring"
+- New level screenshots
+- Revamped "Original" checkered marble
+- Choose.gui not so slanted anymore
+
+=========================================================
+BETA 1.9.1.1
+June 15, 2014
+
+- Level modifications
+- Level select changes
+- grid_glass textures changed
+
+=========================================================
+BETA 1.9.1
+June 15, 2014
+
+- 25 new levels
+- Main menu, options menu, and pause GUI changes
+- grid_puffy and grid_X textures added
+- Spawn sound added
+
+=========================================================
+BETA 1.9
+May 29, 2014
+
+- BlastedMarble joins the team
+- 2 new levels (Gravity Hazard Rush and Playground of Confusion)
+- "Ascent" renamed to "Are you ready?"
+- Rear-view added
+- Gem sounds added
+- Credits added
+- Intro, main menu, multiplayer menu, options menu, level select, option menu, pause GUI, and manual changes
+- New numbers
+- grid_multiplayer textures added
+- grid_cold and tube textures removed
+- friction, grid_cool, grid_super, grid_warm, grid_wavy and mbs_wall textures changed
+
+=========================================================
+BETA 1.8.6
+September 20, 2013
+
+- 1 new level (Cold Blueness)
+- grid_wavy replaced
+- New menu
+- New menu backgrounds
+- New colored powerups
+- New numbers
+- New trim
+- New marbles
+- playMission.gui not messy anymore
+
+=========================================================
+BETA 1.8.5
+August 31, 2013
+
+- Wall and brick textures changed
+- Title screen changed
+
+=========================================================
+BETA 1.8.4
+August 24, 2013
+
+- 3 new levels (Ascent, How to: SuperGlider, How to: Gravity)
+- 1 new texture (grid_circle3)
+- New playMissionGui.gui
+- New loading GUI
+
+=========================================================
+BETA 1.8.3
+August 23, 2013
+
+- 1 new level (How To: Hazards)
+- 1 modified level (How To: Recoil)
+- New UI textures
+
+=========================================================
+BETA 1.8.2
+August 23, 2013
+
+- 2 modified levels (How to: SuperSpring, How to: SuperSprint)
+- 2 modified menu buttons (Singleplayer, Multiplayer)
+- Nonfunctioning "Quick Match" button
+- New EndGame.gui
+
+=========================================================
+BETA 1.7_02
+August 18, 2013
+
+- New level select menu
+
+=========================================================
+BETA 1.7_01
+August 18, 2013
+
+- New backgrounds
+- 2 new levels (Double Roof, How to: Bounce), and 3 modified levels (How to: Gems, Roll, SuperSpring)
+- Nostalgia and Stewart marble added
+
+=========================================================
+BETA 1.7
+August 14, 2013
+
+- davidjl123 joins the team
+- Super times introduced
+- Changelog added
+- Readme added
+- After installation instructions added
+- Icon and shortcut added
+- 2 new marbles (blah and mbu)
+- Yellow marble fixed
+- Director's Cut added
+- 5 new textures (grid_circle and grid_glass textures)
+- Beginner level fixes
+- Multiplayer level fixes
+
+=========================================================
+BETA 1.6_01
+August 7, 2013
+
+- New main menu
+- Neon mod
+
+=========================================================
+BETA 1.6
+August 5, 2013
+
+- Multiplayer working
+
+=========================================================
+ALPHA 1.5_01
+August 3, 2013
+
+- Bugfixes
+- Improved playmissiongui
+
+=========================================================
+ALPHA 1.5
+August 2, 2013
+
+- Bugfixes
+
+=========================================================
+ALPHA 1.4
+July 31, 2013
+
+- Ralph joins the team
+- Ralph's skyboxes added
+
+=========================================================
+ALPHA 1.3_01
+July 31, 2013
+
+- Multiplayer bugfixes
+
+=========================================================
+ALPHA 1.3
+July 31, 2013
+
+- First tests of multiplayer
+
+=========================================================
+PRE-ALPHA 1.2_01
+July 31, 2013
+
+- Matt (cooldudepoke) joins the team
+- Neon Lightning joins the team
+- 1 new level (Learning Movement)
+
+=========================================================
+PRE-ALPHA 1.2
+July 31, 2013
+
+- Modified GUI
+
+=========================================================
+PRE-ALPHA 1.1
+July 30, 2013
+
+- EnderCraft1 joins the team
+- Intro changed
+- grid_cold, grid_super, and grid_wavy textures added
+- grid_cool, grid_neutral, and grid_warm textures changed
+
+=========================================================
+PRE-ALPHA 1.0
+July 21, 2013
+
+- Marble Blast Super publically announced
+
+=========================================================
+PRE-ALPHA 0.6
+June ??, 2013
+
+- Main menu background changed
+
+=========================================================
+PRE-ALPHA 0.5
+May 22, 2013
+
+- 5 new levels
+
+=========================================================
+PRE-ALPHA 0.4
+April 28, 2013
+
+- 1 level added (Learning Movement)
+
+=========================================================
+PRE-ALPHA 0.3
+?? ??, 2013
+
+- Play GUI textures changed (numbers)
+- Level Selector button removed
+- Marble Selector added
+- Sound changed
+
+=========================================================
+PRE-ALPHA 0.2
+?? ??, 2013
+
+- Super Tab, Marble Selector, and MOTD button removed
+- Level Selector button added
+- GUI textures changed
+
+=========================================================
+PRE-ALPHA 0.1
+December 14, 2012
+
+- Marble Blast Super created
+- Marble Blast Mods Creator support added
+- GUI changed
+- Play GUI textures changed
+- Marble Selector, Level Editor Tab, Expert Tab, and MOTD button added
+
+=========================================================
