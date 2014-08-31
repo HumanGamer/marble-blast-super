@@ -303,7 +303,7 @@ April 28, 2013
 
 =========================================================
 PRE-ALPHA 0.3
-?? ??, 2013
+February 9, 2013
 
 - Play GUI textures changed (numbers)
 - Level Selector button removed
@@ -312,7 +312,7 @@ PRE-ALPHA 0.3
 
 =========================================================
 PRE-ALPHA 0.2
-?? ??, 2013
+January ??, 2013
 
 - Super Tab, Marble Selector, and MOTD button removed
 - Level Selector button added
