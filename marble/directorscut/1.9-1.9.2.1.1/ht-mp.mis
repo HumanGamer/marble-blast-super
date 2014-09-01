@@ -102,7 +102,7 @@ new SimGroup(MissionGroup) {
          rotation = "1 0 0 0";
          scale = "1 1 1";
          dataBlock = "PathedDefault";
-         interiorResource = "marble/data/interiors/HowToMovingPlatforms.dif";
+         interiorResource = "~/data/interiors/directorscut/1.9-1.9.2.1.1/HowToMovingPlatforms.dif";
          interiorIndex = "0";
          basePosition = "0 0 0";
          baseRotation = "1 0 0 0";
@@ -144,7 +144,7 @@ new SimGroup(MissionGroup) {
          rotation = "1 0 0 0";
          scale = "1 1 1";
          dataBlock = "PathedDefault";
-         interiorResource = "marble/data/interiors/HowToMovingPlatforms.dif";
+         interiorResource = "~/data/interiors/directorscut/1.9-1.9.2.1.1/HowToMovingPlatforms.dif";
          interiorIndex = "1";
          basePosition = "0 0 0";
          baseRotation = "1 0 0 0";
