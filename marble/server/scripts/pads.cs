@@ -56,6 +56,7 @@ function EndPad::onAdd(%this, %obj)
    %obj.beam = %shape;
    %obj.beam.setSkinName("base");
    
-   MissionCleanup.add(%shape);
+   if (isObject(MissionCleanup))
+      MissionCleanup.add(%shape);
 }
 

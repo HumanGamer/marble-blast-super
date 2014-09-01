@@ -24,6 +24,7 @@ $Game::GemCount = 0;
 $Game::StartPad = 0;
 $Game::EndPad = 0;
 
+$Game::CurrentCheckPoint = 0;
 
 //-----------------------------------------------------------------------------
 //  Functions that implement game-play
@@ -70,6 +71,7 @@ function onServerCreated()
    exec("./signs.cs");
    exec("./fireworks.cs");
    exec("./beams.cs");
+   exec("./checkpoint.cs");
 
    // Platforms and interior doors
    exec("./pathedInteriors.cs");
@@ -97,6 +99,7 @@ function onMissionLoaded()
    $Game::GemCount = countGems(MissionGroup);
 
    setGravityDir("1 0 0 0 -1 0 0 0 -1",true);
+   $Game::CurrentGravityDir = "1 0 0 0 -1 0 0 0 -1";
 
    // Start the game here if multiplayer...
    if ($Server::ServerType $= "MultiPlayer")
@@ -114,6 +117,7 @@ function onMissionEnded()
 function onMissionReset()
 {
    setGravityDir("1 0 0 0 -1 0 0 0 -1",true);
+   $Game::CurrentGravityDir = "1 0 0 0 -1 0 0 0 -1";
    endFireWorks();
    
    // Reset the players and inform them we're starting
@@ -139,6 +143,22 @@ function SimGroup::onMissionReset(%this)
 {
    for(%i = 0; %i < %this.getCount(); %i++)
       %this.getObject(%i).onMissionReset();
+}
+
+function SimGroup::resetCheckPoint(%this)
+{
+   for(%i = 0; %i < %this.getCount(); %i++)
+   {
+      %obj = %this.getObject(%i);
+      if (%obj.getClassName() $= "Item")// && %obj.getDataBlock().classname $= "Gem")
+      {
+         if (%obj.checkpointNum > $Game::CurrentCheckPoint)
+            %obj.onMissionReset();
+      } else if (%obj.getClassName() $= "SimGroup")
+      {
+         %obj.resetCheckPoint();
+      }
+   }
 }
 
 function SimObject::onMissionReset(%this)
@@ -637,6 +657,7 @@ function GameConnection::resetStats(%this)
    %this.bonusTime = 0;
    %this.penaltyTime = 0;
    %this.gemCount = 0;
+   $Game::CurrentCheckPoint = 0;
 
    // Reset the checkpoint
    if (isObject(%this.checkPoint))
@@ -791,7 +812,7 @@ function GameConnection::spawnPlayer(%this)
 		%spawnPoint = %this.getMultiplayerSpawnPos();
 	} else {
 		%spawnPoint = %this.getCheckpointPos();
-	}
+	}	
    %this.createPlayer(%spawnPoint);
    serverPlay2d(spawnSfx);
 }
@@ -813,12 +834,22 @@ function GameConnection::respawnPlayer(%this)
    // Reset the player back to the last checkpoint
    cancel(%this.respawnSchedule);
    
+   if (%this.checkpoint.pad $= "StartPoint" && !$Client::ConnectedMultiplayer)
+      $resetLevel = true;
+   
    %this.player.unmountImage(0);
    %this.player.unmountImage(2);
    %this.ghost.unmountImage(0);
    %this.ghost.unmountImage(2);
    
-   %this.setGravityDir("1 0 0 0 -1 0 0 0 -1",true);
+   if ($resetLevel)
+   {
+      %this.setGravityDir("1 0 0 0 -1 0 0 0 -1",true);
+      if (%this.checkPoint.pad.getDatablock().getName() !$= "StartPad")
+         %this.checkPoint.pad.getDatablock().setActiveCheckPoint(%this.checkPoint.pad, false);
+   } else {
+      %this.setGravityDir(%this.checkPoint.gravityDir,true);
+   }
    endFireWorks();
       
    //%this.player.disablePowerUps();
@@ -828,7 +859,10 @@ function GameConnection::respawnPlayer(%this)
       %cl = ClientGroup.getObject( %clientIndex );
       commandToClient(%cl, 'GameStart');
 	  if (MissionInfo.gameMode !$= "hunt" || $resetLevel)
-          %cl.resetStats();
+	  {
+	     if (%this.checkPoint.pad $= "StartPoint" || $resetLevel)
+            %cl.resetStats();
+	  }
    }
 
    // Start the game duration timer
@@ -837,13 +871,26 @@ function GameConnection::respawnPlayer(%this)
    $Game::Running = true;
 
    if (MissionInfo.gameMode !$= "hunt" || $resetLevel)
-      ServerGroup.onMissionReset();
+   {
+      if (!$Client::ConnectedMultiplayer && (%this.checkPoint.pad $= "StartPoint" || $resetLevel))
+      {
+         ServerGroup.onMissionReset();
+      } else if (%this.checkPoint.pad !$= "StartPoint")
+      {
+         ServerGroup.resetCheckPoint();
+      }
+   }
 
    // Set the initial state
    if (MissionInfo.gameMode $= "hunt" && !$resetLevel)
        %this.setGameState("play");
-   else
-       %this.setGameState("Start");
+   else {
+      if (%this.checkPoint.pad $= "StartPoint" || $resetLevel)
+         %this.setGameState("Start");
+      else {
+         %this.setGameState("play");
+      }
+   }
    
    
    %this.player.isOOB = false;
@@ -867,20 +914,31 @@ function GameConnection::respawnPlayer(%this)
       }
 	} else
 	{
-      %this.player.setMode(Start);
+	   if (%this.checkPoint.pad $= "StartPoint" || $resetLevel)
+         %this.player.setMode(Start);
+      else
+         %this.player.setMode("normal");
 		%spawnPoint = %this.getCheckpointPos();
 		%this.player.setPowerUp(%this.checkPoint.powerUp,true);
 	}
+	
    %pos = getWord(%spawnPoint, 0) + getWord(%this.spawnOffset, 0) SPC getWord(%spawnPoint, 1) + getWord(%this.spawnOffset, 1) SPC getWord(%spawnPoint, 2) + getWord(%this.spawnOffset, 2) SPC getWord(%spawnPoint, 3) SPC getWord(%spawnPoint, 4) SPC getWord(%spawnPoint, 5) SPC getWords(%spawnPoint, 6);
    %this.player.setPosition(%pos, 0.45);
    
-   %this.penaltyTime = %this.checkPoint.penaltyTime;
-   %this.bonusTime = %this.checkPoint.bonusTime;
+   if ($resetLevel)
+   {
+      %this.penaltyTime = %this.checkPoint.penaltyTime;
+      %this.bonusTime = %this.checkPoint.bonusTime;
+   }
+   
+   if (!$resetLevel)
+      commandToClient(%this, 'EndBonusTime');
 
    if (MissionInfo.gameMode !$= "hunt")
    {
       %this.gemCount = %this.checkPoint.gemCount;
-      %this.setTime(%this.checkPoint.time);
+      if ($resetLevel)
+         %this.setTime(%this.checkPoint.time);
       %this.setGemCount(%this.gemCount);
    }
    %this.play2d(spawnSfx);
@@ -901,6 +959,7 @@ function GameConnection::respawnPlayerHunt(%this)
    %this.ghost.unmountImage(2);
    
    %this.setGravityDir("1 0 0 0 -1 0 0 0 -1",true);
+   $Game::CurrentGravityDir = "1 0 0 0 -1 0 0 0 -1";
    endFireWorks();
    
    // Reset the players and inform them we're starting
@@ -972,7 +1031,7 @@ function GameConnection::createPlayer(%this, %spawnPoint)
    };  
    
    MissionCleanup.add(%player);
-
+   
    %pos = getWord(%spawnPoint, 0) + getWord(%this.spawnOffset, 0) SPC getWord(%spawnPoint, 1) + getWord(%this.spawnOffset, 1) SPC getWord(%spawnPoint, 2) + getWord(%this.spawnOffset, 2) SPC getWord(%spawnPoint, 3) SPC getWord(%spawnPoint, 4) SPC getWord(%spawnPoint, 5) SPC getWords(%spawnPoint, 6);
 
    // Player setup...
@@ -996,20 +1055,32 @@ function GameConnection::createPlayer(%this, %spawnPoint)
 
 function GameConnection::setCheckpoint(%this,%object)
 {
+   
    // Store the last checkpoint which will be used to restore
    // the player when he goes out of bounds.
    if (%object != %this.checkPoint.pad) {
-      %this.checkPoint.delete();
-      %this.checkPoint = new ScriptObject() {
-         pad = %object;
-         time = PlayGUI.elapsedTime;
-         gemCount = %this.gemCount;
-         penaltyTime = %this.penaltyTime;
-         bonusTime = %this.bonusTime;
-         powerUp = %this.player.getPowerUp();
-      };
+      if (%object.num $= "" || %this.checkPoint.num $= "" || %object.num > %this.checkPoint.num)
+      {
+         if (%this.checkPoint.pad.getDatablock().getName() !$= "StartPad")
+            %this.checkPoint.pad.getDatablock().setActiveCheckPoint(%this.checkPoint.pad, false);
+         %this.checkPoint.delete();
+         %this.checkPoint = new ScriptObject() {
+            pad = %object;
+            time = PlayGUI.elapsedTime;
+            gemCount = %this.gemCount;
+            penaltyTime = %this.penaltyTime;
+            bonusTime = %this.bonusTime;
+            powerUp = %this.player.getPowerUp();
+            gravityDir = $Game::CurrentGravityDir;
+         };
+         %this.checkPoint.pad.getDatablock().setActiveCheckPoint(%this.checkPoint.pad, true);
+         
+         MissionCleanup.add(%this.checkPoint);
 
-      messageClient(%this, 'MsgCheckPoint', "\c0Check Point " @ %object.number @ " reached!");
+         messageClient(%this, 'MsgCheckPoint', "\c0Check Point!");
+         %this.play2d(CheckPointSfx);
+         $Game::CurrentCheckPoint++;
+      }
    }
 }
 

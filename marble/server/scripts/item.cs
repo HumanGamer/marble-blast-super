@@ -51,6 +51,7 @@ function ItemData::getPickupName(%this, %obj)
 
 function ItemData::onPickup(%this,%obj,%user,%amount)
 {
+   %obj.checkPointNum = $Game::CurrentCheckPoint + 1;
    // Inform the client what they got.
    if (%user.client && !%this.noPickupMessage)
       messageClient(%user.client, 'MsgItemPickup', '\c0You picked up %1', %this.getPickupName(%obj));

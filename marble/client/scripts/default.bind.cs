@@ -30,7 +30,7 @@ function escapeFromGame()
    if ( $Server::ServerType $= "SinglePlayer" )  {
       // In single player, we'll pause the game while the dialog box is up.
       pauseGame();
-      ExitGameText.setText("<just:center><font:DomCasualD:32>Exit from this Level?");
+      //ExitGameText.setText("<just:center><font:DomCasualD:32>Exit from this Level?");
       Canvas.pushDialog(ExitGameDlg);
    }
    else {
@@ -230,6 +230,10 @@ function getMouseAdjustAmount(%val)
 function yaw(%val)
 {
    $mvYaw += getMouseAdjustAmount(%val);
+   if($pref::input::InvertXAxis)
+      $mvYaw -= getMouseAdjustAmount(%val);
+   else
+      $mvYaw += getMouseAdjustAmount(%val);
 }
 
 function pitch(%val)

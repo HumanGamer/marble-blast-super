@@ -138,6 +138,11 @@ function clientCmdIncBonusTime(%dt)
    PlayGui.addBonusTime(%dt);
 }
 
+function clientCmdEndBonusTime(%dt)
+{
+   PlayGui.endBonusTime(%dt);
+}
+
 function clientCmdResetTimer()
 {
    PlayGui.resetTimer();

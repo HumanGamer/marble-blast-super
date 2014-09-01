@@ -6,11 +6,6 @@
 <Breakpoints/>
 <Bookmarks/>
 <OpenFiles>
-<File ScrollX="0" ScrollY="47">marble\client\scripts\radar.cs</File>
-<File ScrollX="0" ScrollY="209">marble\server\scripts\game.cs</File>
-<File ScrollX="0" ScrollY="13">marble\client\scripts\playerListGui.cs</File>
-<File ScrollX="0" ScrollY="18">marble\client\scripts\multiplayer.cs</File>
-<File ScrollX="0" ScrollY="136">marble\client\scripts\game.cs</File>
-<File ScrollX="0" ScrollY="199" Active="true">marble\server\scripts\multiplayer.cs</File>
+<File ScrollX="0" ScrollY="147" Active="true">marble\server\scripts\game.cs</File>
 </OpenFiles>
 </TorsionProjectOptions>

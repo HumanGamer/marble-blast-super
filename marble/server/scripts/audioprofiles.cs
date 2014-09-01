@@ -229,4 +229,11 @@ datablock AudioProfile(DestroyedVoiceSfx)
    preload = true;
 };
 
+datablock AudioProfile(CheckPointSfx)
+{
+   filename    = "~/data/sound/checkpoint.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
 

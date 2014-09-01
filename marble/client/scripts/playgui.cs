@@ -191,6 +191,13 @@ function PlayGui::addBonusTime(%this, %dt)
       $BonusSfx = alxPlay(TimeTravelLoopSfx);
 }
 
+function PlayGui::endBonusTime(%this)
+{
+   %this.bonusTime = 0;
+   if ($BonusSfx !$= "")
+      alxStop($BonusSfx);
+}
+
 function PlayGui::startTimer(%this)
 {
    $PlayTimerActive = true;

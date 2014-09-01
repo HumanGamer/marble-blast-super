@@ -1,6 +1,6 @@
-//-------------------------- 8/31/2014 -- 21:29:17 -----
+//-------------------------- 9/1/2014 -- 17:24:53 -----
 Processor Init:
-   Intel Pentium III, 2486 Mhz
+   Intel Pentium III, 2484 Mhz
    FPU detected
    MMX detected
    SSE detected
@@ -54,7 +54,6 @@ Loading compiled script common/server/kickban.cs.
 Loading compiled script common/server/game.cs.
 Loading compiled script marble/server/scripts/commands.cs.
 Loading compiled script marble/server/scripts/centerPrint.cs.
-Compiling marble/server/scripts/game.cs...
 Loading compiled script marble/server/scripts/game.cs.
 
 --------- Initializing FPS: Client ---------
@@ -191,90 +190,73 @@ Set::getObject index out of range.
 Set::getObject index out of range.
 Set::getObject index out of range.
 Set::getObject index out of range.
+   keyboard0 input device created.
+   mouse0 input device created.
 Exporting server prefs...
-==>connect("71.175.96.240");
-IP: 71.175.96.240
-Adding a pending connection
-Sending Connect challenge Request
-Got Connect challenge Response
-Sending Connect Request
-Connection established 1796
+Loading compiled script marble/server/scripts/audioProfiles.cs.
+Loading compiled script marble/server/scripts/camera.cs.
+Loading compiled script marble/server/scripts/markers.cs.
+... Shape with old version.
+Loading compiled script marble/server/scripts/triggers.cs.
+Loading compiled script marble/server/scripts/inventory.cs.
+Loading compiled script marble/server/scripts/shapeBase.cs.
+Loading compiled script marble/server/scripts/staticShape.cs.
+Loading compiled script marble/server/scripts/item.cs.
+Loading compiled script marble/server/scripts/marble.cs.
+ParticleEmitterData(MarbleTrailEmitter) period < 1 ms
+ParticleEmitterData(MarbleTrailEmitter) thetaMin > thetaMax
+Loading compiled script marble/server/scripts/ghost.cs.
+Loading compiled script marble/server/scripts/gems.cs.
+Loading compiled script marble/server/scripts/powerUps.cs.
+Warning: shape marble/data/shapes/items/superspeed.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/items/timetravel.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/buttons.cs.
+Loading compiled script marble/server/scripts/hazards.cs.
+Warning: shape marble/data/shapes/hazards/trapdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/pads.cs.
+Warning: shape marble/data/shapes/pads/startarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/pads/endarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/bumpers.cs.
+Warning: shape marble/data/shapes/bumpers/pball_tri.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/signs.cs.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/shapes/signs/finishlinesign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/fireworks.cs.
+Loading compiled script marble/server/scripts/beams.cs.
+Attempting to re-link namespace GemBeam from StaticShapeData to GemBeam with non-zero refcount.
+Attempting to re-link namespace PadBeam from StaticShapeData to PadBeam with non-zero refcount.
+Loading compiled script marble/server/scripts/checkpoint.cs.
+Attempting to re-link namespace CheckPointShape from StaticShapeData to CheckPointShape with non-zero refcount.
+Attempting to re-link namespace CheckPointTrigger from TriggerData to CheckPointTrigger with non-zero refcount.
+Loading compiled script marble/server/scripts/pathedInteriors.cs.
+Loading compiled script marble/server/scripts/multiplayer.cs.
+*** LOADING MISSION: marble/data/missions/custom/checkpointtest.mis
+*** Stage 1 load
+*** Stage 2 load
+Executing marble/data/missions/custom/checkpointtest.mis.
+*** Mission loaded
+Connect request from: IPX:3520302E:353737333520:12333
+Connection established 1829
+CADD: 1830 local
 Mapping string: ServerMessage to index: 0
 Mapping string: MsgConnectionError to index: 1
 Mapping string: MsgClientJoin to index: 2
 Mapping string: CheckVersion to index: 3
 Mapping string: AddPlayer to index: 4
-Mapping string: UpdateTransform to index: 5
-Mapping string: MsgLoadInfo to index: 6
-Mapping string: MsgLoadInfoDone to index: 7
-Mapping string: MissionStartPhase1 to index: 8
-*** New Mission: marble/data/missions/multiplayer/multiplayer_map3.mis
+Mapping string: CheckVersion to index: 0
+*** Sending mission load to client: marble/data/missions/custom/checkpointtest.mis
+Mapping string: MsgLoadInfo to index: 5
+Mapping string: MsgLoadInfoDone to index: 6
+Mapping string: MissionStartPhase1 to index: 7
+*** New Mission: marble/data/missions/custom/checkpointtest.mis
 *** Phase 1: Download Datablocks & Targets
-Mapping string: %1 has joined the game. to index: 9
-Mapping string: Matt to index: 10
-Sending request for file marble/data/sound/pickup.wav
-Sending request for file marble/data/sound/bounce.wav
-Sending request for file marble/data/sound/penalty.wav
-Sending request for file marble/data/sound/destroyedVoice.wav
-... Shape with old version.
-Sending request for file marble/data/sound/doSuperBounce.wav
+Mapping string: MissionStartPhase1Ack to index: 1
 Warning: shape marble/data/shapes/items/superspeed.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Sending request for file marble/data/sound/doShockAbsorber.wav
-Sending request for file marble/data/shapes/items/shockAbsorber
-Sending request for file marble/data/shapes/items/shockAbsorber_metal
-Sending request for file marble/data/shapes/items/shockAbsorber_metal.png
-Sending request for file marble/data/shapes/items/shockAbsorber_metal.jpg
-Sending request for file marble/data/shapes/items/shockAbsorber_metal.gif
-Sending request for file marble/data/shapes/items/shockAbsorber_metal.bmp
-Sending request for file marble/data/shapes/items/shockAbsorber_metal.bm8
-Sending request for file marble/data/shapes/shockAbsorber_metal
-Sending request for file marble/data/shapes/shockAbsorber_metal.png
-Sending request for file marble/data/shapes/shockAbsorber_metal.jpg
-Sending request for file marble/data/shapes/shockAbsorber_metal.gif
-Sending request for file marble/data/shapes/shockAbsorber_metal.bmp
-Sending request for file marble/data/shapes/shockAbsorber_metal.bm8
-Sending request for file marble/data/shockAbsorber_metal
-Sending request for file marble/data/shockAbsorber_metal.png
-Sending request for file marble/data/shockAbsorber_metal.jpg
-Sending request for file marble/data/shockAbsorber_metal.gif
-Sending request for file marble/data/shockAbsorber_metal.bmp
-Sending request for file marble/data/shockAbsorber_metal.bm8
-Sending request for file marble/shockAbsorber_metal
-Sending request for file marble/shockAbsorber_metal.png
-Sending request for file marble/shockAbsorber_metal.jpg
-Sending request for file marble/shockAbsorber_metal.gif
-Sending request for file marble/shockAbsorber_metal.bmp
-Sending request for file marble/shockAbsorber_metal.bm8
-Sending request for file marble/data/shapes/items/shockAbsorber_wire
-Sending request for file marble/data/shapes/items/shockAbsorber_wire.png
-Sending request for file marble/data/shapes/items/shockAbsorber_wire.jpg
-Sending request for file marble/data/shapes/items/shockAbsorber_wire.gif
-Sending request for file marble/data/shapes/items/shockAbsorber_wire.bmp
-Sending request for file marble/data/shapes/items/shockAbsorber_wire.bm8
-Sending request for file marble/data/shapes/shockAbsorber_wire
-Sending request for file marble/data/shapes/shockAbsorber_wire.png
-Sending request for file marble/data/shapes/shockAbsorber_wire.jpg
-Sending request for file marble/data/shapes/shockAbsorber_wire.gif
-Sending request for file marble/data/shapes/shockAbsorber_wire.bmp
-Sending request for file marble/data/shapes/shockAbsorber_wire.bm8
-Sending request for file marble/data/shockAbsorber_wire
-Sending request for file marble/data/shockAbsorber_wire.png
-Sending request for file marble/data/shockAbsorber_wire.jpg
-Sending request for file marble/data/shockAbsorber_wire.gif
-Sending request for file marble/data/shockAbsorber_wire.bmp
-Sending request for file marble/data/shockAbsorber_wire.bm8
-Sending request for file marble/shockAbsorber_wire
-Sending request for file marble/shockAbsorber_wire.png
-Sending request for file marble/shockAbsorber_wire.jpg
-Sending request for file marble/shockAbsorber_wire.gif
-Sending request for file marble/shockAbsorber_wire.bmp
-Sending request for file marble/shockAbsorber_wire.bm8
-Sending request for file marble/data/sound/doHelicopter.wav
 Warning: shape marble/data/shapes/items/timetravel.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Sending request for file marble/data/sound/puBlastVoice.wav
-Sending request for file marble/data/sound/doMegaMarble.wav
-Sending request for file marble/data/sound/puMegaMarbleVoice.wav
-Sending request for file marble/data/sound/ButtonClick.wav
 Warning: shape marble/data/shapes/hazards/trapdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape marble/data/shapes/pads/startarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape marble/data/shapes/pads/endarea.dts collision detail 0 (Collision-1) bounds exceed that of shape.
@@ -285,103 +267,60 @@ Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collis
 Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape marble/data/shapes/signs/plainsign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape marble/data/shapes/signs/finishlinesign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Sending request for file marble/data/shapes/signs/finishsign_env2
-Sending request for file marble/data/shapes/signs/finishsign_env2.png
-Sending request for file marble/data/shapes/signs/finishsign_env2.jpg
-Sending request for file marble/data/shapes/signs/finishsign_env2.gif
-Sending request for file marble/data/shapes/signs/finishsign_env2.bmp
-Sending request for file marble/data/shapes/signs/finishsign_env2.bm8
-Sending request for file marble/data/shapes/finishsign_env2
-Sending request for file marble/data/shapes/finishsign_env2.png
-Sending request for file marble/data/shapes/finishsign_env2.jpg
-Sending request for file marble/data/shapes/finishsign_env2.gif
-Sending request for file marble/data/shapes/finishsign_env2.bmp
-Sending request for file marble/data/shapes/finishsign_env2.bm8
-Sending request for file marble/data/finishsign_env2
-Sending request for file marble/data/finishsign_env2.png
-Sending request for file marble/data/finishsign_env2.jpg
-Sending request for file marble/data/finishsign_env2.gif
-Sending request for file marble/data/finishsign_env2.bmp
-Sending request for file marble/data/finishsign_env2.bm8
-Sending request for file marble/finishsign_env2
-Sending request for file marble/finishsign_env2.png
-Sending request for file marble/finishsign_env2.jpg
-Sending request for file marble/finishsign_env2.gif
-Sending request for file marble/finishsign_env2.bmp
-Sending request for file marble/finishsign_env2.bm8
-Sending request for file marble/data/shapes/signs/finishsign_env1
-Sending request for file marble/data/shapes/signs/finishsign_env1.png
-Sending request for file marble/data/shapes/signs/finishsign_env1.jpg
-Sending request for file marble/data/shapes/signs/finishsign_env1.gif
-Sending request for file marble/data/shapes/signs/finishsign_env1.bmp
-Sending request for file marble/data/shapes/signs/finishsign_env1.bm8
-Sending request for file marble/data/shapes/finishsign_env1
-Sending request for file marble/data/shapes/finishsign_env1.png
-Sending request for file marble/data/shapes/finishsign_env1.jpg
-Sending request for file marble/data/shapes/finishsign_env1.gif
-Sending request for file marble/data/shapes/finishsign_env1.bmp
-Sending request for file marble/data/shapes/finishsign_env1.bm8
-Sending request for file marble/data/finishsign_env1
-Sending request for file marble/data/finishsign_env1.png
-Sending request for file marble/data/finishsign_env1.jpg
-Sending request for file marble/data/finishsign_env1.gif
-Sending request for file marble/data/finishsign_env1.bmp
-Sending request for file marble/data/finishsign_env1.bm8
-Sending request for file marble/finishsign_env1
-Sending request for file marble/finishsign_env1.png
-Sending request for file marble/finishsign_env1.jpg
-Sending request for file marble/finishsign_env1.gif
-Sending request for file marble/finishsign_env1.bmp
-Sending request for file marble/finishsign_env1.bm8
-Sending request for file marble/data/shapes/signs/finishsign_metal
-Warning: shape marble/data/shapes/signs/finishlinesign.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Mapping string: MissionStartPhase2 to index: 11
+Mapping string: MissionStartPhase2 to index: 8
 *** Phase 2: Download Ghost Objects
-Mapping string: RemoveRadarObject to index: 12
-marble/client/scripts/radar.cs (42): Unable to find object: 'RadarObject_1833' attempting to call function 'delete'
-Mapping string: UpdateScore to index: 13
-Mapping string: MissionStartPhase3 to index: 14
+Mapping string: MissionStartPhase2Ack to index: 2
+Ghost Always objects received.
+Mapping string: MissionStartPhase3 to index: 9
 *** Phase 3: Mission Lighting
-Mapping string: MissionStart to index: 15
-Mapping string: ClearRadar to index: 16
-Mapping string: SetMode to index: 17
-Mapping string: GetMarbleSkin to index: 18
-Mapping string: UpdateRadarObject to index: 19
-Mapping string: SetGhostScale to index: 20
-Mapping string: ResetTimer to index: 21
-Mapping string: SetMessage to index: 22
-Mapping string: SetTime to index: 23
-Mapping string: SetGemCount to index: 24
-Mapping string: SetMaxGems to index: 25
-Mapping string: davidjl123 to index: 26
-Mapping string: base to index: 27
+Mapping string: MissionStartPhase3Ack to index: 3
+Mapping string: MissionStart to index: 10
+Mapping string: ClearRadar to index: 11
+Mapping string: SetMode to index: 12
+Mapping string: GetMarbleSkin to index: 13
+Mapping string: SetGhostScale to index: 14
+Mapping string: GameStart to index: 15
+Mapping string: UpdateTransform to index: 16
+Mapping string: ResetTimer to index: 17
+Mapping string: SetMessage to index: 18
+Mapping string: SetGemCount to index: 19
+Mapping string: SetMaxGems to index: 20
+Mapping string: AddHelpLine to index: 21
+Mapping string: SetMarbleSkin to index: 4
 *** Initial Control Object
 Activating DirectInput...
 keyboard0 input device acquired.
 pushDialog(): Invalid control: MainChatHud
-Mapping string: red to index: 28
-Mapping string: yellow to index: 29
-Mapping string: StartTimer to index: 30
-Mapping string: SetPowerUp to index: 31
-Mapping string: MsgItemPickup to index: 1
-Mapping string: You picked up %1 to index: 3
-Mapping string: ShowGemPickup to index: 6
- Marble powerUpId to do: 4
-keyboard0 input device unacquired.
-DirectInput deactivated.
-Mapping string: blue to index: 7
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-keyboard0 input device unacquired.
-DirectInput deactivated.
+Mapping string: Matt to index: 22
+Mapping string: red to index: 23
+Mapping string: base to index: 24
+Mapping string: orange to index: 25
+Mapping string: yellow to index: 26
+Mapping string: UpdateTransform to index: 5
+Mapping string: StartTimer to index: 27
+Mapping string: MsgCheckPoint to index: 28
+Mapping string: active to index: 29
+Mapping string: OOBUpdate to index: 30
+Mapping string: OOBClick to index: 6
+Mapping string: SetGravityDir to index: 31
+Mapping string: SetPowerUp to index: 1
+Mapping string: EndBonusTime to index: 2
+Mapping string: ResetOOB to index: 3
+Mapping string: MsgItemPickup to index: 5
+Mapping string: You picked up %1 to index: 6
+Mapping string: IncBonusTime to index: 7
+popDialog(): Invalid control: MainChatHud
+CDROP: 1830 IPX:3520302E:353737333520:12333
+Exporting server prefs...
+Set::getObject index out of range.
+Set::getObject index out of range.
+Exporting server prefs...
 Exporting client prefs
 Exporting server prefs
 Exporting client prefs
 Exporting server prefs
-Issuing Disconnect packet.
 Shutting down the OpenGL display device...
 Making the GL rendering context not current...
 Deleting the GL rendering context...
 Releasing the device context...
+keyboard0 input device unacquired.

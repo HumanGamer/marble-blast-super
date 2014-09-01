@@ -400,6 +400,7 @@ function AntiGravityItem::onPickup(%this,%obj,%user,%amount)
    if (getGravityDir() !$= %up) {
       Parent::onPickup(%this, %obj, %user, %amount);
       %user.client.setGravityDir(%ortho);
+      $Game::CurrentGravityDir = %ortho;
    }
 }
 

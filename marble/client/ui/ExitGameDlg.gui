@@ -8,7 +8,7 @@ new GuiControl(ExitGameDlg) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-      restartCallback = "resumeGame(); restartLevel();";
+      restartCallback = "resumeGame();$resetLevel = true;restartLevel();";
 
    new GuiBitmapCtrl() {
       profile = "GuiDefaultProfile";
@@ -30,7 +30,7 @@ new GuiControl(ExitGameDlg) {
          extent = "77 52";
          minExtent = "8 8";
          visible = "1";
-         command = "Canvas.popDialog(ExitGameDlg); resumeGame(); restartLevel();";
+         command = "Canvas.popDialog(ExitGameDlg); resumeGame();$resetLevel = true;restartLevel();";
          helpTag = "0";
          text = "button";
          groupNum = "-1";
