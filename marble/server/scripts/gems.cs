@@ -22,6 +22,13 @@ datablock AudioProfile(GotAllGemsSfx)
    preload = true;
 };
 
+datablock AudioProfile(OpponentGotGemSfx)
+{
+   filename    = "~/data/sound/gotGemOpponent.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
 
 //-----------------------------------------------------------------------------
 
