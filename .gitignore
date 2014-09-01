@@ -7,5 +7,8 @@
 /marble/server/prefs.cs
 /common/client/prefs.cs
 /editor
+<<<<<<< HEAD
 /marble/client/prefs.cs.dso
 /marble/server/prefs.cs.dso
+=======
+>>>>>>> 47b8aa9df0978f965f4edd9893fe2f83558ddb44
