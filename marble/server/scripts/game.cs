@@ -744,13 +744,6 @@ function GameConnection::onFoundGem(%this,%amount, %gem)
 
 		  messageClient(%this, 'MsgItemPickup', %msg, %remaining);
 		  %this.play2d(GotGemSfx);
-		  for (%i = 0; %i < ClientGroup.getCount(); %i++)
-		  {
-		     %cl = ClientGroup.getObject(%i);
-		     if (%cl.getId() $= %this.getId())
-              continue;
-           %cl.play2d(OpponentGotGemSfx);
-		  }
 	   }
    } else {
        //%msg = '\c0You picked up a gem!';
@@ -771,6 +764,14 @@ function GameConnection::onFoundGem(%this,%amount, %gem)
             commandToClient(%client, 'UpdateScore', %this.getId(), %this.nameBase, true, %this.gemCount);
       }
 	   %this.play2d(GotGemSfx);
+	   
+     for (%i = 0; %i < ClientGroup.getCount(); %i++)
+     {
+        %cl = ClientGroup.getObject(%i);
+        if (%cl.getId() $= %this.getId())
+           continue;
+        %cl.play2d(OpponentGotGemSfx);
+     }
       handleGems();
       if (isObject(%gem.beam))
            %gem.beam.delete();
