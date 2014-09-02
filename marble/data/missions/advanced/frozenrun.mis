@@ -2,13 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         desc = "Don\'t slip up!";
-         goldTime = "3000";
-         level = "7";
-         type = "Advanced";
          artist = "Endercraft1";
-         time = "0";
+         goldTime = "3000";
          name = "Frozen Run";
+         time = "0";
+         desc = "Don\'t slip up!";
+         type = "Advanced";
+         level = "7";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -56,18 +56,18 @@ new SimGroup(MissionGroup) {
    new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
+         time = "0";
          powerUp = "0";
          penaltyTime = "0";
          pad = "3579";
-         time = "0";
    };
    new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
+         time = "0";
          powerUp = "0";
          penaltyTime = "0";
          pad = "1667";
-         time = "0";
    };
    new SimGroup(MustChange_g) {
 
@@ -77,25 +77,25 @@ new SimGroup(MissionGroup) {
    new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
+         time = "0";
          powerUp = "0";
          penaltyTime = "0";
          pad = "1520";
-         time = "0";
    };
    new StaticShape(StartPoint) {
       position = "46.0336 -21.0144 10.1779";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "5220";
+         beam = "6539";
    };
    new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
+         time = "0";
          powerUp = "0";
          penaltyTime = "0";
          pad = "2601";
-         time = "0";
    };
    new Item() {
       position = "0.875546 -21.4256 10.2734";
@@ -189,7 +189,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90";
       scale = "0.5 0.5 0.5";
       dataBlock = "EndPad";
-         beam = "4223";
+         beam = "6065";
    };
    new Item() {
       position = "-10.3461 -29.9191 19.0898";
@@ -341,10 +341,10 @@ new SimGroup(MissionGroup) {
    new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
+         time = "0";
          powerUp = "0";
          penaltyTime = "0";
          pad = "2343";
-         time = "0";
    };
    new Item() {
       position = "23.5182 -15.4342 10.2239";
@@ -366,10 +366,25 @@ new SimGroup(MissionGroup) {
    new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
+         time = "0";
          powerUp = "0";
          penaltyTime = "0";
          pad = "4210";
+   };
+   new Trigger() {
+      position = "-15.2153 5.28118 6.4451";
+      rotation = "1 0 0 0";
+      scale = "80 40 40";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new ScriptObject() {
+         gemCount = "0";
          time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+         penaltyTime = "0";
+         pad = "6052";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
