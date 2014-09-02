@@ -1062,8 +1062,8 @@ function GameConnection::setCheckpoint(%this,%object)
    
    // Store the last checkpoint which will be used to restore
    // the player when he goes out of bounds.
-   if (%object != %this.checkPoint.pad) {
-      if (%object.num $= "" || %this.checkPoint.num $= "" || %object.num > %this.checkPoint.num)
+   if (%object !$= %this.checkPoint.pad) {
+      if (%object.num $= "" || %this.checkPoint.pad.num $= "" || %object.num > %this.checkPoint.pad.num)
       {
          if (%this.checkPoint.pad.getDatablock().getName() !$= "StartPad")
             %this.checkPoint.pad.getDatablock().setActiveCheckPoint(%this.checkPoint.pad, false);
