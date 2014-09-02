@@ -473,7 +473,7 @@ new SimGroup(MissionGroup) {
          rotation = "1 0 0 0";
          scale = "1 1 1";
          dataBlock = "PathedDefault";
-         interiorResource = "~/data/interiors/intermediate/SlantedRoute.dif";
+         interiorResource = "marble/data/interiors/intermediate/SlantedRoute.dif";
          interiorIndex = "0";
          basePosition = "0 0 0";
          baseRotation = "1 0 0 0";
@@ -515,7 +515,7 @@ new SimGroup(MissionGroup) {
          rotation = "1 0 0 0";
          scale = "1 1 1";
          dataBlock = "PathedDefault";
-         interiorResource = "~/data/interiors/intermediate/SlantedRoute.dif";
+         interiorResource = "marble/data/interiors/intermediate/SlantedRoute.dif";
          interiorIndex = "1";
          basePosition = "0 0 0";
          baseRotation = "1 0 0 0";
@@ -557,7 +557,7 @@ new SimGroup(MissionGroup) {
          rotation = "1 0 0 0";
          scale = "1 1 1";
          dataBlock = "PathedDefault";
-         interiorResource = "~/data/interiors/intermediate/SlantedRoute.dif";
+         interiorResource = "marble/data/interiors/intermediate/SlantedRoute.dif";
          interiorIndex = "2";
          basePosition = "0 0 0";
          baseRotation = "1 0 0 0";
