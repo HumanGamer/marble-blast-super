@@ -1,4 +1,16 @@
 =========================================================
+BETA 2.3
+September 1, 2014
+
+- 2 new songs by Skail (Climax and No Mans' Land)
+- 1 new multiplayer level (Block Fort)
+- Checkpoints added
+- Unfinished Mega Marble
+- Makeshift Blast powerup
+- Sound when opponent gets gem in multiplayer
+- Frozen Run modified
+
+=========================================================
 BETA 2.2.2
 August 31, 2014
 
@@ -22,7 +34,7 @@ August 30, 2014
 - Added gem beams, random spawns, and playerlist for multiplayer
 - Added pad beams for singleplayer
 - 15 new skyboxes
-- 3 new multiplayer levels: Lunatic Cube, Neighbourhood, and Towering Pillars
+- 3 new multiplayer levels: Lunatic Cube, Neighbourhood, and Towering Pillars (unfinished)
 - 2 removed multiplayer levels: Playground of Confusion and Cold Blueness
 - Out of Bounds will spawn to closest spawn
 - Cannot use powerup when going OOB
@@ -202,7 +214,7 @@ August 14, 2013
 - Readme added
 - After installation instructions added
 - Icon and shortcut added
-- 2 new marbles (blah and mbu)
+- blah marble added
 - Yellow marble fixed
 - Director's Cut added
 - 5 new textures (grid_circle and grid_glass textures)
@@ -285,38 +297,57 @@ July 21, 2013
 
 =========================================================
 PRE-ALPHA 0.6
-June ??, 2013
+May 22, 2013
 
-- Main menu background changed
+- Marble Selector removed
 
 =========================================================
 PRE-ALPHA 0.5
-May 22, 2013
+May 11, 2013
 
-- 5 new levels
+- 2 beginner levels added (Learn the Tightrope and Learn the Super Spring)
 
 =========================================================
 PRE-ALPHA 0.4
-April 28, 2013
+May 6, 2013
 
-- 1 level added (Learning Movement)
+- 2 beginner levels added (Learning Movement and Learn the Friction)
+- Learn the SuperCopter level picture added
+
+=========================================================
+PRE-ALPHA 0.3.1
+April 13, 2013
+
+- 1 beginner level added (Learn the SuperCopter)
 
 =========================================================
 PRE-ALPHA 0.3
-February 9, 2013
+April 8, 2013
 
-- Play GUI textures changed (numbers)
+- Play GUI textures changed
 - Level Selector button removed
 - Marble Selector added
 - Sound changed
 
 =========================================================
+PRE-ALPHA 0.2.1
+March 31, 2013
+
+- 1 beginner level added (Half-Pipe Training)
+
+=========================================================
 PRE-ALPHA 0.2
-January ??, 2013
+March 17, 2013
 
 - Super Tab, Marble Selector, and MOTD button removed
 - Level Selector button added
 - GUI textures changed
+
+=========================================================
+PRE-ALPHA 0.1.1
+January 3, 2013
+
+- Textures added
 
 =========================================================
 PRE-ALPHA 0.1
