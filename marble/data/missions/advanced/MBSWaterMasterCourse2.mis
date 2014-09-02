@@ -2,14 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         type = "Advanced";
          artist = "James Colsey";
          time = "0";
+         startHelpText = "Welcome to the Water Master Course!";
          desc = "Master this water filled course!";
          goldTime = "165000";
-         name = "Water Master Course";
+         type = "Advanced";
          level = "6";
-         startHelpText = "Welcome to the Water Master Course!";
+         name = "Water Master Course";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -61,6 +61,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "10371";
    };
    new Item() {
       position = "-0.0188039 38.3041 9.5";
@@ -390,6 +391,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "2";
    };
    new Item() {
       position = "15 8.5 18";
@@ -399,18 +401,19 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "2";
    };
    new StaticShape() {
       position = "-17 23 30.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "Tornado";
+      dataBlock = "tornado";
    };
    new StaticShape() {
       position = "-15 46.3 30.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "Tornado";
+      dataBlock = "tornado";
    };
    new Item() {
       position = "-18.5 35.5 30.5";
@@ -439,6 +442,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "2";
    };
    new Item() {
       position = "-3 65 22.4";
@@ -1062,6 +1066,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "EndPad";
+         beam = "9826";
    };
    new StaticShape() {
       position = "-39.5 228 12.6";
@@ -1123,12 +1128,12 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         pad = "1886";
          time = "0";
          bonusTime = "0";
-         gemCount = "0";
-         penaltyTime = "0";
          powerUp = "0";
+         penaltyTime = "0";
+         pad = "1886";
+         gemCount = "0";
    };
    new Item() {
       position = "-23.1657 172.957 41.6517";
@@ -1184,12 +1189,12 @@ new SimGroup(MissionGroup) {
       rotate = "1";
    };
    new ScriptObject() {
-         pad = "7766";
          time = "0";
          bonusTime = "0";
-         gemCount = "0";
-         penaltyTime = "0";
          powerUp = "0";
+         penaltyTime = "0";
+         pad = "7766";
+         gemCount = "0";
    };
    new Trigger(finish2) {
       position = "-157.548 166.491 45.9928";
@@ -1422,10 +1427,38 @@ new SimGroup(MissionGroup) {
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
          text = "Congratulations! You\'ve finished the Water Master Course!";
    };
+   new Trigger() {
+      position = "15.7673 56.9702 12.9747";
+      rotation = "1 0 0 0";
+      scale = "8 5 5";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "wmc1";
+   };
+   new StaticShape(wmc1) {
+      position = "19.0888 54.4922 13.0618";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "CheckPointShape";
+   };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new StaticShape(wmc2) {
+      position = "-56.9839 65.008 26.5594";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "CheckPointShape";
+   };
+   new Trigger() {
+      position = "-58.9763 66.9882 26.3496";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "wmc2";
    };
 };
 //--- OBJECT WRITE END ---
