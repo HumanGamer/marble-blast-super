@@ -126,6 +126,24 @@ new GuiChunkedBitmapCtrl(chooseGui) {
          repeatDecay = "1";
          bitmap = "./choose/custom";
       };
+      
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "300 230";
+         extent = "288 289";
+         minExtent = "8 8";
+         visible = "1";
+         command = "$MissionType=\"Expert\";Canvas.setContent(playMissionGui);";
+         helpTag = "0";
+         text = "Expert";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./choose/expert";
+      };
    };
 };
 //--- OBJECT WRITE END ---

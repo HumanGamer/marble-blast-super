@@ -248,12 +248,14 @@ function getMissionObject(%mission) {
 	   PlayMissionGroup.add(new SimGroup(MTYPE_intermediate));
    if (!isObject(MTYPE_advanced))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_advanced));
+	   if (!isObject(MTYPE_expert))
+	   PlayMissionGroup.add(new SimGroup(MTYPE_expert));
    if (!isObject(MTYPE_custom))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_custom));
    if (!isObject(MTYPE_multiplayer))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_multiplayer));
 	   
-   if (%infoObject.type !$= "beginner" && %infoObject.type !$= "intermediate" && %infoObject.type !$= "advanced" && %infoObject.type !$= "multiplayer")
+   if (%infoObject.type !$= "beginner" && %infoObject.type !$= "intermediate" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert" && %infoObject.type !$= "multiplayer")
       %infoObject.type = "custom";
    eval("MTYPE_" @ %infoObject.type @ ".add(%infoObject);");
 	

@@ -42,8 +42,10 @@ function initClient()
       $pref::QualifiedLevel["Intermediate"] = 1;
    if (!$pref::QualifiedLevel["Advanced"])
       $pref::QualifiedLevel["Advanced"] = 1;
+   if (!$pref::QualifiedLevel["Expert"])
+      $pref::QualifiedLevel["Expert"] = 1;
    if (!$pref::QualifiedLevel["Multiplayer"])
-      $pref::QualifiedLevel["Multiplayer"] = 1;
+      $pref::QualifiedLevel["Multiplayer"] = 1000;
 
    // The common module provides basic client functionality
    initBaseClient();
