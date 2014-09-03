@@ -49,7 +49,7 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          extent = "143 63";
          minExtent = "8 8";
          visible = "1";
-         command = "$pref::Multiplayer::isMultiplayer=1; PMSetMissionTab(\"Multiplayer\"); Canvas.setContent(LobbyGui);";
+         command = "$pref::Multiplayer::isMultiplayer=1;PMSetMissionTab(\"Multiplayer\");Canvas.setContent(LobbyGui);";
          helpTag = "0";
          text = "highscore";
          groupNum = "-1";
@@ -83,7 +83,7 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          extent = "163 75";
          minExtent = "8 8";
          visible = "1";
-         command = "$pref::Multiplayer::isMultiplayer=1; PMSetMissionTab(\"Multiplayer\"); Canvas.setContent(playMissionGUI);";
+         command = "$pref::Multiplayer::isMultiplayer=1; connectRandom();";
          helpTag = "0";
          text = "quick";
          groupNum = "-1";

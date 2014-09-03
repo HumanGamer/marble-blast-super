@@ -38,7 +38,7 @@ function GameConnection::initialControlSet(%this)
    // first check if the editor is active
    if (!Editor::checkActiveLoadDone())
    {
-      if (Canvas.getContent() != PlayGui.getId())
+      if (Canvas.getContent() != PlayGui.getId() && !$Client::NoGuiChange)
          Canvas.setContent(PlayGui);
    }
 }
@@ -169,8 +169,7 @@ function continueStartServer(%serverType, %mission)
 
 function connectTo()
 {
-   //EnterMultiplayerNameDlg.show("$pref::Multiplayer::IP", "connect($pref::Multiplayer::IP);", "Enter the IP of the server");
-   connect($pref::Multiplayer::IP);
+   EnterMultiplayerNameDlg.show("$pref::Multiplayer::IP", "connect($pref::Multiplayer::IP);", "Enter the IP of the server");
 }
 
 function connect(%ip)
@@ -180,21 +179,30 @@ function connect(%ip)
       warn("Already connected to a server!");
       return;
    }
-   EnterMultiplayerNameDlg.show("$pref::Multiplayer::Name", "continueConnect(\""@%ip@"\");", "What is your name?");
+   //EnterMultiplayerNameDlg.show("$pref::Multiplayer::Name", "continueConnect(\""@%ip@"\");", "What is your name?");
+   continueConnect(%ip);
 }
 
 function continueConnect(%ip)
 {
    if (%ip !$= "")
+   {
       $Client::ConnectedMultiplayer = true;
-   echo("IP: " @ %ip);
+      echo("IP: " @ %ip);
+   } else {
+      echo("IP: 127.0.0.1");
+   }
    //%ip = %ip @ ":28000";
-   Canvas.setContent(ConnectGui);
+   if (!$Client::NoGuiChange)
+      Canvas.setContent(ConnectGui);
    %conn = new GameConnection(ServerConnection);
    RootGroup.add(%conn);
    %conn.setConnectArgs($pref::Multiplayer::Name, $Multiplayer::Version, $Multiplayer::GameName);
    %conn.setJoinPassword($Client::Password);
-   %conn.connect(%ip);
+   if (%ip $= "")
+      %conn.connectLocal();
+   else
+      %conn.connect(%ip);
 }
 
 function stopRandomConnect()
@@ -225,6 +233,9 @@ function onServerQueryStatus()
          cancel($connectDelay);
          $connectDelay = schedule(2500, 0, connect, $ServerInfo::Address);
       }
+   } else {
+      Canvas.setContent(MainMenuGui);
+      MessageBoxOK("Information", "No Games Avaliable", "");
    }
 }
 

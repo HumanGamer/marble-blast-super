@@ -107,7 +107,10 @@ addMessageCallback( 'MsgLoadInfoDone', handleLoadInfoDoneMessage );
 function handleLoadInfoMessage( %msgType, %msgString, %mapName ) {
 	
 	// Need to pop up the loading gui to display this stuff.
-	Canvas.setContent("LoadingGui");
+	if (!$Client::NoGuiChange)
+	   Canvas.setContent("LoadingGui");
+   
+   $Client::NoGuiChange = false;
 
 	// Clear all of the loading info lines:
 	for( %line = 0; %line < LoadingGui.qLineCount; %line++ )
