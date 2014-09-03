@@ -38,7 +38,7 @@ function GameConnection::initialControlSet(%this)
    // first check if the editor is active
    if (!Editor::checkActiveLoadDone())
    {
-      if (Canvas.getContent() != PlayGui.getId())
+      if (Canvas.getContent() != PlayGui.getId() && !$Client::NoGuiChange)
          Canvas.setContent(PlayGui);
    }
 }
@@ -186,15 +186,23 @@ function connect(%ip)
 function continueConnect(%ip)
 {
    if (%ip !$= "")
+   {
       $Client::ConnectedMultiplayer = true;
-   echo("IP: " @ %ip);
+      echo("IP: " @ %ip);
+   } else {
+      echo("IP: 127.0.0.1");
+   }
    //%ip = %ip @ ":28000";
-   Canvas.setContent(ConnectGui);
+   if (!$Client::NoGuiChange)
+      Canvas.setContent(ConnectGui);
    %conn = new GameConnection(ServerConnection);
    RootGroup.add(%conn);
    %conn.setConnectArgs($pref::Multiplayer::Name, $Multiplayer::Version, $Multiplayer::GameName);
    %conn.setJoinPassword($Client::Password);
-   %conn.connect(%ip);
+   if (%ip $= "")
+      %conn.connectLocal();
+   else
+      %conn.connect(%ip);
 }
 
 function stopRandomConnect()

@@ -1,6 +1,22 @@
 function LobbyGui::onWake(%this)
 {
    buildMissionList();
+   if ($Server::ServerType $= "") {
+      $Client::NoGuiChange = true;
+      createServer("Multiplayer");
+      connect("");
+      LocalClientConnection.isHost();
+   }
+   if ($Multiplayer::isHosting)
+   {
+      LB_Prev.visible = "1";
+      LB_Next.visible = "1";
+      LB_Play.visible = "1";
+   } else {
+      LB_Prev.visible = "0";
+      LB_Next.visible = "0";
+      LB_Play.visible = "0";
+   }
 }
 
 function LB_HostSelected()

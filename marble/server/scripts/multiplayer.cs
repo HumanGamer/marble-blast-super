@@ -125,14 +125,11 @@ function GameConnection::setTime(%this, %time)
 
 function GameConnection::isHost(%this)
 {
-   if (ClientGroup.getCount() == 1)
+   if (ClientGroup.getCount() == 1 || %this.getName() $= "LocalClientConnection" || %this.getAddress() $= "local")
+   {
       $Multiplayer::isHosting = true;
-   if (%this.getName() $= "LocalClientConnection")
       return true;
-   if (%this.getAddress() $= "local")
-      return true;
-   if ($Multiplayer::isHosting)
-      return true;
+   }
    return false;
 }
 

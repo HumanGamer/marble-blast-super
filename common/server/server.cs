@@ -18,10 +18,10 @@ function portInit(%port)
  
 function createServer(%serverType, %mission)
 {
-   if (%mission $= "") {
-      error("createServer: mission name unspecified");
-      return;
-   }
+   //if (%mission $= "") {
+   //   error("createServer: mission name unspecified");
+   //   return;
+   //}
 
    destroyServer();
 
@@ -48,7 +48,9 @@ function createServer(%serverType, %mission)
    // Load the mission
    $ServerGroup = new SimGroup(ServerGroup);
    onServerCreated();
-   loadMission(%mission, true);
+   
+   if (%mission !$= "")
+      loadMission(%mission, true);
 }
 
 
