@@ -1,7 +1,7 @@
 function LobbyGui::onWake(%this)
 {
    buildMissionList();
-   if ($Server::ServerType $= "") {
+   if (!$Client::ConnectedMultiplayer && $Server::ServerType $= "") {
       $Client::NoGuiChange = true;
       createServer("Multiplayer");
       connect("");
