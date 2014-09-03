@@ -113,7 +113,7 @@ new GuiChunkedBitmapCtrl(chooseGui) {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "135 230";
+         position = "193 211";
          extent = "288 289";
          minExtent = "8 8";
          visible = "1";
@@ -126,12 +126,11 @@ new GuiChunkedBitmapCtrl(chooseGui) {
          repeatDecay = "1";
          bitmap = "./choose/custom";
       };
-      
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "300 230";
+         position = "-26 222";
          extent = "288 289";
          minExtent = "8 8";
          visible = "1";

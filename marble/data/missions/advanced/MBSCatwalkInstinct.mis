@@ -2,14 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         goldTime = "85000";
-         level = "5";
-         startHelpText = "Line yourself up carefully before crossing the ropes.";
-         name = "Catwalk Instinct";
          artist = "James Colsey";
          time = "0";
+         startHelpText = "Line yourself up carefully before crossing the ropes.";
+         goldTime = "85000";
          desc = "Master your catwalking skills. Don\'t look down!";
          type = "Advanced";
+         level = "5";
+         name = "Catwalk Instinct";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -61,6 +61,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "11708";
    };
    new Item() {
       position = "0.25 18.75 2.5";
@@ -268,54 +269,54 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 0.3 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          open = "0";
          timeout = "200";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "-26 -13.3 34";
       rotation = "1 0 0 0";
       scale = "1 0.3 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          open = "0";
          timeout = "200";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "-24 -13.3 34";
       rotation = "1 0 0 0";
       scale = "1 0.3 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          open = "0";
          timeout = "200";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "-22 -13.3 34";
       rotation = "1 0 0 0";
       scale = "1 0.3 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          open = "0";
          timeout = "200";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "-20 -13.3 34";
       rotation = "1 0 0 0";
       scale = "1 0.3 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          open = "0";
          timeout = "200";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "-18 -13.3 34";
       rotation = "1 0 0 0";
       scale = "1 0.3 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          open = "0";
          timeout = "200";
-         resetTime = "Default";
    };
    new Item() {
       position = "-23.25 -13.25 34";
@@ -339,13 +340,14 @@ new SimGroup(MissionGroup) {
       position = "6.2 -32.5 38.2";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "Tornado";
+      dataBlock = "tornado";
    };
    new StaticShape(EndPoint) {
       position = "6 -52.5 44";
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
+         beam = "11652";
    };
    new Item() {
       position = "-3.75 44.25 34.5";
@@ -385,18 +387,6 @@ new SimGroup(MissionGroup) {
             smoothingType = "Accelerate";
          };
       };
-      new PathedInterior(MustChange) {
-         position = "0 0 0";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         dataBlock = "PathedDefault";
-         interiorResource = "marble/data/interiors/MBSCatwalkInstinct.dif";
-         interiorIndex = "0";
-         basePosition = "0 0 0";
-         baseRotation = "1 0 0 0";
-         baseScale = "1 1 1";
-            initialTargetPosition = "-1";
-      };
    };
    new SimGroup(MustChange_g) {
 
@@ -426,18 +416,6 @@ new SimGroup(MissionGroup) {
             msToNext = "5000";
             smoothingType = "Accelerate";
          };
-      };
-      new PathedInterior(MustChange) {
-         position = "0 0 0";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         dataBlock = "PathedDefault";
-         interiorResource = "marble/data/interiors/MBSCatwalkInstinct.dif";
-         interiorIndex = "1";
-         basePosition = "0 0 0";
-         baseRotation = "1 0 0 0";
-         baseScale = "1 1 1";
-            initialTargetPosition = "-1";
       };
    };
    new Trigger(Bounds) {
@@ -561,17 +539,31 @@ new SimGroup(MissionGroup) {
       dataBlock = "SignFinish";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         powerUp = "0";
-         pad = "4411";
          time = "0";
          bonusTime = "0";
+         powerUp = "0";
+         penaltyTime = "0";
+         pad = "4411";
          gemCount = "0";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new StaticShape(ci1) {
+      position = "-48.2641 12.2661 34.0044";
+      rotation = "1 0 0 0";
+      scale = "0.1 0.1 0.1";
+      dataBlock = "CheckPointShape";
+   };
+   new Trigger() {
+      position = "-48.8601 12.7209 33.5056";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "ci1";
    };
 };
 //--- OBJECT WRITE END ---

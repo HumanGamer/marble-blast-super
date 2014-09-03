@@ -2,13 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         level = "2";
-         goldTime = "20000";
          artist = "James Colsey";
-         type = "Intermediate";
          time = "0";
-         desc = "Wait until you see this course become slanted.";
          startHelpText = "Pick up the Gravity Changer, there is no way to pass it.";
+         goldTime = "20000";
+         desc = "Wait until you see this course become slanted.";
+         type = "Intermediate";
+         level = "2";
          name = "Slanted Route";
    };
    new MissionArea(MissionArea) {
@@ -61,6 +61,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "7860";
    };
    new Item() {
       position = "-0.103528 14 1.38637";
@@ -76,72 +77,72 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
-         timeout = "200";
-         open = "0";
          resetTime = "Default";
+         open = "0";
+         timeout = "200";
    };
    new StaticShape() {
       position = "0 33 2.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
-         timeout = "200";
-         open = "0";
          resetTime = "Default";
+         open = "0";
+         timeout = "200";
    };
    new StaticShape() {
       position = "0 35 2.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
-         timeout = "200";
-         open = "0";
          resetTime = "Default";
+         open = "0";
+         timeout = "200";
    };
    new StaticShape() {
       position = "0 37 2.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
-         timeout = "200";
-         open = "0";
          resetTime = "Default";
+         open = "0";
+         timeout = "200";
    };
    new StaticShape() {
       position = "2 37 2.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
-         timeout = "200";
-         open = "0";
          resetTime = "Default";
+         open = "0";
+         timeout = "200";
    };
    new StaticShape() {
       position = "4 37 2.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
-         timeout = "200";
-         open = "0";
          resetTime = "Default";
+         open = "0";
+         timeout = "200";
    };
    new StaticShape() {
       position = "6 37 2.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
-         timeout = "200";
-         open = "0";
          resetTime = "Default";
+         open = "0";
+         timeout = "200";
    };
    new StaticShape() {
       position = "8 37 2.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
-         timeout = "200";
-         open = "0";
          resetTime = "Default";
+         open = "0";
+         timeout = "200";
    };
    new Item() {
       position = "0 37 2.5";
@@ -438,6 +439,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
+         beam = "7805";
    };
    new SimGroup(MustChange_g) {
 
@@ -583,12 +585,26 @@ new SimGroup(MissionGroup) {
          timeBonus = "10000";
    };
    new ScriptObject() {
-         pad = "1819";
          bonusTime = "0";
-         gemCount = "0";
          time = "0";
-         penaltyTime = "0";
          powerUp = "0";
+         penaltyTime = "0";
+         pad = "1819";
+         gemCount = "0";
+   };
+   new Trigger() {
+      position = "36.0284 39.028 6.50933";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "checkPoint";
+   };
+   new StaticShape(checkPoint) {
+      position = "38.0235 37.0006 6.99683";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "CheckPointShape";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
