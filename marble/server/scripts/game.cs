@@ -356,7 +356,12 @@ function endGame()
          $Pref::QualifiedLevel[MissionInfo.type] = MissionInfo.level + 1;
          
    if ($Client::ConnectedMultiplayer)
-      escapeToLobby();
+   {
+      for (%index = 0; %index < ClientGroup.getCount(); %index++)  {
+         %client = ClientGroup.getObject(%index);
+         commandToClient(%client, 'SetLobby');
+      }
+   }
 }
 
 function pauseGame()

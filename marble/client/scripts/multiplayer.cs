@@ -278,3 +278,8 @@ function clientCmdShowGemPickup(%points, %lost)
 {
    GemPopUpGui.showPopup(%points, %lost);
 }
+
+function clientCmdSetLobby()
+{
+   escapeToLobby();
+}
