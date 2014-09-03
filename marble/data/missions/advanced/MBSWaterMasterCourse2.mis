@@ -2,14 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         time = "0";
          startHelpText = "Welcome to the Water Master Course!";
+         level = "4";
          name = "Water Master Course";
-         desc = "Master this water filled course!";
-         level = "6";
-         artist = "James Colsey";
-         type = "Advanced";
          goldTime = "165000";
+         artist = "James Colsey";
+         time = "0";
+         desc = "Master this water filled course!";
+         type = "Advanced";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -36,7 +36,7 @@ new SimGroup(MissionGroup) {
       fogVolume1 = "-1 1.74487e-038 4.65496e-036";
       fogVolume2 = "-1 1.83671e-038 6.34767e-036";
       fogVolume3 = "-1 1.92855e-038 1.08145e-035";
-      materialList = "~/data/skies/Advanced/sky_day.dml";
+      materialList = "~/data/skies/sky5/sky_day.dml";
       windVelocity = "1 0 0";
       windEffectPrecipitation = "0";
       noRenderBans = "1";
@@ -61,7 +61,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "8677";
+         beam = "2955";
    };
    new Item() {
       position = "-0.0188039 38.3041 9.5";
@@ -81,8 +81,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         timeBonus = "10250";
          checkpointNum = "1";
+         timeBonus = "10250";
    };
    new Item() {
       position = "-14 34 -2";
@@ -448,8 +448,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         timeBonus = "5000";
          checkpointNum = "4";
+         timeBonus = "5000";
    };
    new Item() {
       position = "-0.5 65 30.5";
@@ -1083,7 +1083,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "8565";
+         beam = "2841";
    };
    new StaticShape() {
       position = "-39.5 228 12.6";
@@ -1145,11 +1145,11 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         time = "0";
          bonusTime = "0";
          powerUp = "0";
          penaltyTime = "0";
          pad = "1886";
+         time = "0";
          gemCount = "0";
    };
    new Item() {
@@ -1206,11 +1206,11 @@ new SimGroup(MissionGroup) {
       rotate = "1";
    };
    new ScriptObject() {
-         time = "0";
          bonusTime = "0";
          powerUp = "0";
          penaltyTime = "0";
          pad = "7766";
+         time = "0";
          gemCount = "0";
    };
    new Trigger(finish2) {
@@ -1475,9 +1475,9 @@ new SimGroup(MissionGroup) {
          num = "4";
    };
    new StaticShape(wmc0) {
-      position = "75 -4.5 -6";
+      position = "74.9981 -3.5185 -6";
       rotation = "1 0 0 0";
-      scale = "1 1 1";
+      scale = "0.5 0.5 0.5";
       dataBlock = "CheckPointShape";
          num = "1";
    };
@@ -1490,9 +1490,9 @@ new SimGroup(MissionGroup) {
          target = "wmc0";
    };
    new StaticShape(check1) {
-      position = "47 13.5 13";
+      position = "46.9871 13.489 13";
       rotation = "1 0 0 0";
-      scale = "1 1 1";
+      scale = "0.5 0.5 0.5";
       dataBlock = "CheckPointShape";
          num = "2";
    };
@@ -1516,10 +1516,13 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "CheckPointShape";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
+   new Trigger() {
+      position = "-12.5 69 30";
+      rotation = "1 0 0 0";
+      scale = "8 8 8";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check4";
    };
    new Trigger() {
       position = "-19.5 3 26.5";
@@ -1529,13 +1532,10 @@ new SimGroup(MissionGroup) {
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
          target = "check3";
    };
-   new Trigger() {
-      position = "-12.5 69 30";
-      rotation = "1 0 0 0";
-      scale = "8 8 8";
-      dataBlock = "CheckPointTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         target = "check4";
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---

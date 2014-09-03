@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          time = "0";
          desc = "Don\'t slip up!";
          type = "Advanced";
-         level = "7";
+         level = "2";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -35,7 +35,7 @@ new SimGroup(MissionGroup) {
       fogVolume1 = "-1 7.45949e-031 1.3684e-038";
       fogVolume2 = "-1 1.07208e-014 8.756e-014";
       fogVolume3 = "-1 5.1012e-010 2.05098e-008";
-      materialList = "~/data/skies/dusk/sky_day.dml";
+      materialList = "~/data/skies/sky7/sky_day.dml";
       windVelocity = "1 0 0";
       windEffectPrecipitation = "0";
       noRenderBans = "1";

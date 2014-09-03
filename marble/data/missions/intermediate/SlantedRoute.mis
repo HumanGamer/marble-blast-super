@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          goldTime = "20000";
          desc = "Wait until you see this course become slanted.";
          type = "Intermediate";
-         level = "2";
+         level = "3";
          name = "Slanted Route";
    };
    new MissionArea(MissionArea) {
@@ -36,7 +36,7 @@ new SimGroup(MissionGroup) {
       fogVolume1 = "-1 1.74487e-038 4.65496e-036";
       fogVolume2 = "-1 1.83671e-038 6.34767e-036";
       fogVolume3 = "-1 1.92855e-038 1.08145e-035";
-      materialList = "~/data/skies/Advanced/sky_day.dml";
+      materialList = "~/data/skies/sky3/sky_day.dml";
       windVelocity = "1 0 0";
       windEffectPrecipitation = "0";
       noRenderBans = "1";
