@@ -123,7 +123,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       minExtent = "8 8";
       visible = "1";
       //command = "StopDemoTimer(); 
-      command = "Canvas.setContent(MultiplayerGui);";
+      command = "Canvas.setContent(LoginGui);";
       helpTag = "0";
       text = "Multiplayer";
       groupNum = "-1";
