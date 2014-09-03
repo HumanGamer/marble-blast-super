@@ -169,8 +169,7 @@ function continueStartServer(%serverType, %mission)
 
 function connectTo()
 {
-   //EnterMultiplayerNameDlg.show("$pref::Multiplayer::IP", "connect($pref::Multiplayer::IP);", "Enter the IP of the server");
-   connect($pref::Multiplayer::IP);
+   EnterMultiplayerNameDlg.show("$pref::Multiplayer::IP", "connect($pref::Multiplayer::IP);", "Enter the IP of the server");
 }
 
 function connect(%ip)
@@ -180,7 +179,8 @@ function connect(%ip)
       warn("Already connected to a server!");
       return;
    }
-   EnterMultiplayerNameDlg.show("$pref::Multiplayer::Name", "continueConnect(\""@%ip@"\");", "What is your name?");
+   //EnterMultiplayerNameDlg.show("$pref::Multiplayer::Name", "continueConnect(\""@%ip@"\");", "What is your name?");
+   continueConnect(%ip);
 }
 
 function continueConnect(%ip)
