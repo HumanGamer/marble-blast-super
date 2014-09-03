@@ -225,6 +225,9 @@ function onServerQueryStatus()
          cancel($connectDelay);
          $connectDelay = schedule(2500, 0, connect, $ServerInfo::Address);
       }
+   } else {
+      Canvas.setContent(MainMenuGui);
+      MessageBoxOK("Information", "No Games Avaliable", "");
    }
 }
 
