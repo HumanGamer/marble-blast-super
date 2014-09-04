@@ -435,6 +435,11 @@ datablock ItemData(BlastItem)
    maxInventory = 1;
 };
 
+function BlastItem::onAdd(%this, %obj)
+{
+   %obj.playThread(0,"Ambient");
+}   
+
 function BlastItem::usePowerUp(%this, %obj)
 {
    echo ("Used Blast");
