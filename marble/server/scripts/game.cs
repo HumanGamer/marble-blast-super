@@ -434,6 +434,7 @@ function GameConnection::StateStart(%this)
       MissionCleanup.add(%shape);
       
    }
+   StartPoint.playThread(0, "ambient");
    %this.StateSchedule = %this.schedule( 500, "setGameState", "Ready");
    if(MissionInfo.startHelpText !$= "")
    {
@@ -460,6 +461,7 @@ function GameConnection::StateGo(%this)
    %this.play2d(GetRollingVoiceSfx);
    %this.setMessage("go");
    %this.startTimer();
+   %this.AnimSchedule = %this.schedule( 500, "animEnd");
    %this.StateSchedule = %this.schedule( 2000, "setGameState", "Play");
 
    // Target the players to the end pad and let them lose
@@ -477,6 +479,11 @@ function GameConnection::StatePlay(%this)
 {
    // Normaly play mode
    %this.setMessage("");
+}
+
+function GameConnection::AnimEnd(%this)
+{
+   StartPoint.stopThread(0);
 }
 
 function GameConnection::StateEnd(%this)

@@ -39,7 +39,9 @@ function GameConnection::initialControlSet(%this)
    if (!Editor::checkActiveLoadDone())
    {
       if (Canvas.getContent() != PlayGui.getId() && !$Client::NoGuiChange)
+      {
          Canvas.setContent(PlayGui);
+      }
    }
 }
 
