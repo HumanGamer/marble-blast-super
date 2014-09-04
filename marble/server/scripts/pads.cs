@@ -20,7 +20,7 @@ function StartPad::onAdd(%this, %obj)
 {
    $Game::StartPad = %obj;
    %obj.setName("StartPoint");
-   %obj.playThread(0,"ambient");
+   //%obj.playThread(0,"ambient");
 }
 
 
