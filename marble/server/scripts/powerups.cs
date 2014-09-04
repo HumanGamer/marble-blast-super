@@ -478,6 +478,11 @@ datablock ItemData(MegaMarbleItem)
    maxInventory = 1;
 };
 
+function MegaMarbleItem::onAdd(%this, %obj)
+{
+   %obj.playThread(0,"Ambient");
+}   
+
 function MegaMarbleItem::usePowerUp(%this, %obj)
 {
    %obj.client.makeMega();
