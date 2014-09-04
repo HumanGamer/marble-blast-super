@@ -1,4 +1,16 @@
 =========================================================
+BETA 2.5
+September 4, 2014
+
+- New start pad, Ultra Blast, Mega Marble, and gems shapes
+- New difficulty select buttons and menu backgrounds
+- Updated skyboxes to levels
+- 1 new Beginner level (Royal Hills)
+- Moving platforms in Catwalk Instinct fixed
+- Added more checkpoints in Water Master Course
+- Linked forum accounts to multiplayer
+
+=========================================================
 BETA 2.4
 September 3, 2014
 
