@@ -104,6 +104,7 @@ function initClient()
    exec("./ui/gemPopupGui.gui");
    exec("./ui/lobbyGui.gui");
    exec("./ui/MultiplayerExitGui.gui");
+   exec("./ui/LoginGui.gui");
 
    // Client scripts
    exec("./scripts/client.cs");
@@ -127,6 +128,7 @@ function initClient()
    exec("./scripts/radar.cs");
    exec("./scripts/lobby.cs");
    exec("./scripts/multiplayerExitGui.cs");
+   exec("./scripts/login.cs");
 
    // Default player key bindings
    exec("./scripts/default.bind.cs");

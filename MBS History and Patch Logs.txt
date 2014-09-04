@@ -1,4 +1,15 @@
 =========================================================
+BETA 2.4
+September 3, 2014
+
+- Improved multiplayer lobby
+- Fixed Quick Game, lobby bugs, and missing join IP dialog
+- Added Expert difficulty
+- Added checkpoints to Water Master Course
+- Changed icon of .exe to use the MBS icon
+- 1 new song from Marble Blast Ultra (Tim Trance by Tim Clarke)
+
+=========================================================
 BETA 2.3
 September 2, 2014
 

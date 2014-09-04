@@ -1,0 +1,151 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(LoginGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./background";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiControl(LoginContainer) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "0 0";
+      extent = "640 480";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+
+      new GuiBitmapCtrl(LoginBG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "640 480";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./lobby/lobby";
+         wrap = "0";
+      };
+      new GuiBitmapButtonCtrl(Login_RegisterBtn) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "354 370";
+         extent = "82 30";
+         minExtent = "8 8";
+         visible = "1";
+         command = "register();";
+         helpTag = "0";
+         text = "Register";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./login/register";
+      };
+      new GuiTextEditCtrl(LoginUsernameEdit) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "139 116";
+         extent = "400 18";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$Login::Username";
+         helpTag = "0";
+         maxLength = "255";
+         maxPixelWidth = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(LoginPasswordEdit) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "139 143";
+         extent = "400 18";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$Login::Password";
+         helpTag = "0";
+         maxLength = "255";
+         maxPixelWidth = "0";
+         historySize = "0";
+         password = "1";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiMLTextCtrl(LoginUsernameLabel) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "72 117";
+         extent = "64 14";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiMLTextCtrl(LoginPasswordLabel) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "72 145";
+         extent = "64 14";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiBitmapButtonCtrl(Login_LoginBtn) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "458 370";
+         extent = "73 30";
+         minExtent = "8 8";
+         visible = "1";
+         command = "doLogin();";
+         helpTag = "0";
+         text = "Login";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./login/login";
+      };
+      new GuiBitmapButtonCtrl(Login_BackBtn) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "100 370";
+         extent = "69 30";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.setContent(MainMenuGui);";
+         helpTag = "0";
+         text = "Back";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./login/back";
+      };
+   };
+   
+};
+//--- OBJECT WRITE END ---

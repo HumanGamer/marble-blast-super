@@ -98,5 +98,5 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
 
 function MultiplayerGui::onWake(%this)
 {
-   enterMPName();
+   //enterMPName();
 }
