@@ -258,5 +258,10 @@ function onMarbleCollision(%marble, %ghost)
    %megaGhost = %ghost.getDatablock().getName() $= GhostMegaMarble;
    %dist = VectorDist(%marble.getTransform(), %ghost.getTransform());
    
-   echo("Megas: " @ %megaMe @ " | " @ %megaGhost @ ", Collision: " @ %dist);
+   %impulsePos = VectorNormalize(%marble.getTransform());
+   %impulse = VectorMult(%impulsePos, -1);
+   
+   %ghost.client.applyImpulse(%impulsePos, %impulse);
+   
+   //echo("Megas: " @ %megaMe @ " | " @ %megaGhost @ ", Collision: " @ %dist);
 }
