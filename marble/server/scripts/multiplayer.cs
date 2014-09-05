@@ -252,20 +252,11 @@ function serverCmdSetMarbleSkin(%client, %skin)
    %client.ghost.setSkinName(%client.getSkin());
 }
 
-//function VectorDist2(%trans1, %trans2)
-//{
-   //%res = VectorSub(%trans1, %trans2);
-   //
-   //%x = getWord(%res, 0);
-   //%y = getWord(%res, 1);
-   //%z = getWord(%res, 2);
-   //
-   //%res = ((%x + %y + %z) / 3);
-   //
-   //if (%res < 0)
-   //{
-      //%res = %res * -1;
-   //}
-   //
-   //return %res;
-//}
+function onMarbleCollision(%marble, %ghost)
+{
+   %megaMe = %marble.getDatablock().getName() $= MegaMarbleBall;
+   %megaGhost = %ghost.getDatablock().getName() $= GhostMegaMarble;
+   %dist = VectorDist(%marble.getTransform(), %ghost.getTransform());
+   
+   echo("Megas: " @ %megaMe @ " | " @ %megaGhost @ ", Collision: " @ %dist);
+}

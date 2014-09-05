@@ -352,6 +352,9 @@ function MarbleData::onCollision(%this,%obj,%col)
    {
       %data = %col.getDatablock();
       %obj.pickup(%col,1);
+   } else if (%col.getClassName() $= "StaticShape" && %col.getDatablock().getName() $= "GhostMarble" || %col.getDatablock().getName() $= "GhostMegaMarble")
+   {
+      onMarbleCollision(%obj, %col);
    }
 }
 
