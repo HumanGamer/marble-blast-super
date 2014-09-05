@@ -1,4 +1,5 @@
 //--- OBJECT WRITE BEGIN ---
+      
 new GameTSCtrl(PlayGui) {
    profile = "GuiContentProfile";
    horizSizing = "right";
@@ -19,7 +20,22 @@ new GameTSCtrl(PlayGui) {
       bonusTime = "0";
       timeInc = "50";
       noCursor = "1";
-
+      
+   
+   new GuiFadeinBitmapCtrl(PG_Fade)
+   {
+      profile = "GuiDefaultProfile";
+      horizSizing = "width";
+      vertSizing = "height";
+      position = "0 0";
+      extent = "640 480";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      fadeinTime = "1000";
+      waitTime = "0";
+      fadeoutTime = "0";
+      
    new GameTSCtrl(PG_RearView) {
       profile = "GuiDefaultProfile";
       horizSizing = "left";
@@ -482,6 +498,9 @@ new GameTSCtrl(PlayGui) {
       visible = "1";
       helpTag = "0";
       wrap = "0";
+   
+   };
+   
    
    };
 };
