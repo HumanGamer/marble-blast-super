@@ -333,19 +333,19 @@ datablock MarbleData(MegaMarbleBall : DefaultMarble)
 
 //-----------------------------------------------------------------------------
 
-function DefaultMarble::onAdd(%this, %obj)
+function MarbleData::onAdd(%this, %obj)
 {
    echo("New Marble: " @ %obj);
 }
 
-function DefaultMarble::onTrigger(%this, %obj, %triggerNum, %val)
+function MarbleData::onTrigger(%this, %obj, %triggerNum, %val)
 {
 }
 
 
 //-----------------------------------------------------------------------------
 
-function DefaultMarble::onCollision(%this,%obj,%col)
+function MarbleData::onCollision(%this,%obj,%col)
 {
    // Try and pickup all items
    if (%col.getClassName() $= "Item")
@@ -360,27 +360,27 @@ function DefaultMarble::onCollision(%this,%obj,%col)
 // The following event callbacks are punted over to the connection
 // for processing
 
-function DefaultMarble::onEnterPad(%this,%object)
+function MarbleData::onEnterPad(%this,%object)
 {
    %object.client.onEnterPad();
 }
 
-function DefaultMarble::onLeavePad(%this,%object)
+function MarbleData::onLeavePad(%this,%object)
 {
    %object.client.onLeavePad();
 }
 
-function DefaultMarble::onStartPenalty(%this,%object)
+function MarbleData::onStartPenalty(%this,%object)
 {
    %object.client.onStartPenalty();
 }
 
-function DefaultMarble::onOutOfBounds(%this,%object)
+function MarbleData::onOutOfBounds(%this,%object)
 {
    %object.client.onOutOfBounds();
 }
 
-function DefaultMarble::setCheckpoint(%this,%object,%check)
+function MarbleData::setCheckpoint(%this,%object,%check)
 {
    %object.client.setCheckpoint(%check);
 }

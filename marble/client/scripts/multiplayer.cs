@@ -73,6 +73,8 @@ function hideMarbles()
       if (%obj.getClassName() $= "Marble" && %obj.getId() != $Multiplayer::MyMarble.getId())
       {
          %obj.setScale(0);
+         
+         %obj.setTransform("0 0 -1000000 1 0 0 0");
       }
    }
 }
@@ -282,4 +284,9 @@ function clientCmdShowGemPickup(%points, %lost)
 function clientCmdSetLobby()
 {
    escapeToLobby();
+}
+
+function clientCmdApplyImpulse(%impulseVec, %impulse)
+{
+   getMyMarble().applyImpulse(%impulseVec, %impulse);
 }

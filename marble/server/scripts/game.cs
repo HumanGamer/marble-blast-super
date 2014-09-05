@@ -959,6 +959,8 @@ function GameConnection::respawnPlayer(%this)
    }
    %this.play2d(spawnSfx);
    
+   %this.makeNoMega();   
+   
    $resetLevel = false;
    
    //%this.player.powerUpEnableSched = %this.player.schedule(500, enablePowerUps);

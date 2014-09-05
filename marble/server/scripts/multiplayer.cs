@@ -203,6 +203,11 @@ function GameConnection::getMultiplayerSpawnPos(%this, %transform)
 	}
 }
 
+function GameConnection::applyImpulse(%this, %impulseVec, %impulse)
+{
+   commandToClient(%this, 'ApplyImpulse', %impulseVec, %impulse);
+}
+
 function serverCmdCheckVersion(%client, %version)
 {
    cancel(%client.versionKick);

@@ -497,10 +497,10 @@ function GameConnection::makeMega(%this)
 {
    cancel(%this.megaMarbleSchedule);
    
-   //%this.player.applyImpulse("0 0 -1", "0 0 1.5");
-   
    %this.player.setDatablock(MegaMarbleBall);
    %this.ghost.setDatablock(GhostMegaMarble);
+   
+   %this.applyImpulse("0 0 -1", "0 0 7");
    
    %this.megaMarbleSchedule = %this.schedule(5000, makeNoMega);
 }
