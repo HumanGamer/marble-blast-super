@@ -227,7 +227,7 @@ new GameTSCtrl(PlayGui) {
       bitmap = "./game/numbers/5.png";
       wrap = "0";
    };
-   new GuiControl() {
+   new GuiControl(PG_Timer) {
       profile = "GuiDefaultProfile";
       horizSizing = "center";
       vertSizing = "bottom";
@@ -358,7 +358,7 @@ new GameTSCtrl(PlayGui) {
          wrap = "0";
       };
    };
-   new GuiControl() {
+   new GuiControl(PG_HelpText) {
       profile = "GuiDefaultProfile";
       horizSizing = "width";
       vertSizing = "center";
@@ -395,7 +395,7 @@ new GameTSCtrl(PlayGui) {
          maxChars = "-1";
       };
    };
-   new GuiControl() {
+   new GuiControl(PG_ChatText) {
       profile = "GuiDefaultProfile";
       horizSizing = "width";
       vertSizing = "top";
@@ -449,7 +449,7 @@ new GameTSCtrl(PlayGui) {
       orbitDistance = "1.92639";
       autoSize = "1";
    };
-   new GuiBitmapCtrl() {
+   new GuiBitmapCtrl(PG_PowerUp) {
       profile = "GuiDefaultProfile";
       horizSizing = "left";
       vertSizing = "bottom";

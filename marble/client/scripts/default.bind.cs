@@ -349,6 +349,46 @@ function dropPlayerAtCamera(%val)
 moveMap.bind(keyboard, "F8", dropCameraAtPlayer);
 moveMap.bind(keyboard, "F7", dropPlayerAtCamera);
 
+function toggleHud(%val)
+{
+   if (%val)
+   {
+      if ($Client::HudHidden)
+      {
+         %visible = true;
+         $Client::HudHidden = false;
+      } else {
+         %visible = false;
+         $Client::HudHidden = true;
+      }
+      
+      PG_GemBG.visible = %visible;
+      //PG_NegSign.visible = %visible;
+      PG_Rear.visible = %visible;
+      PG_RearView.visible = %visible;
+      //CenterMessageDlg.visible = %visible;
+      //CenterPrintDlg.visible = %visible;
+      //BottomPrintDlg.visible = %visible;
+      LagIcon.visible = %visible;
+      HUD_ShowGem.visible = %visible;
+      GemsFoundHundred.visible = %visible;
+      GemsFoundTen.visible = %visible;
+      GemsFoundOne.visible = %visible;
+      GemsSlash.visible = %visible;
+      GemsTotalHundred.visible = %visible;
+      GemsTotalTen.visible = %visible;
+      GemsTotalOne.visible = %visible;
+      PG_Timer.visible = %visible;
+      //PG_HelpText.visible = %visible;
+      //PG_ChatText.visible = %visible;
+      HUD_ShowPowerUp.visible = %visible;
+      PG_PowerUp.visible = %visible;
+      RadarContainer.visible = %visible;
+   }
+}
+
+GlobalActionMap.bind(keyboard, "ctrl h", toggleHud);
+
 
 //------------------------------------------------------------------------------
 // Dubuging Functions
