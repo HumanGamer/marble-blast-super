@@ -34,7 +34,7 @@ function onLogin()
 {
    
    $Login::Password = "";
-   $pref::Multiplayer::Name = $Login::Username;
+   $pref::Multiplayer::Name = strlwr($Login::Username);
    $Login::Username = "";
    Canvas.setContent(MultiplayerGui);
 }
