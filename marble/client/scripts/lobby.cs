@@ -2,10 +2,11 @@ function LobbyGui::onWake(%this)
 {
    buildMissionList();
    if (!$Client::ConnectedMultiplayer && $Server::ServerType $= "") {
-      $Client::NoGuiChange = true;
-      createServer("Multiplayer");
-      connect("");
-      LocalClientConnection.isHost();
+      //$Client::NoGuiChange = true;
+      //createServer("Multiplayer");
+      //connect("");
+      //LocalClientConnection.isHost();
+      $Multiplayer::isHosting = true;
    }
    if ($Multiplayer::isHosting)
    {
