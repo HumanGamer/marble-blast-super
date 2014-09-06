@@ -253,24 +253,25 @@ function serverCmdSetMarbleSkin(%client, %skin)
    %client.ghost.setSkinName(%client.getSkin());
 }
 
-function onMarbleCollision(%marble, %other)
+function onMarbleCollision(%marble, %otherGhost)
 {  
+   %otherMarble = %otherGhost.client.player;
    //%dist = VectorDist(%marble.getPosition(), %other.getPosition());
    //%dist -= %marble.getDatablock().radius;
    //%dist -= %other.getDatablock().radius;
    
-   %reduction = %other.getDatablock().reduction;
+   %reduction = %otherMarble.getDatablock().reduction;
    %power = %marble.getDatablock().power;
    
    //if (%dist < 0)
    //{
-      %src1 = VectorSub(%other.getPosition(), %marble.getPosition());
-      %src2 = VectorSub(%marble.getPosition(), %other.getPosition());
+      %src1 = VectorSub(%otherMarble.getPosition(), %marble.getPosition());
+      %src2 = VectorSub(%marble.getPosition(), %otherMarble.getPosition());
       
       %impulse1 = VectorScale(%src1, %power);
       %impulse2 = VectorScale(%src2, %reduction);
       
-      %other.client.applyImpulse(%src1, %impulse1);
+      %otherMarble.client.applyImpulse(%src1, %impulse1);
       %marble.client.applyImpulse(%src2, %impulse2);
    //}
    

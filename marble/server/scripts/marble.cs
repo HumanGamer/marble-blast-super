@@ -325,16 +325,16 @@ datablock MarbleData(DefaultMarble)
 //   maxInv[GoodiesItem] = 10;
 
    //radius = 0.27;
-   reduction = 0.25;
-   power = 4;
+   reduction = 0.5;//0.25
+   power = 8;
 };
 
 datablock MarbleData(MegaMarbleBall : DefaultMarble)
 {
    shapeFile = "~/data/shapes/balls/megamarbleball.dts";
    //radius = 0.6075;
-   reduction = 0.5625;
-   power = 9;
+   reduction = 2.5;//0.5625;
+   power = 40;
 };
 
 
@@ -359,7 +359,7 @@ function MarbleData::onCollision(%this,%obj,%col)
    {
       %data = %col.getDatablock();
       %obj.pickup(%col,1);
-   } else if (%col.getClassName() $= "Marble")//%col.getClassName() $= "StaticShape" && %col.getDatablock().getName() $= "GhostMarble" || %col.getDatablock().getName() $= "GhostMegaMarble")
+   } else if (%col.getClassName() $= "StaticShape" && %col.getDatablock().getName() $= "GhostMarble" || %col.getDatablock().getName() $= "GhostMegaMarble")
    {
       onMarbleCollision(%obj, %col);
    }
