@@ -1,0 +1,33 @@
+new GuiControl(ChatDlg)
+{
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   
+   new GuiControl(ChatContainer)
+   {
+      profile = "GuiDefaultProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "20 175";
+      extent = "100 125";
+      minExtent = "8 8";
+      visible = "1";
+      
+      new GuiTextEditCtrl(ChatEdit)
+      {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "0 0";
+         extent = "100 25";
+         minExtent = "8 8";
+         visible = "1";
+         altCommand = "ChatDlg.send();";
+      };
+   };
+};

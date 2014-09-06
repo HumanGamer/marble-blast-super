@@ -501,7 +501,18 @@ new GameTSCtrl(PlayGui) {
    
    };
    
+   new GuiMLTextCtrl(ChatText)
+   {
+      profile = "GuiMLTextProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "20 200";
+      extent = "300 300";
+      minExtent = "8 8";
+      visible = "1";
+   };
    
    };
+   
 };
 //--- OBJECT WRITE END ---

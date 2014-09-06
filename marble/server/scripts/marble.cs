@@ -260,6 +260,41 @@ datablock AudioProfile(RollingHardSfx)
    preload = true;
 };
 
+datablock AudioProfile(MegaBounce1Sfx)
+{
+   filename    = "~/data/sound/mega_bouncehard1.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
+datablock AudioProfile(MegaBounce2Sfx)
+{
+   filename    = "~/data/sound/mega_bouncehard2.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
+datablock AudioProfile(MegaBounce3Sfx)
+{
+   filename    = "~/data/sound/mega_bouncehard3.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
+datablock AudioProfile(MegaBounce4Sfx)
+{
+   filename    = "~/data/sound/mega_bouncehard4.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
+datablock AudioProfile(MegaRollingHardSfx)
+{
+   filename    = "~/data/sound/mega_Rolling_Hard.wav";
+   description = AudioClosestLooping3d;
+   preload = true;
+};
+
 datablock AudioProfile(SlippingSfx)
 {
    filename    = "~/data/sound/Sliding.wav";
@@ -324,7 +359,7 @@ datablock MarbleData(DefaultMarble)
    maxInv[TimeTravelItem] = 20;
 //   maxInv[GoodiesItem] = 10;
 
-   reduction = 0.25
+   reduction = 0.25;
    power = 4;
 };
 
@@ -332,7 +367,14 @@ datablock MarbleData(MegaMarbleBall : DefaultMarble)
 {
    shapeFile = "~/data/shapes/balls/megamarbleball.dts";
    
-   maxRollVelocity = 14;   
+   maxRollVelocity = 14;
+   
+   bounce1 = MegaBounce1Sfx;
+   bounce2 = MegaBounce2Sfx;
+   bounce3 = MegaBounce3Sfx;
+   bounce4 = MegaBounce4Sfx;
+
+   rollHardSound = MegaRollingHardSfx;   
    
    reduction = 2.5;
    power = 40;

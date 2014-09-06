@@ -316,6 +316,16 @@ if($platform $= "macos")
    moveMap.bind( keyboard, e, freelook );
 else
    moveMap.bind( mouse, button1, freelook );
+   
+function openChat(%val)
+{
+   if (%val)
+   {
+      Canvas.pushDialog(ChatDlg);
+   }
+}
+   
+moveMap.bind(keyboard, "enter", openChat);
 
 
 //------------------------------------------------------------------------------
@@ -387,7 +397,7 @@ function toggleHud(%val)
    }
 }
 
-GlobalActionMap.bind(keyboard, "ctrl h", toggleHud);
+moveMap.bind(keyboard, "ctrl h", toggleHud);
 
 
 //------------------------------------------------------------------------------
