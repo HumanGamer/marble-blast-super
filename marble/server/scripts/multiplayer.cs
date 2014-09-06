@@ -255,12 +255,19 @@ function serverCmdSetMarbleSkin(%client, %skin)
 
 function onMarbleCollision(%marble, %ghost)
 {
+   %power = 10;
+   %megaPower = 100;
    %megaMe = %marble.getDatablock().getName() $= MegaMarbleBall;
    %megaGhost = %ghost.getDatablock().getName() $= GhostMegaMarble;
+
+   %usePower = %power;
+   if (%megaMe && !%megaGhost)
+      %usePower = %megaPower;   
+   
    %dist = VectorDist(%marble.getTransform(), %ghost.getTransform());
    
    %impulsePos = VectorNormalize(%marble.getTransform());
-   %impulse = VectorMult(%impulsePos, -1);
+   %impulse = VectorMult(%impulsePos, %usePower * -1);
    
    %ghost.client.applyImpulse(%impulsePos, %impulse);
    
