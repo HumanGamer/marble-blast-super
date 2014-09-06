@@ -404,8 +404,11 @@ function Marble::setPowerUp(%this,%item,%reset)
 
 function Marble::useCurrentPowerUp(%this)
 {
-   %this.powerUpData.usePowerUp(%this);
-   %this.onPowerUpUsed(%this);
+   if (isObject(%this.powerUpData))
+   {
+      %this.powerUpData.usePowerUp(%this);
+      %this.onPowerUpUsed(%this);
+   }
 }
 
 function serverCmdUseCurrentPowerUp(%client)

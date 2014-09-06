@@ -1,7 +1,7 @@
 datablock StaticShapeData(CheckPointShape)
 {
    category = "Pads";
-   className = "CheckPointShape";
+   //className = "CheckPointShape";
    shapeFile = "~/data/shapes/pads/checkpoint.dts";
 };
 
@@ -18,7 +18,7 @@ function CheckPointShape::setActiveCheckPoint(%this, %obj, %flag)
 datablock TriggerData(CheckPointTrigger)
 {
    category = "Pads";
-   className = "CheckPointTrigger";
+   //className = "CheckPointTrigger";
    tickPeriodMS = 100;
 };
 

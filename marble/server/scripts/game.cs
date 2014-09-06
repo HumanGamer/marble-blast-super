@@ -257,7 +257,8 @@ function spawnGemGroup()
    %gem.beam = %shape;
    %gem.beam.setSkinName(%gem.getDatablock().skin);
    
-   MissionCleanup.add(%shape);
+   if (isObject(MissionCleanup))
+      MissionCleanup.add(%shape);
    
    %x = getWord(%position, 0);
    %y = getWord(%position, 1);
@@ -306,7 +307,8 @@ function spawnGemGroup()
          %lastObj.beam = %shape;
          %lastObj.beam.setSkinName(%lastObj.getDatablock().skin);
          
-         MissionCleanup.add(%shape);
+         if (isObject(MissionCleanup))
+            MissionCleanup.add(%shape);
          
          %x = getWord(%position, 0);
          %y = getWord(%position, 1);
@@ -434,7 +436,8 @@ function GameConnection::StateStart(%this)
       MissionCleanup.add(%shape);
       
    }
-   StartPoint.playThread(0, "ambient");
+   if (isObject(StartPoint))
+      StartPoint.playThread(0, "ambient");
    %this.StateSchedule = %this.schedule( 500, "setGameState", "Ready");
    if(MissionInfo.startHelpText !$= "")
    {
@@ -483,7 +486,8 @@ function GameConnection::StatePlay(%this)
 
 function GameConnection::AnimEnd(%this)
 {
-   StartPoint.stopThread(0);
+   if (isObject(StartPoint))
+      StartPoint.stopThread(0);
 }
 
 function GameConnection::StateEnd(%this)
@@ -621,7 +625,8 @@ function GameConnection::onClientEnterGame(%this)
    %this.camera = new Camera() {
       dataBlock = Observer;
    };
-   MissionCleanup.add( %this.camera );
+   if (isObject(MissionCleanup))
+      MissionCleanup.add( %this.camera );
    %this.camera.scopeToClient(%this);
 
    // Setup game parameters and create the player
@@ -846,7 +851,7 @@ function GameConnection::respawnPlayer(%this)
    // Reset the player back to the last checkpoint
    cancel(%this.respawnSchedule);
    
-   if (%this.checkPoint.pad.getName() $= "StartPoint" && !$Client::ConnectedMultiplayer)
+   if (!$Client::ConnectedMultiplayer && %this.checkPoint.pad.getName() $= "StartPoint")
       $resetLevel = true;
    
    %this.player.unmountImage(0);
@@ -1048,7 +1053,8 @@ function GameConnection::createPlayer(%this, %spawnPoint)
       scale = %scale SPC %scale SPC %scale;
    };  
    
-   MissionCleanup.add(%player);
+   if (isObject(MissionCleanup))
+      MissionCleanup.add(%player);
    
    %pos = getWord(%spawnPoint, 0) + getWord(%this.spawnOffset, 0) SPC getWord(%spawnPoint, 1) + getWord(%this.spawnOffset, 1) SPC getWord(%spawnPoint, 2) + getWord(%this.spawnOffset, 2) SPC getWord(%spawnPoint, 3) SPC getWord(%spawnPoint, 4) SPC getWord(%spawnPoint, 5) SPC getWords(%spawnPoint, 6);
 
