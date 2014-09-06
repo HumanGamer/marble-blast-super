@@ -501,6 +501,8 @@ new GameTSCtrl(PlayGui) {
    
    };
    
+   };
+   
    new GuiMLTextCtrl(ChatText)
    {
       profile = "GuiMLTextProfile";
@@ -510,8 +512,6 @@ new GameTSCtrl(PlayGui) {
       extent = "300 300";
       minExtent = "8 8";
       visible = "1";
-   };
-   
    };
    
 };
