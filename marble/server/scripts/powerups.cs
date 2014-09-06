@@ -502,7 +502,7 @@ function GameConnection::makeMega(%this)
    
    %this.applyImpulse("0 0 -1", "0 0 7");
    
-   %this.megaMarbleSchedule = %this.schedule(5000, makeNoMega);
+   %this.megaMarbleSchedule = %this.schedule(10000, makeNoMega);
 }
 
 function GameConnection::makeNoMega(%this)
