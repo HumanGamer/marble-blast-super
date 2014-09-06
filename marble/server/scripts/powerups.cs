@@ -68,6 +68,11 @@ datablock ItemData(SuperJumpItem)
    maxInventory = 1;
 };
 
+function SuperJumpItem::onAdd(%this, %obj)
+{
+   %obj.playThread(0,"Ambient");
+}
+
 
 //-----------------------------------------------------------------------------
 
