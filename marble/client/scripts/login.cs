@@ -2,6 +2,9 @@ function LoginGui::onWake(%this)
 {
    LoginUsernameLabel.setText("Username:");
    LoginPasswordLabel.setText("Password:");
+   
+   //$pref::Multiplayer::isMultiplayer = 0;
+   PMSetMissionTab("beginner");
 }
 
 function doLogin()
@@ -34,7 +37,7 @@ function onLogin()
 {
    
    $Login::Password = "";
-   $pref::Multiplayer::Name = $Login::Username;
+   $pref::Multiplayer::Name = strlwr($Login::Username);
    $Login::Username = "";
    Canvas.setContent(MultiplayerGui);
 }

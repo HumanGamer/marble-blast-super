@@ -43,7 +43,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
-            text = "*Password and Username is case sensitive";
+            text = "*Password is case sensitive";
             maxLength = "255";
          };
       };

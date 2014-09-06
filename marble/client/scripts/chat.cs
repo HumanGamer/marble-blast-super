@@ -3,7 +3,7 @@ function ChatDlg::onWake(%this)
    ChatEdit.setText("");
 }
 
-function ChatDlg::send(%this)
+function ChatDlg::sendChat(%this)
 {
    %msg = ChatEdit.getValue();
    

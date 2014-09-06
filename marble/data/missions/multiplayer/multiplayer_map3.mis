@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          name = "Neighbourhood";
          gameMode = "hunt";
          level = "1";
-         artist = "Matt";
+         artist = "Matthieu Parizeau";
          type = "multiplayer";
          maxGemsPerSpawn = "7";
    };
