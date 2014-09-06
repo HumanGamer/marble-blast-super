@@ -152,6 +152,17 @@ new GuiControlProfile ("CenterPrintTextProfile")
    fontColor = "0 255 0";
 };
 
+if(!isObject(GuiChatListProfile)) new GuiControlProfile (GuiChatListProfile : TextArrayProfile)
+{
+   fontType = "DomCasualD";
+   fontSize = 24;
+   
+   tab = false;
+   canKeyFocus = false;
+   
+   fontColor = "235 235 235";
+};
+
 
 if(!isObject(GuiPlayerListProfile)) new GuiControlProfile (GuiPlayerListProfile : TextArrayProfile)
 {

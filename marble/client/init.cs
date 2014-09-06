@@ -105,6 +105,7 @@ function initClient()
    exec("./ui/lobbyGui.gui");
    exec("./ui/MultiplayerExitGui.gui");
    exec("./ui/LoginGui.gui");
+   exec("./ui/chatDlg.gui");
 
    // Client scripts
    exec("./scripts/client.cs");
@@ -129,6 +130,7 @@ function initClient()
    exec("./scripts/lobby.cs");
    exec("./scripts/multiplayerExitGui.cs");
    exec("./scripts/login.cs");
+   exec("./scripts/chat.cs");
 
    // Default player key bindings
    exec("./scripts/default.bind.cs");

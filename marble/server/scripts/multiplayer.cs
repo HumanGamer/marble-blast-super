@@ -10,13 +10,24 @@ $Client::GameTypeQuery = $Multiplayer::GameName;
 $Client::MissionTypeQuery = "Any";
 $Multiplayer::Version = 2.0;
 
-$Multiplayer::UpdateInterval = 10;
+$Multiplayer::UpdateInterval = 30;
 
 function commandToAll(%func, %args, %arg1, %arg2, %arg3)
 {
    for (%i = 0; %i < ClientGroup.getCount(); %i++)
    {
       %obj = ClientGroup.getObject(%i);
+      commandToClient(%obj, %func, %args, %arg1, %arg2, %arg3);
+   }
+}
+
+function commandToAllExcept(%client, %func, %args, %arg1, %arg2, %arg3)
+{
+   for (%i = 0; %i < ClientGroup.getCount(); %i++)
+   {
+      %obj = ClientGroup.getObject(%i);
+      if (%obj.getId() $= %client.getId())
+         continue;
       commandToClient(%obj, %func, %args, %arg1, %arg2, %arg3);
    }
 }
@@ -251,6 +262,16 @@ function serverCmdSetMarbleSkin(%client, %skin)
    %client.skin = %skin;
    %client.player.setSkinName(%client.getSkin());
    %client.ghost.setSkinName(%client.getSkin());
+}
+
+function serverCmdSendChat(%client, %msg)
+{
+   %sender = %client.nameBase;
+   %msg1 = "<color:CCCCCC>" @ %sender @ "<color:000000> " @ %msg;
+   %msg2 = "<color:7777FF>" @ %sender @ "<color:000000> " @ %msg;
+   
+   commandToClient(%client, 'ReceiveChat', %msg1);
+   commandToAllExcept(%client, 'ReceiveChat', %msg2);
 }
 
 function onMarbleCollision(%marble, %otherGhost)
