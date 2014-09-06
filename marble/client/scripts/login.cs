@@ -15,6 +15,8 @@ function doLogin()
 
 function LoginConnection::onLine(%this, %line)
 {
+   cancel(%this.deletionSchedule);
+   
    echo (%line);
    switch$(%line)
    {
@@ -25,7 +27,7 @@ function LoginConnection::onLine(%this, %line)
       case "LOGIN::SUCCESS":
          onLogin();
    }
-   schedule(0, 0, "LoginConnection.delete();");
+   %this.deletionSchedule = %this.schedule(0, delete);
 }
 
 function onLogin()

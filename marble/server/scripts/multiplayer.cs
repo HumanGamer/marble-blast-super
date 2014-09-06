@@ -47,7 +47,8 @@ function updateGame()
 
 function serverCmdUpdateTransform(%client, %trans)
 {
-   %client.ghost.setTransform(%trans);
+   if (isObject(%client.ghost))
+      %client.ghost.setTransform(%trans);
 }
 
 function setGameStateAll()
@@ -264,4 +265,14 @@ function onMarbleCollision(%marble, %ghost)
    %ghost.client.applyImpulse(%impulsePos, %impulse);
    
    //echo("Megas: " @ %megaMe @ " | " @ %megaGhost @ ", Collision: " @ %dist);
+}
+
+function VectorMult(%vector, %mult)
+{
+   if (getWordCount(%mult) > 1)
+   {
+      return getWord(%vector, 0) * getWord(%mult, 0) SPC getWord(%vector, 1) * getWord(%mult, 1) SPC getWord(%vector, 2) * getWord(%mult, 2);
+   } else {
+      return getWord(%vector, 0) * %mult SPC getWord(%vector, 1) * %mult SPC getWord(%vector, 2) * %mult;
+   }
 }

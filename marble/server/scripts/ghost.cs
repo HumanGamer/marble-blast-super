@@ -37,7 +37,8 @@ function GameConnection::createGhost(%this)
       rotation = %rotation;
    };
    
-   MissionCleanup.add(%ghost);
+   if (isObject(MissionCleanup))
+      MissionCleanup.add(%ghost);
    
    %this.ghost = %ghost;
 }
