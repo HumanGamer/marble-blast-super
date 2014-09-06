@@ -323,11 +323,18 @@ datablock MarbleData(DefaultMarble)
    maxInv[IndestructibleItem] = 20;
    maxInv[TimeTravelItem] = 20;
 //   maxInv[GoodiesItem] = 10;
+
+   //radius = 0.27;
+   reduction = 0.25;
+   power = 4;
 };
 
 datablock MarbleData(MegaMarbleBall : DefaultMarble)
 {
    shapeFile = "~/data/shapes/balls/megamarbleball.dts";
+   //radius = 0.6075;
+   reduction = 0.5625;
+   power = 9;
 };
 
 

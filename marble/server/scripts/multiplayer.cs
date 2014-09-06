@@ -253,23 +253,27 @@ function serverCmdSetMarbleSkin(%client, %skin)
    %client.ghost.setSkinName(%client.getSkin());
 }
 
-function onMarbleCollision(%marble, %ghost)
-{
-   %power = 10;
-   %megaPower = 100;
-   %megaMe = %marble.getDatablock().getName() $= MegaMarbleBall;
-   %megaGhost = %ghost.getDatablock().getName() $= GhostMegaMarble;
-
-   %usePower = %power;
-   if (%megaMe && !%megaGhost)
-      %usePower = %megaPower;   
+function onMarbleCollision(%marble, %other)
+{  
+   //%dist = VectorDist(%marble.getPosition(), %other.getPosition());
+   //%dist -= %marble.getDatablock().radius;
+   //%dist -= %other.getDatablock().radius;
    
-   %dist = VectorDist(%marble.getTransform(), %ghost.getTransform());
+   %reduction = %other.getDatablock().reduction;
+   %power = %marble.getDatablock().power;
    
-   %impulsePos = VectorNormalize(%marble.getTransform());
-   %impulse = VectorMult(%impulsePos, %usePower * -1);
+   //if (%dist < 0)
+   //{
+      %src1 = VectorSub(%other.getPosition(), %marble.getPosition());
+      %src2 = VectorSub(%marble.getPosition(), %other.getPosition());
+      
+      %impulse1 = VectorScale(%src1, %power);
+      %impulse2 = VectorScale(%src2, %reduction);
+      
+      %other.client.applyImpulse(%src1, %impulse1);
+      %marble.client.applyImpulse(%src2, %impulse2);
+   //}
    
-   %ghost.client.applyImpulse(%impulsePos, %impulse);
    
    //echo("Megas: " @ %megaMe @ " | " @ %megaGhost @ ", Collision: " @ %dist);
 }
