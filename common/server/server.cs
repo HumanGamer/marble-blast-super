@@ -52,11 +52,11 @@ function createServer(%serverType, %mission)
    if (%mission !$= "")
       loadMission(%mission, true);
    else {
-      if (!isObject(MissionCleanup))
-      {
-         new SimGroup( MissionCleanup );
-         $instantGroup = MissionCleanup;
-      }
+      //if (!isObject(MissionCleanup))
+      //{
+      //   new SimGroup( MissionCleanup );
+      //   $instantGroup = MissionCleanup;
+      //}
    }
 }
 
