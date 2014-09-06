@@ -176,6 +176,11 @@ datablock ItemData(SuperSpeedItem)
    maxInventory = 1;
 };
 
+function SuperSpeedItem::onAdd(%this, %obj)
+{
+   %obj.playThread(0,"Ambient");
+}
+
 
 //-----------------------------------------------------------------------------
 
