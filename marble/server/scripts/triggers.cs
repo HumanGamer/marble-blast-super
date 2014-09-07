@@ -49,3 +49,24 @@ function HelpTrigger::onEnterTrigger(%this,%trigger,%obj)
    %obj.client.addHelpLine(%trigger.text, true);
 }
 
+//-----------------------------------------------------------------------------
+
+datablock TriggerData(PhysicsTrigger)
+{
+   tickPeriodMS = 100;
+};
+
+function PhysicsTrigger::onEnterTrigger(%this, %trigger, %obj)
+{
+   %var = %trigger.var;
+   %value = %trigger.value;
+   
+   eval(%obj @ ".client.physics" @ %var @ "=" @ %obj.getDataBlock().getName() @ "." @ %var @ ";");
+   eval(%obj.getDataBlock().getName() @ "." @ %var @ "=" @ %value @ ";");
+}
+
+function PhysicsTrigger::onLeaveTrigger(%this, %trigger, %obj)
+{
+   %var = %trigger.var;
+   eval(%obj.getDataBlock().getName() @ "." @ %var @ "=" @ %obj @ ".client.physics" @ %var @ ";");
+}
