@@ -1,4 +1,26 @@
 =========================================================
+BETA 2.7
+September 7, 2014
+
+- 2 new multiplayer levels (Agility and Permuda Square)
+- 1 modified multiplayer level (Lunatic Cube)
+- New Super Speed shape
+- Implemented multiplayer chat
+- Added physics trigger
+- Work on collision
+
+=========================================================
+BETA 2.6
+September 6, 2014
+
+- Fully functional Mega Marble
+- Work on collision
+- 1 new Beginner level (Yellow Corner)
+- Correctly aligned power-ups in Neighbourhood
+- New end pad and Super Jump shape
+- Made structural parts of pads have no collision
+
+=========================================================
 BETA 2.5
 September 4, 2014
 
