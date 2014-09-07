@@ -4,6 +4,49 @@
 // Copyright (c) 2001 GarageGames.Com
 //-----------------------------------------------------------------------------
 
+datablock ParticleData(GemParticle)
+{
+   textureName          = "~/data/particles/smoke";
+   dragCoeffiecient     = 2;
+   gravityCoefficient   = -1;
+   windCoefficient      = 0;
+   inheritedVelFactor   = 0;
+   constantAcceleration = 0;
+   lifetimeMS           = 250;
+   lifetimeVarianceMS   = 100;
+   useInvAlpha =  true;
+   spinSpeed     = 0;
+
+   colors[0]     = "1.0 1.0 1.0 1.0";
+   colors[1]     = "1.0 1.0 1.0 1.0";
+   colors[2]     = "1.0 1.0 1.0 0.0";
+
+   sizes[0]      = 0.5;
+   sizes[1]      = 0.5;
+   sizes[2]      = 0.5;
+
+   times[0]      = 1.0;
+   times[1]      = 1.0;
+   times[2]      = 1.0;
+};
+
+datablock ParticleEmitterData(GemParticleEmitter)
+{
+   ejectionPeriodMS = 250;
+   periodVarianceMS = 0;
+   ejectionVelocity = 2;
+   velocityVariance = 0;
+   thetaMin         = 0;
+   thetaMax         = 50;
+   lifetimeMS       = 0;
+   particles = "GemParticle";
+};
+
+datablock ParticleEmitterNodeData(GemParticleNode)
+{
+   timeMultiple = 1;
+};
+
 //-----------------------------------------------------------------------------
 // Gem base class
 //-----------------------------------------------------------------------------
@@ -54,11 +97,38 @@ function Gem::onAdd(%this,%obj)
       // Random skin if none assigned
       %obj.setSkinName($GemSkinColors[getRandom(9)]);
    }
+   
+   
+}
+
+function createGemParticles(%obj)
+{
+   if (isObject(%obj.node))
+      %obj.node.delete();  
+      
+   %position = getWords(%obj.position, 0, 1) SPC getWord(%obj.position, 2) + 0.5;
+   %rotation = %obj.rotation;
+   
+   %node = new ParticleEmitterNode()
+   {
+      position = %position;
+      rotation = %rotation;
+      scale = "1 1 1";
+      datablock = "GemParticleNode";
+      emitter = "GemParticleEmitter";
+      velocity = "1";
+   };
+     
+   %obj.node = %node;
+   
+   MissionCleanup.add(%node); 
 }
 
 function Gem::onPickup(%this,%obj,%user,%amount)
 {
    Parent::onPickup(%this,%obj,%user,%amount);
+   if (isObject(%obj.node))
+      %obj.node.delete();
    if (MissionInfo.gameMode $= "hunt")
        %user.client.onFoundGem(%this.points, %obj);
    else

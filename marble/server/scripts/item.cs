@@ -42,6 +42,11 @@ function Item::onMissionReset(%this)
       %this.hide(false);
       %this.startFade(0, 0, false);
    }
+   
+   if (%this.getDataBlock().className $= "Gem")
+   {
+      createGemParticles(%this);
+   }
 }
 
 function ItemData::getPickupName(%this, %obj)

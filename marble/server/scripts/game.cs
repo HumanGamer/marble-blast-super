@@ -228,6 +228,8 @@ function hideAllGems()
 	 	  %obj.hide(true);
 	 	  if (isObject(%obj.beam))
            %obj.beam.delete();
+        if (isObject(%obj.node))
+           %obj.node.delete();
 	   }
    }
 }
@@ -256,6 +258,8 @@ function spawnGemGroup()
    
    %gem.beam = %shape;
    %gem.beam.setSkinName(%gem.getDatablock().skin);
+   
+   createGemParticles(%gem);
    
    if (isObject(MissionCleanup))
       MissionCleanup.add(%shape);
@@ -306,6 +310,8 @@ function spawnGemGroup()
          
          %lastObj.beam = %shape;
          %lastObj.beam.setSkinName(%lastObj.getDatablock().skin);
+         
+         createGemParticles(%lastObj);
          
          if (isObject(MissionCleanup))
             MissionCleanup.add(%shape);
