@@ -158,6 +158,25 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          repeatDecay = "1";
          bitmap = "./login/back";
       };
+      
+      new GuiBitmapButtonCtrl(Login_Remember)
+      {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "180 370";
+         extent = "70 20";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$pref::Login::RememberPassword";
+         helpTag = "0";
+         text = "Remember Me";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./login/remember";
+      };
    };
 };
 //--- OBJECT WRITE END ---

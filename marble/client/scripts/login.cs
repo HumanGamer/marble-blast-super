@@ -1,5 +1,8 @@
 function LoginGui::onWake(%this)
 {
+   LoginUsernameEdit.setText($pref::Multiplayer::Name); 
+   LoginPasswordEdit.setText($pref::Login::Password);
+   
    LoginUsernameLabel.setText("Username:");
    LoginPasswordLabel.setText("Password:");
    
@@ -35,6 +38,10 @@ function LoginConnection::onLine(%this, %line)
 
 function onLogin()
 {
+   if ($pref::Login::RememberPassword)
+      $pref::Login::Password = $Login::Password;
+   else
+      $pref::Login::Password = "";
    
    $Login::Password = "";
    $pref::Multiplayer::Name = strlwr($Login::Username);
