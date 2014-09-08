@@ -7,9 +7,12 @@ function ChatDlg::sendChat(%this)
 {
    %msg = ChatEdit.getValue();
    
-   commandToServer('SendChat', %msg);
+   Canvas.popDialog(ChatDlg);   
    
-   Canvas.popDialog(ChatDlg);
+   if (trim(%msg) $= "")
+      return;
+      
+   commandToServer('SendChat', %msg);
 }
 
 function ChatText::receiveChat(%this, %msg)
