@@ -88,7 +88,7 @@ function reformatGameEndText()
    if($Game::Qualified)
    {
       %text = %text @ "<color:fdfdfd>" @ ((MissionInfo.goldTime && $Game::ScoreTime < MissionInfo.goldTime) ?
-         "You beat the <color:17e299>Super<color:fdfdfd> time!" : "You have access to the next level.");
+         "You beat the <color:17e299>Super<color:fdfdfd> time!" : "You have completed the level!");
    }
    else
       %text = %text @ "<color:ff0000>Really? You failed? What a pity. Now you have to restart the level, good going derp.";
