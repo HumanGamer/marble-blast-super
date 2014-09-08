@@ -4,6 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          level = "6";
          goldTime = "60000";
+	 artist = "Ender";
          type = "Beginner";
          time = "0";
          name = "Frictional Pathway";

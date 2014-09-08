@@ -3,6 +3,7 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          goldTime = "15000";
+	 artist = "Ender";
          name = "Hippie Playground";
          time = "0";
          startHelpText = "Can you find the hidden time travel?";

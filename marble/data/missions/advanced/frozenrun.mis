@@ -2,7 +2,7 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         artist = "Endercraft1";
+         artist = "Ender, davidjl123";
          goldTime = "3000";
          name = "Frozen Run";
          time = "0";

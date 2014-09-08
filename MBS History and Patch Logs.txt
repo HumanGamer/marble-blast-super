@@ -1,10 +1,22 @@
 =========================================================
+BETA 2.8
+September 8, 2014
+
+- 1 new Beginner level (Is It Safe?)
+- Added teleport triggers
+- New TimeChanger, SuperGlider, and GravityTransformer shapes
+- Gems retextured (still needs work)
+- Implemented blast
+- Working Ultra Blast
+- Edited game.cs finish message
+
+=========================================================
 BETA 2.7
 September 7, 2014
 
 - 2 new multiplayer levels (Agility and Permuda Square)
 - 1 modified multiplayer level (Lunatic Cube)
-- New Super Speed shape
+- New SuperSprint shape
 - Implemented multiplayer chat
 - Added physics trigger
 - Work on collision
@@ -17,7 +29,7 @@ September 6, 2014
 - Work on collision
 - 1 new Beginner level (Yellow Corner)
 - Correctly aligned power-ups in Neighbourhood
-- New end pad and Super Jump shape
+- New end pad and SuperSpring shape
 - Made structural parts of pads have no collision
 
 =========================================================

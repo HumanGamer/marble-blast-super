@@ -3,6 +3,7 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          goldTime = "35000";
+	 artist = "Ender";
          type = "Beginner";
          time = "0";
          name = "Whatever Goes Up";
