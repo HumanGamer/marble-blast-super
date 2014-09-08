@@ -340,6 +340,11 @@ datablock ItemData(TimeTravelItem)
    maxInventory = 1;
 };
 
+function TimeTravelItem::onAdd(%this, %obj)
+{
+   %obj.playThread(0,"Ambient");
+}   
+
 function TimeTravelItem::getPickupName(%this, %obj)
 {
    if (MissionInfo.gameMode !$= "hunt")
