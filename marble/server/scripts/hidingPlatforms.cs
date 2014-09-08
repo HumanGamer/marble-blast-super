@@ -25,7 +25,6 @@ function hidePlatform(%obj)
    {
       return;
    }
-   error("Hiding Platform: " @ %obj);
    cancel(%obj.hide);
    cancel(%obj.unhide);
    cancel(%obj.unhide1);
