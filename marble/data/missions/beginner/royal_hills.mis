@@ -5,9 +5,9 @@ new SimGroup(MissionGroup) {
          name = "Royal Hills";
          desc = "Royalty can be fun. Except for the Tornado Burglars...";
          level = "0";
-			goldTime = "15000";
+	 goldTime = "15000";
          type = "beginner";
-			artist = "Matthieu Parizeau";
+	 artist = "Matthieu Parizeau";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

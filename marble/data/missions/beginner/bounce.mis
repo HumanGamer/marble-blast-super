@@ -9,6 +9,7 @@ new SimGroup(MissionGroup) {
          type = "Beginner";
          level = "2";
          goldTime = "20000";
+	 artist = "Ender";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

@@ -5,6 +5,7 @@ new SimGroup(MissionGroup) {
          time = "0";
          startHelpText = "No help will be given!";
          goldTime = "60000";
+	 artist = "Ender";
          desc = "Are you ready to conquer the medium levels? Lets find out.";
          type = "Intermediate";
          level = "5";

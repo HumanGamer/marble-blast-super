@@ -7,6 +7,7 @@ new SimGroup(MissionGroup) {
          name = "Green Climb of the Amateur";
          desc = "Beginner Finale. Are you ready to face the challlenges medium has for you?";
          goldTime = "45000";
+	 artist = "Ender";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

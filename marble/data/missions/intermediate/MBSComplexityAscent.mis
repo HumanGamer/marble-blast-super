@@ -8,6 +8,7 @@ new SimGroup(MissionGroup) {
          startHelpText = "Find a way to get to the second gem using the wind tunnel.";
          type = "Intermediate";
          goldTime = "30000";
+	 artist = "James Colsey";
          desc = "Every challenge will get harder and harder.";
    };
    new MissionArea(MissionArea) {
