@@ -359,6 +359,7 @@ datablock MarbleData(DefaultMarble)
    maxInv[TimeTravelItem] = 20;
 //   maxInv[GoodiesItem] = 10;
 
+   radius = 0.27;
    reduction = 0.25;
    power = 4;
 };
@@ -376,6 +377,7 @@ datablock MarbleData(MegaMarbleBall : DefaultMarble)
 
    rollHardSound = MegaRollingHardSfx;   
    
+   radius = 0.6075;
    reduction = 2.5;
    power = 40;
 };
@@ -405,6 +407,9 @@ function MarbleData::onCollision(%this,%obj,%col)
    } else if (%col.getClassName() $= "StaticShape" && %col.getDatablock().getName() $= "GhostMarble" || %col.getDatablock().getName() $= "GhostMegaMarble")
    {
       onMarbleCollision(%obj, %col);
+   } else if (%col.getClassName() $= "StaticShape" && %col.getDatablock().getName() $= "HidingPlatform")
+   {
+      hidePlatform(%col);
    }
 }
 

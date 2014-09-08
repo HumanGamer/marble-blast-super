@@ -53,7 +53,40 @@ function updateGame()
       }
    }
    
+   updateCollision();
+   
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
+}
+
+function updateCollision()
+{
+   for (%i = 0; %i < ServerConnection.getCount(); %i++)
+   {
+      %obj = ServerConnection.getObject(%i);
+      
+      if (%obj.getClassName() $= "Marble")
+      {
+         %pos1 = %obj.getPosition();
+         for (%j = 0; %j < ServerConnection.getCount(); %j++)
+         {
+            %obj2 = ServerConnection.getObject(%j);
+            
+            //if (%obj2.getClassName() $= "PathedInterior" && %obj2.getDataBlock().getName() $= "HidingPlatform")
+            //{
+               //%pos2 = %obj2.getPosition();
+               //
+               //%dist = VectorDist(%pos1, %pos2);
+               //%dist -= %obj.getDatablock().radius;
+               //
+               //if (%dist <= 0)
+               //{
+                  //hidePlatform(%obj2);
+               //}
+            //}
+         }
+      
+      }
+   }
 }
 
 function serverCmdUpdateTransform(%client, %trans)
