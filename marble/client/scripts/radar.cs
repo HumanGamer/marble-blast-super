@@ -39,7 +39,8 @@ function addRadarObject(%id, %bitmap, %x, %y)
 function clientCmdRemoveRadarObject(%id)
 {
    %obj = "RadarObject_" @ %id;
-   %obj.delete();
+   if (isObject(%obj))
+      %obj.delete();
 }
 
 function clientCmdClearRadar()
