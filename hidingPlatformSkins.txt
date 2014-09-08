@@ -1,0 +1,14 @@
+base
+blue
+bluew
+bluex
+cyan
+greenw
+greenx
+greyx
+magenta
+orangex
+pink
+purplew
+redw
+yelloww

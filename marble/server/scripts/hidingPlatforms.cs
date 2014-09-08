@@ -7,6 +7,11 @@ datablock StaticShapeData(HidingPlatform)
    emap = false;
 };
 
+function HidingPlatform::onAdd(%this, %obj)
+{
+   %obj.setSkinName(%obj.skin);
+}
+
 function HidingPlatform::onMissionReset(%data, %obj)
 {
    cancel(%obj.hide);
