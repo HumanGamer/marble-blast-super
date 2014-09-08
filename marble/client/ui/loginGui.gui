@@ -73,6 +73,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          minExtent = "8 8";
          visible = "1";
          variable = "$Login::Username";
+         altCommand = "doLogin();";
          helpTag = "0";
          maxLength = "255";
          maxPixelWidth = "0";
@@ -90,6 +91,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          minExtent = "8 8";
          visible = "1";
          variable = "$Login::Password";
+         altCommand = "doLogin();";
          helpTag = "0";
          maxLength = "255";
          maxPixelWidth = "0";
