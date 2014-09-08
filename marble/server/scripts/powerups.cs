@@ -448,6 +448,8 @@ datablock ItemData(BlastItem)
    pickupName = "an Ultra Blast PowerUp!";
    useName = "Ultra Blast PowerUp";
    maxInventory = 1;
+   
+   noPickupMessage = true;
 };
 
 function BlastItem::onAdd(%this, %obj)
@@ -457,7 +459,7 @@ function BlastItem::onAdd(%this, %obj)
 
 function BlastItem::usePowerUp(%this, %obj)
 {
-   echo ("Used Blast");
+   %obj.setBlastEnergy(%obj.getDatablock().maxBlast);
 }
 
 //-----------------------------------------------------------------------------

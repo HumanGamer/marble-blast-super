@@ -974,6 +974,11 @@ function GameConnection::respawnPlayer(%this)
    
    %this.makeNoMega();   
    
+   if ($resetLevel)
+   {
+      %this.player.setBlastEnergy(0);
+   }
+   
    $resetLevel = false;
    
    //%this.player.powerUpEnableSched = %this.player.schedule(500, enablePowerUps);
@@ -1080,6 +1085,8 @@ function GameConnection::createPlayer(%this, %spawnPoint)
    %this.setControlObject(%player);
    
    %this.createGhost();
+   
+   %this.player.updateBlast();
 }
 
 

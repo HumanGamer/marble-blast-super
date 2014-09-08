@@ -308,14 +308,16 @@ function mouseFire(%val)
 
 function altTrigger(%val)
 {
-   $mvTriggerCount1++;
+   //$mvTriggerCount1++;
+   if (%val && $Client::BlastEnergy > 1000)
+      commandToServer('UseBlast');
 }
 
 moveMap.bind( mouse, button0, mouseFire );
-if($platform $= "macos")
-   moveMap.bind( keyboard, e, freelook );
-else
-   moveMap.bind( mouse, button1, freelook );
+//if($platform $= "macos")
+   moveMap.bind( keyboard, e, altTrigger );
+//else
+   moveMap.bind( mouse, button1, altTrigger );
    
 function openChat(%val)
 {

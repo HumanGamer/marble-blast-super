@@ -514,5 +514,16 @@ new GameTSCtrl(PlayGui) {
       visible = "1";
    };
    
+   new GuiProgressCtrl(PG_BlastBar)
+   {
+      profile = "GuiBlastProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "20 10";
+      extent = "100 27";
+      minExtent = "8 8";
+      visible = "1";
+   };
+   
 };
 //--- OBJECT WRITE END ---

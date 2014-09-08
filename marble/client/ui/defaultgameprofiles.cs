@@ -195,3 +195,27 @@ if(!isObject(GuiGemPopUpTextShadowProfile)) new GuiControlProfile (GuiGemPopUpTe
    
    fontColor = "0 0 0";
 };
+
+if(!isObject(GuiBlastProfile)) new GuiControlProfile ("GuiBlastProfile")
+{
+   opaque = false;
+   fillColor = "44 44 44 100";
+   border = true;
+   borderColor   = "100 100 100";
+};
+
+if(!isObject(GuiBlastUsableProfile)) new GuiControlProfile ("GuiBlastUsableProfile")
+{
+   opaque = false;
+   fillColor = "44 152 162 100";
+   border = true;
+   borderColor   = "100 100 100";
+};
+
+if(!isObject(GuiBlastExtraProfile)) new GuiControlProfile ("GuiBlastExtraProfile")
+{
+   opaque = false;
+   fillColor = "120 120 0 200";
+   border = true;
+   borderColor   = "100 100 100";
+};

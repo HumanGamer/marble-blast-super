@@ -362,6 +362,11 @@ datablock MarbleData(DefaultMarble)
    radius = 0.27;
    reduction = 0.25;
    power = 4;
+   
+   blastRechargeTime = 36000;
+   maxBlastRecharge = 5500;
+   maxBlast = 6500;
+   minUsableBlast = 1000;
 };
 
 datablock MarbleData(MegaMarbleBall : DefaultMarble)
@@ -380,6 +385,11 @@ datablock MarbleData(MegaMarbleBall : DefaultMarble)
    radius = 0.6075;
    reduction = 2.5;
    power = 40;
+   
+   blastRechargeTime = 36000;
+   maxBlastRecharge = 5500;
+   maxBlast = 6500;
+   minUsableBlast = 1000;
 };
 
 
@@ -449,6 +459,11 @@ function MarbleData::setCheckpoint(%this,%object,%check)
 
 function Marble::setPowerUp(%this,%item,%reset)
 {
+   if (%item.powerUpId == 6)
+   {
+      %item.usePowerUp(%this);
+      return;
+   }
    %this.client.setPowerUp(%item.shapeFile);
    %this.powerUpData = %item;
    if (%item.powerUpId < 6)
@@ -495,6 +510,48 @@ function Marble::onPowerUpUsed(%obj)
 function Marble::getIsOOB(%this)
 {
    return %this.isOOB;
+}
+
+function Marble::setBlastEnergy(%this, %energy)
+{
+   %this.blastEnergy = %energy;
+   if (%this.blastEnergy > %this.getDatablock().maxBlast)
+      %this.blastEnergy = %this.getDatablock().maxBlast;
+   if (%this.blastEnergy > %this.getDatablock().maxBlastRecharge)
+      commandToClient(%this.client, 'SetBlastEnergy', %this.blastEnergy, %this.getDatablock().maxBlast, true);
+   else
+      commandToClient(%this.client, 'SetBlastEnergy', %this.blastEnergy, %this.getDatablock().maxBlastRecharge, false);
+}
+
+function Marble::updateBlast(%this)
+{
+   cancel(%this.blastUpdate);  
+   
+   %nextTime = 8.4;
+   
+   if (%this.blastEnergy < %this.getDataBlock().maxBlastRecharge)
+   {
+      %energy = %this.blastEnergy + 1.2;
+      if (%energy > %this.getDataBlock().maxBlastRecharge)
+         %energy = %this.getDataBlock().maxBlastRecharge;
+      %this.setBlastEnergy(%energy);
+   }
+   
+   %this.blastUpdate = %this.schedule(%nextTime, "updateBlast");
+}
+
+function Marble::useBlast(%this)
+{
+   if (%this.blastEnergy >= %this.getDatablock().getName().minUsableBlast)
+   {
+      %this.client.applyImpulse("0 0 0", "0 0" SPC %this.blastEnergy / 1000);
+      %this.setBlastEnergy(0);
+   }
+}
+
+function serverCmdUseBlast(%client)
+{
+   %client.player.useBlast();
 }
 
 

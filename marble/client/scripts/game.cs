@@ -155,3 +155,17 @@ function formatTime(%time)
        %secondsTen @ %secondsOne @ "." @
        %hundredthTen @ %hundredthOne;
 }
+
+function clientCmdSetBlastEnergy(%energy, %max, %extra)
+{
+   $Client::BlastEnergy = %energy;
+   PG_BlastBar.setValue(%energy / %max);
+   if (%extra) {
+      PG_BlastBar.profile = "GuiBlastExtraProfile";
+   } else if (%energy < 1000)
+   {
+      PG_BlastBar.profile = "GuiBlastProfile";
+   } else {
+      PG_BlastBar.profile = "GuiBlastUsableProfile";
+   }
+}

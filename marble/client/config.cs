@@ -19,4 +19,4 @@ moveMap.bind(keyboard, "ctrl h", toggleHud);
 moveMap.bind(mouse0, "xaxis", yaw);
 moveMap.bind(mouse0, "yaxis", pitch);
 moveMap.bind(mouse0, "button0", mouseFire);
-moveMap.bind(mouse0, "button1", freelook);
+moveMap.bind(mouse0, "button1", altTrigger);
