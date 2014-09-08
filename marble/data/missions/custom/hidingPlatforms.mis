@@ -4,11 +4,11 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          type = "custom";
          time = "0";
-         goldTime = "150000";
-         artist = "James Colsey";
          desc = "Master the oddysey of ascending platforms.";
-         level = "5";
          name = "Hiding Platforms Test";
+         goldTime = "150000";
+         level = "5";
+         artist = "James Colsey";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -1201,12 +1201,12 @@ new SimGroup(MissionGroup) {
       dataBlock = "DuctFan";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         penaltyTime = "0";
-         powerUp = "0";
          bonusTime = "0";
+         time = "0";
+         powerUp = "0";
          pad = "1905";
+         penaltyTime = "0";
+         gemCount = "0";
    };
    new Item() {
       position = "61.6217 73.9803 59.6944";
@@ -1218,12 +1218,12 @@ new SimGroup(MissionGroup) {
       rotate = "1";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         penaltyTime = "0";
-         powerUp = "0";
          bonusTime = "0";
+         time = "0";
+         powerUp = "0";
          pad = "3301";
+         penaltyTime = "0";
+         gemCount = "0";
    };
    new Item() {
       position = "68.0363 38.928 66.0491";
@@ -1355,11 +1355,27 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new Trigger() {
+      position = "-8.49126 18.8661 8.4505";
+      rotation = "1 0 0 0";
+      scale = "5 5 5";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "tele1";
+   };
+   new Trigger(tele1) {
+      position = "-0.4 10.4969 13.9459";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TeleportTargetTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
 };
 //--- OBJECT WRITE END ---

@@ -17,7 +17,6 @@ function CheckPointShape::setActiveCheckPoint(%this, %obj, %flag)
 
 datablock TriggerData(CheckPointTrigger)
 {
-   category = "Pads";
    //className = "CheckPointTrigger";
    tickPeriodMS = 100;
 };
