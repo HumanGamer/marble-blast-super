@@ -2,13 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         type = "multiplayer";
          gameMode = "Hunt";
-         time = "300000";
          maxGemsPerSpawn = "7";
+         level = "5";
+         type = "multiplayer";
+         time = "300000";
          name = "Permuda Square";
          desc = "Find the gems in this big square level.";
-         level = "5";
          artist = "James Colsey";
    };
    new MissionArea(MissionArea) {
@@ -133,19 +133,19 @@ new SimGroup(MissionGroup) {
       };
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "2459";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "1984";
    };
    new InteriorInstance() {
@@ -166,10 +166,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3582";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2216";
       };
       new Item() {
          position = "5.9261 9.9779 -11.466";
@@ -179,11 +180,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "4284";
+            beam = "2469";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2470";
       };
       new Item() {
          position = "6.05506 12.1316 -11.9705";
@@ -193,11 +195,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "4288";
+            beam = "2475";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2476";
       };
       new Item() {
          position = "8.07874 10.0116 -11.9988";
@@ -207,11 +210,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "4894";
+            beam = "2477";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2478";
       };
       new Item() {
          position = "6.06235 8.04578 -11.9706";
@@ -221,11 +225,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "4283";
+            beam = "2473";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2474";
       };
       new Item() {
          position = "3.99325 9.97766 -11.9733";
@@ -235,11 +240,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "4287";
+            beam = "2471";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2472";
       };
       new Item() {
          position = "5.97361 14.0215 -12.5036";
@@ -249,11 +255,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "4191";
+            beam = "2483";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2484";
       };
       new Item() {
          position = "10.1216 9.87988 -12.4931";
@@ -264,10 +271,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4892";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2223";
       };
       new Item() {
          position = "6.01212 5.97915 -12.4562";
@@ -277,11 +285,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "4893";
+            beam = "2481";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2482";
       };
       new Item() {
          position = "1.93858 10.0208 -12.4758";
@@ -291,11 +300,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "4197";
+            beam = "2479";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2480";
       };
       new Item() {
          position = "-0.0685577 9.94751 -12.9815";
@@ -306,10 +316,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "12554";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2226";
       };
       new Item() {
          position = "5.95134 16.0408 -12.9786";
@@ -320,10 +331,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4195";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2227";
       };
       new Item() {
          position = "12.0031 10.0646 -12.9683";
@@ -334,10 +346,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4891";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2228";
       };
       new Item() {
          position = "6.05394 4.01052 -12.9807";
@@ -348,10 +361,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4890";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2229";
       };
       new Item() {
          position = "-0.0566828 2.03673 -12.9754";
@@ -362,10 +376,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "12549";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2230";
       };
       new Item() {
          position = "-1.99081 3.97659 -12.9608";
@@ -376,10 +391,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "12551";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2231";
       };
       new Item() {
          position = "-2.02151 2.09616 -12.4772";
@@ -390,10 +406,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "12550";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2232";
       };
       new Item() {
          position = "-2.0269 16.0094 -12.9708";
@@ -404,10 +421,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "10438";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2233";
       };
       new Item() {
          position = "0.00541455 17.9579 -13.0065";
@@ -418,10 +436,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3875";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2234";
       };
       new Item() {
          position = "-1.98448 17.955 -12.4663";
@@ -432,10 +451,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3876";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2235";
       };
       new Item() {
          position = "12.0852 17.9939 -12.9791";
@@ -446,10 +466,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "8459";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2236";
       };
       new Item() {
          position = "13.9877 15.9864 -12.9549";
@@ -460,10 +481,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3722";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2237";
       };
       new Item() {
          position = "14.0107 18.093 -12.4687";
@@ -474,10 +496,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "8458";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2238";
       };
       new Item() {
          position = "14.0233 4.05195 -12.9713";
@@ -488,10 +511,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4889";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2239";
       };
       new Item() {
          position = "12.0532 2.07244 -12.9768";
@@ -502,10 +526,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4888";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2240";
       };
       new Item() {
          position = "14.0602 1.94503 -12.4947";
@@ -516,10 +541,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4887";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2241";
       };
       new Item() {
          position = "6.04678 5.97946 7.01574";
@@ -530,10 +556,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6468";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2242";
       };
       new Item() {
          position = "6.00937 7.99506 7.53218";
@@ -544,10 +571,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6469";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2243";
       };
       new Item() {
          position = "6.02351 9.94793 8.00455";
@@ -558,10 +586,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5067";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2244";
       };
       new Item() {
          position = "7.98026 9.94055 7.53858";
@@ -572,10 +601,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6470";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2245";
       };
       new Item() {
          position = "10.0371 9.99165 7.03543";
@@ -586,10 +616,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6472";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2246";
       };
       new Item() {
          position = "5.9958 14.066 7.03383";
@@ -600,10 +631,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5066";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2247";
       };
       new Item() {
          position = "2.01351 9.96872 7.01199";
@@ -614,10 +646,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5063";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2248";
       };
       new Item() {
          position = "3.96609 10.0517 7.53654";
@@ -628,10 +661,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5064";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2249";
       };
       new Item() {
          position = "6.04088 12.0548 7.49909";
@@ -642,10 +676,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5065";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2250";
       };
       new Item() {
          position = "8.0422 -2.00838 7.02991";
@@ -656,10 +691,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6465";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2251";
       };
       new Item() {
          position = "3.98536 -2.05586 7.02867";
@@ -670,10 +706,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6467";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2252";
       };
       new Item() {
          position = "6.01876 -2.03219 7.52603";
@@ -684,10 +721,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6466";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2253";
       };
       new Item() {
          position = "-6.02175 7.98543 7.02584";
@@ -698,10 +736,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5062";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2254";
       };
       new Item() {
          position = "-6.01601 11.99 7.00296";
@@ -712,10 +751,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5060";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2255";
       };
       new Item() {
          position = "-6.05704 10.0581 7.52478";
@@ -726,10 +766,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5061";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2256";
       };
       new Item() {
          position = "4.01038 22.0248 7.02407";
@@ -739,10 +780,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2257";
       };
       new Item() {
          position = "7.96837 22.028 6.95016";
@@ -753,10 +795,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5521";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2258";
       };
       new Item() {
          position = "6.03111 22.0786 7.53438";
@@ -766,10 +809,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2259";
       };
       new Item() {
          position = "18.0513 12.0438 7.00608";
@@ -780,10 +824,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3583";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2260";
       };
       new Item() {
          position = "18.0192 7.97903 7.03759";
@@ -794,10 +839,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3581";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2261";
       };
       new Item() {
          position = "16.0152 -15.9007 7.54012";
@@ -808,10 +854,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2122";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2262";
       };
       new Item() {
          position = "-6.0729 -14.0517 7.02507";
@@ -822,10 +869,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6261";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2263";
       };
       new Item() {
          position = "-7.99929 -16.0385 7.02091";
@@ -836,10 +884,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6258";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2264";
       };
       new Item() {
          position = "-5.98592 -17.9152 7.0295";
@@ -850,10 +899,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6256";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2265";
       };
       new Item() {
          position = "-7.98956 -19.9544 7.02805";
@@ -864,10 +914,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6260";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2266";
       };
       new Item() {
          position = "-4.07856 -15.9553 7.52214";
@@ -878,10 +929,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6259";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2267";
       };
       new Item() {
          position = "-6.07428 -19.9646 7.51021";
@@ -892,10 +944,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6257";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2268";
       };
       new Item() {
          position = "1.95035 -27.9639 7.03119";
@@ -906,10 +959,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2219";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2269";
       };
       new Item() {
          position = "5.92743 -28.0015 7.02379";
@@ -920,10 +974,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2216";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2270";
       };
       new Item() {
          position = "7.99692 -28.0933 7.01566";
@@ -934,10 +989,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2217";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2271";
       };
       new Item() {
          position = "4.06473 -24.0456 7.04822";
@@ -948,10 +1004,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2221";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2272";
       };
       new Item() {
          position = "3.92966 -26.0568 7.51218";
@@ -962,10 +1019,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2218";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2273";
       };
       new Item() {
          position = "6.05696 -23.9962 7.53779";
@@ -976,10 +1034,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2220";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2274";
       };
       new Item() {
          position = "9.99307 -24.0593 7.51865";
@@ -990,10 +1049,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2222";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2275";
       };
       new Item() {
          position = "17.9909 -20.0884 7.5333";
@@ -1004,10 +1064,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2223";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2276";
       };
       new Item() {
          position = "19.9567 -18.0225 7.02672";
@@ -1018,10 +1079,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2125";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2277";
       };
       new Item() {
          position = "18.032 -17.9746 7.0033";
@@ -1032,10 +1094,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2124";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2278";
       };
       new Item() {
          position = "20.0621 -13.9006 6.99317";
@@ -1046,10 +1109,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2126";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2279";
       };
       new Item() {
          position = "16.0673 -14.027 6.98819";
@@ -1060,10 +1124,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2123";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2280";
       };
       new Item() {
          position = "30.9949 0.0297132 7.52291";
@@ -1074,10 +1139,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5024";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2281";
       };
       new Item() {
          position = "30.0479 -4.01009 7.01725";
@@ -1088,10 +1154,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5025";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2282";
       };
       new Item() {
          position = "31.9717 -2.08644 7.06205";
@@ -1102,10 +1169,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5023";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2283";
       };
       new Item() {
          position = "33.8987 -3.96369 7.03957";
@@ -1116,10 +1184,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5022";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2284";
       };
       new Item() {
          position = "35.9227 -1.92792 7.04533";
@@ -1130,10 +1199,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5021";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2285";
       };
       new Item() {
          position = "36.0182 -0.0582699 7.52059";
@@ -1144,10 +1214,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5020";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2286";
       };
       new Item() {
          position = "19.9274 33.9946 7.02106";
@@ -1158,10 +1229,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6139";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2287";
       };
       new Item() {
          position = "40.0926 6.95443 7.52367";
@@ -1172,10 +1244,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5026";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2288";
       };
       new Item() {
          position = "43.9128 11.881 7.53281";
@@ -1186,10 +1259,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5470";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2289";
       };
       new Item() {
          position = "43.9287 5.76831 7.0139";
@@ -1200,10 +1274,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5027";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2290";
       };
       new Item() {
          position = "42.1182 7.96501 7.06371";
@@ -1214,10 +1289,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5466";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2291";
       };
       new Item() {
          position = "40.0039 10.0653 7.03624";
@@ -1228,10 +1304,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5469";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2292";
       };
       new Item() {
          position = "42.0646 13.9676 6.9737";
@@ -1242,10 +1319,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5471";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2293";
       };
       new Item() {
          position = "36.0148 24.0885 7.00176";
@@ -1256,10 +1334,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3818";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2294";
       };
       new Item() {
          position = "35.947 20.0196 7.03435";
@@ -1270,10 +1349,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3819";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2295";
       };
       new Item() {
          position = "34.0371 21.9703 7.02098";
@@ -1284,10 +1364,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3816";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2296";
       };
       new Item() {
          position = "31.9429 19.9883 7.0178";
@@ -1298,10 +1379,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3815";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2297";
       };
       new Item() {
          position = "35.9556 21.9977 7.51199";
@@ -1312,10 +1394,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3817";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2298";
       };
       new Item() {
          position = "29.8888 22.9838 7.52652";
@@ -1326,10 +1409,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3814";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2299";
       };
       new Item() {
          position = "19.9629 36.0141 7.53996";
@@ -1340,10 +1424,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6137";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2300";
       };
       new Item() {
          position = "17.9693 40.0258 7.02767";
@@ -1354,10 +1439,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6135";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2301";
       };
       new Item() {
          position = "17.9912 38.1078 7.03799";
@@ -1368,10 +1454,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6136";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2302";
       };
       new Item() {
          position = "15.9821 34.0668 7.02446";
@@ -1382,10 +1469,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6138";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2303";
       };
       new Item() {
          position = "2.0366 46.0344 7.5317";
@@ -1395,11 +1483,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "6180";
+            beam = "2519";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2520";
       };
       new Item() {
          position = "10.0133 45.9801 7.03";
@@ -1410,10 +1499,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6140";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2305";
       };
       new Item() {
          position = "6.06697 43.9972 7.02912";
@@ -1424,10 +1514,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6142";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2306";
       };
       new Item() {
          position = "3.93674 45.9212 7.03028";
@@ -1438,10 +1529,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5983";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2307";
       };
       new Item() {
          position = "8.13858 47.0108 7.54155";
@@ -1452,10 +1544,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6141";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2308";
       };
       new Item() {
          position = "-8.07017 39.9847 7.53348";
@@ -1465,11 +1558,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "6179";
+            beam = "2517";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2518";
       };
       new Item() {
          position = "-4.08731 39.9799 7.04971";
@@ -1479,11 +1573,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "6178";
+            beam = "2515";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2516";
       };
       new Item() {
          position = "-8.03113 38.0536 7.02451";
@@ -1493,11 +1588,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "6177";
+            beam = "2513";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2514";
       };
       new Item() {
          position = "-7.96392 34.0501 7.0299";
@@ -1507,11 +1603,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "6176";
+            beam = "2511";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2512";
       };
       new Item() {
          position = "-4.00148 33.9755 7.02961";
@@ -1521,11 +1618,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "6173";
+            beam = "2505";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2506";
       };
       new Item() {
          position = "-3.98335 35.9775 7.04817";
@@ -1535,11 +1633,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "6174";
+            beam = "2507";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2508";
       };
       new Item() {
          position = "-6.00654 35.865 7.53228";
@@ -1549,11 +1648,12 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "6175";
+            beam = "2509";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2510";
       };
       new Item() {
          position = "-19.975 19.9493 7.52042";
@@ -1564,10 +1664,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6385";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2316";
       };
       new Item() {
          position = "-17.9479 22.0848 6.97";
@@ -1578,10 +1679,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6384";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2317";
       };
       new Item() {
          position = "-21.9034 23.8742 7.06097";
@@ -1592,10 +1694,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6381";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2318";
       };
       new Item() {
          position = "-23.9262 22.0332 7.04679";
@@ -1606,10 +1709,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2963";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2319";
       };
       new Item() {
          position = "-22.0545 21.9587 7.52997";
@@ -1620,10 +1724,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2964";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2320";
       };
       new Item() {
          position = "-19.9287 -0.975611 7.52214";
@@ -1634,10 +1739,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6215";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2321";
       };
       new Item() {
          position = "-29.9513 14.0659 7.49057";
@@ -1648,10 +1754,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2959";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2322";
       };
       new Item() {
          position = "-31.98 6.0807 7.50827";
@@ -1662,10 +1769,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2961";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2323";
       };
       new Item() {
          position = "-28.1108 9.99328 7.54452";
@@ -1676,10 +1784,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2960";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2324";
       };
       new Item() {
          position = "-31.991 12.0658 7.01394";
@@ -1690,10 +1799,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2957";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2325";
       };
       new Item() {
          position = "-32.1091 10.0627 7.00038";
@@ -1704,10 +1814,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2958";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2326";
       };
       new Item() {
          position = "-30.0043 6.06382 7.01479";
@@ -1718,10 +1829,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2962";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2327";
       };
       new Item() {
          position = "-24.0062 -2.13071 7.04518";
@@ -1732,10 +1844,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6339";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2328";
       };
       new Item() {
          position = "-21.9452 -2.11597 6.96343";
@@ -1746,10 +1859,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6340";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2329";
       };
       new Item() {
          position = "-17.9674 -4.08194 7.03052";
@@ -1760,10 +1874,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6216";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2330";
       };
       new Item() {
          position = "-21.9962 42.0013 3.54051";
@@ -1774,10 +1889,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2919";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2331";
       };
       new Item() {
          position = "-29.9988 38.9766 3.52746";
@@ -1788,10 +1904,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2923";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2332";
       };
       new Item() {
          position = "-28.0185 37.9774 3.0467";
@@ -1802,10 +1919,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2920";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2333";
       };
       new Item() {
          position = "-23.9978 37.9513 3.07505";
@@ -1816,10 +1934,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2921";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2334";
       };
       new Item() {
          position = "-21.9899 39.8462 3.0154";
@@ -1830,10 +1949,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2922";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2335";
       };
       new Item() {
          position = "-20.0121 41.95 3.07381";
@@ -1844,10 +1964,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3775";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2336";
       };
       new Item() {
          position = "-23.9568 42.0695 3.04834";
@@ -1858,10 +1979,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2917";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2337";
       };
       new Item() {
          position = "-26.0461 42.0122 3.02071";
@@ -1872,10 +1994,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2916";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2338";
       };
       new Item() {
          position = "-23.852 40.0451 3.53108";
@@ -1886,10 +2009,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2918";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2339";
       };
       new Item() {
          position = "32.0317 41.9729 3.00535";
@@ -1900,10 +2024,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "12951";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2340";
       };
       new Item() {
          position = "37.9556 39.9653 3.49009";
@@ -1913,10 +2038,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2341";
       };
       new Item() {
          position = "32.034 39.9782 3.48079";
@@ -1927,10 +2053,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "12949";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2342";
       };
       new Item() {
          position = "35.9547 38.0369 3.00561";
@@ -1940,10 +2067,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2343";
       };
       new Item() {
          position = "37.9416 38.0324 3.02506";
@@ -1953,10 +2081,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2344";
       };
       new Item() {
          position = "42.1044 41.9849 3.03946";
@@ -1966,10 +2095,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2345";
       };
       new Item() {
          position = "37.9929 42.0343 3.03119";
@@ -1979,10 +2109,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2346";
       };
       new Item() {
          position = "39.9533 -17.9669 3.01414";
@@ -1992,10 +2123,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2347";
       };
       new Item() {
          position = "42.0283 -20.0139 3.50547";
@@ -2005,10 +2137,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2348";
       };
       new Item() {
          position = "35.0323 -20.0029 3.52671";
@@ -2018,10 +2151,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2349";
       };
       new Item() {
          position = "31.9819 -19.9564 3.00287";
@@ -2031,10 +2165,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2350";
       };
       new Item() {
          position = "35.886 -22.0025 3.0482";
@@ -2044,10 +2179,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2351";
       };
       new Item() {
          position = "39.9035 -22.0044 3.02292";
@@ -2057,10 +2193,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2352";
       };
       new Item() {
          position = "-40.0183 -57.9581 1.02847";
@@ -2071,10 +2208,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5943";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2353";
       };
       new Item() {
          position = "-30.0479 -19.9748 3.01946";
@@ -2085,10 +2223,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5838";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2354";
       };
       new Item() {
          position = "-24.0763 -20.0295 3.03581";
@@ -2099,10 +2238,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5840";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2355";
       };
       new Item() {
          position = "-20.0422 -20.0295 3.06681";
@@ -2113,10 +2253,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5841";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2356";
       };
       new Item() {
          position = "-26.9988 -17.9884 3.47885";
@@ -2127,10 +2268,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5839";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2357";
       };
       new Item() {
          position = "3.01216 -55.9432 7.52409";
@@ -2141,10 +2283,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2299";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2358";
       };
       new Item() {
          position = "8.02633 -57.9972 7.55106";
@@ -2155,10 +2298,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2298";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2359";
       };
       new Item() {
          position = "10.0229 -55.9961 7.02303";
@@ -2169,10 +2313,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2296";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2360";
       };
       new Item() {
          position = "8.11326 -56.0701 7.045";
@@ -2183,10 +2328,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2297";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2361";
       };
       new Item() {
          position = "1.9908 -54.013 7.02044";
@@ -2197,10 +2343,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2303";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2362";
       };
       new Item() {
          position = "-25.9353 -55.9679 1.04431";
@@ -2211,10 +2358,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5949";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2363";
       };
       new Item() {
          position = "-27.9674 -57.9578 1.03856";
@@ -2225,10 +2373,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5948";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2364";
       };
       new Item() {
          position = "-30.0022 -56.0112 0.993088";
@@ -2239,10 +2388,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5947";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2365";
       };
       new Item() {
          position = "-31.976 -57.9134 1.0275";
@@ -2253,10 +2403,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5946";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2366";
       };
       new Item() {
          position = "-33.9489 -55.955 1.06144";
@@ -2267,10 +2418,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5945";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2367";
       };
       new Item() {
          position = "-35.9356 -58.0126 1.02125";
@@ -2281,10 +2433,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5944";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2368";
       };
       new Item() {
          position = "-37.966 -55.9662 1.01848";
@@ -2295,10 +2448,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5942";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2369";
       };
       new Item() {
          position = "-61.9179 -22.0137 1.04212";
@@ -2309,10 +2463,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6298";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2370";
       };
       new Item() {
          position = "-64.0941 -62.0128 1.01858";
@@ -2323,10 +2478,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3043";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2371";
       };
       new Item() {
          position = "-65.9158 -64.0172 0.960687";
@@ -2337,10 +2493,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3044";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2372";
       };
       new Item() {
          position = "-67.9787 -62.0107 1.0139";
@@ -2351,10 +2508,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3045";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2373";
       };
       new Item() {
          position = "-65.9641 -60.0027 1.00707";
@@ -2365,10 +2523,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3046";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2374";
       };
       new Item() {
          position = "-65.9807 -62.099 0.523087";
@@ -2379,10 +2538,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3042";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2375";
       };
       new Item() {
          position = "-73.8959 -69.8853 2.21704";
@@ -2393,10 +2553,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3049";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2376";
       };
       new Item() {
          position = "-59.9528 -36.026 0.9928";
@@ -2407,10 +2568,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6301";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2377";
       };
       new Item() {
          position = "-62.0108 -33.9682 1.01094";
@@ -2421,10 +2583,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6300";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2378";
       };
       new Item() {
          position = "-59.9865 -31.9868 1.00894";
@@ -2435,10 +2598,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6299";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2379";
       };
       new Item() {
          position = "-62.0189 -29.9517 1.04708";
@@ -2449,10 +2613,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6297";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2380";
       };
       new Item() {
          position = "-59.9383 -28.0454 1.03943";
@@ -2463,10 +2628,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6295";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2381";
       };
       new Item() {
          position = "-61.9286 -26.0796 1.0277";
@@ -2477,10 +2643,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6294";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2382";
       };
       new Item() {
          position = "-59.8788 -24.0327 1.02588";
@@ -2491,10 +2658,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "6296";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2383";
       };
       new Item() {
          position = "-60.9541 11.9892 7.54417";
@@ -2505,10 +2673,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2713";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2384";
       };
       new Item() {
          position = "-58.0507 7.89146 6.99452";
@@ -2519,10 +2688,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2709";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2385";
       };
       new Item() {
          position = "-61.9398 6.01466 7.04547";
@@ -2533,10 +2703,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2712";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2386";
       };
       new Item() {
          position = "-58.0421 11.8604 7.05255";
@@ -2547,10 +2718,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2711";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2387";
       };
       new Item() {
          position = "-60.0188 13.9509 7.029";
@@ -2561,10 +2733,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2716";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2388";
       };
       new Item() {
          position = "-59.9658 7.93843 7.5299";
@@ -2575,10 +2748,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2710";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2389";
       };
       new Item() {
          position = "-26.0171 77.8911 1.01843";
@@ -2589,10 +2763,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2820";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2390";
       };
       new Item() {
          position = "-59.9753 41.9642 1.01321";
@@ -2603,10 +2778,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3006";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2391";
       };
       new Item() {
          position = "-62.0095 43.9682 1.03528";
@@ -2617,10 +2793,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3004";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2392";
       };
       new Item() {
          position = "-59.9996 45.9244 1.02469";
@@ -2631,10 +2808,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3003";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2393";
       };
       new Item() {
          position = "-61.9725 47.9881 1.01907";
@@ -2645,10 +2823,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3005";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2394";
       };
       new Item() {
          position = "-60.0243 50.0275 1.00377";
@@ -2659,10 +2838,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3007";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2395";
       };
       new Item() {
          position = "-61.9575 51.9801 1.01209";
@@ -2673,10 +2853,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3008";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2396";
       };
       new Item() {
          position = "-59.9197 53.9876 1.02426";
@@ -2687,10 +2868,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3009";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2397";
       };
       new Item() {
          position = "-61.9569 55.9899 1.03582";
@@ -2701,10 +2883,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3010";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2398";
       };
       new Item() {
          position = "-66.0583 79.9797 1.00409";
@@ -2715,10 +2898,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5752";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2399";
       };
       new Item() {
          position = "-68.0534 81.8752 1.02468";
@@ -2729,10 +2913,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5750";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2400";
       };
       new Item() {
          position = "-66.0488 83.9306 0.999234";
@@ -2743,10 +2928,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5753";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2401";
       };
       new Item() {
          position = "-64.0355 82.014 0.995273";
@@ -2757,10 +2943,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5754";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2402";
       };
       new Item() {
          position = "-65.8818 81.9781 0.495362";
@@ -2771,10 +2958,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5751";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2403";
       };
       new Item() {
          position = "-73.926 89.8802 2.24284";
@@ -2785,10 +2973,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5757";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2404";
       };
       new Item() {
          position = "-40.0647 75.9273 1.04069";
@@ -2799,80 +2988,81 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2824";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2405";
       };
       new Item() {
-         position = "-38.0379 77.8659 1.07189";
+         position = "40.0189 -55.8918 0.995731";
          rotation = "1 0 0 0";
          scale = "1 1 1";
          dataBlock = "GemItemMulti";
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "2823";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2468";
       };
       new Item() {
-         position = "-36.0412 76.0642 1.01481";
+         position = "48.0067 -56.0247 1.04635";
          rotation = "1 0 0 0";
          scale = "1 1 1";
          dataBlock = "GemItemMulti";
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "2822";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2464";
       };
       new Item() {
-         position = "-34.0162 78.0264 1.04291";
+         position = "43.9793 -55.9924 1.02994";
          rotation = "1 0 0 0";
          scale = "1 1 1";
          dataBlock = "GemItemMulti2Pts";
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "2821";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2466";
       };
       new Item() {
-         position = "-32.0121 75.8875 1.06041";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         dataBlock = "GemItemMulti2Pts";
-         collideable = "0";
-         static = "1";
-         rotate = "1";
-            beam = "2819";
-            outdoorWeight = "100";
-            radius = "100";
-            sphereWeight = "100";
-            indoorWeight = "100";
-      };
-      new Item() {
-         position = "-29.9925 77.9994 1.04881";
+         position = "42.0104 -57.9592 1.01986";
          rotation = "1 0 0 0";
          scale = "1 1 1";
          dataBlock = "GemItemMulti";
          collideable = "0";
          static = "1";
          rotate = "1";
-            beam = "2817";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
+            node = "2467";
+      };
+      new Item() {
+         position = "46.0177 -57.9749 1.01358";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "GemItemMulti2Pts";
+         collideable = "0";
+         static = "1";
+         rotate = "1";
             indoorWeight = "100";
+            outdoorWeight = "100";
+            radius = "100";
+            sphereWeight = "100";
+            node = "2465";
       };
       new Item() {
          position = "-28.0229 75.9674 1.04609";
@@ -2883,10 +3073,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2818";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2411";
       };
       new Item() {
          position = "9.94977 75.9863 7.0271";
@@ -2897,10 +3088,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5332";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2412";
       };
       new Item() {
          position = "2.06716 75.9886 7.51737";
@@ -2911,10 +3103,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5325";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2413";
       };
       new Item() {
          position = "7.8931 76.9918 7.55741";
@@ -2925,10 +3118,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5329";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2414";
       };
       new Item() {
          position = "3.98331 73.9111 7.04895";
@@ -2939,10 +3133,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5327";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2415";
       };
       new Item() {
          position = "3.92228 75.9256 7.02473";
@@ -2953,10 +3148,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5326";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2416";
       };
       new Item() {
          position = "5.96978 76.0113 7.01226";
@@ -2967,10 +3163,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5328";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2417";
       };
       new Item() {
          position = "38.0203 -57.9744 1.02455";
@@ -2980,10 +3177,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2418";
       };
       new Item() {
          position = "37.936 75.9921 1.00863";
@@ -2994,10 +3192,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5210";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2419";
       };
       new Item() {
          position = "39.9264 77.9983 1.03404";
@@ -3008,10 +3207,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5209";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2420";
       };
       new Item() {
          position = "41.9616 76.0001 1.01721";
@@ -3022,10 +3222,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5208";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2421";
       };
       new Item() {
          position = "43.9859 77.9647 1.03186";
@@ -3036,10 +3237,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5206";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2422";
       };
       new Item() {
          position = "46.0042 75.9352 1.02433";
@@ -3050,10 +3252,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5204";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2423";
       };
       new Item() {
          position = "47.9602 77.9614 1.04302";
@@ -3064,10 +3267,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5203";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2424";
       };
       new Item() {
          position = "49.9976 75.8951 1.02532";
@@ -3078,10 +3282,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5205";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2425";
       };
       new Item() {
          position = "51.9603 78.0183 1.02026";
@@ -3092,10 +3297,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5207";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2426";
       };
       new Item() {
          position = "75.9688 81.9951 0.986985";
@@ -3106,10 +3312,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5631";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2427";
       };
       new Item() {
          position = "79.9688 81.9951 0.986985";
@@ -3120,10 +3327,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5629";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2428";
       };
       new Item() {
          position = "77.9845 79.9693 0.986985";
@@ -3134,10 +3342,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5632";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2429";
       };
       new Item() {
          position = "78.0495 84.0032 0.986985";
@@ -3148,10 +3357,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5630";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2430";
       };
       new Item() {
          position = "78.0321 82.0583 0.515552";
@@ -3162,10 +3372,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5628";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2431";
       };
       new Item() {
          position = "85.8814 89.9462 2.25234";
@@ -3176,10 +3387,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "5635";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2432";
       };
       new Item() {
          position = "71.9698 56.0854 1.05555";
@@ -3190,10 +3402,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2469";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2433";
       };
       new Item() {
          position = "73.9822 54.0535 1.02776";
@@ -3204,10 +3417,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2468";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2434";
       };
       new Item() {
          position = "72.0101 52.0092 1.03247";
@@ -3218,10 +3432,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2467";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2435";
       };
       new Item() {
          position = "73.9666 50.0128 1.03691";
@@ -3232,10 +3447,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2466";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2436";
       };
       new Item() {
          position = "72.0071 48.0008 1.02127";
@@ -3246,10 +3462,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2465";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2437";
       };
       new Item() {
          position = "73.9196 46.0255 1.01909";
@@ -3260,10 +3477,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2464";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2438";
       };
       new Item() {
          position = "71.9443 44.0294 1.02773";
@@ -3274,10 +3492,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2463";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2439";
       };
       new Item() {
          position = "73.9155 42.0006 1.03173";
@@ -3288,10 +3507,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2462";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2440";
       };
       new Item() {
          position = "71.9715 13.9446 7.02621";
@@ -3302,10 +3522,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4972";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2441";
       };
       new Item() {
          position = "72.0283 10.0868 6.99989";
@@ -3316,10 +3537,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4974";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2442";
       };
       new Item() {
          position = "73.8879 9.96667 7.03378";
@@ -3330,10 +3552,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4975";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2443";
       };
       new Item() {
          position = "74.0758 6.04868 7.03477";
@@ -3344,10 +3567,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4978";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2444";
       };
       new Item() {
          position = "74.0095 14.1333 7.53358";
@@ -3358,10 +3582,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4973";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2445";
       };
       new Item() {
          position = "69.9523 13.9018 7.55985";
@@ -3372,10 +3597,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4971";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2446";
       };
       new Item() {
          position = "70.0256 8.00587 7.51414";
@@ -3386,10 +3612,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "4976";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2447";
       };
       new Item() {
          position = "71.9814 -21.9324 1.03417";
@@ -3400,10 +3627,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3917";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2448";
       };
       new Item() {
          position = "73.9846 -23.9876 1.03208";
@@ -3414,10 +3642,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3916";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2449";
       };
       new Item() {
          position = "72.0236 -25.9169 1.00789";
@@ -3428,10 +3657,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3915";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2450";
       };
       new Item() {
          position = "73.9839 -28.0005 0.996907";
@@ -3442,10 +3672,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3913";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2451";
       };
       new Item() {
          position = "71.9949 -30.005 1.01991";
@@ -3456,10 +3687,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3911";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2452";
       };
       new Item() {
          position = "73.9823 -31.9693 1.01923";
@@ -3470,10 +3702,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3910";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2453";
       };
       new Item() {
          position = "71.9889 -33.9853 1.01627";
@@ -3484,10 +3717,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3912";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2454";
       };
       new Item() {
          position = "73.9849 -36.0542 1.03616";
@@ -3498,10 +3732,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "3914";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2455";
       };
       new Item() {
          position = "77.9547 -60.0071 1.01979";
@@ -3512,10 +3747,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2261";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2456";
       };
       new Item() {
          position = "79.9551 -61.9582 1.00945";
@@ -3526,10 +3762,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2262";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2457";
       };
       new Item() {
          position = "78.0568 -63.9587 1.02784";
@@ -3540,10 +3777,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2260";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2458";
       };
       new Item() {
          position = "76.0353 -62.0376 1.01677";
@@ -3554,10 +3792,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2259";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2459";
       };
       new Item() {
          position = "77.9573 -61.9924 0.48204";
@@ -3568,10 +3807,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2258";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2460";
       };
       new Item() {
          position = "85.8553 -69.8737 2.15607";
@@ -3582,10 +3822,11 @@ new SimGroup(MissionGroup) {
          static = "1";
          rotate = "1";
             beam = "2265";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2461";
       };
       new Item() {
          position = "52.006 -56.0137 1.04202";
@@ -3595,10 +3836,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2462";
       };
       new Item() {
          position = "50.0541 -57.9631 1.01425";
@@ -3608,75 +3850,11 @@ new SimGroup(MissionGroup) {
          collideable = "0";
          static = "1";
          rotate = "1";
+            indoorWeight = "100";
             outdoorWeight = "100";
             radius = "100";
             sphereWeight = "100";
-            indoorWeight = "100";
-      };
-      new Item() {
-         position = "48.0067 -56.0247 1.04635";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         dataBlock = "GemItemMulti";
-         collideable = "0";
-         static = "1";
-         rotate = "1";
-            outdoorWeight = "100";
-            radius = "100";
-            sphereWeight = "100";
-            indoorWeight = "100";
-      };
-      new Item() {
-         position = "46.0177 -57.9749 1.01358";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         dataBlock = "GemItemMulti2Pts";
-         collideable = "0";
-         static = "1";
-         rotate = "1";
-            outdoorWeight = "100";
-            radius = "100";
-            sphereWeight = "100";
-            indoorWeight = "100";
-      };
-      new Item() {
-         position = "43.9793 -55.9924 1.02994";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         dataBlock = "GemItemMulti2Pts";
-         collideable = "0";
-         static = "1";
-         rotate = "1";
-            outdoorWeight = "100";
-            radius = "100";
-            sphereWeight = "100";
-            indoorWeight = "100";
-      };
-      new Item() {
-         position = "42.0104 -57.9592 1.01986";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         dataBlock = "GemItemMulti";
-         collideable = "0";
-         static = "1";
-         rotate = "1";
-            outdoorWeight = "100";
-            radius = "100";
-            sphereWeight = "100";
-            indoorWeight = "100";
-      };
-      new Item() {
-         position = "40.0189 -55.8918 0.995731";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         dataBlock = "GemItemMulti";
-         collideable = "0";
-         static = "1";
-         rotate = "1";
-            outdoorWeight = "100";
-            radius = "100";
-            sphereWeight = "100";
-            indoorWeight = "100";
+            node = "2463";
       };
    };
    new Item() {
@@ -3932,17 +4110,24 @@ new SimGroup(MissionGroup) {
       rotate = "1";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "0";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new Trigger() {
+      position = "-81.9535 96.698 -14.6386";
+      rotation = "1 0 0 0";
+      scale = "175 175 40";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
 };
 //--- OBJECT WRITE END ---
