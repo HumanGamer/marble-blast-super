@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          time = "0";
          startHelpText = "Can you find the hidden time travel?";
          desc = "Find all the gems in this nature-based level.";
-         type = "Beginner";
+         type = "Intermediate";
          level = "3";
    };
    new MissionArea(MissionArea) {

@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          artist = "James Colsey";
          level = "1";
          startHelpText = "Use the powerups chosen for you in conjunction with the mine.";
-         type = "Advanced";
+         type = "Expert";
          goldTime = "90000";
    };
    new MissionArea(MissionArea) {

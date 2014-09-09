@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          goldTime = "60000";
 	 artist = "Ender";
          desc = "Are you ready to conquer the medium levels? Lets find out.";
-         type = "Intermediate";
+         type = "Advanced";
          level = "5";
          name = "Lavender Climb of Faith";
    };

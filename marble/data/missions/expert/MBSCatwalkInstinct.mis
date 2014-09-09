@@ -9,7 +9,7 @@ new SimGroup(MissionGroup) {
          artist = "James Colsey";
          time = "0";
          desc = "Master your catwalking skills. Don\'t look down!";
-         type = "Advanced";
+         type = "Expert";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

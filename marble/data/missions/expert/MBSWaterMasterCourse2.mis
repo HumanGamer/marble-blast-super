@@ -9,7 +9,7 @@ new SimGroup(MissionGroup) {
          artist = "James Colsey";
          level = "6";
          startHelpText = "Welcome to the Water Master Course!";
-         type = "Advanced";
+         type = "Expert";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
