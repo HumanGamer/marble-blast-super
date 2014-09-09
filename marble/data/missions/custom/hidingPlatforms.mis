@@ -2,12 +2,12 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         artist = "Matthieu Parizeau";
-         type = "custom";
-         desc = "The endless testing...";
-         level = "0";
          name = "Many Test";
+         desc = "The endless testing...";
+         level = "1";
+         type = "beginner";
          goldTime = "15000";
+         artist = "Matthieu Parizeau";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -59,14 +59,14 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "1883";
+         beam = "1885";
    };
    new StaticShape(EndPoint) {
       position = "0 0 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "1841";
+         beam = "1853";
    };
    new Item() {
       position = "36 36 -4";
@@ -76,7 +76,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "1871";
+         node = "1883";
    };
    new Item() {
       position = "-36 36 -4";
@@ -86,7 +86,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "1872";
+         node = "1884";
    };
    new Item() {
       position = "0 48 0.5";
@@ -110,8 +110,8 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "ExplodingPlatform";
-         hide = "977";
          normalScale = "1 1 1";
+         hide = "977";
    };
    new Trigger() {
       position = "15.7809 50.4 -0.29494";
@@ -130,12 +130,12 @@ new SimGroup(MissionGroup) {
    new StaticShape() {
       position = "-22.6611 24.4489 -0.037993";
       rotation = "1 0 0 0";
-      scale = "1 1 1";
+      scale = "0 0 0";
       dataBlock = "HidingPlatform";
-         hide = "6725";
-         timer = "3000";
-         currentTime = "1500";
          normalScale = "1 1 1";
+         timer = "3000";
+         hide = "5029";
+         currentTime = "1590";
          used = "0";
    };
    new StaticShape() {
@@ -144,21 +144,21 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "Bomb";
          timer = "3000";
-         currentTime = "1680";
+         currentTime = "1770";
    };
    new StaticShape(plat1) {
       position = "21.5443 17.3512 0.0121133";
       rotation = "1 0 0 0";
       scale = "0 0 0";
       dataBlock = "HidingPlatform";
-         hide = "32";
-         unhide = "5176";
-         Trigger = "1";
-         hideStart = "1";
-         permanent = "1";
          normalScale = "1 1 1";
-         used = "0";
          unhide1 = "5177";
+         hide = "34";
+         unhide = "5176";
+         permanent = "1";
+         hideStart = "1";
+         Trigger = "1";
+         used = "0";
    };
    new Trigger() {
       position = "13.1498 36.0251 -0.3";
@@ -172,6 +172,15 @@ new SimGroup(MissionGroup) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new Item() {
+      position = "5.63847 13.2009 5.18353";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---

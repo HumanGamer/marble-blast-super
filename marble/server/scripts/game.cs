@@ -73,6 +73,7 @@ function onServerCreated()
    exec("./beams.cs");
    exec("./checkpoint.cs");
    exec("./teleporter.cs");
+   exec("./easter.cs");
 
    // Platforms and interior doors
    exec("./pathedInteriors.cs");
