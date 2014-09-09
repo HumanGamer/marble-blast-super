@@ -218,6 +218,13 @@ datablock ParticleEmitterData(MarbleSuperSpeedEmitter)
 // 3 - Super Bounce
 // 4 - Indestructible
 
+datablock AudioProfile(BlastSfx)
+{
+   filename    = "~/data/sound/blast.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
 datablock AudioProfile(Bounce1Sfx)
 {
    filename    = "~/data/sound/bouncehard1.wav";
@@ -546,6 +553,7 @@ function Marble::useBlast(%this)
    {
       %this.client.applyImpulse("0 0 0", "0 0" SPC %this.blastEnergy / 1000);
       %this.setBlastEnergy(0);
+      %this.client.play2d(BlastSfx);
    }
 }
 
