@@ -10,6 +10,9 @@ datablock StaticShapeData(HidingPlatform)
 function HidingPlatform::onAdd(%this, %obj)
 {
    %obj.setSkinName(%obj.skin);
+   %obj.used = false;
+   if (%obj.hideStart)
+      hidePlatform(%obj);
 }
 
 function HidingPlatform::onMissionReset(%data, %obj)
@@ -22,6 +25,10 @@ function HidingPlatform::onMissionReset(%data, %obj)
    if (isObject(%obj))
       %obj.setScale(%obj.normalScale);
    %obj.startFade(0, 0, false);
+   
+   %obj.used = false;
+   if (%obj.hideStart)
+      hidePlatform(%obj);
 }
 
 function hidePlatform(%obj)
@@ -33,7 +40,8 @@ function hidePlatform(%obj)
    cancel(%obj.hide);
    cancel(%obj.unhide);
    cancel(%obj.unhide1);
-   %obj.normalScale = %obj.scale;
+   if (%obj.normalScale $= "")
+      %obj.normalScale = %obj.scale;
    %obj.startFade(250, 0, true);
    
    %obj.hide = %obj.schedule(250, "setScale", 0);
@@ -81,6 +89,36 @@ function checkHidingPlatforms()
          }
       }
    }
+}
+
+//-----------------------------------------------------------------------------
+
+datablock TriggerData(HidingPlatformTrigger)
+{
+   tickPeriodMS = 100;
+};
+
+function HidingPlatformTrigger::onEnterTrigger(%this,%trigger,%obj)
+{
+   %target = %trigger.target;
+   
+   if (%target $= "")
+   {
+      error("Hiding Platform Trigger(" @ %trigger @ ") missing target!");
+      return;
+   }
+   
+   if (%target.used || !%target.trigger)
+      return;
+   
+   if (%target.scale $= "0 0 0")
+   {
+      showPlatform(%target);
+   } else {
+      hidePlatform(%target);
+   }
+   
+   %target.used = true;
 }
 
 //-----------------------------------------------------------------------------

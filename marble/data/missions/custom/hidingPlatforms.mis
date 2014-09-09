@@ -2,12 +2,12 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         artist = "Matthieu Parizeau";
+         type = "custom";
+         desc = "The endless testing...";
+         level = "0";
          name = "Many Test";
          goldTime = "15000";
-         artist = "Matthieu Parizeau";
-         desc = "The endless testing...";
-         type = "custom";
-         level = "0";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -59,14 +59,14 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "2329";
+         beam = "1883";
    };
    new StaticShape(EndPoint) {
       position = "0 0 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "2301";
+         beam = "1841";
    };
    new Item() {
       position = "36 36 -4";
@@ -76,7 +76,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2327";
+         node = "1871";
    };
    new Item() {
       position = "-36 36 -4";
@@ -86,7 +86,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2328";
+         node = "1872";
    };
    new Item() {
       position = "0 48 0.5";
@@ -108,10 +108,10 @@ new SimGroup(MissionGroup) {
    new StaticShape() {
       position = "19.489 26.11 0.15";
       rotation = "1 0 0 0";
-      scale = "0 0 0";
+      scale = "1 1 1";
       dataBlock = "ExplodingPlatform";
+         hide = "977";
          normalScale = "1 1 1";
-         hide = "17471";
    };
    new Trigger() {
       position = "15.7809 50.4 -0.29494";
@@ -130,25 +130,48 @@ new SimGroup(MissionGroup) {
    new StaticShape() {
       position = "-22.6611 24.4489 -0.037993";
       rotation = "1 0 0 0";
-      scale = "0 0 0";
+      scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 1";
-         currentTime = "2760";
-         hide = "26540";
+         hide = "6725";
          timer = "3000";
-   };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
+         currentTime = "1500";
+         normalScale = "1 1 1";
+         used = "0";
    };
    new StaticShape() {
       position = "-11.8164 47.0036 0.158919";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Bomb";
-         currentTime = "2940";
          timer = "3000";
+         currentTime = "1680";
+   };
+   new StaticShape(plat1) {
+      position = "21.5443 17.3512 0.0121133";
+      rotation = "1 0 0 0";
+      scale = "0 0 0";
+      dataBlock = "HidingPlatform";
+         hide = "32";
+         unhide = "5176";
+         Trigger = "1";
+         hideStart = "1";
+         permanent = "1";
+         normalScale = "1 1 1";
+         used = "0";
+         unhide1 = "5177";
+   };
+   new Trigger() {
+      position = "13.1498 36.0251 -0.3";
+      rotation = "1 0 0 0";
+      scale = "6 6 6";
+      dataBlock = "HidingPlatformTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "plat1";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---
