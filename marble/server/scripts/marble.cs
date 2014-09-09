@@ -7,6 +7,48 @@
 
 //-----------------------------------------------------------------------------
 
+datablock ParticleData(BlastParticle)
+{
+   textureName          = "~/data/particles/spark";
+   dragCoeffiecient     = 1.0;
+   gravityCoefficient   = 0;
+   windCoefficient      = 0;
+   inheritedVelFactor   = 0;
+   constantAcceleration = -2;
+   lifetimeMS           = 1000;
+   lifetimeVarianceMS   = 100;
+
+   colors[0]     = "0 0.5 1 0";
+   colors[1]     = "0 0.6 1 1.0";
+   colors[2]     = "0 0.6 1 0.0";
+
+
+   sizes[0]      = 1;
+   sizes[1]      = 1;
+   sizes[2]      = 1;
+
+   times[0]      = 0;
+   times[1]      = 0.75;
+   times[2]      = 1.0;
+};
+
+datablock ParticleEmitterData(BlastEmitter)
+{
+   ejectionPeriodMS = 5;
+   periodVarianceMS = 0;
+   ejectionVelocity = 3.0;
+   velocityVariance = 0.25;
+   thetaMin         = 0;
+   thetaMax         = 50.0;
+   lifetimeMS       = 0;
+   particles = "BlastParticle";
+};
+
+datablock ParticleEmitterNodeData(BlastNode)
+{
+   timeMultiple = 1;
+};
+
 datablock ParticleData(BounceParticle)
 {
    textureName          = "~/data/particles/star";
@@ -554,6 +596,21 @@ function Marble::useBlast(%this)
       %this.client.applyImpulse("0 0 0", "0 0" SPC %this.blastEnergy / 1000);
       %this.setBlastEnergy(0);
       %this.client.play2d(BlastSfx);
+      
+      %position = %this.position;
+      %rotation = %this.rotation;
+      
+      %node = new ParticleEmitterNode()
+      {
+         position = %position;
+         rotation = %rotation;
+         scale = "1 1 1";
+         datablock = "BlastNode";
+         emitter = "BlastEmitter";
+         velocity = "1";
+      };
+      
+      %node.schedule(1000, "delete");
    }
 }
 
