@@ -409,9 +409,14 @@ datablock StaticShapeData(Bomb)
 {
    className = "Explosive";
    category = "Hazards";
-   shapeFile = "~/data/shapes/hazards/landmine.dts";
+   shapeFile = "~/data/shapes/hazards/bomb.dts";
    renderWhenDestroyed = false;
 };
+
+function Bomb::onAdd(%this, %obj)
+{
+   %obj.playThread(0,"Ambient");
+} 
 
 function Bomb::onMissionReset(%this, %obj)
 {
