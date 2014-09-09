@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          name = "Many Test";
          desc = "The endless testing...";
          level = "1";
-         type = "beginner";
+         type = "custom";
          goldTime = "15000";
          artist = "Matthieu Parizeau";
    };
