@@ -2,7 +2,7 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         goldTime = "10000";
+         goldTime = "3000";
          level = "2";
          name = "Pillar Dance";
          artist = "James Colsey";
