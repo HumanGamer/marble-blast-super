@@ -1,8 +1,24 @@
 =========================================================
+BETA 2.9
+September 9, 2014
+
+- Added Time Bomb, Trigger Bomb, Exploding Platform, Timed Hidden Platform, and Permanent Hidden Platform
+- New ShockStopper and SuperRicochet shapes
+- 1 modified Medium level (Complexity Ascent)
+- 9 new music files by Skail
+- Added InBoundsTrigger to Permuda Square
+- Marble Blast Gold mine sound for Blast
+- Blast particles
+- Improved chat
+- Blocked editor for multiplayer
+- Changed hiding platform texture names and made them skinnable
+
+=========================================================
 BETA 2.8
 September 8, 2014
 
 - 1 new Beginner level (Is It Safe?)
+- Added hiding platforms
 - Added teleport triggers
 - New TimeChanger, SuperGlider, and GravityTransformer shapes
 - Gems retextured (still needs work)
