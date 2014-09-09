@@ -405,4 +405,80 @@ function LandMine::onCollision(%this, %obj, %col)
    }
 }
 
+datablock StaticShapeData(Bomb)
+{
+   className = "Explosive";
+   category = "Hazards";
+   shapeFile = "~/data/shapes/hazards/landmine.dts";
+   renderWhenDestroyed = false;
+};
 
+function Bomb::onMissionReset(%this, %obj)
+{
+   %obj.setDamageState("Enabled");
+   %obj.startFade(0, 0, false);
+}
+
+function Bomb::explode(%this, %obj)
+{
+   if (%obj.timer $= "")
+   {
+      %obj.setDamageState("Destroyed");  
+      %obj.startFade(0, 0, true);
+   }
+   
+   %explosion = new Explosion()
+   {
+      position = %obj.position;
+      rotation = %obj.rotation;
+      
+      datablock = "LandMineExplosion";
+   };
+   
+   MissionCleanup.add(%explosion);
+}
+
+function checkBombs()
+{
+   for (%i = 0; %i < MissionGroup.getCount(); %i++)
+   {
+      %obj = MissionGroup.getObject(%i);
+      
+      if (%obj.getClassName() $= "StaticShape" && %obj.getDatablock().getName() $= "Bomb")
+      {
+         if (%obj.timer $= "")
+            continue;
+            
+         if (%obj.currentTime $= "")
+            %obj.currentTime = 0;          
+            
+         %obj.currentTime += $Multiplayer::UpdateInterval;
+         
+         if (%obj.currentTime >= %obj.timer)
+         {
+            %obj.currentTime = 0;
+            
+            Bomb.explode(%obj);
+         }
+      }
+   }
+}
+
+datablock TriggerData(BombTrigger)
+{
+   tickPeriodMS = 100;
+};
+
+function BombTrigger::onEnterTrigger(%this, %trigger, %obj)
+{
+   %target = %trigger.target;
+   
+   if (%target $= "")
+   {
+      error("Bomb Trigger(" @ %trigger @ ") has no target!");
+      return;
+   }
+   
+   if (%target.getDamageState() $= "Enabled")
+      Bomb.explode(%target);
+}

@@ -468,7 +468,11 @@ function MarbleData::onCollision(%this,%obj,%col)
       onMarbleCollision(%obj, %col);
    } else if (%col.getClassName() $= "StaticShape" && %col.getDatablock().getName() $= "HidingPlatform")
    {
-      hidePlatform(%col);
+      if (%col.timer $= "")
+         hidePlatform(%col);
+   } else if (%col.getClassName() $= "StaticShape" && %col.getDatablock().getName() $= "ExplodingPlatform")
+   {
+      ExplodingPlatform.explode(%col);
    }
 }
 

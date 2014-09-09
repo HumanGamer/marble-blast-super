@@ -55,6 +55,9 @@ function updateGame()
    
    updateCollision();
    
+   checkHidingPlatforms();
+   checkBombs();
+   
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
 }
 
