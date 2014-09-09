@@ -102,23 +102,33 @@ function HidingPlatformTrigger::onEnterTrigger(%this,%trigger,%obj)
 {
    %target = %trigger.target;
    
-   if (%target $= "")
+   if (%target $= "" || %target.getName() $= "")
    {
-      error("Hiding Platform Trigger(" @ %trigger @ ") missing target!");
+      error("Hiding Platform Trigger(" @ %trigger @ ") missing target or target name!");
       return;
    }
    
-   if (%target.used || !%target.trigger)
-      return;
+   %name = %target.getName();
    
-   if (%target.scale $= "0 0 0")
+   for (%i = 0; %i < MissionGroup.getCount(); %i++)
    {
-      showPlatform(%target);
-   } else {
-      hidePlatform(%target);
+      %obj1 = MissionGroup.getObject(%i);
+      
+      if (%obj1.getName() $= %name)
+      {
+         if (%obj1.used || !%obj1.trigger)
+            return;
+         
+         if (%obj1.scale $= "0 0 0")
+         {
+            showPlatform(%obj1);
+         } else {
+            hidePlatform(%obj1);
+         }
+         
+         %obj1.used = true;
+      }
    }
-   
-   %target.used = true;
 }
 
 //-----------------------------------------------------------------------------
