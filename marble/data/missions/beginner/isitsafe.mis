@@ -34,7 +34,7 @@ new SimGroup(MissionGroup) {
       fogVolume1 = "-1 4.9929e+010 1.14085e+010";
       fogVolume2 = "-1 4.52902e-017 13322.5";
       fogVolume3 = "-1 3.3351e-039 6.45724e-039";
-      materialList = "~/data/skies/sky_day.dml";
+      materialList = "~/data/skies/sky3/sky_day.dml";
       windVelocity = "1 0 0";
       windEffectPrecipitation = "0";
       noRenderBans = "1";
