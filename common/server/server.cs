@@ -65,6 +65,8 @@ function createServer(%serverType, %mission)
 
 function destroyServer()
 {
+   echo("*** DESTROYING SERVER");
+   
    cancel($Multiplayer::UpdateSchedule);
    $Client::ConnectedMultiplayer = false;
    resetGhostVars();
@@ -85,6 +87,8 @@ function destroyServer()
       $ServerGroup.delete();
    if (isObject(MissionInfo))
       MissionInfo.delete();
+   if (isObject(CannonBalls))
+      CannonBalls.delete();
 
    // Delete all the connections:
    while (ClientGroup.getCount())

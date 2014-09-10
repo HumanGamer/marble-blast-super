@@ -210,58 +210,58 @@ function onServerMessage(%message)
 // MainChatHud methods
 //-----------------------------------------------------------------------------
 
-function MainChatHud::onWake( %this )
-{
-   // set the chat hud to the users pref
-   %this.setChatHudLength( $Pref::ChatHudLength );
-}
+//function MainChatHud::onWake( %this )
+//{
+//   // set the chat hud to the users pref
+//   %this.setChatHudLength( $Pref::ChatHudLength );
+//}
 
 
 //------------------------------------------------------------------------------
 
-function MainChatHud::setChatHudLength( %this, %length )
-{
-   %outerChatLenX = firstWord(outerChatHud.extent);
-   %chatScrollLenX = firstWord(chatScrollHud.extent);
-
-   outerChatHud.extent = %outerChatLenX SPC $outerChatLenY[%length];
-   chatScrollHud.extent = %chatScrollLenX SPC $outerChatLenY[%length];
-
-   //find out how many lines per page are visible
-   %chatScrollHeight = getWord(chatHud.getGroup().getGroup().extent, 1);
-   if (%chatScrollHeight <= 0)
-      return;
-
-   %textHeight = chatHud.profile.fontSize;
-   if (%textHeight <= 0)
-      %textHeight = 12;
-
-   %pageLines = mFloor(%chatScrollHeight / %textHeight);
-   if (%pageLines <= 0)
-      %pageLines = 1;
-
-   // Put the last line at the bottom.
-   %pos = HudMessageVector.getNumLines() - %pageLines;
-   if (%pos < 0)
-      %pos = 0;
-   ChatHud.position = "0" SPC (-1 * %pos * %textHeight);
-
-   ChatHud.resize(firstWord(ChatHud.position), getWord(ChatHud.position, 1), firstWord(ChatHud.extent), getWord(ChatHud.extent, 1));
-   ChatPageDown.position = (firstWord(outerChatHud.extent) - firstWord(ChatPageDown.extent))
-       SPC ($outerChatLenY[%length] - getWord(ChatPageDown.extent, 1));
-   ChatPageDown.setVisible(false);
-}
+//function MainChatHud::setChatHudLength( %this, %length )
+//{
+   //%outerChatLenX = firstWord(outerChatHud.extent);
+   //%chatScrollLenX = firstWord(chatScrollHud.extent);
+//
+   //outerChatHud.extent = %outerChatLenX SPC $outerChatLenY[%length];
+   //chatScrollHud.extent = %chatScrollLenX SPC $outerChatLenY[%length];
+//
+   ////find out how many lines per page are visible
+   //%chatScrollHeight = getWord(chatHud.getGroup().getGroup().extent, 1);
+   //if (%chatScrollHeight <= 0)
+      //return;
+//
+   //%textHeight = chatHud.profile.fontSize;
+   //if (%textHeight <= 0)
+      //%textHeight = 12;
+//
+   //%pageLines = mFloor(%chatScrollHeight / %textHeight);
+   //if (%pageLines <= 0)
+      //%pageLines = 1;
+//
+   //// Put the last line at the bottom.
+   //%pos = HudMessageVector.getNumLines() - %pageLines;
+   //if (%pos < 0)
+      //%pos = 0;
+   //ChatHud.position = "0" SPC (-1 * %pos * %textHeight);
+//
+   //ChatHud.resize(firstWord(ChatHud.position), getWord(ChatHud.position, 1), firstWord(ChatHud.extent), getWord(ChatHud.extent, 1));
+   //ChatPageDown.position = (firstWord(outerChatHud.extent) - firstWord(ChatPageDown.extent))
+       //SPC ($outerChatLenY[%length] - getWord(ChatPageDown.extent, 1));
+   //ChatPageDown.setVisible(false);
+//}
 
 
 //------------------------------------------------------------------------------
 
-function MainChatHud::nextChatHudLen( %this )
-{
-   %len = $pref::ChatHudLength++;
-   if ($pref::ChatHudLength == 4)
-      $pref::ChatHudLength = 1;
-   %this.setChatHudLength($pref::ChatHudLength);
-}
+//function MainChatHud::nextChatHudLen( %this )
+//{
+   //%len = $pref::ChatHudLength++;
+   //if ($pref::ChatHudLength == 4)
+      //$pref::ChatHudLength = 1;
+   //%this.setChatHudLength($pref::ChatHudLength);
+//}
 
 
 //-----------------------------------------------------------------------------
@@ -397,7 +397,7 @@ function pageDownMessageHud()
    ChatHud.pageDown();
 }
 
-function cycleMessageHudSize()
-{
-   MainChatHud.nextChatHudLen();
-}
+//function cycleMessageHudSize()
+//{
+   //MainChatHud.nextChatHudLen();
+//}

@@ -81,10 +81,19 @@ function loadMissionStage2()
       schedule( 3000, ServerGroup, CycleMissions );
       return;
    }
-
+   
    // Mission cleanup group
    new SimGroup( MissionCleanup );
    $instantGroup = MissionCleanup;
+   
+   cancel($RetryLoadSchedule);
+   $RetryLoadSchedule = schedule(1000, 0, continueMissionLoadStage2);
+}
+
+function continueMissionLoadStage2()
+{
+   cancel($RetryLoadSchedule);
+
    
    // Construct MOD paths
    pathOnMissionLoadDone();
@@ -152,8 +161,12 @@ function endMission()
    //commandToAll('ClearRadar');
    
    // Delete everything
-   MissionGroup.delete();
-   MissionCleanup.delete();
+   if (isObject(MissionGroup))
+      MissionGroup.delete();
+   if (isObject(MissionCleanup))
+      MissionCleanup.delete();
+   if (isObject(CannonBalls))
+      CannonBalls.delete();
 
    $ServerGroup.delete();
    $ServerGroup = new SimGroup(ServerGroup);
@@ -167,7 +180,10 @@ function resetMission()
    echo("*** MISSION RESET");
 
    // Remove any temporary mission objects
-   MissionCleanup.delete();
+   if (isObject(MissionCleanup))
+      MissionCleanup.delete();
+   if (isObject(CannonBalls))
+      CannonBalls.delete();
    $instantGroup = ServerGroup;
    new SimGroup( MissionCleanup );
    $instantGroup = MissionCleanup;

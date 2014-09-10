@@ -19,7 +19,7 @@ function PlayGui::onWake(%this)
    activateDirectInput();
 
    // Message hud dialog
-   Canvas.pushDialog( MainChatHud );
+   //Canvas.pushDialog( MainChatHud );
    //chatHud.attach(HudMessageVector);
 
    // Make sure the display is up to date
@@ -46,7 +46,7 @@ function PlayGui::onWake(%this)
 
 function PlayGui::onSleep(%this)
 {
-   Canvas.popDialog(MainChatHud);
+   //Canvas.popDialog(MainChatHud);
    // Terminate all playing sounds
    alxStopAll();
 
