@@ -127,4 +127,6 @@ addMaterialMapping( "triang-top" ,      BumperMaterial);
 addMaterialMapping( "pball-round-side" , BumperMaterial);
 addMaterialMapping( "pball-round-top" , BumperMaterial);
 addMaterialMapping( "pball-round-bottm" , BumperMaterial);
+addMaterialMapping( "bumper_case" , BumperMaterial);
+addMaterialMapping( "bumper_glass" , BumperMaterial);
 addMaterialMapping( "button" , ButtonMaterial);
