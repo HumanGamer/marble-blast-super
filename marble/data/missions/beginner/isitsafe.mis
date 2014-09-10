@@ -2,12 +2,12 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         type = "beginner";
          desc = "Not all platforms are as safe as they seem...";
          goldTime = "7000";
-         artist = "Matthieu Parizeau";
-         level = "5";
+         level = "6";
          name = "Is It Safe?";
+         artist = "Matthieu Parizeau";
+         type = "beginner";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -59,6 +59,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -66,6 +67,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -73,6 +75,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -80,6 +83,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -87,6 +91,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -94,6 +99,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -101,6 +107,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -108,6 +115,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -115,6 +123,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -122,26 +131,29 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         hide = "40044";
-         normalScale = "1 1 1";
          unhide1 = "40046";
          unhide = "40045";
+         used = "0";
+         hide = "40044";
+         normalScale = "1 1 1";
    };
    new StaticShape() {
       position = "-1 15 -0.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         hide = "40051";
-         normalScale = "1 1 1";
          unhide1 = "40053";
          unhide = "40052";
+         used = "0";
+         hide = "40051";
+         normalScale = "1 1 1";
    };
    new StaticShape() {
       position = "1 15 -0.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -149,6 +161,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -156,16 +169,18 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         hide = "3925";
-         normalScale = "1 1 1";
          unhide1 = "3927";
          unhide = "3926";
+         used = "0";
+         hide = "3925";
+         normalScale = "1 1 1";
    };
    new StaticShape() {
       position = "1 11 -0.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape() {
@@ -173,6 +188,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         used = "0";
          normalScale = "1 1 1";
    };
    new StaticShape(StartPoint) {
@@ -180,14 +196,14 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "2784";
+         beam = "5102";
    };
    new StaticShape(EndPoint) {
       position = "25 40.5 15";
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "2747";
+         beam = "5065";
    };
    new Trigger(Bounds) {
       position = "-11.5 52 -15";
@@ -202,8 +218,8 @@ new SimGroup(MissionGroup) {
       scale = "16 16 16";
       dataBlock = "PhysicsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         value = "22.5";
          var = "jumpImpulse";
+         value = "22.5";
    };
    new Trigger() {
       position = "-8 48.5 12";
@@ -220,17 +236,26 @@ new SimGroup(MissionGroup) {
       dataBlock = "CheckPointShape";
    };
    new ScriptObject() {
-         time = "0";
-         powerUp = "0";
          pad = "2037";
          penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
+         time = "0";
+         powerUp = "0";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new Item() {
+      position = "-2.22363 8.2769 -0.791842";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---

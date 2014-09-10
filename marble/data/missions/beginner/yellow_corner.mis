@@ -3,11 +3,11 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          desc = "Did somebody ask for a ramp?";
+         goldTime = "7000";
          name = "Yellow Corner";
          level = "2";
+         artist = "Matthieu Parizeau";
          type = "beginner";
-	 goldTime = "7000";
-	 artist = "Matthieu Parizeau";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -59,13 +59,14 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "3015";
    };
    new StaticShape(EndPoint) {
       position = "0 -32 -8";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "1659";
+         beam = "2620";
    };
    new Item() {
       position = "-12 6 2";
@@ -75,6 +76,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3014";
    };
    new Item() {
       position = "-24 0 0";
@@ -84,6 +86,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-12 8.5 4.5";
@@ -94,6 +97,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          timeBonus = "5000";
+         checkpointNum = "1";
    };
    new Trigger(Bounds) {
       position = "-31.5 11.5 -11.5";
@@ -101,6 +105,29 @@ new SimGroup(MissionGroup) {
       scale = "39 51 36.5";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+   new Item() {
+      position = "-11.9919 8.29604 3.22049";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new ScriptObject() {
+         pad = "2618";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         time = "0";
+         powerUp = "0";
    };
 };
 //--- OBJECT WRITE END ---

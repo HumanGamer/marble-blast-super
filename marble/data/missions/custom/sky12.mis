@@ -2,11 +2,11 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         time = "0";
-         name = "Sky12: ";
-         desc = "Sky 12 Test";
-         level = "0012";
+         level = "13";
          type = "Custom";
+         time = "0";
+         desc = "Sky 12 Test";
+         name = "Sky12: ";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -47,31 +47,117 @@ new SimGroup(MissionGroup) {
       ambient = "0.400000 0.400000 0.400000 1.000000";
    };
    new StaticShape(StartPoint) {
-      position = "0.0209895 -0.663195 35.3583";
+      position = "10.3124 -5.60994 24.6842";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "3214";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         powerUp = "0";
-         time = "0";
-         pad = "2459";
-         bonusTime = "0";
          gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+         pad = "2459";
+         time = "0";
+         penaltyTime = "0";
+   };
+   new ScriptObject() {
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+         pad = "1984";
+         time = "0";
+         penaltyTime = "0";
+   };
+   new ScriptObject() {
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+         pad = "1900";
+         time = "0";
+         penaltyTime = "0";
+   };
+   new InteriorInstance() {
+      position = "8.84067 -3.25541 24.1529";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/skinnyclimber.dif";
+      showTerrainInside = "0";
+   };
+   new Item() {
+      position = "1.82869 -8.74867 29.0482";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "MegaMarbleItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-4.63679 4.64265 47.0619";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "AntiGravityItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-10.6856 4.73288 32.4769";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "AntiGravityItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-4.73301 4.64568 43.5147";
+      rotation = "1 0 0 180";
+      scale = "1 1 1";
+      dataBlock = "AntiGravityItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-10.7389 4.79783 48.1834";
+      rotation = "1 0 0 180";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-0.928869 4.73764 50.2086";
+      rotation = "0 1 0 90";
+      scale = "1 1 1";
+      dataBlock = "AntiGravityItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
    };
-   new ScriptObject() {
-         penaltyTime = "0";
-         powerUp = "0";
-         time = "0";
-         pad = "1984";
-         bonusTime = "0";
-         gemCount = "0";
+   new Item() {
+      position = "-4.22801 4.74278 52.8732";
+      rotation = "1 0 0 180";
+      scale = "1 1 1";
+      dataBlock = "AntiGravityItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
    };
 };
 //--- OBJECT WRITE END ---

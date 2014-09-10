@@ -2,12 +2,12 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         desc = "A climb in purple glory.";
+         goldTime = "23000";
          level = "10";
          name = "Purple Climb";
-         goldTime = "23000";
-         desc = "A climb in purple glory.";
+         artist = "Matthieu Parizeau";
          type = "beginner";
-			artist = "Matthieu Parizeau";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -92,6 +92,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4052";
    };
    new Item() {
       position = "-68 72 -4";
@@ -101,19 +102,21 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4053";
    };
    new StaticShape(StartPoint) {
       position = "-2 2 0";
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "4054";
    };
    new StaticShape(EndPoint) {
       position = "-24 100 24";
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "1689";
+         beam = "4034";
    };
    new Item() {
       position = "-6 2 0";
@@ -139,6 +142,20 @@ new SimGroup(MissionGroup) {
       scale = "118.5 138 52";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+   new Item() {
+      position = "12.0631 61.9377 -7.14355";
+      rotation = "1 0 0 0";
+      scale = "0.3 0.3 0.3";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---

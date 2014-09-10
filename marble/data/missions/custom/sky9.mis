@@ -2,11 +2,11 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         time = "0";
-         name = "Sky9: ";
-         desc = "Sky 9 Test";
-         level = "009";
          type = "Custom";
+         time = "0";
+         desc = "Sky 9 Test";
+         name = "Sky9: ";
+         level = "10";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -47,72 +47,78 @@ new SimGroup(MissionGroup) {
       ambient = "0.400000 0.400000 0.400000 1.000000";
    };
    new StaticShape(StartPoint) {
-      position = "0.0209895 -0.663195 35.3583";
+      position = "-23.4473 -25.2592 35.3583";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "4531";
    };
    new ScriptObject() {
          time = "0";
          pad = "2459";
-         bonusTime = "0";
-         gemCount = "0";
          penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
          powerUp = "0";
    };
    new InteriorInstance() {
-      position = "-47.4171 23.8006 23.9714";
+      position = "0.496701 -3.98665 35.0628";
       rotation = "1 0 0 0";
-      scale = "1 1 1";
-      interiorFile = "~/data/interiors/frozenrun.dif";
+      scale = "10 10 1";
+      interiorFile = "~/data/interiors/addon/smallplatform.dif";
       showTerrainInside = "0";
    };
    new ScriptObject() {
          time = "0";
          pad = "1984";
-         bonusTime = "0";
-         gemCount = "0";
          penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
          powerUp = "0";
    };
-   new InteriorInstance() {
-      position = "-36.5918 -113.097 18.4357";
+   new StaticShape(check1) {
+      position = "-12.9587 -25.2947 35.4312";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/angularclimb2dif.dif";
-      showTerrainInside = "0";
+      dataBlock = "CheckPointShape";
    };
-   new Item() {
-      position = "-67.03 -81.9853 16.0257";
+   new StaticShape(EndPoint) {
+      position = "-17.7387 -25.2152 35.442";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "SuperSpeedItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
+      dataBlock = "EndPad";
+         beam = "3679";
    };
-   new Item() {
-      position = "-65.3984 -52.6027 39.1593";
+   new Trigger() {
+      position = "-13.9444 -24.2133 34.9437";
       rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "SuperSpeedItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
+      scale = "3 3 3";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check1";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
    };
-   new Item() {
-      position = "-46.815 -53.6959 39.771";
+   new ScriptObject() {
+         pad = "3401";
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new StaticShape() {
+      position = "-8.39812 -25.2138 35.4292";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "SuperSpeedItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
+      dataBlock = "HidingPlatform";
+         unhide1 = "73505";
+         unhide = "73504";
+         normalScale = "1 1 1";
+         hide = "73503";
    };
 };
 //--- OBJECT WRITE END ---

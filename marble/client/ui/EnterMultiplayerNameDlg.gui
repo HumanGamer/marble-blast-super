@@ -25,7 +25,7 @@ new GuiControl(EnterMultiplayerNameDlg) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "0 146";
+         position = "5 143";
          extent = "145 61";
          minExtent = "8 8";
          visible = "1";
@@ -42,11 +42,11 @@ new GuiControl(EnterMultiplayerNameDlg) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "144 146";
-         extent = "151 60";
+         position = "123 130";
+         extent = "145 61";
          minExtent = "8 8";
          visible = "1";
-         command = "continueConnect(\"\");";
+         command = "connect($pref::Multiplayer::IP);";
          helpTag = "0";
          text = "Button";
          groupNum = "-1";
@@ -59,7 +59,7 @@ new GuiControl(EnterMultiplayerNameDlg) {
          profile = "GuiDefaultProfile";
          horizSizing = "width";
          vertSizing = "height";
-         position = "0 96";
+         position = "1 57";
          extent = "295 52";
          minExtent = "8 8";
          visible = "1";
@@ -71,7 +71,7 @@ new GuiControl(EnterMultiplayerNameDlg) {
          profile = "GuiMLTextProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "94 79";
+         position = "94 23";
          extent = "345 14";
          minExtent = "8 8";
          visible = "1";
@@ -84,12 +84,12 @@ new GuiControl(EnterMultiplayerNameDlg) {
          profile = "GuiBigTextEditProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "21 105";
+         position = "19 61";
          extent = "252 36";
          minExtent = "8 8";
          visible = "1";
-         variable = "$pref::Multiplayer::Name";
-         altCommand = "continueConnect(\"\");";
+         variable = "$pref::Multiplayer::IP";
+         altCommand = "connect($pref::Multiplayer::IP);";
          helpTag = "0";
          maxLength = "200000";
          maxPixelWidth = "200000";
