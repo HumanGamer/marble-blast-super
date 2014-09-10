@@ -106,8 +106,8 @@ function EditorGui::init(%this)
 {
    %this.getPrefs();
 
-   if(!isObject("terraformer"))
-      new Terraformer("terraformer");
+   //if(!isObject("terraformer"))
+   //   new Terraformer("terraformer");
    $SelectedOperation = -1;
    $NextOperationId   = 1;
    $HeightfieldDirtyRow = -1;
@@ -177,16 +177,16 @@ function EditorGui::init(%this)
    EditorMenuBar.addMenuItem("Window", "World Editor", 2, "F2", 1);
    EditorMenuBar.addMenuItem("Window", "World Editor Inspector", 3, "F3", 1);
    EditorMenuBar.addMenuItem("Window", "World Editor Creator", 4, "F4", 1);
-   EditorMenuBar.addMenuItem("Window", "Mission Area Editor", 5, "F5", 1);
-   EditorMenuBar.addMenuItem("Window", "-", 0);
+   //EditorMenuBar.addMenuItem("Window", "Mission Area Editor", 5, "F5", 1);
+   //EditorMenuBar.addMenuItem("Window", "-", 0);
 
    EditorMenuBar.onCameraMenuItemSelect(6, "Medium Pace");
    EditorMenuBar.onWorldMenuItemSelect(0, "Drop at Screen Center");
 
    EWorldEditor.init();
-   ETerrainEditor.attachTerrain();
-   TerraformerInit();
-   TextureInit();
+   //ETerrainEditor.attachTerrain();
+   //TerraformerInit();
+   //TextureInit();
 
    //
    Creator.init();
@@ -323,8 +323,8 @@ function EditorMenuBar::onMenuSelect(%this, %menuId, %menu)
 {
    if(%menu $= "File")
    {
-      %editingHeightfield = ETerrainEditor.isVisible() && EHeightField.isVisible();
-      EditorMenuBar.setMenuItemEnable("File", "Export Terraform Bitmap...", %editingHeightfield);
+      //%editingHeightfield = ETerrainEditor.isVisible() && EHeightField.isVisible();
+      //EditorMenuBar.setMenuItemEnable("File", "Export Terraform Bitmap...", %editingHeightfield);
       EditorMenuBar.setMenuItemEnable("File", "Save Mission...", ETerrainEditor.isDirty || ETerrainEditor.isMissionDirty || EWorldEditor.isDirty);
    }
    else if(%menu $= "Edit")
@@ -605,10 +605,10 @@ function EditorMenuBar::onWindowMenuItemSelect(%this, %itemId, %item)
 function EditorGui::setWorldEditorVisible(%this)
 {
    EWorldEditor.setVisible(true);
-   ETerrainEditor.setVisible(false);
+   //ETerrainEditor.setVisible(false);
    EditorMenuBar.setMenuVisible("World", true);
-   EditorMenuBar.setMenuVisible("Action", false);
-   EditorMenuBar.setMenuVisible("Brush", false);
+   //EditorMenuBar.setMenuVisible("Action", false);
+   //EditorMenuBar.setMenuVisible("Brush", false);
    EWorldEditor.makeFirstResponder(true);
 }
 
@@ -1310,57 +1310,57 @@ $TerraformerTextureDir = "common/editor/textureScripts";
 
 //--------------------------------------
 
-function TextureInit()
-{
+//function TextureInit()
+//{
    // Assumes the terrain object is called terrain
    
-   Texture_operation_menu.clear();
-   Texture_operation_menu.setText("Placement Operations");
-   Texture_operation_menu.add("Place by Fractal", 1);
-   Texture_operation_menu.add("Place by Height", 2);
-   Texture_operation_menu.add("Place by Slope", 3);
-   Texture_operation_menu.add("Place by Water Level", 4);
+   //Texture_operation_menu.clear();
+   //Texture_operation_menu.setText("Placement Operations");
+   //Texture_operation_menu.add("Place by Fractal", 1);
+   //Texture_operation_menu.add("Place by Height", 2);
+   //Texture_operation_menu.add("Place by Slope", 3);
+   //Texture_operation_menu.add("Place by Water Level", 4);
 
-   $HeightfieldSrcRegister = Heightfield_operation.rowCount()-1;
+   //$HeightfieldSrcRegister = Heightfield_operation.rowCount()-1;
 
    // sync up the preview windows
-   TexturePreview.setValue(HeightfieldPreview.getValue());
-   %script = terrain.getTextureScript();
-   if(%script !$= "")
-      Texture::loadFromScript(%script);
+   //TexturePreview.setValue(HeightfieldPreview.getValue());
+   //%script = terrain.getTextureScript();
+   //if(%script !$= "")
+   //   Texture::loadFromScript(%script);
 
-   if (Texture_material.rowCount() == 0)
-   {
-      Texture_operation.clear();
-      $nextTextureRegister = 1000;
-   }
-   else
-   {
+   //if (Texture_material.rowCount() == 0)
+   //{
+      //Texture_operation.clear();
+   //   $nextTextureRegister = 1000;
+   //}
+   //else
+   //{
       // it's difficult to tell if the heightfield was modified so 
       // just in case flag all dependent operations as dirty.
-      %rowCount = Texture_material.rowCount();
-      for (%row = 0; %row < %rowCount; %row++)
-      {
-         %data = Texture_material.getRowText(%row);
-         %entry= getRecord(%data,0);
-         %reg  = getField(%entry,1);
-         $dirtyTexture[ %reg ] = true;
-
-         %opCount = getRecordCount(%data);
-         for (%op = 2; %op < %opCount; %op++)
-         {
-            %entry= getRecord(%data,%op);
-            %label= getField(%entry,0);
-            if (%label !$= "Place by Fractal" && %label !$= "Fractal Distortion")
-            {
-               %reg  = getField(%entry,2);
-               $dirtyTexture[ %reg ] = true;
-            }
-         }
-      }
-      Texture::previewMaterial();   
-   }
-}
+      //%rowCount = Texture_material.rowCount();
+      //for (%row = 0; %row < %rowCount; %row++)
+      //{
+         //%data = Texture_material.getRowText(%row);
+         //%entry= getRecord(%data,0);
+         //%reg  = getField(%entry,1);
+         //$dirtyTexture[ %reg ] = true;
+//
+         //%opCount = getRecordCount(%data);
+         //for (%op = 2; %op < %opCount; %op++)
+         //{
+            //%entry= getRecord(%data,%op);
+            //%label= getField(%entry,0);
+            //if (%label !$= "Place by Fractal" && %label !$= "Fractal Distortion")
+            //{
+               //%reg  = getField(%entry,2);
+               //$dirtyTexture[ %reg ] = true;
+            //}
+         //}
+      //}
+      //Texture::previewMaterial();   
+   //}
+//}
 
 function TerraformerTextureGui::refresh(%this)
 {
@@ -2027,59 +2027,59 @@ function tab_sinus::reset()
 
 function Heightfield::resetTabs()
 {
-   tab_terrainFile.reset();
-   tab_fbm.reset();
-   tab_rmf.reset();
-   tab_canyon.reset();
-   tab_smooth.reset();
-   tab_smoothWater.reset();
-   tab_smoothRidge.reset();
-   tab_filter.reset();
-   tab_turbulence.reset();
-   tab_thermal.reset();
-   tab_hydraulic.reset();
-   tab_general.reset();
-   tab_bitmap.reset();
-   tab_blend.reset();
-   tab_sinus.reset();
+   //tab_terrainFile.reset();
+   //tab_fbm.reset();
+   //tab_rmf.reset();
+   //tab_canyon.reset();
+   //tab_smooth.reset();
+   //tab_smoothWater.reset();
+   //tab_smoothRidge.reset();
+   //tab_filter.reset();
+   //tab_turbulence.reset();
+   //tab_thermal.reset();
+   //tab_hydraulic.reset();
+   //tab_general.reset();
+   //tab_bitmap.reset();
+   //tab_blend.reset();
+   //tab_sinus.reset();
 }
 
 //--------------------------------------
-function TerraformerInit()
-{
-   Heightfield_options.clear();   
-   Heightfield_options.setText("Operation");   
-   Heightfield_options.add("fBm Fractal",0);
-   Heightfield_options.add("Rigid MultiFractal",1);
-   Heightfield_options.add("Canyon Fractal",2);
-   Heightfield_options.add("Sinus",3);
-   Heightfield_options.add("Bitmap",4);
-   Heightfield_options.add("Turbulence",5);
-   Heightfield_options.add("Smoothing",6);
-   Heightfield_options.add("Smooth Water",7);
-   Heightfield_options.add("Smooth Ridges/Valleys", 8);
-   Heightfield_options.add("Filter",9);
-   Heightfield_options.add("Thermal Erosion",10);
-   Heightfield_options.add("Hydraulic Erosion",11);
-   Heightfield_options.add("Blend",12);
-   Heightfield_options.add("Terrain File",13);
-
-   Heightfield::resetTabs();
-
-   %script = Terrain.getHeightfieldScript();
-   if(%script !$= "")
-      Heightfield::loadFromScript(%script,true);
-
-   if (Heightfield_operation.rowCount() == 0)
-   {
-      Heightfield_operation.clear();
-      %id1 = Heightfield::add("General\tTab_general\tgeneral_min_height\t50\tgeneral_scale\t300\tgeneral_water\t0.000\tgeneral_centerx\t0\tgeneral_centery\t0");
-      Heightfield_operation.setSelectedById(%id1);
-   }
-
-   Heightfield::resetTabs();
-   Heightfield::preview();
-}   
+//function TerraformerInit()
+//{
+   //Heightfield_options.clear();   
+   //Heightfield_options.setText("Operation");   
+   //Heightfield_options.add("fBm Fractal",0);
+   //Heightfield_options.add("Rigid MultiFractal",1);
+   //Heightfield_options.add("Canyon Fractal",2);
+   //Heightfield_options.add("Sinus",3);
+   //Heightfield_options.add("Bitmap",4);
+   //Heightfield_options.add("Turbulence",5);
+   //Heightfield_options.add("Smoothing",6);
+   //Heightfield_options.add("Smooth Water",7);
+   //Heightfield_options.add("Smooth Ridges/Valleys", 8);
+   //Heightfield_options.add("Filter",9);
+   //Heightfield_options.add("Thermal Erosion",10);
+   //Heightfield_options.add("Hydraulic Erosion",11);
+   //Heightfield_options.add("Blend",12);
+   //Heightfield_options.add("Terrain File",13);
+//
+   //Heightfield::resetTabs();
+//
+   //%script = Terrain.getHeightfieldScript();
+   //if(%script !$= "")
+      //Heightfield::loadFromScript(%script,true);
+//
+   //if (Heightfield_operation.rowCount() == 0)
+   //{
+      //Heightfield_operation.clear();
+      //%id1 = Heightfield::add("General\tTab_general\tgeneral_min_height\t50\tgeneral_scale\t300\tgeneral_water\t0.000\tgeneral_centerx\t0\tgeneral_centery\t0");
+      ////Heightfield_operation.setSelectedById(%id1);
+   //}
+//
+   //Heightfield::resetTabs();
+   //Heightfield::preview();
+//}   
 
 //--------------------------------------
 function Heightfield_options::onSelect(%this, %_id, %text)
@@ -2235,39 +2235,39 @@ function Heightfield::eval(%id)
 }   
 
 //--------------------------------------
-function Heightfield::add(%entry)
-{
-   Heightfield::saveTab();
-   Heightfield::hideTab();
-
-   %id = $NextOperationId++;
-   if ($selectedOperation != -1)
-   {
-      %row = Heightfield_operation.getRowNumById($selectedOperation) + 1;
-      %entry = %row @ " " @ %entry;
-      Heightfield_operation.addRow(%id, %entry, %row); // insert
-
-      // adjust row numbers
-      for(%i = %row+1; %i < Heightfield_operation.rowCount(); %i++)
-      {
-         %id = Heightfield_operation.getRowId(%i);
-         %text = Heightfield_operation.getRowTextById(%id);
-         %text = setWord(%text, 0, %i);
-         Heightfield_operation.setRowById(%id, %text);
-      }
-   }
-   else
-   {
-      %entry = Heightfield_operation.rowCount() @ " " @ %entry;
-      Heightfield_operation.addRow(%id, %entry);   // add to end
-   }
-
-   %row = Heightfield_operation.getRowNumById(%id);
-   if (%row <= $HeightfieldDirtyRow)
-      $HeightfieldDirtyRow = %row;
-   Heightfield::save();
-   return %id;
-}   
+//function Heightfield::add(%entry)
+//{
+   //Heightfield::saveTab();
+   //Heightfield::hideTab();
+//
+   //%id = $NextOperationId++;
+   //if ($selectedOperation != -1)
+   //{
+      //%row = Heightfield_operation.getRowNumById($selectedOperation) + 1;
+      //%entry = %row @ " " @ %entry;
+      //Heightfield_operation.addRow(%id, %entry, %row); // insert
+//
+      //// adjust row numbers
+      //for(%i = %row+1; %i < Heightfield_operation.rowCount(); %i++)
+      //{
+         //%id = Heightfield_operation.getRowId(%i);
+         //%text = Heightfield_operation.getRowTextById(%id);
+         //%text = setWord(%text, 0, %i);
+         //Heightfield_operation.setRowById(%id, %text);
+      //}
+   //}
+   //else
+   //{
+      //%entry = Heightfield_operation.rowCount() @ " " @ %entry;
+      //Heightfield_operation.addRow(%id, %entry);   // add to end
+   //}
+//
+   //%row = Heightfield_operation.getRowNumById(%id);
+   //if (%row <= $HeightfieldDirtyRow)
+      //$HeightfieldDirtyRow = %row;
+   //Heightfield::save();
+   //return %id;
+//}   
 
 
 //--------------------------------------
@@ -2445,20 +2445,20 @@ function Heightfield::doSaveBitmap(%name)
 
 //--------------------------------------
 
-function Heightfield::save()
-{
-   %script = "";
-   %rowCount = Heightfield_operation.rowCount();
-   for(%row = 0; %row < %rowCount; %row++)
-   {
-      if(%row != 0)
-         %script = %script @ "\n";
-      %data = restWords(Heightfield_operation.getRowText(%row));
-      %script = %script @ expandEscape(%data);
-   }
-   terrain.setHeightfieldScript(%script);
-   ETerrainEditor.isDirty = true;
-}
+//function Heightfield::save()
+//{
+   //%script = "";
+   //%rowCount = Heightfield_operation.rowCount();
+   //for(%row = 0; %row < %rowCount; %row++)
+   //{
+      //if(%row != 0)
+         //%script = %script @ "\n";
+      //%data = restWords(Heightfield_operation.getRowText(%row));
+      //%script = %script @ expandEscape(%data);
+   //}
+   ////terrain.setHeightfieldScript(%script);
+   //ETerrainEditor.isDirty = true;
+//}
 
 //--------------------------------------
 function Heightfield::import()
@@ -2546,24 +2546,24 @@ function Heightfield::doSetBitmap(%name)
 
 
 //--------------------------------------
-function Heightfield::hideTab()
-{
-   tab_terrainFile.setVisible(false);
-   tab_fbm.setvisible(false);
-   tab_rmf.setvisible(false);
-   tab_canyon.setvisible(false);
-   tab_smooth.setvisible(false);
-   tab_smoothWater.setvisible(false);
-   tab_smoothRidge.setvisible(false);
-   tab_filter.setvisible(false);
-   tab_turbulence.setvisible(false);
-   tab_thermal.setvisible(false);
-   tab_hydraulic.setvisible(false);
-   tab_general.setvisible(false);
-   tab_bitmap.setvisible(false);
-   tab_blend.setvisible(false);
-   tab_sinus.setvisible(false);
-}
+//function Heightfield::hideTab()
+//{
+   //tab_terrainFile.setVisible(false);
+   //tab_fbm.setvisible(false);
+   //tab_rmf.setvisible(false);
+   //tab_canyon.setvisible(false);
+   //tab_smooth.setvisible(false);
+   //tab_smoothWater.setvisible(false);
+   //tab_smoothRidge.setvisible(false);
+   //tab_filter.setvisible(false);
+   //tab_turbulence.setvisible(false);
+   //tab_thermal.setvisible(false);
+   //tab_hydraulic.setvisible(false);
+   //tab_general.setvisible(false);
+   //tab_bitmap.setvisible(false);
+   //tab_blend.setvisible(false);
+   //tab_sinus.setvisible(false);
+//}
 
 
 //--------------------------------------
@@ -2731,7 +2731,7 @@ function Editor::close(%this)
 
    Canvas.setContent(%this.prevContent);
 
-   MessageHud.close();
+   //MessageHud.close();
 }
 
 //------------------------------------------------------------------------------

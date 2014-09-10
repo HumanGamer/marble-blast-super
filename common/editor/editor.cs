@@ -63,7 +63,7 @@ function Editor::onAdd(%this)
    exec("./WorldEditorSettingsDlg.gui");
 
    // Terrain Editor
-   exec("./TerrainEditorVSettingsGui.gui");
+   //exec("./TerrainEditorVSettingsGui.gui");
 
    // do gui initialization...
    EditorGui.init();
