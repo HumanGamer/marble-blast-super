@@ -54,7 +54,7 @@ function initClient()
    // The canvas needs to be constructed before the gui scripts are
    // run because many of the controls assume the canvas exists at
    // load time.
-   initCanvas(" Marble Blast");
+   initCanvas("Marble Blast Super - Dev Build");
 
    /// Load client-side Audio Profiles/Descriptions
    exec("./scripts/audioProfiles.cs");
