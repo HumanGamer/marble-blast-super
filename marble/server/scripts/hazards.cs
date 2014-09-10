@@ -460,6 +460,34 @@ function LandMine::onCollision(%this, %obj, %col)
    }
 }
 
+datablock StaticShapeData(LandMineMBG)
+{
+   className = "Explosive";
+   category = "Hazards";
+   shapeFile = "~/data/shapes/hazards/mine_mbg.dts";
+   explosion = LandMineExplosion;
+   renderWhenDestroyed = false;
+   resetTime = 5000;
+};
+
+function LandMineMBG::onAdd(%this, %obj)
+{
+   if (%obj.resetTime $= "")
+      %obj.resetTime = "Default";
+}
+
+function LandMineMBG::onCollision(%this, %obj, %col)
+{
+   %obj.setDamageState("Destroyed");
+
+   %resetTime = (%obj.resetTime $= "Default")? %this.resetTime: %obj.resetTime;
+   if (%resetTime) {
+      %obj.startFade(0, 0, true);
+      %obj.schedule(%resetTime, setDamageState,"Enabled");
+      %obj.schedule(%resetTime, "startFade", 1000, 0, false);
+   }
+}
+
 datablock StaticShapeData(Bomb)
 {
    className = "Explosive";
