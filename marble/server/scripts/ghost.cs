@@ -41,4 +41,6 @@ function GameConnection::createGhost(%this)
       MissionCleanup.add(%ghost);
    
    %this.ghost = %ghost;
+   
+   echo("Created Ghost Marble");
 }

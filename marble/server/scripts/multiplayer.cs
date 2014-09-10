@@ -57,6 +57,7 @@ function updateGame()
    
    checkHidingPlatforms();
    checkBombs();
+   updateCannons();
    
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
 }
@@ -297,7 +298,8 @@ function serverCmdSetMarbleSkin(%client, %skin)
 {
    %client.skin = %skin;
    %client.player.setSkinName(%client.getSkin());
-   %client.ghost.setSkinName(%client.getSkin());
+   if (isObject(%client.ghost))
+      %client.ghost.setSkinName(%client.getSkin());
 }
 
 function serverCmdSendChat(%client, %msg)

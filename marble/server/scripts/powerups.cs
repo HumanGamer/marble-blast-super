@@ -515,7 +515,8 @@ function GameConnection::makeMega(%this)
    cancel(%this.megaMarbleSchedule);
    
    %this.player.setDatablock(MegaMarbleBall);
-   %this.ghost.setDatablock(GhostMegaMarble);
+   if (isObject(%this.ghost))
+      %this.ghost.setDatablock(GhostMegaMarble);
    
    %this.applyImpulse("0 0 -1", "0 0 7");
    
@@ -527,5 +528,6 @@ function GameConnection::makeNoMega(%this)
    cancel(%this.megaMarbleSchedule);
    
    %this.player.setDatablock(DefaultMarble);
-   %this.ghost.setDatablock(GhostMarble);
+   if (isObject(%this.ghost))
+      %this.ghost.setDatablock(GhostMarble);
 }

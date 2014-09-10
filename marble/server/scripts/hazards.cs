@@ -377,6 +377,61 @@ datablock ExplosionData(LandMineExplosion)
    lightEndColor = "0 0 0";
 };
 
+datablock ExplosionData(LandMineFakeSubExplosion1)
+{
+   offset = 1.0;
+   emitter[0] = LandMineSmokeEmitter;
+   emitter[1] = LandMineSparkEmitter;
+   
+   // Impulse
+   impulseRadius = 2;
+};
+
+datablock ExplosionData(LandMineFakeSubExplosion2)
+{
+   offset = 1.0;
+   emitter[0] = LandMineSmokeEmitter;
+   emitter[1] = LandMineSparkEmitter;
+   
+   // Impulse
+   impulseRadius = 2;
+};
+
+datablock ExplosionData(LandMineFakeExplosion)
+{
+   soundProfile = ExplodeSfx;
+   lifeTimeMS = 1200;
+
+   // Volume particles
+   particleEmitter = LandMineEmitter;
+   particleDensity = 80;
+   particleRadius = 1;
+
+   // Point emission
+   emitter[0] = LandMineSmokeEmitter;
+   emitter[1] = LandMineSparkEmitter;
+
+   // Sub explosion objects
+   subExplosion[0] = LandMineFakeSubExplosion1;
+   subExplosion[1] = LandMineFakeSubExplosion2;
+   
+   // Camera Shaking
+   shakeCamera = true;
+   camShakeFreq = "10.0 11.0 10.0";
+   camShakeAmp = "1.0 1.0 1.0";
+   camShakeDuration = 0.5;
+   camShakeRadius = 10.0;
+
+   // Impulse
+   impulseRadius = 2;
+
+   // Dynamic light
+   lightStartRadius = 6;
+   lightEndRadius = 3;
+   lightStartColor = "0.5 0.5 0";
+   lightEndColor = "0 0 0";
+};
+
 datablock StaticShapeData(LandMine)
 {
    className = "Explosive";
@@ -445,6 +500,8 @@ function Bomb::explode(%this, %obj)
 
 function checkBombs()
 {
+   if (!isObject(MissionGroup))
+      return;
    for (%i = 0; %i < MissionGroup.getCount(); %i++)
    {
       %obj = MissionGroup.getObject(%i);

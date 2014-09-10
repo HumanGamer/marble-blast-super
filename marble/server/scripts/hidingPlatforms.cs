@@ -62,6 +62,8 @@ function showPlatform(%obj)
 
 function checkHidingPlatforms()
 {
+   if (!isObject(MissionGroup))
+      return;
    for (%i = 0; %i < MissionGroup.getCount(); %i++)
    {
       %obj = MissionGroup.getObject(%i);

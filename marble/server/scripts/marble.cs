@@ -473,7 +473,36 @@ function MarbleData::onCollision(%this,%obj,%col)
    } else if (%col.getClassName() $= "StaticShape" && %col.getDatablock().getName() $= "ExplodingPlatform")
    {
       ExplodingPlatform.explode(%col);
+   }// else if (%col.getClassName() $= "StaticShape" && %col.getDatablock().getName() $= "CannonBall")
+   //{
+   //   //echo("collision!");
+   //   CannonBall.explode(%col, %obj);
+   //}
+}
+
+function findClosestPlayer(%position, %radius)
+{
+   if (!isObject(MissionCleanup))
+      return;
+   for (%i = 0; %i < MissionCleanup.getCount(); %i++)
+   {
+      %obj = MissionCleanup.getObject(%i);
+      
+      if (%obj.getClassName() $= "Marble")
+      {
+         %dist = VectorDist(%position, %obj.getPosition());
+         echo(%dist);
+         if (%dist > %radius)
+            continue;
+         if (%dist < %lastDist || %lastDist $= "")
+         {
+            %lastDist = %dist;
+            %lastObj = %obj;
+         }
+      }
    }
+   
+   return %lastObj;
 }
 
 

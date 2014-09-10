@@ -74,11 +74,13 @@ function onServerCreated()
    exec("./checkpoint.cs");
    exec("./teleporter.cs");
    exec("./easter.cs");
+   exec("./cannon.cs");
 
    // Platforms and interior doors
    exec("./pathedInteriors.cs");
    exec("./hidingPlatforms.cs");
 
+   // Multiplayer
    exec("./multiplayer.cs");
 
    // Keep track of when the game started
@@ -860,13 +862,19 @@ function GameConnection::respawnPlayer(%this)
    // Reset the player back to the last checkpoint
    cancel(%this.respawnSchedule);
    
+   if (!$Client::ConnectedMultiplayer && (!isObject(%this.checkPoint) || !isObject(%this.checkPoint.pad)))
+      %this.resetStats();
+   
    if (!$Client::ConnectedMultiplayer && %this.checkPoint.pad.getName() $= "StartPoint")
       $resetLevel = true;
    
    %this.player.unmountImage(0);
    %this.player.unmountImage(2);
-   %this.ghost.unmountImage(0);
-   %this.ghost.unmountImage(2);
+   if (isObject(%this.ghost))
+   {
+      %this.ghost.unmountImage(0);
+      %this.ghost.unmountImage(2);
+   }
    
    if ($resetLevel)
    {
