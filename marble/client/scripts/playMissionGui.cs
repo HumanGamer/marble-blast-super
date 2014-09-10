@@ -13,6 +13,7 @@ function PM_StartMission()
    %mission = PM_missionList.getRowTextById(%id);//getField(PM_missionList.getRowTextById(%id), 1);
    $LastMissionId = %id;
    $LastMissionType = %mission.type;
+   $WonLast = false;
 
    if ($pref::Multiplayer::isMultiplayer)
       %serverType = "MultiPlayer";
@@ -71,14 +72,19 @@ function buildMissionList()
    //if (%level >= %group.getCount())
    //   %level = %group.getCount() - 1;
    //PM_setSelected(%level);
+   
    if ($LastMissionId $= "" || $LastMissionType !$= $MissionType)
-      $LastMissionId = 0;   
-   if ($LastMissionId >= %group.getCount())
-      $LastMissionId = %group.getCount();
+      $LastMissionId = 0;
+   if ($LastMissionId !$= "" && $LastMissionType $= $MissionType && $WonLast)
+         $LastMissionId++; 
+   if ($LastMissionId > %group.getCount() - 1)
+      $LastMissionId = %group.getCount() - 1;
    if ($LastMissionId < 0)
       $LastMissionId = 0;
    PM_setSelected($LastMissionId);
    LB_SetSelected($LastMissionId);
+   
+   $WonLast = false;
 }
 
 function sortByLevel(%group)
