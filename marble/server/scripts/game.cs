@@ -655,7 +655,7 @@ function GameConnection::onClientEnterGame(%this)
       // Anchor the player to the start pad
       %this.player.setMode(Start);
    } else {
-      %this.player.setMode(ClientGroup.getObject(0).player.getMode());
+      %this.player.setMode("normal");//(ClientGroup.getObject(0).player.getMode());
    }
 
    // Start the game here for single player

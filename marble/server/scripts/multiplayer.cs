@@ -96,6 +96,8 @@ function oobUpdate()
 function updateSpeed()
 {
    cancel($Multiplayer::SpeedUpdate);
+   
+   $Multiplayer::SpeedUpdate = schedule(100, 0, updateSpeed);
    for (%i = 0; %i < ClientGroup.getCount(); %i++)
    {
       %client = ClientGroup.getObject(%i);
@@ -114,7 +116,6 @@ function updateSpeed()
       %client.lastDiff = %diff;
       %client.speed = VectorLen(%diff);
    }
-   $Multiplayer::SpeedUpdate = schedule(100, 0, updateSpeed);
 }
 
 function updateCollision()
@@ -124,10 +125,11 @@ function updateCollision()
    {
       %client = ClientGroup.getObject(%i);
       
-      if (!isObject(%client.player) || !isObject(%client.ghost))
+      if (!isObject(%client.player))
          continue;
          
       %obj = %client.player;
+      %datablock1 = %obj.getDatablock();
       
       %pos1 = %obj.getPosition();
       for (%j = 0; %j < ClientGroup.getCount(); %j++)
@@ -135,35 +137,36 @@ function updateCollision()
          if (%j == %i)
             continue;
          %client2 = ClientGroup.getObject(%j);
-         if (!isObject(%client2.player) || !isObject(%client2.ghost))
+         if (!isObject(%client2.player))
             continue;
             
          %obj2 = %client2.player;
+         %datablock2 = %obj2.getDatablock();
       
          %pos2 = %obj2.getPosition();
          
          %dist = VectorDist(%pos1, %pos2);
          
-         %dist -= %obj.getDatablock().radius;
-         %dist -= %obj2.getDatablock().radius;
+         %dist -= %datablock1.radius;
+         %dist -= %datablock2.radius;
          
          if (%dist < 0)
          {
             if (%client.speed < %client2.speed || %client.lastCollision $= %client2)
                continue;
                
-            if (%client.speed < %client.player.getDatablock().minCol)
+            if (%client.speed < %datablock1.minCol)
                continue;
             %client.lastCollision = %client2;
             %client2.lastCollision = %client;            
             
-            %power = %obj.getDatablock().power;
+            %power = %datablock1.power;
             
-            %reduce = %obj2.getDatablock().reduction;
+            %reduce = %datablock2.reduction;
             
-            %maxPower = %obj.getDatablock().maxPower;
+            %maxPower = %datablock1.maxPower;
             
-            %speed = %client.speed + (%client2.speed * %obj.getDatablock().bounceCol);
+            %speed = %client.speed + (%client2.speed * %datablock1.bounceCol);
             
             %src = VectorSub(%pos2, %pos1);
             %src2 = VectorSub(%pos1, %pos2);
