@@ -2,7 +2,7 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         desc = "Master the oddysey of ascending platforms.";
+         desc = "Master the odyssey of ascending platforms.";
          goldTime = "150000";
          level = "3";
          name = "Elevation";
