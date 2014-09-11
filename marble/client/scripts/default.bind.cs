@@ -43,9 +43,12 @@ function escapeFromGame()
 
 function escapeToLobby()
 {
+   $Game::GameLoops = 0;
    cancel($Multiplayer::UpdateSchedule);
-   cancel($Multiplayer::UpdateSchedule2);
-   cancel($Multiplayer::UpdateSchedule3);
+   cancel($Multiplayer::DeltaUpdate);   
+   cancel($Multiplayer::CollisionUpdate);
+   cancel($Multiplayer::OOBUpdate);
+   cancel($Multiplayer::SpeedUpdate);
    
    endMission();
    

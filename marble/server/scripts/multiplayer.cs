@@ -34,16 +34,34 @@ function commandToAllExcept(%client, %func, %args, %arg1, %arg2, %arg3)
 
 function onGameStartup()
 {
+   updateDelta();
    updateGame();
-   mpUpdate();
+   updateSpeed();
+   updateCollision();
    oobUpdate();
+}
+
+function updateDelta()
+{
+   cancel($Multiplayer::DeltaUpdate);   
+   
+   if ($Game::LastTime $= "")
+      $Game::LastTime = getRealTime();
+   %passed = getRealTime() - $Game::LastTime;
+   $Game::LastTime = getRealTime();
+   $Game::GameLoops++;
+   
+   if ($Game::GameLoops % 3 == 0)
+   {
+      commandToAll('UpdateTransform');
+   }
+   
+   $Multiplayer::DeltaUpdate = schedule(10, 0, updateDelta);
 }
 
 function updateGame()
 {
    cancel($Multiplayer::UpdateSchedule);
-   
-   commandToAll('UpdateTransform');
    
    if (!$Client::ConnectedMultiplayer)
    {
@@ -53,14 +71,12 @@ function updateGame()
       updateRotationPlatforms();
    }
    
-   updateSpeed();
-   
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
 }
 
 function oobUpdate()
 {
-   cancel($Multiplayer::UpdateSchedule3);
+   cancel($Multiplayer::OOBUpdate);
    for (%i = 0; %i < ClientGroup.getCount(); %i++)
    {
       %obj = ClientGroup.getObject(%i);
@@ -72,20 +88,12 @@ function oobUpdate()
       }
    }
    
-   $Multiplayer::UpdateSchedule3 = schedule($Multiplayer::UpdateInterval, 0, oobUpdate);
-}
-
-function mpUpdate()
-{
-   cancel($Multiplayer::UpdateSchedule2);
-   
-   updateCollision();
-   
-   $Multiplayer::UpdateSchedule2 = schedule(10, 0, mpUpdate);
+   $Multiplayer::OOBUpdate = schedule($Multiplayer::UpdateInterval, 0, oobUpdate);
 }
 
 function updateSpeed()
 {
+   cancel($Multiplayer::SpeedUpdate);
    for (%i = 0; %i < ClientGroup.getCount(); %i++)
    {
       %client = ClientGroup.getObject(%i);
@@ -104,10 +112,12 @@ function updateSpeed()
       %client.lastDiff = %diff;
       %client.speed = VectorLen(%diff);
    }
+   $Multiplayer::SpeedUpdate = schedule(10, 0, updateSpeed);
 }
 
 function updateCollision()
 {
+   cancel($Multiplayer::CollisionUpdate);
    for (%i = 0; %i < ClientGroup.getCount(); %i++)
    {
       %client = ClientGroup.getObject(%i);
@@ -158,6 +168,8 @@ function updateCollision()
          }
       }
    }
+   
+   $Multiplayer::CollisionUpdate = schedule(10, 0, updateCollision);
 }
 
 function serverCmdUpdateTransform(%client, %trans)

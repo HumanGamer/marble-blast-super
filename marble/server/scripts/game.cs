@@ -338,9 +338,12 @@ function endGame()
       error("endGame: No game running!");
       return;
    }
+   $Game::GameLoops = 0;
    cancel($Multiplayer::UpdateSchedule);
-   cancel($Multiplayer::UpdateSchedule2);
-   cancel($Multiplayer::UpdateSchedule3);
+   cancel($Multiplayer::DeltaUpdate);   
+   cancel($Multiplayer::CollisionUpdate);
+   cancel($Multiplayer::OOBUpdate);
+   cancel($Multiplayer::SpeedUpdate);
    destroyGame();
 
    // Inform the clients the game is over
