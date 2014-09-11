@@ -434,9 +434,9 @@ datablock MarbleData(MegaMarbleBall : DefaultMarble)
    rollHardSound = MegaRollingHardSfx;   
    
    radius = 0.6075;
-   reduction = 2.5;
-   power = 40;
-   maxPower = 80;
+   reduction = 0.5625;
+   power = 56.25;
+   maxPower = 9;
    bounceCol = 0.5;
    
    blastRechargeTime = 36000;
