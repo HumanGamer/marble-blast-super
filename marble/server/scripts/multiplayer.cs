@@ -97,9 +97,7 @@ function updateSpeed()
 {
    cancel($Multiplayer::SpeedUpdate);
    
-   %interval = 10;   
-   
-   $Multiplayer::SpeedUpdate = schedule(%interval, 0, updateSpeed);
+   $Multiplayer::SpeedUpdate = schedule(100, 0, updateSpeed);
    for (%i = 0; %i < ClientGroup.getCount(); %i++)
    {
       %client = ClientGroup.getObject(%i);
@@ -109,7 +107,7 @@ function updateSpeed()
       if (%client.lastPos $= "")
          %client.lastPos = %client.player.getTransform();
          
-      %diff = VectorScale(VectorSub(%client.lastPos, %client.player.getTransform()), 1000 / %interval);
+      %diff = VectorScale(VectorSub(%client.lastPos, %client.player.getTransform()), 10);
       %client.lastPos = %client.player.getTransform();
       
       if (%client.lastDiff !$= "" && %client.lastDiff $= %diff)
