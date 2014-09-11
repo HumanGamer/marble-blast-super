@@ -140,7 +140,7 @@ function updateCollision()
             %src = VectorSub(%pos2, %pos1);
             %src2 = VectorSub(%pos1, %pos2);
             
-            %finalPower = min(%speed * %power, %maxPower);
+            %finalPower = minValue(%speed * %power, %maxPower);
             
             %impulse = VectorScale(%src, %finalPower);
             %impulse2 = VectorScale(%src2, %reduce);
@@ -396,4 +396,26 @@ function VectorMult(%vector, %mult)
    } else {
       return getWord(%vector, 0) * %mult SPC getWord(%vector, 1) * %mult SPC getWord(%vector, 2) * %mult;
    }
+}
+
+function minValue(%val1, %val2, %val3, %val4, %val5, %val6, %val7, %val8, %val9)
+{
+   %min = %val1;
+   if (%val2 < %min && %val2 !$= "")
+      %min = %val2;
+   if (%val3 < %min && %val3 !$= "")
+      %min = %val3;
+   if (%val4 < %min && %val4 !$= "")
+      %min = %val4;
+   if (%val5 < %min && %val5 !$= "")
+      %min = %val5;
+   if (%val6 < %min && %val6 !$= "")
+      %min = %val6;
+   if (%val7 < %min && %val7 !$= "")
+      %min = %val7;
+   if (%val8 < %min && %val8 !$= "")
+      %min = %val8;
+   if (%val9 < %min && %val9 !$= "")
+      %min = %val9;
+   return %min;
 }
