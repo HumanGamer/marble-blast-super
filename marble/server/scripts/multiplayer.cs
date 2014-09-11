@@ -35,6 +35,8 @@ function commandToAllExcept(%client, %func, %args, %arg1, %arg2, %arg3)
 function onGameStartup()
 {
    updateGame();
+   mpUpdate();
+   oobUpdate();
 }
 
 function updateGame()
@@ -42,20 +44,6 @@ function updateGame()
    cancel($Multiplayer::UpdateSchedule);
    
    commandToAll('UpdateTransform');
-   for (%i = 0; %i < ClientGroup.getCount(); %i++)
-   {
-      %obj = ClientGroup.getObject(%i);
-      if (%obj.player $= "")
-         continue;
-      if (%obj.player.getIsOOB() && %obj.GameState $= "Play")
-      {
-         commandToClient(%obj, 'OOBUpdate');
-      }
-   }
-   
-   updateDelta();
-   updateSpeed();
-   updateCollision();
    
    if (!$Client::ConnectedMultiplayer)
    {
@@ -68,12 +56,30 @@ function updateGame()
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
 }
 
-function updateDelta()
+function oobUpdate()
 {
-   if ($Game::LastLoop $= "")
-      $Game::LastLoop = getRealTime();
-   %delta = getRealTime() - $Game::LastLoop;
-   $Game::LastLoop = getRealTime();
+   cancel($Multiplayer::UpdateSchedule3);
+   for (%i = 0; %i < ClientGroup.getCount(); %i++)
+   {
+      %obj = ClientGroup.getObject(%i);
+      if (%obj.player $= "")
+         continue;
+      if (%obj.player.getIsOOB() && %obj.GameState $= "Play")
+      {
+         commandToClient(%obj, 'OOBUpdate');
+      }
+   }
+   $Multiplayer::UpdateSchedule3 = schedule($Multiplayer::UpdateInterval, 0, oobUpdate);
+}
+
+function mpUpdate()
+{
+   cancel($Multiplayer::UpdateSchedule2);
+   
+   updateSpeed();
+   updateCollision();
+   
+   $Multiplayer::UpdateSchedule2 = schedule($Multiplayer::UpdateInterval, 0, mpUpdate);
 }
 
 function updateSpeed()
