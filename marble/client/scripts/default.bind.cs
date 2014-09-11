@@ -44,6 +44,7 @@ function escapeFromGame()
 function escapeToLobby()
 {
    cancel($Multiplayer::UpdateSchedule);
+   cancel($Multiplayer::UpdateSchedule2);
    
    endMission();
    

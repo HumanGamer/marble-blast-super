@@ -35,6 +35,7 @@ function commandToAllExcept(%client, %func, %args, %arg1, %arg2, %arg3)
 function onGameStartup()
 {
    updateGame();
+   mpUpdate();
 }
 
 function updateGame()
@@ -53,10 +54,6 @@ function updateGame()
       }
    }
    
-   updateDelta();
-   updateSpeed();
-   updateCollision();
-   
    if (!$Client::ConnectedMultiplayer)
    {
       checkHidingPlatforms();
@@ -68,12 +65,14 @@ function updateGame()
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
 }
 
-function updateDelta()
+function mpUpdate()
 {
-   if ($Game::LastLoop $= "")
-      $Game::LastLoop = getRealTime();
-   %delta = getRealTime() - $Game::LastLoop;
-   $Game::LastLoop = getRealTime();
+   cancel($Multiplayer::UpdateSchedule2);
+   
+   updateSpeed();
+   updateCollision();
+   
+   $Multiplayer::UpdateSchedule2 = schedule(10, 0, mpUpdate);
 }
 
 function updateSpeed()

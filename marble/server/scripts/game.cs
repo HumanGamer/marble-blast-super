@@ -339,6 +339,7 @@ function endGame()
       return;
    }
    cancel($Multiplayer::UpdateSchedule);
+   cancel($Multiplayer::UpdateSchedule2);
    destroyGame();
 
    // Inform the clients the game is over
