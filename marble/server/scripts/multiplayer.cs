@@ -53,6 +53,8 @@ function updateGame()
       updateRotationPlatforms();
    }
    
+   updateSpeed();
+   
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
 }
 
@@ -69,6 +71,7 @@ function oobUpdate()
          commandToClient(%obj, 'OOBUpdate');
       }
    }
+   
    $Multiplayer::UpdateSchedule3 = schedule($Multiplayer::UpdateInterval, 0, oobUpdate);
 }
 
@@ -76,10 +79,9 @@ function mpUpdate()
 {
    cancel($Multiplayer::UpdateSchedule2);
    
-   updateSpeed();
    updateCollision();
    
-   $Multiplayer::UpdateSchedule2 = schedule($Multiplayer::UpdateInterval, 0, mpUpdate);
+   $Multiplayer::UpdateSchedule2 = schedule(10, 0, mpUpdate);
 }
 
 function updateSpeed()
