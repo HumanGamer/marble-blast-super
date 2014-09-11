@@ -35,7 +35,12 @@ function commandToAllExcept(%client, %func, %args, %arg1, %arg2, %arg3)
 function onGameStartup()
 {
    updateDelta();
-   updateGame();
+   
+   if (!$Client::ConnectedMultiplayer)
+   {
+      updateGame();
+   }
+   
    updateSpeed();
    updateCollision();
    oobUpdate();
@@ -63,13 +68,10 @@ function updateGame()
 {
    cancel($Multiplayer::UpdateSchedule);
    
-   if (!$Client::ConnectedMultiplayer)
-   {
-      checkHidingPlatforms();
-      checkBombs();
-      updateCannons();
-      updateRotationPlatforms();
-   }
+   checkHidingPlatforms();
+   checkBombs();
+   updateCannons();
+   updateRotationPlatforms();
    
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
 }
@@ -106,13 +108,13 @@ function updateSpeed()
       %diff = VectorScale(VectorSub(%client.lastPos, %client.player.getTransform()), 10);
       %client.lastPos = %client.player.getTransform();
       
-      if (%client.lastDiff $= %diff)
+      if (%client.lastDiff !$= "" && %client.lastDiff $= %diff)
          return;
          
       %client.lastDiff = %diff;
       %client.speed = VectorLen(%diff);
    }
-   $Multiplayer::SpeedUpdate = schedule(10, 0, updateSpeed);
+   $Multiplayer::SpeedUpdate = schedule(100, 0, updateSpeed);
 }
 
 function updateCollision()
