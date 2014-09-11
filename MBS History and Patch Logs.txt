@@ -1,4 +1,18 @@
 =========================================================
+BETA 3.0
+September 10, 2014
+
+- 2 new Beginner levels (Purple Climb and Pick your demise!)
+- 1 new Advanced level (The Trickster)
+- Added Cannon and Easter Egg
+- New Land Mine shape, seperate Marble Blast Gold mine
+- New Round Bumper shape
+- Level rebalancing
+- Changed window title to "Marble Blast Super - Dev Build"
+- Made playMissionGui select the next level if you complete the previous
+- Pillar Dance gold time changed from 10.00 to 3.00
+
+=========================================================
 BETA 2.9
 September 9, 2014
 
