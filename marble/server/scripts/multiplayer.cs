@@ -36,10 +36,7 @@ function onGameStartup()
 {
    updateGame();
    mpUpdate();
-<<<<<<< HEAD
    oobUpdate();
-=======
->>>>>>> f8463083a8d349964bc4d005eb0308c884f2dba5
 }
 
 function updateGame()
@@ -79,32 +76,10 @@ function mpUpdate()
 {
    cancel($Multiplayer::UpdateSchedule2);
    
-<<<<<<< HEAD
    updateSpeed();
    updateCollision();
    
    $Multiplayer::UpdateSchedule2 = schedule($Multiplayer::UpdateInterval, 0, mpUpdate);
-=======
-   if (!$Client::ConnectedMultiplayer)
-   {
-      checkHidingPlatforms();
-      checkBombs();
-      updateCannons();
-      updateRotationPlatforms();
-   }
-   
-   $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
-}
-
-function mpUpdate()
-{
-   cancel($Multiplayer::UpdateSchedule2);
-   
-   updateSpeed();
-   updateCollision();
-   
-   $Multiplayer::UpdateSchedule2 = schedule(10, 0, mpUpdate);
->>>>>>> f8463083a8d349964bc4d005eb0308c884f2dba5
 }
 
 function updateSpeed()
