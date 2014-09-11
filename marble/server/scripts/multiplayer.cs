@@ -149,6 +149,14 @@ function updateCollision()
          
          if (%dist < 0)
          {
+            if (%client.speed < %client2.speed || %client.lastCollision $= %client2)
+               continue;
+               
+            if (%client.speed < %client.getDatablock().minCol)
+               continue;
+            %client.lastCollision = %client2;
+            %client2.lastCollision = %client;            
+            
             %power = %obj.getDatablock().power;
             
             %reduce = %obj2.getDatablock().reduction;
@@ -167,6 +175,8 @@ function updateCollision()
             
             %obj2.client.applyImpulse(%src, %impulse);
             %obj.client.applyImpulse(%src2, %impulse2);
+         } else {
+            %client.lastCollision = "";
          }
       }
    }
