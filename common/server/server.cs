@@ -69,7 +69,10 @@ function destroyServer()
    
    cancel($Multiplayer::UpdateSchedule);
    cancel($Multiplayer::UpdateSchedule2);
+<<<<<<< HEAD
    cancel($Multiplayer::UpdateSchedule3);
+=======
+>>>>>>> f8463083a8d349964bc4d005eb0308c884f2dba5
    $Client::ConnectedMultiplayer = false;
    resetGhostVars();
    $Server::ServerType = "";
