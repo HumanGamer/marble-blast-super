@@ -69,7 +69,7 @@ function updateCollision()
    {
       %client = ClientGroup.getObject(%i);
       
-      if (!isObject(%client.player))
+      if (!isObject(%client.player) || !isObject(%client.ghost))
          continue;
          
       %obj = %client.player;
@@ -77,8 +77,10 @@ function updateCollision()
       %pos1 = %obj.getPosition();
       for (%j = 0; %j < ClientGroup.getCount(); %j++)
       {
+         if (%j == %i)
+            continue;
          %client2 = ClientGroup.getObject(%j);
-         if (!isObject(%client2.player))
+         if (!isObject(%client2.player) || !isObject(%client2.ghost))
             continue;
             
          %obj2 = %client2.player;
