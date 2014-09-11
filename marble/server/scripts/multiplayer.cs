@@ -65,44 +65,46 @@ function updateGame()
 
 function updateCollision()
 {
-   for (%i = 0; %i < MissionCleanup.getCount(); %i++)
+   for (%i = 0; %i < ClientGroup.getCount(); %i++)
    {
-      %obj = MissionCleanup.getObject(%i);
+      %client = ClientGroup.getObject(%i);
       
-      if (%obj.getClassName() $= "Marble")
+      if (!isObject(%client.player))
+         continue;
+         
+      %obj = %client.player;
+      
+      %pos1 = %obj.getPosition();
+      for (%j = 0; %j < ClientGroup.getCount(); %j++)
       {
-         %pos1 = %obj.getPosition();
-         for (%j = 0; %j < MissionCleanup.getCount(); %j++)
-         {
-            %obj2 = MissionCleanup.getObject(%j);
+         %client2 = ClientGroup.getObject(%j);
+         if (!isObject(%client2.player))
+            continue;
             
-            if (%obj2.getClassName() $= "Marble")
-            {
-               %pos2 = %obj2.getPosition();
-               
-               %dist = VectorDist(%pos1, %pos2);
-               
-               %dist -= %obj.getDatablock().radius;
-               %dist -= %obj2.getDatablock().radius;
-               
-               if (%dist < 0)
-               {
-                  %power = %obj.getDatablock().power;
-                  
-                  %reduce = %obj2.getDatablock().reduction;
-                  
-                  %src = VectorSub(%pos2, %pos1);
-                  %src2 = VectorSub(%pos1, %pos2);
-                  
-                  %impulse = VectorScale(%src, 25);
-                  %impulse2 = VectorScale(%src2, %reduce);
-                  
-                  %obj2.client.applyImpulse(%src, %impulse);
-                  %obj.client.applyImpulse(%src2, %impulse2);
-               }
-            }
-         }
+         %obj2 = %client2.player;
       
+         %pos2 = %obj2.getPosition();
+         
+         %dist = VectorDist(%pos1, %pos2);
+         
+         %dist -= %obj.getDatablock().radius;
+         %dist -= %obj2.getDatablock().radius;
+         
+         if (%dist < 0)
+         {
+            %power = %obj.getDatablock().power;
+            
+            %reduce = %obj2.getDatablock().reduction;
+            
+            %src = VectorSub(%pos2, %pos1);
+            %src2 = VectorSub(%pos1, %pos2);
+            
+            %impulse = VectorScale(%src, 25);
+            %impulse2 = VectorScale(%src2, %reduce);
+            
+            %obj2.client.applyImpulse(%src, %impulse);
+            %obj.client.applyImpulse(%src2, %impulse2);
+         }
       }
    }
 }
