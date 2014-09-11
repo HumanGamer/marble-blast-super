@@ -58,6 +58,7 @@ function updateGame()
    checkHidingPlatforms();
    checkBombs();
    updateCannons();
+   updateRotationPlatforms();
    
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
 }
