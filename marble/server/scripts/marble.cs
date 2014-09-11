@@ -491,7 +491,7 @@ function findClosestPlayer(%position, %radius)
       if (%obj.getClassName() $= "Marble")
       {
          %dist = VectorDist(%position, %obj.getPosition());
-         echo(%dist);
+         //echo(%dist);
          if (%dist > %radius)
             continue;
          if (%dist < %lastDist || %lastDist $= "")
