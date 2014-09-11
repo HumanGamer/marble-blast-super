@@ -53,6 +53,8 @@ function updateGame()
       }
    }
    
+   updateDelta();
+   updateSpeed();
    updateCollision();
    
    if (!$Client::ConnectedMultiplayer)
@@ -64,6 +66,36 @@ function updateGame()
    }
    
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
+}
+
+function updateDelta()
+{
+   if ($Game::LastLoop $= "")
+      $Game::LastLoop = getRealTime();
+   %delta = getRealTime() - $Game::LastLoop;
+   $Game::LastLoop = getRealTime();
+}
+
+function updateSpeed()
+{
+   for (%i = 0; %i < ClientGroup.getCount(); %i++)
+   {
+      %client = ClientGroup.getObject(%i);
+      if (!isObject(%client.player) || !isObject(%client.ghost))
+         continue;
+         
+      if (%client.lastPos $= "")
+         %client.lastPos = %client.player.getTransform();
+         
+      %diff = VectorScale(VectorSub(%client.lastPos, %client.player.getTransform()), 10);
+      %client.lastPos = %client.player.getTransform();
+      
+      if (%client.lastDiff $= %diff)
+         return;
+         
+      %client.lastDiff = %diff;
+      %client.speed = VectorLen(%diff);
+   }
 }
 
 function updateCollision()
@@ -101,10 +133,16 @@ function updateCollision()
             
             %reduce = %obj2.getDatablock().reduction;
             
+            %maxPower = %obj.getDatablock().maxPower;
+            
+            %speed = %client.speed + (%client2.speed * %obj.getDatablock().bounceCol);
+            
             %src = VectorSub(%pos2, %pos1);
             %src2 = VectorSub(%pos1, %pos2);
             
-            %impulse = VectorScale(%src, 25);
+            %finalPower = min(%speed * %power, %maxPower);
+            
+            %impulse = VectorScale(%src, %finalPower);
             %impulse2 = VectorScale(%src2, %reduce);
             
             %obj2.client.applyImpulse(%src, %impulse);

@@ -411,6 +411,8 @@ datablock MarbleData(DefaultMarble)
    radius = 0.27;
    reduction = 0.25;
    power = 4;
+   maxPower = 25;
+   bounceCol = 0.5;
    
    blastRechargeTime = 36000;
    maxBlastRecharge = 5500;
@@ -434,6 +436,8 @@ datablock MarbleData(MegaMarbleBall : DefaultMarble)
    radius = 0.6075;
    reduction = 2.5;
    power = 40;
+   maxPower = 80;
+   bounceCol = 0.5;
    
    blastRechargeTime = 36000;
    maxBlastRecharge = 5500;
