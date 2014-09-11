@@ -72,9 +72,9 @@ function updateCollision()
       if (%obj.getClassName() $= "Marble")
       {
          %pos1 = %obj.getPosition();
-         for (%j = 0; %j < ServerConnection.getCount(); %j++)
+         for (%j = 0; %j < MissionCleanup.getCount(); %j++)
          {
-            %obj2 = ServerConnection.getObject(%j);
+            %obj2 = MissionCleanup.getObject(%j);
             
             if (%obj2.getClassName() $= "Marble")
             {
