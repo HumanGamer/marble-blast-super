@@ -59,14 +59,14 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "2836";
+         beam = "1896";
    };
    new StaticShape(EndPoint) {
       position = "0 0 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "2685";
+         beam = "1859";
    };
    new Item() {
       position = "36 36 -4";
@@ -76,7 +76,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2834";
+         node = "1894";
    };
    new Item() {
       position = "-36 36 -4";
@@ -86,7 +86,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2835";
+         node = "1895";
    };
    new Item() {
       position = "0 48 0.5";
@@ -110,8 +110,8 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "ExplodingPlatform";
-         normalScale = "1 1 1";
          hide = "977";
+         normalScale = "1 1 1";
    };
    new Trigger() {
       position = "15.7809 50.4 -0.29494";
@@ -132,18 +132,18 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         currentTime = "1020";
+         currentTime = "1560";
+         hide = "12874";
+         normalScale = "1 1 1";
          used = "0";
          timer = "3000";
-         normalScale = "1 1 1";
-         hide = "14631";
    };
    new StaticShape() {
       position = "-11.8164 69.6036 0.158919";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Bomb";
-         currentTime = "1200";
+         currentTime = "1740";
          timer = "3000";
    };
    new StaticShape(plat1) {
@@ -151,14 +151,14 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "0 0 0";
       dataBlock = "HidingPlatform";
+         hide = "33";
+         normalScale = "1 1 1";
          used = "0";
          unhide1 = "5177";
-         Trigger = "1";
          permanent = "1";
+         Trigger = "1";
          unhide = "5176";
          hideStart = "1";
-         normalScale = "1 1 1";
-         hide = "11386";
    };
    new Trigger() {
       position = "13.1498 36.0251 -0.3";
@@ -182,12 +182,21 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Cannon";
-         currentTime = "3750";
+         currentTime = "1770";
          HEAD = "2092";
          ball = "2810";
-         radius = "20";
          timer = "5000";
+         radius = "20";
          power = "25";
+   };
+   new StaticShape() {
+      position = "19 20 0.25";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RotationPlatform";
+         currentTime = "0";
+         timer = "30";
+         inc = "1";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

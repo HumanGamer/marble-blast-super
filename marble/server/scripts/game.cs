@@ -79,6 +79,7 @@ function onServerCreated()
    // Platforms and interior doors
    exec("./pathedInteriors.cs");
    exec("./hidingPlatforms.cs");
+   exec("./rotationPlatforms.cs");
 
    // Multiplayer
    exec("./multiplayer.cs");
