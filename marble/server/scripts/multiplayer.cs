@@ -65,31 +65,48 @@ function updateGame()
 
 function updateCollision()
 {
-   for (%i = 0; %i < ServerConnection.getCount(); %i++)
+   for (%i = 0; %i < ClientGroup.getCount(); %i++)
    {
-      %obj = ServerConnection.getObject(%i);
+      %client = ClientGroup.getObject(%i);
       
-      if (%obj.getClassName() $= "Marble")
+      if (!isObject(%client.player) || !isObject(%client.ghost))
+         continue;
+         
+      %obj = %client.player;
+      
+      %pos1 = %obj.getPosition();
+      for (%j = 0; %j < ClientGroup.getCount(); %j++)
       {
-         %pos1 = %obj.getPosition();
-         for (%j = 0; %j < ServerConnection.getCount(); %j++)
-         {
-            %obj2 = ServerConnection.getObject(%j);
+         if (%j == %i)
+            continue;
+         %client2 = ClientGroup.getObject(%j);
+         if (!isObject(%client2.player) || !isObject(%client2.ghost))
+            continue;
             
-            //if (%obj2.getClassName() $= "PathedInterior" && %obj2.getDataBlock().getName() $= "HidingPlatform")
-            //{
-               //%pos2 = %obj2.getPosition();
-               //
-               //%dist = VectorDist(%pos1, %pos2);
-               //%dist -= %obj.getDatablock().radius;
-               //
-               //if (%dist <= 0)
-               //{
-                  //hidePlatform(%obj2);
-               //}
-            //}
-         }
+         %obj2 = %client2.player;
       
+         %pos2 = %obj2.getPosition();
+         
+         %dist = VectorDist(%pos1, %pos2);
+         
+         %dist -= %obj.getDatablock().radius;
+         %dist -= %obj2.getDatablock().radius;
+         
+         if (%dist < 0)
+         {
+            %power = %obj.getDatablock().power;
+            
+            %reduce = %obj2.getDatablock().reduction;
+            
+            %src = VectorSub(%pos2, %pos1);
+            %src2 = VectorSub(%pos1, %pos2);
+            
+            %impulse = VectorScale(%src, 25);
+            %impulse2 = VectorScale(%src2, %reduce);
+            
+            %obj2.client.applyImpulse(%src, %impulse);
+            %obj.client.applyImpulse(%src2, %impulse2);
+         }
       }
    }
 }
@@ -313,22 +330,22 @@ function serverCmdSendChat(%client, %msg)
    commandToAllExcept(%client, 'ReceiveChat', %msg2);
 }
 
-function onMarbleCollision(%marble, %otherGhost)
-{  
-   %otherMarble = %otherGhost.client.player;
-   
-   %reduction = %otherMarble.getDatablock().reduction;
-   %power = %marble.getDatablock().power;
-   
-   %src1 = VectorSub(%otherMarble.getPosition(), %marble.getPosition());
-   %src2 = VectorSub(%marble.getPosition(), %otherMarble.getPosition());
-   
-   %impulse1 = VectorScale(%src1, %power);
-   %impulse2 = VectorScale(%src2, %reduction);
-   
-   %otherMarble.client.applyImpulse(%src1, %impulse1);
-   %marble.client.applyImpulse(%src2, %impulse2);
-}
+//function onMarbleCollision(%marble, %otherGhost)
+//{  
+   //%otherMarble = %otherGhost.client.player;
+   //
+   //%reduction = %otherMarble.getDatablock().reduction;
+   //%power = %marble.getDatablock().power;
+   //
+   //%src1 = VectorSub(%otherMarble.getPosition(), %marble.getPosition());
+   //%src2 = VectorSub(%marble.getPosition(), %otherMarble.getPosition());
+   //
+   //%impulse1 = VectorScale(%src1, %power);
+   //%impulse2 = VectorScale(%src2, %reduction);
+   //
+   //%otherMarble.client.applyImpulse(%src1, %impulse1);
+   //%marble.client.applyImpulse(%src2, %impulse2);
+//}
 
 function VectorMult(%vector, %mult)
 {
