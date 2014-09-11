@@ -55,10 +55,13 @@ function updateGame()
    
    updateCollision();
    
-   checkHidingPlatforms();
-   checkBombs();
-   updateCannons();
-   updateRotationPlatforms();
+   if (!$Client::ConnectedMultiplayer)
+   {
+      checkHidingPlatforms();
+      checkBombs();
+      updateCannons();
+      updateRotationPlatforms();
+   }
    
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
 }
