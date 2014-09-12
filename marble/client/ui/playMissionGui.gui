@@ -22,48 +22,6 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
       visible = "1";
       helpTag = "0";
 
-      new GuiBitmapCtrl(PM_TabIntermediate) {
-         profile = "GuiDefaultProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "213 4";
-         extent = "205 58";
-         minExtent = "8 8";
-         visible = "1";
-         command = "$MissionType=\"Intermediate\";buildMissionList();";
-         helpTag = "0";
-         bitmap = "./play/tab_inter";
-         wrap = "1";
-            text = "Intermediate";
-      };
-      new GuiBitmapCtrl(PM_TabAdvanced) {
-         profile = "GuiDefaultProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "410 21";
-         extent = "166 43";
-         minExtent = "8 8";
-         visible = "1";
-         command = "$MissionType=\"Advanced\";buildMissionList();";
-         helpTag = "0";
-         bitmap = "./play/tab_adv";
-         wrap = "1";
-            text = "Advanced";
-      };
-      new GuiBitmapCtrl(PM_TabCustom) {
-         profile = "GuiDefaultProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "589 91";
-         extent = "52 198";
-         minExtent = "8 8";
-         visible = "1";
-         command = "$MissionType=\"Custom\";buildMissionList();";
-         helpTag = "0";
-         bitmap = "./play/cust_tab";
-         wrap = "0";
-            text = "Advanced";
-      };
       new GuiBitmapCtrl(PM_Box) {
          profile = "GuiDefaultProfile";
          horizSizing = "width";
@@ -97,7 +55,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
-            bitmap = "~/data/missions/testMission";
+            bitmap = "~/data/missions/beginner/yellow_corner";
             wrap = "0";
 
             new GuiControl(PM_NoQualOverlay) {
@@ -107,7 +65,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                position = "-10 -10";
                extent = "277 241";
                minExtent = "8 8";
-               visible = "1";
+               visible = "0";
                helpTag = "0";
             };
             new GuiBitmapCtrl() {
@@ -153,7 +111,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                   horizSizing = "right";
                   vertSizing = "bottom";
                   position = "0 78";
-                  extent = "254 32";
+                  extent = "254 14";
                   minExtent = "8 8";
                   visible = "1";
                   helpTag = "0";
@@ -204,7 +162,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "0 0";
-            extent = "80 16";
+            extent = "80 176";
             minExtent = "8 8";
             visible = "0";
             helpTag = "0";
@@ -238,7 +196,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "50 107";
-            extent = "215 136";
+            extent = "215 173";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -335,111 +293,6 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             repeatDecay = "1";
             bitmap = "./play/BTL";
          };
-      };
-      new GuiBitmapCtrl(PM_TabBeginner) {
-         profile = "GuiDefaultProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "29 2";
-         extent = "184 55";
-         minExtent = "8 8";
-         visible = "1";
-         command = "$MissionType=\"Beginner\";buildMissionList();";
-         helpTag = "0";
-         bitmap = "./play/tab_begin";
-         wrap = "1";
-            text = "Beginner";
-      };
-      new GuiControl(PM_TabButtons) {
-         profile = "GuiDefaultProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "-4 2";
-         extent = "631 61";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-
-         new GuiButtonBaseCtrl() {
-            profile = "GuiDefaultProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "577 18";
-            extent = "43 40";
-            minExtent = "8 8";
-            visible = "1";
-            command = "$MissionType=\"\";buildMissionList();";
-            helpTag = "0";
-            text = "Button";
-            groupNum = "-1";
-            buttonType = "PushButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-         };
-         new GuiButtonBaseCtrl() {
-            profile = "GuiDefaultProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "428 22";
-            extent = "142 36";
-            minExtent = "8 8";
-            visible = "1";
-            command = "PMSetMissionTab(\"Advanced\");";
-            helpTag = "0";
-            text = "Button";
-            groupNum = "-1";
-            buttonType = "PushButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-         };
-         new GuiButtonBaseCtrl() {
-            profile = "GuiDefaultProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "236 6";
-            extent = "183 52";
-            minExtent = "8 8";
-            visible = "1";
-            command = "PMSetMissionTab(\"Intermediate\");";
-            helpTag = "0";
-            text = "Button";
-            groupNum = "-1";
-            buttonType = "PushButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-         };
-         new GuiButtonBaseCtrl() {
-            profile = "GuiDefaultProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "62 7";
-            extent = "141 50";
-            minExtent = "8 8";
-            visible = "1";
-            command = "PMSetMissionTab(\"Beginner\");";
-            helpTag = "0";
-            text = "Button";
-            groupNum = "-1";
-            buttonType = "PushButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-         };
-      };
-      new GuiButtonBaseCtrl(PM_TabButtons2) {
-         profile = "GuiDefaultProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "597 106";
-         extent = "42 171";
-         minExtent = "8 8";
-         visible = "1";
-         command = "PMSetMissionTab(\"Custom\");";
-         helpTag = "0";
-         text = "Button";
-         groupNum = "-1";
-         buttonType = "PushButton";
-         repeatPeriod = "1000";
-         repeatDecay = "1";
       };
    };
    new GuiButtonBaseCtrl() {
