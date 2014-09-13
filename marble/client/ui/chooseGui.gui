@@ -36,7 +36,6 @@ new GuiChunkedBitmapCtrl(chooseGui) {
       extent = "638 480";
       minExtent = "8 8";
       visible = "1";
-      //command = "PM_StartMission();";
       helpTag = "0";
       bitmap = "./choose/chooseGui.png";
       wrap = "0";
@@ -57,6 +56,23 @@ new GuiChunkedBitmapCtrl(chooseGui) {
          repeatPeriod = "1000";
          repeatDecay = "1";
          bitmap = "./choose/medium";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 276";
+         extent = "284 91";
+         minExtent = "8 8";
+         visible = "1";
+         command = "$MissionType=\"Tutorial\";Canvas.setContent(playMissionGui);";
+         helpTag = "0";
+         text = "Tutorial";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./choose/tutorial";
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiDefaultProfile";

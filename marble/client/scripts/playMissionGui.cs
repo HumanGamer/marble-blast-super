@@ -1,19 +1,14 @@
 function playMissionGui::onWake(%this)
 {
    buildMissionList();
-
-   //if ($LastMissionId $= "" || $LastMissionType !$= %mission.type)
-   //   $LastMissionId = 0;   
-   //PM_setSelected($LastMissionId);
 }
 
 function PM_StartMission()
 {
    %id = PM_missionList.getSelectedId();
-   %mission = PM_missionList.getRowTextById(%id);//getField(PM_missionList.getRowTextById(%id), 1);
+   %mission = PM_missionList.getRowTextById(%id);
    $LastMissionId = %id;
    $LastMissionType = %mission.type;
-   $WonLast = false;
 
    if ($pref::Multiplayer::isMultiplayer)
       %serverType = "MultiPlayer";
@@ -38,7 +33,7 @@ function PM_skipQualify()
    %mission = getField(PM_missionList.getRowTextById(%id), 1);
    if (%id - 1 == $pref::QualifiedLevel[$MissionType])
       $pref::QualifiedLevel[$MissionType]++;
-   PM_setSelected(%id - 1);
+   PM_setSelected(%id);
 }
 
 function buildMissionList()
@@ -47,7 +42,7 @@ function buildMissionList()
       RootGroup.add(new SimGroup(PlayMissionGroup));
    PM_missionList.clear();
    if ($MissionType $= "")
-      $MissionType = "Beginner";
+      $MissionType = "Tutorial";
    if (isObject("MTYPE_" @ $MissionType))
       ("MTYPE_" @ $MissionType).clear();
    %index = 0;
@@ -75,7 +70,7 @@ function buildMissionList()
    
    if ($LastMissionId $= "" || $LastMissionType !$= $MissionType)
       $LastMissionId = 0;
-   if ($LastMissionId !$= "" && $LastMissionType $= $MissionType && $WonLast)
+   if ($LastMissionId !$= "" && $LastMissionType $= $MissionType && $Game::Qualified)
          $LastMissionId++; 
    if ($LastMissionId > %group.getCount() - 1)
       $LastMissionId = %group.getCount() - 1;
@@ -83,12 +78,12 @@ function buildMissionList()
       $LastMissionId = 0;
    PM_setSelected($LastMissionId);
    LB_SetSelected($LastMissionId);
-   
-   $WonLast = false;
 }
 
 function sortByLevel(%group)
 {
+   if (%group.getCount() <= 0)
+      return;
    %new = new SimGroup();
    while ((%obj = %group.getObject(0)) != -1)
    {
@@ -112,8 +107,6 @@ function sortByLevel(%group)
    }
    %new.delete();
    
-   
-   
    for (%i = 0; %i < %group.getCount(); %i++)
    {
       %level = %group.getObject(%i).level;
@@ -133,8 +126,8 @@ function PM_setSelected(%index)
    %group = "MTYPE_" @ $MissionType;
    if (!isObject(%group))
    {
-      $MissionType = "Beginner";
-      %group = MTYPE_beginner;
+      $MissionType = "Tutorial";
+      %group = MTYPE_tutorial;
    }
    if (%group.getCount() == 0)
    {
@@ -149,8 +142,7 @@ function PM_setSelected(%index)
       PM_level_fgnd.setText("<color:FFFFFF><font:DomCasualD:24><just:center>" @ $MissionType);
       return;
    }
-   //%mission = %group.getObject(%index);
-   %mission = PM_missionList.getRowTextById(%index);//getField(PM_missionList.getRowTextById(%index), 1);
+   %mission = PM_missionList.getRowTextById(%index);
    %name = "<color:000000><spush><font:Arial Bold:24>" @ %mission.name @ "<spop><lmargin:10>\n\n";
    if (%mission.time)
       %qualify = "<spush><font:Arial:20><lmargin:0>Spare Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n\n";
@@ -248,6 +240,8 @@ function getMissionObject(%mission) {
 	%infoObject = "%infoObject = " @ %infoObject;
 	eval(%infoObject);
 	
+	if (!isObject(MTYPE_tutorial))
+	   PlayMissionGroup.add(new SimGroup(MTYPE_tutorial));
 	if (!isObject(MTYPE_beginner))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_beginner));
    if (!isObject(MTYPE_intermediate))
@@ -261,7 +255,7 @@ function getMissionObject(%mission) {
    if (!isObject(MTYPE_multiplayer))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_multiplayer));
 	   
-   if (%infoObject.type !$= "beginner" && %infoObject.type !$= "intermediate" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert" && %infoObject.type !$= "multiplayer")
+   if (%infoObject.type !$= "tutorial" && %infoObject.type !$= "beginner" && %infoObject.type !$= "intermediate" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert" && %infoObject.type !$= "multiplayer")
       %infoObject.type = "custom";
    eval("MTYPE_" @ %infoObject.type @ ".add(%infoObject);");
 	
@@ -270,12 +264,29 @@ function getMissionObject(%mission) {
 	return %infoObject;
 }
 
-//function toggleMultiplayer()
-//{
-   //if ($pref::Multiplayer::isMultiplayer)
-   //{
-      //JoinServerButton.setVisible(true);
-   //} else {
-      //JoinServerButton.setVisible(false);
-   //}
-//}
+function onDemoPlay(%misFile)
+{
+	$playingDemo = true;
+	
+	if ($Server::ServerType $= "") {
+      createServer("SinglePlayer", %misFile);
+      %conn = new GameConnection(ServerConnection);
+      %conn.setConnectArgs($pref::Player::Name);
+      %conn.setJoinPassword($Client::Password);
+      %conn.connectLocal();
+   }
+   else
+      loadMission(%misFile);
+}
+
+function onDemoPlayDone(%forced)
+{
+	$playingDemo = false;
+	disconnect();
+	if (%forced)
+	{
+		Canvas.setContent(MainMenuGui);
+	} else {
+		runPresentation();
+	}
+}
