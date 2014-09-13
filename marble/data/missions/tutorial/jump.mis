@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          time = "0";
          desc = "If you can\'t jump, where can you go?";
          type = "Tutorial";
-         level = "4";
+         level = "2";
          goldTime = "6000";
    };
    new MissionArea(MissionArea) {

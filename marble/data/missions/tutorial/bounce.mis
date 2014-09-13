@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          desc = "Expect the unexpected...";
          name = "Tricky Platforms";
          goldTime = "6000";
-         level = "3";
+         level = "4";
          artist = "Ender";
          type = "Tutorial";
    };

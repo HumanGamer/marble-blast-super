@@ -3,7 +3,7 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          startHelpText = "You must collect all the gems or you won\'t be able to finish!";
-         level = "5";
+         level = "3";
          artist = "Ender";
          name = "Marbles that are rich";
          time = "0";
