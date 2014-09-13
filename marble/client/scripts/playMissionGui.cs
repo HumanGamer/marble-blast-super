@@ -6,7 +6,7 @@ function playMissionGui::onWake(%this)
 function PM_StartMission()
 {
    %id = PM_missionList.getSelectedId();
-   %mission = PM_missionList.getRowTextById(%id);
+   %mission = getField(PM_missionList.getRowTextById(%id), 1);
    $LastMissionId = %id;
    $LastMissionType = %mission.type;
 
@@ -39,30 +39,37 @@ function PM_skipQualify()
 function buildMissionList()
 {
    if (!isObject(PlayMissionGroup))
-      RootGroup.add(new SimGroup(PlayMissionGroup));
+   {
+      new SimGroup(PlayMissionGroup);
+      RootGroup.add(PlayMissionGroup);
+   }
    PM_missionList.clear();
+   
    if ($MissionType $= "")
       $MissionType = "Tutorial";
+      
    if (isObject("MTYPE_" @ $MissionType))
       ("MTYPE_" @ $MissionType).clear();
-   %index = 0;
+      
    for (%file = findFirstFile($Server::MissionFileSpec);
          %file !$= ""; %file = findNextFile($Server::MissionFileSpec))
    {
       if (strStr(%file, "CVS/") == -1 && strStr(%file, "common/") == -1)
       {
-         %mission = getMissionObject(%file);
-         if (%mission.type $= $MissionType)
-         {
-            PM_missionList.addRow(%index, %mission);
-            %index++;
-         }
+         getMissionObject(%file);
       }
    }
-   PM_missionList.sortNumerical(0);
+   
    %group = "MTYPE_" @ $MissionType;
+   
    sortByLevel(%group);
-   sortByLevel(%group);
+   
+   for (%i = 0; %i < %group.getCount(); %i++)
+   {
+      %mission = %group.getObject(%i);
+      PM_missionList.addRow(%i, %mission.level TAB %mission);
+   }
+   
    //%level = $pref::QualifiedLevel[$MissionType] - 1;
    //if (%level >= %group.getCount())
    //   %level = %group.getCount() - 1;
@@ -70,55 +77,50 @@ function buildMissionList()
    
    if ($LastMissionId $= "" || $LastMissionType !$= $MissionType)
       $LastMissionId = 0;
+      
    if ($LastMissionId !$= "" && $LastMissionType $= $MissionType && $Game::Qualified)
          $LastMissionId++; 
+         
    if ($LastMissionId > %group.getCount() - 1)
       $LastMissionId = %group.getCount() - 1;
+      
    if ($LastMissionId < 0)
       $LastMissionId = 0;
+      
    PM_setSelected($LastMissionId);
-   LB_SetSelected($LastMissionId);
 }
 
-function sortByLevel(%group)
+function sortByLevel(%grp)
 {
-   if (%group.getCount() <= 0)
+   if (%grp.getCount() <= 0)
       return;
-   %new = new SimGroup();
-   while ((%obj = %group.getObject(0)) != -1)
+   %ngrp = new SimGroup();
+   while ((%obj = %grp.getObject(0)) != -1)
    {
-      %new.add(%obj);
+      %ngrp.add(%obj);
+      if (%grp.getCount() <= 0)
+         break;
    }
-   while (%new.getCount() != 0)
+   
+   while (%ngrp.getCount() != 0)
    {
-      %lowestLevel = %new.getObject(0).level;
+      %lowestLevel = %ngrp.getObject(0).level;
+      
       %lowestIndex = 0;
-      for (%i = 0; %i < %new.getCount(); %i++)
+      for (%i = 1; %i < %ngrp.getCount(); %i++)
       {
-         %level = %new.getObject(%i).level;
+         %level = %ngrp.getObject(%i).level;
          if (%lowestLevel > %level)
          {
             %lowestIndex = %i;
             %lowestLevel = %level;
          }
       }
-      %group.add(%new.getObject(%lowestIndex));
       
+      %obj = %ngrp.getObject(%lowestIndex);
+      %grp.add(%obj);
    }
-   %new.delete();
-   
-   for (%i = 0; %i < %group.getCount(); %i++)
-   {
-      %level = %group.getObject(%i).level;
-      if (%i > 0)
-      {
-         %olevel = %group.getObject(%i - 1).level;
-         if (%level == %olevel)
-         {
-            %group.getObject(%i).level++;
-         }
-      }
-   }
+   %ngrp.delete();
 }
 
 function PM_setSelected(%index)
@@ -142,7 +144,7 @@ function PM_setSelected(%index)
       PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ $MissionType);
       return;
    }
-   %mission = PM_missionList.getRowTextById(%index);
+   %mission = getField(PM_missionList.getRowTextById(%index), 1);
    %name = "<color:000000><spush><font:Animated:24>" @ %mission.name @ "<spop><lmargin:10>\n\n";
    if (%mission.time)
       %qualify = "<spush><font:Animated:20><lmargin:0>Spare Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n\n";
@@ -266,54 +268,25 @@ function getMissionObject(%mission) {
 
 function onDemoPlay(%misFile)
 {
-	$playingDemo = true;
-	
-	if ($Server::ServerType $= "") {
-      createServer("SinglePlayer", %misFile);
-      %conn = new GameConnection(ServerConnection);
-      %conn.setConnectArgs($pref::Player::Name);
-      %conn.setJoinPassword($Client::Password);
-      %conn.connectLocal();
-   }
-   else
-      loadMission(%misFile);
+   $playingDemo = true;
+   createServer("SinglePlayer", %misFile);
+   %conn = new GameConnection(ServerConnection);
+   RootGroup.add(ServerConnection);
+   %conn.setConnectArgs($pref::Player::Name);
+   %conn.setJoinPassword($Client::Password);
+   %conn.connectLocal();
 }
 
 function onDemoPlayDone(%forced)
 {
-	$playingDemo = false;
-	disconnect();
-	if (%forced)
-	{
-		Canvas.setContent(MainMenuGui);
-	} else {
-		runPresentation();
-	}
-}
+   $playingDemo = false;
+   disconnect();
 
-function onDemoPlay(%misFile)
-{
-	$playingDemo = true;
-	
-	if ($Server::ServerType $= "") {
-      createServer("SinglePlayer", %misFile);
-      %conn = new GameConnection(ServerConnection);
-      %conn.setConnectArgs($pref::Player::Name);
-      %conn.setJoinPassword($Client::Password);
-      %conn.connectLocal();
+   if( %forced || $seeItPlayedDemo )
+   {
+      Canvas.setContent($DemoStartGui);
+      $seeItPlayedDemo = false;
    }
    else
-      loadMission(%misFile);
-}
-
-function onDemoPlayDone(%forced)
-{
-	$playingDemo = false;
-	disconnect();
-	if (%forced)
-	{
-		Canvas.setContent(MainMenuGui);
-	} else {
-		runPresentation();
-	}
+      runPresentation();
 }

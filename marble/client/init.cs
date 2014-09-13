@@ -36,6 +36,8 @@ function initClient()
    $Server::Dedicated = false;
 
    // Default level qualification
+   if (!$pref::QualifiedLevel["Tutorial"])
+      $pref::QualifiedLevel["Tutorial"] = 1000;
    if (!$pref::QualifiedLevel["Beginner"])
       $pref::QualifiedLevel["Beginner"] = 1;
    if (!$pref::QualifiedLevel["Intermediate"])

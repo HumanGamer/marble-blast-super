@@ -15,10 +15,11 @@ $pref::Player::zoomSpeed = 0;
 
 $pref::MarbleIndex = 0;
 
+$pref::QualifiedLevel["Tutorial"] = 1000;
 $pref::QualifiedLevel["Beginner"] = 1;
 $pref::QualifiedLevel["Intermediate"] = 1;
 $pref::QualifiedLevel["Advanced"] = 1;
-$pref::QualifiedLevel["Multiplayer"] = 1;
+$pref::QualifiedLevel["Multiplayer"] = 1000;
 $pref::QualifiedLevel["Custom"] = 1000;
 
 $pref::checkMOTDAndVersion = "1"; // check the version by default
