@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          time = "0";
          type = "Tutorial";
-         goldTime = "5000";
+         goldTime = "3000";
 	 startHelpText = "Use the WASD keys to move your marble!";
          desc = "Welcome to Marble Blast Super! Learn how to roll in this level.";
          level = "1";
