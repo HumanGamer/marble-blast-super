@@ -81,8 +81,8 @@ function reformatGameEndText()
    // Final Score
    %text = 
       "<shadow:1:1><tab:240,250>" @
-      "<font:Arial:39><color:ffff00>Final Time:\t<color:fff090>" @
-      formatTime($Game::ScoreTime) @ "<color:000000><font:Arial:28>\n<just:center>";
+      "<font:Whitestone:39><color:ffff00>Final Time:\t<color:fff090>" @
+      formatTime($Game::ScoreTime) @ "<color:000000><font:Whitestone:28>\n<just:center>";
 
    // Qualification time
    if($Game::Qualified)
@@ -95,33 +95,33 @@ function reformatGameEndText()
 
    // Basic time info
    %text = %text @
-      "\n<just:left><font:Arial:14>\n<lmargin:65><tab:235,245><shadowcolor:ffffff7f><shadow:1:1>";
+      "\n<just:left><font:Whitestone:14>\n<lmargin:65><tab:235,245><shadowcolor:ffffff7f><shadow:1:1>";
    if (MissionInfo.time)
       %text = %text @
          "<color:ff0000>" @
-         "<font:Arial:28>Spare Time:\t" @
+         "<font:Whitestone:28>Spare Time:\t" @
          ($Game::Qualified? "<shadowcolor:ffffff7f><color:000000>": "<shadowcolor:0000007f><color:ff0000>") @
          formatTime(MissionInfo.time) @ "\n";
    else
-      %text = %text @ "<color:22a9bb><font:Arial:28>Spare Time:\t\t99:59.99\n";
+      %text = %text @ "<color:22a9bb><font:Whitestone:28>Spare Time:\t\t99:59.99\n";
 
    if(MissionInfo.goldTime)
    {
-      %text = %text @ "<shadowcolor:ffffff7f><color:05ff91><font:Arial:28>Super Time:\t<color:05ff91><shadowcolor:0000007f>" @
+      %text = %text @ "<shadowcolor:ffffff7f><color:05ff91><font:Whitestone:28>Super Time:\t<color:05ff91><shadowcolor:0000007f>" @
          formatTime(MissionInfo.goldTime) @ "\n";
    }
 
    %text = %text @
       "<shadowcolor:ffffff7f><color:000000>" @
-      "<font:Arial:28>Elapsed Time:\t" @ formatTime($Game::ElapsedTime)  @ "\n" @
-      "<font:Arial:28>Bonus Time:\t" @ formatTime($Game::BonusTime) @ "\n";
-   %text = %text @ "<font:Arial:14>\n<font:DomCasualD:32><color:000000>Best Times:\n";
+      "<font:Whitestone:28>Elapsed Time:\t" @ formatTime($Game::ElapsedTime)  @ "\n" @
+      "<font:Whitestone:28>Bonus Time:\t" @ formatTime($Game::BonusTime) @ "\n";
+   %text = %text @ "<font:Whitestone:14>\n<font:Whitestone:32><color:000000>Best Times:\n";
    for(%i = 0; %i < 3; %i++)
    {
       %time = getField($hs[%i], 0);
       %name = getField($hs[%i], 1);
       %text = %text 
-         @ "<shadowcolor:ffffff7f><color:000000><font:DomCasualD:32>" @ %i+1 @ ". " @ %name @ "\t" 
+         @ "<shadowcolor:ffffff7f><color:000000><font:Whitestone:32>" @ %i+1 @ ". " @ %name @ "\t" 
          @ (%time < MissionInfo.goldTime ? "<shadowcolor:0000007f><color:ffff00>" : "") @ formatTime(%time) @ "\n";
    }
    // Display the end-game screen

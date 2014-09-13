@@ -133,27 +133,27 @@ function PM_setSelected(%index)
    {
       PM_play.setActive(false);
       PM_NoQualOverlay.setVisible(true);
-      PM_NoQualText.setText("<color:CCCCCC><font:DomCasualD:32><just:center>No" SPC $MissionType SPC "Levels!");
+      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No" SPC $MissionType SPC "Levels!");
       PM_next.setActive(false);
       PM_prev.setActive(false);
       PM_preview.setBitmap("");
       PM_description.setText("");
-      PM_level_bkgnd.setText("<color:000000><font:DomCasualD:24><just:center>" @ $MissionType);
-      PM_level_fgnd.setText("<color:FFFFFF><font:DomCasualD:24><just:center>" @ $MissionType);
+      PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ $MissionType);
+      PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ $MissionType);
       return;
    }
    %mission = PM_missionList.getRowTextById(%index);
-   %name = "<color:000000><spush><font:Arial Bold:24>" @ %mission.name @ "<spop><lmargin:10>\n\n";
+   %name = "<color:000000><spush><font:Animated:24>" @ %mission.name @ "<spop><lmargin:10>\n\n";
    if (%mission.time)
-      %qualify = "<spush><font:Arial:20><lmargin:0>Spare Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n\n";
+      %qualify = "<spush><font:Animated:20><lmargin:0>Spare Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n\n";
    if (%mission.artist !$= "")
    {
-      %author = "<spush><font:Arial Bold:18>" @ %mission.artist @ "<spop>\n\n";
+      %author = "<spush><font:Animated:18>" @ %mission.artist @ "<spop>\n\n";
    } else {
-      %author = "<spush><font:Arial Bold:18>" @ "Unknown Artist" @ "<spop>\n\n";
+      %author = "<spush><font:Animated:18>" @ "Unknown Artist" @ "<spop>\n\n";
    }
    %desc = %mission.desc @ "\n\n";
-   %best = "<spush><font:Arial:20>Your best times:<spop><lmargin:10><tab:0,130,180><font:Arial Bold:14>\n";
+   %best = "<spush><font:Animated:20>Your best times:<spop><lmargin:10><tab:0,130,180><font:Arial Bold:14>\n";
    getBestTimes(%mission.file);
    %total = "";
    for (%i = 0; %i < 3; %i++)
@@ -172,14 +172,14 @@ function PM_setSelected(%index)
    if (%index >= %group.getCount() - 1) PM_next.setActive(false); else PM_next.setActive(true);
    PM_prev.command = "PM_setSelected(" @ %index - 1 @ ");";
    PM_next.command = "PM_setSelected(" @ %index + 1 @ ");";
-   PM_level_bkgnd.setText("<color:000000><font:DomCasualD:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
-   PM_level_fgnd.setText("<color:FFFFFF><font:DomCasualD:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
+   PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
+   PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
    PM_missionList.setSelectedById(%index);
    if (%index > $pref::QualifiedLevel[$MissionType] && !$testCheats)
    {
       PM_play.setActive(false);
       PM_NoQualOverlay.setVisible(true);
-      PM_NoQualText.setText("<color:CCCCCC><font:Arial:32><just:center>You haven't unlocked this level yet.");
+      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>You haven't unlocked this level yet.");
    }
    else
    {
@@ -191,7 +191,7 @@ function PM_setSelected(%index)
    if (!isFile(%bmp @ ".png") && !isFile(%bmp @ ".jpg"))
    {
       PM_NoQualOverlay.setVisible(true);
-      PM_NoQualText.setText("<color:CCCCCC><font:Arial:32><just:center>No Preview!");
+      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No Preview!");
    }
 }
 

@@ -114,7 +114,7 @@ function chatFade(%fade)
 function addChatLine(%message)
 {
    if (getWordCount(%message)) {
-      %text = "<just:center><font:DomCasualD:32>" @ %message;
+      %text = "<just:center><font:Whitestone:32>" @ %message;
       ChatTextBackground.setText("<color:000000>" @ %text);
       ChatTextForeground.setText(%text);
 

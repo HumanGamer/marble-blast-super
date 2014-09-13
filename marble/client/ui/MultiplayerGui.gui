@@ -28,8 +28,8 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "305 46";
-         extent = "146 45";
+         position = "305 51";
+         extent = "146 44";
          minExtent = "8 8";
          visible = "1";
          command = "$pref::Multiplayer::isMultiplayer=1; PMSetMissionTab(\"multiplayer\"); connectTo();";
@@ -45,8 +45,8 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "312 -5";
-         extent = "143 63";
+         position = "312 -4";
+         extent = "143 62";
          minExtent = "8 8";
          visible = "1";
          command = "$pref::Multiplayer::isMultiplayer=1;PMSetMissionTab(\"multiplayer\");Canvas.setContent(LobbyGui);";
@@ -62,8 +62,8 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "325 391";
-         extent = "147 49";
+         position = "325 390";
+         extent = "147 50";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.setContent(mainMenuGui);";
@@ -79,8 +79,8 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "291 72";
-         extent = "163 75";
+         position = "291 89";
+         extent = "163 62";
          minExtent = "8 8";
          visible = "1";
          command = "$pref::Multiplayer::isMultiplayer=1; connectRandom();";
