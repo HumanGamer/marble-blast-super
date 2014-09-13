@@ -6,7 +6,7 @@ new SimGroup(MissionGroup) {
          name = "Hazard Ascent";
          artist = "davidjl123";
          desc = "Can you make it to the top?";
-         type = "Intermediate";
+         type = "Expert";
          level = "5";
    };
    new MissionArea(MissionArea) {
@@ -51,7 +51,7 @@ new SimGroup(MissionGroup) {
       position = "-21.3369 -10.9651 14.4305";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/hazardascent.dif";
+      interiorFile = "~/data/interiors/expert/hazardascent.dif";
       showTerrainInside = "0";
    };
    new StaticShape(StartPoint) {
