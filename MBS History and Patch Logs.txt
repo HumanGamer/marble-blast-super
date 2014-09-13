@@ -1,4 +1,15 @@
 =========================================================
+BETA 3.1
+September 13, 2014
+
+- 4 new levels (Danger Castle, Hazard Ascent, Spinning Insanity, and Tricky Platforms)
+- 1 modified Beginner level (Whatever Goes Up) (MBG mines)
+- Added Rotating Platform
+- Added Tutorial difficulty
+- Work on collision and multiplayer
+- playMissionGui.gui changes
+
+=========================================================
 BETA 3.0
 September 10, 2014
 

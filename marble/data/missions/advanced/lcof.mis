@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          time = "0";
          startHelpText = "Can you beat this level without smashing off at least a part of your monitor?";
          desc = "You are so screwed.";
-         level = "5";
+         level = "2";
          name = "The Trickster";
    };
    new MissionArea(MissionArea) {
