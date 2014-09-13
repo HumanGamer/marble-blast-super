@@ -860,6 +860,7 @@ function restartLevel()
       
       %client.respawnPlayer();
    }
+   onGameStartup();
    //LocalClientConnection.respawnPlayer();
 }
 

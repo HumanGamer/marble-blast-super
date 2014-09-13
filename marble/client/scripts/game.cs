@@ -31,9 +31,6 @@ function clientCmdGameEnd()
 {
    if($playingDemo)
       return;
-      
-   if ($Game::ScoreTime < MissionInfo.time || !MissionInfo.time)
-      $WonLast = true;
 
    getBestTimes($Server::MissionFile);
    $highScoreIndex = "";
