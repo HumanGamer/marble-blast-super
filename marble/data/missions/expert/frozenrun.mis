@@ -245,7 +245,7 @@ new SimGroup(MissionGroup) {
       position = "41.5503 -11.3991 6.6743";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/frozenrun.dif";
+      interiorFile = "~/data/interiors/expert/frozenrun.dif";
       showTerrainInside = "0";
    };
    new Item() {
