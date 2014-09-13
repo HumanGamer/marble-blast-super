@@ -104,7 +104,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          minExtent = "8 8";
          visible = "1";
          //command = "StopDemoTimer(); 
-         command = "Canvas.setContent(startmissiongui);";
+         command = "Canvas.setContent(creditsGui);";
          helpTag = "0";
          text = "highscore";
          groupNum = "-1";
@@ -146,3 +146,49 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
    };
 };
 //--- OBJECT WRITE END ---
+
+function StartDemoTimer()
+{
+   $LastInputEventTime = getSimTime();
+   
+   // Disabled Demos for now as they can break multiplayer
+   //$DemoTimerEvent = schedule(1000, 0, "checkDemoPlay");
+}
+
+function checkDemoPlay()
+{
+   if($LastInputEventTime + 10000 < getSimTime())
+      playNextDemo();
+   else
+      $DemoTimerEvent = schedule(1000, 0, "checkDemoPlay");
+}
+
+function StopDemoTimer()
+{
+   cancel($DemoTimerEvent);
+}
+
+function playNextDemo()
+{
+   if($NumDemoFiles != 0)
+   {
+      playDemo($DemoFile[$NextDemoFile]);
+      $NextDemoFile++;
+      if($NextDemoFile >= $NumDemoFiles)
+         $NextDemoFile = 0;
+   }
+}
+
+function buildDemoList()
+{
+   if($NumDemoFiles != 0)
+      return;
+
+   $NumDemoFiles = 0;
+   $NextDemoFile = 0;
+   for(%file = findFirstFile("*.rec"); %file !$= ""; %file = findNextFile("*.rec"))
+   {
+      $DemoFile[$NumDemoFiles] = %file;
+      $NumDemoFiles++;
+   }
+}

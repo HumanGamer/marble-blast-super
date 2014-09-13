@@ -1,0 +1,45 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiFadeinBitmapCtrl(presentsGui) {
+   profile = "GuiInputCtrlProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "marble/client/ui/presents";
+   useVariable = "0";
+   tile = "0";
+   fadeinTime = "125";
+   waitTime = "2500";
+   fadeoutTime = "125";
+   done = "0";
+      wrap = "0";
+      skip = "1";
+};
+//--- OBJECT WRITE END ---
+
+function runPresentation()
+{
+   Canvas.setContent(presentsGui);
+   startVersionCheck();
+   startMotdCheck();
+   schedule(100, 0, checkPresentationDone);
+}
+
+function checkPresentationDone()
+{
+   if (presentsGui.done)
+   {
+      runProduction();
+   }
+   
+   if (!presentsGui.done)
+      schedule(100, 0, checkPresentationDone);
+}
+
+function presentsGui::click(%this)
+{
+   runIgnition();
+}

@@ -224,8 +224,10 @@ function connectRandom()
    //$connectRandSchedule = schedule(2500, 0, continueConnectRandom);
 }
 
-function onServerQueryStatus()
+function onServerQueryStatus(%status, %msg, %value)
 {
+	if (%status !$= "done")
+		return;
    if (getServerCount() > 0)
    {
       %rand = getRandom(0, getServerCount());
@@ -236,7 +238,7 @@ function onServerQueryStatus()
          $connectDelay = schedule(2500, 0, connect, $ServerInfo::Address);
       }
    } else {
-      Canvas.setContent(MainMenuGui);
+      Canvas.setContent(MultiplayerGui);
       MessageBoxOK("Information", "No Games Avaliable", "");
    }
 }

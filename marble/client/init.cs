@@ -80,8 +80,9 @@ function initClient()
       exec("./ui/playMissionGui.gui");
       exec("./ui/mainMenuGui.gui");
    }
+   exec("./ui/creditsGui.gui");
    exec("./ui/aboutDlg.gui");
-      exec("./ui/startMissionGui.gui");      // to be deleted
+   exec("./ui/startMissionGui.gui");
    exec("./ui/chooseGui.gui");
    //exec("./ui/joinServerGui.gui");
    exec("./ui/endGameGui.gui");

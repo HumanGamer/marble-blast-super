@@ -290,3 +290,30 @@ function onDemoPlayDone(%forced)
 		runPresentation();
 	}
 }
+
+function onDemoPlay(%misFile)
+{
+	$playingDemo = true;
+	
+	if ($Server::ServerType $= "") {
+      createServer("SinglePlayer", %misFile);
+      %conn = new GameConnection(ServerConnection);
+      %conn.setConnectArgs($pref::Player::Name);
+      %conn.setJoinPassword($Client::Password);
+      %conn.connectLocal();
+   }
+   else
+      loadMission(%misFile);
+}
+
+function onDemoPlayDone(%forced)
+{
+	$playingDemo = false;
+	disconnect();
+	if (%forced)
+	{
+		Canvas.setContent(MainMenuGui);
+	} else {
+		runPresentation();
+	}
+}

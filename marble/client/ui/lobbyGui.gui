@@ -123,7 +123,7 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
          extent = "220 30";
          minExtent = "8 8";
          visible = "1";
-         command = "disconnect();";
+         command = "disconnect();Canvas.setContent(MultiplayerGui);";
          helpTag = "0";
          text = "Disconnect";
          groupNum = "-1";

@@ -1,0 +1,46 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(CreditsGui) {
+   profile = "GuiContentProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./creditbg.png";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "8 6";
+      extent = "623 467";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./credits/credits_gui";
+      wrap = "0";
+
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "428 371";
+         extent = "140 51";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.setContent(mainMenuGui);";
+         helpTag = "0";
+         text = "button";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./home/back";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

@@ -8,39 +8,183 @@ new GuiChunkedBitmapCtrl(startMissionGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "./creditbg.png";
+   bitmap = "./client/ui/background.jpg";
    useVariable = "0";
    tile = "0";
 
-   new GuiBitmapCtrl() {
-      profile = "GuiDefaultProfile";
+   new GuiControl() {
+      profile = "GuiWindowProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "8 6";
-      extent = "623 467";
+      position = "60 74";
+      extent = "455 308";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "./credits/credits_gui";
-      wrap = "0";
 
-      new GuiBitmapButtonCtrl() {
-         profile = "GuiDefaultProfile";
-         horizSizing = "relative";
-         vertSizing = "relative";
-         position = "428 371";
-         extent = "140 51";
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "12 36";
+         extent = "90 20";
          minExtent = "8 8";
          visible = "1";
-         command = "Canvas.setContent(mainMenuGui);";
          helpTag = "0";
-         text = "button";
+         text = "Select Mission:";
+         maxLength = "255";
+      };
+      new GuiCheckBoxCtrl(ML_isMultiplayer) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "155 272";
+         extent = "147 23";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "pref::HostMultiPlayer";
+         helpTag = "0";
+         text = "Multiplayer Mission";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+            maxLength = "255";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "320 271";
+         extent = "127 23";
+         minExtent = "8 8";
+         visible = "1";
+         command = "SM_StartMission();";
+         helpTag = "0";
+         text = "Launch Mission";
          groupNum = "-1";
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/back";
+      };
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 62";
+         extent = "436 200";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+            defaultLineHeight = "15";
+
+         new GuiTextListCtrl(SM_missionList) {
+            profile = "GuiTextArrayProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "394 54";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+               noDuplicates = "false";
+         };
+      };
+      new GuiTextEditCtrl() {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "98 15";
+         extent = "134 16";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$pref::Multiplayer::Name";
+         helpTag = "0";
+         maxLength = "255";
+         maxPixelWidth = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "12 11";
+         extent = "79 20";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Player Name:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 272";
+         extent = "127 23";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.setContent(MainMenuGui);";
+         helpTag = "0";
+         text = "<< Back";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
       };
    };
 };
 //--- OBJECT WRITE END ---
+
+function StartMissionGui::onWake(%this)
+{
+   SM_missionList.clear();
+   %i = 0;
+   for(%file = findFirstFile($Server::MissionFileSpec); %file !$= ""; %file = findNextFile($Server::MissionFileSpec))  
+      if (strStr(%file, "/CVS/") == -1)
+         SM_missionList.addRow(%i++, getMissionObject(%file).name @ "\t" @ %file );
+   SM_missionList.sort(0);
+   SM_missionList.setSelectedRow(0);
+   SM_missionList.scrollVisible(0);
+}
+
+function SM_StartMission()
+{
+   %id = SM_missionList.getSelectedId();
+   %file = getWord(SM_missionList.getRowTextById(%id), 1);
+   $LastMissionId = %id;
+   $LastMissionType = "";
+
+   if ($pref::HostMultiPlayer)
+      %serverType = "MultiPlayer";
+   else
+      %serverType = "SinglePlayer";
+
+   // We need to start a server if one isn't already running
+   if ($Server::ServerType $= "") {
+      if($doRecordDemo)
+         recordDemo("~/client/demos/demo.rec", %file);
+      createServer(%serverType, %file);
+      %conn = new GameConnection(ServerConnection);
+      %conn.setConnectArgs($pref::Multiplayer::Name, $Multiplayer::Version, $Multiplayer::GameName);
+      %conn.setJoinPassword($Client::Password);
+      %conn.connectLocal();
+   }
+   else
+      loadMission(%file);
+   if(isObject(MissionInfo))
+      MissionInfo.level = getMissionObject(%file).level;
+}

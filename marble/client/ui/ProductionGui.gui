@@ -1,0 +1,42 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiFadeinBitmapCtrl(productionGui) {
+   profile = "GuiInputCtrlProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "marble/client/ui/production";
+   useVariable = "0";
+   tile = "0";
+   fadeinTime = "125";
+   waitTime = "2500";
+   fadeoutTime = "125";
+   done = "0";
+      wrap = "0";
+};
+//--- OBJECT WRITE END ---
+
+function runProduction()
+{
+   Canvas.setContent(productionGui);
+   schedule(100, 0, checkProductionDone);
+}
+
+function checkProductionDone()
+{
+   if (productionGui.done)
+   {
+      runTitle();
+   }
+   
+   if (!productionGui.done)
+      schedule(100, 0, checkProductionDone);
+}
+
+function productionGui::click(%this)
+{
+   runIgnition();
+}

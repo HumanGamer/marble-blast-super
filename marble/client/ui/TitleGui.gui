@@ -1,0 +1,42 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiFadeinBitmapCtrl(titleGui) {
+   profile = "GuiInputCtrlProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "marble/client/ui/title";
+   useVariable = "0";
+   tile = "0";
+   fadeinTime = "125";
+   waitTime = "3000";
+   fadeoutTime = "125";
+   done = "0";
+      wrap = "0";
+};
+//--- OBJECT WRITE END ---
+
+function runTitle()
+{
+   Canvas.setContent(titleGui);
+   schedule(100, 0, checkTitleDone);
+}
+
+function checkTitleDone()
+{
+   if (titleGui.done)
+   {
+      runIgnition();
+   }
+   
+   if (!titleGui.done)
+      schedule(100, 0, checkTitleDone);
+}
+
+function titleGui::click(%this)
+{
+   runIgnition();
+}

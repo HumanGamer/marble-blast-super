@@ -46,7 +46,7 @@ new GuiControl(MultiplayerExitGui) {
          extent = "154 42";
          minExtent = "8 8";
          visible = "1";
-         command = "Canvas.popDialog(MultiplayerExitGui);disconnect();";
+         command = "Canvas.popDialog(MultiplayerExitGui);disconnect();Canvas.setContent(MultiplayerGui);";
          helpTag = "0";
          text = "Exit";
          groupNum = "-1";
