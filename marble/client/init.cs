@@ -40,8 +40,8 @@ function initClient()
       $pref::QualifiedLevel["Tutorial"] = 1000;
    if (!$pref::QualifiedLevel["Beginner"])
       $pref::QualifiedLevel["Beginner"] = 1;
-   if (!$pref::QualifiedLevel["Intermediate"])
-      $pref::QualifiedLevel["Intermediate"] = 1;
+   if (!$pref::QualifiedLevel["Medium"])
+      $pref::QualifiedLevel["Medium"] = 1;
    if (!$pref::QualifiedLevel["Advanced"])
       $pref::QualifiedLevel["Advanced"] = 1;
    if (!$pref::QualifiedLevel["Expert"])
