@@ -8,6 +8,7 @@ function playMissionGui::onWake(%this)
    PM_DifficultyPopup.add("Medium", 2);
    PM_DifficultyPopup.add("Advanced", 3);
    PM_DifficultyPopup.add("Expert", 4);
+   PM_DifficultyPopup.add("Custom", 5);
    for (%i = 0; %i < PM_DifficultyPopup.size(); %i++)
    {
       %obj = PM_DifficultyPopup.getTextById(%i);
