@@ -51,7 +51,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "26 29";
-               extent = "196 188";
+               extent = "221 188";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
@@ -187,8 +187,8 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                profile = "PlayMissionListProfile";
                horizSizing = "right";
                vertSizing = "bottom";
-               position = "-1 1";
-               extent = "400 100";
+               position = "1 1";
+               extent = "167 100";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
