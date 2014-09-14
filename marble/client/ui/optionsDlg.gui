@@ -1172,7 +1172,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          extent = "105 70";
          minExtent = "8 8";
          visible = "1";
-         command = "OptionsDlg.applyGraphics();Canvas.setContent(playmissionGui);";
+         command = "OptionsDlg.applyGraphics();Canvas.setContent($optionsBackGui);";
          helpTag = "0";
          text = "OK";
          groupNum = "-1";

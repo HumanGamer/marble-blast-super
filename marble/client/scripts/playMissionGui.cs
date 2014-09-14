@@ -1,6 +1,26 @@
 function playMissionGui::onWake(%this)
 {
    buildMissionList();
+   
+   PM_DifficultyPopup.clear();
+   PM_DifficultyPopup.add("Tutorial", 0);
+   PM_DifficultyPopup.add("Beginner", 1);
+   PM_DifficultyPopup.add("Medium", 2);
+   PM_DifficultyPopup.add("Advanced", 3);
+   PM_DifficultyPopup.add("Expert", 4);
+   PM_DifficultyPopup.setSelected($MissionType);
+}
+
+function PM_DifficultyPopup::onSelect(%this, %id)
+{
+   %type = %this.getTextById(%id);
+   
+   PMSetMissionTab(%type);
+}
+
+function PM_missionSelectList::onSelect(%this, %id)
+{
+   PM_setSelected(%id);
 }
 
 function PM_StartMission()
@@ -44,6 +64,7 @@ function buildMissionList()
       RootGroup.add(PlayMissionGroup);
    }
    PM_missionList.clear();
+   PM_missionSelectList.clear();
    
    if ($MissionType $= "")
       $MissionType = "Tutorial";
@@ -68,6 +89,7 @@ function buildMissionList()
    {
       %mission = %group.getObject(%i);
       PM_missionList.addRow(%i, %mission.level TAB %mission);
+      PM_missionSelectList.addRow(%i, %i + 1 TAB %mission.name);
    }
    
    //%level = $pref::QualifiedLevel[$MissionType] - 1;
@@ -88,6 +110,7 @@ function buildMissionList()
       $LastMissionId = 0;
       
    PM_setSelected($LastMissionId);
+   PM_missionSelectList.setSelectedById($LastMissionId);
 }
 
 function sortByLevel(%grp)
@@ -136,8 +159,6 @@ function PM_setSelected(%index)
       PM_play.setActive(false);
       PM_NoQualOverlay.setVisible(true);
       PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No" SPC $MissionType SPC "Levels!");
-      PM_next.setActive(false);
-      PM_prev.setActive(false);
       PM_preview.setBitmap("");
       PM_description.setText("");
       PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ $MissionType);
@@ -170,18 +191,14 @@ function PM_setSelected(%index)
    PM_description.setText(%name @ %qualify @ %desc @ %author @ %best @ %total);
    %bmp = strreplace(%mission.file, ".mis", "");
    PM_preview.setBitmap(%bmp);
-   if (%index <= 0) PM_prev.setActive(false); else PM_prev.setActive(true);
-   if (%index >= %group.getCount() - 1) PM_next.setActive(false); else PM_next.setActive(true);
-   PM_prev.command = "PM_setSelected(" @ %index - 1 @ ");";
-   PM_next.command = "PM_setSelected(" @ %index + 1 @ ");";
    PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
    PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
    PM_missionList.setSelectedById(%index);
-   if (%index > $pref::QualifiedLevel[$MissionType] && !$testCheats)
+   if (%index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels)
    {
       PM_play.setActive(false);
       PM_NoQualOverlay.setVisible(true);
-      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>You haven't unlocked this level yet.");
+      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>Locked!");
    }
    else
    {
@@ -246,8 +263,8 @@ function getMissionObject(%mission) {
 	   PlayMissionGroup.add(new SimGroup(MTYPE_tutorial));
 	if (!isObject(MTYPE_beginner))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_beginner));
-   if (!isObject(MTYPE_intermediate))
-	   PlayMissionGroup.add(new SimGroup(MTYPE_intermediate));
+   if (!isObject(MTYPE_medium))
+	   PlayMissionGroup.add(new SimGroup(MTYPE_medium));
    if (!isObject(MTYPE_advanced))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_advanced));
 	   if (!isObject(MTYPE_expert))
@@ -257,7 +274,7 @@ function getMissionObject(%mission) {
    if (!isObject(MTYPE_multiplayer))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_multiplayer));
 	   
-   if (%infoObject.type !$= "tutorial" && %infoObject.type !$= "beginner" && %infoObject.type !$= "intermediate" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert" && %infoObject.type !$= "multiplayer")
+   if (%infoObject.type !$= "tutorial" && %infoObject.type !$= "beginner" && %infoObject.type !$= "medium" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert" && %infoObject.type !$= "multiplayer")
       %infoObject.type = "custom";
    eval("MTYPE_" @ %infoObject.type @ ".add(%infoObject);");
 	

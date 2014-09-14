@@ -50,7 +50,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          minExtent = "8 8";
          visible = "1";
          //command = "StopDemoTimer(); 
-         command = "$pref::Multiplayer::isMultiplayer=0; PMSetMissionTab(\"beginner\"); Canvas.setContent(choosegui);";
+         command = "$pref::Multiplayer::isMultiplayer=0; PMSetMissionTab(\"tutorial\"); Canvas.setContent(playmissiongui);";
          helpTag = "0";
          text = "play";
          groupNum = "-1";
@@ -86,7 +86,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          minExtent = "8 8";
          visible = "1";
          //command = "StopDemoTimer(); 
-         command = "Canvas.setContent(optionsDlg);";
+         command = "$optionsBackGui = \"MainMenuGui\";Canvas.setContent(optionsDlg);";
          helpTag = "0";
          text = "options";
          groupNum = "-1";

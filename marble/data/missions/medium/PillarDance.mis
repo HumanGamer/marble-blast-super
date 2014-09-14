@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          name = "Pillar Dance";
          artist = "James Colsey";
          time = "0";
-         type = "Intermediate";
+         type = "Medium";
          desc = "Make it through this vicious square dance.";
    };
    new MissionArea(MissionArea) {

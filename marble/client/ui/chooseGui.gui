@@ -48,9 +48,9 @@ new GuiChunkedBitmapCtrl(chooseGui) {
          extent = "284 91";
          minExtent = "8 8";
          visible = "1";
-         command = "$MissionType=\"Intermediate\";Canvas.setContent(playMissionGui);";
+         command = "$MissionType=\"Medium\";Canvas.setContent(playMissionGui);";
          helpTag = "0";
-         text = "Intermediate";
+         text = "Medium";
          groupNum = "-1";
          buttonType = "PushButton";
          repeatPeriod = "1000";
@@ -101,7 +101,7 @@ new GuiChunkedBitmapCtrl(chooseGui) {
          visible = "1";
          command = "$MissionType=\"Advanced\";Canvas.setContent(playMissionGui);";
          helpTag = "0";
-         text = "Intermediate";
+         text = "Advanced";
          groupNum = "-1";
          buttonType = "PushButton";
          repeatPeriod = "1000";
@@ -118,7 +118,7 @@ new GuiChunkedBitmapCtrl(chooseGui) {
          visible = "1";
          command = "$MissionType=\"Custom\";Canvas.setContent(playMissionGui);";
          helpTag = "0";
-         text = "Intermediate";
+         text = "Custom";
          groupNum = "-1";
          buttonType = "PushButton";
          repeatPeriod = "1000";

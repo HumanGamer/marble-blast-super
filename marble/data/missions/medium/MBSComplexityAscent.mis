@@ -2,7 +2,7 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         type = "Intermediate";
+         type = "Medium";
          time = "0";
          goldTime = "30000";
          name = "Complexity Ascent";

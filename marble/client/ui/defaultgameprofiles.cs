@@ -219,3 +219,47 @@ if(!isObject(GuiBlastExtraProfile)) new GuiControlProfile ("GuiBlastExtraProfile
    border = true;
    borderColor   = "100 100 100";
 };
+
+if (!isObject(PlayMissionListProfile)) new GuiControlProfile(PlayMissionListProfile)
+{
+   fontType = "Whitestone";
+   fontSize = 18;
+   fillColorHL = "128 128 255";
+   fontColor = "0 0 0";
+   fontColorHL = "255 255 255";
+   fontColorLink = "255 96 96";
+   fontColorLinkHL = "0 0 255";
+   autoSizeWidth = true;
+   autoSizeHeight = true;
+};
+
+if (!isObject(PlayMissionDifficultyPopupProfile)) new GuiControlProfile(PlayMissionDifficultyPopupProfile)
+{
+   opaque = true;
+   //fillColor = "255 255 255";
+   mouseOverSelected = true;
+
+   border = 1;
+   borderThickness = 1;
+   borderColor = "0 128 0";
+   fontType = "Whitestone";
+   fontSize = 20;
+   fontColor = "0 0 0";
+   fontColorHL = "255 255 255";
+   fontColorSEL = "255 255 255";
+   fixedExtent = true;
+   justify = "center";
+   bitmap = "marble/client/ui/play/scroll";
+   hasBitmapArray = true;
+};
+
+if (!isObject(PlayMissionScrollProfile)) new GuiControlProfile(PlayMissionScrollProfile)
+{
+   opaque = true;
+   //fillColor = "255 255 255";
+   border = 1;
+   borderThickness = 1;
+   borderColor = "0 128 0";
+   bitmap = "marble/client/ui/play/scroll";
+   hasBitmapArray = true;
+};
