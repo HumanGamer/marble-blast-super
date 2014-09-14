@@ -121,7 +121,7 @@ function reformatGameEndText()
       %time = getField($hs[%i], 0);
       %name = getField($hs[%i], 1);
       %text = %text 
-         @ "<shadowcolor:ffffff7f><color:000000><font:Whitestone:32>" @ %i+1 @ ". " @ %name @ "\t" 
+         @ "<shadowcolor:ffffff7f><color:000000><font:Whitestone:24>" @ %i+1 @ ". " @ %name @ "\t" 
          @ (%time < MissionInfo.goldTime ? "<shadowcolor:0000007f><color:ffff00>" : "") @ formatTime(%time) @ "\n";
    }
    // Display the end-game screen
