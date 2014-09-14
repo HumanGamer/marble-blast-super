@@ -24,7 +24,7 @@ function runPresentation()
 {
    Canvas.setContent(presentsGui);
    startVersionCheck();
-   startMotdCheck();
+   //startMotdCheck();
    schedule(100, 0, checkPresentationDone);
 }
 

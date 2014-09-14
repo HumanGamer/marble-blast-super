@@ -314,7 +314,7 @@ function onDemoPlayDone(%forced)
 
    if( %forced || $seeItPlayedDemo )
    {
-      Canvas.setContent($DemoStartGui);
+      Canvas.setContent(MainMenuGui);
       $seeItPlayedDemo = false;
    }
    else

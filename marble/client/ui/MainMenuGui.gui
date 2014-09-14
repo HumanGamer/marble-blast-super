@@ -32,7 +32,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          extent = "126 73";
          minExtent = "8 8";
          visible = "1";
-         command = "quit();";//"StopDemoTimer(); quit();";
+         command = "StopDemoTimer();quit();";//"StopDemoTimer(); quit();";
          helpTag = "0";
          text = "exit";
          groupNum = "-1";
@@ -50,7 +50,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          minExtent = "8 8";
          visible = "1";
          //command = "StopDemoTimer(); 
-         command = "$pref::Multiplayer::isMultiplayer=0; PMSetMissionTab(\"tutorial\"); Canvas.setContent(playmissiongui);";
+         command = "StopDemoTimer();$pref::Multiplayer::isMultiplayer=0; PMSetMissionTab(\"tutorial\"); Canvas.setContent(playmissiongui);";
          helpTag = "0";
          text = "play";
          groupNum = "-1";
@@ -68,7 +68,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          minExtent = "8 8";
          visible = "1";
          //command = "StopDemoTimer(); 
-         command = "Canvas.setContent(HelpCreditsGui);";
+         command = "StopDemoTimer();Canvas.setContent(HelpCreditsGui);";
          helpTag = "0";
          text = "highscore";
          groupNum = "-1";
@@ -86,7 +86,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          minExtent = "8 8";
          visible = "1";
          //command = "StopDemoTimer(); 
-         command = "$optionsBackGui = \"MainMenuGui\";Canvas.setContent(optionsDlg);";
+         command = "StopDemoTimer();$optionsBackGui = \"MainMenuGui\";Canvas.setContent(optionsDlg);";
          helpTag = "0";
          text = "options";
          groupNum = "-1";
@@ -104,7 +104,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          minExtent = "8 8";
          visible = "1";
          //command = "StopDemoTimer(); 
-         command = "Canvas.setContent(creditsGui);";
+         command = "StopDemoTimer();Canvas.setContent(creditsGui);";
          helpTag = "0";
          text = "highscore";
          groupNum = "-1";
@@ -123,7 +123,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       minExtent = "8 8";
       visible = "1";
       //command = "StopDemoTimer(); 
-      command = "Canvas.setContent(LoginGui);";
+      command = "StopDemoTimer();Canvas.setContent(LoginGui);";
       helpTag = "0";
       text = "Multiplayer";
       groupNum = "-1";
@@ -146,6 +146,21 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
    };
 };
 //--- OBJECT WRITE END ---
+
+function MainMenuQuit()
+{
+   quit();
+}
+
+function MainMenuGui::onWake()
+{
+   //HomeVersion.setText("Version " @ $THIS_VERSION);
+   //Version::check();
+   //checkMOTDBlink();
+   
+   StartDemoTimer();
+   buildDemoList();
+}
 
 function StartDemoTimer()
 {
