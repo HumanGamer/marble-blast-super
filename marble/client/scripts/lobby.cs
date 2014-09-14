@@ -23,7 +23,7 @@ function LobbyGui::onWake(%this)
 function LB_HostSelected()
 {
    %id = PM_missionList.getSelectedId();
-   %mission = PM_missionList.getRowTextById(%id);//getField(PM_missionList.getRowTextById(%id), 1);
+   %mission = getField(PM_missionList.getRowTextById(%id), 1);//getField(PM_missionList.getRowTextById(%id), 1);
    $LastMissionId = %id;
    $LastMissionType = %mission.type;
    
@@ -62,7 +62,7 @@ function LB_SetSelected(%index)
       //PM_level_fgnd.setText("<color:FFFFFF><font:DomCasualD:24><just:center>" @ $MissionType);
       return;
    }
-   %mission = PM_missionList.getRowTextById(%index);//%group.getObject(%index);
+   %mission = getField(PM_missionList.getRowTextById(%index), 1);//%group.getObject(%index);
    %name = "<color:000000><spush><font:Arial:20>" @ %mission.name @ "<spop><lmargin:10>\n\n";
    if (%mission.time)
       %qualify = "<spush><font:Arial:20><lmargin:0>Spare Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n\n";

@@ -8,7 +8,15 @@ function playMissionGui::onWake(%this)
    PM_DifficultyPopup.add("Medium", 2);
    PM_DifficultyPopup.add("Advanced", 3);
    PM_DifficultyPopup.add("Expert", 4);
-   PM_DifficultyPopup.setSelected($MissionType);
+   for (%i = 0; %i < PM_DifficultyPopup.size(); %i++)
+   {
+      %obj = PM_DifficultyPopup.getTextById(%i);
+      if (%obj !$= $MissionType)
+         continue;
+      %id = %i;
+      break;
+   }
+   PM_DifficultyPopup.setSelected(%id);
 }
 
 function PM_DifficultyPopup::onSelect(%this, %id)
@@ -21,6 +29,7 @@ function PM_DifficultyPopup::onSelect(%this, %id)
 function PM_missionSelectList::onSelect(%this, %id)
 {
    PM_setSelected(%id);
+   LB_SetSelected(%id);
 }
 
 function PM_StartMission()
@@ -54,6 +63,7 @@ function PM_skipQualify()
    if (%id - 1 == $pref::QualifiedLevel[$MissionType])
       $pref::QualifiedLevel[$MissionType]++;
    PM_setSelected(%id);
+   LB_SetSelected(%id);
 }
 
 function buildMissionList()
@@ -97,20 +107,23 @@ function buildMissionList()
    //   %level = %group.getCount() - 1;
    //PM_setSelected(%level);
    
-   if ($LastMissionId $= "" || $LastMissionType !$= $MissionType)
-      $LastMissionId = 0;
+   %level = $LastMissionId;
+   
+   if (%level $= "" || $LastMissionType !$= $MissionType)
+      %level = 0;
       
-   if ($LastMissionId !$= "" && $LastMissionType $= $MissionType && $Game::Qualified)
-         $LastMissionId++; 
+   if (%level !$= "" && $LastMissionType $= $MissionType && $Game::Qualified)
+         %level++; 
          
-   if ($LastMissionId > %group.getCount() - 1)
-      $LastMissionId = %group.getCount() - 1;
+   if (%level > %group.getCount() - 1)
+      %level = %group.getCount() - 1;
       
-   if ($LastMissionId < 0)
-      $LastMissionId = 0;
+   if (%level < 0)
+      %level = 0;
       
-   PM_setSelected($LastMissionId);
-   PM_missionSelectList.setSelectedById($LastMissionId);
+   PM_setSelected(%level);
+   LB_SetSelected(%level);
+   PM_missionSelectList.setSelectedById(%level);
 }
 
 function sortByLevel(%grp)
