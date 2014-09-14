@@ -82,7 +82,7 @@ function onServerCreated()
    exec("./rotationPlatforms.cs");
 
    // Multiplayer
-   exec("./multiplayer.cs");
+   //exec("./multiplayer.cs");
 
    // Keep track of when the game started
    $Game::StartTime = $Sim::Time;

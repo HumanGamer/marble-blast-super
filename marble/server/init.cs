@@ -59,6 +59,7 @@ function initServer()
    exec("./scripts/commands.cs");
    exec("./scripts/centerPrint.cs");
    exec("./scripts/game.cs");
+   exec("./scripts/multiplayer.cs");
 }
 
 
