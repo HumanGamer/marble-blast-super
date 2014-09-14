@@ -42,7 +42,7 @@ new GuiControl(EnterMultiplayerNameDlg) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "123 130";
+         position = "145 143";
          extent = "145 61";
          minExtent = "8 8";
          visible = "1";
