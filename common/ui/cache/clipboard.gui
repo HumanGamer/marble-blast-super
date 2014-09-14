@@ -1,16 +1,15 @@
 new SimSet(guiClipboard) {
 
-   new GuiMLTextCtrl(OptFreeLookLabel) {
-      profile = "GuiMLTextProfile";
+   new GuiBitmapCtrl(RC_Start) {
+      profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "-128 3";
-      extent = "64 28";
+      position = "316 95";
+      extent = "55 62";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      lineSpacing = "2";
-      allowColorChars = "0";
-      maxChars = "-1";
+      bitmap = "marble/client/ui/replay/start";
+      wrap = "0";
    };
 };

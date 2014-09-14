@@ -1,0 +1,11 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(DemoGroup) {
+
+	new ScriptObject(DemoInfo) {
+		name = "Playing Purple Climb";
+		desc = "Playing and Beating Purple Climb";
+		mission = "marble/data/missions/beginner/purple_climb.mis";
+		artist = "Matthieu Parizeau";
+	};
+};
+//--- OBJECT WRITE END ---

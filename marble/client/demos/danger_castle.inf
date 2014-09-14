@@ -1,0 +1,11 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(DemoGroup) {
+
+	new ScriptObject(DemoInfo) {
+		name = "Playing Danger Castle";
+		desc = "Playing and Beating Danger Castle";
+		mission = "marble/data/missions/beginner/danger_castle.mis";
+		artist = "Matthieu Parizeau";
+	};
+};
+//--- OBJECT WRITE END ---

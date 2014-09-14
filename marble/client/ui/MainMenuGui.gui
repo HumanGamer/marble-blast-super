@@ -28,11 +28,11 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "185 316";
-         extent = "126 73";
+         position = "182 396";
+         extent = "126 72";
          minExtent = "8 8";
          visible = "1";
-         command = "StopDemoTimer();quit();";//"StopDemoTimer(); quit();";
+         command = "StopDemoTimer();quit();";
          helpTag = "0";
          text = "exit";
          groupNum = "-1";
@@ -45,11 +45,10 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "164 5";
-         extent = "142 63";
+         position = "164 4";
+         extent = "140 64";
          minExtent = "8 8";
          visible = "1";
-         //command = "StopDemoTimer(); 
          command = "StopDemoTimer();$pref::Multiplayer::isMultiplayer=0; PMSetMissionTab(\"tutorial\"); Canvas.setContent(playmissiongui);";
          helpTag = "0";
          text = "play";
@@ -63,11 +62,10 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "177 133";
-         extent = "152 55";
+         position = "176 132";
+         extent = "152 56";
          minExtent = "8 8";
          visible = "1";
-         //command = "StopDemoTimer(); 
          command = "StopDemoTimer();Canvas.setContent(HelpCreditsGui);";
          helpTag = "0";
          text = "highscore";
@@ -81,11 +79,10 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "197 263";
-         extent = "110 53";
+         position = "196 261";
+         extent = "109 55";
          minExtent = "8 8";
          visible = "1";
-         //command = "StopDemoTimer(); 
          command = "StopDemoTimer();$optionsBackGui = \"MainMenuGui\";Canvas.setContent(optionsDlg);";
          helpTag = "0";
          text = "options";
@@ -99,11 +96,10 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "183 180";
-         extent = "154 80";
+         position = "181 180";
+         extent = "155 80";
          minExtent = "8 8";
          visible = "1";
-         //command = "StopDemoTimer(); 
          command = "StopDemoTimer();Canvas.setContent(creditsGui);";
          helpTag = "0";
          text = "highscore";
@@ -113,16 +109,32 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          repeatDecay = "1";
          bitmap = "./home/extra";
       };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "157 317";
+         extent = "155 80";
+         minExtent = "8 8";
+         visible = "1";
+         command = "StopDemoTimer();Canvas.setContent(ReplayCenterGui);";
+         helpTag = "0";
+         text = "Replay Center";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./home/replay";
+      };
    };
    new GuiBitmapButtonCtrl() {
       profile = "GuiButtonProfile";
       horizSizing = "relative";
       vertSizing = "relative";
-      position = "484 63";
-      extent = "150 71";
+      position = "484 61";
+      extent = "148 71";
       minExtent = "8 8";
       visible = "1";
-      //command = "StopDemoTimer(); 
       command = "StopDemoTimer();Canvas.setContent(LoginGui);";
       helpTag = "0";
       text = "Multiplayer";
@@ -136,8 +148,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiDefaultProfile";
       horizSizing = "relative";
       vertSizing = "relative";
-      position = "180 91";
-      extent = "170 160";
+      position = "180 89";
+      extent = "168 160";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
@@ -160,50 +172,4 @@ function MainMenuGui::onWake()
    
    StartDemoTimer();
    buildDemoList();
-}
-
-function StartDemoTimer()
-{
-   $LastInputEventTime = getSimTime();
-   
-   // Disabled Demos for now as they can break multiplayer
-   //$DemoTimerEvent = schedule(1000, 0, "checkDemoPlay");
-}
-
-function checkDemoPlay()
-{
-   if($LastInputEventTime + 10000 < getSimTime())
-      playNextDemo();
-   else
-      $DemoTimerEvent = schedule(1000, 0, "checkDemoPlay");
-}
-
-function StopDemoTimer()
-{
-   cancel($DemoTimerEvent);
-}
-
-function playNextDemo()
-{
-   if($NumDemoFiles != 0)
-   {
-      playDemo($DemoFile[$NextDemoFile]);
-      $NextDemoFile++;
-      if($NextDemoFile >= $NumDemoFiles)
-         $NextDemoFile = 0;
-   }
-}
-
-function buildDemoList()
-{
-   if($NumDemoFiles != 0)
-      return;
-
-   $NumDemoFiles = 0;
-   $NextDemoFile = 0;
-   for(%file = findFirstFile("*.rec"); %file !$= ""; %file = findNextFile("*.rec"))
-   {
-      $DemoFile[$NumDemoFiles] = %file;
-      $NumDemoFiles++;
-   }
 }

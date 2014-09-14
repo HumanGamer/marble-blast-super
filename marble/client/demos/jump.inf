@@ -1,0 +1,11 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(DemoGroup) {
+
+	new ScriptObject(DemoInfo) {
+		name = "Playing Up And Down";
+		desc = "Playing and Beating Up And Down";
+		mission = "marble/data/missions/tutorial/jump.mis";
+		artist = "Matthieu Parizeau";
+	};
+};
+//--- OBJECT WRITE END ---

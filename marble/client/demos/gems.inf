@@ -1,0 +1,11 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(DemoGroup) {
+
+	new ScriptObject(DemoInfo) {
+		name = "Playing Marbles that are rich";
+		desc = "Playing and Beating Marbles that are rich";
+		mission = "marble/data/missions/tutorial/gems.mis";
+		artist = "Matthieu Parizeau";
+	};
+};
+//--- OBJECT WRITE END ---

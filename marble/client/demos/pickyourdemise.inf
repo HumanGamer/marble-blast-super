@@ -1,0 +1,11 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(DemoGroup) {
+
+	new ScriptObject(DemoInfo) {
+		name = "Playing Pick Your Demise";
+		desc = "Playing and Beating Pick Your Demise";
+		mission = "marble/data/missions/beginner/pick.mis";
+		artist = "Matthieu Parizeau";
+	};
+};
+//--- OBJECT WRITE END ---

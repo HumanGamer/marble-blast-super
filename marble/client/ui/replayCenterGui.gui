@@ -1,0 +1,135 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(ReplayCenterGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./background.jpg";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "50 28";
+      extent = "540 424";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./replay/replay";
+      wrap = "0";
+
+      new GuiBitmapButtonCtrl(RC_Home) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "415 322";
+         extent = "46 46";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.setContent(mainMenuGui);";
+         helpTag = "0";
+         text = "Home";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./replay/home";
+      };
+      new GuiScrollCtrl(RC_Scroll) {
+         profile = "PlayMissionScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "69 45";
+         extent = "181 325";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOn";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(RC_List) {
+            profile = "PlayMissionListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "161 160";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0 20";
+            fitParentWidth = "0";
+            clipColumnText = "0";
+         };
+      };
+      new GuiBitmapCtrl(RC_Preview) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "252 47";
+         extent = "190 160";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         wrap = "0";
+
+         new GuiBitmapButtonCtrl(RC_Start) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "68 53";
+            extent = "55 62";
+            minExtent = "8 8";
+            visible = "1";
+            command = "RC_StartDemo();";
+            helpTag = "0";
+            text = "Play";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = "./replay/start";
+               wrap = "0";
+         };
+      };
+      new GuiMLTextCtrl(RC_Desc) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "252 210";
+         extent = "217 80";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+   };
+   new GuiTextListCtrl(RC_ReplayList) {
+      profile = "GuiTextListProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "2 2";
+      extent = "80 128";
+      minExtent = "8 8";
+      visible = "0";
+      helpTag = "0";
+      enumerate = "0";
+      resizeCell = "1";
+      columns = "0";
+      fitParentWidth = "1";
+      clipColumnText = "0";
+   };
+};
+//--- OBJECT WRITE END ---

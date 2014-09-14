@@ -295,28 +295,3 @@ function getMissionObject(%mission) {
 	
 	return %infoObject;
 }
-
-function onDemoPlay(%misFile)
-{
-   $playingDemo = true;
-   createServer("SinglePlayer", %misFile);
-   %conn = new GameConnection(ServerConnection);
-   RootGroup.add(ServerConnection);
-   %conn.setConnectArgs($pref::Player::Name);
-   %conn.setJoinPassword($Client::Password);
-   %conn.connectLocal();
-}
-
-function onDemoPlayDone(%forced)
-{
-   $playingDemo = false;
-   disconnect();
-
-   if( %forced || $seeItPlayedDemo )
-   {
-      Canvas.setContent(MainMenuGui);
-      $seeItPlayedDemo = false;
-   }
-   else
-      runPresentation();
-}
