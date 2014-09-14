@@ -30,6 +30,7 @@ function PM_missionSelectList::onSelect(%this, %id)
 {
    PM_setSelected(%id);
    LB_SetSelected(%id);
+   setLevelLocked();
 }
 
 function PM_StartMission()
@@ -211,23 +212,29 @@ function PM_setSelected(%index)
    PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
    PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
    PM_missionList.setSelectedById(%index);
-   if (%index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels)
-   {
-      PM_play.setActive(false);
-      PM_NoQualOverlay.setVisible(true);
-      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>Locked!");
-   }
-   else
-   {
-      PM_play.setActive(true);
-      PM_NoQualOverlay.setVisible(false);
-      PM_NoQualText.setText("");
-   }
+   
+   $CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels;
+   
+   setLevelLocked();
    
    if (!isFile(%bmp @ ".png") && !isFile(%bmp @ ".jpg"))
    {
       PM_NoQualOverlay.setVisible(true);
       PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No Preview!");
+   }
+}
+
+function setLevelLocked()
+{
+   if ($CurrentLevelLocked)
+   {
+      PM_play.setActive(false);
+      PM_NoQualOverlay.setVisible(true);
+      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>Locked!");
+   } else {
+      PM_play.setActive(true);
+      PM_NoQualOverlay.setVisible(false);
+      PM_NoQualText.setText("");
    }
 }
 
