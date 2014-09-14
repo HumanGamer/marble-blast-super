@@ -218,7 +218,6 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                minExtent = "8 8";
                visible = "1";
                variable = "$testCheats";
-               accelerator = "escape";
                helpTag = "0";
                text = "marble";
                groupNum = "-1";
@@ -236,7 +235,6 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                minExtent = "8 8";
                visible = "1";
                command = "$optionsBackGui = \"PlayMissionGui\";canvas.setcontent(optionsdlg);";
-               accelerator = "escape";
                helpTag = "0";
                text = "marble";
                groupNum = "-1";
@@ -254,7 +252,6 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                minExtent = "8 8";
                visible = "1";
                command = "canvas.pushdialog(marbleselectgui);";
-               accelerator = "escape";
                helpTag = "0";
                text = "marble";
                groupNum = "-1";
@@ -290,7 +287,6 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                minExtent = "8 8";
                visible = "1";
                variable = "$unlockLevels";
-               accelerator = "escape";
                helpTag = "0";
                text = "Unlock";
                groupNum = "-1";
@@ -298,6 +294,23 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                repeatPeriod = "1000";
                repeatDecay = "1";
                bitmap = "./play/unlock";
+            };
+            new GuiBitmapButtonCtrl(PM_RecordDemo) {
+               profile = "GuiButtonProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "10 136";
+               extent = "44 47";
+               minExtent = "8 8";
+               visible = "1";
+               variable = "$doRecordDemo";
+               helpTag = "0";
+               text = "record";
+               groupNum = "-1";
+               buttonType = "ToggleButton";
+               repeatPeriod = "1000";
+               repeatDecay = "1";
+               bitmap = "./play/record";
             };
          };
          new GuiPopUpMenuCtrl(PM_DifficultyPopup) {

@@ -31,6 +31,8 @@ function clientCmdGameEnd()
 {
    if($playingDemo)
       return;
+   
+   finishRecording();
 
    getBestTimes($Server::MissionFile);
    $highScoreIndex = "";

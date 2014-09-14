@@ -1,0 +1,118 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(RecordingDlg) {
+   profile = "GuiDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "173 135";
+      extent = "294 209";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./multiplayer/bg";
+      wrap = "0";
+
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "5 143";
+         extent = "145 61";
+         minExtent = "8 8";
+         visible = "1";
+         command = "RecordingDlg.hide();";
+         helpTag = "0";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./recording/back";
+      };
+      new GuiBitmapButtonCtrl(RecordingNameButton) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "123 143";
+         extent = "145 61";
+         minExtent = "8 8";
+         visible = "1";
+         command = "";
+         helpTag = "0";
+         text = "Start";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./recording/start";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "1 57";
+         extent = "295 52";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./multiplayer/enterip";
+         wrap = "0";
+      };
+      new GuiMLTextCtrl(RecordingNameText) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "94 23";
+         extent = "345 14";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiTextEditCtrl(RecordingNameEdit) {
+         profile = "GuiBigTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "19 61";
+         extent = "252 36";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$Recording::File";
+         helpTag = "0";
+         maxLength = "200000";
+         maxPixelWidth = "200000";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function RecordingDlg::show(%this, %var, %command, %text)
+{
+   RecordingNameButton.command = %command;
+   RecordingNameEdit.altCommand = %command;
+   RecordingNameEdit.variable = %var;
+   eval("%val = " @ %var @ ";");
+   RecordingNameEdit.setText(%val);
+   RecordingNameText.setText(%text);
+   Canvas.pushDialog(RecordingDlg);
+}
+
+function RecordingDlg::hide(%this)
+{
+   Canvas.popDialog(RecordingDlg);
+}

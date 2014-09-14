@@ -73,6 +73,20 @@ function updateGame()
    updateCannons();
    updateRotationPlatforms();
    
+   if ($playingDemo && $Client::BlastEnergy > 1000)
+   {
+      for (%i = 0; %i < $BlastCount; %i++)
+      {
+         %time = $BlastTime[%i];
+         
+         if (PlayGui.elapsedTime >= %time && !$UsedBlast[%i])
+         {
+            commandToServer('UseBlast');
+            $UsedBlast[%i] = true;
+         }
+      }
+   }
+   
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
 }
 

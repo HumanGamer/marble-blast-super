@@ -1,0 +1,13 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(DemoGroup) {
+	new ScriptObject(DemoInfo) {
+		name = "Potato Pie";
+		desc = "Test Description";
+		mission = "marble/data/missions/tutorial/trick.mis";
+		artist = "cooldudepoke";
+		blastCount = "2";
+		blastTime[0] = "4602";
+		blastTime[1] = "15974";
+	};
+};
+//--- OBJECT WRITE END ---

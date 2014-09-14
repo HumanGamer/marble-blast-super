@@ -47,8 +47,12 @@ function PM_StartMission()
    // We need to start a server if one isn't already running
    if ($Server::ServerType $= "") {
       if($doRecordDemo)
-         recordDemo("~/client/demos/demo.rec", %mission.file);
-      startServer(%serverType, %mission);
+      {
+         //recordDemo("~/client/demos/demo.rec", %mission.file);
+         startRecordingDemo(%mission);
+      } else {
+         startServer(%serverType, %mission);
+      }
    }
    else
       loadMission(%mission.file);

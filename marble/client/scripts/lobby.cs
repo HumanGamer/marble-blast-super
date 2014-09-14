@@ -31,8 +31,8 @@ function LB_HostSelected()
 
    // We need to start a server if one isn't already running
    if ($Server::ServerType $= "") {
-      if($doRecordDemo)
-         recordDemo("~/client/demos/demo.rec", %mission.file);
+      //if($doRecordDemo)
+      //   recordDemo("~/client/demos/demo.rec", %mission.file);
       startServer(%serverType, %mission);
    }
    else

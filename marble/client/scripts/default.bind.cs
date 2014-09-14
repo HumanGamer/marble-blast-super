@@ -314,8 +314,17 @@ function mouseFire(%val)
 function altTrigger(%val)
 {
    //$mvTriggerCount1++;
+   //if (%val && $Client::BlastEnergy > 1000)
+      //$mvTriggerCount1 = %val;
    if (%val && $Client::BlastEnergy > 1000)
+   {
       commandToServer('UseBlast');
+      if ($isDemoRecording)
+      {
+         $BlastCount++;
+         $BlastTime[$BlastCount - 1] = PlayGui.elapsedTime;
+      }
+   }
 }
 
 moveMap.bind( mouse, button0, mouseFire );

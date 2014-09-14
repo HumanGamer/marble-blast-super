@@ -1,5 +1,6 @@
 function ReplayCenterGui::onWake(%this)
 {
+   buildDemoList();
    populateReplayList();
 }
 
@@ -58,6 +59,18 @@ function RC_StartDemo()
    %file = RC_ReplayList.getRowTextById(%id);
    $LastDemoId = %id;
    
+   %info = getDemoInfo(%file);
+   
+   $BlastCount = %info.blastCount;
+   
+   //echo("Loading Blast Demo: " @ $BlastCount);
+   
+   for (%i = 0; %i < $BlastCount; %i++)
+   {
+      $BlastTime[%i] = %info.blastTime[%i];
+      $UsedBlast[%i] = false;
+   }
+   
    playDemo(%file);
 }
 
@@ -93,6 +106,16 @@ function playNextDemo()
    }
 }
 
+function clearDemoList()
+{
+   for (%i = 0; %i < $NumDemoFiles; %i++)
+   {
+      $DemoFile[$NumDemoFiles] = "";
+   }
+   
+   $NumDemoFiles = 0;
+}
+
 function buildDemoList()
 {
    if($NumDemoFiles != 0)
@@ -112,6 +135,16 @@ function buildDemoList()
       if (!isFile(%inf))
          error("Missing File: " @ %inf);
    }
+}
+
+function addDemo(%demo)
+{
+   buildDemoList();   
+   
+   $DemoFile[$NumDemoFiles] = %demo;
+   $NumDemoFiles++;
+   
+   populateReplayList();
 }
 
 function populateReplayList()
@@ -215,4 +248,9 @@ function getDemoObject(%demo)
 	eval(%infoObject);
 	
 	return %infoObject;
+}
+
+function getDemoInfo(%demo)
+{
+   return getDemoObject(strreplace(%demo, ".rec", ".inf"));
 }

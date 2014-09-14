@@ -1,0 +1,12 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(DemoGroup) {
+	new ScriptObject(DemoInfo) {
+		name = "Blaster";
+		desc = "Test Description";
+		mission = "marble/data/missions/tutorial/jump.mis";
+		artist = "cooldudepoke";
+		blastCount = "1";
+		blastTime[0] = "6053";
+	};
+};
+//--- OBJECT WRITE END ---

@@ -675,6 +675,8 @@ function GameConnection::onClientEnterGame(%this)
 
 function GameConnection::onClientLeaveGame(%this)
 {
+   
+   commandToClient(%this, 'StopBlast');
    commandToAll('RemovePlayer', %this.getId());
    if (isObject(%this.camera))
       %this.camera.delete();
