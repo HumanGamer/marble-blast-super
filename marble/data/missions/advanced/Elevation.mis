@@ -2,11 +2,11 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         desc = "Master the odyssey of ascending platforms.";
-         goldTime = "150000";
-         level = "3";
          name = "Elevation";
          artist = "James Colsey";
+         level = "3";
+         desc = "Master the odyssey of ascending platforms.";
+         goldTime = "150000";
          type = "Advanced";
          time = "0";
    };
@@ -60,6 +60,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "7675";
    };
    new Item() {
       position = "5 13 21";
@@ -69,6 +70,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "7664";
    };
    new Item() {
       position = "-4 26 38.5";
@@ -78,6 +80,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "7665";
    };
    new Item() {
       position = "-4 60 30";
@@ -87,6 +90,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "7666";
    };
    new Item() {
       position = "30 60 34";
@@ -96,6 +100,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "7667";
+         checkpointNum = "1";
    };
    new Item() {
       position = "61.5 74 54";
@@ -105,6 +111,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "7668";
    };
    new Item() {
       position = "56 43 43";
@@ -114,6 +121,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "7669";
    };
    new Item() {
       position = "56 50.5 52.5";
@@ -132,6 +140,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "7670";
    };
    new Item() {
       position = "56 60 64";
@@ -141,6 +150,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "7671";
    };
    new Item() {
       position = "60 27 64";
@@ -150,6 +160,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "7672";
    };
    new Item() {
       position = "68 39 67.5";
@@ -159,6 +170,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "7673";
    };
    new Item() {
       position = "72 3 48";
@@ -168,6 +180,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "7674";
    };
    new Item() {
       position = "72 11 74";
@@ -183,6 +196,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
+         beam = "6392";
    };
    new SimGroup(MustChange_g) {
 
@@ -1189,11 +1203,11 @@ new SimGroup(MissionGroup) {
    };
    new ScriptObject() {
          bonusTime = "0";
-         gemCount = "0";
-         penaltyTime = "0";
          powerUp = "0";
-         time = "0";
          pad = "1905";
+         penaltyTime = "0";
+         time = "0";
+         gemCount = "0";
    };
    new Item() {
       position = "61.6217 73.9803 59.6944";
@@ -1206,11 +1220,11 @@ new SimGroup(MissionGroup) {
    };
    new ScriptObject() {
          bonusTime = "0";
-         gemCount = "0";
-         penaltyTime = "0";
          powerUp = "0";
-         time = "0";
          pad = "3301";
+         penaltyTime = "0";
+         time = "0";
+         gemCount = "0";
    };
    new Item() {
       position = "68.0363 38.928 66.0491";
@@ -1336,6 +1350,42 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 180";
       scale = "1 1 1";
       dataBlock = "SignPlainUp";
+   };
+   new StaticShape(check1) {
+      position = "34.0169 59.9982 33.9927";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "CheckPointShape";
+   };
+   new Trigger(check1t) {
+      position = "32.0197 62.0107 33.998";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check1";
+   };
+   new ScriptObject() {
+         bonusTime = "0";
+         powerUp = "0";
+         pad = "6377";
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+   };
+   new Trigger(check2t) {
+      position = "54.106 47.805 63.9963";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check2";
+   };
+   new StaticShape(check2) {
+      position = "55.9927 45.9448 63.9954";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "CheckPointShape";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
