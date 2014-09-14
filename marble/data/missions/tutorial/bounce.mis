@@ -764,7 +764,7 @@ new SimGroup(MissionGroup) {
       scale = "1 12 12";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Use the SuperSpring to cross this gap, unless you want to be blown to smitherines.";
+         text = "Use the SuperSpring to cross this gap, unless you want to be blown to smithereens.";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

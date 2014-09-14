@@ -6,7 +6,7 @@ new SimGroup(MissionGroup) {
          time = "0";
          goldTime = "30000";
          startHelpText = "Learn how to use the Rotating Platforms in this level.";
-         desc = "They are confusing, they are difficult, they are frusturating, they are Rotating Platforms.";
+         desc = "They are confusing, they are difficult, they are frustrating, they are Rotating Platforms.";
          type = "Tutorial";
          level = "5";
          artist = "Ender";
