@@ -2,14 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         goldTime = "15000";
-	 artist = "Ender";
-         name = "Hippie Playground";
-         time = "0";
          startHelpText = "Can you find the hidden time travel?";
          desc = "Find all the gems in this nature-based level.";
-         type = "Medium";
+         type = "Beginner";
          level = "3";
+         artist = "Ender";
+         goldTime = "15000";
+         name = "Hippie Playground";
+         time = "0";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -50,121 +50,121 @@ new SimGroup(MissionGroup) {
       ambient = "0.300000 0.300000 0.400000 1.000000";
    };
    new ScriptObject() {
+         pad = "2009";
+         penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
-         pad = "2009";
-         penaltyTime = "0";
    };
    new StaticShape(StartPoint) {
       position = "-5.94282 -53.3574 -23.8852";
       rotation = "0 0 1 45";
       scale = "0.5 0.5 0.5";
       dataBlock = "StartPad";
-         beam = "4533";
+         beam = "2351";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
-         time = "0";
          pad = "1649";
          penaltyTime = "0";
-   };
-   new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
+   };
+   new ScriptObject() {
          pad = "1721";
          penaltyTime = "0";
-   };
-   new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
+   };
+   new ScriptObject() {
          pad = "2727";
          penaltyTime = "0";
-   };
-   new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
+   };
+   new ScriptObject() {
          pad = "2784";
          penaltyTime = "0";
-   };
-   new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
+   };
+   new ScriptObject() {
          pad = "4691";
          penaltyTime = "0";
-   };
-   new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
+   };
+   new ScriptObject() {
          pad = "1602";
          penaltyTime = "0";
-   };
-   new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
+   };
+   new ScriptObject() {
          pad = "1602";
          penaltyTime = "0";
-   };
-   new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
+   };
+   new ScriptObject() {
          pad = "1602";
          penaltyTime = "0";
-   };
-   new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
+   };
+   new ScriptObject() {
          pad = "1602";
          penaltyTime = "0";
-   };
-   new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
+   };
+   new ScriptObject() {
          pad = "1672";
          penaltyTime = "0";
-   };
-   new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
+   };
+   new ScriptObject() {
          pad = "1617";
          penaltyTime = "0";
-   };
-   new ScriptObject() {
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
+   };
+   new ScriptObject() {
          pad = "1752";
          penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+         time = "0";
    };
    new InteriorInstance() {
       position = "86.5214 -39.3695 -86.8688";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/beginner/natureroute.dif";
+      interiorFile = "~/data/interiors/beginner/natureroute_edit.dif";
       showTerrainInside = "0";
    };
    new Item() {
@@ -178,22 +178,24 @@ new SimGroup(MissionGroup) {
          timeBonus = "60000";
    };
    new Item() {
-      position = "-18.2392 -52.6958 -25.375";
+      position = "-17.0392 -52.6958 -23.9";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "GemItem";
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "2345";
    };
    new Item() {
-      position = "-18.1755 -65.1454 -27.3992";
+      position = "-20 -58.5 -23.9";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "GemItem";
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "2346";
    };
    new Item() {
       position = "-5.26667 -26.2152 -24.8425";
@@ -203,6 +205,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "2347";
    };
    new Item() {
       position = "-5.23739 -32.6675 -24.4352";
@@ -230,6 +233,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "2348";
    };
    new Item() {
       position = "3.82817 -58.7011 -23.8195";
@@ -239,6 +243,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "2349";
    };
    new Item() {
       position = "3.41856 -46.054 -23.4624";
@@ -257,11 +262,14 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "2350";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
+   new StaticShape(EndPoint) {
+      position = "-4.54129 -51.8528 -23.8925";
+      rotation = "0 0 1 215";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "EndPad";
+         beam = "2327";
    };
    new Trigger() {
       position = "-37.5694 -16.389 -35.3729";
@@ -271,19 +279,17 @@ new SimGroup(MissionGroup) {
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new ScriptObject() {
+         pad = "3281";
+         penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
          powerUp = "0";
          time = "0";
-         pad = "3281";
-         penaltyTime = "0";
    };
-   new StaticShape(EndPoint) {
-      position = "-4.54129 -51.8528 -23.8925";
-      rotation = "0 0 1 215";
-      scale = "0.5 0.5 0.5";
-      dataBlock = "EndPad";
-         beam = "4515";
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---
