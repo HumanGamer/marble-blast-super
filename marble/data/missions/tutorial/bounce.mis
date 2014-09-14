@@ -726,7 +726,7 @@ new SimGroup(MissionGroup) {
       scale = "1 12 12";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Climb up the stair case before it is gone!";
+         text = "Climb up the staircase before it is gone!";
    };
    new Trigger() {
       position = "1.61615 -39.0071 -28.8828";
@@ -734,7 +734,7 @@ new SimGroup(MissionGroup) {
       scale = "12 1 12";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Don\'t touch these platforms or a big suprise will happen.";
+         text = "Don\'t touch these platforms or a big surprise will happen.";
    };
    new StaticShape(EndPoint) {
       position = "-32.2381 -19.1434 -27.9776";

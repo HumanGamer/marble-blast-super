@@ -6,7 +6,7 @@ new SimGroup(MissionGroup) {
          artist = "James Colsey";
          time = "0";
          type = "Medium";
-         startHelpText = "Pick up the Gravity Changer, there is no way to pass it.";
+         startHelpText = "Pick up the GravityChanger, there is no way to pass it.";
          desc = "Wait until you see this course become slanted.";
          level = "3";
          name = "Slanted Route";

@@ -9,7 +9,7 @@ new SimGroup(MissionGroup) {
          artist = "James Colsey";
          desc = "Every challenge will get harder and harder.";
          level = "1";
-         startHelpText = "Find a way to get to the second gem using the wind tunnel.";
+         startHelpText = "Roll to the goal!";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

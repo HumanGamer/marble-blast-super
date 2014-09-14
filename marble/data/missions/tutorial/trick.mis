@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          name = "Spinning Insanity";
          time = "0";
          goldTime = "30000";
-         startHelpText = "Learn how to use the Rotating Platforms in this level.";
+         startHelpText = "Learn about Rotating Platforms in this level.";
          desc = "They are confusing, they are difficult, they are frustrating, they are Rotating Platforms.";
          type = "Tutorial";
          level = "5";
