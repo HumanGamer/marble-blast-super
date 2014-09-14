@@ -1,0 +1,19 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(DemoGroup) {
+	new ScriptObject(DemoInfo) {
+		name = "Tricky Bananas";
+		desc = "Test Description";
+		mission = "marble/data/missions/tutorial/bounce.mis";
+		artist = "cooldudepoke";
+		blastCount = "4";
+		blastTime[0] = "3244";
+		blastTime[1] = "7894";
+		blastTime[2] = "10639";
+		blastTime[3] = "13603";
+		oobCount = "3";
+		oobTime[0] = "8549";
+		oobTime[1] = "8892";
+		oobTime[2] = "12730";
+	};
+};
+//--- OBJECT WRITE END ---

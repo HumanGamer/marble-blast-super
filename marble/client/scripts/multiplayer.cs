@@ -238,6 +238,13 @@ function clientCmdOOBUpdate()
    {
       $Multiplayer::OOBDone = true;
       commandToServer('OOBClick');
+      
+      if ($isDemoRecording)
+      {
+         $Demo::OOBCount++;
+         echo($Demo::OOBCount @ " | " @ PlayGui.elapsedTime);
+         $Demo::OOBTime[$Demo::OOBCount - 1] = PlayGui.elapsedTime;
+      }
    }
 }
 

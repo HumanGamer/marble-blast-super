@@ -63,12 +63,18 @@ function RC_StartDemo()
    
    $BlastCount = %info.blastCount;
    
-   //echo("Loading Blast Demo: " @ $BlastCount);
-   
    for (%i = 0; %i < $BlastCount; %i++)
    {
       $BlastTime[%i] = %info.blastTime[%i];
       $UsedBlast[%i] = false;
+   }
+   
+   $Demo::OOBCount = %info.oobCount;
+   
+   for (%i = 0; %i < $Demo::OOBCount; %i++)
+   {
+      $Demo::OOBTime[%i] = %info.oobTime[%i];
+      $Demo::UsedOOB[%i] = false;
    }
    
    playDemo(%file);

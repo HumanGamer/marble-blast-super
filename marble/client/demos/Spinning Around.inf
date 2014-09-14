@@ -1,13 +1,15 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(DemoGroup) {
 	new ScriptObject(DemoInfo) {
-		name = "Potato Pie";
+		name = "Spinning Around";
 		desc = "Test Description";
 		mission = "marble/data/missions/tutorial/trick.mis";
 		artist = "cooldudepoke";
 		blastCount = "2";
-		blastTime[0] = "4602";
-		blastTime[1] = "15974";
+		blastTime[0] = "32121";
+		blastTime[1] = "39656";
+		oobCount = "1";
+		oobTime[0] = "35381";
 	};
 };
 //--- OBJECT WRITE END ---

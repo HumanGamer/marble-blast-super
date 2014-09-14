@@ -39,6 +39,7 @@ function onGameStartup()
    if (!$Client::ConnectedMultiplayer)
    {
       updateGame();
+      updateDemo();
    }
    
    updateSpeed();
@@ -64,15 +65,9 @@ function updateDelta()
    $Multiplayer::DeltaUpdate = schedule(10, 0, updateDelta);
 }
 
-function updateGame()
-{
-   cancel($Multiplayer::UpdateSchedule);
-   
-   checkHidingPlatforms();
-   checkBombs();
-   updateCannons();
-   updateRotationPlatforms();
-   
+function updateDemo()
+{   
+   cancel($Multiplayer::UpdateDemo);
    if ($playingDemo && $Client::BlastEnergy > 1000)
    {
       for (%i = 0; %i < $BlastCount; %i++)
@@ -86,6 +81,32 @@ function updateGame()
          }
       }
    }
+   
+   if ($playingDemo && !$Multiplayer::OOBDone && LocalClientConnection.player.isOOB)
+   {
+      for (%i = 0; %i < $Demo::OOBCount; %i++)
+      {
+         %time = $Demo::OOBTime[%i];
+         
+         if (PlayGui.elapsedTime >= %time && !$Demo::UsedOOB[%i])
+         {
+            $Multiplayer::OOBDone = true;
+            commandToServer('OOBClick');
+            $Demo::UsedOOB[%i] = true;
+         }
+      }
+   }
+   $Multiplayer::UpdateDemo = schedule(1, 0, updateDemo);
+}
+
+function updateGame()
+{
+   cancel($Multiplayer::UpdateSchedule);
+   
+   checkHidingPlatforms();
+   checkBombs();
+   updateCannons();
+   updateRotationPlatforms();
    
    $Multiplayer::UpdateSchedule = schedule($Multiplayer::UpdateInterval, 0, updateGame);
 }
@@ -104,7 +125,7 @@ function oobUpdate()
       }
    }
    
-   $Multiplayer::OOBUpdate = schedule($Multiplayer::UpdateInterval, 0, oobUpdate);
+   $Multiplayer::OOBUpdate = schedule(1, 0, oobUpdate);
 }
 
 function updateSpeed()

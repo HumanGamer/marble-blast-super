@@ -41,6 +41,11 @@ function createDemoInfo()
 		{
 		   %file.writeLine("\t\tblastTime[" @ %i @ "] = \"" @ $BlastTime[%i] @ "\";");
 		}
+		%file.writeLine("\t\toobCount = \"" @ $Demo::OOBCount @ "\";");
+		for (%i = 0; %i < $Demo::OOBCount; %i++)
+		{
+		   %file.writeLine("\t\toobTime[" @ %i @ "] = \"" @ $Demo::OOBTime[%i] @ "\";");
+		}
 		%file.writeLine("\t};");
 		%file.writeLine("};");
 		%file.writeLine("//--- OBJECT WRITE END ---");
