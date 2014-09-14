@@ -54,17 +54,18 @@ function ToggleConsole(%make)
 {
    if (%make)
    {
-      if ($ConsoleActive)
+      if (ConsoleDlg.isAwake())
+      //if ($ConsoleActive)
       {
-         if ( $enableDirectInput )
-            activateKeyboard();
+         //if ( $enableDirectInput )
+         //   activateKeyboard();
          Canvas.popDialog(ConsoleDlg);
          $ConsoleActive = false;
       }
       else
       {
-         if ( $enableDirectInput )
-            deactivateKeyboard();
+         //if ( $enableDirectInput )
+         //   deactivateKeyboard();
          Canvas.pushDialog(ConsoleDlg, 99);
          $ConsoleActive = true;
       }
