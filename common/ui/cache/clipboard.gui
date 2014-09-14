@@ -1,21 +1,16 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapButtonCtrl() {
-      profile = "GuiButtonProfile";
+   new GuiMLTextCtrl(OptFreeLookLabel) {
+      profile = "GuiMLTextProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "10 10";
-      extent = "44 47";
+      position = "-128 3";
+      extent = "64 28";
       minExtent = "8 8";
       visible = "1";
-      command = "$testcheats=1;";
-      accelerator = "escape";
       helpTag = "0";
-      text = "marble";
-      groupNum = "-1";
-      buttonType = "PushButton";
-      repeatPeriod = "1000";
-      repeatDecay = "1";
-      bitmap = "marble/client/ui/play/le";
+      lineSpacing = "2";
+      allowColorChars = "0";
+      maxChars = "-1";
    };
 };

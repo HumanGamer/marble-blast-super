@@ -3,7 +3,7 @@ function optionsDlg::setPane(%this, %pane)
    OptAudioPane.setVisible(false);
    OptGraphicsPaneMac.setVisible(false);
    OptGraphicsPane.setVisible(false);
-   OptNetworkPane.setVisible(false);
+   //OptNetworkPane.setVisible(false);
    OptControlsPane.setVisible(false);
    if(%pane $= "Graphics")
    {
@@ -19,12 +19,12 @@ function optionsDlg::setPane(%this, %pane)
    else
       ("Opt" @ %pane @ "Pane").setVisible(true);
    OptControlsPane.showMappings();
-   %par = OptBoxFrame.getGroup();
+   //%par = OptBoxFrame.getGroup();
 
-   RootGroup.add(OptBoxFrame);
-   RootGroup.add("Opt" @ %pane @ "Tab");
-   %par.add(OptBoxFrame);
-   %par.add("Opt" @ %pane @ "Tab");
+   //RootGroup.add(OptBoxFrame);
+   //RootGroup.add("Opt" @ %pane @ "Tab");
+   //%par.add(OptBoxFrame);
+   //%par.add("Opt" @ %pane @ "Tab");
 }
 
 function OptGraphicsPane::setResolution(%this, %res)
@@ -62,13 +62,13 @@ function OptionsDlg::onWake(%this)
    OptGfx640480.setValue(false);
    OptGfx800600.setValue(false);
    OptGfx1024768.setValue(false);
-   OptGfx1152870.setValue(false);
+   OptGfx1152x870.setValue(false);
    OptGfx1600x1200.setValue(false);
-   OptGfx640480Mac.setValue(false);
-   OptGfx800600Mac.setValue(false);
-   OptGfx1024768Mac.setValue(false);
-   OptGfx1152870Mac.setValue(false);
-   OptGfx1600x1200Mac.setValue(false);
+   //OptGfx640480Mac.setValue(false);
+   //OptGfx800600Mac.setValue(false);
+   //OptGfx1024768Mac.setValue(false);
+   //OptGfx1152870Mac.setValue(false);
+   //OptGfx1600x1200Mac.setValue(false);
 
    %res = getWords($pref::Video::resolution, 0, 1);
    switch$(%res)
@@ -101,32 +101,34 @@ function OptionsDlg::onWake(%this)
    
    %is32 = getWord($pref::Video::resolution, 2) == 32;
    OptGfx16.setValue(!%is32);
-   OptGfx32.setValue(%is32);
+   //OptGfx32.setValue(%is32);
    OptGfx16Mac.setValue(!%is32);
    OptGfx32Mac.setValue(%is32);
 
-   OptGraphicsDriverMenu.clear();
-   for(%i = 0; %i < %count; %i++)
-      OptGraphicsDriverMenu.add(getField(%buffer, %i), %i);
-   %selId = OptGraphicsDriverMenu.findText( $pref::Video::displayDevice );
-	if ( %selId == -1 )
-		%selId = 0; // How did THAT happen?
-	OptGraphicsDriverMenu.setSelected( %selId );
-	OptGraphicsDriverMenu.onSelect( %selId, "" );
+   //OptGraphicsDriverMenu.clear();
+   //for(%i = 0; %i < %count; %i++)
+      //OptGraphicsDriverMenu.add(getField(%buffer, %i), %i);
+   //%selId = OptGraphicsDriverMenu.findText( $pref::Video::displayDevice );
+	//if ( %selId == -1 )
+		//%selId = 0; // How did THAT happen?
+	//OptGraphicsDriverMenu.setSelected( %selId );
+	//OptGraphicsDriverMenu.onSelect( %selId, "" );
 
    // Audio 
    OptAudioUpdate();
-   OptAudioVolumeMaster.setValue( $pref::Audio::masterVolume);
-   OptAudioVolumeShell.setValue(  $pref::Audio::channelVolume[$GuiAudioType]);
-   OptAudioVolumeSim.setValue(    $pref::Audio::channelVolume[$SimAudioType]);
-   OptAudioDriverList.clear();
-   OptAudioDriverList.add("OpenAL", 1);
-   OptAudioDriverList.add("none", 2);
-   %selId = OptAudioDriverList.findText($pref::Audio::driver);
-	if ( %selId == -1 )
-		%selId = 0; // How did THAT happen?
-	OptAudioDriverList.setSelected( %selId );
-	OptAudioDriverList.onSelect( %selId, "" );
+   //OptAudioVolumeMaster.setValue( $pref::Audio::masterVolume);
+   //OptAudioVolumeShell.setValue(  $pref::Audio::channelVolume[$GuiAudioType]);
+   //OptAudioVolumeSim.setValue(    $pref::Audio::channelVolume[$SimAudioType]);
+   //OptAudioDriverList.clear();
+   //OptAudioDriverList.add("OpenAL", 1);
+   //OptAudioDriverList.add("none", 2);
+   //%selId = OptAudioDriverList.findText($pref::Audio::driver);
+	//if ( %selId == -1 )
+		//%selId = 0; // How did THAT happen?
+	//OptAudioDriverList.setSelected( %selId );
+	//OptAudioDriverList.onSelect( %selId, "" );
+	
+	OptFreeLookLabel.setText("Always Freelook");
 }
 
 function OptionsDlg::onSleep(%this)

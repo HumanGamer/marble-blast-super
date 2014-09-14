@@ -51,7 +51,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          position = "5 31";
          extent = "667 450";
          minExtent = "8 8";
-         visible = "0";
+         visible = "1";
          helpTag = "0";
 
          new GuiBitmapCtrl(OptMarbleControlsPane) {
@@ -61,7 +61,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             position = "14 55";
             extent = "596 349";
             minExtent = "8 8";
-            visible = "1";
+            visible = "0";
             helpTag = "0";
             bitmap = "./options/options";
             wrap = "0";
@@ -407,7 +407,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             position = "14 55";
             extent = "596 349";
             minExtent = "8 8";
-            visible = "0";
+            visible = "1";
             helpTag = "0";
             bitmap = "./options/options";
             wrap = "0";
@@ -422,7 +422,6 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                visible = "1";
                command = "OptControlsPane.remap(freelook, \"Free Look\");";
                helpTag = "0";
-               text = "Right Mouse";
                groupNum = "-1";
                buttonType = "PushButton";
                repeatPeriod = "1000";
@@ -538,6 +537,19 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                repeatPeriod = "1000";
                repeatDecay = "1";
                bitmap = "./Options/cntrl_mous_freel";
+            };
+            new GuiMLTextCtrl(OptFreeLookLabel) {
+               profile = "GuiBigTextProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "123 18";
+               extent = "234 36";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               lineSpacing = "2";
+               allowColorChars = "0";
+               maxChars = "-1";
             };
          };
       };
@@ -864,7 +876,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          position = "3 6";
          extent = "636 476";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
 
          new GuiBitmapCtrl() {
@@ -967,7 +979,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             helpTag = "0";
             range = "0.000000 1.000000";
             ticks = "10";
-            value = "1";
+            value = "0.466179";
             bitmap = "./Options/knob";
          };
          new GuiSliderCtrl() {
@@ -983,7 +995,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             helpTag = "0";
             range = "0.000000 1.000000";
             ticks = "10";
-            value = "0";
+            value = "0.473492";
             bitmap = "./Options/knob";
          };
       };
