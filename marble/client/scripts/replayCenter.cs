@@ -14,7 +14,7 @@ function RC_SetSelected(%index)
    %text = RC_ReplayList.getRowTextById(%index);
    %base = fileBase(%text);
    %base = strreplace(%base, ".mis", "");
-   %file = filePath(%text) @ "/" @ %base @ ".inf";
+   %file = filePath(%text) @ "/" @ %base @ ".demoinfo";
    
    if (isFile(%file))
    {
@@ -144,7 +144,7 @@ function buildDemoList()
       
       %base = fileBase(%file);
       %base = strreplace(%base, ".mis", "");
-      %inf = filePath(%file) @ "/" @ %base @ ".inf";
+      %inf = filePath(%file) @ "/" @ %base @ ".demoinfo";
       
       if (!isFile(%inf))
          error("Missing File: " @ %inf);
@@ -169,7 +169,7 @@ function populateReplayList()
    {
       %base = fileBase($DemoFile[%i]);
       %base = strreplace(%base, ".mis", "");
-      %inf = filePath($DemoFile[%i]) @ "/" @ %base @ ".inf";
+      %inf = filePath($DemoFile[%i]) @ "/" @ %base @ ".demoinfo";
       %demo = getDemoObject(%inf);
       if (!isObject(%demo))
       {
@@ -266,5 +266,5 @@ function getDemoObject(%demo)
 
 function getDemoInfo(%demo)
 {
-   return getDemoObject(strreplace(%demo, ".rec", ".inf"));
+   return getDemoObject(strreplace(%demo, ".rec", ".demoinfo"));
 }

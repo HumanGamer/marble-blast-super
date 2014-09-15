@@ -6,7 +6,7 @@ function startRecordingDemo(%mission)
 function doRecordingDemo(%file, %mission)
 {
    $isDemoRecording = true;
-   $currentInfoFile = "marble/client/demos/" @ %file @ ".inf";
+   $currentInfoFile = "marble/client/demos/" @ %file @ ".demoinfo";
    $currentDemoFile = "marble/client/demos/" @ %file @ ".rec";
    $Recording::Desc = "Test Description";
    $Recording::Mission = %mission.file;
