@@ -1,37 +1,16 @@
 new SimSet(guiClipboard) {
 
-   new GuiScrollCtrl(LB_PlayerScroll) {
-      profile = "PlayMissionScrollProfile";
+   new GuiMLTextCtrl(LB_Desc) {
+      profile = "GuiMLTextProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "23 126";
-      extent = "200 200";
+      position = "230 276";
+      extent = "300 112";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      willFirstRespond = "1";
-      hScrollBar = "dynamic";
-      vScrollBar = "dynamic";
-      constantThumbHeight = "0";
-      childMargin = "0 0";
-
-      new GuiTextListCtrl(LB_PlayerList) {
-         profile = "GuiTextListProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "0 0";
-         extent = "9 8";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         enumerate = "0";
-         resizeCell = "0";
-         columns = "0 19 100";
-         fitParentWidth = "0";
-         clipColumnText = "0";
-            maxChars = "-1";
-            lineSpacing = "2";
-            allowColorChars = "0";
-      };
+      lineSpacing = "2";
+      allowColorChars = "0";
+      maxChars = "-1";
    };
 };

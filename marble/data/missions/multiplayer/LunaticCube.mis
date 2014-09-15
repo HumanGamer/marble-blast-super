@@ -7,8 +7,9 @@ new SimGroup(MissionGroup) {
          level = "3";
          gameMode = "Hunt";
          maxGemsPerSpawn = "6";
-         type = "multiplayer";
+         type = "Expert";
          time = "300000";
+         gameType = "Multiplayer";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

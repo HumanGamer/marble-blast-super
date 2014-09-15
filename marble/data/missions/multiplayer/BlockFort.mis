@@ -3,13 +3,14 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          desc = "Collect the gems in these double decker blocks.";
-         type = "multiplayer";
+         type = "Medium";
          level = "5";
          name = "Block Fort";
          gameMode = "Hunt";
          artist = "James Colsey";
          maxGemsPerSpawn = "6";
          time = "240000";
+         gameType = "Multiplayer";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

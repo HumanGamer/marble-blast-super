@@ -7,9 +7,10 @@ new SimGroup(MissionGroup) {
          time = "180000";
          maxGemsPerSpawn = "5";
          desc = "Be agile as you collect the gems in this small level.";
-         type = "multiplayer";
+         type = "Beginner";
          level = "1";
          gameMode = "Hunt";
+         gameType = "Multiplayer";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

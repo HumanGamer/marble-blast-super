@@ -5,11 +5,12 @@ new SimGroup(MissionGroup) {
          gameMode = "Hunt";
          maxGemsPerSpawn = "7";
          level = "5";
-         type = "multiplayer";
+         type = "Advanced";
          time = "300000";
          name = "Permuda Square";
          desc = "Find the gems in this big square level.";
          artist = "James Colsey";
+         gameType = "Multiplayer";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

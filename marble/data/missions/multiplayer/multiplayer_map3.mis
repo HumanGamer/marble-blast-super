@@ -8,8 +8,9 @@ new SimGroup(MissionGroup) {
          gameMode = "hunt";
          level = "1";
          artist = "Matthieu Parizeau";
-         type = "multiplayer";
+         type = "Beginner";
          maxGemsPerSpawn = "7";
+         gameType = "Multiplayer";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

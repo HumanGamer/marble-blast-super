@@ -2,6 +2,7 @@ function playMissionGui::onWake(%this)
 {
    buildMissionList();
    clearMissionList();
+   clearLBMissionList();
    
    PM_DifficultyButton.setText("Select Difficulty");
    
@@ -114,8 +115,11 @@ function populatePMList()
       //return;
    //}
    
-   clearMissionList();  
+   clearMissionList(); 
+   clearLBMissionList();
+   
    clearMissionList();
+   clearLBMissionList();
    
    %group = "MTYPE_" @ $MissionType;
    
@@ -186,6 +190,7 @@ function buildMissionList()
    PM_missionList.clear();
    //PM_missionSelectList.clear();
    clearMissionList();
+   clearLBMissionList();
    
    if ($MissionType $= "")
       $MissionType = "Tutorial";
@@ -218,6 +223,11 @@ function buildMissionList()
    if (playMissionGui.isAwake())
    {
       populatePMList();
+   }
+   
+   if (lobbyGui.isAwake())
+   {
+      populateLBList();
    }
    
    //PM_missionSelectList.extent = "170" SPC PM_missionSelectList.getCount() * 110;
@@ -339,7 +349,7 @@ function PM_setSelected(%index)
    PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
    PM_missionList.setSelectedById(%index);
    
-   $CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels;
+   $CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels && %mission.gameType !$= "Multiplayer";
    
    setLevelLocked();
    
@@ -420,6 +430,8 @@ function getMissionObject(%mission) {
 	
 	if (!isObject(MTYPE_tutorial))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_tutorial));
+   if (!isObject(MTYPE_practice))
+	   PlayMissionGroup.add(new SimGroup(MTYPE_practice));
 	if (!isObject(MTYPE_beginner))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_beginner));
    if (!isObject(MTYPE_medium))
@@ -430,11 +442,13 @@ function getMissionObject(%mission) {
 	   PlayMissionGroup.add(new SimGroup(MTYPE_expert));
    if (!isObject(MTYPE_custom))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_custom));
-   if (!isObject(MTYPE_multiplayer))
-	   PlayMissionGroup.add(new SimGroup(MTYPE_multiplayer));
 	   
-   if (%infoObject.type !$= "tutorial" && %infoObject.type !$= "beginner" && %infoObject.type !$= "medium" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert" && %infoObject.type !$= "multiplayer")
+   if (%infoObject.type !$= "tutorial" && %infoObject.type !$= "practice" && %infoObject.type !$= "beginner" && %infoObject.type !$= "medium" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert")
       %infoObject.type = "custom";
+      
+   if (LobbyGui.isAwake() && %infoObject.gameType !$= "Multiplayer")
+      return;
+      
    eval("MTYPE_" @ %infoObject.type @ ".add(%infoObject);");
 	
 	%infoObject.file = %mission;
