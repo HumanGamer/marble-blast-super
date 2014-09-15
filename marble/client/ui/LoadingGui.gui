@@ -13,17 +13,80 @@ new GuiChunkedBitmapCtrl(LoadingGui) {
    tile = "0";
       qLineCount = "0";
 
-   new GuiBitmapCtrl() {
+   new GuiControl(LG_InfoContainer) {
       profile = "GuiDefaultProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "222 201";
-      extent = "195 77";
+      position = "20 153";
+      extent = "600 173";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "./loading/loading";
-      wrap = "0";
+
+      new GuiProgressCtrl(LG_ProgressBar) {
+         profile = "GuiProgressProfile";
+         horizSizing = "center";
+         vertSizing = "top";
+         position = "5 103";
+         extent = "590 30";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+      };
+      new GuiBitmapButtonCtrl(LG_CancelBtn) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "494 135";
+         extent = "101 35";
+         minExtent = "8 8";
+         visible = "1";
+         command = "disconnect();";
+         accelerator = "escape";
+         helpTag = "0";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./loading/cancel";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "202 14";
+         extent = "195 77";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./loading/loading";
+         wrap = "0";
+      };
+      new GuiAviBitmapCtrl(LG_Anim) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "197 0";
+         extent = "206 76";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         done = "1";
+      };
+      new GuiMLTextCtrl(LG_Name) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "5 140";
+         extent = "480 32";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
    };
 };
 //--- OBJECT WRITE END ---

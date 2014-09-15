@@ -29,12 +29,12 @@ function onMissionDownloadPhase1(%missionName, %musicTrack)
    //cls();
 
    // Reset the loading progress controls:
-   //LoadingProgress.setValue(0);
+   LG_ProgressBar.setValue(0);
 }
 
 function onPhase1Progress(%progress)
 {
-   //LoadingProgress.setValue(%progress);
+   LG_ProgressBar.setValue(%progress);
    Canvas.repaint();
 }
 
@@ -49,13 +49,13 @@ function onPhase1Complete()
 function onMissionDownloadPhase2()
 {
    // Reset the loading progress controls:
-   //LoadingProgress.setValue(0);
+   LG_ProgressBar.setValue(0);
    Canvas.repaint();
 }
 
 function onPhase2Progress(%progress)
 {
-   //LoadingProgress.setValue(%progress);
+   LG_ProgressBar.setValue(%progress);
    Canvas.repaint();
 }
 
@@ -73,12 +73,12 @@ function onMissionDownloadPhase3()
 
 function onPhase3Progress(%progress)
 {
-   //LoadingProgress.setValue(%progress);
+   LG_ProgressBar.setValue(%progress);
 }
 
 function onPhase3Complete()
 {
-   //LoadingProgress.setValue( 1 );
+   LG_ProgressBar.setValue( 1 );
    $lightingMission = false;
 }
 
@@ -118,7 +118,7 @@ function handleLoadInfoMessage( %msgType, %msgString, %mapName ) {
 	LoadingGui.qLineCount = 0;
 
    //
-	//LOAD_MapName.setText( "<font:DomCasualD:32><just:center>" @ %mapName );
+	LG_Name.setText( "<font:Whitestone:32><just:left>" @ %mapName );
 }
 
 //------------------------------------------------------------------------------
