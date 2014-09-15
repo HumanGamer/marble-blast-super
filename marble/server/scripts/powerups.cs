@@ -593,7 +593,5 @@ function GameConnection::makeMini(%this)
    if (isObject(%this.ghost))
       %this.ghost.setDatablock(GhostMiniMarble);
    
-   //%this.applyImpulse("0 0 -1", "0 0 7");
-   
    %this.megaMarbleSchedule = %this.schedule(10000, makeNoMega);
 }

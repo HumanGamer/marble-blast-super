@@ -86,7 +86,7 @@ function Editor::checkActiveLoadDone()
 //------------------------------------------------------------------------------
 function toggleEditor(%make)
 {
-   if (%make && $testCheats && !$Client::ConnectedMultiplayer)
+   if (%make && $testCheats && (!$Client::ConnectedMultiplayer || $devMode))
    {
       if (!$missionRunning) 
       {

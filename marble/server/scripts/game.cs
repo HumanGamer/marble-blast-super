@@ -250,6 +250,12 @@ function spawnGemGroup()
 
    %gem = %group.getObject(getRandom(%group.getCount() - 1)); 
    %gem.hide(false);  
+   
+   if (isObject(%gem.beam))
+      %gem.beam.delete();
+   if (isObject(%gem.node))
+      %gem.node.delete();
+   
    %position = %gem.getPosition();    
    %rotation = %gem.rotation;  
    %scale = %gem.getScale();    
@@ -302,6 +308,14 @@ function spawnGemGroup()
 	   if (isObject(%lastObj))
 	   {
 	      %lastObj.hide(false);
+         
+         
+   
+         if (isObject(%lastObj.beam))
+            %lastObj.beam.delete();
+         if (isObject(%lastObj.node))
+            %lastObj.node.delete();
+	      
          %position = %lastObj.getPosition();   
          %rotation = %lastObj.rotation;  
          %scale = %lastObj.getScale();    
@@ -831,7 +845,7 @@ function GameConnection::onFoundGem(%this,%amount, %gem)
      }
       handleGems();
       if (isObject(%gem.beam))
-           %gem.beam.delete();
+         %gem.beam.delete();
    }
 
    %this.setGemCount(%this.gemCount);

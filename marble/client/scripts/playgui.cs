@@ -250,7 +250,7 @@ function PlayGui::updateTimer(%this, %timeInc)
    if (%this.elapsedTime < 0 && isObject(ServerConnection) && $Multiplayer::GameMode $= "hunt")
       %this.elapsedTime = 0;
    
-   if (%this.elapsedTime == 0 && isObject(ServerConnection) && $Multiplayer::GameMode $= "hunt" && !$Multiplayer::Ended)
+   if ((%this.elapsedTime == 0 && isObject(ServerConnection) && $Multiplayer::GameMode $= "hunt" && !$Multiplayer::Ended) && !$infiniteTime)
    {
        commandToServer('GameFinished');
        $Multiplayer::Ended = true;
