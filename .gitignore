@@ -11,3 +11,4 @@
 /marble/server/prefs.cs.dso
 /common/server/prefs.cs
 *.dso
+*.db
