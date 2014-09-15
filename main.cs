@@ -1,3 +1,6 @@
+// BEGIN TORSION
+dbgSetParameters( 6060, "password" );
+// END TORSION
 //-----------------------------------------------------------------------------
 // Torque Game Engine
 // 

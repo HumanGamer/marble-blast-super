@@ -16,6 +16,8 @@ function LoadingGui::onWake(%this)
 {
    // Play sound...
    CloseMessagePopup();
+   
+   clearLoading();
 }
 
 //------------------------------------------------------------------------------

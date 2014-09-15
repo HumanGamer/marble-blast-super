@@ -25,8 +25,8 @@ new GuiControl(MultiplayerExitGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "186 182";
-         extent = "121 45";
+         position = "185 182";
+         extent = "120 42";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.popDialog(MultiplayerExitGui);$escapeEnd = true;hostEscapeToLobby();";
@@ -42,8 +42,8 @@ new GuiControl(MultiplayerExitGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "4 191";
-         extent = "154 42";
+         position = "20 182";
+         extent = "120 42";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.popDialog(MultiplayerExitGui);disconnect();Canvas.setContent(MultiplayerGui);";
@@ -53,14 +53,14 @@ new GuiControl(MultiplayerExitGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./exitmp/exit";
+         bitmap = "./exitmp/disconnect";
       };
       new GuiBitmapButtonCtrl(MPE_Resume) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "22 77";
-         extent = "285 48";
+         position = "20 80";
+         extent = "285 42";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.popDialog(MultiplayerExitGui);";
@@ -76,8 +76,8 @@ new GuiControl(MultiplayerExitGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "21 130";
-         extent = "286 42";
+         position = "20 130";
+         extent = "285 42";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.popDialog(MultiplayerExitGui);restartLevel();";
@@ -91,18 +91,31 @@ new GuiControl(MultiplayerExitGui) {
       };
       new GuiMLTextCtrl(MPE_Text) {
          profile = "GuiMLTextProfile";
-         horizSizing = "right";
+         horizSizing = "center";
          vertSizing = "bottom";
-         position = "20 19";
-         extent = "267 14";
+         position = "39 37";
+         extent = "242 24";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
          lineSpacing = "2";
          allowColorChars = "0";
          maxChars = "-1";
-         text = "What would you like to do?";
       };
    };
 };
 //--- OBJECT WRITE END ---
+
+function MultiplayerExitGui::init(%this)
+{
+   MPE_Text.setText("<spush><font:Animated:24>What would you like to do?<spop>");
+   
+   if ($Multiplayer::isHosting)
+   {
+      MPE_Lobby.setVisible(true);
+      MPE_Restart.setVisible(true);
+   } else {
+      MPE_Lobby.setVisible(false);
+      MPE_Restart.setVisible(false);
+   }
+}

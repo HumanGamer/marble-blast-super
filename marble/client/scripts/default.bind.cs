@@ -36,7 +36,7 @@ function escapeFromGame()
    else {
       //MessageBoxYesNo( "Disconnect", "Disconnect from the server?",
       //   "escapeToLobby();", "");
-      
+      MultiplayerExitGui.init();
       Canvas.pushDialog(MultiplayerExitGui);
    }
 }
