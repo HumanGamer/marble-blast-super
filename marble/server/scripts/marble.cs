@@ -436,8 +436,34 @@ datablock MarbleData(MegaMarbleBall : DefaultMarble)
    
    radius = 0.6075;
    reduction = 0.5625;
-   power = 56.25;
-   maxPower = 9;
+   power = 20;
+   maxPower = 32;
+   bounceCol = 0.5;
+   minCol = 0.3;
+   
+   blastRechargeTime = 36000;
+   maxBlastRecharge = 5500;
+   maxBlast = 6500;
+   minUsableBlast = 1000;
+};
+
+datablock MarbleData(MiniMarbleBall : DefaultMarble)
+{
+   shapeFile = "~/data/shapes/balls/miniMarble.dts";
+   
+   maxRollVelocity = 15;
+   
+   bounce1 = MegaBounce1Sfx;
+   bounce2 = MegaBounce2Sfx;
+   bounce3 = MegaBounce3Sfx;
+   bounce4 = MegaBounce4Sfx;
+
+   rollHardSound = MegaRollingHardSfx;   
+   
+   radius = 0.135;
+   reduction = 0.125;
+   power = 2;
+   maxPower = 5;
    bounceCol = 0.5;
    minCol = 0.3;
    

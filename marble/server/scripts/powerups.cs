@@ -527,7 +527,73 @@ function GameConnection::makeNoMega(%this)
 {
    cancel(%this.megaMarbleSchedule);
    
+   %impulse = false;
+   if (%this.player.getDatablock().getName() $= "MiniMarbleBall")
+      %impulse = true;
+   
    %this.player.setDatablock(DefaultMarble);
    if (isObject(%this.ghost))
       %this.ghost.setDatablock(GhostMarble);
+   
+   if (%impulse)
+      %this.applyImpulse("0 0 -1", "0 0 7");
+}
+
+datablock AudioProfile(doMiniMarbleSfx)
+{
+   filename    = "~/data/sound/doMiniMarble.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
+datablock AudioProfile(PuMiniMarbleVoiceSfx)
+{
+   filename    = "~/data/sound/puMiniMarbleVoice.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
+datablock ItemData(MiniMarbleItem)
+{
+   // Mission editor category
+   category = "Powerups";
+   className = "PowerUp";
+   powerUpId = 8;
+
+   activeAudio = doMiniMarbleSfx;
+   pickupAudio = PuMiniMarbleVoiceSfx;
+
+   // Basic Item properties
+   shapeFile = "~/data/shapes/items/miniMarble.dts";
+   mass = 1;
+   friction = 1;
+   elasticity = 0.3;
+
+   // Dynamic properties defined by the scripts
+   pickupName = "a Mini Marble PowerUp!";
+   useName = "Mini Marble PowerUp";
+   maxInventory = 1;
+};
+
+function MiniMarbleItem::onAdd(%this, %obj)
+{
+   %obj.playThread(0,"Ambient");
+}   
+
+function MiniMarbleItem::usePowerUp(%this, %obj)
+{
+   %obj.client.makeMini();
+}
+
+function GameConnection::makeMini(%this)
+{
+   cancel(%this.megaMarbleSchedule);
+   
+   %this.player.setDatablock(MiniMarbleBall);
+   if (isObject(%this.ghost))
+      %this.ghost.setDatablock(GhostMiniMarble);
+   
+   //%this.applyImpulse("0 0 -1", "0 0 7");
+   
+   %this.megaMarbleSchedule = %this.schedule(10000, makeNoMega);
 }

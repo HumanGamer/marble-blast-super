@@ -18,6 +18,11 @@ datablock StaticShapeData(GhostMegaMarble)
    shapeFile = "~/data/shapes/balls/megamarbleghost.dts";
 };
 
+datablock StaticShapeData(GhostMiniMarble)
+{
+   shapeFile = "~/data/shapes/balls/miniMarbleGhost.dts";
+};
+
 //---------------------------------------------------------------
 // Functions, they run the game! :D
 //---------------------------------------------------------------
