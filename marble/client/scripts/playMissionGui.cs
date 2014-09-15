@@ -1,6 +1,7 @@
 function playMissionGui::onWake(%this)
 {
    buildMissionList();
+   clearMissionList();
    
    PM_DifficultyButton.setText("Select Difficulty");
    
@@ -36,11 +37,19 @@ function PM_DifficultyList::onSelect(%this, %id)
    PM_DifficultyPopup.setVisible(false);
 }
 
-function PM_missionSelectList::onSelect(%this, %id)
+//function PM_missionSelectList::onSelect(%this, %id)
+//{
+   //PM_setSelected(%id);
+   //LB_SetSelected(%id);
+   //setLevelLocked();
+//}
+
+function clearMissionList()
 {
-   PM_setSelected(%id);
-   LB_SetSelected(%id);
-   setLevelLocked();
+   for (%i = 0; %i < PM_missionSelectList.getCount(); %i++)
+   {
+      PM_missionSelectList.getObject(%i).delete();
+   }
 }
 
 function PM_ToggleDifficultyPopUp()
@@ -91,13 +100,19 @@ function PM_skipQualify()
 
 function buildMissionList()
 {
+   if (!playMissionGui.isAwake())
+   {
+      schedule(100, 0, "buildMissionList");
+      return;
+   }
    if (!isObject(PlayMissionGroup))
    {
       new SimGroup(PlayMissionGroup);
       RootGroup.add(PlayMissionGroup);
    }
    PM_missionList.clear();
-   PM_missionSelectList.clear();
+   //PM_missionSelectList.clear();
+   clearMissionList();
    
    if ($MissionType $= "")
       $MissionType = "Tutorial";
@@ -118,12 +133,68 @@ function buildMissionList()
    
    sortByLevel(%group);
    
+   clearMissionList();  
+   clearMissionList();   
+   
+   //PM_missionSelectList.extent = "170" SPC %group.getCount() * 110;
    for (%i = 0; %i < %group.getCount(); %i++)
    {
       %mission = %group.getObject(%i);
       PM_missionList.addRow(%i, %mission.level TAB %mission);
-      PM_missionSelectList.addRow(%i, %i + 1 TAB %mission.name);
+      //PM_missionSelectList.addRow(%i, %i + 1 TAB %mission.name);
+      %ctrl = new GuiControl(PM_MissionID_ @ %i)
+      {
+         profile = "GuiDefaultProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "0" SPC %i * 110;
+         extent = "100 100";
+         minExtent = "8 8";
+         
+         new GuiBitmapCtrl()
+         {
+            profile = "GuiButtonProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "0 10";
+            extent = "90 60";
+            minExtent = "8 8";
+            visible = "1";
+            command = "PM_setSelected(" @ %i @ ");LB_SetSelected(" @ %i @ ");setLevelLocked();";
+            helpTag = "0";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = PM_GetBitmap(%mission);
+            wrap = "0";
+         };
+         
+         new GuiMLTextCtrl(PM_LBL)
+         {
+            profile = "GuiMLTextProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "0 70";
+            extent = "90 20";
+            minExtent = "8 8";
+            visible = "1";
+            command = "PM_setSelected(" @ %i @ ");LB_SetSelected(" @ %i @ ");setLevelLocked();";
+            helpTag = "0";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            wrap = "0";
+         };
+      };
+      PM_LBL.setText(%i + 1 @ ". " @ %mission.name);
+      PM_missionSelectList.add(%ctrl);
    }
+   //PM_missionSelectList.extent = "170" SPC PM_missionSelectList.getCount() * 110;
+   PM_missionSelectList.resize(1, 1, "114", PM_missionSelectList.getCount() * 110);
+   
+   PM_Scroll.scrollToTop();
    
    //%level = $pref::QualifiedLevel[$MissionType] - 1;
    //if (%level >= %group.getCount())
@@ -146,7 +217,7 @@ function buildMissionList()
       
    PM_setSelected(%level);
    LB_SetSelected(%level);
-   PM_missionSelectList.setSelectedById(%level);
+   //PM_missionSelectList.setSelectedById(%level);
 }
 
 function sortByLevel(%grp)
@@ -180,6 +251,14 @@ function sortByLevel(%grp)
       %grp.add(%obj);
    }
    %ngrp.delete();
+}
+
+function PM_GetBitmap(%mission)
+{
+   if (!isFile(%mission))
+      return strreplace(%mission.file, ".mis", "");
+   else
+      return strreplace(%mission, ".mis", "");
 }
 
 function PM_setSelected(%index)
@@ -240,6 +319,15 @@ function PM_setSelected(%index)
       PM_NoQualOverlay.setVisible(true);
       PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No Preview!");
    }
+   
+   for (%i = 0; %i < PM_missionSelectList.getCount(); %i++)
+   {
+      %object = "PM_MissionID_"@%i;
+      %object.profile = "GuiDefaultProfile";
+   }
+   
+   %object = "PM_MissionID_"@%index;  
+   %object.profile = "GuiPMSelectedMission";
 }
 
 function setLevelLocked()

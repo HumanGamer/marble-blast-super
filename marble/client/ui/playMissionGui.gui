@@ -174,7 +174,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "16 50";
-            extent = "185 410";
+            extent = "144 410";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -186,7 +186,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "22 56";
-            extent = "173 396";
+            extent = "134 396";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -196,20 +196,20 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             constantThumbHeight = "0";
             childMargin = "0 0";
 
-            new GuiTextListCtrl(PM_missionSelectList) {
+            new GuiControl(PM_missionSelectList) {
                profile = "PlayMissionListProfile";
                horizSizing = "right";
                vertSizing = "bottom";
-               position = "1 1";
-               extent = "170 120";
+               position = "0 0";
+               extent = "114 660";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
-               enumerate = "0";
-               resizeCell = "1";
-               columns = "0 20 165";
-               fitParentWidth = "0";
-               clipColumnText = "0";
+                  resizeCell = "1";
+                  columns = "0 20 165";
+                  fitParentWidth = "0";
+                  clipColumnText = "0";
+                  enumerate = "0";
             };
          };
          new GuiBitmapCtrl(PM_Buttons) {
@@ -333,7 +333,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "16 20";
-            extent = "185 25";
+            extent = "144 25";
             minExtent = "8 8";
             visible = "1";
             command = "PM_ToggleDifficultyPopup();";
@@ -344,8 +344,8 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             repeatPeriod = "1000";
             repeatDecay = "1";
             bitmap = "./play/difficulty";
-               maxPopupHeight = "200";
                maxLength = "255";
+               maxPopupHeight = "200";
          };
          new GuiBitmapCtrl(PM_DifficultyPopup) {
             profile = "GuiDefaultProfile";
@@ -358,10 +358,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             helpTag = "0";
             bitmap = "./play/difficultyList";
             wrap = "0";
-               groupNum = "-1";
-               maxPopupHeight = "200";
                text = "Select Difficulty";
                maxLength = "255";
+               groupNum = "-1";
+               maxPopupHeight = "200";
 
             new GuiScrollCtrl() {
                profile = "PlayMissionDifficultyScrollProfile";

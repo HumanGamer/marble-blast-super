@@ -287,3 +287,22 @@ if (!isObject(PlayMissionDifficultyListProfile)) new GuiControlProfile(PlayMissi
    autoSizeWidth = true;
    autoSizeHeight = true;
 };
+
+if (!isObject(GuiPMMission)) new GuiControlProfile(GuiPMMission)
+{
+   opaque = false;
+   fillColor = "0 0 0";
+   border = 1;
+   borderThickness = 1;
+   borderColor = "0 128 0";
+};
+
+
+if (!isObject(GuiPMSelectedMission)) new GuiControlProfile(GuiPMSelectedMission)
+{
+   opaque = true;
+   fillColor = "128 128 255";
+   border = 1;
+   borderThickness = 1;
+   borderColor = "0 128 0";
+};
