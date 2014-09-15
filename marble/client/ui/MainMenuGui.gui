@@ -124,7 +124,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/replay";
+         bitmap = "./home/replaycenter";
       };
    };
    new GuiBitmapButtonCtrl() {

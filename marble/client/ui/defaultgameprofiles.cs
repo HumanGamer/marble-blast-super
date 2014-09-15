@@ -306,3 +306,8 @@ if (!isObject(GuiPMSelectedMission)) new GuiControlProfile(GuiPMSelectedMission)
    borderThickness = 1;
    borderColor = "0 128 0";
 };
+
+if (!isObject(GuiBigGameTextProfile)) new GuiControlProfile(GuiBigGameTextProfile : GuiBigTextProfile)
+{
+   fontType = "Animated";
+};

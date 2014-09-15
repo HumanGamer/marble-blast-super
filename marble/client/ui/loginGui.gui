@@ -110,7 +110,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
                };
             };
             new GuiMLTextCtrl(LoginUsernameLabel) {
-               profile = "GuiBigTextProfile";
+               profile = "GuiBigGameTextProfile";
                horizSizing = "right";
                vertSizing = "bottom";
                position = "0 0";
@@ -134,7 +134,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
             helpTag = "0";
 
             new GuiMLTextCtrl(LoginPasswordLabel) {
-               profile = "GuiBigTextProfile";
+               profile = "GuiBigGameTextProfile";
                horizSizing = "right";
                vertSizing = "bottom";
                position = "0 0";
@@ -236,7 +236,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
             bitmap = "./login/remember";
          };
          new GuiMLTextCtrl(LoginRememberText) {
-            profile = "GuiBigTextProfile";
+            profile = "GuiBigGameTextProfile";
             horizSizing = "right";
             vertSizing = "bottom";
             position = "53 7";
@@ -250,7 +250,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          };
       };
       new GuiMLTextCtrl(Login_Status) {
-         profile = "GuiBigTextProfile";
+         profile = "GuiBigGameTextProfile";
          horizSizing = "center";
          vertSizing = "center";
          position = "194 71";

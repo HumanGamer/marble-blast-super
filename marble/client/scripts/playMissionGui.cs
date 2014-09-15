@@ -62,6 +62,14 @@ function PM_ToggleDifficultyPopUp()
 
 function PM_StartMission()
 {
+   Canvas.setContent(LoadingGui);
+   clearLoading();
+   
+   schedule(100, 0, "PM_ContinueStartMission");
+}
+
+function PM_ContinueStartMission()
+{
    %id = PM_missionList.getSelectedId();
    %mission = getField(PM_missionList.getRowTextById(%id), 1);
    $LastMissionId = %id;
@@ -98,50 +106,22 @@ function PM_skipQualify()
    LB_SetSelected(%id);
 }
 
-function buildMissionList()
+function populatePMList()
 {
-   if (!playMissionGui.isAwake())
-   {
-      schedule(100, 0, "buildMissionList");
-      return;
-   }
-   if (!isObject(PlayMissionGroup))
-   {
-      new SimGroup(PlayMissionGroup);
-      RootGroup.add(PlayMissionGroup);
-   }
-   PM_missionList.clear();
-   //PM_missionSelectList.clear();
-   clearMissionList();
+   //if (!playMissionGui.isAwake())
+   //{
+      //schedule(100, 0, "buildMissionList");
+      //return;
+   //}
    
-   if ($MissionType $= "")
-      $MissionType = "Tutorial";
-      
-   if (isObject("MTYPE_" @ $MissionType))
-      ("MTYPE_" @ $MissionType).clear();
-      
-   for (%file = findFirstFile($Server::MissionFileSpec);
-         %file !$= ""; %file = findNextFile($Server::MissionFileSpec))
-   {
-      if (strStr(%file, "CVS/") == -1 && strStr(%file, "common/") == -1)
-      {
-         getMissionObject(%file);
-      }
-   }
+   clearMissionList();  
+   clearMissionList();
    
    %group = "MTYPE_" @ $MissionType;
    
-   sortByLevel(%group);
-   
-   clearMissionList();  
-   clearMissionList();   
-   
-   //PM_missionSelectList.extent = "170" SPC %group.getCount() * 110;
    for (%i = 0; %i < %group.getCount(); %i++)
    {
       %mission = %group.getObject(%i);
-      PM_missionList.addRow(%i, %mission.level TAB %mission);
-      //PM_missionSelectList.addRow(%i, %i + 1 TAB %mission.name);
       %ctrl = new GuiControl(PM_MissionID_ @ %i)
       {
          profile = "GuiDefaultProfile";
@@ -191,10 +171,59 @@ function buildMissionList()
       PM_LBL.setText(%i + 1 @ ". " @ %mission.name);
       PM_missionSelectList.add(%ctrl);
    }
-   //PM_missionSelectList.extent = "170" SPC PM_missionSelectList.getCount() * 110;
    PM_missionSelectList.resize(1, 1, "114", PM_missionSelectList.getCount() * 110);
    
-   PM_Scroll.scrollToTop();
+   PM_Scroll.scrollToTop();  
+}
+
+function buildMissionList()
+{
+   if (!isObject(PlayMissionGroup))
+   {
+      new SimGroup(PlayMissionGroup);
+      RootGroup.add(PlayMissionGroup);
+   }
+   PM_missionList.clear();
+   //PM_missionSelectList.clear();
+   clearMissionList();
+   
+   if ($MissionType $= "")
+      $MissionType = "Tutorial";
+      
+   if (isObject("MTYPE_" @ $MissionType))
+      ("MTYPE_" @ $MissionType).clear();
+      
+   for (%file = findFirstFile($Server::MissionFileSpec);
+         %file !$= ""; %file = findNextFile($Server::MissionFileSpec))
+   {
+      if (strStr(%file, "CVS/") == -1 && strStr(%file, "common/") == -1)
+      {
+         getMissionObject(%file);
+      }
+   }
+   
+   %group = "MTYPE_" @ $MissionType;
+   
+   sortByLevel(%group);
+    
+   
+   //PM_missionSelectList.extent = "170" SPC %group.getCount() * 110;
+   for (%i = 0; %i < %group.getCount(); %i++)
+   {
+      %mission = %group.getObject(%i);
+      PM_missionList.addRow(%i, %mission.level TAB %mission);
+      //PM_missionSelectList.addRow(%i, %i + 1 TAB %mission.name);
+   }
+   
+   if (playMissionGui.isAwake())
+   {
+      populatePMList();
+   }
+   
+   //PM_missionSelectList.extent = "170" SPC PM_missionSelectList.getCount() * 110;
+   //PM_missionSelectList.resize(1, 1, "114", PM_missionSelectList.getCount() * 110);
+   
+   //PM_Scroll.scrollToTop();
    
    //%level = $pref::QualifiedLevel[$MissionType] - 1;
    //if (%level >= %group.getCount())

@@ -55,6 +55,14 @@ function RC_SetSelected(%index)
 
 function RC_StartDemo()
 {
+   Canvas.setContent(LoadingGui);
+   clearLoading();
+   
+   schedule(100, 0, "RC_ContinueStartDemo");
+}
+
+function RC_ContinueStartDemo()
+{
    %id = RC_List.getSelectedId();
    %file = RC_ReplayList.getRowTextById(%id);
    $LastDemoId = %id;

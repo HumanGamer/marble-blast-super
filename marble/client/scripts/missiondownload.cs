@@ -145,3 +145,9 @@ function handleLoadInfoDoneMessage( %msgType, %msgString )
 {
    // This will get called after the last description line is sent.
 }
+
+function clearLoading()
+{
+   LG_ProgressBar.setValue(0);
+   LG_Name.setText("<font:Whitestone:32><just:left>" @ "Processing...");
+}
