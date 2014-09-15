@@ -14,22 +14,22 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
 
    new GuiBitmapCtrl() {
       profile = "GuiDefaultProfile";
-      horizSizing = "relative";
-      vertSizing = "relative";
-      position = "167 6";
-      extent = "461 440";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "0 0";
+      extent = "640 480";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "./Home/homegui";
+      bitmap = "./multiplayer/mpgui";
       wrap = "0";
 
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
-         horizSizing = "relative";
-         vertSizing = "relative";
-         position = "305 51";
-         extent = "146 44";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "168 410";
+         extent = "151 44";
          minExtent = "8 8";
          visible = "1";
          command = "$pref::Multiplayer::isMultiplayer=1; PMSetMissionTab(\"multiplayer\"); connectTo();";
@@ -43,10 +43,10 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
-         horizSizing = "relative";
-         vertSizing = "relative";
-         position = "312 -4";
-         extent = "143 62";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "18 410";
+         extent = "147 61";
          minExtent = "8 8";
          visible = "1";
          command = "$pref::Multiplayer::isMultiplayer=1;PMSetMissionTab(\"multiplayer\");Canvas.setContent(LobbyGui);";
@@ -60,10 +60,10 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
-         horizSizing = "relative";
-         vertSizing = "relative";
-         position = "325 390";
-         extent = "147 50";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "485 410";
+         extent = "134 51";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.setContent(mainMenuGui);";
@@ -77,10 +77,10 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
-         horizSizing = "relative";
-         vertSizing = "relative";
-         position = "291 89";
-         extent = "163 62";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "326 410";
+         extent = "168 62";
          minExtent = "8 8";
          visible = "1";
          command = "$pref::Multiplayer::isMultiplayer=1; connectRandom();";
@@ -91,6 +91,140 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          repeatPeriod = "1000";
          repeatDecay = "1";
          bitmap = "./home/quick";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "500 15";
+         extent = "134 335";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./multiplayer/bg";
+         wrap = "0";
+
+         new GuiScrollCtrl(MP_UserListScroll) {
+            profile = "PlayMissionScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 6";
+            extent = "123 329";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOn";
+            vScrollBar = "alwaysOn";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(MP_UserList) {
+               profile = "PlayMissionListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "116 8";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+      };
+      new GuiBitmapCtrl(MP_ChatEditBG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 350";
+         extent = "563 48";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./multiplayer/chatEdit";
+         wrap = "0";
+      };
+      new GuiTextEditCtrl(MP_ChatEdit) {
+         profile = "GuiBigTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 355";
+         extent = "544 36";
+         minExtent = "8 8";
+         visible = "1";
+         altCommand = "sendChat();";
+         helpTag = "0";
+         maxLength = "255";
+         maxPixelWidth = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiBitmapButtonCtrl(MP_SendChat) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "570 350";
+         extent = "64 48";
+         minExtent = "8 8";
+         visible = "1";
+         command = "sendChat();";
+         helpTag = "0";
+         text = "Send";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./multiplayer/send";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "15 15";
+         extent = "485 335";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./multiplayer/bg";
+         wrap = "0";
+
+         new GuiScrollCtrl(MP_Chat) {
+            profile = "PlayMissionScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 5";
+            extent = "473 328";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOn";
+            vScrollBar = "alwaysOn";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(MP_ChatText) {
+               profile = "PlayMissionListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "670 20";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "0";
+               clipColumnText = "0";
+            };
+         };
       };
    };
 };

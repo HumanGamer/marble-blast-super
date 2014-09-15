@@ -99,7 +99,7 @@ function initClient()
    exec("./ui/HelpCreditsGui.gui");
    exec("./ui/ExitGameDlg.gui");
    exec("./ui/MiniShotGui.gui");
-   exec("./ui/EnterMultiplayerNameDlg.gui");
+   exec("./ui/EnterIPDlg.gui");
    exec("./ui/MultiplayerGui.gui");
    exec("./ui/ConnectGui.gui");
    exec("./ui/MarbleSelectGui.gui");
@@ -129,6 +129,7 @@ function initClient()
    exec("./scripts/demo.cs");
    exec("./scripts/playMissionGui.cs");
    exec("./scripts/multiplayer.cs");
+   exec("./scripts/multiplayerGui.cs");
    exec("./scripts/playerListGui.cs");
    exec("./scripts/gemPopupGui.cs");
    exec("./scripts/radar.cs");

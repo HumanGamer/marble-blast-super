@@ -1,5 +1,5 @@
 //--- OBJECT WRITE BEGIN ---
-new GuiControl(EnterMultiplayerNameDlg) {
+new GuiControl(EnterIPDlg) {
    profile = "GuiDialogProfile";
    horizSizing = "right";
    vertSizing = "bottom";
@@ -29,7 +29,7 @@ new GuiControl(EnterMultiplayerNameDlg) {
          extent = "145 61";
          minExtent = "8 8";
          visible = "1";
-         command = "EnterMultiplayerNameDlg.hide();";
+         command = "EnterIPDlg.hide();";
          helpTag = "0";
          text = "Cancel";
          groupNum = "-1";
@@ -38,7 +38,7 @@ new GuiControl(EnterMultiplayerNameDlg) {
          repeatDecay = "1";
          bitmap = "./multiplayer/back";
       };
-      new GuiBitmapButtonCtrl(MultiplayerNameButton) {
+      new GuiBitmapButtonCtrl(IPButton) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
@@ -67,7 +67,7 @@ new GuiControl(EnterMultiplayerNameDlg) {
          bitmap = "./multiplayer/enterip";
          wrap = "0";
       };
-      new GuiMLTextCtrl(MultiplayerNameText) {
+      new GuiMLTextCtrl(IPText) {
          profile = "GuiMLTextProfile";
          horizSizing = "right";
          vertSizing = "bottom";
@@ -80,7 +80,7 @@ new GuiControl(EnterMultiplayerNameDlg) {
          allowColorChars = "0";
          maxChars = "-1";
       };
-      new GuiTextEditCtrl(MultiplayerNameEdit) {
+      new GuiTextEditCtrl(IPEdit) {
          profile = "GuiBigTextEditProfile";
          horizSizing = "right";
          vertSizing = "bottom";
@@ -102,19 +102,20 @@ new GuiControl(EnterMultiplayerNameDlg) {
 };
 //--- OBJECT WRITE END ---
 
-function EnterMultiplayerNameDlg::show(%this, %var, %command, %text)
+function EnterIPDlg::show(%this, %var, %command, %text)
 {
-   MultiplayerNameButton.command = %command;
-   MultiplayerNameEdit.altCommand = %command;
-   MultiplayerNameEdit.variable = %var;
+   IPButton.command = %command;
+   IPEdit.altCommand = %command;
+   IPEdit.variable = %var;
    eval("%val = " @ %var @ ";");
-   MultiplayerNameEdit.setText(%val);
-   MultiplayerNameText.setText(%text);
-   Canvas.pushDialog(EnterMultiplayerNameDlg);
+   IPEdit.setText(%val);
+   IPText.setText(%text);
+   Canvas.pushDialog(EnterIPDlg);
 }
 
-function EnterMultiplayerNameDlg::hide(%this)
+function EnterIPDlg::hide(%this)
 {
-   Canvas.popDialog(EnterMultiplayerNameDlg);
+   Canvas.popDialog(EnterIPDlg);
    disconnect();
+   Canvas.setContent(MultiplayerGui);
 }

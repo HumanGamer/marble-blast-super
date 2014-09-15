@@ -134,7 +134,7 @@ function GameConnection::onConnectRequestTimedOut(%this)
 
 function enterMPName()
 {
-   EnterMultiplayerNameDlg.show("$pref::Multiplayer::Name", "checkMPName();", "What is your name?");
+   EnterIPDlg.show("$pref::Multiplayer::Name", "checkMPName();", "What is your name?");
 }
 
 function checkMPName()
@@ -143,14 +143,14 @@ function checkMPName()
    {
       disconnect();
    } else {
-      Canvas.popDialog(EnterMultiplayerNameDlg);
+      Canvas.popDialog(EnterIPDlg);
    }
 }
 
 function startServer(%serverType, %mission)
 {
    //if (%serverType $= "Multiplayer")
-   //   EnterMultiplayerNameDlg.show("$pref::Multiplayer::Name", "continueStartServer(" @ %serverType @ "," @ %mission @ ");", "What is your name?");
+   //   EnterIPDlg.show("$pref::Multiplayer::Name", "continueStartServer(" @ %serverType @ "," @ %mission @ ");", "What is your name?");
    //else 
       continueStartServer(%serverType, %mission);
 }
@@ -171,7 +171,7 @@ function continueStartServer(%serverType, %mission)
 
 function connectTo()
 {
-   EnterMultiplayerNameDlg.show("$pref::Multiplayer::IP", "connect($pref::Multiplayer::IP);", "Enter the IP of the server");
+   EnterIPDlg.show("$pref::Multiplayer::IP", "connect($pref::Multiplayer::IP);", "Enter the IP of the server");
 }
 
 function connect(%ip)
@@ -181,7 +181,7 @@ function connect(%ip)
       warn("Already connected to a server!");
       return;
    }
-   //EnterMultiplayerNameDlg.show("$pref::Multiplayer::Name", "continueConnect(\""@%ip@"\");", "What is your name?");
+   //EnterIPDlg.show("$pref::Multiplayer::Name", "continueConnect(\""@%ip@"\");", "What is your name?");
    continueConnect(%ip);
 }
 
