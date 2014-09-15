@@ -63,17 +63,6 @@ new GuiChunkedBitmapCtrl(LoadingGui) {
          bitmap = "./loading/loading";
          wrap = "0";
       };
-      new GuiAviBitmapCtrl(LG_Anim) {
-         profile = "GuiDefaultProfile";
-         horizSizing = "center";
-         vertSizing = "bottom";
-         position = "197 0";
-         extent = "206 76";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         done = "1";
-      };
       new GuiMLTextCtrl(LG_Name) {
          profile = "GuiMLTextProfile";
          horizSizing = "right";
