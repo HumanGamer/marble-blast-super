@@ -1,20 +1,18 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapButtonCtrl(Login_Remember) {
-      profile = "GuiDefaultProfile";
+   new GuiTextListCtrl(PM_DifficultyList) {
+      profile = "GuiTextListProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "112 128";
-      extent = "39 35";
+      position = "0 0";
+      extent = "80 8";
       minExtent = "8 8";
       visible = "1";
-      variable = "$pref::Login::RememberPassword";
       helpTag = "0";
-      text = "Remember Me";
-      groupNum = "-1";
-      buttonType = "ToggleButton";
-      repeatPeriod = "1000";
-      repeatDecay = "1";
-      bitmap = "marble/client/ui/login/remember";
+      enumerate = "0";
+      resizeCell = "1";
+      columns = "0";
+      fitParentWidth = "1";
+      clipColumnText = "0";
    };
 };

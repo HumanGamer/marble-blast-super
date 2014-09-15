@@ -255,11 +255,35 @@ if (!isObject(PlayMissionDifficultyPopupProfile)) new GuiControlProfile(PlayMiss
 
 if (!isObject(PlayMissionScrollProfile)) new GuiControlProfile(PlayMissionScrollProfile)
 {
-   opaque = true;
+   opaque = false;
    //fillColor = "255 255 255";
-   border = 1;
-   borderThickness = 1;
+   border = 0;
+   borderThickness = 0;
    borderColor = "0 128 0";
-   bitmap = "marble/client/ui/play/scroll";
+   bitmap = "marble/client/ui/play/scrollTransparent";
    hasBitmapArray = true;
+};
+
+if (!isObject(PlayMissionDifficultyScrollProfile)) new GuiControlProfile(PlayMissionDifficultyScrollProfile)
+{
+   opaque = false;
+   //fillColor = "255 255 255";
+   border = 0;
+   borderThickness = 0;
+   borderColor = "0 128 0";
+   bitmap = "marble/client/ui/play/scrollTransparent";
+   hasBitmapArray = true;
+};
+
+if (!isObject(PlayMissionDifficultyListProfile)) new GuiControlProfile(PlayMissionDifficultyListProfile)
+{
+   fontType = "Whitestone";
+   fontSize = 18;
+   fillColorHL = "128 128 255";
+   fontColor = "0 0 0";
+   fontColorHL = "255 255 255";
+   fontColorLink = "255 96 96";
+   fontColorLinkHL = "0 0 255";
+   autoSizeWidth = true;
+   autoSizeHeight = true;
 };

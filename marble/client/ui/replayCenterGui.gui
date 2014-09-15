@@ -16,8 +16,8 @@ new GuiChunkedBitmapCtrl(ReplayCenterGui) {
       profile = "GuiDefaultProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "50 28";
-      extent = "540 424";
+      position = "50 27";
+      extent = "540 425";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
@@ -28,7 +28,7 @@ new GuiChunkedBitmapCtrl(ReplayCenterGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "415 322";
+         position = "480 365";
          extent = "46 46";
          minExtent = "8 8";
          visible = "1";
@@ -41,12 +41,24 @@ new GuiChunkedBitmapCtrl(ReplayCenterGui) {
          repeatDecay = "1";
          bitmap = "./replay/home";
       };
+      new GuiBitmapCtrl(RC_ScrollBG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 15";
+         extent = "200 395";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./replay/scrollbg";
+         wrap = "0";
+      };
       new GuiScrollCtrl(RC_Scroll) {
          profile = "PlayMissionScrollProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "69 45";
-         extent = "181 325";
+         position = "25 20";
+         extent = "190 385";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -60,8 +72,8 @@ new GuiChunkedBitmapCtrl(ReplayCenterGui) {
             profile = "PlayMissionListProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "1 1";
-            extent = "161 160";
+            position = "0 0";
+            extent = "216 220";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -76,18 +88,19 @@ new GuiChunkedBitmapCtrl(ReplayCenterGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "252 47";
-         extent = "190 160";
+         position = "230 15";
+         extent = "285 220";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
+         bitmap = "~/data/missions/tutorial/bounce";
          wrap = "0";
 
          new GuiBitmapButtonCtrl(RC_Start) {
             profile = "GuiDefaultProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "68 53";
+            horizSizing = "center";
+            vertSizing = "center";
+            position = "115 79";
             extent = "55 62";
             minExtent = "8 8";
             visible = "1";
@@ -106,8 +119,8 @@ new GuiChunkedBitmapCtrl(ReplayCenterGui) {
          profile = "GuiMLTextProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "252 210";
-         extent = "217 80";
+         position = "238 244";
+         extent = "285 110";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -121,7 +134,7 @@ new GuiChunkedBitmapCtrl(ReplayCenterGui) {
       horizSizing = "right";
       vertSizing = "bottom";
       position = "2 2";
-      extent = "80 128";
+      extent = "80 176";
       minExtent = "8 8";
       visible = "0";
       helpTag = "0";

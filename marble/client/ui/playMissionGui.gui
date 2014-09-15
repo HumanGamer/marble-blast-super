@@ -51,7 +51,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "10 9";
-               extent = "267 174";
+               extent = "267 188";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
@@ -69,7 +69,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
-            bitmap = "~/data/missions/beginner/natureroute";
+            bitmap = "~/data/missions/tutorial/firststeps";
             wrap = "0";
 
             new GuiBitmapCtrl() {
@@ -118,7 +118,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                position = "0 0";
                extent = "280 210";
                minExtent = "8 8";
-               visible = "1";
+               visible = "0";
                helpTag = "0";
 
                new GuiMLTextCtrl(PM_NoQualText) {
@@ -158,7 +158,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "0 0";
-            extent = "80 192";
+            extent = "80 96";
             minExtent = "8 8";
             visible = "0";
             helpTag = "0";
@@ -169,8 +169,8 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             clipColumnText = "0";
                noDuplicates = "false";
          };
-         new GuiScrollCtrl(PM_Scroll) {
-            profile = "PlayMissionScrollProfile";
+         new GuiBitmapCtrl(PM_ScrollBG) {
+            profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
             position = "16 50";
@@ -178,9 +178,21 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
+            bitmap = "./play/scrollbg";
+            wrap = "0";
+         };
+         new GuiScrollCtrl(PM_Scroll) {
+            profile = "PlayMissionScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "22 56";
+            extent = "173 396";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
             willFirstRespond = "1";
-            hScrollBar = "alwaysOn";
-            vScrollBar = "alwaysOn";
+            hScrollBar = "dynamic";
+            vScrollBar = "dynamic";
             constantThumbHeight = "0";
             childMargin = "0 0";
 
@@ -189,7 +201,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "1 1";
-               extent = "204 240";
+               extent = "170 120";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
@@ -316,7 +328,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                bitmap = "./play/record";
             };
          };
-         new GuiPopUpMenuCtrl(PM_DifficultyPopup) {
+         new GuiBitmapButtonTextCtrl(PM_DifficultyButton) {
             profile = "PlayMissionDifficultyPopupProfile";
             horizSizing = "right";
             vertSizing = "bottom";
@@ -324,10 +336,64 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             extent = "185 25";
             minExtent = "8 8";
             visible = "1";
+            command = "PM_ToggleDifficultyPopup();";
             helpTag = "0";
-            text = "Select Difficulty";
-            maxLength = "255";
-            maxPopupHeight = "200";
+            text = "Tutorial";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = "./play/difficulty";
+               maxPopupHeight = "200";
+               maxLength = "255";
+         };
+         new GuiBitmapCtrl(PM_DifficultyPopup) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "16 45";
+            extent = "185 130";
+            minExtent = "8 8";
+            visible = "0";
+            helpTag = "0";
+            bitmap = "./play/difficultyList";
+            wrap = "0";
+               groupNum = "-1";
+               maxPopupHeight = "200";
+               text = "Select Difficulty";
+               maxLength = "255";
+
+            new GuiScrollCtrl() {
+               profile = "PlayMissionDifficultyScrollProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "7 2";
+               extent = "173 128";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               willFirstRespond = "1";
+               hScrollBar = "dynamic";
+               vScrollBar = "dynamic";
+               constantThumbHeight = "0";
+               childMargin = "0 0";
+
+               new GuiTextListCtrl(PM_DifficultyList) {
+                  profile = "PlayMissionDifficultyListProfile";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  position = "0 0";
+                  extent = "173 120";
+                  minExtent = "8 8";
+                  visible = "1";
+                  helpTag = "0";
+                  enumerate = "0";
+                  resizeCell = "1";
+                  columns = "0";
+                  fitParentWidth = "1";
+                  clipColumnText = "0";
+               };
+            };
          };
       };
    };

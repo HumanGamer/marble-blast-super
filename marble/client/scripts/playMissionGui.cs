@@ -2,29 +2,38 @@ function playMissionGui::onWake(%this)
 {
    buildMissionList();
    
-   PM_DifficultyPopup.clear();
-   PM_DifficultyPopup.add("Tutorial", 0);
-   PM_DifficultyPopup.add("Beginner", 1);
-   PM_DifficultyPopup.add("Medium", 2);
-   PM_DifficultyPopup.add("Advanced", 3);
-   PM_DifficultyPopup.add("Expert", 4);
-   PM_DifficultyPopup.add("Custom", 5);
-   for (%i = 0; %i < PM_DifficultyPopup.size(); %i++)
+   PM_DifficultyButton.setText("Select Difficulty");
+   
+   PM_DifficultyList.clear();
+   PM_DifficultyList.addRow(0, "Tutorial");
+   PM_DifficultyList.addRow(1, "Beginner");
+   PM_DifficultyList.addRow(2, "Medium");
+   PM_DifficultyList.addRow(3, "Advanced");
+   PM_DifficultyList.addRow(4, "Expert");
+   PM_DifficultyList.addRow(5, "Custom");
+   for (%i = 0; %i < PM_DifficultyList.rowCount(); %i++)
    {
-      %obj = PM_DifficultyPopup.getTextById(%i);
+      %obj = PM_DifficultyList.getRowTextById(%i);
       if (%obj !$= $MissionType)
          continue;
       %id = %i;
       break;
    }
-   PM_DifficultyPopup.setSelected(%id);
+   PM_DifficultyList.setSelectedById(%id);
+   
+   
+   PM_DifficultyPopup.setVisible(false);
 }
 
-function PM_DifficultyPopup::onSelect(%this, %id)
+function PM_DifficultyList::onSelect(%this, %id)
 {
-   %type = %this.getTextById(%id);
+   %type = %this.getRowTextById(%id);
    
    PMSetMissionTab(%type);
+   
+   PM_DifficultyButton.setText(%type);
+   
+   PM_DifficultyPopup.setVisible(false);
 }
 
 function PM_missionSelectList::onSelect(%this, %id)
@@ -32,6 +41,14 @@ function PM_missionSelectList::onSelect(%this, %id)
    PM_setSelected(%id);
    LB_SetSelected(%id);
    setLevelLocked();
+}
+
+function PM_ToggleDifficultyPopUp()
+{
+   if (PM_DifficultyPopup.isVisible())
+      PM_DifficultyPopup.setVisible(false);
+   else
+      PM_DifficultyPopup.setVisible(true);
 }
 
 function PM_StartMission()
