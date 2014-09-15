@@ -12,50 +12,27 @@ new GuiChunkedBitmapCtrl(LoginGui) {
    useVariable = "0";
    tile = "0";
 
-   new GuiControl(LoginContainer) {
+   new GuiBitmapCtrl(LoginContainer) {
       profile = "GuiDefaultProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "0 0";
-      extent = "640 480";
+      position = "45 147";
+      extent = "550 185";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
+      bitmap = "./login/loginbg";
+      wrap = "0";
 
-      new GuiBitmapCtrl(LoginBG) {
-         profile = "GuiDefaultProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "0 0";
-         extent = "640 480";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         bitmap = "./lobby/lobby";
-         wrap = "0";
-
-         new GuiTextCtrl() {
-            profile = "GuiTextProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "143 170";
-            extent = "211 18";
-            minExtent = "8 8";
-            visible = "1";
-            helpTag = "0";
-            text = "*Password is case sensitive";
-            maxLength = "255";
-         };
-      };
       new GuiBitmapButtonCtrl(Login_RegisterBtn) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "354 370";
+         position = "329 134";
          extent = "82 30";
          minExtent = "8 8";
-         visible = "1";
-         command = "register();";
+         visible = "0";
+         command = "registerAccount();";
          helpTag = "0";
          text = "Register";
          groupNum = "-1";
@@ -64,76 +41,14 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          repeatDecay = "1";
          bitmap = "./login/register";
       };
-      new GuiTextEditCtrl(LoginUsernameEdit) {
-         profile = "GuiTextEditProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "139 116";
-         extent = "400 18";
-         minExtent = "8 8";
-         visible = "1";
-         variable = "$Login::Username";
-         altCommand = "doLogin();";
-         helpTag = "0";
-         maxLength = "255";
-         maxPixelWidth = "0";
-         historySize = "0";
-         password = "0";
-         tabComplete = "0";
-         sinkAllKeyEvents = "0";
-      };
-      new GuiTextEditCtrl(LoginPasswordEdit) {
-         profile = "GuiTextEditProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "139 143";
-         extent = "400 18";
-         minExtent = "8 8";
-         visible = "1";
-         variable = "$Login::Password";
-         altCommand = "doLogin();";
-         helpTag = "0";
-         maxLength = "255";
-         maxPixelWidth = "0";
-         historySize = "0";
-         password = "1";
-         tabComplete = "0";
-         sinkAllKeyEvents = "0";
-      };
-      new GuiMLTextCtrl(LoginUsernameLabel) {
-         profile = "GuiMLTextProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "72 117";
-         extent = "64 14";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         lineSpacing = "2";
-         allowColorChars = "0";
-         maxChars = "-1";
-      };
-      new GuiMLTextCtrl(LoginPasswordLabel) {
-         profile = "GuiMLTextProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "72 145";
-         extent = "64 14";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         lineSpacing = "2";
-         allowColorChars = "0";
-         maxChars = "-1";
-      };
       new GuiBitmapButtonCtrl(Login_LoginBtn) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "458 370";
+         position = "424 134";
          extent = "73 30";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          command = "doLogin();";
          helpTag = "0";
          text = "Login";
@@ -143,14 +58,147 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          repeatDecay = "1";
          bitmap = "./login/login";
       };
+      new GuiControl(LoginForm) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 20";
+         extent = "504 109";
+         minExtent = "8 8";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiControl(LoginUsername) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "478 37";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(LoginUserBG) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "160 0";
+               extent = "315 35";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./login/logintextbg";
+               wrap = "0";
+
+               new GuiTextEditCtrl(LoginUsernameEdit) {
+                  profile = "GuiBigTextEditProfile";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  position = "0 0";
+                  extent = "315 36";
+                  minExtent = "8 8";
+                  visible = "1";
+                  variable = "$Login::Username";
+                  altCommand = "doLogin();";
+                  helpTag = "0";
+                  maxLength = "255";
+                  maxPixelWidth = "0";
+                  historySize = "0";
+                  password = "0";
+                  tabComplete = "0";
+                  sinkAllKeyEvents = "0";
+               };
+            };
+            new GuiMLTextCtrl(LoginUsernameLabel) {
+               profile = "GuiBigTextProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "166 36";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               lineSpacing = "2";
+               allowColorChars = "0";
+               maxChars = "-1";
+            };
+         };
+         new GuiControl(LoginPassword) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 50";
+            extent = "480 58";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiMLTextCtrl(LoginPasswordLabel) {
+               profile = "GuiBigTextProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "160 36";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               lineSpacing = "2";
+               allowColorChars = "0";
+               maxChars = "-1";
+            };
+            new GuiBitmapCtrl(LoginPassBG) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "160 0";
+               extent = "315 35";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./login/logintextbg";
+               wrap = "0";
+
+               new GuiTextEditCtrl(LoginPasswordEdit) {
+                  profile = "GuiBigTextEditProfile";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  position = "0 0";
+                  extent = "315 36";
+                  minExtent = "8 8";
+                  visible = "1";
+                  variable = "$Login::Password";
+                  altCommand = "doLogin();";
+                  helpTag = "0";
+                  maxLength = "255";
+                  maxPixelWidth = "0";
+                  historySize = "0";
+                  password = "1";
+                  tabComplete = "0";
+                  sinkAllKeyEvents = "0";
+               };
+            };
+         };
+         new GuiTextCtrl(LoginLabel) {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "336 91";
+            extent = "138 18";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            text = "*Password is case sensitive";
+            maxLength = "255";
+         };
+      };
       new GuiBitmapButtonCtrl(Login_BackBtn) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "100 370";
-         extent = "69 30";
+         position = "20 119";
+         extent = "50 50";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          command = "Canvas.setContent(mainMenuGui);";
          helpTag = "0";
          text = "Back";
@@ -160,24 +208,76 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          repeatDecay = "1";
          bitmap = "./login/back";
       };
-      
-      new GuiBitmapButtonCtrl(Login_Remember)
-      {
+      new GuiControl(LoginRememberBox) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "180 370";
-         extent = "70 20";
+         position = "83 119";
+         extent = "243 53";
+         minExtent = "8 8";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiBitmapButtonCtrl(Login_Remember) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 1";
+            extent = "43 46";
+            minExtent = "8 8";
+            visible = "1";
+            variable = "$pref::Login::RememberPassword";
+            helpTag = "0";
+            text = "Remember";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = "./login/remember";
+         };
+         new GuiMLTextCtrl(LoginRememberText) {
+            profile = "GuiBigTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "53 7";
+            extent = "184 36";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+      };
+      new GuiMLTextCtrl(Login_Status) {
+         profile = "GuiBigTextProfile";
+         horizSizing = "center";
+         vertSizing = "center";
+         position = "194 71";
+         extent = "176 36";
          minExtent = "8 8";
          visible = "1";
-         variable = "$pref::Login::RememberPassword";
          helpTag = "0";
-         text = "Remember Me";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiBitmapButtonCtrl(Login_CancelBtn) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "412 130";
+         extent = "117 41";
+         minExtent = "8 8";
+         visible = "1";
+         command = "cancelLogin();";
+         helpTag = "0";
+         text = "Cancel";
          groupNum = "-1";
-         buttonType = "ToggleButton";
+         buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./login/remember";
+         bitmap = "./login/cancel";
       };
    };
 };

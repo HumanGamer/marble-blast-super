@@ -1,0 +1,14 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(DemoGroup) {
+	new ScriptObject(DemoInfo) {
+		name = "Erik Showcase";
+		desc = "Test Description";
+		mission = "marble/data/missions/tutorial/firststeps.mis";
+		artist = "cooldudepoke";
+		blastCount = "1";
+		blastTime[0] = "4399";
+		oobCount = "1";
+		oobTime[0] = "4025";
+	};
+};
+//--- OBJECT WRITE END ---

@@ -135,6 +135,7 @@ function initClient()
    exec("./scripts/lobby.cs");
    exec("./scripts/multiplayerExitGui.cs");
    exec("./scripts/login.cs");
+   exec("./scripts/register.cs");
    exec("./scripts/chat.cs");
    exec("./scripts/recording.cs");
    exec("./scripts/replayCenter.cs");

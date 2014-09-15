@@ -6,17 +6,44 @@ function LoginGui::onWake(%this)
    LoginUsernameLabel.setText("Username:");
    LoginPasswordLabel.setText("Password:");
    
+   LoginRememberText.setText("Remember");
+   
+   Login_Status.setText("Logging In...");
+   
    //$pref::Multiplayer::isMultiplayer = 0;
    PMSetMissionTab("beginner");
+   
+   setLoginEnabled(true);  
+}
+
+function setLoginEnabled(%enabled)
+{
+   LoginForm.setVisible(%enabled);
+   Login_RegisterBtn.setVisible(%enabled);
+   Login_LoginBtn.setVisible(%enabled);
+   LoginRememberBox.setVisible(%enabled);
+   Login_BackBtn.setVisible(%enabled);
+   Login_Status.setVisible(!%enabled);
+   Login_CancelBtn.setVisible(!%enabled);
 }
 
 function doLogin()
 {
+   setLoginEnabled(false);   
+   
    if (isObject(LoginConnection))
       LoginConnection.delete();
    new HTTPObject(LoginConnection);
    
    LoginConnection.get("marbleblastsuper.tk:80", "/game/login.php", "login=" @ $Login::Username @ "===" @ $Login::Password);
+}
+
+function cancelLogin()
+{
+   if (isObject(LoginConnection))
+      LoginConnection.delete();
+      
+   setLoginEnabled(true);
 }
 
 function LoginConnection::onLine(%this, %line)
@@ -33,6 +60,7 @@ function LoginConnection::onLine(%this, %line)
       case "LOGIN::SUCCESS":
          onLogin();
    }
+   setLoginEnabled(true);
    %this.deletionSchedule = %this.schedule(0, delete);
 }
 
@@ -47,9 +75,4 @@ function onLogin()
    $pref::Multiplayer::Name = strlwr($Login::Username);
    $Login::Username = "";
    Canvas.setContent(MultiplayerGui);
-}
-
-function register()
-{
-   warn("Register is not yet implemented...");
 }
