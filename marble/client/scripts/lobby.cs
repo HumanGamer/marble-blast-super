@@ -168,8 +168,8 @@ function LB_SetSelected(%index)
       LB_Play.setActive(false);
       //LB_NoQualOverlay.setVisible(true);
       //PM_NoQualText.setText("<color:CCCCCC><font:DomCasualD:32><just:center>No" SPC $MissionType SPC "Levels!");
-      LB_Next.setActive(false);
-      LB_Prev.setActive(false);
+      //LB_Next.setActive(false);
+      //LB_Prev.setActive(false);
       LB_Preview.setBitmap("");
       LB_Desc.setText("");
       //PM_description.setText("");

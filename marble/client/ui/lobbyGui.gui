@@ -33,7 +33,6 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "~/data/missions/multiplayer/multiplayer_map3";
          wrap = "0";
 
          new GuiBitmapButtonCtrl(LB_Play) {
@@ -88,7 +87,7 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "0 0";
-            extent = "266 112";
+            extent = "266 14";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -138,9 +137,9 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
                columns = "0 19 100";
                fitParentWidth = "0";
                clipColumnText = "0";
-                  maxChars = "-1";
                   lineSpacing = "2";
                   allowColorChars = "0";
+                  maxChars = "-1";
             };
          };
       };
@@ -176,15 +175,15 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "0 0";
-            extent = "114 220";
+            extent = "114 8";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
+               enumerate = "0";
                resizeCell = "1";
                columns = "0 20 165";
                fitParentWidth = "0";
                clipColumnText = "0";
-               enumerate = "0";
          };
       };
       new GuiBitmapButtonTextCtrl(LB_DifficultyButton) {
@@ -197,7 +196,7 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
          visible = "1";
          command = "LB_ToggleDifficultyPopup();";
          helpTag = "0";
-         text = "Beginner";
+         text = "Practice";
          groupNum = "-1";
          buttonType = "PushButton";
          repeatPeriod = "1000";
@@ -211,9 +210,9 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
          horizSizing = "right";
          vertSizing = "bottom";
          position = "16 45";
-         extent = "185 130";
+         extent = "144 130";
          minExtent = "8 8";
-         visible = "0";
+         visible = "1";
          helpTag = "0";
          bitmap = "./lobby/difficultyList";
          wrap = "0";
@@ -227,7 +226,7 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "7 2";
-            extent = "173 128";
+            extent = "132 128";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -242,7 +241,7 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "0 0";
-               extent = "173 120";
+               extent = "128 120";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";

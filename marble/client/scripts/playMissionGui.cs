@@ -446,7 +446,13 @@ function getMissionObject(%mission) {
    if (%infoObject.type !$= "tutorial" && %infoObject.type !$= "practice" && %infoObject.type !$= "beginner" && %infoObject.type !$= "medium" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert")
       %infoObject.type = "custom";
       
+   if (%infoObject.gameType $= "")
+      %infoObject.gameType = "SinglePlayer";
+      
    if (LobbyGui.isAwake() && %infoObject.gameType !$= "Multiplayer")
+      return;
+      
+   if (playMissionGui.isAwake() && %infoObject.gameType !$= "SinglePlayer")
       return;
       
    eval("MTYPE_" @ %infoObject.type @ ".add(%infoObject);");
