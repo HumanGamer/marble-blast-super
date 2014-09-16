@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          type = "Tutorial";
          time = "0";
          desc = "Bigger, Smaller, Bigger, Small, Bigger, Smaller, Out of Bounds!";
-         name = "Be the Hulk, be some tiny pointless dude";
+         name = "Mega-Mini Primer";
          artist = "Ender";
          goldTime = "30000";
          level = "7";
