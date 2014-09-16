@@ -205,8 +205,8 @@ function LB_SetSelected(%index)
    //PM_description.setText(%name @ %qualify @ %desc @ %best @ %total);
    %bmp = strreplace(%mission.file, ".mis", "");
    LB_Preview.setBitmap(%bmp);
-   if (%index <= 0) LB_prev.setActive(false); else LB_prev.setActive(true);
-   if (%index >= %group.getCount() - 1) LB_next.setActive(false); else LB_next.setActive(true);
+   //if (%index <= 0) LB_prev.setActive(false); else LB_prev.setActive(true);
+   //if (%index >= %group.getCount() - 1) LB_next.setActive(false); else LB_next.setActive(true);
    LB_prev.command = "LB_setSelected(" @ %index - 1 @ ");";
    LB_next.command = "LB_setSelected(" @ %index + 1 @ ");";
    //PM_level_bkgnd.setText("<color:000000><font:DomCasualD:24><just:center>" @ $MissionType @ " Level " @ %index + 1);

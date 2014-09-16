@@ -18,7 +18,7 @@ function MBSetText(%text, %frame, %msg)
 {
    %ext = %text.getExtent();
 
-   %text.setText("<just:center>" @ %msg);
+   %text.setText("<just:center><font:Whitestone:20>" @ %msg);
    %text.forceReflow();
 
    %newExtent = %text.getExtent();
@@ -38,7 +38,7 @@ function MessageBoxOK( %title, %message, %callback )
 {
    echo(%title @ ": " @ %message);
 	//MBOKFrame.setText( %title );
-	MBOKTitle.setText( "<just:center>" @ %title );
+	MBOKTitle.setText( "<just:center><font:Whitestone:24>" @ %title );
    Canvas.pushDialog( MessageBoxOKDlg );
    MBSetText(MBOKText, MBOKFrame, %message);
    MessageBoxOKDlg.callback = %callback;
@@ -56,8 +56,7 @@ function MessageBoxOKDlg::onSleep( %this )
 
 function MessageBoxOKCancel( %title, %message, %callback, %cancelCallback )
 {
-	MBOKCancelFrame.setText( %title );
-	MBOKCancelTitle.setText( "<just:center>" @ %title );
+	MBOKCancelTitle.setText( "<just:center><font:Whitestone:24>" @ %title );
    Canvas.pushDialog( MessageBoxOKCancelDlg );
    MBSetText(MBOKCancelText, MBOKCancelFrame, %message);
 	MessageBoxOKCancelDlg.callback = %callback;
@@ -76,7 +75,7 @@ function MessageBoxOKCancelDlg::onSleep( %this )
 
 function MessageBoxYesNo( %title, %message, %yesCallback, %noCallback )
 {
-	//MBYesNoFrame.setText( %title );
+	MBYesNoTitle.setText( "<just:center><font:Whitestone:24>" @ %title );
    Canvas.pushDialog( MessageBoxYesNoDlg );
    MBSetText(MBYesNoText, MBYesNoFrame, %message);
 	MessageBoxYesNoDlg.yesCallBack = %yesCallback;

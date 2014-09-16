@@ -9,30 +9,32 @@ new GuiControl(MessageBoxOKCancelDlg) {
    visible = "1";
    helpTag = "0";
 
-   new GuiWindowCtrl(MBOKCancelFrame) {
-      profile = "GuiWindowProfile";
+   new GuiBitmapCtrl(MBOKCancelFrame) {
+      profile = "GuiDefaultProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "170 175";
-      extent = "300 129";
+      position = "187 156";
+      extent = "265 167";
       minExtent = "48 92";
       visible = "1";
       helpTag = "0";
-      maxLength = "255";
-      resizeWidth = "1";
-      resizeHeight = "1";
-      canMove = "1";
-      canClose = "0";
-      canMinimize = "0";
-      canMaximize = "0";
-      minSize = "50 50";
+      bitmap = "./dialog.png";
+      wrap = "0";
+         canClose = "0";
+         maxLength = "255";
+         resizeWidth = "1";
+         canMinimize = "0";
+         resizeHeight = "1";
+         canMaximize = "0";
+         canMove = "1";
+         minSize = "50 50";
 
       new GuiMLTextCtrl(MBOKCancelText) {
          profile = "GuiTextProfile";
          horizSizing = "center";
          vertSizing = "bottom";
-         position = "32 39";
-         extent = "236 24";
+         position = "14 60";
+         extent = "236 20";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -40,41 +42,67 @@ new GuiControl(MessageBoxOKCancelDlg) {
          allowColorChars = "0";
          maxChars = "-1";
       };
-      new GuiButtonCtrl() {
-         profile = "GuiButtonProfile";
-         horizSizing = "right";
-         vertSizing = "top";
-         position = "158 88";
-         extent = "110 23";
+      new GuiControl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "14 107";
+         extent = "237 48";
          minExtent = "8 8";
          visible = "1";
-         command = "MessageCallback(MessageBoxOKCancelDlg,MessageBoxOKCancelDlg.callback);";
-         accelerator = "return";
          helpTag = "0";
-         text = "OK";
-         groupNum = "-1";
-         buttonType = "PushButton";
-         repeatPeriod = "1000";
-         repeatDecay = "1";
-            simpleStyle = "0";
+
+         new GuiBitmapButtonCtrl() {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "top";
+            position = "117 0";
+            extent = "120 48";
+            minExtent = "8 8";
+            visible = "1";
+            command = "MessageCallback(MessageBoxOKCancelDlg,MessageBoxOKCancelDlg.callback);";
+            accelerator = "return";
+            helpTag = "0";
+            text = "OK";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = "./ok";
+               simpleStyle = "0";
+         };
+         new GuiBitmapButtonCtrl() {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "top";
+            position = "0 0";
+            extent = "120 48";
+            minExtent = "8 8";
+            visible = "1";
+            command = "MessageCallback(MessageBoxOKCancelDlg,MessageBoxOKCancelDlg.cancelCallback);";
+            accelerator = "escape";
+            helpTag = "0";
+            text = "CANCEL";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = "./cancel";
+               simpleStyle = "0";
+         };
       };
-      new GuiButtonCtrl() {
-         profile = "GuiButtonProfile";
-         horizSizing = "right";
-         vertSizing = "top";
-         position = "30 88";
-         extent = "110 23";
+      new GuiMLTextCtrl(MBOKCancelTitle) {
+         profile = "GuiTextProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "16 16";
+         extent = "236 14";
          minExtent = "8 8";
          visible = "1";
-         command = "MessageCallback(MessageBoxOKCancelDlg,MessageBoxOKCancelDlg.cancelCallback);";
-         accelerator = "escape";
          helpTag = "0";
-         text = "CANCEL";
-         groupNum = "-1";
-         buttonType = "PushButton";
-         repeatPeriod = "1000";
-         repeatDecay = "1";
-            simpleStyle = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
       };
    };
 };
