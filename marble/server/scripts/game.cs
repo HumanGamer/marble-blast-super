@@ -888,7 +888,7 @@ function GameConnection::respawnPlayer(%this)
    if (!$Client::ConnectedMultiplayer && (!isObject(%this.checkPoint) || !isObject(%this.checkPoint.pad)))
       %this.resetStats();
    
-   if (!$Client::ConnectedMultiplayer && %this.checkPoint.pad.getName() $= "StartPoint")
+   if (!$Client::ConnectedMultiplayer && (isObject(%this.checkPoint.pad) && %this.checkPoint.pad.getName() $= "StartPoint"))
       $resetLevel = true;
    
    %this.player.unmountImage(0);
@@ -902,7 +902,7 @@ function GameConnection::respawnPlayer(%this)
    if ($resetLevel)
    {
       %this.setGravityDir("1 0 0 0 -1 0 0 0 -1",true);
-      if (%this.checkPoint.pad.getDatablock().getName() !$= "StartPad")
+      if ((isObject(%this.checkPoint.pad) && %this.checkPoint.pad.getDatablock().getName() !$= "StartPad"))
          %this.checkPoint.pad.getDatablock().setActiveCheckPoint(%this.checkPoint.pad, false);
    } else {
       
@@ -921,7 +921,7 @@ function GameConnection::respawnPlayer(%this)
       commandToClient(%cl, 'GameStart');
 	  if (MissionInfo.gameMode !$= "hunt" || $resetLevel)
 	  {
-	     if (%this.checkPoint.pad.getName() $= "StartPoint" || $resetLevel)
+	     if ((isObject(%this.checkPoint.pad) && %this.checkPoint.pad.getName() $= "StartPoint")  || $resetLevel)
             %cl.resetStats();
 	  }
    }
@@ -933,7 +933,7 @@ function GameConnection::respawnPlayer(%this)
 
    if (MissionInfo.gameMode !$= "hunt" || $resetLevel)
    {
-      if (!$Client::ConnectedMultiplayer && (%this.checkPoint.pad.getName() $= "StartPoint" || $resetLevel))
+      if (!$Client::ConnectedMultiplayer && (isObject(%this.checkPoint.pad) && %this.checkPoint.pad.getName() $= "StartPoint") || $resetLevel)
       {
          ServerGroup.onMissionReset();
       } else if (%this.checkPoint.pad.getName() !$= "StartPoint")
@@ -946,7 +946,7 @@ function GameConnection::respawnPlayer(%this)
    if (MissionInfo.gameMode $= "hunt" && !$resetLevel)
        %this.setGameState("play");
    else {
-      if (%this.checkPoint.pad.getName() $= "StartPoint" || $resetLevel)
+      if ((isObject(%this.checkPoint.pad) && %this.checkPoint.pad.getName() $= "StartPoint") || $resetLevel)
          %this.setGameState("Start");
       else {
          %this.setGameState("play");
