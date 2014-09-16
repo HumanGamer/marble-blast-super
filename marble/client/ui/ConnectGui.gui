@@ -40,10 +40,10 @@ new GuiChunkedBitmapCtrl(ConnectGui) {
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiDefaultProfile";
-         horizSizing = "right";
+         horizSizing = "center";
          vertSizing = "bottom";
-         position = "159 189";
-         extent = "85 59";
+         position = "137 202";
+         extent = "120 48";
          minExtent = "8 8";
          visible = "1";
          command = "stopRandomConnect(); Canvas.setcontent(mainmenugui);";
@@ -53,7 +53,7 @@ new GuiChunkedBitmapCtrl(ConnectGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "common/ui/no";
+         bitmap = "common/ui/cancel";
       };
    };
 };
