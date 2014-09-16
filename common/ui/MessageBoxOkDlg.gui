@@ -18,16 +18,16 @@ new GuiControl(MessageBoxOKDlg) {
       minExtent = "48 92";
       visible = "1";
       helpTag = "0";
-      bitmap = "common/ui/dialog.png";
+      bitmap = "./dialog.png";
       wrap = "0";
-         canClose = "0";
-         maxLength = "255";
-         resizeWidth = "1";
-         canMinimize = "0";
          resizeHeight = "1";
          canMaximize = "0";
          canMove = "1";
          minSize = "50 50";
+         canClose = "0";
+         maxLength = "255";
+         resizeWidth = "1";
+         canMinimize = "0";
 
       new GuiMLTextCtrl(MBOKTitle) {
          profile = "GuiComic24Profile";
@@ -44,10 +44,10 @@ new GuiControl(MessageBoxOKDlg) {
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
-         horizSizing = "right";
+         horizSizing = "center";
          vertSizing = "top";
-         position = "117 85";
-         extent = "78 59";
+         position = "86 99";
+         extent = "128 48";
          minExtent = "8 8";
          visible = "1";
          command = "MessageCallback(MessageBoxOKDlg,MessageBoxOKDlg.callback);";
@@ -58,7 +58,7 @@ new GuiControl(MessageBoxOKDlg) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "common/ui/ok";
+         bitmap = "./ok";
             simpleStyle = "0";
       };
       new GuiMLTextCtrl(MBOKText) {

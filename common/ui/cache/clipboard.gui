@@ -1,11 +1,11 @@
 new SimSet(guiClipboard) {
 
-   new GuiMLTextCtrl(LB_Desc) {
-      profile = "GuiMLTextProfile";
-      horizSizing = "right";
+   new GuiMLTextCtrl(MBOKCancelText) {
+      profile = "GuiTextProfile";
+      horizSizing = "center";
       vertSizing = "bottom";
-      position = "230 276";
-      extent = "300 112";
+      position = "195 170";
+      extent = "236 14";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";

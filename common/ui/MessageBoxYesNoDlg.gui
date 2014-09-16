@@ -18,7 +18,7 @@ new GuiControl(MessageBoxYesNoDlg) {
       minExtent = "48 92";
       visible = "1";
       helpTag = "0";
-      bitmap = "common/ui/dialog.png";
+      bitmap = "./dialog.png";
       wrap = "0";
 
       new GuiMLTextCtrl(MBYesNoText) {
@@ -34,43 +34,67 @@ new GuiControl(MessageBoxYesNoDlg) {
          allowColorChars = "0";
          maxChars = "-1";
       };
-      new GuiBitmapButtonCtrl() {
-         profile = "GuiButtonProfile";
-         horizSizing = "right";
-         vertSizing = "top";
-         position = "44 94";
-         extent = "82 47";
+      new GuiControl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "14 103";
+         extent = "237 48";
          minExtent = "8 8";
          visible = "1";
-         command = "MessageCallback(MessageBoxYesNoDlg,MessageBoxYesNoDlg.yesCallback);";
-         accelerator = "return";
          helpTag = "0";
-         text = "YES";
-         groupNum = "-1";
-         buttonType = "PushButton";
-         repeatPeriod = "1000";
-         repeatDecay = "1";
-         bitmap = "common/ui/yes";
-            simpleStyle = "0";
+
+         new GuiBitmapButtonCtrl() {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "120 48";
+            minExtent = "8 8";
+            visible = "1";
+            command = "MessageCallback(MessageBoxYesNoDlg,MessageBoxYesNoDlg.yesCallback);";
+            accelerator = "return";
+            helpTag = "0";
+            text = "YES";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = "./yes";
+               simpleStyle = "0";
+         };
+         new GuiBitmapButtonCtrl() {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "117 0";
+            extent = "120 48";
+            minExtent = "8 8";
+            visible = "1";
+            command = "MessageCallback(MessageBoxYesNoDlg,MessageBoxYesNoDlg.noCallback);";
+            accelerator = "escape";
+            helpTag = "0";
+            text = "NO";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = "./no";
+               simpleStyle = "0";
+         };
       };
-      new GuiBitmapButtonCtrl() {
-         profile = "GuiButtonProfile";
-         horizSizing = "right";
-         vertSizing = "top";
-         position = "151 94";
-         extent = "75 47";
+      new GuiMLTextCtrl(MBYesNoText) {
+         profile = "GuiTextProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "14 11";
+         extent = "236 14";
          minExtent = "8 8";
          visible = "1";
-         command = "MessageCallback(MessageBoxYesNoDlg,MessageBoxYesNoDlg.noCallback);";
-         accelerator = "escape";
          helpTag = "0";
-         text = "NO";
-         groupNum = "-1";
-         buttonType = "PushButton";
-         repeatPeriod = "1000";
-         repeatDecay = "1";
-         bitmap = "common/ui/no";
-            simpleStyle = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
       };
    };
 };
