@@ -56,33 +56,30 @@ function HelpCreditsGui::setPage(%this, %page)
 
       case 5:
          %text = "<font:Animated:50><color:000000><just:center>Bonus Items (1/2)<font:Arial:16>\n\n<font:DomCasualD:32><just:left>" @
-                 "<lmargin:70>Super Speed PowerUp - gives you a burst of speed.\n\nSuper Jump PowerUp - gives you a big jump up.\n\nShock Absorber PowerUp - absorbs bounce impacts.\n\nSuper Bounce PowerUp - makes you bounce higher.";
+                 "<lmargin:70>SuperSprint PowerUp - gives you a burst of speed.\n\nSuperSpring PowerUp - gives you a big jump up.\n\nShockStopper PowerUp - absorbs bounce impacts.\n\nSuperRicochet PowerUp - makes you bounce higher.";
          HC_SuperSpeed.setVisible(true);
          HC_SuperJump.setVisible(true);
          HC_ShockAbsorber.setVisible(true);
          HC_SuperBounce.setVisible(true);
          if($DemoBuild)
          {
-            HC_FullVersion3.setVisible(true);
-            HC_FullVersion5.setVisible(true);
+            //No demo build requirements
          }
       case 6:
          %text = "<font:Animated:50><color:000000><just:center>Bonus Items (2/2)<font:DomCasualD:32><just:left>\n\n" @
-                 "<lmargin:70>Gyrocopter PowerUp - slows your fall in the air.\n\nTime Travel - takes some time off the clock.\n\nGravity Modifier - Changes the direction of \"down\" - the new down is in the direction of the arrow.";
+                 "<lmargin:70>SuperGlider PowerUp - slows your fall in the air.\n\nTimeChanger - takes some time off the clock.\n\nGravityTransformer - Changes the direction of \"down\" - the new down is in the direction of the arrow.";
          HC_AntiGravity.setVisible(true);
          HC_Helicopter.setVisible(true);
          HC_TimeTravel.setVisible(true);
       case 7:
          %text = "<font:Animated:50><color:000000><just:center>Hazards (1/2)<font:DomCasualD:32><just:left>\n\n" @
-                 "<lmargin:70>Duct Fan - be careful this doesn't blow you away!\n\nTornado - it'll pull you in and spit you out.\n\nTrap Door - keep moving when you're rolling over one of these.";
+                 "<lmargin:70>Duct Fan - be careful this doesn't blow you away!\n\nWind Tunnel - it'll pull you in and spit you out.\n\nTrap Door - keep moving when you're rolling over one of these.";
          HC_DuctFan.setVisible(true);
          HC_Tornado.setVisible(true);
          HC_Trapdoor.setVisible(true);
          if($DemoBuild)
          {
-            //HC_FullVersion1.setVisible(true);
-            HC_FullVersion2.setVisible(true);
-            HC_FullVersion4.setVisible(true);
+            //No demo build requirements
          }
       case 8:
          %text = "<font:Animated:50><color:000000><just:center>Hazards (2/2)<font:DomCasualD:32><just:left>\n\n" @
@@ -92,9 +89,7 @@ function HelpCreditsGui::setPage(%this, %page)
          HC_Oilslick.setVisible(true);
          if($DemoBuild)
          {
-            HC_FullVersion1.setVisible(true);
-            HC_FullVersion2.setVisible(true);
-            HC_FullVersion4.setVisible(true);
+            //No demo build requirements
          }
       case 9:
          %text = "<font:Animated:50><color:000000><just:center>About GarageGames<font:DomCasualD:32><just:left>\n\n" @
