@@ -330,7 +330,7 @@ function PM_setSelected(%index)
       %author = "<spush><font:Animated:18>" @ "Unknown Artist" @ "<spop>\n\n";
    }
    %desc = %mission.desc @ "\n\n";
-   %best = "<spush><font:Animated:20>Your best times:<spop><lmargin:10><tab:0,130,180><font:Arial Bold:14>\n";
+   %best = "<spush><font:Animated:20>Your best times:<spop><lmargin:10><tab:0,130,180><font:Whitestone:14>\n";
    getBestTimes(%mission.file);
    %total = "";
    for (%i = 0; %i < 3; %i++)
