@@ -3,13 +3,13 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          time = "0";
-         artist = "Ender";
-         type = "Tutorial";
-         level = "5";
          desc = "They are confusing, they are difficult, they are frustrating, they are Rotating Platforms.";
          name = "Spinning Insanity";
+         artist = "Ender";
          startHelpText = "Learn about Rotating Platforms in this level.";
+         level = "5";
          goldTime = "30000";
+         type = "Tutorial";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -50,115 +50,115 @@ new SimGroup(MissionGroup) {
       ambient = "0.300000 0.300000 0.400000 1.000000";
    };
    new ScriptObject() {
-         time = "0";
-         penaltyTime = "0";
-         pad = "2009";
          powerUp = "0";
-         bonusTime = "0";
+         time = "0";
+         pad = "2009";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new StaticShape(StartPoint) {
       position = "2.09194 -42.3189 -25.2208";
       rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "6591";
+         beam = "2235";
    };
    new ScriptObject() {
+         powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "1649";
-         powerUp = "0";
-         bonusTime = "0";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "1721";
-         powerUp = "0";
-         bonusTime = "0";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "2727";
-         powerUp = "0";
-         bonusTime = "0";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "2784";
-         powerUp = "0";
-         bonusTime = "0";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "4691";
-         powerUp = "0";
-         bonusTime = "0";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "1602";
-         powerUp = "0";
-         bonusTime = "0";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "1602";
-         powerUp = "0";
-         bonusTime = "0";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "1602";
-         powerUp = "0";
-         bonusTime = "0";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "1602";
-         powerUp = "0";
-         bonusTime = "0";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "1672";
-         powerUp = "0";
-         bonusTime = "0";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
          time = "0";
-         penaltyTime = "0";
          pad = "1752";
-         powerUp = "0";
-         bonusTime = "0";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
-         time = "0";
-         penaltyTime = "0";
-         pad = "1785";
          powerUp = "0";
-         bonusTime = "0";
+         time = "0";
+         pad = "1785";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new InteriorInstance() {
       position = "8.04762 -42.8456 -27.7484";
@@ -169,36 +169,36 @@ new SimGroup(MissionGroup) {
    };
    new StaticShape() {
       position = "-16.6358 -52.6121 -25.0042";
-      rotation = "1 0 0 0";
+      rotation = "0 0 1 30.5724";
       scale = "1 1 1";
       dataBlock = "RotationPlatform";
          inc = "1";
-         axis = "z";
-         skin = "orangex";
-         timer = "30";
          currentTime = "0";
+         axis = "z";
+         timer = "30";
+         skin = "orangex";
    };
    new StaticShape() {
       position = "-16.0364 -42.4678 -25.0066";
-      rotation = "1 0 0 0";
+      rotation = "0 0 1 30.5724";
       scale = "1 1 1";
       dataBlock = "RotationPlatform";
          inc = "1";
-         axis = "z";
-         skin = "orangex";
-         timer = "1";
          currentTime = "0";
+         axis = "z";
+         timer = "1";
+         skin = "orangex";
    };
    new StaticShape() {
       position = "-15.6537 -30.866 -25.0095";
-      rotation = "1 0 0 0";
+      rotation = "0 0 1 30.5724";
       scale = "1 1 1";
       dataBlock = "RotationPlatform";
          inc = "1";
-         axis = "z";
-         skin = "orangex";
-         timer = "1";
          currentTime = "0";
+         axis = "z";
+         timer = "1";
+         skin = "orangex";
    };
    new Item() {
       position = "-12.9515 -51.4055 -25.2475";
@@ -208,16 +208,16 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "6583";
+         node = "2227";
          checkpointNum = "1";
    };
    new ScriptObject() {
-         time = "0";
-         penaltyTime = "0";
-         pad = "3264";
          powerUp = "0";
-         bonusTime = "0";
+         time = "0";
+         pad = "3264";
+         penaltyTime = "0";
          gemCount = "0";
+         bonusTime = "0";
    };
    new Item() {
       position = "-20.4221 -53.3314 -25.2529";
@@ -227,7 +227,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "6584";
+         node = "2228";
          checkpointNum = "1";
    };
    new Item() {
@@ -238,7 +238,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "6585";
+         node = "2229";
          checkpointNum = "1";
    };
    new Item() {
@@ -249,7 +249,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "6586";
+         node = "2230";
          checkpointNum = "1";
    };
    new Item() {
@@ -260,7 +260,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "6587";
+         node = "2231";
          checkpointNum = "1";
    };
    new Item() {
@@ -271,30 +271,30 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "6588";
+         node = "2232";
          checkpointNum = "1";
    };
    new StaticShape() {
       position = "-51.5161 -42.9767 -25.484";
-      rotation = "1 0 0 0";
+      rotation = "0 0 1 30.5724";
       scale = "1 1 1";
       dataBlock = "RotationPlatform";
          inc = "1";
-         axis = "z";
-         skin = "orangex";
-         timer = "30";
          currentTime = "0";
+         axis = "z";
+         timer = "30";
+         skin = "orangex";
    };
    new StaticShape() {
       position = "-43.2932 -42.4201 -25.4664";
-      rotation = "1 0 0 0";
+      rotation = "0 0 1 30.5724";
       scale = "1 1 1";
       dataBlock = "RotationPlatform";
          inc = "1";
-         axis = "z";
-         skin = "orangex";
-         timer = "30";
          currentTime = "0";
+         axis = "z";
+         timer = "30";
+         skin = "orangex";
    };
    new Item() {
       position = "-51.5421 -39.4256 -25.0993";
@@ -304,7 +304,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "6589";
+         node = "2233";
          checkpointNum = "1";
    };
    new Item() {
@@ -315,30 +315,30 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "6590";
+         node = "2234";
          checkpointNum = "1";
    };
    new StaticShape() {
       position = "-72.9157 -42.2276 -25.136";
-      rotation = "1 0 0 0";
+      rotation = "0 1 0 30.5724";
       scale = "1 1 1";
       dataBlock = "RotationPlatform";
          inc = "1";
-         axis = "y";
-         skin = "orangex";
-         timer = "30";
          currentTime = "0";
+         axis = "y";
+         timer = "30";
+         skin = "orangex";
    };
    new StaticShape() {
       position = "-76.9191 -42.1659 -23.98";
-      rotation = "1 0 0 0";
+      rotation = "0 1 0 30.5724";
       scale = "1 1 1";
       dataBlock = "RotationPlatform";
          inc = "1";
-         axis = "y";
-         skin = "orangex";
-         timer = "30";
          currentTime = "0";
+         axis = "y";
+         timer = "30";
+         skin = "orangex";
    };
    new StaticShape(check1) {
       position = "-63.97 -42.341 -25.2219";
@@ -391,7 +391,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "6559";
+         beam = "2088";
    };
    new Trigger() {
       position = "-116.628 19.105 -28.6636";
@@ -399,35 +399,6 @@ new SimGroup(MissionGroup) {
       scale = "125 125 125";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-   };
-   new Item() {
-      position = "-30.9551 -44.0625 -24.5917";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "BlastItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-         checkpointNum = "1";
-   };
-   new Item() {
-      position = "-24.9537 -43.1547 -23.9977";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "MiniMarbleItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-   };
-   new Item() {
-      position = "-29.8294 -41.4583 -25.1369";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "MegaMarbleItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-         checkpointNum = "1";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
