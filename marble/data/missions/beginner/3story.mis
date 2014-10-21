@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          desc = "Climb up the tower to the finish!";
          name = "Three-Story";
          startHelpText = "Climb to your victory!";
-         level = "14";
+         level = "13";
          type = "Beginner";
    };
    new MissionArea(MissionArea) {
