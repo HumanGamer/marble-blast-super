@@ -1,0 +1,470 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         time = "0";
+         artist = "Ender, davidjl123";
+         goldTime = "21000";
+         desc = "Climb up the tower to the finish!";
+         name = "Three-Story";
+         startHelpText = "Climb to your victory!";
+         level = "14";
+         type = "Beginner";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0";
+      cloudHeightPer[1] = "0";
+      cloudHeightPer[2] = "0";
+      cloudSpeed1 = "0.0001";
+      cloudSpeed2 = "0.0002";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "-1 1.74487e-038 4.65496e-036";
+      fogVolume2 = "-1 1.83671e-038 6.34767e-036";
+      fogVolume3 = "-1 1.92855e-038 1.08145e-035";
+      materialList = "~/data/skies/sky12/sky_day.dml";
+      windVelocity = "1 0 0";
+      windEffectPrecipitation = "0";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 0.000000";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "1.400000 1.200000 0.400000 1.000000";
+      ambient = "0.300000 0.300000 0.400000 1.000000";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "2009";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new StaticShape(StartPoint) {
+      position = "-32.0265 -56.08 1.93894";
+      rotation = "0 0 1 45";
+      scale = "0.6 0.6 0.6";
+      dataBlock = "StartPad";
+         beam = "2606";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1649";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1721";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "2727";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "2784";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "4691";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1672";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1752";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new Item() {
+      position = "-35.1869 -35.9607 5.95551";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1624";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new StaticShape() {
+      position = "-27.0505 -51.299 32.7249";
+      rotation = "0 0 1 90";
+      scale = "0.6 0.6 0.6";
+      dataBlock = "SignFinish";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1965";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new StaticShape(EndPoint) {
+      position = "-27.0714 -51.1484 26.4439";
+      rotation = "0 0 1 90";
+      scale = "0.6 0.6 0.6";
+      dataBlock = "EndPad";
+         beam = "2192";
+   };
+   new InteriorInstance() {
+      position = "-28.0493 -52.6849 -3.6623";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/3story.dif";
+      showTerrainInside = "0";
+   };
+   new Trigger(Bounds) {
+      position = "-47.0744 -27.1063 -10.4836";
+      rotation = "1 0 0 0";
+      scale = "45 45 50";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new Trigger() {
+      position = "-29.5467 -48.6919 19.8332";
+      rotation = "1 0 0 0";
+      scale = "5 5 5";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "When all of the gems are collected, use the SuperSpring to bounce up to the finish above!";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1783";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new Item() {
+      position = "-27.0619 -56.1427 19.8284";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2594";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-33.533 -57.7119 19.792";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "1789";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "3511";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new Item() {
+      position = "-22.0759 -56.0637 1.77056";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-32.2453 -46.1479 1.8252";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2595";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-21.8155 -46.197 1.82444";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2596";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-27.0968 -51.1526 1.6717";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperJumpItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-32.1123 -51.1873 1.82999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2597";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-21.9646 -51.1266 1.8315";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2598";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-27.0266 -56.1852 1.83154";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2599";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-27.0362 -46.2132 1.83162";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2600";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-27.1244 -46.1716 19.83";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2601";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-30.998 -46.817 10.7931";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-31.3013 -55.3383 10.6748";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperJumpItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-21.9962 -51.1831 10.8293";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2602";
+         checkpointNum = "1";
+   };
+   new StaticShape() {
+      position = "-22.428 -46.4906 10.7736";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-22.4929 -56.1243 10.7688";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new Item() {
+      position = "-20.5439 -57.7127 19.8238";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2603";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-33.529 -44.7021 19.8269";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2604";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-32.0479 -51.2344 19.6758";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperJumpItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-22.1186 -51.1606 19.8305";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "2605";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-20.5742 -44.7048 19.7881";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new ScriptObject() {
+         time = "0";
+         pad = "2175";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+};
+//--- OBJECT WRITE END ---
