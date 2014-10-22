@@ -6,6 +6,7 @@ new SimGroup(MissionGroup) {
          name = "Lunatic Cube";
          level = "3";
          gameMode = "Hunt";
+         artist = "James Colsey";
          maxGemsPerSpawn = "6";
          type = "Expert";
          time = "300000";
