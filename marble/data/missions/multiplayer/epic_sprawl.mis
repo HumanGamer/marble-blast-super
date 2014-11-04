@@ -9,7 +9,6 @@ new SimGroup(MissionGroup) {
          gameMode = "hunt";
          gameType = "MultiPlayer";
          gemSpawnRadius = "20";
-         include = "1";
          level = "5";
          maxGemsPerSpawn = "7";
          name = "Epic Sprawl";
