@@ -41,7 +41,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "76 33";
-            extent = "488 236";
+            extent = "488 274";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -92,7 +92,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             position = "60 238";
             extent = "64 55";
             minExtent = "8 8";
-            visible = "0";
+            visible = "1";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -110,7 +110,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             position = "88 255";
             extent = "64 55";
             minExtent = "8 8";
-            visible = "0";
+            visible = "1";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -128,7 +128,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             position = "88 218";
             extent = "64 55";
             minExtent = "8 8";
-            visible = "0";
+            visible = "1";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -197,10 +197,10 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "71 98";
-            extent = "65 54";
+            position = "74 81";
+            extent = "64 77";
             minExtent = "8 8";
-            visible = "0";
+            visible = "1";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -208,17 +208,17 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             skin = "base";
             cameraRotX = "0.5";
             cameraZRotSpeed = "0.001";
-            orbitDistance = "5";
+            orbitDistance = "7.5";
             autoSize = "0";
          };
          new GuiObjectView(HC_EndPad) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "72 155";
-            extent = "65 54";
+            position = "74 145";
+            extent = "64 77";
             minExtent = "8 8";
-            visible = "0";
+            visible = "1";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -226,7 +226,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             skin = "base";
             cameraRotX = "0.5";
             cameraZRotSpeed = "0.001";
-            orbitDistance = "5";
+            orbitDistance = "7.5";
             autoSize = "0";
          };
          new GuiObjectView(HC_Helicopter) {
