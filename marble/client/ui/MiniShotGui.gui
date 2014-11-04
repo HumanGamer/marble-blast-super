@@ -28,6 +28,6 @@ function doMiniShot()
 {
 	Canvas.setContent(MiniShotGui);
 	Canvas.repaint();
-	screenshot(filepath($Server::MissionFile) @ "/" @ fileBase($Server::MissionFile) @ ".png");
+	screenshot(filepath($Server::MissionFile) @ "/" @ fileBase($Server::MissionFile) @ ".png", 258, 193);
 	Canvas.setContent(PlayGui);
 }

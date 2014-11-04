@@ -295,8 +295,12 @@ function spawnGemGroup()
          {
             %dist = VectorDist(%obj.getTransform(), %gem.getTransform());
             //echo("Distance: " @ %dist);
+			
+			%radius = MissionInfo.gemSpawnRadius;
+			if (%radius $= "")
+				%radius = $Game::MaxGemRadius;
             
-            if ((%dist < %lastDist || %lastDist $= "") && %dist < $Game::MaxGemRadius)
+            if ((%dist < %lastDist || %lastDist $= "") && %dist < %radius)
             {
                %lastDist = %dist;
                %lastObj = %obj;
