@@ -1,4 +1,31 @@
 =========================================================
+BETA 3.3.1
+September 23, 2014
+
+- New pad textures
+- New title graphics
+- New credits GUI
+- Manual changes
+- playMissionGui: Whitestone font for times
+- PlayGUI.gui: Blast bar fixed
+- Marble Selector fixes
+
+=========================================================
+BETA 3.3
+September 18, 2014
+
+- 3 new Tutorial levels (Mega-Mini Primer, Ka-Bounce, Marble Power)
+- 1 modified Advanced level (Hazard Ascent) (GravityChanger fix)
+- Added Mini Marble
+- playMissionGui previews
+- Replay Center menu button texture
+- Demos now use .demoinfo instead of .inf
+- Modified lobby, loading, and connect GUIs
+- New message box GUIs
+- Changed background of IP GUI
+- Work on MultiplayerGui.gui
+
+=========================================================
 BETA 3.2
 September 15, 2014
 
