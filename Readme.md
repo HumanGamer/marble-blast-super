@@ -11,7 +11,7 @@ EnderCraft1 .. . . . . General
 
 davidjl123 . . . . . . General
 
-cooldudepoke . . . . . Coding
+cooldudepoke . . . . . General
 
 Neon Lightning . . . . Coding
 
