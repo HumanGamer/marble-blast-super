@@ -38,6 +38,8 @@ function PlayGui::onWake(%this)
    schedule(0, 0, "refreshBottomTextCtrl");
    playGameMusic();
    
+   setupPlayGui();
+   
    if ($Client::ConnectedMultiplayer || MissionInfo.gameMode $= "hunt")
    {
       Canvas.pushDialog(PlayerListGui);
@@ -310,5 +312,17 @@ function refreshBottomTextCtrl()
 function refreshCenterTextCtrl()
 {
    CenterPrintText.position = "0 0";
+}
+
+function setupPlayGui()
+{
+   if ($pref::ShowRearView)
+   {
+      PG_Rear.visible = true;
+      PG_RearView.visible = true;
+   } else {
+      PG_Rear.visible = false;
+      PG_RearView.visible = false;
+   }
 }
 

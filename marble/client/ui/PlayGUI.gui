@@ -488,7 +488,7 @@ new GameTSCtrl(PlayGui) {
       profile = "GuiMLTextProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "20 200";
+      position = "20 185";
       extent = "300 14";
       minExtent = "8 8";
       visible = "1";
@@ -499,9 +499,9 @@ new GameTSCtrl(PlayGui) {
    };
    new GuiProgressCtrl(PG_BlastBar) {
       profile = "GuiBlastUsableProfile";
-      horizSizing = "left";
+      horizSizing = "right";
       vertSizing = "top";
-      position = "495 405";
+      position = "20 405";
       extent = "100 27";
       minExtent = "8 8";
       visible = "1";

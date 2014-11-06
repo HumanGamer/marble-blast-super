@@ -152,7 +152,7 @@ new GuiControlProfile ("CenterPrintTextProfile")
    fontColor = "0 255 0";
 };
 
-if(!isObject(GuiPlayerListProfile)) new GuiControlProfile (GuiPlayerListProfile : TextArrayProfile)
+if(!isObject(GuiPlayerListProfile)) new GuiControlProfile (GuiPlayerListProfile : GuiTextArrayProfile)
 {
    fontType = "Arial Bold";
    fontSize = 24;

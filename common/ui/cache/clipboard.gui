@@ -1,16 +1,20 @@
 new SimSet(guiClipboard) {
 
-   new GuiMLTextCtrl(MBOKCancelText) {
-      profile = "GuiTextProfile";
-      horizSizing = "center";
+   new GuiBitmapButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
       vertSizing = "bottom";
-      position = "195 170";
-      extent = "236 14";
+      position = "369 5";
+      extent = "43 53";
       minExtent = "8 8";
       visible = "1";
+      variable = "$pref::Input::AlwaysFreeLook";
       helpTag = "0";
-      lineSpacing = "2";
-      allowColorChars = "0";
-      maxChars = "-1";
+      text = "OK";
+      groupNum = "-1";
+      buttonType = "ToggleButton";
+      repeatPeriod = "1000";
+      repeatDecay = "1";
+      bitmap = "marble/client/ui/Options/cntrl_mous_freel";
    };
 };

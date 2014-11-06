@@ -51,7 +51,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          position = "5 31";
          extent = "667 450";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
 
          new GuiBitmapCtrl(OptMarbleControlsPane) {
@@ -440,7 +440,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                helpTag = "0";
                range = "0.200000 3.000000";
                ticks = "10";
-               value = "0.75";
+               value = "0.420087";
                bitmap = "./Options/cntrl_mous_knb";
             };
             new GuiBitmapCtrl() {
@@ -543,6 +543,19 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "123 18";
+               extent = "234 36";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               lineSpacing = "2";
+               allowColorChars = "0";
+               maxChars = "-1";
+            };
+            new GuiMLTextCtrl(OptInvertYLabel) {
+               profile = "GuiBigTextProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "176 171";
                extent = "234 36";
                minExtent = "8 8";
                visible = "1";
@@ -979,7 +992,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             helpTag = "0";
             range = "0.000000 1.000000";
             ticks = "10";
-            value = "0.466179";
+            value = "0.219378";
             bitmap = "./Options/knob";
          };
          new GuiSliderCtrl() {
@@ -995,7 +1008,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             helpTag = "0";
             range = "0.000000 1.000000";
             ticks = "10";
-            value = "0.473492";
+            value = "0.274223";
             bitmap = "./Options/knob";
          };
       };
@@ -1180,7 +1193,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "506 14";
+         position = "508 14";
          extent = "105 70";
          minExtent = "8 8";
          visible = "1";
@@ -1197,7 +1210,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "374 16";
+         position = "405 16";
          extent = "113 71";
          minExtent = "8 8";
          visible = "1";
@@ -1214,7 +1227,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "21 19";
+         position = "143 19";
          extent = "132 56";
          minExtent = "8 8";
          visible = "1";
@@ -1231,7 +1244,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "199 7";
+         position = "273 7";
          extent = "125 79";
          minExtent = "8 8";
          visible = "1";
@@ -1243,6 +1256,66 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          repeatPeriod = "1000";
          repeatDecay = "1";
          bitmap = "./options/controls";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "25 19";
+         extent = "132 56";
+         minExtent = "8 8";
+         visible = "1";
+         command = "OptionsDlg.setPane(\"Game\");";
+         helpTag = "0";
+         text = "Game";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./options/game";
+      };
+      new GuiBitmapCtrl(OptGamePane) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "19 80";
+         extent = "596 349";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./options/options";
+         wrap = "0";
+
+         new GuiMLTextCtrl(OptShowRearView) {
+            profile = "GuiBigTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "104 14";
+            extent = "234 36";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+         new GuiBitmapButtonCtrl(OptShowRearViewButton) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "43 5";
+            extent = "43 53";
+            minExtent = "8 8";
+            visible = "1";
+            variable = "$pref::ShowRearView";
+            helpTag = "0";
+            text = "OK";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = "./Options/cntrl_mous_freel";
+         };
       };
    };
 };

@@ -3,6 +3,8 @@ function optionsDlg::setPane(%this, %pane)
    OptAudioPane.setVisible(false);
    OptGraphicsPaneMac.setVisible(false);
    OptGraphicsPane.setVisible(false);
+   
+   OptGamePane.setVisible(false);
    //OptNetworkPane.setVisible(false);
    OptControlsPane.setVisible(false);
    if(%pane $= "Graphics")
@@ -129,6 +131,8 @@ function OptionsDlg::onWake(%this)
 	//OptAudioDriverList.onSelect( %selId, "" );
 	
 	OptFreeLookLabel.setText("Always Freelook");
+	OptInvertYLabel.setText("Invert Y Axis");
+	OptShowRearView.setText("Show Rear View");
 }
 
 function OptionsDlg::onSleep(%this)
