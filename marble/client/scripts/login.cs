@@ -35,7 +35,8 @@ function doLogin()
       LoginConnection.delete();
    new HTTPObject(LoginConnection);
    
-   LoginConnection.get("marbleblastsuper.tk:80", "/game/login.php", "login=" @ $Login::Username @ "===" @ $Login::Password);
+   //LoginConnection.get("marbleblastsuper.tk:80", "/game/login.php", "login=" @ $Login::Username @ "===" @ $Login::Password);
+   onLogin();
 }
 
 function cancelLogin()

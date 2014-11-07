@@ -240,6 +240,41 @@ function hideAllGems()
    }
 }
 
+function getAverageGemPosition()
+{
+   %group = NameToID("MissionGroup/GemSpawns");
+   if (!isObject(%group))
+      return;
+      
+   //%totalX = 0;
+   //%totalY = 0;
+   //%totalZ = 0;
+   
+   for (%i = 0; %i < %group.getCount(); %i++)
+   {
+      %obj = %group.getObject(%i);
+      
+      if (%obj.isHidden())
+         continue;    
+      
+      %position = %obj.getPosition();
+      return %position;
+      //%x = getWord(%position, 0);
+      //%y = getWord(%position, 1);
+      //%z = getWord(%position, 2);
+      
+      //%totalX += %x;
+      //%totalY += %y;
+      //%totalZ += %z;
+   }
+   
+   //%totalX /= %group.getCount();
+   //%totalY /= %group.getCount();
+   //%totalZ /= %group.getCount();
+   
+   //return %totalX SPC %totalY SPC %totalZ;
+}
+
 function spawnGemGroup()
 {
    commandToAll('ClearRadar');
@@ -869,6 +904,14 @@ function GameConnection::spawnPlayer(%this)
 	}	
    %this.createPlayer(%spawnPoint);
    serverPlay2d(spawnSfx);
+   
+   //%this.clearCamera();
+   
+   if (MissionInfo.gameMode $= "hunt")
+   {
+      %averagePos = getAverageGemPosition();
+      %this.cameraLookAtPoint(getWord(%averagePos, 0), getWord(%averagePos, 1));
+   }
 }
 
 function restartLevel()
@@ -1017,6 +1060,13 @@ function GameConnection::respawnPlayer(%this)
    
    $resetLevel = false;
    
+   //%this.clearCamera();
+   
+   if (MissionInfo.gameMode $= "hunt")
+   {
+      %averagePos = getAverageGemPosition();
+      %this.cameraLookAtPoint(getWord(%averagePos, 0), getWord(%averagePos, 1));
+   }
    //%this.player.powerUpEnableSched = %this.player.schedule(500, enablePowerUps);
 }
 
@@ -1071,6 +1121,14 @@ function GameConnection::respawnPlayerHunt(%this)
    %this.setTime(MissionInfo.time);
    %this.setGemCount(%this.gemCount);
    %this.play2d(spawnSfx);
+   
+   //%this.clearCamera();
+   
+   if (MissionInfo.gameMode $= "hunt")
+   {
+      %averagePos = getAverageGemPosition();
+      %this.cameraLookAtPoint(getWord(%averagePos, 0), getWord(%averagePos, 1));
+   }
 }
 
 //-----------------------------------------------------------------------------

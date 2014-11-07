@@ -2,18 +2,18 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         time = "300000";
-         desc = "Remake of Sprawl by Alex Swanson";
-         gameType = "MultiPlayer";
-		 gameMode = "hunt";
-         type = "beginner";
          level = "6";
          include = "1";
-         name = "Sprawl";
-		 artist = "Matthieu Parizeau";
-         maxGemsPerSpawn = "7";
-         gemSpawnRadius = "20";
+         artist = "Matthieu Parizeau";
+         gameMode = "hunt";
          parScore = "100";
+         name = "Sprawl";
+         time = "300000";
+         gameType = "MultiPlayer";
+         desc = "Remake of Sprawl by Alex Swanson";
+         maxGemsPerSpawn = "7";
+         type = "beginner";
+         gemSpawnRadius = "20";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -47,11 +47,11 @@ new SimGroup(MissionGroup) {
       fogVolumeColor1 = "128.000000 128.000000 128.000000 274952335980479310000000000.000000";
       fogVolumeColor2 = "128.000000 128.000000 128.000000 11918.598633";
       fogVolumeColor3 = "128.000000 128.000000 128.000000 1109264997360148200000000000.000000";
-         fogStorm3 = "0";
-         skyGlowColor = "-0.026242 -0.031545 0.999158 0.887938";
          fogStorm2 = "0";
          skyGlow = "0";
+         fogStorm3 = "0";
          fogStorm1 = "0";
+         skyGlowColor = "-0.026242 -0.031545 0.999158 0.887938";
          renderBanOffsetHeight = "50";
          hidden = "0";
    };
@@ -194,264 +194,113 @@ new SimGroup(MissionGroup) {
    new SimGroup(GemSpawns) {
 
       new Item() {
-         position = "55 17 7";
+         position = "290 0 0";
          rotation = "1 0 0 0";
          scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti2pts";
-      };
-      new Item() {
-         position = "57 15 7";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti2pts";
-      };
-      new Item() {
-         position = "59 17 7";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti2pts";
-      };
-      new Item() {
-         position = "55 15 6.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
          dataBlock = "GemItemMulti";
+         collideable = "0";
+         static = "1";
+         rotate = "1";
+            outdoorWeight = "100";
+            radius = "100";
+            node = "6248";
+            sphereWeight = "100";
+            beam = "5023";
+            checkpointNum = "1";
+            indoorWeight = "100";
       };
       new Item() {
-         position = "57 13 6.5";
+         position = "222 0 0";
          rotation = "1 0 0 0";
          scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
+         dataBlock = "GemItemMulti5Pts";
+         collideable = "0";
+         static = "1";
+         rotate = "1";
+            outdoorWeight = "100";
+            radius = "100";
+            node = "6272";
+            sphereWeight = "100";
+            beam = "6271";
+            checkpointNum = "1";
+            indoorWeight = "100";
+      };
+      new Item() {
+         position = "1280 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
          dataBlock = "GemItemMulti";
+         collideable = "0";
+         static = "1";
+         rotate = "1";
+            outdoorWeight = "100";
+            radius = "100";
+            node = "6255";
+            sphereWeight = "100";
+            beam = "5762";
+            indoorWeight = "100";
       };
       new Item() {
-         position = "57 17 6.5";
+         position = "0 674.119 0";
          rotation = "1 0 0 0";
          scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
          dataBlock = "GemItemMulti";
+         collideable = "0";
+         static = "1";
+         rotate = "1";
+            outdoorWeight = "100";
+            radius = "100";
+            node = "6251";
+            sphereWeight = "100";
+            beam = "3184";
+            checkpointNum = "1";
+            indoorWeight = "100";
       };
       new Item() {
-         position = "59 15 6.5";
+         position = "0 506 0";
          rotation = "1 0 0 0";
          scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
          dataBlock = "GemItemMulti";
+         collideable = "0";
+         static = "1";
+         rotate = "1";
+            outdoorWeight = "100";
+            radius = "100";
+            node = "6257";
+            sphereWeight = "100";
+            beam = "6256";
+            checkpointNum = "1";
+            indoorWeight = "100";
       };
       new Item() {
-         position = "61 15 6.5";
+         position = "0 174 0";
          rotation = "1 0 0 0";
          scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti";
-      };
-      new Item() {
-         position = "17 35 6.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti";
-      };
-      new Item() {
-         position = "15 33 6.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti";
-      };
-      new Item() {
-         position = "55 13 6";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti";
-      };
-      new Item() {
-         position = "13 35 7";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti2pts";
-      };
-      new Item() {
-         position = "5 35 7";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti2pts";
-      };
-      new Item() {
-         position = "17 33 7";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti2pts";
-      };
-      new Item() {
-         position = "-41 29 2.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti";
-      };
-      new Item() {
-         position = "-39 31 2.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti";
-      };
-      new Item() {
-         position = "45 39 6";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti5pts";
-      };
-      new Item() {
-         position = "46.5 -70.5 3.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti5pts";
-      };
-      new Item() {
-         position = "5 33 6.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti";
-      };
-      new Item() {
-         position = "5 37 6.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti";
-      };
-      new Item() {
-         position = "3 35 6.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti";
-      };
-      new Item() {
-         position = "-33 35 2.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti";
-      };
-      new Item() {
-         position = "-37 33 2.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti";
-      };
-      new Item() {
-         position = "-35 35 3";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti2pts";
+         dataBlock = "GemItemMulti5Pts";
+         collideable = "0";
+         static = "1";
+         rotate = "1";
+            outdoorWeight = "100";
+            radius = "100";
+            node = "6253";
+            sphereWeight = "100";
+            beam = "3081";
+            checkpointNum = "1";
+            indoorWeight = "100";
       };
       new Item() {
          position = "-58.5 -76.5 5.5";
          rotation = "1 0 0 0";
          scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti5pts";
-      };
-      new Item() {
-         position = "-46.5 40.5 3.5";
-         rotation = "1 0 0 0";
-         scale = "1 1 1";
-         radius = "100";
-         sphereWeight = "100";
-         indoorWeight = "100";
-         outdoorWeight = "100";
-         dataBlock = "GemItemMulti5pts";
+         dataBlock = "GemItemMulti5Pts";
+         collideable = "0";
+         static = "1";
+         rotate = "1";
+            outdoorWeight = "100";
+            radius = "100";
+            node = "6254";
+            sphereWeight = "100";
+            indoorWeight = "100";
       };
    };
    new Item() {
@@ -733,6 +582,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkPointConfirmationNumber = "0";
+         checkpointNum = "1";
    };
    new Item() {
       position = "51 -3 2";
@@ -810,6 +660,11 @@ new SimGroup(MissionGroup) {
       scale = "132 138 27.5";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---

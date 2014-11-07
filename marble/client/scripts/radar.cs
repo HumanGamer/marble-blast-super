@@ -21,6 +21,7 @@ function addRadarObject(%id, %bitmap, %x, %y)
       helpTag = "0";
       bitmap = %bitmap;
       wrap = "0";
+      gamePos = %location;
    };
    
    RadarContainer.add(%obj);
@@ -66,6 +67,26 @@ function clientCmdUpdateRadarObject(%id, %color, %x, %y)
    %bitmap = "marble/client/ui/game/gem_" @ %color;
    addRadarObject(%id, %bitmap, %x, %y);
    
+   %center = getMyMarble().getWorldBoxCenter();
+   %centerX = getWord(%center, 0);
+   %centerY = getWord(%center, 1);
+   
+   %maxX = getWord(getRes(), 0);
+   %maxY = getWord(getRes(), 1);
+   
+   %rx = (%centerX - %x);
+   if (%rx < 0)
+      %rx = 0;
+   if (%rx >= %maxX)
+      %rx = %maxX;
+   %ry = (%centerY - %y);
+   if (%ry < 0)
+      %ry = 0;
+   if (%ry >= %maxY)
+      %ry = %maxY;
+   
+   %id.position = %rx SPC %ry;
+   
    //updateRadar();
 }
 
@@ -73,19 +94,60 @@ function clientCmdUpdateRadarObject(%id, %color, %x, %y)
 //{
    //cancel($radarUpdate);
    //
-   //%eye = getMyMarble().getEyeTransform();
+   //if (!isObject(getMyMarble()))
+   //{
+      //$radarUpdate = schedule(10, 0, updateRadar);
+      //return;   
+   //}
    //
-   //%cameraRotation = getWord(%eye, 3) SPC getWord(%eye, 4) SPC getWord(%eye, 5) SPC getWord(%eye, 6);
+   //%eye = getMyMarble().getWorldBoxCenter();
+   //%centerX = getWord(%eye, 0);
+   //%centerY = getWord(%eye, 1);
    //
-   //%angle = mFloor(mRadToDeg(getWord(%cameraRotation, 1) * getWord(%cameraRotation, 3))); 
+   ////%cameraRotation = getWord(%eye, 3) SPC getWord(%eye, 4) SPC getWord(%eye, 5) SPC getWord(%eye, 6);
    //
-   //PlayerListGui.update(123, "Angle", false, %angle);
+   ////%angle = mFloor(mRadToDeg(getWord(%cameraRotation, 1) * getWord(%cameraRotation, 3))); 
+   //
+   ////PlayerListGui.update(123, "Angle", false, %angle);
+   //
+   ////%cameraRotation = getCameraRotation();
+   ////PlayerListGui.update(123, "Angle", false, %cameraRotation);
+   //
+   //%maxX = getWord(getRes(), 0);
+   //%maxY = getWord(getRes(), 1);
    //
    //for (%i = 0; %i < RadarContainer.getCount(); %i++)
    //{
       //%obj = RadarContainer.getObject(%i);
       //
+      //%x = getWord(%obj.gamePos, 0);
+      //%y = getWord(%obj.gamePos, 1);
       //
+      ////%dx = %centerX - %x;
+      ////%dy = %centerY - %y;
+      //
+      ////%angle = mAtan(%dx, %dy);
+      //
+      ////$mvYaw = getWord(%cameraRotation, 1) - %angle;
+      //
+      ////PlayerListGui.update(123, "Angle", false, %angle);
+      //
+      ////break;
+      //
+      ////%obj.position = %x + 1 SPC %y + 1;
+      //
+      //%rx = (%centerX - %x);
+      //if (%rx < 0)
+         //%rx = 0;
+      //if (%rx >= %maxX)
+         //%rx = %maxX;
+      //%ry = (%centerY - %y);
+      //if (%ry < 0)
+         //%ry = 0;
+      //if (%ry >= %maxY)
+         //%ry = %maxY;
+      //
+      //%obj.position = %rx SPC %ry;
    //}
    //
    //$radarUpdate = schedule(10, 0, updateRadar);

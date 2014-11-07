@@ -132,7 +132,7 @@ function initClient()
    exec("./scripts/multiplayerGui.cs");
    exec("./scripts/playerListGui.cs");
    exec("./scripts/gemPopupGui.cs");
-   exec("./scripts/radar.cs");
+   //exec("./scripts/radar.cs");
    exec("./scripts/lobby.cs");
    exec("./scripts/multiplayerExitGui.cs");
    exec("./scripts/login.cs");

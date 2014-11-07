@@ -232,7 +232,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                   extent = "140 30";
                   minExtent = "8 8";
                   visible = "1";
-                  command = "OptMouseControlsPane.setVisible(true);OptCameraControlsPane.setVisible(false);OptMarbleControlsPane.setVisible(false);";
+                  command = "OptMouseControlsPane.setVisible(true);OptMarbleControlsPane.setVisible(false);";
                   helpTag = "0";
                   text = "Mouse";
                   groupNum = "-1";
@@ -463,7 +463,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                   extent = "140 30";
                   minExtent = "8 8";
                   visible = "1";
-                  command = "OptMarbleControlsPane.setVisible(true);OptCameraControlsPane.setVisible(false);OptMouseControlsPane.setVisible(false);";
+                  command = "OptMarbleControlsPane.setVisible(true);OptMouseControlsPane.setVisible(false);";
                   helpTag = "0";
                   text = "Marble";
                   groupNum = "-1";
@@ -495,7 +495,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                   extent = "140 30";
                   minExtent = "8 8";
                   visible = "1";
-                  command = "OptMouseControlsPane.setVisible(true);OptCameraControlsPane.setVisible(false);";
+                  command = "OptMouseControlsPane.setVisible(true);";
                   helpTag = "0";
                   text = "Mouse";
                   groupNum = "-1";

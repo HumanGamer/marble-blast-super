@@ -343,6 +343,39 @@ function GameConnection::getSkin(%this)
    return %this.skin;
 }
 
+function GameConnection::cameraLookAtPoint(%this, %x, %y)
+{
+   %object = %this.player;
+   //commandToClient(%this, 'CameraLookAtPoint', %x, %y);
+   cancel($CameraLookSched);
+   if (!isObject(%object))
+   {
+      $CameraLookSched = %this.schedule(250, cameraLookAtPoint, %x, %y);
+      return;
+   }
+   %center = %object.getTransform();
+   %centerX = getWord(%center, 0);
+   %centerY = getWord(%center, 1);
+   
+   %dx = %x - %centerX;
+   %dy = %y - %centerY;
+
+   %angle = mAtan(%dx, %dy);
+
+   //$mvYaw = mDegToRad(getWord(%cameraRotation, 1)) - %angle;
+   
+   //$Client::MyYaw += mRadToDeg($mvYaw);
+   
+   //if ($Client::MyYaw >= 360)
+   //   $Client::MyYaw -= 360;
+   //if ($Client::MyYaw < 0)
+   //   $Client::MyYaw += 360;
+   
+   //<marble>.setPosition("x y z r0 r1 r2 r3", pitch); <<<Thanks HiGuy>>>
+   %transform = getWords(%center, 0, 2) SPC "0 0 1" SPC %angle;
+   %object.setPosition(%transform, 0.45);
+}
+
 function GameConnection::getMultiplayerSpawnPos(%this, %transform)
 {
 	%group = nameToID("MissionGroup/SpawnPoints");
@@ -385,6 +418,11 @@ function GameConnection::applyImpulse(%this, %impulseVec, %impulse)
 {
    commandToClient(%this, 'ApplyImpulse', %impulseVec, %impulse);
 }
+
+//function GameConnection::clearCamera(%this)
+//{
+   //commandToClient(%this, 'ClearCamera');
+//}
 
 function serverCmdCheckVersion(%client, %version)
 {

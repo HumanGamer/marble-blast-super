@@ -222,21 +222,53 @@ function movedown(%val)
 function turnLeft( %val )
 {
    $mvYawRightSpeed = %val ? $Pref::Input::KeyboardTurnSpeed : 0;
+   
+   //$Client::MyYaw -= mRadToDeg($mvYawRightSpeed);
+   
+   //if ($Client::MyYaw >= 360)
+      //$Client::MyYaw -= 360;
+   //if ($Client::MyYaw < 0)
+      //$Client::MyYaw += 360;
 }
 
 function turnRight( %val )
 {
    $mvYawLeftSpeed = %val ? $Pref::Input::KeyboardTurnSpeed : 0;
+   
+   //$Client::MyYaw += mRadToDeg($mvYawLeftSpeed);
+   
+   //if ($Client::MyYaw >= 360)
+      //$Client::MyYaw -= 360;
+   //if ($Client::MyYaw < 0)
+      //$Client::MyYaw += 360;
 }
 
 function panUp( %val )
 {
    $mvPitchDownSpeed = %val ? $Pref::Input::KeyboardTurnSpeed : 0;
+   
+   //$Client::MyPitch += mRadToDeg($mvPitchDownSpeed);
+   //if ($Client::MyPitch >= 360)
+      //$Client::MyPitch -= 360;
+   //if ($Client::MyPitch < 0)
+      //$Client::MyPitch += 360;
 }
 
 function panDown( %val )
 {
    $mvPitchUpSpeed = %val ? $Pref::Input::KeyboardTurnSpeed : 0;
+   
+   //$Client::MyPitch -= mRadToDeg($mvPitchUpSpeed);
+   //if ($Client::MyPitch >= 360)
+      //$Client::MyPitch -= 360;
+   //if ($Client::MyPitch < 0)
+      //$Client::MyPitch += 360;
+}
+
+function getKeyboardAdjustAmount(%val)
+{
+   // based on a default camera fov of 90'
+   return($pref::Input::KeyboardTurnSpeed * %val * ($cameraFov / 90) * 0.01);
 }
 
 function getMouseAdjustAmount(%val)
@@ -252,6 +284,13 @@ function yaw(%val)
       $mvYaw -= getMouseAdjustAmount(%val);
    else
       $mvYaw += getMouseAdjustAmount(%val);
+   
+   //$Client::MyYaw += mRadToDeg($mvYaw);
+   //
+   //if ($Client::MyYaw >= 360)
+      //$Client::MyYaw -= 360;
+   //if ($Client::MyYaw < 0)
+      //$Client::MyYaw += 360;
 }
 
 function pitch(%val)
@@ -263,7 +302,17 @@ function pitch(%val)
       else
          $mvPitch += getMouseAdjustAmount(%val);
    }
+   //$Client::MyPitch += mRadToDeg($mvPitch);
+   //if ($Client::MyPitch >= 360)
+      //$Client::MyPitch -= 360;
+   //if ($Client::MyPitch < 0)
+      //$Client::MyPitch += 360;
 }
+
+//function getCameraRotation()
+//{
+   //return $Client::MyPitch SPC $Client::MyYaw SPC $Client::MyRoll;
+//}
 
 function jump(%val)
 {

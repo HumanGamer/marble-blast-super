@@ -100,6 +100,8 @@ function resetGhostVars()
    $Multiplayer::MyScale = "";
    $Multiplayer::isHosting = false;
    $Multiplayer::GameMode = "";
+   //clientCmdClearCamera();
+   cancel($radarUpdate);
 }
 
 //---------------------------------------------------------------
@@ -110,6 +112,13 @@ function clientCmdResetGhostVars()
 {
    resetGhostVars();
 }
+
+//function clientCmdClearCamera()
+//{
+   //$Client::MyPitch = 0;
+   //$Client::MyYaw = 0;
+   //$Client::MyRoll = 0;
+//}
 
 function clientCmdSetGhostScale(%scale)
 {
@@ -297,3 +306,39 @@ function clientCmdApplyImpulse(%impulseVec, %impulse)
 {
    getMyMarble().applyImpulse(%impulseVec, %impulse);
 }
+
+//function clientCmdCameraLookAtPoint(%x, %y)
+//{
+   //cameraLookAtPoint(%x, %y);
+//}
+
+//function cameraLookAtPoint(%x, %y)
+//{
+   //cancel($CameraLookSched);
+   //if (!isObject(getMyMarble()))
+   //{
+      //$CameraLookSched = schedule(250, 0, cameraLookAtPoint, %x, %y);
+      //return;
+   //}
+   //%center = getMyMarble().getTransform();
+   //%centerX = getWord(%center, 0);
+   //%centerY = getWord(%center, 1);
+   //
+   //%dx = %x - %centerX;
+   //%dy = %y - %centerY;
+//
+   //%angle = mAtan(%dx, %dy);
+//
+   ////$mvYaw = mDegToRad(getWord(%cameraRotation, 1)) - %angle;
+   //
+   ////$Client::MyYaw += mRadToDeg($mvYaw);
+   //
+   ////if ($Client::MyYaw >= 360)
+   ////   $Client::MyYaw -= 360;
+   ////if ($Client::MyYaw < 0)
+   ////   $Client::MyYaw += 360;
+   //
+   ////<marble>.setPosition("x y z r0 r1 r2 r3", pitch); <<<Thanks HiGuy>>>
+   //%transform = getWords(%center, 0, 2) SPC "0 0 1" SPC %angle;
+   //getMyMarble().setPosition(%transform, 0.45);
+//}
