@@ -1,4 +1,17 @@
 =========================================================
+BETA 3.4
+November 7, 2014
+
+- 2 new Multiplayer levels (Sprawl, Epic Sprawl)
+- 1 new Beginner level (Three-Story)
+- 1 modified Tutorial level (Spinning Insanity) (test items removed)
+- High resolution multiplayer textures
+- Added option to show rear view camera
+- Player now faces gems on spawn/respawn.
+- HelpCreditsGui: pads placement fixed
+- Added James Colsey artist title to Lunatic Cube
+
+=========================================================
 BETA 3.3.1
 September 23, 2014
 
