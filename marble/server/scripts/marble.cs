@@ -7,15 +7,17 @@
 
 //-----------------------------------------------------------------------------
 
+$BlastLifetime = 250;
+
 datablock ParticleData(BlastParticle)
 {
    textureName          = "~/data/particles/spark";
-   dragCoeffiecient     = 1.0;
-   gravityCoefficient   = 0;
+   dragCoeffiecient     = 0;
+   gravityCoefficient   = 2;
    windCoefficient      = 0;
    inheritedVelFactor   = 0;
-   constantAcceleration = -2;
-   lifetimeMS           = 1000;
+   constantAcceleration = 0;//-2;
+   lifetimeMS           = $BlastLifetime;
    lifetimeVarianceMS   = 100;
 
    colors[0]     = "0 0.5 1 0";
@@ -24,8 +26,8 @@ datablock ParticleData(BlastParticle)
 
 
    sizes[0]      = 1;
-   sizes[1]      = 1;
-   sizes[2]      = 1;
+   sizes[1]      = 0.5;
+   sizes[2]      = 0.125;
 
    times[0]      = 0;
    times[1]      = 0.75;
@@ -35,12 +37,12 @@ datablock ParticleData(BlastParticle)
 datablock ParticleEmitterData(BlastEmitter)
 {
    ejectionPeriodMS = 5;
-   periodVarianceMS = 0;
-   ejectionVelocity = 3.0;
+   periodVarianceMS = 0.1;
+   ejectionVelocity = 4.0;
    velocityVariance = 0.25;
-   thetaMin         = 0;
-   thetaMax         = 50.0;
-   lifetimeMS       = 0;
+   thetaMin         = 150;//90;
+   thetaMax         = 170;//70.0;
+   lifetimeMS       = 5000;//0;
    particles = "BlastParticle";
 };
 
@@ -110,9 +112,9 @@ datablock ParticleData(TrailParticle)
    colors[2]     = "0.9 0.9 0.0 0.0";
 
 
-   sizes[0]      = 0.25;
-   sizes[1]      = 0.25;
-   sizes[2]      = 0.25;
+   sizes[0]      = 0.125;
+   sizes[1]      = 0.025;
+   sizes[2]      = 0.0125;
 
    times[0]      = 2;
    times[1]      = 2;
@@ -658,6 +660,7 @@ function Marble::useBlast(%this)
 {
    if (%this.blastEnergy >= %this.getDatablock().getName().minUsableBlast)
    {
+      
       %this.client.applyImpulse("0 0 0", "0 0" SPC %this.blastEnergy / 1000);
       %this.setBlastEnergy(0);
       %this.client.play2d(BlastSfx);
@@ -675,8 +678,17 @@ function Marble::useBlast(%this)
          velocity = "1";
       };
       
-      %node.schedule(1000, "delete");
+      $CurrentBlastNode = %node;
+      
+      schedule($BlastLifetime, 0, "deleteBlast");
    }
+}
+
+function deleteBlast()
+{
+   if (isObject($CurrentBlastNode))
+      $CurrentBlastNode.delete();
+   $CurrentBlastNode = "";
 }
 
 function serverCmdUseBlast(%client)

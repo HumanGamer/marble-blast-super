@@ -128,7 +128,7 @@ function endMission()
    
    commandToAll('ResetGhostVars');
    //commandToAll('ClearPlayerList');
-   commandToAll('ClearRadar');
+   //commandToAll('ClearRadar');
 
    // Inform the clients
    for( %clientIndex = 0; %clientIndex < ClientGroup.getCount(); %clientIndex++ ) {

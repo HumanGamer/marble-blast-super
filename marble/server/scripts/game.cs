@@ -277,7 +277,7 @@ function getAverageGemPosition()
 
 function spawnGemGroup()
 {
-   commandToAll('ClearRadar');
+   //commandToAll('ClearRadar');
    %group = NameToID("MissionGroup/GemSpawns");
    if (!isObject(%group))
       return;
@@ -306,7 +306,7 @@ function spawnGemGroup()
    %gem.beam = %shape;
    %gem.beam.setSkinName(%gem.getDatablock().skin);
    
-   createGemParticles(%gem);
+   //createGemParticles(%gem);
    
    if (isObject(MissionCleanup))
       MissionCleanup.add(%shape);
@@ -316,7 +316,7 @@ function spawnGemGroup()
    
    //echo("Pos: " @ %x @ " " @ %y);
    
-   commandToAll('UpdateRadarObject', %gem.getId(), %gem.getDatablock().skin, %x, %y);
+   //commandToAll('UpdateRadarObject', %gem.getId(), %gem.getDatablock().skin, %x, %y);
    
    for (%i = 0; %i < MissionInfo.maxGemsPerSpawn; %i++)
    {
@@ -370,7 +370,7 @@ function spawnGemGroup()
          %lastObj.beam = %shape;
          %lastObj.beam.setSkinName(%lastObj.getDatablock().skin);
          
-         createGemParticles(%lastObj);
+         //createGemParticles(%lastObj);
          
          if (isObject(MissionCleanup))
             MissionCleanup.add(%shape);
@@ -380,7 +380,7 @@ function spawnGemGroup()
          
          //echo("Pos: " @ %x @ " " @ %y);
    
-         commandToAll('UpdateRadarObject', %lastObj.getId(), %lastObj.getDatablock().skin, %x, %y);
+         //commandToAll('UpdateRadarObject', %lastObj.getId(), %lastObj.getDatablock().skin, %x, %y);
 	   }
    }
 }
@@ -449,6 +449,7 @@ function resumeGame()
 
 function destroyGame()
 {
+   deleteBlast();
    // Cancel any client timers
    for (%index = 0; %index < ClientGroup.getCount(); %index++)
    {
@@ -675,8 +676,8 @@ function GameConnection::incBonusTime(%this,%dt)
 function GameConnection::onClientEnterGame(%this)
 {
    // Matt: for some reason this doesn't work without doing it multiple times
-   for (%i = 0; %i < 100; %i++)
-      commandToClient(%this, 'ClearRadar');
+   //for (%i = 0; %i < 100; %i++)
+      //commandToClient(%this, 'ClearRadar');
    commandToClient(%this, 'SetMode', MissionInfo.gameMode);
    commandToClient(%this, 'GetMarbleSkin');
    commandToClient(%this, 'AddPlayer', %this.getId(), %this.nameBase, true, 0);

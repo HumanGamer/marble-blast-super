@@ -62,7 +62,7 @@ new SimGroup(MissionGroup) {
       position = "0 0 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/multiplayer/multiplayer_map3.dif";
+      interiorFile = "~/data/interiors/multiplayer/neighbourhood.dif";
       showTerrainInside = "0";
    };
    new SimGroup(GemSpawns) {
