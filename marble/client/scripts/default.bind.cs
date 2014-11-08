@@ -437,7 +437,7 @@ function toggleHud(%val)
          $Client::HudHidden = true;
       }
       
-      PG_GemBG.visible = %visible;
+      PG_NumBG.visible = %visible;
       //PG_NegSign.visible = %visible;
       PG_Rear.visible = %visible;
       PG_RearView.visible = %visible;

@@ -1,20 +1,15 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapButtonCtrl() {
-      profile = "GuiButtonProfile";
+   new GuiBitmapCtrl(PG_GemBG) {
+      profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "369 5";
-      extent = "43 53";
+      position = "218 2";
+      extent = "222 71";
       minExtent = "8 8";
       visible = "1";
-      variable = "$pref::Input::AlwaysFreeLook";
       helpTag = "0";
-      text = "OK";
-      groupNum = "-1";
-      buttonType = "ToggleButton";
-      repeatPeriod = "1000";
-      repeatDecay = "1";
-      bitmap = "marble/client/ui/Options/cntrl_mous_freel";
+      bitmap = "marble/client/ui/game/numbers/numbg";
+      wrap = "0";
    };
 };

@@ -109,7 +109,7 @@ function PlayGui::setMaxGems(%this,%count)
       GemsFoundHundred.setVisible(true);
       GemsFoundTen.setVisible(true);
       GemsFoundOne.setVisible(true);
-      PG_GemBG.setVisible(true);
+      //PG_GemBG.setVisible(true);
       
       GemsSlash.setVisible(true);
       GemsTotalHundred.setVisible(true);
@@ -120,7 +120,7 @@ function PlayGui::setMaxGems(%this,%count)
       GemsFoundHundred.setVisible(false);
       GemsFoundTen.setVisible(false);
       GemsFoundOne.setVisible(false);
-      PG_GemBG.setVisible(false);
+      //PG_GemBG.setVisible(false);
       
       GemsSlash.setVisible(false);
       GemsTotalHundred.setVisible(false);
