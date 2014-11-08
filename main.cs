@@ -5,15 +5,17 @@
 // Portions Copyright (c) 2001 by Sierra Online, Inc.
 //-----------------------------------------------------------------------------
 
-function dumpConsoleFunctions()
-{
-   echo("namespace Global {");
-   echo("virtual void exec(file) {}");
-   echo("virtual void echo(text) {}");
-   echo("virtual void warn(text) {}");
-   echo("virtual void error(text) {}");
-   echo("};");
-}
+dbgSetParameters( 6060, "password");
+
+//function dumpConsoleFunctions()
+//{
+   //echo("namespace Global {");
+   //echo("virtual void exec(file) {}");
+   //echo("virtual void echo(text) {}");
+   //echo("virtual void warn(text) {}");
+   //echo("virtual void error(text) {}");
+   //echo("};");
+//}
 
 $baseMods   = "common";
 $userMods   = "marble";

@@ -311,7 +311,7 @@ function pitch(%val)
 
 //function getCameraRotation()
 //{
-   //return $Client::MyPitch SPC $Client::MyYaw SPC $Client::MyRoll;
+   //return $marblePitch SPC $Client::MyYaw SPC 0; //$Client::MyRoll;
 //}
 
 function jump(%val)
