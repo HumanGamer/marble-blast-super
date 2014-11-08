@@ -10,15 +10,15 @@ new GameTSCtrl(PlayGui) {
    helpTag = "0";
    cameraZRot = "0";
    forceFOV = "0";
-      totalBonus = "0";
+      maxGems = "0";
       timeInc = "50";
+      noCursor = "1";
       elapsedTime = "62156";
-      bonusTime = "0";
       timerId = "3512";
       gemCount = "0";
+      bonusTime = "0";
       timerInc = "50";
-      noCursor = "1";
-      maxGems = "0";
+      totalBonus = "0";
 
    new GuiFadeinBitmapCtrl(PG_Fade) {
       profile = "GuiDefaultProfile";
@@ -372,7 +372,7 @@ new GameTSCtrl(PlayGui) {
             horizSizing = "width";
             vertSizing = "height";
             position = "1 1";
-            extent = "640 35";
+            extent = "640 14";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -385,7 +385,7 @@ new GameTSCtrl(PlayGui) {
             horizSizing = "width";
             vertSizing = "height";
             position = "0 0";
-            extent = "640 35";
+            extent = "640 16";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -409,7 +409,7 @@ new GameTSCtrl(PlayGui) {
             horizSizing = "width";
             vertSizing = "height";
             position = "1 1";
-            extent = "640 32";
+            extent = "640 14";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -422,7 +422,7 @@ new GameTSCtrl(PlayGui) {
             horizSizing = "width";
             vertSizing = "height";
             position = "0 0";
-            extent = "640 32";
+            extent = "640 16";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";

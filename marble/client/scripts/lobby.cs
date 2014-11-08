@@ -23,12 +23,12 @@ function LobbyGui::onWake(%this)
    LB_DifficultyButton.setText("Select Difficulty");
    
    LB_DifficultyList.clear();
-   LB_DifficultyList.addRow(0, "Practice");
-   LB_DifficultyList.addRow(1, "Beginner");
-   LB_DifficultyList.addRow(2, "Medium");
-   LB_DifficultyList.addRow(3, "Advanced");
-   LB_DifficultyList.addRow(4, "Expert");
-   LB_DifficultyList.addRow(5, "Custom");
+   //LB_DifficultyList.addRow(0, "Practice");
+   LB_DifficultyList.addRow(0, "Beginner");
+   LB_DifficultyList.addRow(1, "Medium");
+   LB_DifficultyList.addRow(2, "Advanced");
+   LB_DifficultyList.addRow(3, "Expert");
+   LB_DifficultyList.addRow(4, "Custom");
    for (%i = 0; %i < LB_DifficultyList.rowCount(); %i++)
    {
       %obj = LB_DifficultyList.getRowTextById(%i);
@@ -160,7 +160,7 @@ function LB_SetSelected(%index)
    %group = "MTYPE_" @ $MissionType;
    if (!isObject(%group))
    {
-      $MissionType = "Practice";
+      $MissionType = "Beginner";
       %group = MTYPE_practice;
    }
    if (%group.getCount() == 0)
