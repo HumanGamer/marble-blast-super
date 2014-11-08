@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          startHelpText = "Ride the moving platform to the other floor.";
          goldTime = "6000";
          time = "0";
-         type = "Beginner";
+         type = "directorscut";
          desc = "Learn how moving platforms work.";
          level = "11";
          name = "How to: Moving Platforms";

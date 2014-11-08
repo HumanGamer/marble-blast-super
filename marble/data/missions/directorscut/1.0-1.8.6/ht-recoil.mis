@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          artist = "interior by Endercraft1, mission data by davidjl123";
          level = "7";
          startHelpText = "Bounce on each platform, getting each gem.";
-         type = "Beginner";
+         type = "directorscut";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

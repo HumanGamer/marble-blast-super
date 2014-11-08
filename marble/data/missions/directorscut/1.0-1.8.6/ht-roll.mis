@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          level = "1";
          startHelpText = "Welcome to Marble Blast Super! Press \"W\" to move forwards.";
          goldTime = "2300";
-         type = "Beginner";
+         type = "directorscut";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

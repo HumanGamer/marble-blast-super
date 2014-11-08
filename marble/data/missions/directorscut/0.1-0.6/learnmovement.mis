@@ -2,18 +2,18 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         desc = "Welcome to Marble Blast Super!";
+         level = "1";
+         startHelpText = "Use the <func:bind moveforward><func:bind moveleft><func:bind movebackward><func:bind moveright> keys to move the marble around the course.";
+         type = "directorscut";
          artist = "Stewart Inglis";
-         level = "4";
-         startHelpText = "Welcome to the Friction Training";
-         type = "Custom";
-         goldTime = "8000";
-         time = "20000";
-         name = "Learn the Friction";
-         desc = "Friction Time! Learn about all of the different frictions in this game!";
+         goldTime = "6000";
+         time = "0";
+         name = "Learning Movement";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
-      flightCeiling = "300";
+      flightCeiling = "600";
       flightCeilingRange = "20";
          locked = "true";
    };
@@ -49,56 +49,54 @@ new SimGroup(MissionGroup) {
       color = "1.400000 1.200000 0.400000 1.000000";
       ambient = "0.300000 0.300000 0.400000 1.000000";
    };
-   new Trigger() {
-      position = "40.2981 12.4159 -11.7282";
+   new InteriorInstance() {
+      position = "-53.167 -8.74716 -1.15001";
       rotation = "1 0 0 0";
-      scale = "5.41862 8.33884 2.60553";
-      dataBlock = "HelpTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "This is mud, it has a little friction but not a lot";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/directorscut/0.1-0.6/learnmovement.dif";
+      showTerrainInside = "0";
    };
    new SimGroup(MustChange_g) {
 
       new Path() {
       };
    };
-   new Trigger(Bounds) {
-      position = "-15.6732 29.7887 -67.2623";
+   new StaticShape() {
+      position = "5.75819 -18.033 6.6623";
       rotation = "1 0 0 0";
-      scale = "50 50 50";
-      dataBlock = "InBoundsTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+      scale = "1 1 1";
+      dataBlock = "SignFinish";
    };
    new StaticShape(EndPoint) {
-      position = "-47.4889 7.7214 -10.6047";
+      position = "5.41112 -18.1867 1.7953";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
    };
    new ScriptObject() {
+         gemCount = "0";
          penaltyTime = "0";
          powerUp = "0";
          pad = "1667";
          bonusTime = "0";
          time = "0";
-         gemCount = "0";
    };
    new StaticShape(StartPoint) {
-      position = "58.4096 7.8196 -10.4";
+      position = "6.04703 -0.323913 1.8";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
    };
    new ScriptObject() {
+         gemCount = "0";
          penaltyTime = "0";
          powerUp = "0";
          pad = "1520";
          bonusTime = "0";
          time = "0";
-         gemCount = "0";
    };
    new Trigger(Bounds) {
-      position = "-55.6999 31.1241 -63.2";
+      position = "-26.6463 10.5791 -9.8";
       rotation = "1 0 0 0";
       scale = "50 50 50";
       dataBlock = "InBoundsTrigger";
@@ -110,50 +108,44 @@ new SimGroup(MissionGroup) {
       };
    };
    new ScriptObject() {
+         gemCount = "0";
          penaltyTime = "0";
          powerUp = "0";
          pad = "2192";
          bonusTime = "0";
          time = "0";
-         gemCount = "0";
    };
    new ScriptObject() {
+         gemCount = "0";
          penaltyTime = "0";
          powerUp = "0";
-         pad = "2234";
+         pad = "2957";
+         bonusTime = "0";
+         time = "0";
+   };
+   new ScriptObject() {
+         gemCount = "0";
+         penaltyTime = "0";
+         powerUp = "0";
+         pad = "2261";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          gemCount = "0";
+         penaltyTime = "0";
+         powerUp = "0";
+         pad = "2648";
+         time = "0";
+         bonusTime = "0";
    };
-   new InteriorInstance() {
-      position = "58.5 15.7875 -13.725";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      interiorFile = "~/data/interiors/directorscut/0.1-0.6/learnfriction.dif";
-      showTerrainInside = "0";
-   };
-   new Trigger() {
-      position = "-11.6423 12.5023 -11.7778";
-      rotation = "1 0 0 0";
-      scale = "5.41862 8.33884 2.60553";
-      dataBlock = "HelpTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "This is grass, this friction is high and it can stop you easily.";
-   };
-   new Trigger() {
-      position = "14.3504 12.8079 -11.6498";
-      rotation = "1 0 0 0";
-      scale = "5.41862 8.33884 2.60553";
-      dataBlock = "HelpTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "This is space, this has no friction whatsoever.";
-   };
-   new Trigger(Bounds) {
-      position = "44.7437 30.1409 -64.8905";
-      rotation = "1 0 0 0";
-      scale = "50 50 50";
-      dataBlock = "InBoundsTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   new ScriptObject() {
+         gemCount = "0";
+         penaltyTime = "0";
+         powerUp = "0";
+         pad = "3865";
+         time = "0";
+         bonusTime = "0";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

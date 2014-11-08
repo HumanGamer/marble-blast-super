@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          level = "15";
          startHelpText = "Gain speed, use Diagonal Movement, and roll into the edge as fast as you can!";
          artist = "Endercraft1";
-         type = "beginner";
+         type = "directorscut";
          time = "0";
    };
    new MissionArea(MissionArea) {

@@ -9,7 +9,7 @@ new SimGroup(MissionGroup) {
          artist = "Endercraft1";
          level = "12";
          startHelpText = "Tilt your camera 45 degrees to the left or right and us the WD or WA keys to move around in diagonal mode.";
-         type = "Beginner";
+         type = "directorscut";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

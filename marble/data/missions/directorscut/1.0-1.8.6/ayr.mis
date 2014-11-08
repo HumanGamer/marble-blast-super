@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          level = "1";
          artist = "davidjl123, Endercraft1";
          startHelpText = "Test the lessons you learned in this level! Good luck.";
-         type = "Intermediate";
+         type = "directorscut";
          goldTime = "30000";
          time = "0";
          desc = "Use the skills you learned to conquer the challenges in this level!";

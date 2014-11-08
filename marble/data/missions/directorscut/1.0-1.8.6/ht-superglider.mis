@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          name = "How to: SuperGlider";
          level = "9";
          goldTime = "7000";
-         type = "Beginner";
+         type = "directorscut";
          artist = "Endercraft1";
          time = "0";
    };

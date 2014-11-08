@@ -13,6 +13,7 @@ function playMissionGui::onWake(%this)
    PM_DifficultyList.addRow(3, "Advanced");
    PM_DifficultyList.addRow(4, "Expert");
    PM_DifficultyList.addRow(5, "Custom");
+   PM_DifficultyList.addRow(6, "Directors Cut");
    for (%i = 0; %i < PM_DifficultyList.rowCount(); %i++)
    {
       %obj = PM_DifficultyList.getRowTextById(%i);
@@ -31,7 +32,12 @@ function PM_DifficultyList::onSelect(%this, %id)
 {
    %type = %this.getRowTextById(%id);
    
+   if (%type $= "Directors Cut")
+      %type = "directorscut";
    PMSetMissionTab(%type);
+   
+   if (%type $= "directorscut")
+      %type = "Directors Cut";
    
    PM_DifficultyButton.setText(%type);
    
@@ -308,15 +314,18 @@ function PM_setSelected(%index)
       $MissionType = "Tutorial";
       %group = MTYPE_tutorial;
    }
+   %type = $MissionType;
+   if (%type $= "directorscut")
+      %type = "Directors Cut";
    if (%group.getCount() == 0)
    {
       PM_play.setActive(false);
       PM_NoQualOverlay.setVisible(true);
-      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No" SPC $MissionType SPC "Levels!");
+      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No" SPC %type SPC "Levels!");
       PM_preview.setBitmap("");
       PM_description.setText("");
-      PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ $MissionType);
-      PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ $MissionType);
+      PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ %type);
+      PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ %type);
       return;
    }
    %mission = getField(PM_missionList.getRowTextById(%index), 1);
@@ -345,8 +354,8 @@ function PM_setSelected(%index)
    PM_description.setText(%name @ %qualify @ %desc @ %author @ %best @ %total);
    %bmp = strreplace(%mission.file, ".mis", "");
    PM_preview.setBitmap(%bmp);
-   PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
-   PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
+   PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
+   PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
    PM_missionList.setSelectedById(%index);
    
    $CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels && %mission.gameType !$= "Multiplayer";
@@ -442,8 +451,10 @@ function getMissionObject(%mission) {
 	   PlayMissionGroup.add(new SimGroup(MTYPE_expert));
    if (!isObject(MTYPE_custom))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_custom));
+   if (!isObject(MTYPE_directorscut))
+	   PlayMissionGroup.add(new SimGroup(MTYPE_directorscut));
 	   
-   if (%infoObject.type !$= "tutorial" && %infoObject.type !$= "practice" && %infoObject.type !$= "beginner" && %infoObject.type !$= "medium" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert")
+   if (%infoObject.type !$= "tutorial" && %infoObject.type !$= "practice" && %infoObject.type !$= "beginner" && %infoObject.type !$= "medium" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert" && %infoObject.type !$= "directorscut")
       %infoObject.type = "custom";
       
    if (%infoObject.gameType $= "")

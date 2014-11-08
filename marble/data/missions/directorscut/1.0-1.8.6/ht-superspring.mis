@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          level = "5";
          startHelpText = "The SuperSpring will increase your jump height, use the left mouse button to use it.";
          artist = "Endercraft1";
-         type = "Beginner";
+         type = "directorscut";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

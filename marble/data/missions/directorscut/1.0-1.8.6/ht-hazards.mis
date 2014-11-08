@@ -9,7 +9,7 @@ new SimGroup(MissionGroup) {
          artist = "Endercraft1";
          level = "8";
          startHelpText = "Learn all the hazards in this game. First up is the fan, try to push through the force or get blown off.";
-         type = "Beginner";
+         type = "directorscut";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

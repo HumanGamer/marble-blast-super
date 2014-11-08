@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          level = "1";
          artist = "Endercraft1";
-         type = "multiplayer";
+         type = "directorscut";
          time = "200000";
          gameMode = "hunt";
          desc = "Small, but tough.";

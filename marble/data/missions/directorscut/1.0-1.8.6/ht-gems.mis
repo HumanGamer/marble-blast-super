@@ -2,14 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         goldTime = "7000";
-         time = "0";
-         name = "How to: Wall-Hits";
-         desc = "Use yet another helpful method in Marble Blast. Wal-Hits.";
+         goldTime = "5200";
+         name = "How to: Gems";
+         desc = "Learn how to collect Gems, another important mechanic.";
          artist = "Endercraft1";
-         level = "13";
-         startHelpText = "Charge at the wall, and jump before hitting it!";
-         type = "beginner";
+         level = "3";
+         startHelpText = "Collect all the gems, then you can get to the finish.";
+         type = "directorscut";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -46,7 +45,7 @@ new SimGroup(MissionGroup) {
          locked = "true";
    };
    new Sun() {
-      direction = "0.459006 0.638261 -0.61801";
+      direction = "0.481726 0.481726 -0.732038";
       color = "1.400000 1.200000 0.400000 1.000000";
       ambient = "0.300000 0.300000 0.400000 1.000000";
          locked = "true";
@@ -57,82 +56,86 @@ new SimGroup(MissionGroup) {
    new SimGroup(CheckPoints) {
 
       new StaticShape(StartPoint) {
-         position = "-64.7041 25.7569 498.832";
-         rotation = "1 0 0 0";
+         position = "4.29984 8.08433 408.021";
+         rotation = "0 0 1 180";
          scale = "1 1 1";
          dataBlock = "StartPad";
       };
    };
-   new InteriorInstance() {
-      position = "-64.1182 31.2277 491.332";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      interiorFile = "~/data/interiors/directorscut/1.0-1.8.6/Wallhit.dif";
-      showTerrainInside = "0";
-   };
-   new ScriptObject() {
-         pad = "2161";
-         time = "0";
-         bonusTime = "0";
-         gemCount = "0";
-         penaltyTime = "0";
-         powerUp = "0";
-   };
    new Trigger() {
-      position = "-62.1311 31.4498 501.276";
+      position = "-52.2097 45.7204 386.123";
       rotation = "1 0 0 0";
-      scale = "5 1 5";
-      dataBlock = "HelpTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Congratulations. You successfulaly performed a wall-hit!";
-   };
-   new ScriptObject() {
-         pad = "3029";
-         time = "0";
-         bonusTime = "0";
-         gemCount = "0";
-         penaltyTime = "0";
-         powerUp = "0";
-   };
-   new Trigger() {
-      position = "-67.8952 23.7303 501.245";
-      rotation = "1 0 0 0";
-      scale = "1 5 3";
-      dataBlock = "HelpTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Sometimes, platforms will be above you. Use the wall-hit method to reach the platform above you.";
-   };
-   new StaticShape(EndPoint) {
-      position = "-48.5602 27.933 512.331";
-      rotation = "0 0 1 180";
-      scale = "1 1 1";
-      dataBlock = "EndPad";
-   };
-   new Trigger() {
-      position = "-56.0638 29.394 508.871";
-      rotation = "1 0 0 0";
-      scale = "4.9 1 3.5";
-      dataBlock = "HelpTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Use the wall-hit to reach the finish!";
-   };
-   new Trigger() {
-      position = "-51.1017 32.2222 511.83";
-      rotation = "1 0 0 0";
-      scale = "5 1 5";
-      dataBlock = "HelpTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Now you know the basics of wall-hits!";
-   };
-   new Trigger() {
-      position = "-87.482 61.7344 461.332";
-      rotation = "1 0 0 0";
-      scale = "80 80 80";
+      scale = "100 100 100";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new ScriptObject() {
-         pad = "6150";
+         pad = "2142";
+         time = "0";
+         bonusTime = "0";
+         gemCount = "0";
+         penaltyTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "1609";
+         time = "0";
+         bonusTime = "0";
+         gemCount = "0";
+         penaltyTime = "0";
+         powerUp = "0";
+   };
+   new Item() {
+      position = "-5.23565 4.11233 411.48";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new InteriorInstance() {
+      position = "2.28038 -9.93007 400.523";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/directorscut/1.0-1.8.6/gems.dif";
+      showTerrainInside = "0";
+   };
+   new Item() {
+      position = "5.28091 -1.06304 409.022";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "3.23661 -2.98886 409.33";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "-1.67348 -11.8634 408.902";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new StaticShape(EndPoint) {
+      position = "-5.30983 10.894 411.522";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "EndPad";
+   };
+   new ScriptObject() {
+         pad = "2749";
          time = "0";
          bonusTime = "0";
          gemCount = "0";
@@ -145,7 +148,7 @@ new SimGroup(MissionGroup) {
       preload = "0";
    };
    new StaticShape() {
-      position = "-48.3686 27.064 518.052";
+      position = "-5.10015 11.601 417.043";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "SignFinish";

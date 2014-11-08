@@ -6,7 +6,7 @@ new SimGroup(MissionGroup) {
          artist = "Endercraft1";
          time = "0";
          desc = "You have had enough tutorials, why not some fun?";
-         type = "Beginner";
+         type = "directorscut";
          level = "17";
          goldTime = "12000";
          startHelpText = "Warning: Marble breaks after one use. If you want to replay this level, you must exit the level and rejoin it.";

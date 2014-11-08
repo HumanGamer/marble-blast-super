@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          startHelpText = "First up is the fan.";
          goldTime = "3750";
-         type = "Custom";
+         type = "directorscut";
          time = "0";
          desc = "Learn about hazards in this level.";
          artist = "davidjl123, Endercraft1";

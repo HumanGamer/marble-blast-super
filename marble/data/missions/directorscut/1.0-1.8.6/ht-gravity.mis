@@ -6,7 +6,7 @@ new SimGroup(MissionGroup) {
          name = "How to: Gravity";
          time = "0";
          artist = "Endercraft1";
-         type = "Beginner";
+         type = "directorscut";
          desc = "Learn how to use the GravityTransformer.";
          level = "10";
          goldTime = "4000";

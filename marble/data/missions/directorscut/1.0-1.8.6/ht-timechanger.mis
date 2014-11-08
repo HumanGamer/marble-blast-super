@@ -9,7 +9,7 @@ new SimGroup(MissionGroup) {
          artist = "Endercraft1";
          level = "14";
          startHelpText = "Use the TimeChangers to stop the clock from reaching 2 seconds. Once it reaches 2 seconds your time is out and you have to restart.";
-         type = "Beginner";
+         type = "directorscut";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

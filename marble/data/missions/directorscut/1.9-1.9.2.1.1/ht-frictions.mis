@@ -9,7 +9,7 @@ new SimGroup(MissionGroup) {
          artist = "James Colsey";
          level = "4";
          startHelpText = "See what these frictions can do.";
-         type = "Beginner";
+         type = "directorscut";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

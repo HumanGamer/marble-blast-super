@@ -2,14 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         artist = "Stewart Inglis";
-         desc = " ";
-         goldTime = "60000";
-         type = "Custom";
-         level = "1";
-         startHelpText = "Welcome to your half-pipe training";
-         name = "Half-Pipe Training";
+         level = "5";
+         goldTime = "40000";
+         type = "directorscut";
          time = "0";
+         desc = "Tightrope Time!";
+         name = "Learn the Tightrope";
+         artist = "Stewart Inglis";
+         startHelpText = "Welcome to the tightrope course! Make sure you don\'t fall off or you\'ll have to start again";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -49,57 +49,55 @@ new SimGroup(MissionGroup) {
       color = "1.400000 1.200000 0.400000 1.000000";
       ambient = "0.300000 0.300000 0.400000 1.000000";
    };
-   new ScriptObject() {
-         bonusTime = "0";
-         pad = "3232";
-         powerUp = "0";
-         time = "0";
-         gemCount = "0";
-         penaltyTime = "0";
+   new Trigger() {
+      position = "11.6687 -3.90321 7.2718";
+      rotation = "1 0 0 0";
+      scale = "5.41862 8.33884 2.60553";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Congratulations! You\'ve completed the tightrope course!";
    };
    new SimGroup(MustChange_g) {
 
       new Path() {
       };
    };
-   new ScriptObject() {
-         bonusTime = "0";
-         pad = "2192";
-         powerUp = "0";
-         time = "0";
-         gemCount = "0";
-         penaltyTime = "0";
+   new StaticShape() {
+      position = "15.4928 -9.03006 13.6623";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SignFinish";
    };
    new StaticShape(EndPoint) {
-      position = "7.51106 -10.0786 6.9953";
+      position = "14.5111 -9.0786 7.7953";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         pad = "1667";
          powerUp = "0";
+         pad = "1667";
+         bonusTime = "0";
+         penaltyTime = "0";
          time = "0";
          gemCount = "0";
-         penaltyTime = "0";
    };
    new StaticShape(StartPoint) {
-      position = "7.2 5 7";
+      position = "-2.8 -9.6 7.8";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         pad = "1520";
          powerUp = "0";
+         pad = "1520";
+         bonusTime = "0";
+         penaltyTime = "0";
          time = "0";
          gemCount = "0";
-         penaltyTime = "0";
    };
    new Trigger(Bounds) {
-      position = "-33.5923 17.8281 -9.8";
+      position = "-26.7991 25.6636 -9.8";
       rotation = "1 0 0 0";
       scale = "50 50 50";
       dataBlock = "InBoundsTrigger";
@@ -110,66 +108,28 @@ new SimGroup(MissionGroup) {
       new Path() {
       };
    };
+   new ScriptObject() {
+         powerUp = "0";
+         pad = "2192";
+         bonusTime = "0";
+         penaltyTime = "0";
+         time = "0";
+         gemCount = "0";
+   };
    new InteriorInstance() {
-      position = "-9.31857 -3.89011 0.483809";
-      rotation = "1 0 0 0";
+      position = "-2.99551 17.2236 7.95225";
+      rotation = "1 0 0 180";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/directorscut/0.1-0.6/wind_tunnel.dif";
+      interiorFile = "~/data/interiors/directorscut/0.1-0.6/learnthetightrope.dif";
       showTerrainInside = "0";
    };
-   new Item() {
-      position = "-9.25181 -9.78189 -5.35626";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "GemItemGreen";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-   };
-   new Item() {
-      position = "-9.25592 1.76551 -5.16015";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "GemItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-   };
-   new Item() {
-      position = "-9.3808 -4.2092 -5.00078";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "SuperSpeedItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-   };
-   new Item() {
-      position = "-19.5204 1.96604 9.58381";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "GemItemGreen";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-   };
-   new Item() {
-      position = "-20.9204 -1.23396 8.38381";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "TimeTravelItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-   };
-   new Item() {
-      position = "-20.1589 -10.2888 8.18381";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "GemItemYellow";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
+   new ScriptObject() {
+         powerUp = "0";
+         pad = "2490";
+         time = "0";
+         penaltyTime = "0";
+         bonusTime = "0";
+         gemCount = "0";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

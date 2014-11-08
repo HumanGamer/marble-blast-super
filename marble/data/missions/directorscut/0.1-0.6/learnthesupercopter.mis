@@ -2,14 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         artist = "Stewart Inglis";
-         startHelpText = "This is just Super Spring training";
-         type = "Custom";
          time = "0";
-         goldTime = "15000";
-         desc = " ";
+         startHelpText = "Hmm.. how do I get over there?";
+         desc = "This is just SuperCopter training";
+         type = "directorscut";
+         goldTime = "10000";
+         artist = "Stewart Inglis";
          level = "2";
-         name = "Learn the Super Spring";
+         name = "Learn the SuperCopter";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -49,61 +49,61 @@ new SimGroup(MissionGroup) {
       color = "1.400000 1.200000 0.400000 1.000000";
       ambient = "0.300000 0.300000 0.400000 1.000000";
    };
-   new Trigger() {
-      position = "3.09806 -18.7841 7.2718";
+   new Item() {
+      position = "5.07698 -5.82859 7.87318";
       rotation = "1 0 0 0";
-      scale = "5.41862 8.33884 2.60553";
-      dataBlock = "HelpTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Sometimes you might see two Super Springs together. Use them to get to the top.";
+      scale = "1 1 1";
+      dataBlock = "HelicopterItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
    new SimGroup(MustChange_g) {
 
       new Path() {
       };
    };
-   new ScriptObject() {
-         powerUp = "0";
-         pad = "3507";
-         time = "0";
-         bonusTime = "0";
-         gemCount = "0";
-         penaltyTime = "0";
+   new StaticShape() {
+      position = "5.85725 41.0721 13.6623";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SignFinish";
    };
    new StaticShape(EndPoint) {
-      position = "6.11106 37.5214 21.3953";
+      position = "5.57305 40.4605 7.9953";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
    };
    new ScriptObject() {
-         powerUp = "0";
-         pad = "1667";
          time = "0";
-         bonusTime = "0";
+         pad = "1667";
+         powerUp = "0";
          gemCount = "0";
          penaltyTime = "0";
+         bonusTime = "0";
    };
    new StaticShape(StartPoint) {
-      position = "6 -52.2 1";
+      position = "5.2 -6 8";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
    };
    new ScriptObject() {
-         powerUp = "0";
-         pad = "1520";
          time = "0";
-         bonusTime = "0";
+         pad = "1520";
+         powerUp = "0";
          gemCount = "0";
          penaltyTime = "0";
+         bonusTime = "0";
    };
-   new InteriorInstance() {
-      position = "12.249 -46.7475 0.5";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      interiorFile = "~/data/interiors/directorscut/0.1-0.6/learnthesuperspring.dif";
-      showTerrainInside = "0";
+   new ScriptObject() {
+         time = "0";
+         pad = "2715";
+         powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
+         bonusTime = "0";
    };
    new SimGroup(MustChange_g) {
 
@@ -111,47 +111,12 @@ new SimGroup(MissionGroup) {
       };
    };
    new ScriptObject() {
-         powerUp = "0";
-         pad = "2192";
          time = "0";
-         bonusTime = "0";
+         pad = "2192";
+         powerUp = "0";
          gemCount = "0";
          penaltyTime = "0";
-   };
-   new Trigger() {
-      position = "3.3531 -27.3247 -0.969717";
-      rotation = "1 0 0 0";
-      scale = "5.41862 8.33884 2.60553";
-      dataBlock = "HelpTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Use <func:bind mousefire> to use the Super Spring.";
-   };
-   new Item() {
-      position = "6.21513 -28.6827 1.22148";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "SuperJumpItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-   };
-   new Item() {
-      position = "5.93096 6.82292 7.19669";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "SuperJumpItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-   };
-   new Item() {
-      position = "5.93096 6.82292 5.79669";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "SuperJumpItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
+         bonusTime = "0";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

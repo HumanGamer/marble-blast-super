@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          artist = "Endercraft1";
          time = "0";
          desc = "Colmesh: Short for \"collision mesh\". You will be learning about invisible walls/floors in this level.";
-         type = "Beginner";
+         type = "directorscut";
          level = "16";
          goldTime = "8000";
    };

@@ -9,7 +9,7 @@ new SimGroup(MissionGroup) {
          level = "6";
          artist = "Endercraft1";
          goldTime = "4000";
-         type = "Beginner";
+         type = "directorscut";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
