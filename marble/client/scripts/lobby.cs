@@ -29,6 +29,7 @@ function LobbyGui::onWake(%this)
    LB_DifficultyList.addRow(2, "Advanced");
    LB_DifficultyList.addRow(3, "Expert");
    LB_DifficultyList.addRow(4, "Custom");
+   LB_DifficultyList.addRow(5, "Directors Cut");
    for (%i = 0; %i < LB_DifficultyList.rowCount(); %i++)
    {
       %obj = LB_DifficultyList.getRowTextById(%i);
@@ -47,8 +48,12 @@ function LB_DifficultyList::onSelect(%this, %id)
 {
    %type = %this.getRowTextById(%id);
    
+   if (%type $= "Directors Cut")
+      %type = "directorscut";
    PMSetMissionTab(%type);
    
+   if (%type $= "directorscut")
+      %type = "Directors Cut";
    LB_DifficultyButton.setText(%type);
    
    LB_DifficultyPopup.setVisible(false);
@@ -163,6 +168,8 @@ function LB_SetSelected(%index)
       $MissionType = "Beginner";
       %group = MTYPE_practice;
    }
+   if (%type $= "directorscut")
+      %type = "Directors Cut";
    if (%group.getCount() == 0)
    {
       LB_Play.setActive(false);
@@ -209,8 +216,8 @@ function LB_SetSelected(%index)
    //if (%index >= %group.getCount() - 1) LB_next.setActive(false); else LB_next.setActive(true);
    LB_prev.command = "LB_setSelected(" @ %index - 1 @ ");";
    LB_next.command = "LB_setSelected(" @ %index + 1 @ ");";
-   //PM_level_bkgnd.setText("<color:000000><font:DomCasualD:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
-   //PM_level_fgnd.setText("<color:FFFFFF><font:DomCasualD:24><just:center>" @ $MissionType @ " Level " @ %index + 1);
+   //PM_level_bkgnd.setText("<color:000000><font:DomCasualD:24><just:center>" @ %type @ " Level " @ %index + 1);
+   //PM_level_fgnd.setText("<color:FFFFFF><font:DomCasualD:24><just:center>" @ %type @ " Level " @ %index + 1);
    PM_missionList.setSelectedRow(%index);
    //if (%index > $pref::QualifiedLevel[$MissionType] && !$testCheats)
    //{
