@@ -479,6 +479,60 @@ function serverCmdSendChat(%client, %msg)
    commandToAllExcept(%client, 'ReceiveChat', %msg2);
 }
 
+function serverCmdSetReady(%client, %ready)
+{
+   %client.ready = %ready;
+   commandToClient(%client, 'UpdateScore', %client.getId(), %client.nameBase, true, %client.gemCount, %client.ready);
+   commandToAllExcept(%client, 'UpdateScore', %client.getId(), %client.nameBase, false, %client.gemCount, %client.ready);
+   if (areAllClientsReady())
+      commandToAll('AllClientsReady', true);
+   else
+      commandToAll('AllClientsReady', false);
+}
+
+function areAllClientsReady()
+{
+   for (%i = 0; %i < ClientGroup.getCount(); %i++)
+   {
+      %cl = ClientGroup.getObject(%i);
+      if (!%cl.ready)
+      {
+         return false;
+      }
+   }
+   return true;
+}
+
+function serverCmdStartGameNow(%client)
+{
+   if (areAllClientsReady())
+   {
+      onMissionLoaded();
+      startGame();
+      for (%i = 0; %i < ClientGroup.getCount(); %i++)
+      {
+         %cl = ClientGroup.getObject(%i);
+         commandToClient(%cl, 'SetMode', MissionInfo.gameMode);
+         %cl.ready = false;
+         commandToClient(%cl, 'UpdateScore', %cl.getId(), %cl.nameBase, true, %cl.gemCount, %cl.ready);
+         commandToAllExcept(%cl, 'UpdateScore', %cl.getId(), %cl.nameBase, false, %cl.gemCount, %cl.ready);
+         %cl.resetStats();
+         %cl.spawnPlayer();
+
+         if (%cl.isHost())
+         {
+            // Anchor the player to the start pad
+            %cl.player.setMode(Start);
+         } else {
+            %cl.player.setMode("normal");//(ClientGroup.getObject(0).player.getMode());
+         }
+         commandToAll('HidePreMission');
+         %cl.setGameState("start");
+      }
+      //onGameStartup();
+   }
+}
+
 //function onMarbleCollision(%marble, %otherGhost)
 //{  
    //%otherMarble = %otherGhost.client.player;

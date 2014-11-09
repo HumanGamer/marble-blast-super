@@ -1,16 +1,19 @@
 new SimSet(guiClipboard) {
 
-   new GuiMLTextCtrl(OptInvertYLabel) {
-      profile = "GuiBigTextProfile";
+   new GuiBitmapButtonCtrl(Pre_ReadyLeave) {
+      profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "176 171";
-      extent = "234 36";
+      position = "346 254";
+      extent = "89 38";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      lineSpacing = "2";
-      allowColorChars = "0";
-      maxChars = "-1";
+      text = "button";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      repeatPeriod = "1000";
+      repeatDecay = "1";
+      bitmap = "common/ui/cancel";
    };
 };

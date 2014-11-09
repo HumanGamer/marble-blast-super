@@ -272,14 +272,14 @@ function clientCmdGetMarbleSkin()
    commandToServer('SetMarbleSkin', MS_skinGroup.getObject($pref::MarbleIndex).skin);
 }
 
-function clientCmdAddPlayer(%clientId, %name, %isMe, %score)
+function clientCmdAddPlayer(%clientId, %name, %isMe, %score, %ready)
 {
-   PlayerListGui.addPlayer(%clientId, %name, %isMe, %score);
+   PlayerListGui.addPlayer(%clientId, %name, %isMe, %score, %ready);
 }
 
-function clientCmdUpdateScore(%clientId, %name, %isMe, %score)
+function clientCmdUpdateScore(%clientId, %name, %isMe, %score, %ready)
 {
-   PlayerListGui.update(%clientId, %name, %isMe, %score);
+   PlayerListGui.update(%clientId, %name, %isMe, %score, %ready);
 }
 
 function clientCmdRemovePlayer(%clientId)

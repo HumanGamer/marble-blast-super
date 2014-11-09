@@ -111,14 +111,14 @@ function GameConnection::onConnect( %client, %name, %version, %game )
    
    $Server::PlayerCount++;
    
-   commandToClient(%client, 'AddPlayer', %client.getId(), %client.nameBase, true, 0);
+   commandToClient(%client, 'AddPlayer', %client.getId(), %client.nameBase, true, 0, false);
    
    for (%i = 0; %i < ClientGroup.getCount(); %i++)
    {
       %cl = ClientGroup.getObject(%i);
       
       if (%cl.getId() !$= %client.getId())
-         commandToClient(%cl, 'AddPlayer', %client.getId(), %client.nameBase, false, 0);
+         commandToClient(%cl, 'AddPlayer', %client.getId(), %client.nameBase, false, 0, false);
    }
 }
 

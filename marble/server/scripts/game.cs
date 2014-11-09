@@ -108,8 +108,8 @@ function onMissionLoaded()
    $Game::CurrentGravityDir = "1 0 0 0 -1 0 0 0 -1";
 
    // Start the game here if multiplayer...
-   if ($Server::ServerType $= "MultiPlayer")
-      startGame();
+   //if ($Server::ServerType $= "MultiPlayer")
+   //   startGame();
 }
 
 function onMissionEnded()
@@ -180,10 +180,10 @@ function GameBase::onMissionReset(%this)
 
 function startGame()
 {
-   if ($Game::Running) {
-      error("startGame: End the game first!");
-      return;
-   }
+   //if ($Game::Running) {
+   //   error("startGame: End the game first!");
+   //   return;
+   //}
    $Game::Running = true;
    $Game::Qualified = false;
    onMissionReset();
@@ -476,6 +476,8 @@ function GameConnection::setGameState(%this, %state)
 
 function GameConnection::StateStart(%this)
 {
+   %this.camera.setFlyMode();
+   %this.setControlObject(%this.player);
    %this.resetTimer();
    %this.setMessage("");
    if (MissionInfo.gameMode !$= "hunt")
@@ -585,6 +587,12 @@ function GameConnection::StateEnd(%this)
    }
 }
 
+function GameConnection::StateWait(%this)
+{
+   %this.setControlObject(%this.camera);
+   %this.camera.setOrbitMode(%this.player, %this.player.getTransform(), 0.5, 4.5, 4.5);
+}
+
 
 //-----------------------------------------------------------------------------
 
@@ -680,7 +688,7 @@ function GameConnection::onClientEnterGame(%this)
       //commandToClient(%this, 'ClearRadar');
    commandToClient(%this, 'SetMode', MissionInfo.gameMode);
    commandToClient(%this, 'GetMarbleSkin');
-   commandToClient(%this, 'AddPlayer', %this.getId(), %this.nameBase, true, 0);
+   commandToClient(%this, 'AddPlayer', %this.getId(), %this.nameBase, true, 0, false);
    
    resetGems();
    
@@ -689,7 +697,7 @@ function GameConnection::onClientEnterGame(%this)
       %client = ClientGroup.getObject(%i);
       
       if (%client.getId() !$= %this.getId())
-         commandToClient(%client, 'AddPlayer', %this.getId(), %this.nameBase, false, 0);
+         commandToClient(%client, 'AddPlayer', %this.getId(), %this.nameBase, false, 0, false);
    }
    
    // Create a new camera object.
@@ -701,15 +709,18 @@ function GameConnection::onClientEnterGame(%this)
    %this.camera.scopeToClient(%this);
 
    // Setup game parameters and create the player
-   %this.resetStats();
-   %this.spawnPlayer();
-
-   if (%this.isHost())
+   if ($Server::ServerType $= "SinglePlayer")
    {
-      // Anchor the player to the start pad
-      %this.player.setMode(Start);
-   } else {
-      %this.player.setMode("normal");//(ClientGroup.getObject(0).player.getMode());
+      %this.resetStats();
+      %this.spawnPlayer();
+
+      if (%this.isHost())
+      {
+         // Anchor the player to the start pad
+         %this.player.setMode(Start);
+      } else {
+         %this.player.setMode("normal");//(ClientGroup.getObject(0).player.getMode());
+      }
    }
 
    // Start the game here for single player
@@ -717,7 +728,10 @@ function GameConnection::onClientEnterGame(%this)
       startGame();
    
    if (%this.isHost())   
-      %this.setGameState("start");
+      if ($Server::ServerType $= "MultiPlayer")
+         %this.setGameState("wait");
+      else
+         %this.setGameState("start");
    else {
       %this.setGameState(ClientGroup.getObject(0).GameState);
       %this.setTime(PlayGui.elapsedTime);
@@ -725,6 +739,14 @@ function GameConnection::onClientEnterGame(%this)
    }
    
    $Server::MissionLoaded = true;
+   
+   if ($Server::ServerType $= "MultiPlayer")
+      %this.schedule(1000, "ShowPreMission");
+}
+
+function GameConnection::ShowPreMission(%this)
+{
+   commandToClient(%this, 'ShowPreMission');
 }
 
 function GameConnection::onClientLeaveGame(%this)
@@ -865,14 +887,14 @@ function GameConnection::onFoundGem(%this,%amount, %gem)
 	   
       commandToClient(%this, 'ShowGemPickup', %amount, %amount < 0);
 	   
-	   commandToClient(%this, 'UpdateScore', %this.getId(), %this.nameBase, true, %this.gemCount);
+	   commandToClient(%this, 'UpdateScore', %this.getId(), %this.nameBase, true, %this.gemCount, false);
 	   
 	   for (%i = 0; %i < ClientGroup.getCount(); %i++)
       {
          %client = ClientGroup.getObject(%i);
          
          if (%client.getId() !$= %this.getId())
-            commandToClient(%client, 'UpdateScore', %this.getId(), %this.nameBase, true, %this.gemCount);
+            commandToClient(%client, 'UpdateScore', %this.getId(), %this.nameBase, true, %this.gemCount, false);
       }
 	   %this.play2d(GotGemSfx);
 	   
@@ -925,6 +947,29 @@ function restartLevel()
       %client.respawnPlayer();
    }
    onGameStartup();
+   
+   if ($Client::ConnectedMultiplayer)
+   {
+      if (!$Game::Running) {
+         error("endGame: No game running!");
+         return;
+      }
+      $Game::GameLoops = 0;
+      cancel($Multiplayer::UpdateSchedule);
+      cancel($Multiplayer::DeltaUpdate);   
+      cancel($Multiplayer::CollisionUpdate);
+      cancel($Multiplayer::OOBUpdate);
+      cancel($Multiplayer::SpeedUpdate);
+      destroyGame();
+      commandToAll('ResetGhostVars');
+      for (%i = 0; %i < ClientGroup.getCount(); %i++)
+      {
+         %cl = ClientGroup.getObject(%i);
+         %cl.player.delete();
+         %cl.ShowPreMission();
+         %cl.setGameState("wait");
+      }
+   }
    //LocalClientConnection.respawnPlayer();
 }
 

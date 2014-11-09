@@ -111,6 +111,7 @@ function initClient()
    exec("./ui/chatDlg.gui");
    exec("./ui/recordingDlg.gui");
    exec("./ui/replayCenterGui.gui");
+   exec("./ui/preMissionGui.gui");
 
    // Client scripts
    exec("./scripts/client.cs");
@@ -140,6 +141,7 @@ function initClient()
    exec("./scripts/chat.cs");
    exec("./scripts/recording.cs");
    exec("./scripts/replayCenter.cs");
+   exec("./scripts/preMissionGui.cs");
 
    // Default player key bindings
    exec("./scripts/default.bind.cs");
