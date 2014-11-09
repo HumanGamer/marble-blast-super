@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(ReplayCenterGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "./replaybg.png";
+   bitmap = "./playbg";
    useVariable = "0";
    tile = "0";
 

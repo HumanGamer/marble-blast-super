@@ -2,20 +2,19 @@ new SimSet(guiClipboard) {
 
    new GuiBitmapButtonCtrl() {
       profile = "GuiButtonProfile";
-      horizSizing = "right";
-      vertSizing = "bottom";
-      position = "369 342";
-      extent = "99 52";
+      horizSizing = "relative";
+      vertSizing = "relative";
+      position = "482 63";
+      extent = "148 35";
       minExtent = "8 8";
       visible = "1";
-      command = "setPlayMissionGui2();";
-      accelerator = "enter";
+      command = "StopDemoTimer();Canvas.setContent(LoginGui);";
       helpTag = "0";
-      text = "play";
+      text = "Multiplayer";
       groupNum = "-1";
       buttonType = "PushButton";
       repeatPeriod = "1000";
       repeatDecay = "1";
-      bitmap = "marble/client/ui/endgame/continue";
+      bitmap = "marble/client/ui/home/multiplayer";
    };
 };

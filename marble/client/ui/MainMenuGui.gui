@@ -16,8 +16,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiDefaultProfile";
       horizSizing = "relative";
       vertSizing = "relative";
-      position = "324 0";
-      extent = "316 480";
+      position = "0 0";
+      extent = "640 480";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
@@ -28,8 +28,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "182 396";
-         extent = "126 72";
+         position = "28 416";
+         extent = "126 40";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();quit();";
@@ -45,8 +45,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "164 4";
-         extent = "140 64";
+         position = "27 24";
+         extent = "140 36";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();$pref::Multiplayer::isMultiplayer=0; PMSetMissionTab(\"tutorial\"); Canvas.setContent(playmissiongui);";
@@ -56,14 +56,14 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/play";
+         bitmap = "./home/singleplayer";
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "176 132";
-         extent = "152 56";
+         position = "24 322";
+         extent = "121 40";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();Canvas.setContent(HelpCreditsGui);";
@@ -73,14 +73,14 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/help";
+         bitmap = "./home/manual";
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "196 261";
-         extent = "109 55";
+         position = "29 277";
+         extent = "118 40";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();$optionsBackGui = \"MainMenuGui\";Canvas.setContent(optionsDlg);";
@@ -96,8 +96,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "181 180";
-         extent = "155 80";
+         position = "29 231";
+         extent = "126 44";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();Canvas.setContent(creditsGui);";
@@ -107,14 +107,14 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/extra";
+         bitmap = "./home/credits";
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "157 317";
-         extent = "155 80";
+         position = "30 108";
+         extent = "155 36";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();Canvas.setContent(ReplayCenterGui);";
@@ -126,29 +126,29 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          repeatDecay = "1";
          bitmap = "./home/replaycenter";
       };
-   };
-   new GuiBitmapButtonCtrl() {
-      profile = "GuiButtonProfile";
-      horizSizing = "relative";
-      vertSizing = "relative";
-      position = "484 61";
-      extent = "148 71";
-      minExtent = "8 8";
-      visible = "1";
-      command = "StopDemoTimer();Canvas.setContent(LoginGui);";
-      helpTag = "0";
-      text = "Multiplayer";
-      groupNum = "-1";
-      buttonType = "PushButton";
-      repeatPeriod = "1000";
-      repeatDecay = "1";
-      bitmap = "./home/multiplayer";
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "22 68";
+         extent = "148 36";
+         minExtent = "8 8";
+         visible = "1";
+         command = "StopDemoTimer();Canvas.setContent(LoginGui);";
+         helpTag = "0";
+         text = "Multiplayer";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./home/multiplayer";
+      };
    };
    new GuiBitmapCtrl() {
       profile = "GuiDefaultProfile";
       horizSizing = "relative";
       vertSizing = "relative";
-      position = "180 89";
+      position = "415 40";
       extent = "168 160";
       minExtent = "8 8";
       visible = "1";
