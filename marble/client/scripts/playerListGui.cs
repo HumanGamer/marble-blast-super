@@ -54,10 +54,10 @@ function PlayerListGui::update(%this, %clientId, %name, %isMe, %score, %ready)
 
 function PlayerListGui::removePlayer(%this, %clientId)
 {
-   PlayerList.removeRow(%clientId);
-   PlayerList_Shadow.removeRow(%clientId);
-   LB_PlayerList.removeRow(%clientId);
-   Pre_PlayerList.removeRow(%clientId);
+   PlayerList.removeRowById(%clientId);
+   PlayerList_Shadow.removeRowById(%clientId);
+   LB_PlayerList.removeRowById(%clientId);
+   Pre_PlayerList.removeRowById(%clientId);
 }
 
 function PlayerListGui::clear(%this)

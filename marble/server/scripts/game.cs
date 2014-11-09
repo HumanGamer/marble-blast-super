@@ -588,9 +588,11 @@ function GameConnection::StateEnd(%this)
 }
 
 function GameConnection::StateWait(%this)
-{
+{   
+   //%this.resetTimer();
+   %this.camera.setTransform("0 0 14 1 0 0 0");
    %this.setControlObject(%this.camera);
-   %this.camera.setOrbitMode(%this.player, %this.player.getTransform(), 0.5, 4.5, 4.5);
+   //%this.camera.setOrbitMode(%this.player, %this.player.getTransform(), 0.5, 4.5, 4.5);
 }
 
 
@@ -967,6 +969,7 @@ function restartLevel()
          %cl = ClientGroup.getObject(%i);
          %cl.player.delete();
          %cl.ShowPreMission();
+         //%cl.resetTimer();
          %cl.setGameState("wait");
       }
    }

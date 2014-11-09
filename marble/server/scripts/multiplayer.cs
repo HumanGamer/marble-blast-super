@@ -482,8 +482,8 @@ function serverCmdSendChat(%client, %msg)
 function serverCmdSetReady(%client, %ready)
 {
    %client.ready = %ready;
-   commandToClient(%client, 'UpdateScore', %client.getId(), %client.nameBase, true, %client.gemCount, %client.ready);
-   commandToAllExcept(%client, 'UpdateScore', %client.getId(), %client.nameBase, false, %client.gemCount, %client.ready);
+   commandToClient(%client, 'UpdateScore', %client.getId(), %client.nameBase, true, 0, %client.ready);
+   commandToAllExcept(%client, 'UpdateScore', %client.getId(), %client.nameBase, false, 0, %client.ready);
    if (areAllClientsReady())
       commandToAll('AllClientsReady', true);
    else
@@ -514,8 +514,8 @@ function serverCmdStartGameNow(%client)
          %cl = ClientGroup.getObject(%i);
          commandToClient(%cl, 'SetMode', MissionInfo.gameMode);
          %cl.ready = false;
-         commandToClient(%cl, 'UpdateScore', %cl.getId(), %cl.nameBase, true, %cl.gemCount, %cl.ready);
-         commandToAllExcept(%cl, 'UpdateScore', %cl.getId(), %cl.nameBase, false, %cl.gemCount, %cl.ready);
+         commandToClient(%cl, 'UpdateScore', %cl.getId(), %cl.nameBase, true, 0, %cl.ready);
+         commandToAllExcept(%cl, 'UpdateScore', %cl.getId(), %cl.nameBase, false, 0, %cl.ready);
          %cl.resetStats();
          %cl.spawnPlayer();
 
