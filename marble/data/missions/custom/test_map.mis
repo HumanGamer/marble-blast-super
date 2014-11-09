@@ -3,9 +3,9 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          desc = "To Test Various Elements";
-         goldTime = "15000";
          name = "Test Map";
          level = "0";
+         goldTime = "15000";
          artist = "Matthieu Parizeau";
          type = "custom";
    };
@@ -59,14 +59,14 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "3872";
+         beam = "2707";
    };
    new StaticShape(EndPoint) {
       position = "0 0 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "3710";
+         beam = "2408";
    };
    new Item() {
       position = "36 36 -4";
@@ -115,17 +115,127 @@ new SimGroup(MissionGroup) {
       rotate = "1";
    };
    new ScriptObject() {
+         time = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "3708";
          penaltyTime = "0";
-         gemCount = "0";
-         bonusTime = "0";
+   };
+   new Item() {
+      position = "2.4837 24.7314 4.05728";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BlastItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "6.24583 24.2611 4.47794";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "MiniMarbleItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "3.93483 24.9144 4.11764";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "MegaMarbleItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "0.00595152 24.763 4.00492";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "1.48182 24.5802 3.90989";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperJumpItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new ScriptObject() {
          time = "0";
+         gemCount = "0";
          powerUp = "0";
+         bonusTime = "0";
+         pad = "2406";
+         penaltyTime = "0";
+   };
+   new Item() {
+      position = "-4.20005 23.8832 4.30662";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "AntiGravityItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "-1.40055 24.7716 3.98583";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HelicopterItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "-2.75657 25.7125 4.14256";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "ShockAbsorberItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "-4.66399 26.0361 3.92918";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperSpeedItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "-6.24102 26.2516 3.91979";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperBounceItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new Item() {
+      position = "-7.34189 25.6169 4.17057";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---

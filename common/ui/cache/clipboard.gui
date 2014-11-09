@@ -1,19 +1,15 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapButtonCtrl(Pre_ReadyLeave) {
+   new GuiBitmapCtrl(PG_PowerUp) {
       profile = "GuiDefaultProfile";
-      horizSizing = "right";
+      horizSizing = "left";
       vertSizing = "bottom";
-      position = "346 254";
-      extent = "89 38";
+      position = "548 6";
+      extent = "82 83";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      text = "button";
-      groupNum = "-1";
-      buttonType = "PushButton";
-      repeatPeriod = "1000";
-      repeatDecay = "1";
-      bitmap = "common/ui/cancel";
+      bitmap = "marble/client/ui/game/powerup.png";
+      wrap = "0";
    };
 };
