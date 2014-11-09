@@ -15,20 +15,20 @@ new GuiControl(EndGameGui) {
       profile = "GuiDefaultProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "77 -58";
-      extent = "485 596";
+      position = "77 12";
+      extent = "485 455";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "./endgame/playGui.png";
+      bitmap = "./play/playgui";
       wrap = "0";
 
       new GuiMLTextCtrl(EndGameGuiDescription) {
          profile = "GuiMLTextProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "43 74";
-         extent = "429 367";
+         position = "32 13";
+         extent = "429 335";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -40,12 +40,11 @@ new GuiControl(EndGameGui) {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "241 461";
-         extent = "99 66";
+         position = "369 342";
+         extent = "99 52";
          minExtent = "8 8";
          visible = "1";
          command = "setPlayMissionGui2();";
-         accelerator = "enter";
          helpTag = "0";
          text = "play";
          groupNum = "-1";
@@ -58,8 +57,8 @@ new GuiControl(EndGameGui) {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "342 461";
-         extent = "102 66";
+         position = "371 393";
+         extent = "102 52";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.popDialog(EndGameGui);restartLevel();";
@@ -70,6 +69,24 @@ new GuiControl(EndGameGui) {
          repeatPeriod = "1000";
          repeatDecay = "1";
          bitmap = "./endgame/replay";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "270 342";
+         extent = "99 104";
+         minExtent = "8 8";
+         visible = "1";
+         command = "nextLevel();";
+         accelerator = "enter";
+         helpTag = "0";
+         text = "play";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./endgame/continue";
       };
    };
 };

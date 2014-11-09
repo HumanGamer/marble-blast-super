@@ -1,15 +1,21 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapCtrl(PG_PowerUp) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "left";
+   new GuiBitmapButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
       vertSizing = "bottom";
-      position = "548 6";
-      extent = "82 83";
+      position = "369 342";
+      extent = "99 52";
       minExtent = "8 8";
       visible = "1";
+      command = "setPlayMissionGui2();";
+      accelerator = "enter";
       helpTag = "0";
-      bitmap = "marble/client/ui/game/powerup.png";
-      wrap = "0";
+      text = "play";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      repeatPeriod = "1000";
+      repeatDecay = "1";
+      bitmap = "marble/client/ui/endgame/continue";
    };
 };

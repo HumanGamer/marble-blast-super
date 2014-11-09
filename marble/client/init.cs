@@ -133,7 +133,7 @@ function initClient()
    exec("./scripts/multiplayerGui.cs");
    exec("./scripts/playerListGui.cs");
    exec("./scripts/gemPopupGui.cs");
-   //exec("./scripts/radar.cs");
+   exec("./scripts/radar.cs");
    exec("./scripts/lobby.cs");
    exec("./scripts/multiplayerExitGui.cs");
    exec("./scripts/login.cs");
@@ -276,6 +276,36 @@ function setPlayMissionGui2()
    if (isObject(ServerConnection))
       disconnect();
    Canvas.setContent(playMissionGui);
+}
+
+function nextLevel()
+{
+   %level = PM_missionList.getSelectedId();
+   %level += 1;
+   %group = "MTYPE_" @ $MissionType;
+   %type = $MissionType;
+   if (%level > %group.getCount() - 1)
+   {
+      %level = 0;
+      if (%type $= "Tutorial")
+         %type = "Beginner";
+      else if (%type $= "Beginner")
+         %type = "Medium";
+      else if (%type $= "Medium")
+         %type = "Advanced";
+      else if (%type $= "Advanced")
+         %type = "Expert";
+      else if (%type $= "Expert")
+         %type = "Tutorial";
+      else if (%type $= "Custom")
+         %type = "Tutorial";
+   }
+   if (isObject(ServerConnection))
+      disconnect();
+   Canvas.setContent(playMissionGui);
+   PMSetMissionTab(%type);
+   PM_setSelected(%level);
+   PM_StartMission();
 }
 
 //-----------------------------------------------------------------------------
