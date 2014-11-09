@@ -1,0 +1,37 @@
+QuArKLog> QuArK started at 11/8/2014 8:59:59 PM
+QuArKLog> QuArK version is QuArK 6.6 Beta 6
+QuArKLog> Loglevel is 20
+SysLog> CPU:
+SysLog> 4 x Intel  - 2494 MHz
+SysLog> Submodel: Primary
+SysLog> Model ID: Family 6  Model 10  Stepping 9  Level 13
+SysLog> 
+SysLog> MEMORY:
+SysLog> Physical Memory Total: 4,294,967,295 Bytes
+SysLog> Physical Memory Free: 4,190,158,848 Bytes
+SysLog> Virtual Memory Free: 2,064,863,232 Bytes
+SysLog> 
+SysLog> OS:
+SysLog> Platform: Unknown (Probably OK)
+SysLog> Version: Multiprocessor Free 6.2.9200
+SysLog> Service Pack: 0
+SysLog> Type: Workstation
+SysLog> Running under Wow64
+SysLog> 
+SysLog> VIDEO:
+SysLog> [Device 1] Intel(R) HD Graphics 4000
+SysLog> [Device 2] AMD Radeon HD 7600M Series
+SysLog> [Adapter 1] Intel(R) HD Graphics 4000
+SysLog>     Chipset: Intel(R) HD Graphics Family
+SysLog>     DAC: Internal
+SysLog>     Memory: -2080374784 Bytes
+SysLog> 
+SysLog> DIRECTX:
+SysLog> Installed version: 4.09.00.0904
+SysLog> Microsoft Direct3D Hardware acceleration through Direct3D HAL
+SysLog> Microsoft Direct3D Mono(Ramp) Software Emulation
+SysLog> Microsoft Direct3D RGB Software Emulation
+PythonLog> PYTHON:
+PythonLog> Version: 2.4.4 (#71, Oct 18 2006, 08:34:43) [MSC v.1310 32 bit (Intel)]
+PythonLog> DLL: C:\Program Files (x86)\QuArK 6.6.0 Beta 6\dlls\python.dll
+QuArKLog> QuArK closed at 11/8/2014 9:02:03 PM

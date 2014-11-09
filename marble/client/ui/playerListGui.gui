@@ -20,18 +20,18 @@ new GuiControl(PlayerListGui) {
       visible = "1";
       helpTag = "0";
 
-      new GuiBitmapCtrl() {
-         profile = "GuiDefaultProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "0 0";
-         extent = "356 128";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         bitmap = "./game/playerlist";
-         wrap = "0";
-      };
+      //new GuiBitmapCtrl() {
+         //profile = "GuiDefaultProfile";
+         //horizSizing = "right";
+         //vertSizing = "bottom";
+         //position = "0 0";
+         //extent = "356 128";
+         //minExtent = "8 8";
+         //visible = "1";
+         //helpTag = "0";
+         //bitmap = "./game/playerlist";
+         //wrap = "0";
+      //};
       new GuiTextListCtrl(PlayerList_Shadow) {
          profile = "GuiPlayerListShadowProfile";
          horizSizing = "right";

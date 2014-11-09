@@ -154,19 +154,19 @@ new GuiControlProfile ("CenterPrintTextProfile")
 
 if(!isObject(GuiPlayerListProfile)) new GuiControlProfile (GuiPlayerListProfile : GuiTextArrayProfile)
 {
-   fontType = "Arial Bold";
-   fontSize = 24;
+   fontType = "Whitestone";
+   fontSize = 32;
    
    tab = false;
    canKeyFocus = false;
    
-   fontColor = "235 235 235";
+   fontColor = "100 235 100";//"235 235 235";
 };
 
 if(!isObject(GuiPlayerListShadowProfile)) new GuiControlProfile (GuiPlayerListShadowProfile : GuiPlayerListProfile)
 {
-   fontType = "Arial Bold";
-   fontSize = 24;
+   fontType = "Whitestone";
+   fontSize = 32;
    
    tab = false;
    canKeyFocus = false;
@@ -176,7 +176,7 @@ if(!isObject(GuiPlayerListShadowProfile)) new GuiControlProfile (GuiPlayerListSh
 
 if(!isObject(GuiGemPopUpTextProfile)) new GuiControlProfile (GuiGemPopUpTextProfile : GuiMLTextProfile)
 {
-   fontType = "Arial Bold";
+   fontType = "Whitestone";
    fontSize = 36;
    
    tab = false;
@@ -187,7 +187,7 @@ if(!isObject(GuiGemPopUpTextProfile)) new GuiControlProfile (GuiGemPopUpTextProf
 
 if(!isObject(GuiGemPopUpTextShadowProfile)) new GuiControlProfile (GuiGemPopUpTextShadowProfile : GuiGemPopUpTextProfile)
 {
-   fontType = "Arial Bold";
+   fontType = "Whitestone";
    fontSize = 36;
    
    tab = false;
