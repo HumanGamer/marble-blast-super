@@ -51,7 +51,7 @@ new SimGroup(MissionGroup) {
       position = "0 0 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/intermediate/Colourful_Nation.dif";
+      interiorFile = "~/data/interiors/beginner/Colourful_Nation.dif";
       showTerrainInside = "0";
    };
    new StaticShape(EndPoint) {
