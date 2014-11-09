@@ -61,7 +61,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             position = "14 55";
             extent = "596 349";
             minExtent = "8 8";
-            visible = "0";
+            visible = "1";
             helpTag = "0";
             bitmap = "./options/options";
             wrap = "0";
@@ -407,7 +407,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             position = "14 55";
             extent = "596 349";
             minExtent = "8 8";
-            visible = "1";
+            visible = "0";
             helpTag = "0";
             bitmap = "./options/options";
             wrap = "0";
@@ -416,32 +416,45 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                profile = "GuiButtonProfile";
                horizSizing = "right";
                vertSizing = "bottom";
-               position = "215 132";
+               position = "446 110";
                extent = "105 45";
                minExtent = "8 8";
                visible = "1";
                command = "OptControlsPane.remap(freelook, \"Free Look\");";
                helpTag = "0";
+               text = "F";
                groupNum = "-1";
                buttonType = "PushButton";
                repeatPeriod = "1000";
                repeatDecay = "1";
-               bitmap = "./Options/cntrl_mous_bttn";
+               bitmap = "./Options/ctrlbuton";
+            };
+            new GuiBitmapCtrl() {
+               profile = "GuiDefaultProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "30 60";
+               extent = "545 40";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./Options/slider";
+               wrap = "0";
             };
             new GuiSliderCtrl() {
                profile = "GuiSliderProfile";
                horizSizing = "right";
                vertSizing = "bottom";
-               position = "102 51";
-               extent = "258 34";
+               position = "30 60";
+               extent = "545 40";
                minExtent = "8 8";
                visible = "1";
                variable = "$pref::Input::MouseSensitivity";
                helpTag = "0";
                range = "0.200000 3.000000";
                ticks = "10";
-               value = "0.420087";
-               bitmap = "./Options/cntrl_mous_knb";
+               value = "0.2";
+               bitmap = "./Options/knob";
             };
             new GuiBitmapCtrl() {
                profile = "GuiDefaultProfile";
@@ -508,8 +521,8 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                profile = "GuiButtonProfile";
                horizSizing = "right";
                vertSizing = "bottom";
-               position = "124 152";
-               extent = "43 53";
+               position = "228 111";
+               extent = "43 42";
                minExtent = "8 8";
                visible = "1";
                variable = "$pref::Input::InvertYAxis";
@@ -519,14 +532,14 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                buttonType = "ToggleButton";
                repeatPeriod = "1000";
                repeatDecay = "1";
-               bitmap = "./Options/cntrl_mous_invrt";
+               bitmap = "./Options/graf_chkbx";
             };
             new GuiBitmapButtonCtrl() {
                profile = "GuiButtonProfile";
                horizSizing = "right";
                vertSizing = "bottom";
-               position = "369 5";
-               extent = "43 53";
+               position = "282 187";
+               extent = "43 41";
                minExtent = "8 8";
                visible = "1";
                variable = "$pref::Input::AlwaysFreeLook";
@@ -536,14 +549,27 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                buttonType = "ToggleButton";
                repeatPeriod = "1000";
                repeatDecay = "1";
-               bitmap = "./Options/cntrl_mous_freel";
+               bitmap = "./Options/graf_chkbx";
             };
             new GuiMLTextCtrl(OptFreeLookLabel) {
                profile = "GuiBigTextProfile";
                horizSizing = "right";
                vertSizing = "bottom";
-               position = "123 18";
-               extent = "234 36";
+               position = "30 185";
+               extent = "243 36";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               lineSpacing = "2";
+               allowColorChars = "0";
+               maxChars = "-1";
+            };
+            new GuiMLTextCtrl(OptMouseSensitivityLabel) {
+               profile = "GuiBigTextProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "30 20";
+               extent = "403 36";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
@@ -555,8 +581,21 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                profile = "GuiBigTextProfile";
                horizSizing = "right";
                vertSizing = "bottom";
-               position = "176 171";
-               extent = "234 36";
+               position = "30 115";
+               extent = "193 36";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               lineSpacing = "2";
+               allowColorChars = "0";
+               maxChars = "-1";
+            };
+            new GuiMLTextCtrl(OptFreelookMapLabel) {
+               profile = "GuiBigTextProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "297 115";
+               extent = "136 36";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
@@ -592,18 +631,6 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "34 72";
-            extent = "146 86";
-            minExtent = "8 8";
-            visible = "1";
-            helpTag = "0";
-            bitmap = "./Options/Labels/res";
-            wrap = "0";
-         };
-         new GuiBitmapCtrl() {
-            profile = "GuiDefaultProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
             position = "21 80";
             extent = "596 349";
             minExtent = "8 8";
@@ -612,28 +639,11 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             bitmap = "./options/options";
             wrap = "0";
          };
-         new GuiBitmapButtonCtrl(OptGfx16) {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "173 220";
-            extent = "78 54";
-            minExtent = "8 8";
-            visible = "1";
-            command = "OptGraphicsPane.setDepth(16);";
-            helpTag = "0";
-            text = "OK";
-            groupNum = "3";
-            buttonType = "RadioButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-            bitmap = "./Options/graf16bt";
-         };
          new GuiBitmapButtonCtrl(OptGfxFull) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "256 306";
+            position = "297 172";
             extent = "84 42";
             minExtent = "8 8";
             visible = "1";
@@ -650,7 +660,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "295 152";
+            position = "288 100";
             extent = "104 52";
             minExtent = "8 8";
             visible = "1";
@@ -667,7 +677,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "182 149";
+            position = "181 97";
             extent = "97 54";
             minExtent = "8 8";
             visible = "1";
@@ -679,40 +689,6 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             repeatPeriod = "1000";
             repeatDecay = "1";
             bitmap = "./Options/grafopgl";
-         };
-         new GuiBitmapButtonCtrl(OptGfx800600) {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "250 90";
-            extent = "66 42";
-            minExtent = "8 8";
-            visible = "1";
-            command = "OptGraphicsPane.setResolution(\"800 600\");";
-            helpTag = "0";
-            text = "OK";
-            groupNum = "0";
-            buttonType = "RadioButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-            bitmap = "./Options/graf800";
-         };
-         new GuiBitmapButtonCtrl(OptGfx1024768) {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "317 90";
-            extent = "66 42";
-            minExtent = "8 8";
-            visible = "1";
-            command = "OptGraphicsPane.setResolution(\"1024 768\");";
-            helpTag = "0";
-            text = "OK";
-            groupNum = "0";
-            buttonType = "RadioButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-            bitmap = "./Options/graf1024";
          };
          new GuiBitmapButtonCtrl() {
             profile = "GuiButtonProfile";
@@ -735,7 +711,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "171 306";
+            position = "185 167";
             extent = "84 42";
             minExtent = "8 8";
             visible = "1";
@@ -748,28 +724,11 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             repeatDecay = "1";
             bitmap = "./Options/grafwindo";
          };
-         new GuiBitmapButtonCtrl(OptGfx16) {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "268 223";
-            extent = "78 54";
-            minExtent = "8 8";
-            visible = "1";
-            command = "OptGraphicsPane.setDepth(32);";
-            helpTag = "0";
-            text = "OK";
-            groupNum = "3";
-            buttonType = "RadioButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-            bitmap = "./Options/graf32bt";
-         };
          new GuiBitmapCtrl() {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "31 290";
+            position = "43 144";
             extent = "146 82";
             minExtent = "8 8";
             visible = "1";
@@ -781,7 +740,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "486 232";
+            position = "41 192";
             extent = "146 86";
             minExtent = "8 8";
             visible = "1";
@@ -793,7 +752,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "33 136";
+            position = "35 77";
             extent = "146 86";
             minExtent = "8 8";
             visible = "1";
@@ -801,41 +760,12 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             bitmap = "./Options/Labels/vidrive";
             wrap = "0";
          };
-         new GuiBitmapCtrl() {
-            profile = "GuiDefaultProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "27 213";
-            extent = "146 80";
-            minExtent = "8 8";
-            visible = "1";
-            helpTag = "0";
-            bitmap = "./Options/Labels/colorbt";
-            wrap = "0";
-         };
-         new GuiBitmapButtonCtrl(OptGfx640480) {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "183 90";
-            extent = "66 42";
-            minExtent = "8 8";
-            visible = "1";
-            command = "OptGraphicsPane.setResolution(\"640 480\");";
-            helpTag = "0";
-            text = "OK";
-            groupNum = "0";
-            buttonType = "RadioButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-            bitmap = "./Options/graf640";
-         };
          new GuiBitmapButtonCtrl() {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "532 298";
-            extent = "46 54";
+            position = "182 215";
+            extent = "40 42";
             minExtent = "8 8";
             visible = "1";
             variable = "$pref::useStencilShadows";
@@ -847,39 +777,48 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             repeatDecay = "1";
             bitmap = "./Options/graf_chkbx";
          };
-         new GuiBitmapButtonCtrl(OptGfx1152x870) {
-            profile = "GuiButtonProfile";
+         new GuiBitmapCtrl(PM_ScrollBG) {
+            profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "385 88";
-            extent = "66 42";
+            position = "408 100";
+            extent = "187 305";
             minExtent = "8 8";
             visible = "1";
-            command = "OptGraphicsPane.setResolution(\"1152 870\");";
             helpTag = "0";
-            text = "1152x870";
-            groupNum = "0";
-            buttonType = "RadioButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-            bitmap = "./Options/graf1152";
+            bitmap = "./play/scrollbg";
+            wrap = "0";
          };
-         new GuiBitmapButtonCtrl(OptGfx1600x1200) {
-            profile = "GuiButtonProfile";
+         new GuiScrollCtrl() {
+            profile = "PlayMissionScrollProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "453 87";
-            extent = "66 42";
+            position = "414 106";
+            extent = "177 319";
             minExtent = "8 8";
             visible = "1";
-            command = "OptGraphicsPane.setResolution(\"1600 1200\");";
             helpTag = "0";
-            text = "1600x1200";
-            groupNum = "0";
-            buttonType = "RadioButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-            bitmap = "./Options/graf1600";
+            willFirstRespond = "1";
+            hScrollBar = "dynamic";
+            vScrollBar = "dynamic";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(OptResolutionList) {
+               profile = "GuiTextListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "2 2";
+               extent = "183 128";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
          };
       };
       new GuiControl(OptAudioPane) {
@@ -1290,8 +1229,8 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             profile = "GuiBigTextProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "104 14";
-            extent = "234 36";
+            position = "30 15";
+            extent = "303 36";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -1303,8 +1242,8 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "43 5";
-            extent = "43 53";
+            position = "290 16";
+            extent = "37 37";
             minExtent = "8 8";
             visible = "1";
             variable = "$pref::ShowRearView";
@@ -1314,7 +1253,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             buttonType = "ToggleButton";
             repeatPeriod = "1000";
             repeatDecay = "1";
-            bitmap = "./Options/cntrl_mous_freel";
+            bitmap = "./Options/graf_chkbx";
          };
       };
    };

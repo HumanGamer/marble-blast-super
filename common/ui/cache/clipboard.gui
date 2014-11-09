@@ -1,15 +1,16 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapCtrl(PG_GemBG) {
-      profile = "GuiDefaultProfile";
+   new GuiMLTextCtrl(OptInvertYLabel) {
+      profile = "GuiBigTextProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "218 2";
-      extent = "222 71";
+      position = "176 171";
+      extent = "234 36";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "marble/client/ui/game/numbers/numbg";
-      wrap = "0";
+      lineSpacing = "2";
+      allowColorChars = "0";
+      maxChars = "-1";
    };
 };

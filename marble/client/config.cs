@@ -16,6 +16,7 @@ moveMap.bind(keyboard, "alt c", toggleCamera);
 moveMap.bind(keyboard, "f8", dropCameraAtPlayer);
 moveMap.bind(keyboard, "f7", dropPlayerAtCamera);
 moveMap.bind(keyboard, "ctrl h", toggleHud);
+moveMap.bind(keyboard, "f", freelook);
 moveMap.bind(mouse0, "xaxis", yaw);
 moveMap.bind(mouse0, "yaxis", pitch);
 moveMap.bind(mouse0, "button0", mouseFire);

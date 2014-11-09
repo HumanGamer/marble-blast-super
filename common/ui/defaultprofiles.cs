@@ -215,6 +215,7 @@ if(!isObject(GuiSliderProfile)) new GuiControlProfile (GuiSliderProfile);
 
 if(!isObject(GuiTextProfile)) new GuiControlProfile (GuiTextProfile)
 {
+   fontType = "Whitestone";
    fontColor = "0 0 0";
    fontColorLink = "255 96 96";
    fontColorLinkHL = "0 0 255";

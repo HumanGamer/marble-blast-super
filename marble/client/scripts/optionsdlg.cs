@@ -31,7 +31,7 @@ function optionsDlg::setPane(%this, %pane)
 
 function OptGraphicsPane::setResolution(%this, %res)
 {
-   $pref::Video::resolution = %res SPC getWord($pref::Video::resolution, 2);
+   $pref::Video::resolution = %res;// SPC getWord($pref::Video::resolution, 2);
 }
 
 function OptGraphicsPane::setMode(%this, %mode)
@@ -42,11 +42,41 @@ function OptGraphicsPane::setMode(%this, %mode)
 function OptGraphicsPane::setDriver(%this, %driver)
 {
    $pref::Video::displayDevice = %driver;
+   populateResolutions();
 }
 
 function OptGraphicsPane::setDepth(%this, %depth)
 {
    $pref::Video::resolution = getWords($pref::Video::resolution, 0, 1) SPC %depth;
+}
+
+function OptResolutionList::onSelect(%this, %id)
+{
+   %res = %this.getRowTextById(%id);
+   
+   OptGraphicsPane.setResolution(%res);
+}
+
+function populateResolutions()
+{
+   OptResolutionList.clear();   
+   
+   %displayDevice = $pref::Video::displayDevice;
+   %resList = getResolutionList(%displayDevice);
+   for (%i = 0; %i < getFieldCount(%resList); %i++)
+   {
+      OptResolutionList.addRow(%i, getField(%resList, %i));
+   }
+   
+   %res = getWords($pref::Video::resolution, 0, 2);
+   for (%i = 0; %i < OptResolutionList.rowCount(); %i++)
+   {
+      if (%res == OptResolutionList.getRowTextById(%i))
+      {
+         OptResolutionList.setSelectedById(%i);
+         break;
+      }
+   }
 }
 
 function OptionsDlg::onWake(%this)
@@ -61,37 +91,39 @@ function OptionsDlg::onWake(%this)
    %buffer = getDisplayDeviceList();
    %count = getFieldCount( %buffer );
 
-   OptGfx640480.setValue(false);
-   OptGfx800600.setValue(false);
-   OptGfx1024768.setValue(false);
-   OptGfx1152x870.setValue(false);
-   OptGfx1600x1200.setValue(false);
+   //OptGfx640480.setValue(false);
+   //OptGfx800600.setValue(false);
+   //OptGfx1024768.setValue(false);
+   //OptGfx1152x870.setValue(false);
+   //OptGfx1600x1200.setValue(false);
    //OptGfx640480Mac.setValue(false);
    //OptGfx800600Mac.setValue(false);
    //OptGfx1024768Mac.setValue(false);
    //OptGfx1152870Mac.setValue(false);
    //OptGfx1600x1200Mac.setValue(false);
+   
+   populateResolutions();
 
-   %res = getWords($pref::Video::resolution, 0, 1);
-   switch$(%res)
-   {
-      case "640 480":
-         OptGfx640480.setValue(true);
-         OptGfx640480Mac.setValue(true);
-      case "800 600":
-         OptGfx800600.setValue(true);
-         OptGfx800600Mac.setValue(true);
-      case "1024 768":
-         OptGfx1024768.setValue(true);
-         OptGfx1024768Mac.setValue(true);
-      case "1152 870":
-         OptGfx1152870.setValue(true);
-         OptGfx1152870Mac.setValue(true);
-      case "1600 1200":
-         OptGfx16001200.setValue(true);
-         OptGfx16001200Mac.setValue(true);
-      
-   }
+   //%res = getWords($pref::Video::resolution, 0, 1);
+   //switch$(%res)
+   //{
+      //case "640 480":
+         //OptGfx640480.setValue(true);
+         //OptGfx640480Mac.setValue(true);
+      //case "800 600":
+         //OptGfx800600.setValue(true);
+         //OptGfx800600Mac.setValue(true);
+      //case "1024 768":
+         //OptGfx1024768.setValue(true);
+         //OptGfx1024768Mac.setValue(true);
+      //case "1152 870":
+         //OptGfx1152870.setValue(true);
+         //OptGfx1152870Mac.setValue(true);
+      //case "1600 1200":
+         //OptGfx16001200.setValue(true);
+         //OptGfx16001200Mac.setValue(true);
+      //
+   //}
    %isOgl = $pref::Video::displayDevice $= "OpenGL";
    OptGfxOpenGL.setValue(%isOgl);
    OptGfxD3D.setValue(!%isOgl);
@@ -102,7 +134,7 @@ function OptionsDlg::onWake(%this)
    OptGfxWindowMac.setValue(!$pref::Video::fullScreen);
    
    %is32 = getWord($pref::Video::resolution, 2) == 32;
-   OptGfx16.setValue(!%is32);
+   //OptGfx16.setValue(!%is32);
    //OptGfx32.setValue(%is32);
    OptGfx16Mac.setValue(!%is32);
    OptGfx32Mac.setValue(%is32);
@@ -130,9 +162,11 @@ function OptionsDlg::onWake(%this)
 	//OptAudioDriverList.setSelected( %selId );
 	//OptAudioDriverList.onSelect( %selId, "" );
 	
-	OptFreeLookLabel.setText("Always Freelook");
-	OptInvertYLabel.setText("Invert Y Axis");
-	OptShowRearView.setText("Show Rear View");
+	OptFreeLookMapLabel.setText("Freelook:");
+	OptFreeLookLabel.setText("Always Freelook:");
+	OptInvertYLabel.setText("Invert Y Axis:");
+	OptShowRearView.setText("Show Rear View:");
+	OptMouseSensitivityLabel.setText("Mouse Sensitivity:");
 }
 
 function OptionsDlg::onSleep(%this)
