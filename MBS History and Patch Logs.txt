@@ -1,4 +1,22 @@
 =========================================================
+BETA 3.5
+November 9, 2014
+
+- 2 new levels (Colourful Nation, Frictional Tour I)
+- 3 modified levels (Neighbourhood, Sprawl, First Steps)
+- 6 removed Tutorial levels
+- Lots of new textures
+- Revamped PlayGUI
+- Implemented engine plugins
+- Started work on PackageManager
+- New gem shape
+- New powerup and pad textures
+- Added preMissionGui
+- New Options GUI
+- New backgrounds
+- Fixed particle images
+
+=========================================================
 BETA 3.4
 November 7, 2014
 
