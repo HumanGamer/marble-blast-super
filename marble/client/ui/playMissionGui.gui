@@ -60,7 +60,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                maxChars = "-1";
             };
          };
-         new GuiBitmapCtrl(EG_preview) {
+         new GuiBitmapCtrl(PM_preview) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";

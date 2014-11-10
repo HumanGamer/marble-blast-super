@@ -70,116 +70,116 @@ new GuiControl(EndGameGui) {
          repeatDecay = "1";
          bitmap = "./endgame/replay";
       };
-      //new GuiBitmapButtonCtrl(EG_NextLevel) {
-         //profile = "GuiButtonProfile";
-         //horizSizing = "right";
-         //vertSizing = "bottom";
-         //position = "270 342";
-         //extent = "99 104";
-         //minExtent = "8 8";
-         //visible = "1";
-         //command = "nextLevel();";
-         //accelerator = "enter";
-         //helpTag = "0";
-         //text = "play";
-         //groupNum = "-1";
-         //buttonType = "PushButton";
-         //repeatPeriod = "1000";
-         //repeatDecay = "1";
-         //bitmap = "./endgame/continue";
-      //};
-      new GuiBitmapCtrl(PM_preview) {
-            profile = "GuiDefaultProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "213 20";
-            extent = "280 210";
-            minExtent = "8 8";
-            visible = "1";
-            helpTag = "0";
-            bitmap = "~/data/missions/tutorial/primer";
-            wrap = "0";
-      new GuiBitmapCtrl() {
-               profile = "GuiDefaultProfile";
-               horizSizing = "right";
-               vertSizing = "bottom";
-               position = "-7 -2";
-               extent = "280 210";
-               minExtent = "8 8";
-               visible = "1";
-               helpTag = "0";
-               bitmap = "./play/level_window.png";
-               wrap = "0";
-
-               new GuiMLTextCtrl(EG_level_bkgnd) {
-                  profile = "GuiMLTextProfile";
-                  horizSizing = "center";
-                  vertSizing = "bottom";
-                  position = "45 182";
-                  extent = "190 24";
-                  minExtent = "8 8";
-                  visible = "1";
-                  helpTag = "0";
-                  lineSpacing = "2";
-                  allowColorChars = "0";
-                  maxChars = "-1";
-               };
-               new GuiMLTextCtrl(EG_level_fgnd) {
-                  profile = "GuiMLTextProfile";
-                  horizSizing = "center";
-                  vertSizing = "bottom";
-                  position = "45 181";
-                  extent = "190 24";
-                  minExtent = "8 8";
-                  visible = "1";
-                  helpTag = "0";
-                  lineSpacing = "2";
-                  allowColorChars = "0";
-                  maxChars = "-1";
-               };
-            };
-            new GuiControl(EG_NoQualOverlay) {
-               profile = "OverlayScreenProfile";
-               horizSizing = "right";
-               vertSizing = "bottom";
-               position = "0 0";
-               extent = "280 210";
-               minExtent = "8 8";
-               visible = "0";
-               helpTag = "0";
-
-               new GuiMLTextCtrl(EG_NoQualText) {
-                  profile = "GuiMLTextProfile";
-                  horizSizing = "right";
-                  vertSizing = "bottom";
-                  position = "66 93";
-                  extent = "150 14";
-                  minExtent = "8 8";
-                  visible = "1";
-                  helpTag = "0";
-                  lineSpacing = "2";
-                  allowColorChars = "0";
-                  maxChars = "-1";
-               };
-            };
-            new GuiBitmapButtonCtrl(EG_play) {
-               profile = "GuiButtonProfile";
-               horizSizing = "right";
-               vertSizing = "bottom";
-               position = "0 0";
-               extent = "280 210";
-               minExtent = "8 8";
-               visible = "1";
-               command = "nextLevel();";
-               helpTag = "0";
-               text = "play";
-               groupNum = "-1";
-               buttonType = "PushButton";
-               repeatPeriod = "1000";
-               repeatDecay = "1";
-               bitmap = "./play/play";
-            };
-         };
+      new GuiBitmapButtonCtrl(EG_NextLevel) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "270 342";
+         extent = "99 104";
+         minExtent = "8 8";
+         visible = "1";
+         command = "nextLevel();";
+         accelerator = "enter";
+         helpTag = "0";
+         text = "play";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./endgame/continue";
+      };
+      //new GuiBitmapCtrl(EG_preview) {
+            //profile = "GuiDefaultProfile";
+            //horizSizing = "right";
+            //vertSizing = "bottom";
+            //position = "213 20";
+            //extent = "280 210";
+            //minExtent = "8 8";
+            //visible = "1";
+            //helpTag = "0";
+            //bitmap = "~/data/missions/tutorial/primer";
+            //wrap = "0";
+      //new GuiBitmapCtrl() {
+               //profile = "GuiDefaultProfile";
+               //horizSizing = "right";
+               //vertSizing = "bottom";
+               //position = "-7 -2";
+               //extent = "280 210";
+               //minExtent = "8 8";
+               //visible = "1";
+               //helpTag = "0";
+               //bitmap = "./play/level_window.png";
+               //wrap = "0";
+//
+               //new GuiMLTextCtrl(EG_level_bkgnd) {
+                  //profile = "GuiMLTextProfile";
+                  //horizSizing = "center";
+                  //vertSizing = "bottom";
+                  //position = "45 182";
+                  //extent = "190 24";
+                  //minExtent = "8 8";
+                  //visible = "1";
+                  //helpTag = "0";
+                  //lineSpacing = "2";
+                  //allowColorChars = "0";
+                  //maxChars = "-1";
+               //};
+               //new GuiMLTextCtrl(EG_level_fgnd) {
+                  //profile = "GuiMLTextProfile";
+                  //horizSizing = "center";
+                  //vertSizing = "bottom";
+                  //position = "45 181";
+                  //extent = "190 24";
+                  //minExtent = "8 8";
+                  //visible = "1";
+                  //helpTag = "0";
+                  //lineSpacing = "2";
+                  //allowColorChars = "0";
+                  //maxChars = "-1";
+               //};
+            //};
+            //new GuiControl(EG_NoQualOverlay) {
+               //profile = "OverlayScreenProfile";
+               //horizSizing = "right";
+               //vertSizing = "bottom";
+               //position = "0 0";
+               //extent = "280 210";
+               //minExtent = "8 8";
+               //visible = "0";
+               //helpTag = "0";
+//
+               //new GuiMLTextCtrl(EG_NoQualText) {
+                  //profile = "GuiMLTextProfile";
+                  //horizSizing = "right";
+                  //vertSizing = "bottom";
+                  //position = "66 93";
+                  //extent = "150 14";
+                  //minExtent = "8 8";
+                  //visible = "1";
+                  //helpTag = "0";
+                  //lineSpacing = "2";
+                  //allowColorChars = "0";
+                  //maxChars = "-1";
+               //};
+            //};
+            //new GuiBitmapButtonCtrl(EG_play) {
+               //profile = "GuiButtonProfile";
+               //horizSizing = "right";
+               //vertSizing = "bottom";
+               //position = "0 0";
+               //extent = "280 210";
+               //minExtent = "8 8";
+               //visible = "1";
+               //command = "nextLevel();";
+               //helpTag = "0";
+               //text = "play";
+               //groupNum = "-1";
+               //buttonType = "PushButton";
+               //repeatPeriod = "1000";
+               //repeatDecay = "1";
+               //bitmap = "./play/play";
+            //};
+         //};
    };
 };
 //--- OBJECT WRITE END ---
