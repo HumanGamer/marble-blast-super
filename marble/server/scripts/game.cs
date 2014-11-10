@@ -277,10 +277,11 @@ function getAverageGemPosition()
 
 function spawnGemGroup()
 {
-   commandToAll('ClearRadar');
    %group = NameToID("MissionGroup/GemSpawns");
    if (!isObject(%group))
       return;
+   
+   commandToAll('ClearRadar');
    //%groups = new SimGroup();
 
    %gem = %group.getObject(getRandom(%group.getCount() - 1)); 
@@ -686,8 +687,8 @@ function GameConnection::incBonusTime(%this,%dt)
 function GameConnection::onClientEnterGame(%this)
 {
    // Matt: for some reason this doesn't work without doing it multiple times
-   for (%i = 0; %i < 100; %i++)
-      commandToClient(%this, 'ClearRadar');
+   //for (%i = 0; %i < 100; %i++)
+   //   commandToClient(%this, 'ClearRadar');
    commandToClient(%this, 'SetMode', MissionInfo.gameMode);
    commandToClient(%this, 'GetMarbleSkin');
    commandToClient(%this, 'AddPlayer', %this.getId(), %this.nameBase, true, 0, false);
@@ -880,6 +881,8 @@ function GameConnection::onFoundGem(%this,%amount, %gem)
 		  messageClient(%this, 'MsgItemPickup', %msg, %remaining);
 		  %this.play2d(GotGemSfx);
 	   }
+	   
+	   commandToAll('RemoveRadarObject', %gem.getId());
    } else {
        //%msg = '\c0You picked up a gem!';
 

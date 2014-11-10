@@ -311,3 +311,23 @@ if (!isObject(GuiBigGameTextProfile)) new GuiControlProfile(GuiBigGameTextProfil
 {
    fontType = "Animated";
 };
+
+new GuiControlProfile (GuiCompassProfile)
+{
+   fontType = "Whitestone";
+   fontSize = 32;
+   opaque = false;
+   fillColor = "128 255 128";
+   fillColorHL = "64 128 64";
+   border = false;
+   borderColor = "0 0 0";
+   fontColor = "128 255 128";
+   fontColorHL = "128 255 128";
+   fontColorNA = "64 128 64";
+   textOffset = "0 2";
+   autoSizeWidth = false;
+   autoSizeHeight = true;
+   tab = true;
+   canKeyFocus = true;
+   justify = "center";
+};

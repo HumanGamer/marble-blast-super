@@ -102,6 +102,7 @@ function resetGhostVars()
    $Multiplayer::GameMode = "";
    //clientCmdClearCamera();
    cancel($radarUpdate);
+   cancel($CompassUpdate);
 }
 
 //---------------------------------------------------------------
@@ -134,6 +135,10 @@ function clientCmdUpdateTransform()
       hideMyGhost();
       return;
    }
+   if (!isEventPending($CompassUpdate))
+      updateCompass();
+   if (!isEventPending($radarUpdate))
+      updateRadar();
    hideMarbles();
    %trans = $Multiplayer::MyMarble.getTransform();
    commandToServer('UpdateTransform', %trans);

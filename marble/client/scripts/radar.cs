@@ -7,7 +7,18 @@ function addRadarObject(%id, %bitmap, %x, %y)
       return;
    }
    
-   %location = %x SPC %y;
+   %gamePos = %x SPC %y;
+   
+   //%x = %x * -1;
+   //%y = %y * -1;
+   //
+   //%x = %x * 8;
+   //%y = %y * 8;
+   //
+   //%x += 150;
+   //%y += 150;
+   
+   %location = "-100 -100";//%x SPC %y;
    
    %obj = new GuiBitmapCtrl("RadarObject_" @ %id)
    {
@@ -21,7 +32,7 @@ function addRadarObject(%id, %bitmap, %x, %y)
       helpTag = "0";
       bitmap = %bitmap;
       wrap = "0";
-      gamePos = %location;
+      gamePos = %gamePos;
    };
    
    RadarContainer.add(%obj);
@@ -54,49 +65,39 @@ function clientCmdClearRadar()
 
 function clientCmdUpdateRadarObject(%id, %color, %x, %y)
 {
-   cancel($radarUpdate);
-   %x = %x * -1;
-   %y = %y * -1;
-   
-   %x = %x * 8;
-   %y = %y * 8;
-   
-   %x += 150;
-   %y += 150;
+   //cancel($radarUpdate);
    
    %bitmap = "marble/client/ui/game/gem_" @ %color;
    addRadarObject(%id, %bitmap, %x, %y);
    
-   %marble = getMyMarble();
-   if (!isObject(%marble))
-   {
-      schedule(250, 0, "clientCmdUpdateRadarObject", %id, %color, %x, %y);
-      return;
-   }
+   //%marble = getMyMarble();
+   //if (!isObject(%marble))
+   //{
+   //   schedule(250, 0, "clientCmdUpdateRadarObject", %id, %color, %x, %y);
+   //   return;
+   //}
    
-   %id = "RadarObject_" @ %id;
+   //%id = "RadarObject_" @ %id;
+   //
+   //%center = %marble.getTransform();
+   //%centerX = getWord(%center, 0);
+   //%centerY = getWord(%center, 1);
+   //
+   //%maxX = getWord(getRes(), 0);
+   //%maxY = getWord(getRes(), 1);
+   //
+   //%rx = (%centerX - %x);
+   //if (%rx < 0)
+      //%rx = 0;
+   //if (%rx >= %maxX)
+      //%rx = %maxX;
+   //%ry = (%centerY - %y);
+   //if (%ry < 0)
+      //%ry = 0;
+   //if (%ry >= %maxY)
+      //%ry = %maxY;
    
-   %center = %marble.getTransform();
-   %centerX = getWord(%center, 0);
-   %centerY = getWord(%center, 1);
-   
-   %maxX = getWord(getRes(), 0);
-   %maxY = getWord(getRes(), 1);
-   
-   %rx = (%centerX - %x);
-   if (%rx < 0)
-      %rx = 0;
-   if (%rx >= %maxX)
-      %rx = %maxX;
-   %ry = (%centerY - %y);
-   if (%ry < 0)
-      %ry = 0;
-   if (%ry >= %maxY)
-      %ry = %maxY;
-   
-   %id.position = %rx SPC %ry;
-   
-   updateRadar();
+   //%id.position = %rx SPC %ry;
 }
 
 function updateRadar()
@@ -109,9 +110,10 @@ function updateRadar()
       return;   
    }
    
-   %eye = getMyMarble().getWorldBoxCenter();
-   %centerX = getWord(%eye, 0);
-   %centerY = getWord(%eye, 1);
+   %trans = getMyMarble().getTransform();
+   %centerX = getWord(%trans, 0);
+   %centerY = getWord(%trans, 1);
+   %centerZ = getWord(%trans, 2);
    
    //%cameraRotation = getWord(%eye, 3) SPC getWord(%eye, 4) SPC getWord(%eye, 5) SPC getWord(%eye, 6);
    
@@ -122,8 +124,25 @@ function updateRadar()
    //%cameraRotation = getCameraRotation();
    //PlayerListGui.update(123, "Angle", false, %cameraRotation);
    
-   %maxX = getWord(getRes(), 0);
-   %maxY = getWord(getRes(), 1);
+   RadarContainer.extent = getRes();
+   
+   %res = RadarContainer.extent;
+   
+   %maxX = getWord(%res, 0);
+   %maxY = getWord(%res, 1);
+   
+   %minX = %maxX / 8;
+   %minY = %maxY / 8;
+   
+   %maxX -= %minX;
+   %maxY -= %minY;
+   
+   %scale = 10;
+   
+   %yaw = mDegToRad(getWord(getCameraRotation(getMyMarble()), 1));
+   
+   %cos = mCos(%yaw);
+   %sin = mSin(%yaw);
    
    for (%i = 0; %i < RadarContainer.getCount(); %i++)
    {
@@ -131,6 +150,36 @@ function updateRadar()
       
       %x = getWord(%obj.gamePos, 0);
       %y = getWord(%obj.gamePos, 1);
+      //%z = getWord(%obj.gamePos, 2);
+      
+      //%rx = %centerX - %x;
+      //%ry = %centerY - %y;
+      //
+      //%rx = %rx * -1;
+      //%ry = %ry * -1;
+      //
+      //%rx = %rx * 8;
+      //%ry = %ry * 8;
+      //
+      //%rx += 150;
+      //%ry += 150;
+      
+      // jeff math
+      %difX = %x - %centerX;
+      %difY = %y - %centerY;
+      //%difZ = %z - %centerZ;
+
+      %posX = %difX + %divX;
+      %posY = %difX + %divY;
+
+      %rotX = %cos * %difX - %sin * %difY;
+      %rotY = %sin * %difX + %cos * %difY;
+
+      %sclX = %rotX * %scale;
+      %sclY = %rotY * -1 * %scale;
+
+      %posX = %sclX + %divX;
+      %posY = %sclY + %divY;
       
       //%dx = %centerX - %x;
       //%dy = %centerY - %y;
@@ -145,18 +194,20 @@ function updateRadar()
       
       //%obj.position = %x + 1 SPC %y + 1;
       
-      %rx = (%centerX - %x);
-      if (%rx < 0)
-         %rx = 0;
-      if (%rx >= %maxX)
-         %rx = %maxX;
-      %ry = (%centerY - %y);
-      if (%ry < 0)
-         %ry = 0;
-      if (%ry >= %maxY)
-         %ry = %maxY;
+      //%posY *= -1;
       
-      %obj.position = %rx SPC %ry;
+      //%posX = (%centerX - %x);
+      if (%posX < %minX)
+         %posX = %minX;
+      if (%posX >= %maxX)
+         %posX = %maxX;
+      //%posY = (%centerY - %y);
+      if (%posY < %minY)
+         %posY = %minY;
+      if (%posY >= %maxY)
+         %posY = %maxY;
+      
+      %obj.position = %posX SPC %posY;
    }
    
    $radarUpdate = schedule(10, 0, updateRadar);

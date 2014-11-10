@@ -19,6 +19,7 @@ function initCommon()
    // Very basic functions used by everyone
    exec("./client/canvas.cs");
    exec("./client/audio.cs");
+   exec("./util/math.cs");
 }
 
 function initBaseClient()

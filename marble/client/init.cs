@@ -142,6 +142,7 @@ function initClient()
    exec("./scripts/recording.cs");
    exec("./scripts/replayCenter.cs");
    exec("./scripts/preMissionGui.cs");
+   exec("./scripts/compass.cs");
 
    // Default player key bindings
    exec("./scripts/default.bind.cs");

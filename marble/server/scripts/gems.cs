@@ -99,7 +99,24 @@ function Gem::onAdd(%this,%obj)
       %obj.setSkinName($GemSkinColors[getRandom(9)]);
    }
    
+   %this.setRadar(%obj);
    
+}
+
+function Gem::setRadar(%this, %obj)
+{
+   if (ClientGroup.getCount() <= 0)
+   {
+      %this.schedule(250, "setRadar", %obj);
+      return;
+   }
+   if (MissionInfo.gameMode !$= "hunt")
+   {
+      %position = %obj.getPosition();   
+      %x = getWord(%position, 0);
+      %y = getWord(%position, 1);
+      commandToAll('UpdateRadarObject', %obj.getId(), "red", %x, %y);
+   }
 }
 
 function createGemParticles(%obj)
