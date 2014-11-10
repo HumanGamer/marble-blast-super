@@ -354,8 +354,14 @@ function PM_setSelected(%index)
    PM_description.setText(%name @ %qualify @ %desc @ %author @ %best @ %total);
    %bmp = strreplace(%mission.file, ".mis", "");
    PM_preview.setBitmap(%bmp);
+   //if (isFile(%bmp @ ".png"))
+      EG_preview.setBitmap(%bmp);// @ ".png");
+   //else
+      //EG_NextLevel.setBitmap(%bmp @ ".jpg");
    PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
    PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
+   EG_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
+   EG_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
    PM_missionList.setSelectedById(%index);
    
    $CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels && %mission.gameType !$= "Multiplayer";
@@ -366,6 +372,8 @@ function PM_setSelected(%index)
    {
       PM_NoQualOverlay.setVisible(true);
       PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No Preview!");
+      EG_NoQualOverlay.setVisible(true);
+      EG_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No Preview!");
    }
    
    for (%i = 0; %i < PM_missionSelectList.getCount(); %i++)

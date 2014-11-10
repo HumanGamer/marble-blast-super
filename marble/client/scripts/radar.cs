@@ -26,7 +26,7 @@ function addRadarObject(%id, %bitmap, %x, %y)
       horizSizing = "right";
       vertSizing = "bottom";
       position = %location;
-      extent = "8 8";
+      extent = "32 32";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
@@ -139,7 +139,7 @@ function updateRadar()
    
    %scale = 10;
    
-   %yaw = mDegToRad(getWord(getCameraRotation(getMyMarble()), 1));
+   %yaw = mDegToRad(getWord(getCameraRotation(getMyMarble()), 2));
    
    %cos = mCos(%yaw);
    %sin = mSin(%yaw);
@@ -169,8 +169,8 @@ function updateRadar()
       %difY = %y - %centerY;
       //%difZ = %z - %centerZ;
 
-      %posX = %difX + %divX;
-      %posY = %difX + %divY;
+      %posX = %difX + %maxX/2; // position difference + max extent of control
+      %posY = %difX + %maxY/2;
 
       %rotX = %cos * %difX - %sin * %difY;
       %rotY = %sin * %difX + %cos * %difY;
@@ -178,8 +178,8 @@ function updateRadar()
       %sclX = %rotX * %scale;
       %sclY = %rotY * -1 * %scale;
 
-      %posX = %sclX + %divX;
-      %posY = %sclY + %divY;
+      %posX = %sclX + %maxX/2;
+      %posY = %sclY + %maxY/2;
       
       //%dx = %centerX - %x;
       //%dy = %centerY - %y;
@@ -197,15 +197,15 @@ function updateRadar()
       //%posY *= -1;
       
       //%posX = (%centerX - %x);
-      if (%posX < %minX)
-         %posX = %minX;
-      if (%posX >= %maxX)
-         %posX = %maxX;
+     // if (%posX < %minX)
+       //  %posX = %minX;
+      //if (%posX >= %maxX)
+        // %posX = %maxX;
       //%posY = (%centerY - %y);
-      if (%posY < %minY)
-         %posY = %minY;
-      if (%posY >= %maxY)
-         %posY = %maxY;
+      //if (%posY < %minY)
+        // %posY = %minY;
+      //if (%posY >= %maxY)
+        // %posY = %maxY;
       
       %obj.position = %posX SPC %posY;
    }

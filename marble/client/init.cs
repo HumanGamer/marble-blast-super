@@ -143,6 +143,7 @@ function initClient()
    exec("./scripts/replayCenter.cs");
    exec("./scripts/preMissionGui.cs");
    exec("./scripts/compass.cs");
+   exec("./scripts/endgamegui.cs");
 
    // Default player key bindings
    exec("./scripts/default.bind.cs");
@@ -281,31 +282,33 @@ function setPlayMissionGui2()
 
 function nextLevel()
 {
-   %level = PM_missionList.getSelectedId();
-   %level += 1;
-   %group = "MTYPE_" @ $MissionType;
-   %type = $MissionType;
-   if (%level > %group.getCount() - 1)
-   {
-      %level = 0;
-      if (%type $= "Tutorial")
-         %type = "Beginner";
-      else if (%type $= "Beginner")
-         %type = "Medium";
-      else if (%type $= "Medium")
-         %type = "Advanced";
-      else if (%type $= "Advanced")
-         %type = "Expert";
-      else if (%type $= "Expert")
-         %type = "Tutorial";
-      else if (%type $= "Custom")
-         %type = "Tutorial";
-   }
+   if (!$Game::Qualified)
+      return;
+   //%level = PM_missionList.getSelectedId();
+   //%level += 1;
+   //%group = "MTYPE_" @ $MissionType;
+   //%type = $MissionType;
+   //if (%level > %group.getCount() - 1)
+   //{
+      //%level = 0;
+      //if (%type $= "Tutorial")
+         //%type = "Beginner";
+      //else if (%type $= "Beginner")
+         //%type = "Medium";
+      //else if (%type $= "Medium")
+         //%type = "Advanced";
+      //else if (%type $= "Advanced")
+         //%type = "Expert";
+      //else if (%type $= "Expert")
+         //%type = "Tutorial";
+      //else if (%type $= "Custom")
+         //%type = "Tutorial";
+   //}
    if (isObject(ServerConnection))
       disconnect();
    Canvas.setContent(playMissionGui);
-   PMSetMissionTab(%type);
-   PM_setSelected(%level);
+   //PMSetMissionTab(%type);
+   //PM_setSelected(%level);
    PM_StartMission();
 }
 
