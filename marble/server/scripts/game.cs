@@ -450,7 +450,8 @@ function resumeGame()
 
 function destroyGame()
 {
-   deleteBlast();
+   if (isObject($CurrentBlastNode))
+      deleteBlast();
    // Cancel any client timers
    for (%index = 0; %index < ClientGroup.getCount(); %index++)
    {
