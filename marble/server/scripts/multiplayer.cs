@@ -464,7 +464,8 @@ function serverCmdGameFinished(%client)
 function serverCmdSetMarbleSkin(%client, %skin)
 {
    %client.skin = %skin;
-   %client.player.setSkinName(%client.getSkin());
+   if (isObject(%client.player))
+      %client.player.setSkinName(%client.getSkin());
    if (isObject(%client.ghost))
       %client.ghost.setSkinName(%client.getSkin());
 }

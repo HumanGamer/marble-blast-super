@@ -232,9 +232,9 @@ function hideAllGems()
 	   if (%obj.getClassName() $= "Item" && %obj.getDatablock().className $= "Gem")
 	   {
 	 	  %obj.hide(true);
-	 	  if (isObject(%obj.beam))
+	 	  if (isObject(%obj.beam) && %obj.beam.getClassName() $= "StaticShape")
            %obj.beam.delete();
-        if (isObject(%obj.node))
+        if (isObject(%obj.node) && %obj.node.getClassName() $= "ParticleEmitterNode")
            %obj.node.delete();
 	   }
    }
@@ -286,9 +286,9 @@ function spawnGemGroup()
    %gem = %group.getObject(getRandom(%group.getCount() - 1)); 
    %gem.hide(false);  
    
-   if (isObject(%gem.beam))
+   if (isObject(%gem.beam) && %gem.beam.getClassName() $= "StaticShape")
       %gem.beam.delete();
-   if (isObject(%gem.node))
+   if (isObject(%gem.node) && %gem.node.getClassName() $= "ParticleEmitterNode")
       %gem.node.delete();
    
    %position = %gem.getPosition();    
@@ -306,7 +306,7 @@ function spawnGemGroup()
    %gem.beam = %shape;
    %gem.beam.setSkinName(%gem.getDatablock().skin);
    
-   //createGemParticles(%gem);
+   createGemParticles(%gem);
    
    if (isObject(MissionCleanup))
       MissionCleanup.add(%shape);
@@ -350,9 +350,9 @@ function spawnGemGroup()
          
          
    
-         if (isObject(%lastObj.beam))
+         if (isObject(%lastObj.beam) && %lastObj.beam.getClassName() $= "StaticShape")
             %lastObj.beam.delete();
-         if (isObject(%lastObj.node))
+         if (isObject(%lastObj.node) && %lastObj.node.getClassName() $= "ParticleEmitterNode")
             %lastObj.node.delete();
 	      
          %position = %lastObj.getPosition();   
@@ -370,7 +370,7 @@ function spawnGemGroup()
          %lastObj.beam = %shape;
          %lastObj.beam.setSkinName(%lastObj.getDatablock().skin);
          
-         //createGemParticles(%lastObj);
+         createGemParticles(%lastObj);
          
          if (isObject(MissionCleanup))
             MissionCleanup.add(%shape);
@@ -547,7 +547,7 @@ function GameConnection::StateGo(%this)
       %player.setMode(Normal);
    }
    
-   if (isObject(StartPoint) && isObject(StartPoint.beam))
+   if (isObject(StartPoint) && isObject(StartPoint.beam) && StartPoint.beam.getClassName() $= "StaticShape")
       StartPoint.beam.delete();
 }
 
@@ -908,8 +908,10 @@ function GameConnection::onFoundGem(%this,%amount, %gem)
         %cl.play2d(OpponentGotGemSfx);
      }
       handleGems();
-      if (isObject(%gem.beam))
+      if (isObject(%gem.beam) && %gem.beam.getClassName() $= "StaticShape")
          %gem.beam.delete();
+      if (isObject(%gem.node) && %gem.node.getClassName() $= "ParticleEmitterNode")
+         %gem.node.delete();
    }
 
    %this.setGemCount(%this.gemCount);

@@ -74,6 +74,8 @@ function clientCmdUpdateRadarObject(%id, %color, %x, %y)
       return;
    }
    
+   %id = "RadarObject_" @ %id;
+   
    %center = %marble.getTransform();
    %centerX = getWord(%center, 0);
    %centerY = getWord(%center, 1);

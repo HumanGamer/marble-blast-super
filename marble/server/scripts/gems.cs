@@ -88,6 +88,7 @@ $GemSkinColors[9] = "black";
 
 function Gem::onAdd(%this,%obj)
 {
+   %obj.collideable = "0";
 	%obj.static = "1";
 	%obj.rotate = "1";
 
