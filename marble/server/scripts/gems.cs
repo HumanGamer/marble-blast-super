@@ -115,7 +115,7 @@ function Gem::setRadar(%this, %obj)
       %position = %obj.getPosition();   
       %x = getWord(%position, 0);
       %y = getWord(%position, 1);
-      commandToAll('UpdateRadarObject', %obj.getId(), "red", %x, %y);
+      commandToAll('UpdateRadarObject', %obj.getId(), %this.skin, %x, %y);
    }
 }
 

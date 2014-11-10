@@ -58,5 +58,23 @@ function EndPad::onAdd(%this, %obj)
    
    if (isObject(MissionCleanup))
       MissionCleanup.add(%shape);
+      
+   %this.setRadar(%obj);
+}
+
+function EndPad::setRadar(%this, %obj)
+{
+   if (ClientGroup.getCount() <= 0)
+   {
+      %this.schedule(250, "setRadar", %obj);
+      return;
+   }
+   if (MissionInfo.gameMode !$= "hunt")
+   {
+      %position = %obj.getPosition();   
+      %x = getWord(%position, 0);
+      %y = getWord(%position, 1);
+      commandToAll('UpdateRadarObject', %obj.getId(), "pad", %x, %y);
+   }
 }
 
