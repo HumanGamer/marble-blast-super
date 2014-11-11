@@ -18,7 +18,14 @@ function addRadarObject(%id, %bitmap, %x, %y)
    //%x += 150;
    //%y += 150;
    
-   %location = "100 100";//"-100 -100";//%x SPC %y;
+   RadarContainer.extent = getRes();
+   
+   %res = RadarContainer.extent;
+   
+   %maxX = getWord(%res, 0);
+   %maxY = getWord(%res, 1);
+   
+   %location = %maxX / 2 + 16 SPC %maxY / 2 + 16;//"-100 -100";//%x SPC %y;
    
    %obj = new GuiBitmapCtrl("RadarObject_" @ %id)
    {
@@ -197,15 +204,15 @@ function updateRadar()
       //%posY *= -1;
       
       //%posX = (%centerX - %x);
-     // if (%posX < %minX)
-       //  %posX = %minX;
-      //if (%posX >= %maxX)
-        // %posX = %maxX;
+      if (%posX < %minX)
+         %posX = %minX;
+      if (%posX >= %maxX)
+         %posX = %maxX;
       //%posY = (%centerY - %y);
-      //if (%posY < %minY)
-        // %posY = %minY;
-      //if (%posY >= %maxY)
-        // %posY = %maxY;
+      if (%posY < %minY)
+         %posY = %minY;
+      if (%posY >= %maxY)
+         %posY = %maxY;
       
       %obj.position = %posX SPC %posY;
    }
