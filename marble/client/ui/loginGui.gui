@@ -28,8 +28,8 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "332 139";
-         extent = "100 40";
+         position = "332 140";
+         extent = "96 39";
          minExtent = "8 8";
          visible = "1";
          command = "registerAccount();";
@@ -45,8 +45,8 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "434 134";
-         extent = "98 43";
+         position = "444 138";
+         extent = "96 39";
          minExtent = "8 8";
          visible = "1";
          command = "doLogin();";
@@ -182,7 +182,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
             profile = "GuiTextProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "336 91";
+            position = "322 85";
             extent = "152 18";
             minExtent = "8 8";
             visible = "1";
@@ -195,8 +195,8 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "13 134";
-         extent = "67 38";
+         position = "12 140";
+         extent = "87 39";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.setContent(mainMenuGui);";
@@ -212,7 +212,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "83 119";
+         position = "84 129";
          extent = "243 53";
          minExtent = "8 8";
          visible = "1";
@@ -222,8 +222,8 @@ new GuiChunkedBitmapCtrl(LoginGui) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "7 1";
-            extent = "43 46";
+            position = "51 5";
+            extent = "33 39";
             minExtent = "8 8";
             visible = "1";
             variable = "$pref::Login::RememberPassword";
@@ -239,8 +239,8 @@ new GuiChunkedBitmapCtrl(LoginGui) {
             profile = "GuiBigGameTextProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "53 7";
-            extent = "184 36";
+            position = "97 13";
+            extent = "125 36";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
