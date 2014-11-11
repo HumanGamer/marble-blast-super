@@ -28,10 +28,10 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "329 134";
-         extent = "82 30";
+         position = "332 139";
+         extent = "100 40";
          minExtent = "8 8";
-         visible = "0";
+         visible = "1";
          command = "registerAccount();";
          helpTag = "0";
          text = "Register";
@@ -45,10 +45,10 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "424 134";
-         extent = "73 30";
+         position = "434 134";
+         extent = "98 43";
          minExtent = "8 8";
-         visible = "0";
+         visible = "1";
          command = "doLogin();";
          helpTag = "0";
          text = "Login";
@@ -56,7 +56,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./login/login";
+         bitmap = "./login/connect";
       };
       new GuiControl(LoginForm) {
          profile = "GuiDefaultProfile";
@@ -65,7 +65,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          position = "20 20";
          extent = "504 109";
          minExtent = "8 8";
-         visible = "0";
+         visible = "1";
          helpTag = "0";
 
          new GuiControl(LoginUsername) {
@@ -183,7 +183,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "336 91";
-            extent = "138 18";
+            extent = "152 18";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -195,10 +195,10 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "20 119";
-         extent = "50 50";
+         position = "13 134";
+         extent = "67 38";
          minExtent = "8 8";
-         visible = "0";
+         visible = "1";
          command = "Canvas.setContent(mainMenuGui);";
          helpTag = "0";
          text = "Back";
@@ -206,7 +206,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./login/back";
+         bitmap = "./login/home";
       };
       new GuiControl(LoginRememberBox) {
          profile = "GuiDefaultProfile";
@@ -215,7 +215,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          position = "83 119";
          extent = "243 53";
          minExtent = "8 8";
-         visible = "0";
+         visible = "1";
          helpTag = "0";
 
          new GuiBitmapButtonCtrl(Login_Remember) {
@@ -253,10 +253,10 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          profile = "GuiBigGameTextProfile";
          horizSizing = "center";
          vertSizing = "center";
-         position = "194 71";
+         position = "187 74";
          extent = "176 36";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
          lineSpacing = "2";
          allowColorChars = "0";
@@ -269,7 +269,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          position = "412 130";
          extent = "117 41";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          command = "cancelLogin();";
          helpTag = "0";
          text = "Cancel";
