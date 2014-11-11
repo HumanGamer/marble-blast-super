@@ -28,7 +28,7 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "162 420";
+         position = "195 420";
          extent = "156 42";
          minExtent = "8 8";
          visible = "1";
@@ -45,8 +45,8 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "28 420";
-         extent = "136 42";
+         position = "14 420";
+         extent = "156 42";
          minExtent = "8 8";
          visible = "1";
          command = "$pref::Multiplayer::isMultiplayer=1;PMSetMissionTab(\"practice\");Canvas.setContent(LobbyGui);";
@@ -62,7 +62,7 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "521 420";
+         position = "539 420";
          extent = "95 40";
          minExtent = "8 8";
          visible = "1";
@@ -79,8 +79,8 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "329 420";
-         extent = "145 37";
+         position = "364 420";
+         extent = "156 42";
          minExtent = "8 8";
          visible = "1";
          command = "$pref::Multiplayer::isMultiplayer=1; connectRandom();";
@@ -169,8 +169,8 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "570 350";
-         extent = "64 48";
+         position = "570 355";
+         extent = "64 37";
          minExtent = "8 8";
          visible = "1";
          command = "sendChat();";
