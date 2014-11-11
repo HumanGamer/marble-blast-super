@@ -39,14 +39,14 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/join";
+         bitmap = "./multiplayer/join";
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "6 417";
-         extent = "140 55";
+         position = "28 420";
+         extent = "136 42";
          minExtent = "8 8";
          visible = "1";
          command = "$pref::Multiplayer::isMultiplayer=1;PMSetMissionTab(\"practice\");Canvas.setContent(LobbyGui);";
@@ -56,7 +56,7 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/host";
+         bitmap = "./multiplayer/host";
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
@@ -73,7 +73,7 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/back";
+         bitmap = "./multiplayer/home";
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
@@ -90,7 +90,7 @@ new GuiChunkedBitmapCtrl(MultiplayerGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/quick";
+         bitmap = "./multiplayer/quick";
       };
       new GuiBitmapCtrl() {
          profile = "GuiDefaultProfile";
