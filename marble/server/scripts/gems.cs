@@ -76,38 +76,35 @@ datablock AudioProfile(OpponentGotGemSfx)
 //-----------------------------------------------------------------------------
 
 $GemSkinColors[0] = "base";
-$GemSkinColors[1] = "base";
-$GemSkinColors[2] = "blue";
-$GemSkinColors[3] = "red";
-$GemSkinColors[4] = "yellow";
-$GemSkinColors[5] = "purple";
-$GemSkinColors[6] = "orange";
-$GemSkinColors[7] = "green";
-$GemSkinColors[8] = "turquoise";
-$GemSkinColors[9] = "black";
+$GemSkinColors[1] = "blue";
+$GemSkinColors[2] = "red";
+$GemSkinColors[3] = "yellow";
+$GemSkinColors[4] = "purple";
+$GemSkinColors[5] = "orange";
+$GemSkinColors[6] = "green";
+$GemSkinColors[7] = "turquoise";
+$GemSkinColors[8] = "black";
 
 function Gem::onAdd(%this,%obj)
 {
    %obj.collideable = "0";
 	%obj.static = "1";
 	%obj.rotate = "1";
-
-   if (%this.skin !$= "")
-      %obj.setSkinName(%this.skin);
-   else {
-      // Random skin if none assigned
-      %obj.setSkinName($GemSkinColors[getRandom(9)]);
-   }
+	
+	%skin = %this.skin;
+	if (%skin $= "")
+	   %skin = $GemSkinColors[getRandom(8)]; // Random skin if none assigned
+   %obj.setSkinName(%skin);
    
-   %this.setRadar(%obj);
+   %this.setRadar(%obj, %skin);
    
 }
 
-function Gem::setRadar(%this, %obj)
+function Gem::setRadar(%this, %obj, %skin)
 {
    if (ClientGroup.getCount() <= 0)
    {
-      %this.schedule(250, "setRadar", %obj);
+      %this.schedule(250, "setRadar", %obj, %skin);
       return;
    }
    if (MissionInfo.gameMode !$= "hunt")
@@ -115,7 +112,7 @@ function Gem::setRadar(%this, %obj)
       %position = %obj.getPosition();   
       %x = getWord(%position, 0);
       %y = getWord(%position, 1);
-      commandToAll('UpdateRadarObject', %obj.getId(), %this.skin, %x, %y);
+      commandToAll('UpdateRadarObject', %obj.getId(), %skin, %x, %y);
    }
 }
 
@@ -208,12 +205,12 @@ datablock ItemData(GemItemPurple: GemItem)
 
 datablock ItemData(GemItemGreen: GemItem)
 {
-   skin = "Green";
+   skin = "green";
 };
 
 datablock ItemData(GemItemTurquoise: GemItem)
 {
-   skin = "Turquoise";
+   skin = "turquoise";
 };
 
 datablock ItemData(GemItemOrange: GemItem)

@@ -261,6 +261,7 @@ function disconnect()
 
 function disconnectedCleanup()
 {
+   clientCmdClearRadar();
    // Clear misc script stuff
    HudMessageVector.clear();
 
