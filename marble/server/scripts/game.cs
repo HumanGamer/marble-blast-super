@@ -143,6 +143,7 @@ function onMissionReset()
 
    // Set the initial state
    //setGameState("Start");
+   setupGameRadar();
 }
 
 function SimGroup::onMissionReset(%this)
@@ -1127,6 +1128,8 @@ function GameConnection::respawnPlayer(%this)
       %this.cameraLookAtPoint(getWord(%averagePos, 0), getWord(%averagePos, 1));
    }
    //%this.player.powerUpEnableSched = %this.player.schedule(500, enablePowerUps);
+   
+   setupGameRadar();
 }
 
 function GameConnection::respawnPlayerHunt(%this)
@@ -1287,6 +1290,7 @@ function GameConnection::getCheckpointPos(%this,%num)
 
 function setupGameRadar()
 {
+   commandToAll('ClearRadar');
    MissionGroup.setupRadar();
 }
 
