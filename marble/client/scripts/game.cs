@@ -33,6 +33,13 @@ function clientCmdGameEnd()
       return;
    
    finishRecording();
+   
+   if ($Client::ConnectedMultiplayer)
+   {
+      Canvas.setContent(MultiplayerEndGui);      
+      
+      return;
+   }
 
    getBestTimes($Server::MissionFile);
    $highScoreIndex = "";

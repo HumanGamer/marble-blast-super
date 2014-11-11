@@ -112,6 +112,7 @@ function initClient()
    exec("./ui/recordingDlg.gui");
    exec("./ui/replayCenterGui.gui");
    exec("./ui/preMissionGui.gui");
+   exec("./ui/multiplayerEndGui.gui");
 
    // Client scripts
    exec("./scripts/client.cs");
@@ -144,6 +145,7 @@ function initClient()
    exec("./scripts/preMissionGui.cs");
    exec("./scripts/compass.cs");
    exec("./scripts/endgamegui.cs");
+   exec("./scripts/multiplayerEndGui.cs");
 
    // Default player key bindings
    exec("./scripts/default.bind.cs");

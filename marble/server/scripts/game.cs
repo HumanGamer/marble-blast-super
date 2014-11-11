@@ -47,6 +47,7 @@ function onServerCreated()
    $Game::StartTime = 0;
    
    $Game::MaxGemRadius = 20;
+   $Game::MaxGemsPerSpawn = 4;
 
    // Load up all datablocks, objects etc.  This function is called when
    // a server is constructed.
@@ -320,7 +321,11 @@ function spawnGemGroup()
    
    //commandToAll('UpdateRadarObject', %gem.getId(), %gem.getDatablock().skin, %x, %y);
    
-   for (%i = 0; %i < MissionInfo.maxGemsPerSpawn; %i++)
+   %maxGemsPerSpawn = MissionInfo.maxGemsPerSpawn;
+   if (%maxGemsPerSpawn $= "")
+      %maxGemsPerSpawn = $Game::MaxGemsPerSpawn;
+   
+   for (%i = 0; %i < %maxGemsPerSpawn; %i++)
    {
       %lastDist = "";
 	   //%obj = %group.getObject(%i);
@@ -407,8 +412,8 @@ function endGame()
    {
       for (%index = 0; %index < ClientGroup.getCount(); %index++)  {
          %client = ClientGroup.getObject(%index);
-         if (!$Client::ConnectedMultiplayer)
-            commandToClient(%client, 'GameEnd');
+         //if (!$Client::ConnectedMultiplayer)
+         commandToClient(%client, 'GameEnd');
          %client.stopTimer();
       }
    }
@@ -430,13 +435,13 @@ function endGame()
    if (!$DemoBuild && !$playingDemo && $Game::Qualified && (MissionInfo.level + 1) > $Pref::QualifiedLevel[MissionInfo.type])
          $Pref::QualifiedLevel[MissionInfo.type] = MissionInfo.level + 1;
          
-   if ($Client::ConnectedMultiplayer)
-   {
-      for (%index = 0; %index < ClientGroup.getCount(); %index++)  {
-         %client = ClientGroup.getObject(%index);
-         commandToClient(%client, 'SetLobby');
-      }
-   }
+   //if ($Client::ConnectedMultiplayer)
+   //{
+      //for (%index = 0; %index < ClientGroup.getCount(); %index++)  {
+         //%client = ClientGroup.getObject(%index);
+         //commandToClient(%client, 'SetLobby');
+      //}
+   //}
 }
 
 function pauseGame()

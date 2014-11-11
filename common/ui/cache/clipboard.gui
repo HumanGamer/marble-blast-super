@@ -1,20 +1,18 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapButtonCtrl() {
-      profile = "GuiButtonProfile";
-      horizSizing = "relative";
-      vertSizing = "relative";
-      position = "482 63";
-      extent = "148 35";
+   new GuiBitmapButtonCtrl(ME_Replay) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "321 408";
+      extent = "130 47";
       minExtent = "8 8";
       visible = "1";
-      command = "StopDemoTimer();Canvas.setContent(LoginGui);";
       helpTag = "0";
-      text = "Multiplayer";
+      text = "Replay";
       groupNum = "-1";
       buttonType = "PushButton";
       repeatPeriod = "1000";
       repeatDecay = "1";
-      bitmap = "marble/client/ui/home/multiplayer";
    };
 };
