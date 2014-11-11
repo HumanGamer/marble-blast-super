@@ -12,3 +12,4 @@
 /common/server/prefs.cs
 *.dso
 *.db
+Thumbs.db
