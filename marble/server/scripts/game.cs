@@ -317,7 +317,7 @@ function spawnGemGroup()
    
    //echo("Pos: " @ %x @ " " @ %y);
    
-   commandToAll('UpdateRadarObject', %gem.getId(), %gem.getDatablock().skin, %x, %y);
+   //commandToAll('UpdateRadarObject', %gem.getId(), %gem.getDatablock().skin, %x, %y);
    
    for (%i = 0; %i < MissionInfo.maxGemsPerSpawn; %i++)
    {
@@ -381,9 +381,10 @@ function spawnGemGroup()
          
          //echo("Pos: " @ %x @ " " @ %y);
    
-         commandToAll('UpdateRadarObject', %lastObj.getId(), %lastObj.getDatablock().skin, %x, %y);
+         //commandToAll('UpdateRadarObject', %lastObj.getId(), %lastObj.getDatablock().skin, %x, %y);
 	   }
    }
+   setupGameRadar();
 }
 
 function endGame()
@@ -687,9 +688,10 @@ function GameConnection::incBonusTime(%this,%dt)
 
 function GameConnection::onClientEnterGame(%this)
 {
+   //setupGameRadar();
    // Matt: for some reason this doesn't work without doing it multiple times
-   //for (%i = 0; %i < 100; %i++)
-   //   commandToClient(%this, 'ClearRadar');
+   for (%i = 0; %i < 100; %i++)
+      commandToClient(%this, 'ClearRadar');
    commandToClient(%this, 'SetMode', MissionInfo.gameMode);
    commandToClient(%this, 'GetMarbleSkin');
    commandToClient(%this, 'AddPlayer', %this.getId(), %this.nameBase, true, 0, false);
@@ -746,6 +748,8 @@ function GameConnection::onClientEnterGame(%this)
    
    if ($Server::ServerType $= "MultiPlayer")
       %this.schedule(1000, "ShowPreMission");
+      
+   setupGameRadar();
 }
 
 function GameConnection::ShowPreMission(%this)
@@ -1279,6 +1283,46 @@ function GameConnection::getCheckpointPos(%this,%num)
       return "0 0 300 1 0 0 0";
    return vectorAdd(%this.checkPoint.pad.getTransform(),"0 0 3") SPC
                     getWords(%this.checkPoint.pad.getTransform(), 3);
+}
+
+function setupGameRadar()
+{
+   MissionGroup.setupRadar();
+}
+
+function SimGroup::setupRadar(%this)
+{
+   for (%i = 0; %i < %this.getCount(); %i++)
+   {
+      %obj = %this.getObject(%i);
+      
+      if (%obj.getClassName() $= "Item" && strstr(%obj.getDataBlock().getName(), "GemItem") > -1 && !%obj.isHidden())
+      {
+         %position = %obj.getPosition();   
+         %x = getWord(%position, 0);
+         %y = getWord(%position, 1);
+         //echo("Gem: " @ %obj.getId());
+         //clientCmdUpdateRadarObject(%obj.getId(), %obj.getSkinName(), %x, %y);
+         commandToAll('UpdateRadarObject', %obj.getId(), %obj.getSkinName(), %x, %y);
+      }
+      else if (%obj.getClassName() $= "StaticShape" && %obj.getDatablock().getName() $= "EndPad")
+      {
+         %position = %obj.getPosition();   
+         %x = getWord(%position, 0);
+         %y = getWord(%position, 1);
+         //echo("Pad: " @ %obj.getId());
+         //clientCmdUpdateRadarObject(%obj.getId(), "pad", %x, %y);
+         commandToAll('UpdateRadarObject', %obj.getId(), "pad", %x, %y);
+      }
+      else if (%obj.getClassName() $= "SimGroup")
+      {
+         //echo("Group: " @ %obj.getId());
+         %obj.setupRadar();
+      }// else {
+      //   if (%obj.getClassName() $= "StaticShape" || %obj.getClassName() $= "Item")
+      //      echo("Other: " @ %obj.getId() @ " " @ %obj.getClassName() @ " " @ %obj.getDatablock().getName());
+      //}
+   }
 }
 
 //-----------------------------------------------------------------------------

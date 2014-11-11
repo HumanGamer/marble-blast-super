@@ -74,7 +74,7 @@ function EndPad::setRadar(%this, %obj)
       %position = %obj.getPosition();   
       %x = getWord(%position, 0);
       %y = getWord(%position, 1);
-      commandToAll('UpdateRadarObject', %obj.getId(), "pad", %x, %y);
+      //commandToAll('UpdateRadarObject', %obj.getId(), "pad", %x, %y);
    }
 }
 

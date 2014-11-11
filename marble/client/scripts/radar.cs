@@ -4,7 +4,7 @@ function addRadarObject(%id, %bitmap, %x, %y)
    if (isObject(%oldObj))
    {
       clientCmdRemoveRadarObject(%id);
-      return;
+      //return;
    }
    
    %gamePos = %x SPC %y;
@@ -18,7 +18,7 @@ function addRadarObject(%id, %bitmap, %x, %y)
    //%x += 150;
    //%y += 150;
    
-   %location = "-100 -100";//%x SPC %y;
+   %location = "100 100";//"-100 -100";//%x SPC %y;
    
    %obj = new GuiBitmapCtrl("RadarObject_" @ %id)
    {
@@ -106,14 +106,14 @@ function updateRadar()
    
    if (!isObject(getMyMarble()))
    {
-      $radarUpdate = schedule(10, 0, updateRadar);
+      $radarUpdate = schedule(30, 0, updateRadar);
       return;   
    }
    
    %trans = getMyMarble().getTransform();
    %centerX = getWord(%trans, 0);
    %centerY = getWord(%trans, 1);
-   %centerZ = getWord(%trans, 2);
+   //%centerZ = getWord(%trans, 2);
    
    //%cameraRotation = getWord(%eye, 3) SPC getWord(%eye, 4) SPC getWord(%eye, 5) SPC getWord(%eye, 6);
    
@@ -210,5 +210,5 @@ function updateRadar()
       %obj.position = %posX SPC %posY;
    }
    
-   $radarUpdate = schedule(10, 0, updateRadar);
+   $radarUpdate = schedule(30, 0, updateRadar);
 }
