@@ -27,7 +27,7 @@ new GuiControl(EndGameGui) {
          profile = "GuiMLTextProfile";
          horizSizing = "center";
          vertSizing = "bottom";
-         position = "32 13";
+         position = "105 13";
          extent = "429 335";
          minExtent = "8 8";
          visible = "1";
@@ -74,7 +74,7 @@ new GuiControl(EndGameGui) {
          profile = "GuiButtonProfile";
          horizSizing = "left";
          vertSizing = "top";
-         position = "393 428";
+         position = "374 428";
          extent = "123 30";
          minExtent = "8 8";
          visible = "1";
