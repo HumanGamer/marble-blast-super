@@ -62,7 +62,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "24 322";
+         position = "24 320";
          extent = "121 40";
          minExtent = "8 8";
          visible = "1";
@@ -79,7 +79,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "29 277";
+         position = "29 276";
          extent = "118 40";
          minExtent = "8 8";
          visible = "1";
@@ -96,7 +96,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "29 231";
+         position = "29 228";
          extent = "126 44";
          minExtent = "8 8";
          visible = "1";
@@ -146,14 +146,14 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
    };
    new GuiBitmapCtrl() {
       profile = "GuiDefaultProfile";
-      horizSizing = "relative";
-      vertSizing = "relative";
-      position = "415 40";
-      extent = "168 160";
+      horizSizing = "left";
+      vertSizing = "bottom";
+      position = "290 40";
+      extent = "300 145";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "./home/logo";
+      bitmap = "./logo";
       wrap = "0";
    };
 };
