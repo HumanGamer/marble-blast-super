@@ -421,35 +421,35 @@ new SimGroup(MissionGroup) {
       position = "7.81457 -21.2123 77.0298";
       rotation = "0 1 0 90";
       scale = "8 8 8";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "8.04343 -23.8591 72.7083";
       rotation = "0 1 0 90";
       scale = "8 8 8";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "7.9824 -21.1419 73.8957";
       rotation = "0 1 0 90";
       scale = "8 8 8";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "7.94444 -23.5664 82.9472";
       rotation = "0 1 0 90";
       scale = "8 8 8";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "7.92192 -21.1264 80.8804";
       rotation = "0 1 0 90";
       scale = "8 8 8";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new Trigger() {

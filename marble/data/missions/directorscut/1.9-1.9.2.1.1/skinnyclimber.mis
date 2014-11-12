@@ -868,7 +868,7 @@ new SimGroup(MissionGroup) {
       position = "220.629 -998.086 103.9";
       rotation = "1 0 0 0";
       scale = "2 2 2";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
@@ -1104,7 +1104,7 @@ new SimGroup(MissionGroup) {
       position = "223.672 -999.169 106.822";
       rotation = "1 0 0 0";
       scale = "2 2 2";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new ScriptObject() {
