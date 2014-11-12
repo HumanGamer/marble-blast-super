@@ -410,42 +410,42 @@ new SimGroup(MissionGroup) {
       position = "2.4798 766.5 -13.8915";
       rotation = "1 0 0 0";
       scale = "6 6 6";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "6.52035 770.712 -13.8032";
       rotation = "1 0 0 0";
       scale = "6 6 6";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "2.49892 764.745 -13.8915";
       rotation = "1 0 0 0";
       scale = "6 6 6";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "6.53931 764.599 -13.8915";
       rotation = "1 0 0 0";
       scale = "6 6 6";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "4.52391 764.583 -13.8915";
       rotation = "1 0 0 0";
       scale = "6 6 6";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "2.39916 770.568 -13.8915";
       rotation = "1 0 0 0";
       scale = "6 6 6";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new ScriptObject() {
@@ -460,28 +460,28 @@ new SimGroup(MissionGroup) {
       position = "4.50633 772.578 -13.8915";
       rotation = "1 0 0 0";
       scale = "6 6 6";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "4.59927 768.589 -13.8915";
       rotation = "1 0 0 0";
       scale = "6 6 6";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "4.51458 774.647 -13.8915";
       rotation = "1 0 0 0";
       scale = "6 6 6";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "2.52814 774.571 -13.8915";
       rotation = "1 0 0 0";
       scale = "6 6 6";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {

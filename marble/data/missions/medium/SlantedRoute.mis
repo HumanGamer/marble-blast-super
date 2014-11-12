@@ -240,203 +240,203 @@ new SimGroup(MissionGroup) {
       position = "36.5 -5.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "37.5 -5.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "38.5 -5.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "39.5 -5.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "36.5 -6.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "37.5 -6.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "38.5 -6.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "39.5 -6.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "36.5 -7.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "37.5 -7.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "38.5 -7.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "39.5 -7.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "36.5 -8.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "39.5 -8.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "36.5 -9.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "39.5 -9.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "36.5 -10.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "37.5 -10.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "38.5 -10.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "39.5 -10.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "36.5 -11.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "37.5 -11.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "38.5 -11.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "39.5 -11.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "36.5 -12.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "37.5 -12.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "38.5 -12.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "39.5 -12.5 7";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape() {
       position = "38 -9 7";
       rotation = "1 0 0 0";
       scale = "5 5 5";
-      dataBlock = "LandMine";
+      dataBlock = "LandMineMBG";
          resetTime = "Default";
    };
    new StaticShape(EndPoint) {
