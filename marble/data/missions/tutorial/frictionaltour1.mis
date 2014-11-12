@@ -228,7 +228,7 @@ new SimGroup(MissionGroup) {
       scale = "0.5 6 6";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Grass has alot of friction and can stop you easily. Use it to climb up the steep ramp.";
+         text = "Grass has a lot of friction and can stop you easily. Use it to climb up the steep ramp.";
    };
    new Trigger(Water) {
       position = "2.75697 9.57675 -11.2922";
@@ -262,7 +262,7 @@ new SimGroup(MissionGroup) {
       scale = "6 0.5 6";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Grip Tape is alot stronger than grass, and can give you a bigger boost against steep slopes.";
+         text = "Grip Tape is a lot stronger than grass, and can give you a bigger boost against steep slopes.";
    };
    new Trigger() {
       position = "-64.6649 36.5285 -21.9558";
