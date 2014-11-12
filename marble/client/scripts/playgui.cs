@@ -325,7 +325,7 @@ function setupPlayGui()
       PG_RearView.visible = false;
    }
    
-   if ($pref::ShowRadar && !MissionInfo.hideRadar)
+   if (($pref::ShowRadar && !MissionInfo.hideRadar) || $Client::ConnectedMultiplayer)
    {
       RadarContainer.visible = true;
    } else {
