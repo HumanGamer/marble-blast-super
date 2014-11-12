@@ -309,7 +309,7 @@ if (!isObject(GuiPMSelectedMission)) new GuiControlProfile(GuiPMSelectedMission)
 
 if (!isObject(GuiBigGameTextProfile)) new GuiControlProfile(GuiBigGameTextProfile : GuiBigTextProfile)
 {
-   fontType = "Animated";
+   fontType = "Whitestone";
 };
 
 new GuiControlProfile (GuiCompassProfile)

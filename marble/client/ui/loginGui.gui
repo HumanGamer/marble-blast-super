@@ -28,8 +28,8 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "332 140";
-         extent = "96 39";
+         position = "332 145";
+         extent = "96 29";
          minExtent = "8 8";
          visible = "1";
          command = "registerAccount();";
@@ -45,8 +45,8 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "444 138";
-         extent = "96 39";
+         position = "444 140";
+         extent = "96 33";
          minExtent = "8 8";
          visible = "1";
          command = "doLogin();";
@@ -196,7 +196,7 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          horizSizing = "right";
          vertSizing = "bottom";
          position = "12 140";
-         extent = "87 39";
+         extent = "87 33";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.setContent(mainMenuGui);";
@@ -212,8 +212,8 @@ new GuiChunkedBitmapCtrl(LoginGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "84 129";
-         extent = "243 53";
+         position = "117 129";
+         extent = "187 53";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -222,8 +222,8 @@ new GuiChunkedBitmapCtrl(LoginGui) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "51 5";
-            extent = "33 39";
+            position = "148 4";
+            extent = "33 41";
             minExtent = "8 8";
             visible = "1";
             variable = "$pref::Login::RememberPassword";
@@ -239,8 +239,8 @@ new GuiChunkedBitmapCtrl(LoginGui) {
             profile = "GuiBigGameTextProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "97 13";
-            extent = "125 36";
+            position = "9 10";
+            extent = "144 36";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";

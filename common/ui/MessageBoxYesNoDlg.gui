@@ -48,8 +48,8 @@ new GuiControl(MessageBoxYesNoDlg) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "0 0";
-            extent = "120 48";
+            position = "0 5";
+            extent = "77 38";
             minExtent = "8 8";
             visible = "1";
             command = "MessageCallback(MessageBoxYesNoDlg,MessageBoxYesNoDlg.yesCallback);";
@@ -67,8 +67,8 @@ new GuiControl(MessageBoxYesNoDlg) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "117 0";
-            extent = "120 48";
+            position = "165 5";
+            extent = "64 37";
             minExtent = "8 8";
             visible = "1";
             command = "MessageCallback(MessageBoxYesNoDlg,MessageBoxYesNoDlg.noCallback);";

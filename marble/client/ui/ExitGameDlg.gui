@@ -14,7 +14,7 @@ new GuiControl(ExitGameDlg) {
       profile = "GuiDefaultProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "125 147";
+      position = "126 147";
       extent = "388 186";
       minExtent = "48 92";
       visible = "1";
@@ -48,8 +48,8 @@ new GuiControl(ExitGameDlg) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "0 4";
-            extent = "120 48";
+            position = "6 10";
+            extent = "88 41";
             minExtent = "8 8";
             visible = "1";
             command = "finishRecording();Canvas.popDialog(ExitGameDlg); resumeGame(); disconnect(); Canvas.setContent(PlayMissionGui);";
@@ -67,8 +67,8 @@ new GuiControl(ExitGameDlg) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "116 4";
-            extent = "120 48";
+            position = "133 10";
+            extent = "63 39";
             minExtent = "8 8";
             visible = "1";
             command = "Canvas.popDialog(ExitGameDlg); resumeGame();";
@@ -86,8 +86,8 @@ new GuiControl(ExitGameDlg) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "233 4";
-            extent = "120 48";
+            position = "233 10";
+            extent = "120 37";
             minExtent = "8 8";
             visible = "1";
             command = "Canvas.popDialog(ExitGameDlg); resumeGame();$resetLevel = true;restartLevel();";

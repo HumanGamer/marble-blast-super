@@ -13,28 +13,28 @@ new GuiControl(MessageBoxOKDlg) {
       profile = "GuiDefaultProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "170 159";
-      extent = "300 161";
+      position = "170 146";
+      extent = "300 187";
       minExtent = "48 92";
       visible = "1";
       helpTag = "0";
       bitmap = "./dialog.png";
       wrap = "0";
-         resizeHeight = "1";
-         canMaximize = "0";
          canMove = "1";
          minSize = "50 50";
          canClose = "0";
          maxLength = "255";
          resizeWidth = "1";
          canMinimize = "0";
+         resizeHeight = "1";
+         canMaximize = "0";
 
       new GuiMLTextCtrl(MBOKTitle) {
          profile = "GuiComic24Profile";
          horizSizing = "center";
          vertSizing = "bottom";
          position = "43 15";
-         extent = "213 23";
+         extent = "213 24";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -46,8 +46,8 @@ new GuiControl(MessageBoxOKDlg) {
          profile = "GuiButtonProfile";
          horizSizing = "center";
          vertSizing = "top";
-         position = "86 99";
-         extent = "128 48";
+         position = "120 145";
+         extent = "65 37";
          minExtent = "8 8";
          visible = "1";
          command = "MessageCallback(MessageBoxOKDlg,MessageBoxOKDlg.callback);";
@@ -66,7 +66,7 @@ new GuiControl(MessageBoxOKDlg) {
          horizSizing = "center";
          vertSizing = "bottom";
          position = "32 50";
-         extent = "236 14";
+         extent = "236 40";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";

@@ -20,21 +20,21 @@ new GuiControl(MessageBoxOKCancelDlg) {
       helpTag = "0";
       bitmap = "./dialog.png";
       wrap = "0";
+         canMove = "1";
+         minSize = "50 50";
          canClose = "0";
          maxLength = "255";
          resizeWidth = "1";
          canMinimize = "0";
          resizeHeight = "1";
          canMaximize = "0";
-         canMove = "1";
-         minSize = "50 50";
 
       new GuiMLTextCtrl(MBOKCancelText) {
          profile = "GuiTextProfile";
          horizSizing = "center";
          vertSizing = "bottom";
          position = "14 60";
-         extent = "236 20";
+         extent = "236 14";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -56,8 +56,8 @@ new GuiControl(MessageBoxOKCancelDlg) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "top";
-            position = "117 0";
-            extent = "120 48";
+            position = "175 5";
+            extent = "60 34";
             minExtent = "8 8";
             visible = "1";
             command = "MessageCallback(MessageBoxOKCancelDlg,MessageBoxOKCancelDlg.callback);";
@@ -75,8 +75,8 @@ new GuiControl(MessageBoxOKCancelDlg) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "top";
-            position = "0 0";
-            extent = "120 48";
+            position = "0 5";
+            extent = "120 36";
             minExtent = "8 8";
             visible = "1";
             command = "MessageCallback(MessageBoxOKCancelDlg,MessageBoxOKCancelDlg.cancelCallback);";
@@ -95,7 +95,7 @@ new GuiControl(MessageBoxOKCancelDlg) {
          profile = "GuiTextProfile";
          horizSizing = "center";
          vertSizing = "bottom";
-         position = "16 16";
+         position = "14 16";
          extent = "236 14";
          minExtent = "8 8";
          visible = "1";
