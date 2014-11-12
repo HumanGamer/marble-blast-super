@@ -33,6 +33,7 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
+         bitmap = "~/data/missions/multiplayer/Agility";
          wrap = "0";
 
          new GuiBitmapButtonCtrl(LB_Play) {
@@ -57,8 +58,8 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "500 412";
-         extent = "120 48";
+         position = "507 412";
+         extent = "111 43";
          minExtent = "8 8";
          visible = "1";
          command = "disconnect();Canvas.setContent(MultiplayerGui);";
@@ -87,7 +88,7 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "0 0";
-            extent = "266 14";
+            extent = "266 112";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -175,15 +176,204 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "0 0";
-            extent = "114 8";
+            extent = "114 440";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
-               enumerate = "0";
                resizeCell = "1";
                columns = "0 20 165";
                fitParentWidth = "0";
                clipColumnText = "0";
+               enumerate = "0";
+
+            new GuiControl(LB_MissionID_0) {
+               profile = "GuiPMSelectedMission";
+               horizSizing = "center";
+               vertSizing = "bottom";
+               position = "7 0";
+               extent = "100 100";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+
+               new GuiBitmapCtrl() {
+                  profile = "GuiButtonProfile";
+                  horizSizing = "center";
+                  vertSizing = "bottom";
+                  position = "5 10";
+                  extent = "90 60";
+                  minExtent = "8 8";
+                  visible = "1";
+                  command = "PM_setSelected(0);LB_SetSelected(0);setLevelLocked();";
+                  helpTag = "0";
+                  bitmap = "~/data/missions/multiplayer/Agility";
+                  wrap = "0";
+                     repeatPeriod = "1000";
+                     repeatDecay = "1";
+                     groupNum = "-1";
+                     buttonType = "PushButton";
+               };
+               new GuiMLTextCtrl(LB_LBL) {
+                  profile = "GuiMLTextProfile";
+                  horizSizing = "center";
+                  vertSizing = "bottom";
+                  position = "5 70";
+                  extent = "90 14";
+                  minExtent = "8 8";
+                  visible = "1";
+                  command = "PM_setSelected(0);LB_SetSelected(0);setLevelLocked();";
+                  helpTag = "0";
+                  lineSpacing = "2";
+                  allowColorChars = "0";
+                  maxChars = "-1";
+                     repeatPeriod = "1000";
+                     repeatDecay = "1";
+                     groupNum = "-1";
+                     wrap = "0";
+                     buttonType = "PushButton";
+               };
+            };
+            new GuiControl(LB_MissionID_1) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "center";
+               vertSizing = "bottom";
+               position = "7 110";
+               extent = "100 100";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+
+               new GuiBitmapCtrl() {
+                  profile = "GuiButtonProfile";
+                  horizSizing = "center";
+                  vertSizing = "bottom";
+                  position = "5 10";
+                  extent = "90 60";
+                  minExtent = "8 8";
+                  visible = "1";
+                  command = "PM_setSelected(1);LB_SetSelected(1);setLevelLocked();";
+                  helpTag = "0";
+                  bitmap = "~/data/missions/multiplayer/neighbourhood";
+                  wrap = "0";
+                     repeatPeriod = "1000";
+                     repeatDecay = "1";
+                     groupNum = "-1";
+                     buttonType = "PushButton";
+               };
+               new GuiMLTextCtrl(LB_LBL) {
+                  profile = "GuiMLTextProfile";
+                  horizSizing = "center";
+                  vertSizing = "bottom";
+                  position = "5 70";
+                  extent = "90 14";
+                  minExtent = "8 8";
+                  visible = "1";
+                  command = "PM_setSelected(1);LB_SetSelected(1);setLevelLocked();";
+                  helpTag = "0";
+                  lineSpacing = "2";
+                  allowColorChars = "0";
+                  maxChars = "-1";
+                     repeatPeriod = "1000";
+                     repeatDecay = "1";
+                     groupNum = "-1";
+                     wrap = "0";
+                     buttonType = "PushButton";
+               };
+            };
+            new GuiControl(LB_MissionID_2) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "center";
+               vertSizing = "bottom";
+               position = "7 220";
+               extent = "100 100";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+
+               new GuiBitmapCtrl() {
+                  profile = "GuiButtonProfile";
+                  horizSizing = "center";
+                  vertSizing = "bottom";
+                  position = "5 10";
+                  extent = "90 60";
+                  minExtent = "8 8";
+                  visible = "1";
+                  command = "PM_setSelected(2);LB_SetSelected(2);setLevelLocked();";
+                  helpTag = "0";
+                  bitmap = "~/data/missions/multiplayer/epic_sprawl";
+                  wrap = "0";
+                     repeatPeriod = "1000";
+                     repeatDecay = "1";
+                     groupNum = "-1";
+                     buttonType = "PushButton";
+               };
+               new GuiMLTextCtrl(LB_LBL) {
+                  profile = "GuiMLTextProfile";
+                  horizSizing = "center";
+                  vertSizing = "bottom";
+                  position = "5 70";
+                  extent = "90 14";
+                  minExtent = "8 8";
+                  visible = "1";
+                  command = "PM_setSelected(2);LB_SetSelected(2);setLevelLocked();";
+                  helpTag = "0";
+                  lineSpacing = "2";
+                  allowColorChars = "0";
+                  maxChars = "-1";
+                     repeatPeriod = "1000";
+                     repeatDecay = "1";
+                     groupNum = "-1";
+                     wrap = "0";
+                     buttonType = "PushButton";
+               };
+            };
+            new GuiControl(LB_MissionID_3) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "center";
+               vertSizing = "bottom";
+               position = "7 330";
+               extent = "100 100";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+
+               new GuiBitmapCtrl() {
+                  profile = "GuiButtonProfile";
+                  horizSizing = "center";
+                  vertSizing = "bottom";
+                  position = "5 10";
+                  extent = "90 60";
+                  minExtent = "8 8";
+                  visible = "1";
+                  command = "PM_setSelected(3);LB_SetSelected(3);setLevelLocked();";
+                  helpTag = "0";
+                  bitmap = "~/data/missions/multiplayer/sprawl_walled";
+                  wrap = "0";
+                     repeatPeriod = "1000";
+                     repeatDecay = "1";
+                     groupNum = "-1";
+                     buttonType = "PushButton";
+               };
+               new GuiMLTextCtrl(LB_LBL) {
+                  profile = "GuiMLTextProfile";
+                  horizSizing = "center";
+                  vertSizing = "bottom";
+                  position = "5 70";
+                  extent = "90 14";
+                  minExtent = "8 8";
+                  visible = "1";
+                  command = "PM_setSelected(3);LB_SetSelected(3);setLevelLocked();";
+                  helpTag = "0";
+                  lineSpacing = "2";
+                  allowColorChars = "0";
+                  maxChars = "-1";
+                     repeatPeriod = "1000";
+                     repeatDecay = "1";
+                     groupNum = "-1";
+                     wrap = "0";
+                     buttonType = "PushButton";
+               };
+            };
          };
       };
       new GuiBitmapButtonTextCtrl(LB_DifficultyButton) {
@@ -196,7 +386,7 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
          visible = "1";
          command = "LB_ToggleDifficultyPopup();";
          helpTag = "0";
-         text = "Practice";
+         text = "Beginner";
          groupNum = "-1";
          buttonType = "PushButton";
          repeatPeriod = "1000";
@@ -212,7 +402,7 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
          position = "16 45";
          extent = "144 130";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
          bitmap = "./lobby/difficultyList";
          wrap = "0";
@@ -241,7 +431,7 @@ new GuiChunkedBitmapCtrl(LobbyGui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "0 0";
-               extent = "128 120";
+               extent = "132 120";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
