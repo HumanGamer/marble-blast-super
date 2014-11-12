@@ -1,5 +1,5 @@
 //--- OBJECT WRITE BEGIN ---
-new GameTSCtrl(MultiplayerEndGui) {
+new GuiControl(MultiplayerEndGui) {
    profile = "GuiDefaultProfile";
    horizSizing = "right";
    vertSizing = "bottom";
@@ -82,7 +82,7 @@ new GameTSCtrl(MultiplayerEndGui) {
          extent = "130 47";
          minExtent = "8 8";
          visible = "1";
-         command = "restartLevel();Canvas.setContent(PlayGui);";
+         command = "Canvas.popDialog(MultiplayerEndGui);restartLevel();";
          helpTag = "0";
          text = "Replay";
          groupNum = "-1";

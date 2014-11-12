@@ -36,7 +36,7 @@ function clientCmdGameEnd()
    
    if ($Client::ConnectedMultiplayer)
    {
-      Canvas.setContent(MultiplayerEndGui);      
+      Canvas.pushDialog(MultiplayerEndGui);      
       
       return;
    }
