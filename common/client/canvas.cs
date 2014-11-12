@@ -26,7 +26,8 @@ function initCanvas(%windowName)
    exec("~/ui/defaultProfiles.cs");
 
    // Common GUI's
-   exec("~/ui/GuiEditorGui.gui");
+   exec("~/editor/GuiEditorGui.gui");
+   exec("~/editor/GuiEditorGui.cs");
    exec("~/ui/ConsoleDlg.gui");
    exec("~/ui/InspectDlg.gui");
    exec("~/ui/LoadFileDlg.gui");

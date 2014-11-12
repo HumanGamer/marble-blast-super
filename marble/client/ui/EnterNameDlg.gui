@@ -25,8 +25,8 @@ new GuiControl(EnterNameDlg) {
          profile = "GuiDefaultProfile";
          horizSizing = "center";
          vertSizing = "bottom";
-         position = "172 198";
-         extent = "71 45";
+         position = "172 202";
+         extent = "67 37";
          minExtent = "8 8";
          visible = "1";
          command = "highScoreNameAccept();";
@@ -55,7 +55,7 @@ new GuiControl(EnterNameDlg) {
          horizSizing = "right";
          vertSizing = "bottom";
          position = "41 30";
-         extent = "345 47";
+         extent = "345 14";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";

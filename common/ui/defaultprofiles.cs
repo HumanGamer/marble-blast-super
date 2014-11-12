@@ -469,3 +469,19 @@ new GuiCursor(DefaultCursor)
    bitmapName = "./CUR_3darrow";
 };
 
+// GuiEditor
+
+new GuiControlProfile (BackFillProfile)
+{
+   opaque = true;
+   fillColor = "0 94 94";
+   border = true;
+   borderColor = "255 128 128";
+   fontType = "Arial";
+   fontSize = 12;
+   fontColor = "0 0 0";
+   fontColorHL = "32 100 100";
+   fixedExtent = true;
+   justify = "center";
+};
+

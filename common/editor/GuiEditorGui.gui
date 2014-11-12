@@ -1,19 +1,3 @@
-//----------------------------------------------------------------
-
-new GuiControlProfile (BackFillProfile)
-{
-   opaque = true;
-   fillColor = "0 94 94";
-   border = true;
-   borderColor = "255 128 128";
-   fontType = "Arial";
-   fontSize = 12;
-   fontColor = "0 0 0";
-   fontColorHL = "32 100 100";
-   fixedExtent = true;
-   justify = "center";
-};
-
 //--- OBJECT WRITE BEGIN ---
 new GuiControl(GuiEditorGui) {
    profile = "GuiDefaultProfile";
@@ -30,7 +14,7 @@ new GuiControl(GuiEditorGui) {
       profile = "BackFillProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "0 0";
+      position = "0 22";
       extent = "640 480";
       minExtent = "8 8";
       visible = "1";
@@ -40,7 +24,7 @@ new GuiControl(GuiEditorGui) {
       profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "0 0";
+      position = "0 22";
       extent = "640 480";
       minExtent = "8 8";
       visible = "1";
@@ -50,7 +34,7 @@ new GuiControl(GuiEditorGui) {
       profile = "GuiTextEditProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "0 0";
+      position = "0 22";
       extent = "640 480";
       minExtent = "8 8";
       visible = "1";
@@ -60,7 +44,7 @@ new GuiControl(GuiEditorGui) {
       profile = "GuiButtonProfile";
       horizSizing = "width";
       vertSizing = "height";
-      position = "640 0";
+      position = "640 22";
       extent = "160 600";
       minExtent = "8 8";
       visible = "1";
@@ -422,294 +406,15 @@ new GuiControl(GuiEditorGui) {
          repeatDecay = "1";
       };
    };
-};
-new GuiControl(NewGuiDialog) {
-   profile = "GuiDialogProfile";
-   horizSizing = "right";
-   vertSizing = "bottom";
-   position = "0 0";
-   extent = "640 480";
-   minExtent = "8 8";
-   visible = "1";
-   helpTag = "0";
-
-   new GuiWindowCtrl() {
-      profile = "GuiWindowProfile";
-      horizSizing = "center";
-      vertSizing = "center";
-      position = "220 146";
-      extent = "200 188";
+   new GuiMenuBar(GuiEditorMenuBar) {
+      profile = "GuiMenuBarProfile";
+      horizSizing = "width";
+      vertSizing = "bottom";
+      position = "0 0";
+      extent = "1024 22";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      text = "Create new GUI";
-      maxLength = "255";
-      resizeWidth = "1";
-      resizeHeight = "1";
-      canMove = "0";
-      canClose = "0";
-      canMinimize = "0";
-      canMaximize = "0";
-      minSize = "50 50";
-
-      new GuiTextCtrl() {
-         profile = "GuiTextProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "20 28";
-         extent = "64 64";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         text = "GUI Name:";
-         maxLength = "255";
-      };
-      new GuiTextEditCtrl(NewGuiDialogName) {
-         profile = "GuiTextEditProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "20 44";
-         extent = "160 20";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         maxLength = "255";
-         maxPixelWidth = "0";
-         historySize = "0";
-         password = "0";
-         tabComplete = "0";
-         sinkAllKeyEvents = "0";
-      };
-      new GuiTextCtrl() {
-         profile = "GuiTextProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "20 68";
-         extent = "64 64";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         text = "Class:";
-         maxLength = "255";
-      };
-      new GuiControlListPopUp(NewGuiDialogClass) {
-         profile = "GuiControlListPopupProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "20 84";
-         extent = "160 18";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         maxLength = "255";
-         maxPopupHeight = "200";
-      };
-      new GuiButtonCtrl() {
-         profile = "GuiButtonProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "56 156";
-         extent = "40 16";
-         minExtent = "8 8";
-         visible = "1";
-         command = "GuiEditorCreate();";
-         helpTag = "0";
-         text = "Create";
-         groupNum = "-1";
-         buttonType = "PushButton";
-         repeatPeriod = "1000";
-         repeatDecay = "1";
-      };
-      new GuiButtonCtrl() {
-         profile = "GuiButtonProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "104 156";
-         extent = "40 16";
-         minExtent = "8 8";
-         visible = "1";
-         command = "Canvas.popDialog(NewGuiDialog);";
-         helpTag = "0";
-         text = "Cancel";
-         groupNum = "-1";
-         buttonType = "PushButton";
-         repeatPeriod = "1000";
-         repeatDecay = "1";
-      };
    };
 };
 //--- OBJECT WRITE END ---
-
-//----------------------------------------
-function GuiEditorStartCreate()
-{
-   NewGuiDialogClass.setText("GuiControl");
-   NewGuiDialogClass.sort();
-   NewGuiDialogName.setValue("NewGui");
-   Canvas.pushDialog(NewGuiDialog);
-}
-
-//----------------------------------------
-function GuiEditorCreate()
-{
-   %name = NewGuiDialogName.getValue();
-   %class = NewGuiDialogClass.getText();
-   Canvas.popDialog(NewGuiDialog);
-   %obj = eval("return new " @ %class @ "(" @ %name @ ");");
-   GuiEditorOpen(%obj);
-}
-
-//----------------------------------------
-function GuiEditorSaveGui()
-{
-   %obj = GuiEditorContent.getObject(0);
-   if(%obj == -1 || %obj.getName() $= "")
-      return;
-   %name = %obj.getName() @ ".gui";
-   getSaveFilename("*.gui", "GuiEditorSaveGuiCallback", %name);
-}
-
-function GuiEditorSaveGuiCallback(%name)
-{
-   %obj = GuiEditorContent.getObject(0);
-   
-   // make sure it is saved...
-   if(!%obj.save(%name))
-   {
-      MessageBoxOK("GuiEditor Save Failure", "Failed to save '" @ %name @ "'. The file may be read-only.");
-   }
-}   
-
-//----------------------------------------
-function GuiEdit(%val)
-{
-   if(%val != 0 || !$testCheats)
-      return;
-      
-   %content = Canvas.getContent();
-   
-   if(%content == GuiEditorGui.getId())
-   {
-      //GlobalActionMap.bind(mouse, button1, mouselook);
-
-      %obj = GuiEditorContent.getObject(0);
-      if(%obj != -1)
-      {
-         GuiGroup.add(%obj);
-         Canvas.setContent(%obj);
-      }
-      
-      GlobalActionMap.unbind( keyboard, "delete" );
-   }
-   else
-   {
-      //GlobalActionMap.unbind(mouse, button1);
-      GuiEditorOpen(%content);
-   }
-}
-
-package GuiEditor_BlockDialogs
-{
-
-function GuiCanvas::pushDialog()
-{
-
-}
-
-function GuiCanvas::popDialog()
-{
-
-}
-
-};
-
-//----------------------------------------
-function GuiEditorOpen(%content)
-{
-   Canvas.setContent(GuiEditorGui);
-   while((%obj = GuiEditorContent.getObject(0)) != -1)
-      GuiGroup.add(%obj); // get rid of anything being edited
-
-   %i = 0;
-   GuiEditorContentList.clear();
-   while((%obj = GuiGroup.getObject(%i)) != -1)
-   {
-      if(%obj.getName() !$= Canvas)
-      {
-         if(%obj.getName() $= "")
-            %name = "(unnamed) - " @ %obj;
-         else
-            %name = %obj.getName() @ " - " @ %obj;
-
-         GuiEditorContentList.add(%name, %obj);
-      }
-      %i++;
-   }
-   activatePackage(GuiEditor_BlockDialogs);
-   GuiEditorContent.add(%content);
-   deactivatePackage(GuiEditor_BlockDialogs);
-   GuiEditorContentList.sort();
-   GuiEditorClassPopup.sort();
-   if(%content.getName() $= "")
-      %name = "(unnamed) - " @ %content;
-   else
-      %name = %content.getName() @ " - " @ %content;
-   
-   GuiEditorContentList.setText(%name);
-   GuiEditorClassPopup.setText("New Control");
-   GuiEditor.setRoot(%content);
-   %content.resize(0,0,"640","480");
-   GuiEditorTreeView.open(%content);
-
-}
-
-//----------------------------------------
-function GuiEditorContentList::onSelect(%this, %id)
-{
-   GuiEditorOpen(%id);
-}
-
-//----------------------------------------
-function GuiEditorClassPopup::onSelect(%this, %id)
-{
-   %class = %this.getText();
-   %obj = eval("return new " @ %class @ "();");
-   GuiEditor.addNewCtrl(%obj);
-   GuiEditorClassPopup.setText("New Control");
-}
-
-//----------------------------------------
-function GuiEditorTreeView::onSelect(%this, %obj, %rightMouse)
-{
-   if(%rightMouse)
-      GuiEditor.setCurrentAddSet(%obj);
-   else
-   {
-      GuiEditorInspectFields.inspect(%obj);
-      GuiEditorInspectName.setValue(%obj.getName());
-      GuiEditor.select(%obj);
-   }
-}
-
-//----------------------------------------
-function GuiEditorInspectApply()
-{
-   GuiEditorInspectFields.apply(GuiEditorInspectName.getValue());
-}
-
-//----------------------------------------
-function GuiEditor::onSelect(%this, %ctrl)
-{
-   
-   GuiEditorInspectFields.inspect(%ctrl);
-   GuiEditorInspectName.setValue(%ctrl.getName());
-   GuiEditor.select(%ctrl);
-}
-
-//----------------------------------------
-function GuiEditorDeleteSelected( %val ) {
-   if( %val )
-      GuiEditor.deleteSelection();
-}      
-
-GlobalActionMap.bind(keyboard, "f10", GuiEdit);
