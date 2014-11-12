@@ -6,7 +6,7 @@
 
 datablock ParticleData(GemParticle)
 {
-   textureName          = "~/data/particles/smoke";
+   textureName          = "~/data/particles/star";
    dragCoeffiecient     = 2;
    gravityCoefficient   = -1;
    windCoefficient      = 0;
