@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          level = "9";
          startHelpText = "Jumping can help you make it to the top of a slope faster.";
          artist = "James Colsey";
-         type = "Intermediate";
+         type = "directorscut";
          goldTime = "15000";
          time = "0";
    };

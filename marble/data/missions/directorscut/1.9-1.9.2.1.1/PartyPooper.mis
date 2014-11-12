@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          artist = "James Colsey";
          time = "60000";
          desc = "This gem travel is to test you on how you can beat a crazy level under 1 minute.";
-         type = "intermediate";
+         type = "directorscut";
          level = "11";
          startHelpText = "Whoever created this level can\'t be a two year old baby.";
          name = "Party Pooper";

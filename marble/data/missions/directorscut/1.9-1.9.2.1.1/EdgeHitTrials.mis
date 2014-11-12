@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          desc = "Make it to the top by a variety of edge-hits.";
          artist = "James Colsey";
          level = "8";
-         type = "Intermediate";
+         type = "directorscut";
          startHelpText = "Pass all the ordeals ahead.";
          goldTime = "45000";
          name = "Edge-hit Trials";

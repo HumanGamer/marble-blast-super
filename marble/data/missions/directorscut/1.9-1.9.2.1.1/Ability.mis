@@ -3,7 +3,7 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          level = "10";
-         type = "Intermediate";
+         type = "directorscut";
          time = "0";
          name = "Ability";
          goldTime = "18000";

@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          time = "0";
          desc = "Use some tricks and evade hazards to climb up the skinny path and to the finish!";
          level = "3";
-         type = "intermediate";
+         type = "directorscut";
          goldTime = "50000";
          artist = "Endercraft1";
          name = "Skinny Climber";

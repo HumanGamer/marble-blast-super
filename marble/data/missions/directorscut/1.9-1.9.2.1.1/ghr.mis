@@ -6,7 +6,7 @@ new SimGroup(MissionGroup) {
          startHelpText = "Better hurry, you have 60 seconds!";
          desc = "Speed through the gravity puzzle as you avoid the hazards and collect the gems!";
          level = "2";
-         type = "Intermediate";
+         type = "directorscut";
          goldTime = "30000";
          artist = "Endercraft1";
          name = "Gravity Hazard Rush";

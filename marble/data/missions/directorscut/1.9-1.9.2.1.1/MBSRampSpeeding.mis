@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          desc = "Speed up the ramps in this level.";
          level = "7";
-         type = "Intermediate";
+         type = "directorscut";
          goldTime = "15000";
          artist = "James Colsey";
          name = "Ramp Speeding";
