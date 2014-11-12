@@ -84,3 +84,6 @@ $pref::CurrentMOTD = "Welcome to MarbleBlast!";
 $Pref::Unix::OpenALFrequency = 44100;
 
 $pref::Multiplayer::isMultiplayer = false;
+
+$pref::ShowRadar = true;
+$pref::ShowRearView = false;

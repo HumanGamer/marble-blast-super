@@ -1,18 +1,20 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapButtonCtrl(ME_Replay) {
-      profile = "GuiDefaultProfile";
+   new GuiBitmapButtonCtrl(OptShowRearViewButton) {
+      profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "321 408";
-      extent = "130 47";
+      position = "290 16";
+      extent = "37 37";
       minExtent = "8 8";
       visible = "1";
+      variable = "$pref::ShowRearView";
       helpTag = "0";
-      text = "Replay";
+      text = "OK";
       groupNum = "-1";
-      buttonType = "PushButton";
+      buttonType = "ToggleButton";
       repeatPeriod = "1000";
       repeatDecay = "1";
+      bitmap = "marble/client/ui/Options/graf_chkbx";
    };
 };

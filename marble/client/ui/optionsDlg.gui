@@ -808,8 +808,8 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                profile = "GuiTextListProfile";
                horizSizing = "right";
                vertSizing = "bottom";
-               position = "2 2";
-               extent = "183 128";
+               position = "0 0";
+               extent = "177 128";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
@@ -860,7 +860,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                   horizSizing = "right";
                   vertSizing = "bottom";
                   position = "485 25";
-                  extent = "113 18";
+                  extent = "123 18";
                   minExtent = "8 8";
                   visible = "1";
                   helpTag = "0";
@@ -872,7 +872,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                   horizSizing = "right";
                   vertSizing = "bottom";
                   position = "503 1";
-                  extent = "95 18";
+                  extent = "104 18";
                   minExtent = "8 8";
                   visible = "1";
                   helpTag = "0";
@@ -1247,6 +1247,36 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             minExtent = "8 8";
             visible = "1";
             variable = "$pref::ShowRearView";
+            helpTag = "0";
+            text = "OK";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = "./Options/graf_chkbx";
+         };
+         new GuiMLTextCtrl(OptShowRadar) {
+            profile = "GuiBigTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "30 60";
+            extent = "303 36";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+         new GuiBitmapButtonCtrl(OptShowRadarButton) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "290 61";
+            extent = "37 37";
+            minExtent = "8 8";
+            visible = "1";
+            variable = "$pref::ShowRadar";
             helpTag = "0";
             text = "OK";
             groupNum = "-1";

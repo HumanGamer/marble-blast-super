@@ -324,5 +324,12 @@ function setupPlayGui()
       PG_Rear.visible = false;
       PG_RearView.visible = false;
    }
+   
+   if ($pref::ShowRadar && !MissionInfo.hideRadar)
+   {
+      RadarContainer.visible = true;
+   } else {
+      RadarContainer.visible = false;
+   }
 }
 

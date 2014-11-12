@@ -179,7 +179,7 @@ function helpFade(%fade)
 function addHelpLine(%message, %playBeep)
 {
    if (getWordCount(%message)) {
-      %text = "<just:center><font:Animated:35>" @ %message;
+      %text = "<just:center><font:Whitestone:35>" @ %message;
       HelpTextBackground.setText("<color:000000>" @ %text);
       HelpTextForeground.setText("<color:FFFFFF>" @ %text);
 
