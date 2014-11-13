@@ -1,4 +1,32 @@
 =========================================================
+BETA 3.6
+November 11, 2014
+
+- 1 new Beginner level (Platforms)
+- 2 modified levels (Frictional Tour I, Slanted Route)
+- Directors' Cut additions, 6 DC level fixes
+- New logo
+- Added multiplayer end, pause, and three message box GUIs
+- playMissionGui and LobbyGui updates
+- Revamped EndGameGui
+- New button textures
+- Finish icon and new gem icons in radar
+- Added see radar option and ability for levels to allow/disallow radar
+
+=========================================================
+BETA 3.5.1
+November 10, 2014
+
+- 1 modified Tutorial level (Frictional Tour I) (spelling fixes)
+- Improved radar, thanks to Jeff
+- Added compass
+- Revamped main menu
+- EndGameGui: next level button
+- EnterNameDlg changes
+- game.cs changes and fixes
+- Fixed many multiplayer glitches
+
+=========================================================
 BETA 3.5
 November 9, 2014
 
