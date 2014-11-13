@@ -6,9 +6,9 @@ new SimGroup(MissionGroup) {
          goldTime = "20000";
          artist = "Matthieu Parizeau";
          type = "beginner";
-         name = "Matt Has Ten Butts";
+         name = "Little Crossing";
          time = "0";
-         desc = "A butt level! :P...I can\'t think of a better name...Am I dumbo?!?";
+         desc = "Short and sweet.";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -52,7 +52,7 @@ new SimGroup(MissionGroup) {
       position = "0 0 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/beginner/matthastenbutts.dif";
+      interiorFile = "~/data/interiors/beginner/littlecrossing.dif";
       showTerrainInside = "0";
    };
    new Item() {
