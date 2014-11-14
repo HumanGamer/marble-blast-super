@@ -2,14 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         goldTime = "30000";
+         desc = "Use the skills you learned to conquer the challenges in this level!";
          level = "1";
          artist = "davidjl123, Endercraft1";
          startHelpText = "Test the lessons you learned in this level! Good luck.";
          type = "directorscut";
-         goldTime = "30000";
-         time = "0";
-         desc = "Use the skills you learned to conquer the challenges in this level!";
          name = "Are you ready?";
+         time = "0";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -51,25 +51,26 @@ new SimGroup(MissionGroup) {
    };
    new ScriptObject() {
          penaltyTime = "0";
+         gemCount = "0";
          powerUp = "0";
+         bonusTime = "0";
          pad = "3473";
          time = "0";
-         bonusTime = "0";
-         gemCount = "0";
    };
    new ScriptObject() {
          penaltyTime = "0";
+         gemCount = "0";
          powerUp = "0";
+         bonusTime = "0";
          pad = "1612";
          time = "0";
-         bonusTime = "0";
-         gemCount = "0";
    };
    new StaticShape(StartPoint) {
       position = "-21.177 -12.5573 91.8";
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "4001";
    };
    new InteriorInstance() {
       position = "-23.158 -4.45441 108.816";
@@ -80,11 +81,11 @@ new SimGroup(MissionGroup) {
    };
    new ScriptObject() {
          penaltyTime = "0";
+         gemCount = "0";
          powerUp = "0";
+         bonusTime = "0";
          pad = "2700";
          time = "0";
-         bonusTime = "0";
-         gemCount = "0";
    };
    new Item() {
       position = "-2.99734 -15.3968 97.2935";
@@ -103,6 +104,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3996";
    };
    new Trigger() {
       position = "-1.2116 -10.619 96.0337";
@@ -131,11 +133,11 @@ new SimGroup(MissionGroup) {
    };
    new ScriptObject() {
          penaltyTime = "0";
+         gemCount = "0";
          powerUp = "0";
+         bonusTime = "0";
          pad = "4571";
          time = "0";
-         bonusTime = "0";
-         gemCount = "0";
    };
    new StaticShape() {
       position = "-4.83572 4.95987 101.365";
@@ -151,6 +153,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3997";
    };
    new Trigger() {
       position = "8.72313 4.89371 103.911";
@@ -207,6 +210,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3998";
    };
    new Item() {
       position = "9.07757 -25.4611 108.162";
@@ -216,6 +220,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3999";
    };
    new Item() {
       position = "16.3162 -25.5654 111.048";
@@ -228,32 +233,29 @@ new SimGroup(MissionGroup) {
    };
    new ScriptObject() {
          penaltyTime = "0";
+         gemCount = "0";
          powerUp = "0";
+         bonusTime = "0";
          pad = "5954";
          time = "0";
-         bonusTime = "0";
-         gemCount = "0";
    };
    new StaticShape() {
       position = "26.4703 -22.6413 114.716";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "tornado";
+      dataBlock = "Tornado";
    };
-   new Item() {
-      position = "20.9173 -26.5817 115.016";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "GemItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
    new StaticShape(EndPoint) {
       position = "20.8526 -12.4407 114.016";
       rotation = "1 0 0 9.00004";
       scale = "1 1 1";
       dataBlock = "EndPad";
+         beam = "3976";
    };
    new Trigger() {
       position = "-56.0958 24.2943 90.1028";
@@ -264,16 +266,11 @@ new SimGroup(MissionGroup) {
    };
    new ScriptObject() {
          penaltyTime = "0";
+         gemCount = "0";
          powerUp = "0";
+         bonusTime = "0";
          pad = "8739";
          time = "0";
-         bonusTime = "0";
-         gemCount = "0";
-   };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---
