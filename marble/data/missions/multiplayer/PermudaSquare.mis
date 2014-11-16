@@ -153,7 +153,7 @@ new SimGroup(MissionGroup) {
       position = "0 0 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/PermudaSquare.dif";
+      interiorFile = "~/data/interiors/multiplayer/PermudaSquare.dif";
       showTerrainInside = "0";
    };
    new SimGroup(GemSpawns) {

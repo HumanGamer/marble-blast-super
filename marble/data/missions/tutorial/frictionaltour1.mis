@@ -68,7 +68,7 @@ new SimGroup(MissionGroup) {
       position = "-74.2407 -41.4145 -18.7798";
       rotation = "1 0 0 0";
       scale = "0.5 0.5 0.5";
-      interiorFile = "~/data/interiors/frictionaltour1.dif";
+      interiorFile = "~/data/interiors/tutorial/frictionaltour1.dif";
       showTerrainInside = "0";
    };
    new ScriptObject() {

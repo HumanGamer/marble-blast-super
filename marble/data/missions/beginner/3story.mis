@@ -195,7 +195,7 @@ new SimGroup(MissionGroup) {
       position = "-28.0493 -52.6849 -3.6623";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/3story.dif";
+      interiorFile = "~/data/interiors/beginner/3story.dif";
       showTerrainInside = "0";
    };
    new Trigger(Bounds) {

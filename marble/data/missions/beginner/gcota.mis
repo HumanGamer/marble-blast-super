@@ -154,7 +154,7 @@ new SimGroup(MissionGroup) {
       position = "0.12171 -6.89194 -22.9268";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/gcota.dif";
+      interiorFile = "~/data/interiors/beginner/gcota.dif";
       showTerrainInside = "0";
    };
    new ScriptObject() {
