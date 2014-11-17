@@ -607,7 +607,7 @@ new SimGroup(MissionGroup) {
       scale = "4 4 1";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "No more jumping!";
+         text = "No jumping at this floor!";
    };
    new StaticShape() {
       position = "-7.8486 -84.176 -39.6169";
