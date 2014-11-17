@@ -274,7 +274,7 @@ new SimGroup(MissionGroup) {
          pad = "2677";
    };
    new Item() {
-      position = "-26.9017 -91.2966 -59.6054";
+      position = "-26.9017 -91.2966 -59.7054";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "GemItem";
@@ -285,7 +285,7 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new Item() {
-      position = "-26.9292 -75.0217 -59.1827";
+      position = "-26.9292 -75.0217 -59.7054";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "GemItem";
@@ -296,7 +296,7 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new Item() {
-      position = "-11.1142 -75.1603 -59.6243";
+      position = "-11.1142 -75.1603 -59.7054";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "GemItem";
@@ -307,7 +307,7 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new Item() {
-      position = "-11.0867 -91.4352 -60.0758";
+      position = "-11.0867 -91.4352 -59.7054";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "GemItem";
