@@ -1,4 +1,17 @@
 =========================================================
+BETA 3.7
+November 17, 2014
+
+- 2 new Beginner levels (Little Crossing, Potato Farm)
+- 1 modified Expert level (Catwalk Instinct)
+- 1 modified DC level (Are you ready?)
+- Main marble texture edited
+- 6 textures changed
+- Hazard texture changes
+- playMissionGui and button texture changes
+- Interior organization
+
+=========================================================
 BETA 3.6
 November 11, 2014
 
