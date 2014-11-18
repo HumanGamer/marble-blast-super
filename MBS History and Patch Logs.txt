@@ -25,6 +25,7 @@ November 11, 2014
 - New button textures
 - Finish icon and new gem icons in radar
 - Added see radar option and ability for levels to allow/disallow radar
+- Forced radar on in multiplayer
 
 =========================================================
 BETA 3.5.1
