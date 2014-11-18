@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          goldTime = "60000";
          time = "0";
-         desc = "Use some really vreative ways of climbing up this course.";
+         desc = "Use some really creative ways of climbing up this course.";
          artist = "Ender";
          level = "6";
          name = "Whatever Goes Up";
@@ -179,7 +179,7 @@ new SimGroup(MissionGroup) {
       position = "-7.9405 -14.7849 -47.5699";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/wgu2.dif";
+      interiorFile = "~/data/interiors/beginner/wgu2.dif";
       showTerrainInside = "0";
    };
    new StaticShape() {
