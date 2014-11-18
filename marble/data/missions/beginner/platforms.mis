@@ -3,7 +3,8 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          time = "0";
-		 goldTime = "20000";
+	 goldTime = "20000";
+         artist = "Matthieu Parizeau";
          type = "beginner";
          name = "Platforms";
          desc = "A blue level.";
