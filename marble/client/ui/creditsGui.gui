@@ -39,7 +39,7 @@ new GuiChunkedBitmapCtrl(CreditsGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/back";
+         bitmap = "./credits/home";
       };
    };
 };
