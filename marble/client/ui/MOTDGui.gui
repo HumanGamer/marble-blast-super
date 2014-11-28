@@ -8,30 +8,49 @@ new GuiControl(MOTDGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
+      tile = "0";
       bitmap = "./background.jpg";
       useVariable = "0";
-      tile = "0";
 
    new GuiBitmapCtrl() {
       profile = "GuiDefaultProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "215 159";
-      extent = "186 219";
+      position = "97 134";
+      extent = "445 211";
       minExtent = "48 92";
       visible = "1";
       helpTag = "0";
-      bitmap = "common/ui/dialog";
+      bitmap = "./motd/new_mess_base";
       wrap = "0";
-         canClose = "0";
-         maxLength = "255";
-         resizeWidth = "1";
          canMinimize = "0";
          resizeHeight = "1";
          canMaximize = "0";
          canMove = "1";
          minSize = "50 50";
+         canClose = "0";
+         maxLength = "255";
+         resizeWidth = "1";
 
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "322 139";
+         extent = "79 60";
+         minExtent = "8 8";
+         visible = "1";
+         command = "StartDemoTimer();Canvas.popDialog(MOTDGui);";
+         accelerator = "return";
+         helpTag = "0";
+         text = "OK";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./motd/ok";
+            simpleStyle = "0";
+      };
       new GuiMLTextCtrl(MOTDGuiText) {
          profile = "GuiMLTextProfile";
          horizSizing = "right";
@@ -45,46 +64,48 @@ new GuiControl(MOTDGui) {
          allowColorChars = "0";
          maxChars = "-1";
       };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "33 136";
+         extent = "46 54";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$pref::checkMOTDAndVersion";
+         helpTag = "0";
+         text = "OK";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./motd/mess_chkbx";
+      };
+      new GuiMLTextCtrl(MOTDCheckText) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "86 158";
+         extent = "226 24";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
    };
-   new GuiScrollCtrl() {
-      profile = "GuiScrollProfile";
+   new GuiBubbleTextCtrl() {
+      profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "242 180";
-      extent = "134 177";
+      position = "333 300";
+      extent = "373 35";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      willFirstRespond = "1";
-      hScrollBar = "alwaysOn";
-      vScrollBar = "alwaysOn";
-      constantThumbHeight = "0";
-      childMargin = "0 0";
-
-      new GuiTextCtrl() {
-         profile = "GuiTextProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "2 2";
-         extent = "101 18";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         text = "Muahaha Im copying Spy47...";
-         maxLength = "255";
-      };
-      new GuiTextCtrl() {
-         profile = "GuiTextProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "5 19";
-         extent = "99 18";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         text = "Spy47 cause i can...";
-         maxLength = "255";
-      };
+      text = "Welcome to Marble Blast Super! Have fun!";
+      maxLength = "255";
    };
 };
 //--- OBJECT WRITE END ---

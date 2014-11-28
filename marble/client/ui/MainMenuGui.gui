@@ -28,8 +28,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "28 416";
-         extent = "126 40";
+         position = "25 415";
+         extent = "125 40";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();quit();";
@@ -45,8 +45,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "27 24";
-         extent = "140 36";
+         position = "25 20";
+         extent = "140 40";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();$pref::Multiplayer::isMultiplayer=0; PMSetMissionTab(\"tutorial\"); Canvas.setContent(playmissiongui);";
@@ -62,8 +62,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "24 320";
-         extent = "112 36";
+         position = "20 320";
+         extent = "115 35";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();Canvas.setContent(HelpCreditsGui);";
@@ -79,8 +79,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "28 284";
-         extent = "104 35";
+         position = "25 280";
+         extent = "105 35";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();$optionsBackGui = \"MainMenuGui\";Canvas.setContent(optionsDlg);";
@@ -96,8 +96,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "28 243";
-         extent = "108 37";
+         position = "25 240";
+         extent = "110 40";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();Canvas.setContent(creditsGui);";
@@ -113,8 +113,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "30 108";
-         extent = "155 36";
+         position = "30 105";
+         extent = "155 35";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();Canvas.setContent(ReplayCenterGui);";
@@ -130,8 +130,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "22 68";
-         extent = "148 36";
+         position = "20 65";
+         extent = "150 35";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();Canvas.setContent(LoginGui);";
@@ -142,6 +142,23 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          repeatPeriod = "1000";
          repeatDecay = "1";
          bitmap = "./home/multiplayer";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "530 385";
+         extent = "75 65";
+         minExtent = "8 8";
+         visible = "1";
+         command = "canvas.pushdialog(motdgui);";
+         helpTag = "0";
+         text = "motd";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+         bitmap = "./motd/motd_buttn";
       };
    };
    new GuiBitmapCtrl() {
