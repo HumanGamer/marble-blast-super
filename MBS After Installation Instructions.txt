@@ -20,27 +20,16 @@ To the folder
 
 NON-IGNITION VERSION:
 
-getdxver.exe
 glu2d3d.dll
-INSTALL.LOG
-launch.ini
-license.txt
 main.cs
 marbleblast.exe
 ogg.dll
 openal32.dll
 opengl2d3d.dll
-readme.txt
-setup.ini
-theUninstallFile.txt
-theUninstallFile0.txt
-Unwise.exe
-version.txt
 vorbis.dll
 
 IGNITION VERSION:
 
-getdxver.exe
 glu2d3d.dll
 ignition
 main.cs
@@ -48,8 +37,6 @@ MarbleBlastGold.exe
 ogg.dll
 OpenAL32.dll
 opengl2d3d.dll
-README.txt
-uninst-mb.exe
 vorbis.dll
 
 ================================

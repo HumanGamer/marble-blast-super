@@ -1,3 +1,4 @@
+// Adds a radar object
 function addRadarObject(%id, %bitmap, %x, %y)
 {
    %oldObj = "RadarObject_" @ %id;
@@ -7,6 +8,7 @@ function addRadarObject(%id, %bitmap, %x, %y)
       //return;
    }
    
+   // Set gamepos to the 3d position without z
    %gamePos = %x SPC %y;
    
    //%x = %x * -1;
@@ -25,6 +27,8 @@ function addRadarObject(%id, %bitmap, %x, %y)
    %maxX = getWord(%res, 0);
    %maxY = getWord(%res, 1);
    
+   // Trying to find correct positioning as it seemed off and I'm not sure what I should use.
+   // This seems to look better than before.
    %location = %maxX / 2 + 16 SPC %maxY / 2 + 16;//"-100 -100";//%x SPC %y;
    
    %obj = new GuiBitmapCtrl("RadarObject_" @ %id)
@@ -55,6 +59,7 @@ function addRadarObject(%id, %bitmap, %x, %y)
    //echo("Updated Gem: " @ %obj);
 //}
 
+// Removes A Radar Object
 function clientCmdRemoveRadarObject(%id)
 {
    %obj = "RadarObject_" @ %id;
@@ -62,6 +67,7 @@ function clientCmdRemoveRadarObject(%id)
       %obj.delete();
 }
 
+// Clears the radar. Used when level ends or restarts.
 function clientCmdClearRadar()
 {
    for (%i = 0; %i < RadarContainer.getCount(); %i++)
@@ -70,6 +76,8 @@ function clientCmdClearRadar()
    }
 }
 
+// Used to Update an Active RadarObject
+// Currently Unused or used to call addRadarObject I believe
 function clientCmdUpdateRadarObject(%id, %color, %x, %y)
 {
    //cancel($radarUpdate);
@@ -107,19 +115,23 @@ function clientCmdUpdateRadarObject(%id, %color, %x, %y)
    //%id.position = %rx SPC %ry;
 }
 
+// Updates Radar Objects
 function updateRadar()
 {
    cancel($radarUpdate);
    
+   // If marble doesn't exist skip this radar update
    if (!isObject(getMyMarble()))
    {
       $radarUpdate = schedule(30, 0, updateRadar);
       return;   
    }
    
+   // Get Marble Transform
    %trans = getMyMarble().getTransform();
    %centerX = getWord(%trans, 0);
    %centerY = getWord(%trans, 1);
+   
    //%centerZ = getWord(%trans, 2);
    
    //%cameraRotation = getWord(%eye, 3) SPC getWord(%eye, 4) SPC getWord(%eye, 5) SPC getWord(%eye, 6);
@@ -131,30 +143,40 @@ function updateRadar()
    //%cameraRotation = getCameraRotation();
    //PlayerListGui.update(123, "Angle", false, %cameraRotation);
    
+   // Make sure that the RadarContainer's size is the same as the screen resolution.
    RadarContainer.extent = getRes();
    
+   // Save the extent in res
    %res = RadarContainer.extent;
    
+   // Gets Current Size of RadarContainer
    %maxX = getWord(%res, 0);
    %maxY = getWord(%res, 1);
    
+   // Don't let the RadarObjects go further than 1/8th the resolution as a minimum
    %minX = %maxX / 8;
    %minY = %maxY / 8;
    
+   // Shift The RadarObject to be centred on the RadarContainer
    %maxX -= %minX;
    %maxY -= %minY;
    
+   // Radar Scale
    %scale = 10;
    
+   // Set %yaw to the current Yaw
    %yaw = mDegToRad(getWord(getCameraRotation(getMyMarble()), 2));
    
+   // Cosine and Sine of yaw
    %cos = mCos(%yaw);
    %sin = mSin(%yaw);
    
+   // Loop through all radar objects
    for (%i = 0; %i < RadarContainer.getCount(); %i++)
    {
       %obj = RadarContainer.getObject(%i);
       
+	  // Get their in 3d position without z axis
       %x = getWord(%obj.gamePos, 0);
       %y = getWord(%obj.gamePos, 1);
       //%z = getWord(%obj.gamePos, 2);
@@ -171,7 +193,7 @@ function updateRadar()
       //%rx += 150;
       //%ry += 150;
       
-      // jeff math
+      // jeff's math - unsure how it works
       %difX = %x - %centerX;
       %difY = %y - %centerY;
       //%difZ = %z - %centerZ;
@@ -187,6 +209,8 @@ function updateRadar()
 
       %posX = %sclX + %maxX/2;
       %posY = %sclY + %maxY/2;
+	  
+	  // end of jeff's math
       
       //%dx = %centerX - %x;
       //%dy = %centerY - %y;
@@ -204,6 +228,8 @@ function updateRadar()
       //%posY *= -1;
       
       //%posX = (%centerX - %x);
+	  
+	  // Make sure radar objects do not end up offscreen
       if (%posX < %minX)
          %posX = %minX;
       if (%posX >= %maxX)
@@ -214,8 +240,10 @@ function updateRadar()
       if (%posY >= %maxY)
          %posY = %maxY;
       
+	  // Set the position
       %obj.position = %posX SPC %posY;
    }
    
+   // Update Radar again in 30 milliseconds
    $radarUpdate = schedule(30, 0, updateRadar);
 }
