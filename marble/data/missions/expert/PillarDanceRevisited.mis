@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          desc = "Watch your step in this violent square dance.";
          name = "Pilar Dance Revisited";
          level = "3";
-         goldTime = "0";
+         goldTime = "10000";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

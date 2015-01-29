@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          desc = "Welcome to Marble Blast Super! Learn how to roll in this level.";
          level = "1";
          type = "Tutorial";
-         startHelpText = "Use the WASD keys to move your marble!";
+         startHelpText = "Use the <func:bind moveforward><func:bind moveleft><func:bind movebackward><func:bind moveright> keys to move your marble!";
          goldTime = "3000";
          name = "First Steps";
    };
