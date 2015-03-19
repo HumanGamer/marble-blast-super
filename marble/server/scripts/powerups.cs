@@ -12,7 +12,8 @@ function PowerUp::onPickup(%this,%obj,%user,%amount)
 {
    // Dont' pickup the power up if it's the same
    // one we already have.
-   if (%user.powerUpData == %this)
+   %gravinvcheck = %user.grav_inv_rotation $= getWords(%obj.getTransform(),3);
+   if (%user.powerUpData == %this && (%this.powerUpId != 9 || (%this.powerUpId == 9 && %gravinvcheck)))
       return false;
 
    // Grab it...
@@ -594,4 +595,59 @@ function GameConnection::makeMini(%this)
       %this.ghost.setDatablock(GhostMiniMarble);
    
    %this.megaMarbleSchedule = %this.schedule(10000, makeNoMega);
+}
+
+datablock AudioProfile(doGravityInverterSfx)
+{
+   filename    = "~/data/sound/doGravityInverter.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
+datablock AudioProfile(PuGravityInverterVoiceSfx)
+{
+   filename    = "~/data/sound/puGravityInverterVoice.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
+datablock ItemData(GravityInverterItem)
+{
+   // Mission editor category
+   category = "Powerups";
+   className = "PowerUp";
+   powerUpId = 9;
+
+   activeAudio = doGravityInverterSfx;
+   pickupAudio = PuGravityInverterVoiceSfx;
+
+   // Basic Item properties
+   shapeFile = "~/data/shapes/items/gravity_inverter.dts";
+   mass = 1;
+   friction = 1;
+   elasticity = 0.3;
+
+   // Dynamic properties defined by the scripts
+   pickupName = "a Gravity Inverter PowerUp!";
+   useName = "Gravity Inverter PowerUp";
+   maxInventory = 1;
+};
+
+function GravityInverterItem::onPickup(%this,%obj,%user,%amount)
+{
+   Parent::onPickup(%this, %obj, %user, %amount);
+   %user.grav_inv_rotation = getWords(%obj.getTransform(),3);
+   //echo("Set: " @ %user.grav_inv_rotation);
+}
+
+function GravityInverterItem::usePowerUp(%this, %obj)
+{
+   //echo("Get: " @ %obj.grav_inv_rotation);
+   %rotation = %obj.grav_inv_rotation;
+   %ortho = vectorOrthoBasis(%rotation);
+   %up = getWords(%ortho,6);
+   if (getGravityDir() !$= %up) {
+      %obj.client.setGravityDir(%ortho);
+      $Game::CurrentGravityDir = %ortho;
+   }
 }
