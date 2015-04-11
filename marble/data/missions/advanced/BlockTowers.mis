@@ -2,12 +2,12 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         name = "Block Towers";
          desc = "Ascend up the towers to reach the finish!";
          goldTime = "15000";
          level = "4";
+         name = "Block Towers";
+         type = "Advanced";
          artist = "Rozi";
-         type = "adavanced";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -55,12 +55,12 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         pad = "3690";
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
          bonusTime = "0";
+         pad = "3690";
    };
    new ParticleEmitterNode() {
       position = "49.5233 -140.767 -10.0601";
@@ -71,35 +71,35 @@ new SimGroup(MissionGroup) {
       velocity = "1";
    };
    new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "2615";
+   };
+   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
          bonusTime = "0";
-   };
-   new ScriptObject() {
          pad = "2406";
-         time = "0";
-         penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
-         bonusTime = "0";
    };
    new ScriptObject() {
-         pad = "3708";
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
          bonusTime = "0";
+         pad = "3708";
    };
    new StaticShape(StartPoint) {
       position = "472.264 -479.476 -868.522";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "28005";
+         beam = "5590";
    };
    new Item() {
       position = "468.15 -463.574 -868.405";
@@ -122,12 +122,12 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
-         pad = "25150";
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
          bonusTime = "0";
+         pad = "25150";
    };
    new Item() {
       position = "472.327 -459.5 -864.527";
@@ -144,7 +144,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "0.3 0.3 0.3";
       dataBlock = "EndPad";
-         beam = "27883";
+         beam = "5552";
    };
    new Item() {
       position = "468.241 -455.502 -858.974";
@@ -156,11 +156,6 @@ new SimGroup(MissionGroup) {
       rotate = "1";
          checkpointNum = "1";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
-   };
    new Item() {
       position = "472.198 -454.21 -870.636";
       rotation = "1 0 0 0";
@@ -170,6 +165,18 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          timeBonus = "11000";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+   new Trigger() {
+      position = "449.567 -444.809 -876.494";
+      rotation = "1 0 0 0";
+      scale = "45 45 30";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
 };
 //--- OBJECT WRITE END ---
