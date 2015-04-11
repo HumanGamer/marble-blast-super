@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          name = "Complexity Ascent";
          artist = "James Colsey";
          desc = "Every challenge will get harder and harder.";
-         level = "1";
+         level = "2";
          startHelpText = "Roll to the goal!";
    };
    new MissionArea(MissionArea) {

@@ -1,0 +1,1336 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         time = "120000";
+         name = "Agility";
+         type = "medium";
+         artist = "Endy";
+         desc = "You only have 2 minutes! Make up to the top as fast as you can.";
+         level = "5";
+         startHelpText = "Grab as much Time Changers as possible.";
+         goldTime = "60000";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0";
+      cloudHeightPer[1] = "0";
+      cloudHeightPer[2] = "0";
+      cloudSpeed1 = "0.0001";
+      cloudSpeed2 = "0.0002";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "-1 0 0";
+      fogVolume2 = "-1 0 0";
+      fogVolume3 = "-1 0 0";
+      materialList = "~/data/skies/sky3/sky_day.dml";
+      windVelocity = "1 0 0";
+      windEffectPrecipitation = "0";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 0.000000";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.400000 0.400000 0.400000 1.000000";
+   };
+   new Item() {
+      position = "-80.7166 15.2884 -10.4802";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17773";
+         checkpointNum = "1";
+   };
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "3690";
+   };
+   new StaticShape(StartPoint) {
+      position = "-80.7613 -6.99092 -6.38521";
+      rotation = "1 0 0 0";
+      scale = "0.65 0.65 0.65";
+      dataBlock = "StartPad";
+         beam = "17788";
+   };
+   new Trigger() {
+      position = "-128.357 56.5719 -11.3815";
+      rotation = "1 0 0 0";
+      scale = "100 100 100";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2615";
+   };
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "3708";
+   };
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2406";
+   };
+   new InteriorInstance() {
+      position = "-82.1895 -7.37941 -142.942";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/new02.dif";
+      showTerrainInside = "0";
+   };
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "44488";
+   };
+   new Item() {
+      position = "-80.7396 2.55697 -6.16411";
+      rotation = "1 0 0 90";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "GravityInverterItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-80.7264 19.3753 4.64182";
+      rotation = "1 0 0 180";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "GravityInverterItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-80.6827 19.6772 -0.391628";
+      rotation = "-1 0 0 90";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17774";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-92.2044 25.0626 2.63739";
+      rotation = "1 0 0 190";
+      scale = "20 20 20";
+      dataBlock = "AntiGravityItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-93.7324 25.478 5.4602";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+         timeBonus = "10000";
+   };
+   new Item() {
+      position = "-94.2789 19.8667 5.54627";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17775";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-100.257 31.8742 5.56864";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17776";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-77.5659 -8.59836 -6.43859";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+         timeBonus = "4000";
+   };
+   new Item() {
+      position = "-74.8987 -6.20592 -5.90872";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+         timeBonus = "20000";
+   };
+   new StaticShape() {
+      position = "-74.8703 -6.2343 -6.31675";
+      rotation = "1 0 0 0";
+      scale = "0.1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "1890883";
+         normalScale = "0.1 1 1";
+         hide = "1890882";
+         used = "0";
+         unhide1 = "1890884";
+   };
+   new StaticShape() {
+      position = "-80.1618 25.3865 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-82.219 31.1334 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-79.2463 31.1138 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-80.1756 31.1179 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-80.727 26.2366 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-80.7355 27.0681 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-80.1999 28.1592 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-81.1857 28.1105 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-81.2039 31.1305 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-80.2132 29.0929 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-81.1458 29.1399 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-82.1501 30.1338 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-79.2376 30.1214 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-80.1771 30.0932 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-81.1882 30.147 5.56953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-79.2238 24.39 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-79.2325 25.3824 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-81.1719 22.3791 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-80.1861 22.4278 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-80.1994 23.3615 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-81.132 23.4085 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-82.1363 24.4024 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-82.2052 25.402 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-81.1744 24.4156 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-81.1901 25.3991 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-80.1633 24.3618 5.62044";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new Item() {
+      position = "-81.3285 25.2406 10.0487";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new StaticShape() {
+      position = "-98.4172 4.44758 9.49328";
+      rotation = "0 0 1 34.5724";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "RotationPlatform";
+         inc = "1";
+         axis = "z";
+         currentTime = "0";
+         timer = "30";
+   };
+   new StaticShape() {
+      position = "-105.036 13.0939 5.77844";
+      rotation = "1 0 0 34.5724";
+      scale = "1 1 1";
+      dataBlock = "RotationPlatform";
+         inc = "1";
+         axis = "x";
+         currentTime = "0";
+         timer = "30";
+   };
+   new StaticShape() {
+      position = "-101.768 7.71898 8.59479";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2477146";
+         normalScale = "1 1 1";
+         hide = "2477145";
+         used = "0";
+         unhide1 = "2477147";
+   };
+   new Item() {
+      position = "-101.785 7.69481 9.0704";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17777";
+         checkpointNum = "2";
+   };
+   new Trigger() {
+      position = "-99.5149 -2.73558 10.2912";
+      rotation = "1 0 0 0";
+      scale = "26 8 10";
+      dataBlock = "PhysicsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         var = "maxrollvelocity";
+         value = "50";
+   };
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "52367";
+   };
+   new Trigger() {
+      position = "-99.5714 -3.26251 9.79148";
+      rotation = "1 0 0 0";
+      scale = "26 8 10";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         time = "2000";
+         target = "tele1";
+   };
+   new StaticShape(check2) {
+      position = "-48.6834 25.6116 27.565";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "CheckPointShape";
+   };
+   new SimGroup(CannonBalls) {
+   };
+   new Trigger() {
+      position = "-106.539 26.648 5.32661";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check1";
+   };
+   new StaticShape(check1) {
+      position = "-104.712 24.5571 5.59457";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "CheckPointShape";
+   };
+   new StaticShape() {
+      position = "-110.666 2.0953 11.7751";
+      rotation = "0 -1 0 90";
+      scale = "1 1 1";
+      dataBlock = "DuctFan";
+   };
+   new StaticShape() {
+      position = "-110.672 -4.8959 11.7641";
+      rotation = "0 -1 0 90";
+      scale = "1 1 1";
+      dataBlock = "DuctFan";
+   };
+   new Trigger(tele1) {
+      position = "-126.752 -0.0964907 13.8178";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TeleportTargetTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new Trigger() {
+      position = "-69.6337 -2.90422 10.416";
+      rotation = "1 0 0 0";
+      scale = "15 7 10";
+      dataBlock = "PhysicsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         var = "gravity";
+         value = "5";
+   };
+   new Trigger() {
+      position = "-52.2106 -1.36261 11.1766";
+      rotation = "1 0 0 0";
+      scale = "7 2 7";
+      dataBlock = "PhysicsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         var = "jumpimpulse";
+         value = "17";
+   };
+   new Item() {
+      position = "-80.7267 -6.35686 10.5462";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17778";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-74.826 -6.18339 10.5043";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-48.6645 -6.38951 14.5475";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17779";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-48.6869 -4.43911 14.8057";
+      rotation = "1 0 0 90";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "GravityInverterItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-48.6689 23.4005 21.721";
+      rotation = "-1 0 0 90";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17780";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-48.6649 23.3576 26.6114";
+      rotation = "1 0 0 180";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "GravityInverterItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-48.6902 22.7727 16.3956";
+      rotation = "1 0 0 90";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "2";
+   };
+   new StaticShape() {
+      position = "-86.8952 32.5496 27.3198";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Tornado";
+   };
+   new Trigger() {
+      position = "-50.6831 27.9658 26.8234";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check2";
+   };
+   new Item() {
+      position = "-104.94 17.2903 6.31464";
+      rotation = "1 0 0 180";
+      scale = "1 1 1";
+      dataBlock = "AntiGravityItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "2";
+   };
+   new StaticShape() {
+      position = "-106.776 12.7206 60.0301";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Cannon";
+         radius = "15";
+         currentTime = "810";
+         ball = "14807";
+         timer = "3000";
+         power = "25";
+   };
+   new StaticShape() {
+      position = "-47.14 34.0993 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new Item() {
+      position = "-57.0228 32.6221 27.5618";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "MegaMarbleItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "3";
+   };
+   new StaticShape() {
+      position = "-46.2009 35.1093 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-48.2397 31.1748 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-51.1959 35.083 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-51.1474 33.127 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-49.185 32.1472 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-47.1914 32.1013 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-47.2247 35.089 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-50.1971 34.1288 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-49.176 33.1116 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-49.1764 35.1324 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-48.1298 33.1252 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-46.1829 33.139 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-48.1651 34.1375 27.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMine";
+         resetTime = "Default";
+   };
+   new Item() {
+      position = "-46.2071 34.1371 27.5277";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17781";
+         checkpointNum = "3";
+   };
+   new StaticShape() {
+      position = "-50.1949 31.1288 27.5426";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMineMBG";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-52.2015 35.1336 27.5426";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMineMBG";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-52.1681 34.1331 27.5426";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMineMBG";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-54.2176 35.1449 27.5426";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMineMBG";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-53.2079 32.1483 27.5426";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMineMBG";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-51.1838 32.1133 27.5426";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMineMBG";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-52.1806 33.1287 27.5426";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMineMBG";
+         resetTime = "Default";
+   };
+   new StaticShape() {
+      position = "-53.1966 34.1146 27.5426";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LandMineMBG";
+         resetTime = "Default";
+   };
+   new Item() {
+      position = "-50.19 35.159 27.4874";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "3";
+   };
+   new Item() {
+      position = "-69.2419 32.7368 27.2832";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17782";
+         checkpointNum = "3";
+   };
+   new Item() {
+      position = "-98.5325 32.8497 31.5164";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "3";
+   };
+   new StaticShape() {
+      position = "-107.881 -9.57312 11.7883";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "SignPlainLeft";
+   };
+   new StaticShape() {
+      position = "-107.994 17.4037 6.77877";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "SignCautionDanger";
+   };
+   new StaticShape() {
+      position = "-67.9394 -9.43359 11.6854";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "SignPlainUp";
+   };
+   new StaticShape() {
+      position = "-45.422 -1.60601 15.7581";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SignPlainUp";
+   };
+   new StaticShape() {
+      position = "-77.4187 3.23994 -5.31116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SignPlainDown";
+   };
+   new StaticShape() {
+      position = "-83.9488 14.3548 -9.26711";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SignPlainUp";
+   };
+   new StaticShape() {
+      position = "-77.4706 31.964 6.66202";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SignPlainLeft";
+   };
+   new StaticShape() {
+      position = "-107.843 31.8247 6.70908";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "SignPlainLeft";
+   };
+   new StaticShape() {
+      position = "-103.75 32.619 28.8004";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "SignPlainLeft";
+   };
+   new StaticShape() {
+      position = "-45.4323 35.7383 28.7439";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SignPlainLeft";
+   };
+   new StaticShape() {
+      position = "-101.224 27.5188 27.8113";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2540653";
+         normalScale = "1 1 1";
+         hide = "2540652";
+         used = "0";
+         unhide1 = "2540654";
+   };
+   new StaticShape() {
+      position = "-103.274 24.7767 28.3945";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2542259";
+         normalScale = "1 1 1";
+         hide = "2542258";
+         used = "0";
+         unhide1 = "2542260";
+   };
+   new StaticShape() {
+      position = "-103.461 18.549 30.0895";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2545162";
+         normalScale = "1 1 1";
+         hide = "2545161";
+         used = "0";
+         unhide1 = "2545163";
+   };
+   new StaticShape() {
+      position = "-101.386 21.488 29.0926";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2543793";
+         normalScale = "1 1 1";
+         hide = "2543792";
+         used = "0";
+         unhide1 = "2543794";
+   };
+   new StaticShape() {
+      position = "-102.221 15.5673 30.4299";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2546858";
+         normalScale = "1 1 1";
+         hide = "2546857";
+         used = "0";
+         unhide1 = "2546859";
+   };
+   new Item() {
+      position = "-102.225 5.16401 28.8849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17783";
+         checkpointNum = "3";
+   };
+   new StaticShape() {
+      position = "-103.481 -6.48097 31.6255";
+      rotation = "1 0 0 23";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2558442";
+         normalScale = "1 1 1";
+         hide = "2558441";
+         used = "0";
+         unhide1 = "2558443";
+   };
+   new StaticShape() {
+      position = "-101.561 -1.10686 31.5422";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2556721";
+         normalScale = "1 1 1";
+         hide = "2556720";
+         used = "0";
+         unhide1 = "2556722";
+   };
+   new StaticShape() {
+      position = "-103.848 2.0325 30.7045";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2555080";
+         normalScale = "1 1 1";
+         hide = "2555079";
+         used = "0";
+         unhide1 = "2555081";
+   };
+   new StaticShape() {
+      position = "-102.156 5.17943 28.3945";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2552444";
+         normalScale = "1 1 1";
+         hide = "2552443";
+         used = "0";
+         unhide1 = "2552445";
+   };
+   new StaticShape() {
+      position = "-99.1962 9.2724 32.073";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2549803";
+         normalScale = "1 1 1";
+         hide = "2549802";
+         used = "0";
+         unhide1 = "2549804";
+   };
+   new StaticShape() {
+      position = "-101.011 12.1384 31.3752";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         unhide = "2548272";
+         normalScale = "1 1 1";
+         hide = "2548271";
+         used = "0";
+         unhide1 = "2548273";
+   };
+   new Item() {
+      position = "-99.1685 9.28473 32.5135";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperBounceItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "3";
+   };
+   new Item() {
+      position = "-100.95 -12.7886 34.8758";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "3";
+   };
+   new Item() {
+      position = "-103.487 18.5941 30.6332";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17784";
+         checkpointNum = "3";
+   };
+   new StaticShape() {
+      position = "-95.6886 -13.3811 31.0744";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "ExplodingPlatform";
+         normalScale = "1 1 1";
+         hide = "2568439";
+   };
+   new StaticShape() {
+      position = "-94.8146 -16.5373 32.8109";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "SignPlainUp";
+   };
+   new StaticShape() {
+      position = "-95.6886 -11.3816 31.0744";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "ExplodingPlatform";
+         normalScale = "1 1 1";
+         hide = "2063475";
+   };
+   new StaticShape() {
+      position = "-95.6885 -15.3777 31.0736";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "ExplodingPlatform";
+         normalScale = "1 1 1";
+         hide = "1425824";
+   };
+   new Trigger() {
+      position = "-100.675 -11.3518 31.3189";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Use the exploding platforms to be launched upwards! Aim for the middle for the best boost. (Can only be used 3 times.)";
+   };
+   new StaticShape(check3) {
+      position = "-88.1743 -13.374 41.5846";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "CheckPointShape";
+   };
+   new Item() {
+      position = "-95.665 -13.3672 31.5767";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17785";
+         checkpointNum = "3";
+   };
+   new Item() {
+      position = "-81.1401 -13.3632 41.5242";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17786";
+         checkpointNum = "4";
+   };
+   new Item() {
+      position = "-92.7944 -12.8536 53.562";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "3";
+   };
+   new Item() {
+      position = "-91.7964 -6.36777 49.0147";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "17787";
+         checkpointNum = "4";
+   };
+   new Trigger() {
+      position = "-90.1275 -11.1529 40.843";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check3";
+   };
+   new StaticShape() {
+      position = "-98.686 -6.38002 49.0346";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DuctFan";
+   };
+   new Item() {
+      position = "-59.2028 10.5441 60.2211";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new StaticShape() {
+      position = "-106.913 12.6883 59.643";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Cannon";
+         radius = "15";
+         currentTime = "1020";
+         ball = "14805";
+         timer = "3000";
+         power = "25";
+   };
+   new Item() {
+      position = "-68.1967 -13.4037 46.9864";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+         timeBonus = "20000";
+   };
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "55661";
+   };
+   new Trigger() {
+      position = "-107.739 -4.34984 53.4702";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Bounce through the bumpy road while avoiding the cannons!";
+   };
+   new Trigger() {
+      position = "-107.583 -4.328 10.5095";
+      rotation = "1 0 0 0";
+      scale = "6 6 6";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Run quickly and flawless without hitting any walls, for if you fail to make it in time, you will meet your demise!";
+   };
+   new Trigger() {
+      position = "-102.568 34.3618 27.3707";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Don\'t wait, just keep going.";
+   };
+   new Trigger() {
+      position = "-50.6813 23.9782 23.3513";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Use the Gravity Inverter at the right time to flip on the other side.";
+   };
+   new Trigger() {
+      position = "-50.5813 -3.23658 13.6874";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Use the Gravity Inverter at the right time to flip on the other side.";
+   };
+   new Trigger() {
+      position = "-69.7213 -3.40936 10.4743";
+      rotation = "1 0 0 0";
+      scale = "6 6 6";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Jump!";
+   };
+   new Trigger() {
+      position = "-107.728 23.6756 4.45039";
+      rotation = "1 0 0 0";
+      scale = "6 6 6";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Time the spinning platform correctly, and make it through the obstacle with quick and precise movements.";
+   };
+   new Trigger() {
+      position = "-83.5981 12.6536 -11.605";
+      rotation = "1 0 0 0";
+      scale = "6 6 6";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "How can you get back up? You have the Gravity Inverter right?";
+   };
+   new Item() {
+      position = "-105.711 -6.39683 53.6239";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BlastItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "4";
+   };
+   new Trigger() {
+      position = "-83.701 25.765 5.35771";
+      rotation = "1 0 0 0";
+      scale = "6 6 6";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Slanted Tightropes! Fun, right?";
+   };
+   new Trigger() {
+      position = "-105.794 33.6104 56.1724";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "You did it!";
+   };
+   new StaticShape(EndPoint) {
+      position = "-55.6821 31.5066 56.6259";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "EndPad";
+         beam = "17703";
+   };
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "79970";
+   };
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "7528";
+   };
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "11988";
+   };
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "15586";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+};
+//--- OBJECT WRITE END ---

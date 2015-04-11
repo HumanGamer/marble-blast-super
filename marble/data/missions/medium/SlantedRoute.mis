@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          type = "Medium";
          startHelpText = "Pick up the GravityChanger, there is no way to pass it.";
          desc = "Wait until you see this course become slanted.";
-         level = "3";
+         level = "4";
          name = "Slanted Route";
    };
    new MissionArea(MissionArea) {
