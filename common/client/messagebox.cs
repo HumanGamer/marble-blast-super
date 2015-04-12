@@ -75,7 +75,7 @@ function MessageBoxOKCancelDlg::onSleep( %this )
 
 function MessageBoxYesNo( %title, %message, %yesCallback, %noCallback )
 {
-	MBYesNoTitle.setText( "<just:center><font:Whitestone:24>" @ %title );
+	//MBYesNoTitle.setText( "<just:center><font:Whitestone:24>" @ %title );
    Canvas.pushDialog( MessageBoxYesNoDlg );
    MBSetText(MBYesNoText, MBYesNoFrame, %message);
 	MessageBoxYesNoDlg.yesCallBack = %yesCallback;

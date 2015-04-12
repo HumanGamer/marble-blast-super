@@ -378,9 +378,11 @@ function altTrigger(%val)
 
 moveMap.bind( mouse, button0, mouseFire );
 //if($platform $= "macos")
-   moveMap.bind( keyboard, e, altTrigger );
+   //moveMap.bind( keyboard, e, altTrigger );
 //else
    moveMap.bind( mouse, button1, altTrigger );
+   
+moveMap.bind( keyboard, f, freelook );
    
 function openChat(%val)
 {

@@ -51,7 +51,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          position = "5 31";
          extent = "667 450";
          minExtent = "8 8";
-         visible = "0";
+         visible = "1";
          helpTag = "0";
 
          new GuiBitmapCtrl(OptMarbleControlsPane) {
@@ -240,6 +240,23 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                   repeatPeriod = "1000";
                   repeatDecay = "1";
                };
+            };
+            new GuiBitmapButtonTextCtrl(remap_altTrigger) {
+               profile = "GuiButtonProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "467 111";
+               extent = "120 50";
+               minExtent = "8 8";
+               visible = "1";
+               command = "OptControlsPane.remap(altTrigger, \"Use Blast\");";
+               helpTag = "0";
+               text = "Right Mouse";
+               groupNum = "-1";
+               buttonType = "PushButton";
+               repeatPeriod = "1000";
+               repeatDecay = "1";
+               bitmap = "./Options/ctrlbuton";
             };
          };
          new GuiBitmapCtrl(OptCameraControlsPane) {
@@ -931,7 +948,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             helpTag = "0";
             range = "0.000000 1.000000";
             ticks = "10";
-            value = "0.219378";
+            value = "0.511883";
             bitmap = "./Options/knob";
          };
          new GuiSliderCtrl() {
@@ -947,7 +964,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             helpTag = "0";
             range = "0.000000 1.000000";
             ticks = "10";
-            value = "0.274223";
+            value = "0.265082";
             bitmap = "./Options/knob";
          };
       };
@@ -1220,7 +1237,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          position = "19 80";
          extent = "596 349";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
          bitmap = "./options/options";
          wrap = "0";

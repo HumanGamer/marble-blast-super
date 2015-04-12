@@ -1,20 +1,20 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapButtonCtrl(OptShowRearViewButton) {
+   new GuiBitmapButtonTextCtrl(remap_mouseFire) {
       profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "290 16";
-      extent = "37 37";
+      position = "467 61";
+      extent = "120 50";
       minExtent = "8 8";
       visible = "1";
-      variable = "$pref::ShowRearView";
+      command = "OptControlsPane.remap(mouseFire, \"Use PowerUp\");";
       helpTag = "0";
-      text = "OK";
+      text = "Left Mouse";
       groupNum = "-1";
-      buttonType = "ToggleButton";
+      buttonType = "PushButton";
       repeatPeriod = "1000";
       repeatDecay = "1";
-      bitmap = "marble/client/ui/Options/graf_chkbx";
+      bitmap = "marble/client/ui/Options/ctrlbuton";
    };
 };
