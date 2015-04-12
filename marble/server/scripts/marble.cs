@@ -660,8 +660,11 @@ function Marble::useBlast(%this)
 {
    if (%this.blastEnergy >= %this.getDatablock().getName().minUsableBlast)
    {
+      %energy = (%this.blastEnergy / 1000) * -1;
+      %from = %energy SPC %energy SPC %energy;
+      %push = VectorMult(%from, getGravityDir());
       
-      %this.client.applyImpulse("0 0 0", "0 0" SPC %this.blastEnergy / 1000);
+      %this.client.applyImpulse("0 0 0", %push);
       %this.setBlastEnergy(0);
       %this.client.play2d(BlastSfx);
       
