@@ -1,20 +1,20 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapButtonTextCtrl(remap_mouseFire) {
-      profile = "GuiButtonProfile";
-      horizSizing = "right";
-      vertSizing = "bottom";
-      position = "467 61";
-      extent = "120 50";
+   new GuiBitmapButtonCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "relative";
+      vertSizing = "relative";
+      position = "428 371";
+      extent = "140 51";
       minExtent = "8 8";
       visible = "1";
-      command = "OptControlsPane.remap(mouseFire, \"Use PowerUp\");";
+      command = "Canvas.setContent(mainMenuGui);";
       helpTag = "0";
-      text = "Left Mouse";
+      text = "button";
       groupNum = "-1";
       buttonType = "PushButton";
       repeatPeriod = "1000";
       repeatDecay = "1";
-      bitmap = "marble/client/ui/Options/ctrlbuton";
+      bitmap = "marble/client/ui/credits/home";
    };
 };

@@ -21,9 +21,47 @@ new GuiChunkedBitmapCtrl(CreditsGui) {
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "./credits/credits_gui";
+      bitmap = "./play/playgui";
       wrap = "0";
 
+      new GuiMLTextCtrl(CreditsGuiTitle) {
+         profile = "GuiBigTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "52 45";
+         extent = "133 36";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiMLTextCtrl(CreditsGuiText) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "56 118";
+         extent = "527 288";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "352 19";
+         extent = "217 102";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./logo";
+         wrap = "0";
+      };
       new GuiBitmapButtonCtrl() {
          profile = "GuiDefaultProfile";
          horizSizing = "relative";
@@ -44,3 +82,21 @@ new GuiChunkedBitmapCtrl(CreditsGui) {
    };
 };
 //--- OBJECT WRITE END ---
+
+function CreditsGui::onWake(%this)
+{
+   CreditsGuiTitle.setText("Credits");
+   %colorName = "<color:441111>";
+   %colorUser = "<color:44CCCC>";
+   %text = "<font:Whitestone:32><tab:230>";
+   %text = %text @ %colorName @ "Stewart Inglis\t" @ %colorUser @ "StewMan46\n";
+   %text = %text @ %colorName @ "Tristan Voss\t" @ %colorUser @ "Ender\n";
+   %text = %text @ %colorName @ "David Luo\t" @ %colorUser @ "davidjl123\n";
+   %text = %text @ %colorName @ "Matthieu Parizeau\t" @ %colorUser @ "cooldudepoke\n";
+   %text = %text @ %colorName @ "Erik Martin\t" @ %colorUser @ "Neon Lightning\n";
+   %text = %text @ %colorName @ "Greg McFadden\t" @ %colorUser @ "Skail\n";
+   %text = %text @ %colorName @ "James Colsey\t" @ %colorUser @ "BlastedMarble\n";
+   %text = %text @ %colorName @ "Chris Schroeppel\t" @ %colorUser @ "Rozi\n";
+   
+   CreditsGuiText.setText(%text);
+}
