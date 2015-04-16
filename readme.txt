@@ -1,6 +1,6 @@
 Marble Blast Super
 Distributed by Greenbolt Studios
-(C) 2012-2014
+(C) 2012-2015
 --------------------------------------------------
 
 Thank you for playing Marble Blast Super.
@@ -17,19 +17,19 @@ Problems and Questions
 The MBS Team
 --------
 
-StewMan46 (Leader)
-EnderCraft1
-davidjl123
-cooldudepoke
-BlastedMarble
-Neon Lightning
-Skail
-Ralph
+Stewart Inglis		StewMan46
+Tristan Voss		Ender
+David Luo		davidjl123
+Matthieu Parizeau	cooldudepoke
+Erik Martin		Neon Lightning
+Greg McFadden		Skail
+James Colsey		BlastedMarble
+Chris Schroeppel	Rozi
 
 Overview
 --------
 
-Roll your marble through a rich cartoon landscape of moving 
+Roll your marble through a rich landscape of moving 
 platforms and dangerous hazards.  Along the way find power ups 
 to increase your speed, jumping ability or flight power, and 
 use them to collect the hidden gems and race to the finish for 
@@ -141,7 +141,7 @@ without cheating... but some of them are VERY hard to get.
 
 Problem: I have some other problem not listed above.
 
-Solution: Check the Greenbolt Studios website at: 
-http://greenboltstudios.proboards.com
+Solution: Check out the Marble Blast Super website at: 
+http://www.mbsuper.tk
 
 Readme file by RealNetworks, edited by Greenbolt Studios
