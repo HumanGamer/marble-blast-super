@@ -165,6 +165,10 @@ function SimGroup::resetCheckPoint(%this)
       } else if (%obj.getClassName() $= "SimGroup")
       {
          %obj.resetCheckPoint();
+      } else if (%obj.getClassName() $= "PathedInterior")
+      {
+         if (%obj.checkpointNum > $Game::CurrentCheckPoint)
+            %obj.onMissionReset();
       }
    }
 }
@@ -1002,6 +1006,14 @@ function GameConnection::respawnPlayer(%this)
    
    if (!$Client::ConnectedMultiplayer && (isObject(%this.checkPoint.pad) && %this.checkPoint.pad.getName() $= "StartPoint"))
       $resetLevel = true;
+      
+   //if (!$resetLevel)
+   //{
+   //   if (isObject(ServerGroup))
+   //   {
+   //      ServerGroup.onMissionReset($Game::CurrentCheckPoint);
+   //   }
+   //}
    
    %this.player.unmountImage(0);
    %this.player.unmountImage(2);

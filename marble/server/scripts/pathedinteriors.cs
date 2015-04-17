@@ -65,6 +65,7 @@ function TriggerGotoTarget::onEnterTrigger(%this,%trigger,%obj)
          if(%trigger.delayTargetTime !$= "")
             %plat.delayTargetTime = %trigger.delayTargetTime;
          %plat.setTargetPosition(%trigger.targetTime);
+         %plat.checkpointNum = $Game::CurrentCheckPoint + 1;
       }
    }
    // Entering an out of bounds area
