@@ -55,4 +55,5 @@ function doScreenShot( %val )
 // bind key to take screenshots
 GlobalActionMap.bind(keyboard, "ctrl p", doScreenShot);
 GlobalActionMap.bindCmd(keyboard, "ctrl l", "", "doMiniShot();");
+GlobalActionMap.bindCmd(keyboard, "ctrl m", "", "doMegaShot();");
 

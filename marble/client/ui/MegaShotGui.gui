@@ -1,0 +1,23 @@
+//--- OBJECT WRITE BEGIN ---
+new GameTSCtrl(MegaShotGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   cameraZRot = "0";
+   forceFOV = "0";
+      noCursor = "1";
+};
+//--- OBJECT WRITE END ---
+
+function doMegaShot()
+{
+	Canvas.setContent(MegaShotGui);
+	Canvas.repaint();
+	screenshot(fileBase($Server::MissionFile) @ ".png");
+	Canvas.setContent(PlayGui);
+}

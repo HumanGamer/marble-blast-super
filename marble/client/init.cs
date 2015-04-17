@@ -99,6 +99,7 @@ function initClient()
    exec("./ui/HelpCreditsGui.gui");
    exec("./ui/ExitGameDlg.gui");
    exec("./ui/MiniShotGui.gui");
+   exec("./ui/MegaShotGui.gui");
    exec("./ui/EnterIPDlg.gui");
    exec("./ui/MultiplayerGui.gui");
    exec("./ui/ConnectGui.gui");
