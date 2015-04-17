@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          artist = "James Colsey";
          startHelpText = "Use the powerups chosen for you in conjunction with the mine.";
          desc = "Fly to the big floating platforms using the big mine.";
-         type = "Advanced";
+         type = "Expert";
          level = "1";
    };
    new MissionArea(MissionArea) {

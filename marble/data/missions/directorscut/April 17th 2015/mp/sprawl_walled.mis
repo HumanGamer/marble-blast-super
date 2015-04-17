@@ -6,7 +6,7 @@ new SimGroup(MissionGroup) {
          level = "6";
          parScore = "100";
          gameType = "MultiPlayer";
-         type = "beginner";
+         type = "directorscut";
          maxGemsPerSpawn = "7";
          gameMode = "hunt";
          gemSpawnRadius = "20";

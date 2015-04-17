@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          artist = "davidjl123";
          goldTime = "120000";
          desc = "Can you make it to the top?";
-         type = "Advanced";
+         type = "directorscut";
          level = "4";
          name = "Hazard Ascent";
    };

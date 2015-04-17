@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          name = "Frozen Run";
          time = "0";
          desc = "Don\'t slip up!";
-         type = "Expert";
+         type = "directorscut";
          level = "2";
    };
    new MissionArea(MissionArea) {

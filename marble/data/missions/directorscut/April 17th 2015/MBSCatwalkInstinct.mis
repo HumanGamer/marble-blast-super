@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          artist = "James Colsey";
          time = "0";
          desc = "Master your catwalking skills. Don\'t look down!";
-         type = "Expert";
+         type = "directorscut";
          name = "Catwalk Instinct";
          goldTime = "85000";
          level = "5";

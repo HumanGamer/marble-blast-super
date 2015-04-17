@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          level = "3";
          desc = "Master the odyssey of ascending platforms.";
          goldTime = "150000";
-         type = "Advanced";
+         type = "Expert";
          time = "0";
    };
    new MissionArea(MissionArea) {

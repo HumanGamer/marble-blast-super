@@ -9,7 +9,7 @@ new SimGroup(MissionGroup) {
          goldTime = "15000";
 	 artist = "Ender";
          startHelpText = "Use the TimeChangers to get the best time.";
-         type = "Beginner";
+         type = "directorscut";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

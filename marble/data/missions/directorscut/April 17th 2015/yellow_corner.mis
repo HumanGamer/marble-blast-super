@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          name = "Yellow Corner";
          level = "2";
          artist = "Matthieu Parizeau";
-         type = "beginner";
+         type = "directorscut";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

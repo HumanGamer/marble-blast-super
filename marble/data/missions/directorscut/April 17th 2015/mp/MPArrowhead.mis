@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          time = "240000";
          desc = "Grab the gems in these four areas of arrow fun.";
          level = "8";
-         type = "Beginner";
+         type = "directorscut";
          artist = "James Colsey";
          name = "Arrowhead";
          gameMode = "Hunt";

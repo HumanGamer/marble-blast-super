@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          time = "120000";
          name = "Agility";
-         type = "medium";
+         type = "advanced";
          artist = "Endy";
          desc = "You only have 2 minutes! Make up to the top as fast as you can.";
          level = "5";

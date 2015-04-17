@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          desc = "Learn about some of the many frictional surfaces.";
          level = "2";
-         type = "Tutorial";
+         type = "directorscut";
          goldTime = "16000";
          artist = "Endercraft1";
          name = "Frictional Tour I";

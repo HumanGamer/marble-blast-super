@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          goldTime = "20000";
          artist = "James Colsey";
          time = "0";
-         type = "Medium";
+         type = "advanced";
          startHelpText = "Pick up the GravityChanger, there is no way to pass it.";
          desc = "Wait until you see this course become slanted.";
          level = "4";

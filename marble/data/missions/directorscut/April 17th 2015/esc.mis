@@ -3,7 +3,7 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          name = "Escalation";
-         type = "Beginner";
+         type = "directorscut";
          goldTime = "125000";
          time = "0";
          artist = "Ender";
