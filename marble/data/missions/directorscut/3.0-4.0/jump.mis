@@ -1,0 +1,266 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         name = "Up and Down";
+         startHelpText = "Use the Space Bar to jump.";
+         artist = "Ender";
+         time = "0";
+         desc = "If you can\'t jump, where can you go?";
+         type = "directorscut";
+         level = "4";
+         goldTime = "6000";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0";
+      cloudHeightPer[1] = "0";
+      cloudHeightPer[2] = "0";
+      cloudSpeed1 = "0.0001";
+      cloudSpeed2 = "0.0002";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "-1 1.74487e-038 4.65496e-036";
+      fogVolume2 = "-1 1.83671e-038 6.34767e-036";
+      fogVolume3 = "-1 1.92855e-038 1.08145e-035";
+      materialList = "~/data/skies/sky3/sky_day.dml";
+      windVelocity = "1 0 0";
+      windEffectPrecipitation = "0";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 0.000000";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "1.400000 1.200000 0.400000 1.000000";
+      ambient = "0.300000 0.300000 0.400000 1.000000";
+   };
+   new ScriptObject() {
+         pad = "2009";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new StaticShape(StartPoint) {
+      position = "-8.28801 -48.4665 -28.2968";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "StartPad";
+         beam = "4727";
+   };
+   new ScriptObject() {
+         pad = "1649";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "1721";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "2727";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "2784";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "4691";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "1672";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "1752";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "1785";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new InteriorInstance() {
+      position = "-8.80248 -47.1926 -30.7688";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/directorscut/3.0-4.0/jump.dif";
+      showTerrainInside = "0";
+   };
+   new ScriptObject() {
+         pad = "1928";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new ScriptObject() {
+         pad = "3264";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new Item() {
+      position = "11.9385 -46.4192 -28.7351";
+      rotation = "1 0 0 0";
+      scale = "0.1 0.1 0.1";
+      dataBlock = "HelicopterItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Trigger() {
+      position = "10.4932 -44.8732 -22.4705";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "ee1";
+   };
+   new Trigger() {
+      position = "1.13054 -40.6617 -27.791";
+      rotation = "1 0 0 0";
+      scale = "3 3 3";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Make a big jump over the gap.";
+   };
+   new Item() {
+      position = "10.9679 -45.4525 -21.9705";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Trigger() {
+      position = "-9.80672 -40.694 -28.2826";
+      rotation = "1 0 0 0";
+      scale = "3 3 3";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Jump to reach the upper platform.";
+   };
+   new ScriptObject() {
+         pad = "3321";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         bonusTime = "0";
+         powerUp = "0";
+   };
+   new Trigger() {
+      position = "-14.9509 -28.3595 -31.1938";
+      rotation = "1 0 0 0";
+      scale = "35 35 35";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new Trigger() {
+      position = "5.31172 -46.7151 -26.5111";
+      rotation = "1 0 0 0";
+      scale = "3 3 3";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Jump over the gap to make it to the finish!";
+   };
+   new StaticShape(EndPoint) {
+      position = "-8.57723 -48.1641 -23.7269";
+      rotation = "0 0 1 90";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "EndPad";
+         beam = "4183";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+};
+//--- OBJECT WRITE END ---
