@@ -183,6 +183,6 @@ function ExplodingPlatform::explode(%this, %obj)
    %obj.startFade(250, 0, true);
    %obj.hide = %obj.schedule(250, "setScale", 0);   
    
-   //%obj.unhide = %obj.schedule(5000, "startFade", 1000, 0, false);
-   //%obj.unhide1 = %obj.schedule(5000, "setScale", %obj.normalScale);
+   %obj.unhide = %obj.schedule(5000, "startFade", 1000, 0, false);
+   %obj.unhide1 = %obj.schedule(5000, "setScale", %obj.normalScale);
 }
