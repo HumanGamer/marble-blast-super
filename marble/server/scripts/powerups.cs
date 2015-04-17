@@ -64,8 +64,8 @@ datablock ItemData(SuperJumpItem)
    emap = false;
 
    // Dynamic properties defined by the scripts
-   pickupName = "a SuperSpring PowerUp!";
-   useName = "SuperSpring PowerUp";
+   pickupName = "a SuperJump PowerUp!";
+   useName = "SuperJump PowerUp";
    maxInventory = 1;
 };
 
@@ -108,8 +108,8 @@ datablock ItemData(SuperBounceItem)
    elasticity = 0.3;
 
    // Dynamic properties defined by the scripts
-   pickupName = "a SuperRicochet PowerUp!";
-   useName = "SuperRicochet PowerUp";
+   pickupName = "a SuperBounce PowerUp!";
+   useName = "SuperBounce PowerUp";
    maxInventory = 1;
    
    image = SuperBounceImage;
@@ -172,8 +172,8 @@ datablock ItemData(SuperSpeedItem)
    emap = false;
 
    // Dynamic properties defined by the scripts
-   pickupName = "a SuperSprint PowerUp!";
-   useName = "SuperSprint PowerUp";
+   pickupName = "a SuperSpeed PowerUp!";
+   useName = "SuperSpeed PowerUp";
    maxInventory = 1;
 };
 
@@ -216,8 +216,8 @@ datablock ItemData(ShockAbsorberItem)
    elasticity = 0.3;
 
    // Dynamic properties defined by the scripts
-   pickupName = "a ShockStopper PowerUp!";
-   useName = "ShockStopper PowerUp";
+   pickupName = "a ShockAbsorber PowerUp!";
+   useName = "ShockAbsorber PowerUp";
    maxInventory = 1;
    emap = false;
    
@@ -280,8 +280,8 @@ datablock ItemData(HelicopterItem)
    elasticity = 0.3;
 
    // Dynamic properties defined by the scripts
-   pickupName = "a SuperGlider PowerUp!";
-   useName = "SuperGlider PowerUp";
+   pickupName = "a Gyrocopter PowerUp!";
+   useName = "Gyrocopter PowerUp";
    maxInventory = 1;
    
    image = HelicopterImage;
@@ -355,9 +355,9 @@ function TimeTravelItem::getPickupName(%this, %obj)
       else
          %time = $Game::TimeTravelBonus / 1000;
 
-      return "a " @ %time @ " second TimeChanger Bonus!";
+      return "a " @ %time @ " second TimeTravel Bonus!";
    } else {
-      return "a TimeChanger!";
+      return "a TimeTravel!";
    }
 }
 
@@ -390,7 +390,7 @@ datablock ItemData(AntiGravityItem)
    className = "PowerUp";
 
    pickupAudio = PuAntiGravityVoiceSfx;
-   pickupName = "a GravityTransformer!";
+   pickupName = "a GravityChanger!";
 
    // Basic Item properties
    shapeFile = "~/data/shapes/items/antiGravity.dts";
@@ -651,3 +651,8 @@ function GravityInverterItem::usePowerUp(%this, %obj)
       $Game::CurrentGravityDir = %ortho;
    }
 }
+
+function GravityInverterItem::onAdd(%this, %obj)
+{
+   %obj.playThread(0,"Ambient");
+}  
