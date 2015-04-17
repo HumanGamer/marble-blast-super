@@ -1,4 +1,16 @@
 =========================================================
+BETA 3.8
+April 11, 2015
+
+- Rozi joins the team
+- 8 new levels
+- 13 new sounds
+- Added new powerup (Gravity Inverter)
+- Modified grid_puffy textures
+- Updated both opening and staff credits
+- Added MoTD GUI
+
+=========================================================
 BETA 3.7
 November 17, 2014
 
