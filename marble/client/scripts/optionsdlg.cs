@@ -81,6 +81,7 @@ function populateResolutions()
 
 function OptionsDlg::onWake(%this)
 {
+   %this.bitmap = getRandomBackground();
    if ($platform $= "x86UNIX")
       // enable stencil shadows button text on unix
       OptGfxText.setText("<font:DomCasualD:32><just:right>Screen Resolution:\n\nScreen Style:\n\nColor Depth:\n\nStencil Shadows:\n\n");

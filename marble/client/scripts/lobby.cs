@@ -1,5 +1,6 @@
 function LobbyGui::onWake(%this)
 {
+   %this.bitmap = getRandomBackground();
    buildMissionList();
    clearLBMissionList();
    if (!$Client::ConnectedMultiplayer && $Server::ServerType $= "") {

@@ -1,5 +1,6 @@
 function ReplayCenterGui::onWake(%this)
 {
+   %this.bitmap = getRandomBackground();
    buildDemoList();
    populateReplayList();
 }

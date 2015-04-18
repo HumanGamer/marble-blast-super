@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(LoadingGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "./loadingbg.jpg";
+   bitmap = getRandomBackground();
    useVariable = "0";
    tile = "0";
       qLineCount = "0";

@@ -1,5 +1,6 @@
 function LoginGui::onWake(%this)
 {
+   %this.bitmap = getRandomBackground();
    LoginUsernameEdit.setText($pref::Multiplayer::Name); 
    LoginPasswordEdit.setText($pref::Login::Password);
    

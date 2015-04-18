@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(MarbleSelectGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "./marblebg.jpg";
+   bitmap = getRandomBackground();
    useVariable = "0";
    tile = "0";
 
@@ -119,6 +119,7 @@ function initMS()
 
 function MarbleSelectGui::onWake(%this)
 {
+   %this.bitmap = getRandomBackground();
    %this.buildSkinList();
 }
 

@@ -14,6 +14,7 @@ function LoadingGui::onAdd(%this)
 //------------------------------------------------------------------------------
 function LoadingGui::onWake(%this)
 {
+   %this.bitmap = getRandomBackground();
    // Play sound...
    CloseMessagePopup();
    

@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(JoinServerGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "./client/ui/background.jpg";
+   bitmap = getRandomBackground();
    useVariable = "0";
    tile = "0";
 
@@ -259,6 +259,7 @@ new GuiChunkedBitmapCtrl(JoinServerGui) {
 
 function JoinServerGui::onWake()
 {
+   %this.bitmap = getRandomBackground();
    // Double check the status. Tried setting this the control
    // inactive to start with, but that didn't seem to work.
    //JS_joinServer.setActive(JS_serverList.rowCount() > 0);

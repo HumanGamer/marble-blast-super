@@ -1,5 +1,6 @@
 function MultiplayerGui::onWake(%this)
 {
+   %this.bitmap = getRandomBackground();
    getUserList();
 }
 

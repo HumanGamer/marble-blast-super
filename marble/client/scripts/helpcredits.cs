@@ -2,6 +2,7 @@ $NumHelpPages = 12;
 
 function HelpCreditsGui::onWake(%this)
 {
+   %this.bitmap = getRandomBackground();
    $CurHelpPage = 1;
    %this.setPage($CurHelpPage);
 }

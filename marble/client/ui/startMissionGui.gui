@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(startMissionGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "./client/ui/background.jpg";
+   bitmap = getRandomBackground();
    useVariable = "0";
    tile = "0";
 
@@ -151,6 +151,7 @@ new GuiChunkedBitmapCtrl(startMissionGui) {
 
 function StartMissionGui::onWake(%this)
 {
+   %this.bitmap = getRandomBackground();
    SM_missionList.clear();
    %i = 0;
    for(%file = findFirstFile($Server::MissionFileSpec); %file !$= ""; %file = findNextFile($Server::MissionFileSpec))  

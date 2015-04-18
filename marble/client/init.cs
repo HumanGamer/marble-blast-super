@@ -64,6 +64,8 @@ function initClient()
    // Load up the Game GUIs
    exec("./ui/defaultGameProfiles.cs");
    exec("./ui/PlayGui.gui");
+   
+   exec("./scripts/functions.cs");
 
    // Load up the shell GUIs
    exec("./ui/ignitionGui.gui");

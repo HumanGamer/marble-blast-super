@@ -9,7 +9,7 @@ new GuiControl(MOTDGui) {
    visible = "1";
    helpTag = "0";
       tile = "0";
-      bitmap = "./background.jpg";
+      bitmap = getRandomBackground();
       useVariable = "0";
 
    new GuiBitmapCtrl() {

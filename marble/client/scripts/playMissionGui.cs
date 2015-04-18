@@ -1,5 +1,6 @@
 function playMissionGui::onWake(%this)
 {
+   %this.bitmap = getRandomBackground();
    buildMissionList();
    clearMissionList();
    clearLBMissionList();
