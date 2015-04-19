@@ -177,4 +177,5 @@ function MarbleSelectGui::AddMarbles(%this)
    %this.AddMarble("gscribble");
    %this.AddMarble("pscribble");
    %this.AddMarble("marble01.normal");
+   %this.AddMarble("neon");
 }
