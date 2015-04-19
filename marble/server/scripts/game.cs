@@ -703,7 +703,6 @@ function GameConnection::onClientEnterGame(%this)
    for (%i = 0; %i < 100; %i++)
       commandToClient(%this, 'ClearRadar');
    commandToClient(%this, 'SetMode', MissionInfo.gameMode);
-   commandToClient(%this, 'GetMarbleSkin');
    commandToClient(%this, 'AddPlayer', %this.getId(), %this.nameBase, true, 0, false);
    
    resetGems();
@@ -957,6 +956,7 @@ function GameConnection::spawnPlayer(%this)
       %averagePos = getAverageGemPosition();
       %this.cameraLookAtPoint(getWord(%averagePos, 0), getWord(%averagePos, 1));
    }
+   commandToClient(%this, 'GetMarbleSkin');
 }
 
 function restartLevel()
