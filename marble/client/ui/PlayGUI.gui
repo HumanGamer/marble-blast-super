@@ -19,6 +19,19 @@ new GameTSCtrl(PlayGui) {
       bonusTime = "0";
       timerId = "3512";
       timeInc = "50";
+	  
+   new GuiBitmapCtrl(PG_Water) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "width";
+      vertSizing = "height";
+      position = "0 0";
+      extent = "640 480";
+      minExtent = "8 8";
+      visible = "0";
+      helpTag = "0";
+      bitmap = "./game/water.png";
+      wrap = "0";
+   };
 
    new GameTSCtrl(PG_RearView) {
       profile = "GuiDefaultProfile";
