@@ -6,7 +6,7 @@ new SimGroup(MissionGroup) {
          level = "1";
          type = "beginner";
          goldTime = "20000";
-         name = "At The Pool!";
+         name = "At The Pool";
          artist = "Matthieu Parizeau";
          time = "45000";
          desc = "A typical day at the swimming pool!";

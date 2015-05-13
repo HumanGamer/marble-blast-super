@@ -178,3 +178,8 @@ function clientCmdSetBlastEnergy(%energy, %max, %extra)
       PG_BlastBar.profile = "GuiBlastUsableProfile";
    }
 }
+
+function clientCmdHideWater()
+{
+   PG_Water.setVisible(false);
+}

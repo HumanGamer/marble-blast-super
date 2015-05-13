@@ -699,6 +699,7 @@ function GameConnection::incBonusTime(%this,%dt)
 
 function GameConnection::onClientEnterGame(%this)
 {
+   commandToClient(%this, 'HideWater');
    //setupGameRadar();
    // Matt: for some reason this doesn't work without doing it multiple times
    for (%i = 0; %i < 100; %i++)
