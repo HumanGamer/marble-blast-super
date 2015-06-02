@@ -350,7 +350,7 @@ function PM_setSelected(%index)
       if (%mission.hyperTime && getField($hs[%i], 0) < %mission.hyperTime)
          %time = %time @ "<bitmap:marble/client/ui/play/hyperscore.png>";
       else if (%mission.goldTime && getField($hs[%i], 0) < %mission.goldTime)
-         %time = %time @ "<bitmap:marble/client/ui/play/goldscore.png>";
+         %time = %time @ "<bitmap:marble/client/ui/play/superscore.png>";
       %time = %time @ "\n";
       %total = %total @ %time;
    }
