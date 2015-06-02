@@ -3,13 +3,14 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          type = "intermediate";
-         time = "0";
-         goldTime = "30000";
          name = "Complexity Ascent";
-         artist = "James Colsey";
+         time = "0";
          desc = "Every challenge will get harder and harder.";
+         goldTime = "35000";
          level = "2";
-         startHelpText = "Roll to the goal!";
+         startHelpText = "Ascent up and through the obstacles!";
+         artist = "James Colsey";
+         hyperTime = "25500";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -61,7 +62,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "2243";
+         beam = "8199";
    };
    new Item() {
       position = "0 6 3";
@@ -71,7 +72,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2235";
+         checkpointNum = "1";
+         node = "8191";
    };
    new Item() {
       position = "0 -12 5";
@@ -81,7 +83,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2236";
+         checkpointNum = "1";
+         node = "8192";
    };
    new StaticShape() {
       position = "-12 -6 5.5";
@@ -97,7 +100,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2237";
+         checkpointNum = "1";
+         node = "8193";
    };
    new Item() {
       position = "-7.5 48.5 20";
@@ -107,7 +111,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2238";
+         checkpointNum = "1";
+         node = "8194";
    };
    new Item() {
       position = "8.5 50 20.25";
@@ -117,6 +122,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "30.5 50 26";
@@ -126,223 +132,224 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2239";
+         checkpointNum = "1";
+         node = "8195";
    };
    new StaticShape() {
       position = "62.5 18 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "62.5 20 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "62.5 22 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "60.5 22 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "58.5 18 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "58.5 20 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "56.5 18 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "54.5 22 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "52.5 18 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "52.5 20 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "50.5 20 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "50.5 22 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "48.5 20 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "46.5 18 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "46.5 22 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "44.5 18 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "44.5 20 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "42.5 20 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "42.5 22 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "40.5 18 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "38.5 22 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "36.5 18 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "36.5 20 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new StaticShape() {
       position = "36.5 22 32";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "TrapDoor";
+         resetTime = "Default";
          timeout = "200";
          open = "0";
-         resetTime = "Default";
    };
    new Item() {
       position = "66.5 50 32";
@@ -352,7 +359,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2240";
+         checkpointNum = "1";
+         node = "8196";
    };
    new Item() {
       position = "62.25 18 30.9131";
@@ -382,7 +390,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2241";
+         checkpointNum = "1";
+         node = "8197";
    };
    new Item() {
       position = "46.5 22 32";
@@ -392,14 +401,14 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2242";
+         node = "8198";
    };
    new StaticShape(EndPoint) {
       position = "32.5 20 32";
       rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "2189";
+         beam = "7667";
    };
    new Item() {
       position = "45.5 50 26.2";
@@ -409,6 +418,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Trigger(Bounds) {
       position = "-18.5 56.5 -4";
@@ -430,12 +440,12 @@ new SimGroup(MissionGroup) {
       dataBlock = "SignPlainUp";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
          time = "0";
-         powerUp = "0";
-         pad = "1789";
          penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "1789";
    };
    new Item() {
       position = "-5.98327 0.00505084 3.11983";
@@ -445,6 +455,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

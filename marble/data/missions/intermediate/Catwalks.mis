@@ -4,10 +4,11 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          name = "Catwalks";
          type = "intermediate";
-         goldTime = "15500";
          desc = "The pathway has gotten thinner. Can you keep your balance?";
-         artist = "Rozi";
+         goldTime = "15500";
          level = "1";
+         artist = "Rozi";
+         hyperTime = "12000";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -71,7 +72,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "41097";
+         node = "6476";
    };
    new ParticleEmitterNode() {
       position = "49.5233 -140.767 -10.0601";
@@ -110,14 +111,14 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90";
       scale = "0.65 0.65 0.65";
       dataBlock = "StartPad";
-         beam = "41100";
+         beam = "6479";
    };
    new StaticShape(EndPoint) {
       position = "-52.6201 11.6039 11.5877";
       rotation = "0 0 1 180";
       scale = "0.68 0.68 0.68";
       dataBlock = "EndPad";
-         beam = "40776";
+         beam = "6257";
    };
    new Item() {
       position = "-39.4704 22.5349 0.482546";
@@ -128,7 +129,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "41098";
+         node = "6477";
    };
    new Item() {
       position = "-66.5608 13.5687 0.577373";
@@ -139,19 +140,14 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "41099";
+         node = "6478";
    };
    new Trigger() {
-      position = "-186.627 48.8637 -8.6858";
+      position = "-95.627 48.8637 -8.6858";
       rotation = "1 0 0 0";
       scale = "65 50 30";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-   };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
    };
    new ScriptObject() {
          time = "0";
@@ -160,6 +156,11 @@ new SimGroup(MissionGroup) {
          powerUp = "0";
          bonusTime = "0";
          pad = "40774";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---

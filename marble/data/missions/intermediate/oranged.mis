@@ -3,13 +3,13 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          type = "intermediate";
-         desc = "An orange level with gems!";
-         level = "2";
          name = "Oranged Gems";
+         desc = "An orange level with gems!";
+         goldTime = "25000";
+         level = "2";
          startHelpText = "Orange you going to get the gems?";
-		 proTime = "25000";
-		 ultraTime = "20000";
-		 artist = "Matthieu Parizeau";
+         artist = "Matthieu Parizeau";
+         hyperTime = "16000";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -61,12 +61,14 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "7049";
    };
    new StaticShape(EndPoint) {
       position = "0 48 10";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
+         beam = "6964";
    };
    new Item() {
       position = "8.5 8 1.5";
@@ -76,6 +78,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
+         node = "7045";
    };
    new Item() {
       position = "-8.5 8 1.5";
@@ -85,6 +89,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
+         node = "7046";
    };
    new Item() {
       position = "-24.5 32 14";
@@ -94,6 +100,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
+         node = "7047";
    };
    new Item() {
       position = "24.5 32 14";
@@ -103,6 +111,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
+         node = "7048";
    };
    new Item() {
       position = "16 32 6";
@@ -112,6 +122,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-16 32 6";
@@ -130,6 +141,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Trigger(Bounds) {
       position = "-32 55.5 -3.5";
@@ -137,6 +149,11 @@ new SimGroup(MissionGroup) {
       scale = "64 63 34.5";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---

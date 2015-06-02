@@ -2,12 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         name = "Purple Climb";
+         type = "beginner";
          desc = "A climb in purple glory.";
          goldTime = "23000";
          level = "10";
-         name = "Purple Climb";
          artist = "Matthieu Parizeau";
-         type = "beginner";
+         hyperTime = "17500";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -92,7 +93,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4052";
+         node = "2831";
    };
    new Item() {
       position = "-68 72 -4";
@@ -102,21 +103,21 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4053";
+         node = "2832";
    };
    new StaticShape(StartPoint) {
       position = "-2 2 0";
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "4054";
+         beam = "2833";
    };
    new StaticShape(EndPoint) {
       position = "-24 100 24";
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "4034";
+         beam = "2811";
    };
    new Item() {
       position = "-6 2 0";
@@ -143,11 +144,6 @@ new SimGroup(MissionGroup) {
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
-   };
    new Item() {
       position = "12.0631 61.9377 -7.14355";
       rotation = "1 0 0 0";
@@ -156,6 +152,11 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---

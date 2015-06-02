@@ -3,9 +3,10 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          level = "8";
+         goldTime = "21000";
          name = "Danger Castle";
-         goldTime = "15000";
          type = "beginner";
+         hyperTime = "12000";
          desc = "Explore this dangerous castle!";
          artist = "Matthieu Parizeau";
    };
@@ -59,14 +60,14 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "4367";
+         beam = "6683";
    };
    new StaticShape(StartPoint) {
       position = "-4 -68 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "4644";
+         beam = "7049";
    };
    new Item() {
       position = "12 -8 34";
@@ -307,12 +308,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Cannon";
-         timer = "3000";
          radius = "15";
+         timer = "3000";
+         ball = "7021";
          power = "25";
-         currentTime = "480";
-         ball = "4630";
-         targetPosition = "18.636053 9.561155 55.764183";
+         currentTime = "960";
    };
    new StaticShape() {
       position = "-22.5 10.5 34";
@@ -596,11 +596,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Cannon";
-         timer = "3000";
          radius = "15";
+         timer = "3000";
+         ball = "7035";
          power = "25";
-         currentTime = "480";
-         ball = "4585";
+         currentTime = "960";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
