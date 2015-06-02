@@ -187,17 +187,17 @@ function LB_SetSelected(%index)
    }
    LB_Play.setActive(true);
    %mission = getField(PM_missionList.getRowTextById(%index), 1);//%group.getObject(%index);
-   %name = "<color:000000><spush><font:Animated:24>" @ %mission.name @ "<spop><lmargin:10>\n\n";
+   %name = "<color:000000><spush><font:Bauhaus 93:24>" @ %mission.name @ "<spop><lmargin:10>\n\n";
    if (%mission.time)
-      %qualify = "<spush><font:Animated:20><lmargin:0>Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n\n";
+      %qualify = "<spush><font:Bauhaus 93:20><lmargin:0>Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n\n";
    if (%mission.artist !$= "")
    {
-      %author = "<spush><font:Animated:18>" @ %mission.artist @ "<spop>\n\n";
+      %author = "<spush><font:Bauhaus 93:18>" @ %mission.artist @ "<spop>\n\n";
    } else {
-      %author = "<spush><font:Animated:18>" @ "Unknown Artist" @ "<spop>\n\n";
+      %author = "<spush><font:Bauhaus 93:18>" @ "Unknown Artist" @ "<spop>\n\n";
    }   
    %desc = %mission.desc @ "\n\n";
-   %best = "<spush><font:Animated:20>Your best times:<spop><lmargin:10><tab:0,130,180><font:Arial Bold:14>\n";
+   %best = "<spush><font:Bauhaus 93:20>Your best times:<spop><lmargin:10><tab:0,130,180><font:Arial Bold:14>\n";
    getBestTimes(%mission.file);
    %total = "";
    for (%i = 0; %i < 3; %i++)

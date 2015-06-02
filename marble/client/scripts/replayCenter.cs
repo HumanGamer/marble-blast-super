@@ -30,10 +30,10 @@ function RC_SetSelected(%index)
       %mission = %info.mission;
       %mis = getMissionObject(%mission);
       
-      %name = "<spush><font:Animated:24>" @ %info.name @ "<spop>\n\n";
+      %name = "<spush><font:Bauhaus 93:24>" @ %info.name @ "<spop>\n\n";
       %desc = "<spush><font:Arial:14>" @ %info.desc @ "<spop>\n\n";
-      %artist = "<spush><font:Animated:14>" @ %info.artist @ "<spop>\n\n";
-      %levelName = "<spush><font:Animated:16>Level Name: <font:Arial:14>" @ %mis.name @ "<spop>";
+      %artist = "<spush><font:Bauhaus 93:14>" @ %info.artist @ "<spop>\n\n";
+      %levelName = "<spush><font:Bauhaus 93:16>Level Name: <font:Arial:14>" @ %mis.name @ "<spop>";
       
       %desc = %name @ %desc @ %artist @ %levelName;
       

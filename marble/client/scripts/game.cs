@@ -96,8 +96,16 @@ function reformatGameEndText()
    // Qualification time
    if($Game::Qualified)
    {
-      %text = %text @ "<color:fdfdfd>" @ ((MissionInfo.goldTime && $Game::ScoreTime < MissionInfo.goldTime) ?
-         "You beat the <color:17e299>Super<color:fdfdfd> time!" : "You have completed the level!");
+      %text = %text @ "<color:fdfdfd>";
+      if (MissionInfo.hyperTime && $Game::ScoreTime < MissionInfo.hyperTime)
+      {
+         %text = %text @ "You beat the <color:834396>Hyper<color:fdfdfd> time!";
+      } else if (MissionInfo.goldTime && $Game::ScoreTime < MissionInfo.goldTime)
+      {
+         %text = %text @ "You beat the <color:17e299>Super<color:fdfdfd> time!";
+      } else {
+         %text = %text @ "You have completed the level!";
+      }
    }
    else
       %text = %text @ "<color:ff0000>You failed to qualify!";
@@ -118,6 +126,12 @@ function reformatGameEndText()
    {
       %text = %text @ "<shadowcolor:ffffff7f><color:05ff91><font:Whitestone:28>Super Time:\t<color:05ff91><shadowcolor:0000007f>" @
          formatTime(MissionInfo.goldTime) @ "\n";
+   }
+   
+   if(MissionInfo.hyperTime)
+   {
+      %text = %text @ "<shadowcolor:ffffff7f><color:834396><font:Whitestone:28>Hyper Time:\t<color:05ff91><shadowcolor:0000007f>" @
+         formatTime(MissionInfo.hyperTime) @ "\n";
    }
 
    %text = %text @

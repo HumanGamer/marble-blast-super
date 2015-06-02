@@ -108,7 +108,7 @@ new GuiControl(MultiplayerExitGui) {
 
 function MultiplayerExitGui::init(%this)
 {
-   MPE_Text.setText("<spush><font:Animated:24>What would you like to do?<spop>");
+   MPE_Text.setText("<spush><font:Bauhaus 93:24>What would you like to do?<spop>");
    
    if ($Multiplayer::isHosting)
    {
