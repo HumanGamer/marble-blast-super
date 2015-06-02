@@ -2,13 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         goldTime = "23000";
+         artist = "Matthieu Parizeau";
+         hyperTime = "17500";
          name = "Purple Climb";
          type = "beginner";
          desc = "A climb in purple glory.";
-         goldTime = "23000";
          level = "10";
-         artist = "Matthieu Parizeau";
-         hyperTime = "17500";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -59,31 +59,25 @@ new SimGroup(MissionGroup) {
       position = "32 72 -4";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "TimeTravelItem";
+      dataBlock = "GemItem";
       collideable = "0";
       static = "1";
       rotate = "1";
-         timeBonus = "10000";
+         checkpointNum = "1";
    };
    new Item() {
-      position = "13 81 -4";
+      position = "12.0631 61.9377 -7.14355";
       rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "TimeTravelItem";
+      scale = "0.3 0.3 0.3";
+      dataBlock = "EasterEggItem";
       collideable = "0";
       static = "1";
       rotate = "1";
-         timeBonus = "2000";
    };
-   new Item() {
-      position = "13 63 -4";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "TimeTravelItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-         timeBonus = "2000";
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
    new Item() {
       position = "-6 118 0";
@@ -93,7 +87,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2831";
+         node = "9473";
    };
    new Item() {
       position = "-68 72 -4";
@@ -103,21 +97,21 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2832";
+         node = "9474";
    };
    new StaticShape(StartPoint) {
       position = "-2 2 0";
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "2833";
+         beam = "9475";
    };
    new StaticShape(EndPoint) {
       position = "-24 100 24";
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "2811";
+         beam = "9413";
    };
    new Item() {
       position = "-6 2 0";
@@ -127,6 +121,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "6 42 0";
@@ -143,20 +138,6 @@ new SimGroup(MissionGroup) {
       scale = "118.5 138 52";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-   };
-   new Item() {
-      position = "12.0631 61.9377 -7.14355";
-      rotation = "1 0 0 0";
-      scale = "0.3 0.3 0.3";
-      dataBlock = "EasterEggItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-   };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---

@@ -62,7 +62,7 @@ function onServerCreated()
 
    // Basic items
    exec("./marble.cs");
-   exec("./ghost.cs");
+   //exec("./ghost.cs");
    exec("./gems.cs");
    exec("./powerUps.cs");
    exec("./buttons.cs");
@@ -778,8 +778,8 @@ function GameConnection::onClientLeaveGame(%this)
       %this.camera.delete();
    if (isObject(%this.player))
       %this.player.delete();
-   if (isObject(%this.ghost))
-      %this.ghost.delete();
+   //if (isObject(%this.ghost))
+      //%this.ghost.delete();
    $Multiplayer::MarbleCount--;
 }
 
@@ -1020,11 +1020,11 @@ function GameConnection::respawnPlayer(%this)
    
    %this.player.unmountImage(0);
    %this.player.unmountImage(2);
-   if (isObject(%this.ghost))
-   {
-      %this.ghost.unmountImage(0);
-      %this.ghost.unmountImage(2);
-   }
+   //if (isObject(%this.ghost))
+   //{
+   //   %this.ghost.unmountImage(0);
+   //   %this.ghost.unmountImage(2);
+   //}
    
    if ($resetLevel)
    {
@@ -1159,8 +1159,8 @@ function GameConnection::respawnPlayerHunt(%this)
    
    %this.player.unmountImage(0);
    %this.player.unmountImage(2);
-   %this.ghost.unmountImage(0);
-   %this.ghost.unmountImage(2);
+   //%this.ghost.unmountImage(0);
+   //%this.ghost.unmountImage(2);
    
    %this.setGravityDir("1 0 0 0 -1 0 0 0 -1",true);
    $Game::CurrentGravityDir = "1 0 0 0 -1 0 0 0 -1";
@@ -1225,7 +1225,7 @@ function GameConnection::createPlayer(%this, %spawnPoint)
    }
    
    %scale = 1 - $Multiplayer::MarbleCount / 10000;
-   commandToClient(%this, 'SetGhostScale', %scale);
+   //commandToClient(%this, 'SetGhostScale', %scale);
    $Multiplayer::MarbleCount++;
    
    if ($Server::ServerType $= "SinglePlayer")
@@ -1260,7 +1260,7 @@ function GameConnection::createPlayer(%this, %spawnPoint)
    %this.player = %player;
    %this.setControlObject(%player);
    
-   %this.createGhost();
+   //%this.createGhost();
    
    %this.player.updateBlast();
 }

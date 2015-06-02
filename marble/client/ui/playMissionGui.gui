@@ -388,23 +388,23 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                repeatDecay = "1";
                bitmap = "./play/home";
             };
-            new GuiBitmapButtonCtrl() {
-               profile = "GuiButtonProfile";
-               horizSizing = "right";
-               vertSizing = "bottom";
-               position = "14 284";
-               extent = "96 37";
-               minExtent = "8 8";
-               visible = "1";
-               variable = "$unlockLevels";
-               helpTag = "0";
-               text = "Unlock";
-               groupNum = "-1";
-               buttonType = "ToggleButton";
-               repeatPeriod = "1000";
-               repeatDecay = "1";
-               bitmap = "./play/unlock";
-            };
+            //new GuiBitmapButtonCtrl() {
+               //profile = "GuiButtonProfile";
+               //horizSizing = "right";
+               //vertSizing = "bottom";
+               //position = "14 284";
+               //extent = "96 37";
+               //minExtent = "8 8";
+               //visible = "1";
+               //variable = "$unlockLevels";
+               //helpTag = "0";
+               //text = "Unlock";
+               //groupNum = "-1";
+               //buttonType = "ToggleButton";
+               //repeatPeriod = "1000";
+               //repeatDecay = "1";
+               //bitmap = "./play/unlock";
+            //};
             new GuiBitmapButtonCtrl(PM_RecordDemo) {
                profile = "GuiButtonProfile";
                horizSizing = "right";

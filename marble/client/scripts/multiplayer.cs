@@ -128,11 +128,11 @@ function clientCmdSetGhostScale(%scale)
 
 function clientCmdUpdateTransform()
 {
-   if ($Multiplayer::MyMarble $= "" || $Multiplayer::MyGhost $= "")
+   if ($Multiplayer::MyMarble $= "")// || $Multiplayer::MyGhost $= "")
    {
       getMyMarble();
-      getMyGhost();
-      hideMyGhost();
+      //getMyGhost();
+      //hideMyGhost();
       return;
    }
    if (!isEventPending($CompassUpdate))

@@ -104,15 +104,15 @@ function PM_ContinueStartMission()
       MissionInfo.level = %mission.level;
 }
 
-function PM_skipQualify()
-{
-   %id = PM_missionList.getSelectedId();
-   %mission = getField(PM_missionList.getRowTextById(%id), 1);
-   if (%id - 1 == $pref::QualifiedLevel[$MissionType])
-      $pref::QualifiedLevel[$MissionType]++;
-   PM_setSelected(%id);
-   LB_SetSelected(%id);
-}
+//function PM_skipQualify()
+//{
+//   %id = PM_missionList.getSelectedId();
+//   %mission = getField(PM_missionList.getRowTextById(%id), 1);
+//   if (%id - 1 == $pref::QualifiedLevel[$MissionType])
+//      $pref::QualifiedLevel[$MissionType]++;
+//   PM_setSelected(%id);
+//   LB_SetSelected(%id);
+//}
 
 function populatePMList()
 {
@@ -367,9 +367,9 @@ function PM_setSelected(%index)
    //EG_level_fgnd.setText("<color:FFFFFF><font:Bauhaus 93:24><just:center>" @ %type @ " Level " @ %index + 1);
    PM_missionList.setSelectedById(%index);
    
-   $CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels && %mission.gameType !$= "Multiplayer";
+   //$CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels && %mission.gameType !$= "Multiplayer";
    
-   setLevelLocked();
+   //setLevelLocked();
    
    if (!isFile(%bmp @ ".png") && !isFile(%bmp @ ".jpg"))
    {
@@ -389,19 +389,19 @@ function PM_setSelected(%index)
    %object.profile = "GuiPMSelectedMission";
 }
 
-function setLevelLocked()
-{
-   if ($CurrentLevelLocked)
-   {
-      PM_play.setActive(false);
-      PM_NoQualOverlay.setVisible(true);
-      PM_NoQualText.setText("<color:CCCCCC><font:Bauhaus 93:32><just:center>Locked!");
-   } else {
-      PM_play.setActive(true);
-      PM_NoQualOverlay.setVisible(false);
-      PM_NoQualText.setText("");
-   }
-}
+//function setLevelLocked()
+//{
+   //if ($CurrentLevelLocked)
+   //{
+      //PM_play.setActive(false);
+      //PM_NoQualOverlay.setVisible(true);
+      //PM_NoQualText.setText("<color:CCCCCC><font:Bauhaus 93:32><just:center>Locked!");
+   //} else {
+      //PM_play.setActive(true);
+      //PM_NoQualOverlay.setVisible(false);
+      //PM_NoQualText.setText("");
+   //}
+//}
 
 function PMSetMissionTab(%tab)
 {
