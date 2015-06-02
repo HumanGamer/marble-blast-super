@@ -107,11 +107,10 @@ new SimGroup(MissionGroup) {
       position = "-6 -9 6";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "TimeTravelItem";
+      dataBlock = "GemItem";
       collideable = "0";
       static = "1";
       rotate = "1";
-         timeBonus = "5000";
    };
    new Trigger(Bounds) {
       position = "-24 21 -5.5";

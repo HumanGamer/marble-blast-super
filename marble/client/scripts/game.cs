@@ -183,3 +183,8 @@ function clientCmdHideWater()
 {
    PG_Water.setVisible(false);
 }
+
+function clientCmdHidePhysMod()
+{
+   PG_PhysMod.setVisible(false);
+}

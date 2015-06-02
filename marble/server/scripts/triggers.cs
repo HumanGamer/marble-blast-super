@@ -58,6 +58,8 @@ datablock TriggerData(PhysicsTrigger)
 
 function PhysicsTrigger::onEnterTrigger(%this, %trigger, %obj)
 {
+   PG_PhysMod.setVisible(true);
+   
    %var = %trigger.var;
    %value = %trigger.value;
    
@@ -67,6 +69,7 @@ function PhysicsTrigger::onEnterTrigger(%this, %trigger, %obj)
 
 function PhysicsTrigger::onLeaveTrigger(%this, %trigger, %obj)
 {
+   PG_PhysMod.setVisible(false);
    %var = %trigger.var;
    eval(%obj.getDataBlock().getName() @ "." @ %var @ "=" @ %obj @ ".client.physics" @ %var @ ";");
 }
