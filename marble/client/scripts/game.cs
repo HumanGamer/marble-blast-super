@@ -144,8 +144,16 @@ function reformatGameEndText()
       %time = getField($hs[%i], 0);
       %name = getField($hs[%i], 1);
       %text = %text 
-         @ "<shadowcolor:ffffff7f><color:000000><font:Whitestone:24>" @ %i+1 @ ". " @ %name @ "\t" 
-         @ (%time < MissionInfo.goldTime ? "<shadowcolor:0000007f><color:ffff00>" : "") @ formatTime(%time) @ "\n";
+         @ "<shadowcolor:ffffff7f><color:000000><font:Whitestone:24>" @ %i+1 @ ". " @ %name @ "\t";
+      if (%time < MissionInfo.hyperTime)
+      {
+         %text = %text @ "<shadowcolor:0000007f><color:834396>";
+      } else if (%time < MissionInfo.goldTime)
+      {
+         %text = %text @ "<shadowcolor:0000007f><color:ffff00>";
+      }
+      
+      %text = %text @ formatTime(%time) @ "\n";
    }
    // Display the end-game screen
    EndGameGuiDescription.setText(%text);
