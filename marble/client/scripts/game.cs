@@ -130,7 +130,7 @@ function reformatGameEndText()
    
    if(MissionInfo.hyperTime)
    {
-      %text = %text @ "<shadowcolor:ffffff7f><color:834396><font:Whitestone:28>Hyper Time:\t<color:05ff91><shadowcolor:0000007f>" @
+      %text = %text @ "<shadowcolor:ffffff7f><color:834396><font:Whitestone:28>Hyper Time:\t<color:834396><shadowcolor:0000007f>" @
          formatTime(MissionInfo.hyperTime) @ "\n";
    }
 
