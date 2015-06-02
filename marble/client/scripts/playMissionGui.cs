@@ -347,7 +347,9 @@ function PM_setSelected(%index)
    {
       %thetime = getField($hs[%i], 1) @ "\t" @ formatTime(getField($hs[%i], 0));
       %time = "<shadow:1:1><color:000000><shadowcolor:ffffff4f>" @ %thetime;
-      if (%mission.goldTime && getField($hs[%i], 0) < %mission.goldTime)
+      if (%mission.hyperTime && getField($hs[%i], 0) < %mission.hyperTime)
+         %time = %time @ "<bitmap:marble/client/ui/play/hyperscore.png>";
+      else if (%mission.goldTime && getField($hs[%i], 0) < %mission.goldTime)
          %time = %time @ "<bitmap:marble/client/ui/play/goldscore.png>";
       %time = %time @ "\n";
       %total = %total @ %time;
@@ -361,8 +363,8 @@ function PM_setSelected(%index)
       //EG_NextLevel.setBitmap(%bmp @ ".jpg");
    PM_level_bkgnd.setText("<color:000000><font:Bauhaus 93:24><just:center>" @ %type @ " Level " @ %index + 1);
    PM_level_fgnd.setText("<color:FFFFFF><font:Bauhaus 93:24><just:center>" @ %type @ " Level " @ %index + 1);
-   //EG_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
-   //EG_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
+   //EG_level_bkgnd.setText("<color:000000><font:Bauhaus 93:24><just:center>" @ %type @ " Level " @ %index + 1);
+   //EG_level_fgnd.setText("<color:FFFFFF><font:Bauhaus 93:24><just:center>" @ %type @ " Level " @ %index + 1);
    PM_missionList.setSelectedById(%index);
    
    $CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels && %mission.gameType !$= "Multiplayer";
@@ -374,7 +376,7 @@ function PM_setSelected(%index)
       PM_NoQualOverlay.setVisible(true);
       PM_NoQualText.setText("<color:CCCCCC><font:Bauhaus 93:32><just:center>No Preview!");
       //EG_NoQualOverlay.setVisible(true);
-      //EG_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No Preview!");
+      //EG_NoQualText.setText("<color:CCCCCC><font:Bauhaus 93:32><just:center>No Preview!");
    }
    
    for (%i = 0; %i < PM_missionSelectList.getCount(); %i++)
