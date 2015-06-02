@@ -2,14 +2,15 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         time = "0";
-         artist = "davidjl123";
          desc = "Welcome to Marble Blast Super! Learn how to roll in this level.";
          level = "1";
          type = "Tutorial";
-         startHelpText = "Use the <func:bind moveforward><func:bind moveleft><func:bind movebackward><func:bind moveright> keys to move your marble!";
-         goldTime = "3000";
          name = "First Steps";
+         artist = "davidjl123";
+         hypedTime = "2500";
+         time = "0";
+         startHelpText = "Use the <func:bind moveforward><func:bind moveleft><func:bind movebackward><func:bind moveright> keys to move your marble!";
+         goldTime = "5000";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -50,107 +51,107 @@ new SimGroup(MissionGroup) {
       ambient = "0.300000 0.300000 0.400000 1.000000";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "2009";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new StaticShape(StartPoint) {
       position = "-19.653 -22.2674 -5.1411";
       rotation = "0 0 1 180";
       scale = "0.6 0.6 0.6";
       dataBlock = "StartPad";
-         beam = "2253";
+         beam = "3608";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1649";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1721";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "2727";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "2784";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "4691";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1602";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1672";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1752";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new Item() {
       position = "-35.1869 -35.9607 5.95551";
@@ -163,12 +164,12 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1624";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new StaticShape() {
       position = "-19.4068 -22.4423 5.85494";
@@ -177,19 +178,19 @@ new SimGroup(MissionGroup) {
       dataBlock = "SignFinish";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1965";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new StaticShape(EndPoint) {
       position = "-19.4068 -22.4423 -0.145061";
       rotation = "0 0 1 90";
       scale = "0.6 0.6 0.6";
       dataBlock = "EndPad";
-         beam = "2228";
+         beam = "3389";
    };
    new InteriorInstance() {
       position = "-19.6816 -22.4381 -7.2426";
@@ -207,12 +208,12 @@ new SimGroup(MissionGroup) {
          text = "Roll up the ramps to the finish!";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1783";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new Item() {
       position = "-34.4415 -34.6792 -5.30324";
@@ -232,25 +233,20 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "1789";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new ScriptObject() {
-         time = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
-         penaltyTime = "0";
          pad = "2161";
-   };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new Trigger() {
       position = "-38.7003 -15.1744 -15.4187";
@@ -258,6 +254,19 @@ new SimGroup(MissionGroup) {
       scale = "27 25 32";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new ScriptObject() {
+         bonusTime = "0";
+         pad = "3372";
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---
