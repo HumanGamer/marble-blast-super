@@ -2,12 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         desc = "Ascend up the towers to reach the finish!";
-         goldTime = "15000";
-         level = "4";
          name = "Block Towers";
          type = "Advanced";
+         goldTime = "15000";
+         desc = "Ascend up the towers to reach the finish!";
          artist = "Rozi";
+         hyperTime = "5000";
+         level = "4";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -55,9 +56,9 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "3690";
@@ -71,25 +72,25 @@ new SimGroup(MissionGroup) {
       velocity = "1";
    };
    new ScriptObject() {
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "2615";
    };
    new ScriptObject() {
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "2406";
    };
    new ScriptObject() {
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "3708";
@@ -99,7 +100,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "5590";
+         beam = "2354";
    };
    new Item() {
       position = "468.15 -463.574 -868.405";
@@ -122,9 +123,9 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "25150";
@@ -144,7 +145,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "0.3 0.3 0.3";
       dataBlock = "EndPad";
-         beam = "5552";
+         beam = "2162";
    };
    new Item() {
       position = "468.241 -455.502 -858.974";
@@ -164,12 +165,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
          timeBonus = "11000";
-   };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
    };
    new Trigger() {
       position = "449.567 -444.809 -876.494";
@@ -177,6 +174,11 @@ new SimGroup(MissionGroup) {
       scale = "45 45 30";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---

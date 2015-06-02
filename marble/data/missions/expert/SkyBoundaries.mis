@@ -3,12 +3,13 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          name = "Sky Boundaries";
+         type = "Expert";
          goldTime = "90000";
          time = "0";
          artist = "James Colsey";
          startHelpText = "Use the powerups chosen for you in conjunction with the mine.";
          desc = "Fly to the big floating platforms using the big mine.";
-         type = "Expert";
+         hyperTime = "35000";
          level = "1";
    };
    new MissionArea(MissionArea) {
@@ -61,7 +62,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "2668";
+         beam = "7345";
    };
    new Item() {
       position = "0 -2.5 0.5";
@@ -135,12 +136,12 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         powerUp = "0";
-         pad = "2517";
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2517";
    };
    new Item() {
       position = "-12.5213 61.7019 125.352";
@@ -150,6 +151,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-56.4156 0.300111 237.978";
@@ -159,6 +161,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
          timeBonus = "10000";
    };
    new Item() {
@@ -169,6 +172,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
          timeBonus = "10000";
    };
    new Item() {
@@ -179,6 +183,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
          timeBonus = "10000";
    };
    new Item() {
@@ -189,7 +194,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2663";
+         checkpointNum = "1";
+         node = "7340";
    };
    new Item() {
       position = "-16.5898 61.7367 125.66";
@@ -199,6 +205,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-59.275 24.3152 228.655";
@@ -208,6 +215,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "8.41888 61.7747 141.699";
@@ -217,6 +225,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-7.61619 102.586 141.378";
@@ -235,7 +244,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2664";
+         checkpointNum = "1";
+         node = "7341";
    };
    new Item() {
       position = "-80.1358 21.1365 252.871";
@@ -272,7 +282,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2665";
+         checkpointNum = "1";
+         node = "7342";
    };
    new Item() {
       position = "48.1888 -45.2364 298.203";
@@ -291,6 +302,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "48.1662 -13.1479 298.504";
@@ -300,6 +312,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "32.1621 -29.2543 298.214";
@@ -309,6 +322,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new StaticShape() {
       position = "37.0828 92.3762 386.149";
@@ -324,6 +338,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "33.1842 -82.3977 351.168";
@@ -333,6 +348,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "9.17399 -82.3367 350.722";
@@ -342,7 +358,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2666";
+         checkpointNum = "1";
+         node = "7343";
    };
    new Item() {
       position = "-9.73617 -82.3879 350.87";
@@ -352,6 +369,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-14.8546 -82.3849 367.182";
@@ -361,6 +379,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "9.25648 -58.4184 367.256";
@@ -370,6 +389,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "9.30729 -63.4389 350.875";
@@ -398,7 +418,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2667";
+         checkpointNum = "1";
+         node = "7344";
    };
    new Item() {
       position = "12.7626 95.6631 378.342";
@@ -417,15 +438,15 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         timeBonus = "10000";
          checkpointNum = "1";
+         timeBonus = "10000";
    };
    new StaticShape(EndPoint) {
       position = "36.801 92.6647 378.127";
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "2057";
+         beam = "6741";
    };
    new Trigger(Bounds) {
       position = "-128.449 120.908 -22.3902";
@@ -435,12 +456,12 @@ new SimGroup(MissionGroup) {
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         powerUp = "0";
-         pad = "2015";
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2015";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

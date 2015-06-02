@@ -2,13 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         goldTime = "60000";
          name = "The Trickster";
+         type = "Expert";
+         goldTime = "70000";
          time = "0";
-         desc = "You are so screwed.";
+         desc = "Harder than it looks...longer than it looks...";
          artist = "Ender";
          startHelpText = "Can you beat this level without smashing off at least a part of your monitor?";
-         type = "Expert";
+         hyperTime = "55000";
          level = "2";
    };
    new MissionArea(MissionArea) {
@@ -50,155 +51,155 @@ new SimGroup(MissionGroup) {
       ambient = "0.300000 0.300000 0.400000 1.000000";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
-         time = "0";
-         pad = "2009";
          penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2009";
    };
    new StaticShape(StartPoint) {
       position = "-5.92861 -75.4732 -87.5265";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "4639";
+         beam = "9318";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "1649";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "1721";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "2727";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "2784";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "4691";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "1602";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "1602";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "1602";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "1602";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "1672";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "1617";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "1752";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "1640";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "2784";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "3281";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
          time = "0";
+         powerUp = "0";
+         bonusTime = "0";
          pad = "2031";
-         penaltyTime = "0";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
-         time = "0";
-         pad = "4028";
          penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "4028";
    };
    new InteriorInstance() {
       position = "-34.4183 -18.9388 -141.094";
@@ -208,23 +209,23 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
-         time = "0";
-         pad = "5647";
          penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "5647";
    };
    new StaticShape() {
       position = "-18.175 -45.8199 -88.0521";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
          used = "0";
          unhide1 = "167634";
-         unhide = "167633";
          hide = "167632";
-         normalScale = "1 1 1";
+         unhide = "167633";
          skin = "yelloww";
    };
    new StaticShape() {
@@ -232,11 +233,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 32";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
          used = "0";
          unhide1 = "167808";
-         unhide = "167807";
          hide = "167806";
-         normalScale = "1 1 1";
+         unhide = "167807";
          skin = "yelloww";
    };
    new Item() {
@@ -257,8 +258,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
-         node = "4634";
+         checkpointNum = "1";
+         node = "9313";
    };
    new Item() {
       position = "-18.0285 -70.8893 -83.6886";
@@ -268,15 +269,15 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
+         checkpointNum = "1";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
-         time = "0";
-         pad = "6273";
          penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "6273";
    };
    new Item() {
       position = "-29.9864 -70.9302 -79.6624";
@@ -286,7 +287,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-29.8193 -32.858 -63.6443";
@@ -296,15 +297,15 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
+         checkpointNum = "1";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
-         time = "0";
-         pad = "8060";
          penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "8060";
    };
    new Trigger() {
       position = "-8.91534 -58.9675 -87.592";
@@ -354,18 +355,18 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
+         checkpointNum = "1";
    };
    new StaticShape() {
       position = "-31.9173 -46.9343 -53.5937";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
          used = "0";
          unhide1 = "176410";
-         unhide = "176409";
          hide = "176408";
-         normalScale = "1 1 1";
+         unhide = "176409";
          skin = "yelloww";
    };
    new StaticShape() {
@@ -373,11 +374,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
          used = "0";
          unhide1 = "176353";
-         unhide = "176352";
          hide = "176351";
-         normalScale = "1 1 1";
+         unhide = "176352";
          skin = "yelloww";
    };
    new StaticShape() {
@@ -385,11 +386,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
          used = "0";
          unhide1 = "176606";
-         unhide = "176605";
          hide = "176604";
-         normalScale = "1 1 1";
+         unhide = "176605";
          skin = "yelloww";
    };
    new StaticShape() {
@@ -397,11 +398,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         used = "0";
-         unhide1 = "105633";
-         unhide = "105632";
-         hide = "105631";
          normalScale = "1 1 1";
+         used = "0";
+         unhide1 = "5923842";
+         hide = "5923840";
+         unhide = "5923841";
          skin = "yelloww";
    };
    new StaticShape() {
@@ -409,11 +410,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
          used = "0";
          unhide1 = "176586";
-         unhide = "176585";
          hide = "176584";
-         normalScale = "1 1 1";
+         unhide = "176585";
          skin = "yelloww";
    };
    new StaticShape() {
@@ -421,11 +422,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
          used = "0";
          unhide1 = "176526";
-         unhide = "176525";
          hide = "176524";
-         normalScale = "1 1 1";
+         unhide = "176525";
          skin = "yelloww";
    };
    new StaticShape() {
@@ -433,11 +434,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
          used = "0";
          unhide1 = "245777";
-         unhide = "245776";
          hide = "245775";
-         normalScale = "1 1 1";
+         unhide = "245776";
          skin = "yelloww";
    };
    new StaticShape() {
@@ -445,11 +446,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         used = "0";
-         unhide1 = "176761";
-         unhide = "176760";
-         hide = "176759";
          normalScale = "1 1 1";
+         used = "0";
+         unhide1 = "6073238";
+         hide = "6073236";
+         unhide = "6073237";
          skin = "yelloww";
    };
    new StaticShape() {
@@ -457,11 +458,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
          used = "0";
          unhide1 = "105152";
-         unhide = "105151";
          hide = "105150";
-         normalScale = "1 1 1";
+         unhide = "105151";
          skin = "yelloww";
    };
    new StaticShape() {
@@ -469,11 +470,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
          used = "0";
          unhide1 = "176882";
-         unhide = "176881";
          hide = "176880";
-         normalScale = "1 1 1";
+         unhide = "176881";
          skin = "yelloww";
    };
    new Trigger() {
@@ -521,7 +522,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-32.6732 -72.1144 -47.5582";
@@ -531,7 +532,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "3";
+         checkpointNum = "2";
    };
    new Item() {
       position = "-29.8237 -52.9766 -53.7512";
@@ -541,8 +542,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
-         node = "4635";
+         checkpointNum = "1";
+         node = "9314";
    };
    new Item() {
       position = "-27.6621 -76.8799 -33.0164";
@@ -552,7 +553,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "3";
+         checkpointNum = "2";
    };
    new Item() {
       position = "-29.8441 -58.9819 -47.5987";
@@ -562,7 +563,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "3";
+         checkpointNum = "2";
    };
    new Item() {
       position = "-29.9268 -40.9586 -47.6204";
@@ -572,7 +573,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "3";
+         checkpointNum = "2";
    };
    new Trigger() {
       position = "-32.9097 -60.9596 -47.5974";
@@ -598,7 +599,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "3";
+         checkpointNum = "2";
    };
    new Item() {
       position = "-29.9885 -28.9221 -47.5881";
@@ -608,16 +609,16 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "3";
-         node = "4636";
+         checkpointNum = "2";
+         node = "9315";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
-         time = "0";
-         pad = "11875";
          penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "11875";
    };
    new Item() {
       position = "18.0347 -28.9575 -45.6543";
@@ -627,7 +628,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "3";
+         checkpointNum = "2";
    };
    new Item() {
       position = "24.0469 -28.9414 -45.6456";
@@ -638,7 +639,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "3";
-         node = "4637";
+         node = "9316";
    };
    new Trigger() {
       position = "20.0938 -25.9376 -45.6243";
@@ -695,7 +696,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 -1 0 36";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "4597";
+         beam = "7857";
    };
    new Trigger() {
       position = "-56.5748 11.7071 -105.74";
@@ -712,7 +713,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
+         checkpointNum = "4";
    };
    new Trigger() {
       position = "4.56834 -44.8762 -23.9222";
@@ -736,16 +737,16 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "3";
-         node = "4638";
+         checkpointNum = "2";
+         node = "9317";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         powerUp = "0";
-         time = "0";
-         pad = "2035";
          penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2035";
    };
    new Item() {
       position = "45.0675 -65.9914 -19.2785";
@@ -774,17 +775,6 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
-   };
-   new StaticShape(checky) {
-      position = "23.9919 -28.909 -45.6021";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "CheckPointShape";
-   };
    new Trigger(checkytrigger) {
       position = "21.049 -25.9569 -46.0896";
       rotation = "1 0 0 0";
@@ -792,6 +782,17 @@ new SimGroup(MissionGroup) {
       dataBlock = "CheckPointTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
          target = "checky";
+   };
+   new StaticShape(checky) {
+      position = "23.9919 -28.909 -45.6021";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "CheckPointShape";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---

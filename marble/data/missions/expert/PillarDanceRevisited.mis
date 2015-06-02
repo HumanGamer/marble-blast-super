@@ -2,12 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         artist = "James Colsey";
          type = "Expert";
-         desc = "Watch your step in this violent square dance.";
          name = "Pilar Dance Revisited";
+         goldTime = "13000";
+         artist = "James Colsey";
+         desc = "Watch your step in this violent square dance.";
+         hyperTime = "8000";
          level = "3";
-         goldTime = "10000";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -47,26 +48,28 @@ new SimGroup(MissionGroup) {
       color = "0.600000 0.600000 0.600000 1.000000";
       ambient = "0.400000 0.400000 0.400000 1.000000";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
+   new Trigger(Bounds) {
+      position = "-12 31 0";
+      rotation = "1 0 0 0";
+      scale = "25 40 35";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
          time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "2406";
-         penaltyTime = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
          time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "3708";
-         penaltyTime = "0";
    };
    new InteriorInstance() {
       position = "0 0 0";
@@ -80,6 +83,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "10106";
    };
    new Item() {
       position = "3 7 13";
@@ -89,6 +93,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
+         node = "10102";
    };
    new Item() {
       position = "-3 7 13";
@@ -98,6 +104,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "10103";
    };
    new Item() {
       position = "3 13 13";
@@ -107,6 +114,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
+         node = "10104";
    };
    new Item() {
       position = "-3 13 13";
@@ -116,13 +125,15 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
+         node = "10105";
    };
    new StaticShape(EndPoint) {
       position = "0 22 12";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "3743";
+         beam = "9877";
    };
    new SimGroup(MustChange_g) {
 
@@ -179,7 +190,7 @@ new SimGroup(MissionGroup) {
          basePosition = "0 0 0";
          baseRotation = "1 0 0 0";
          baseScale = "1 1 1";
-            InitialTargetPosition = "-1";
+            initialTargetPosition = "-1";
       };
    };
    new SimGroup(MustChange_g) {
@@ -237,7 +248,7 @@ new SimGroup(MissionGroup) {
          basePosition = "0 0 0";
          baseRotation = "1 0 0 0";
          baseScale = "1 1 1";
-            InitialTargetPosition = "-1";
+            initialTargetPosition = "-1";
       };
    };
    new SimGroup(MustChange_g) {
@@ -295,7 +306,7 @@ new SimGroup(MissionGroup) {
          basePosition = "0 0 0";
          baseRotation = "1 0 0 0";
          baseScale = "1 1 1";
-            InitialTargetPosition = "-1";
+            initialTargetPosition = "-1";
       };
    };
    new SimGroup(MustChange_g) {
@@ -353,7 +364,7 @@ new SimGroup(MissionGroup) {
          basePosition = "0 0 0";
          baseRotation = "1 0 0 0";
          baseScale = "1 1 1";
-            InitialTargetPosition = "-1";
+            initialTargetPosition = "-1";
       };
    };
    new SimGroup(MustChange_g) {
@@ -395,7 +406,7 @@ new SimGroup(MissionGroup) {
          basePosition = "0 0 0";
          baseRotation = "1 0 0 0";
          baseScale = "1 1 1";
-            InitialTargetPosition = "-1";
+            initialTargetPosition = "-1";
       };
    };
    new SimGroup(MustChange_g) {
@@ -437,15 +448,13 @@ new SimGroup(MissionGroup) {
          basePosition = "0 0 0";
          baseRotation = "1 0 0 0";
          baseScale = "1 1 1";
-            InitialTargetPosition = "-1";
+            initialTargetPosition = "-1";
       };
    };
-   new Trigger(Bounds) {
-      position = "-12 31 0";
-      rotation = "1 0 0 0";
-      scale = "25 40 35";
-      dataBlock = "InBoundsTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---

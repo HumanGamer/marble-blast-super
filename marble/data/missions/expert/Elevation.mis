@@ -3,12 +3,13 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          name = "Elevation";
-         artist = "James Colsey";
-         level = "3";
-         desc = "Master the odyssey of ascending platforms.";
-         goldTime = "150000";
          type = "Expert";
+         goldTime = "150000";
          time = "0";
+         artist = "James Colsey";
+         desc = "Master the odyssey of ascending platforms.";
+         hyperTime = "120000";
+         level = "3";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -60,7 +61,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "7675";
+         beam = "10958";
    };
    new Item() {
       position = "5 13 21";
@@ -70,7 +71,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "7664";
+         checkpointNum = "1";
+         node = "10947";
    };
    new Item() {
       position = "-4 26 38.5";
@@ -80,7 +82,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "7665";
+         node = "10948";
    };
    new Item() {
       position = "-4 60 30";
@@ -90,7 +92,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "7666";
+         checkpointNum = "1";
+         node = "10949";
    };
    new Item() {
       position = "30 60 34";
@@ -100,8 +103,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "7667";
          checkpointNum = "1";
+         node = "10950";
    };
    new Item() {
       position = "61.5 74 54";
@@ -111,7 +114,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "7668";
+         checkpointNum = "1";
+         node = "10951";
    };
    new Item() {
       position = "56 43 43";
@@ -121,7 +125,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "7669";
+         node = "10952";
    };
    new Item() {
       position = "56 50.5 52.5";
@@ -140,7 +144,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "7670";
+         node = "10953";
    };
    new Item() {
       position = "56 60 64";
@@ -150,7 +154,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "7671";
+         node = "10954";
    };
    new Item() {
       position = "60 27 64";
@@ -160,7 +164,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "7672";
+         node = "10955";
    };
    new Item() {
       position = "68 39 67.5";
@@ -170,7 +174,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "7673";
+         node = "10956";
    };
    new Item() {
       position = "72 3 48";
@@ -180,7 +184,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "7674";
+         node = "10957";
    };
    new Item() {
       position = "72 11 74";
@@ -196,7 +200,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "6392";
+         beam = "10613";
    };
    new SimGroup(MustChange_g) {
 
@@ -620,6 +624,7 @@ new SimGroup(MissionGroup) {
          baseRotation = "1 0 0 0";
          baseScale = "1 1 1";
             initialTargetPosition = "0";
+            checkpointNum = "1";
       };
    };
    new SimGroup(MustChange_g) {
@@ -662,6 +667,7 @@ new SimGroup(MissionGroup) {
          baseRotation = "1 0 0 0";
          baseScale = "1 1 1";
             initialTargetPosition = "0";
+            checkpointNum = "1";
       };
    };
    new SimGroup(MustChange_g) {
@@ -1130,6 +1136,7 @@ new SimGroup(MissionGroup) {
          baseRotation = "1 0 0 0";
          baseScale = "1 1 1";
             initialTargetPosition = "0";
+            checkpointNum = "1";
       };
    };
    new SimGroup(MustChange_g) {
@@ -1202,12 +1209,12 @@ new SimGroup(MissionGroup) {
       dataBlock = "DuctFan";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         powerUp = "0";
-         pad = "1905";
          penaltyTime = "0";
-         time = "0";
          gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "1905";
    };
    new Item() {
       position = "61.6217 73.9803 59.6944";
@@ -1219,12 +1226,12 @@ new SimGroup(MissionGroup) {
       rotate = "1";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         powerUp = "0";
-         pad = "3301";
          penaltyTime = "0";
-         time = "0";
          gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "3301";
    };
    new Item() {
       position = "68.0363 38.928 66.0491";
@@ -1253,6 +1260,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
          timeBonus = "4000";
    };
    new StaticShape() {
@@ -1366,12 +1374,12 @@ new SimGroup(MissionGroup) {
          target = "check1";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         powerUp = "0";
-         pad = "6377";
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "6377";
    };
    new Trigger(check2t) {
       position = "54.106 47.805 63.9963";
