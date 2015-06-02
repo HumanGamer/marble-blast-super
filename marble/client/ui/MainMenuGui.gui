@@ -143,23 +143,23 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          //repeatDecay = "1";
          //bitmap = "./home/multiplayer";
       //};
-      new GuiBitmapButtonCtrl() {
-         profile = "GuiButtonProfile";
-         horizSizing = "relative";
-         vertSizing = "relative";
-         position = "530 385";
-         extent = "75 65";
-         minExtent = "8 8";
-         visible = "1";
-         command = "canvas.pushdialog(motdgui);";
-         helpTag = "0";
-         text = "motd";
-         groupNum = "-1";
-         buttonType = "PushButton";
-         repeatPeriod = "1000";
-         repeatDecay = "1";
-         bitmap = "./motd/motd_buttn";
-      };
+      //new GuiBitmapButtonCtrl() {
+         //profile = "GuiButtonProfile";
+         //horizSizing = "relative";
+         //vertSizing = "relative";
+         //position = "530 385";
+         //extent = "75 65";
+         //minExtent = "8 8";
+         //visible = "1";
+         //command = "canvas.pushdialog(motdgui);";
+         //helpTag = "0";
+         //text = "motd";
+         //groupNum = "-1";
+         //buttonType = "PushButton";
+         //repeatPeriod = "1000";
+         //repeatDecay = "1";
+         //bitmap = "./motd/motd_buttn";
+      //};
    };
    new GuiBitmapCtrl() {
       profile = "GuiDefaultProfile";

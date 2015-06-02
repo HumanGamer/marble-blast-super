@@ -10,11 +10,11 @@ function playMissionGui::onWake(%this)
    PM_DifficultyList.clear();
    PM_DifficultyList.addRow(0, "Tutorial");
    PM_DifficultyList.addRow(1, "Beginner");
-   PM_DifficultyList.addRow(2, "Medium");
+   PM_DifficultyList.addRow(2, "Intermediate");
    PM_DifficultyList.addRow(3, "Advanced");
    PM_DifficultyList.addRow(4, "Expert");
    PM_DifficultyList.addRow(5, "Custom");
-   PM_DifficultyList.addRow(6, "Directors Cut");
+   //PM_DifficultyList.addRow(6, "Directors Cut");
    for (%i = 0; %i < PM_DifficultyList.rowCount(); %i++)
    {
       %obj = PM_DifficultyList.getRowTextById(%i);
@@ -33,12 +33,12 @@ function PM_DifficultyList::onSelect(%this, %id)
 {
    %type = %this.getRowTextById(%id);
    
-   if (%type $= "Directors Cut")
-      %type = "directorscut";
+   //if (%type $= "Directors Cut")
+   //   %type = "directorscut";
    PMSetMissionTab(%type);
    
-   if (%type $= "directorscut")
-      %type = "Directors Cut";
+   //if (%type $= "directorscut")
+   //   %type = "Directors Cut";
    
    PM_DifficultyButton.setText(%type);
    
@@ -316,31 +316,31 @@ function PM_setSelected(%index)
       %group = MTYPE_tutorial;
    }
    %type = $MissionType;
-   if (%type $= "directorscut")
-      %type = "Directors Cut";
+   //if (%type $= "directorscut")
+   //   %type = "Directors Cut";
    if (%group.getCount() == 0)
    {
       PM_play.setActive(false);
       PM_NoQualOverlay.setVisible(true);
-      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No" SPC %type SPC "Levels!");
+      PM_NoQualText.setText("<color:CCCCCC><font:Bauhaus 93:32><just:center>No" SPC %type SPC "Levels!");
       PM_preview.setBitmap("");
       PM_description.setText("");
-      PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ %type);
-      PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ %type);
+      PM_level_bkgnd.setText("<color:000000><font:Bauhaus 93:24><just:center>" @ %type);
+      PM_level_fgnd.setText("<color:FFFFFF><font:Bauhaus 93:24><just:center>" @ %type);
       return;
    }
    %mission = getField(PM_missionList.getRowTextById(%index), 1);
-   %name = "<color:000000><spush><font:Animated:24>" @ %mission.name @ "<spop><lmargin:10>\n\n";
+   %name = "<color:000000><spush><font:Bauhaus 93:24>" @ %mission.name @ "<spop><lmargin:10>\n\n";
    if (%mission.time)
-      %qualify = "<spush><font:Animated:20><lmargin:0>Spare Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n\n";
+      %qualify = "<spush><font:Bauhaus 93:20><lmargin:0>Spare Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n\n";
    if (%mission.artist !$= "")
    {
-      %author = "<spush><font:Animated:18>" @ %mission.artist @ "<spop>\n\n";
+      %author = "<spush><font:Bauhaus 93:18>" @ %mission.artist @ "<spop>\n\n";
    } else {
-      %author = "<spush><font:Animated:18>" @ "Unknown Artist" @ "<spop>\n\n";
+      %author = "<spush><font:Bauhaus 93:18>" @ "Unknown Artist" @ "<spop>\n\n";
    }
    %desc = %mission.desc @ "\n\n";
-   %best = "<spush><font:Animated:20>Your best times:<spop><lmargin:10><tab:0,130,180><font:Whitestone:14>\n";
+   %best = "<spush><font:Bauhaus 93:20>Your best times:<spop><lmargin:10><tab:0,130,180><font:Whitestone:14>\n";
    getBestTimes(%mission.file);
    %total = "";
    for (%i = 0; %i < 3; %i++)
@@ -359,8 +359,8 @@ function PM_setSelected(%index)
       //EG_preview.setBitmap(%bmp);// @ ".png");
    //else
       //EG_NextLevel.setBitmap(%bmp @ ".jpg");
-   PM_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
-   PM_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
+   PM_level_bkgnd.setText("<color:000000><font:Bauhaus 93:24><just:center>" @ %type @ " Level " @ %index + 1);
+   PM_level_fgnd.setText("<color:FFFFFF><font:Bauhaus 93:24><just:center>" @ %type @ " Level " @ %index + 1);
    //EG_level_bkgnd.setText("<color:000000><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
    //EG_level_fgnd.setText("<color:FFFFFF><font:Animated:24><just:center>" @ %type @ " Level " @ %index + 1);
    PM_missionList.setSelectedById(%index);
@@ -372,7 +372,7 @@ function PM_setSelected(%index)
    if (!isFile(%bmp @ ".png") && !isFile(%bmp @ ".jpg"))
    {
       PM_NoQualOverlay.setVisible(true);
-      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No Preview!");
+      PM_NoQualText.setText("<color:CCCCCC><font:Bauhaus 93:32><just:center>No Preview!");
       //EG_NoQualOverlay.setVisible(true);
       //EG_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>No Preview!");
    }
@@ -393,7 +393,7 @@ function setLevelLocked()
    {
       PM_play.setActive(false);
       PM_NoQualOverlay.setVisible(true);
-      PM_NoQualText.setText("<color:CCCCCC><font:Animated:32><just:center>Locked!");
+      PM_NoQualText.setText("<color:CCCCCC><font:Bauhaus 93:32><just:center>Locked!");
    } else {
       PM_play.setActive(true);
       PM_NoQualOverlay.setVisible(false);
@@ -448,22 +448,22 @@ function getMissionObject(%mission) {
 	
 	if (!isObject(MTYPE_tutorial))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_tutorial));
-   if (!isObject(MTYPE_practice))
-	   PlayMissionGroup.add(new SimGroup(MTYPE_practice));
 	if (!isObject(MTYPE_beginner))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_beginner));
-   if (!isObject(MTYPE_medium))
-	   PlayMissionGroup.add(new SimGroup(MTYPE_medium));
+   if (!isObject(MTYPE_intermediate))
+	   PlayMissionGroup.add(new SimGroup(MTYPE_intermediate));
    if (!isObject(MTYPE_advanced))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_advanced));
 	   if (!isObject(MTYPE_expert))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_expert));
    if (!isObject(MTYPE_custom))
 	   PlayMissionGroup.add(new SimGroup(MTYPE_custom));
-   if (!isObject(MTYPE_directorscut))
-	   PlayMissionGroup.add(new SimGroup(MTYPE_directorscut));
+   if (!isObject(MTYPE_template))
+	   PlayMissionGroup.add(new SimGroup(MTYPE_template));
+   //if (!isObject(MTYPE_directorscut))
+	//   PlayMissionGroup.add(new SimGroup(MTYPE_directorscut));
 	   
-   if (%infoObject.type !$= "tutorial" && %infoObject.type !$= "practice" && %infoObject.type !$= "beginner" && %infoObject.type !$= "medium" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert" && %infoObject.type !$= "directorscut")
+   if (%infoObject.type !$= "tutorial" && %infoObject.type !$= "beginner" && %infoObject.type !$= "intermediate" && %infoObject.type !$= "advanced" && %infoObject.type !$= "expert" && %infoObject.type !$= "template")// && %infoObject.type !$= "directorscut")
       %infoObject.type = "custom";
       
    if (%infoObject.gameType $= "")
