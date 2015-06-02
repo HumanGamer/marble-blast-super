@@ -2,12 +2,12 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         desc = "The pathway has gotten thinner. Can you keep your balance?";
-         goldTime = "15500";
-         level = "1";
          name = "Catwalks";
          type = "intermediate";
+         goldTime = "15500";
+         desc = "The pathway has gotten thinner. Can you keep your balance?";
          artist = "Rozi";
+         level = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -63,14 +63,15 @@ new SimGroup(MissionGroup) {
          pad = "3690";
    };
    new Item() {
-      position = "-51.4519 35.5531 5.48082";
+      position = "-52.4519 33.5531 5.48082";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "GemItem";
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "6469";
+         checkpointNum = "1";
+         node = "41097";
    };
    new ParticleEmitterNode() {
       position = "49.5233 -140.767 -10.0601";
@@ -109,14 +110,14 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90";
       scale = "0.65 0.65 0.65";
       dataBlock = "StartPad";
-         beam = "6472";
+         beam = "41100";
    };
    new StaticShape(EndPoint) {
-      position = "-51.4603 12.2296 11.5877";
+      position = "-52.6201 11.6039 11.5877";
       rotation = "0 0 1 180";
       scale = "0.68 0.68 0.68";
       dataBlock = "EndPad";
-         beam = "6415";
+         beam = "40776";
    };
    new Item() {
       position = "-39.4704 22.5349 0.482546";
@@ -126,7 +127,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "6470";
+         checkpointNum = "1";
+         node = "41098";
    };
    new Item() {
       position = "-66.5608 13.5687 0.577373";
@@ -137,19 +139,27 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "6471";
+         node = "41099";
+   };
+   new Trigger() {
+      position = "-186.627 48.8637 -8.6858";
+      rotation = "1 0 0 0";
+      scale = "65 50 30";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
    };
-   new Trigger() {
-      position = "-94.8268 48.8637 -8.6858";
-      rotation = "1 0 0 0";
-      scale = "65 50 30";
-      dataBlock = "InBoundsTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   new ScriptObject() {
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "40774";
    };
 };
 //--- OBJECT WRITE END ---

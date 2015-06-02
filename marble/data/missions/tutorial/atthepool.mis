@@ -2,14 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         startHelpText = "What is this blue liquid?";
-         level = "10";
-         type = "tutorial";
-         goldTime = "20000";
-         name = "At The Pool";
          artist = "Matthieu Parizeau";
+         desc = "Learn how to roll with water!";
+         level = "4";
+         startHelpText = "What is this blue liquid?";
+         type = "tutorial";
+         name = "At The Pool";
+         goldTime = "20000";
          time = "45000";
-         desc = "A typical day at the swimming pool!";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -61,12 +61,14 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "4275";
    };
    new StaticShape(EndPoint) {
       position = "16.5 2 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
+         beam = "4245";
    };
    new Item() {
       position = "7.5 -6 0";
@@ -76,6 +78,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4271";
    };
    new Item() {
       position = "7.5 18 0";
@@ -85,6 +88,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4272";
    };
    new Item() {
       position = "4 12 -4";
@@ -94,6 +98,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4273";
    };
    new Item() {
       position = "9 2 -4";
@@ -103,6 +108,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4274";
    };
    new StaticShape() {
       position = "12.5 14 1.2";
@@ -140,6 +146,15 @@ new SimGroup(MissionGroup) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new Item() {
+      position = "6.31271 7.50862 -4.04612";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---
