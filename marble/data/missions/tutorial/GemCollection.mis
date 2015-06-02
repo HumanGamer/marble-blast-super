@@ -2,12 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         goldTime = "10000";
-         desc = "Something is disallowing you from the finish!";
-         artist = "Matthieu Parizeau";
-         level = "0";
+         level = "3";
          name = "Collection";
          type = "tutorial";
+         desc = "Something is disallowing you from the finish!";
+         artist = "Rozi";
+         hyperTime = "6500";
+         goldTime = "10000";
          startHelpText = "You can\'t finish the level without collecting every gem. Find them all!";
    };
    new MissionArea(MissionArea) {
@@ -56,28 +57,28 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
+         gemCount = "0";
+         time = "0";
+         penaltyTime = "0";
          bonusTime = "0";
          pad = "2406";
-         time = "0";
-         penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
+         gemCount = "0";
+         time = "0";
+         penaltyTime = "0";
          bonusTime = "0";
          pad = "3708";
-         time = "0";
-         penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         pad = "3690";
+         powerUp = "0";
+         gemCount = "0";
          time = "0";
          penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
+         bonusTime = "0";
+         pad = "3690";
    };
    new ParticleEmitterNode() {
       position = "49.5233 -140.767 -10.0601";
@@ -88,26 +89,26 @@ new SimGroup(MissionGroup) {
       velocity = "1";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         pad = "2615";
+         powerUp = "0";
+         gemCount = "0";
          time = "0";
          penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
+         bonusTime = "0";
+         pad = "2615";
    };
    new StaticShape(StartPoint) {
       position = "-11.2104 -25.8496 -0.95";
       rotation = "1 0 0 0";
       scale = "0.7 0.7 0.7";
       dataBlock = "StartPad";
-         beam = "25869";
+         beam = "4765";
    };
    new StaticShape(EndPoint) {
       position = "-8.24642 -28.4498 2.55";
       rotation = "0 0 1 180";
       scale = "0.35 0.35 0.35";
       dataBlock = "EndPad";
-         beam = "25845";
+         beam = "4741";
    };
    new Item() {
       position = "1.84755 -20.6548 0.96888";
@@ -117,8 +118,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4761";
          checkpointNum = "1";
-         node = "25865";
    };
    new Item() {
       position = "-2.25626 -16.5655 -1.06";
@@ -128,8 +129,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4762";
          checkpointNum = "1";
-         node = "25866";
    };
    new Item() {
       position = "-4.34199 -10.7436 -1.06";
@@ -139,8 +140,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4763";
          checkpointNum = "1";
-         node = "25867";
    };
    new Item() {
       position = "-6.304 -24.5487 2.5";
@@ -150,7 +151,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "25868";
+         node = "4764";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

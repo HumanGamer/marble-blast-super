@@ -2,13 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         goldTime = "60000";
-         time = "0";
-         desc = "Use some really creative ways of climbing up this course.";
-         artist = "Ender";
-         level = "6";
          name = "Whatever Goes Up";
          type = "Beginner";
+         time = "0";
+         hyperTime = "31000";
+         desc = "Use some really creative ways of climbing up this course.";
+         artist = "Ender";
+         goldTime = "45000";
+         level = "6";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -49,131 +50,131 @@ new SimGroup(MissionGroup) {
       ambient = "0.300000 0.300000 0.400000 1.000000";
    };
    new ScriptObject() {
+         bonusTime = "0";
+         pad = "2009";
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
-         bonusTime = "0";
-         pad = "2009";
    };
    new StaticShape(StartPoint) {
       position = "-15.2813 -19.7636 -39.7569";
       rotation = "0 0 1 90";
       scale = "0.5 0.5 0.5";
       dataBlock = "StartPad";
-         beam = "2583";
+         beam = "6736";
    };
    new ScriptObject() {
-         time = "0";
-         penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
          pad = "1649";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "1721";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "2727";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "2784";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "4691";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "1602";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "1602";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "1602";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "1602";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "1672";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "1752";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "1965";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "1624";
-   };
-   new ScriptObject() {
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "2519";
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
    };
    new InteriorInstance() {
       position = "-7.9405 -14.7849 -47.5699";
@@ -196,8 +197,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2577";
          checkpointNum = "1";
+         node = "6730";
    };
    new Item() {
       position = "2.51561 -19.7715 -36.0766";
@@ -207,8 +208,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2578";
          checkpointNum = "1";
+         node = "6731";
    };
    new Item() {
       position = "21.6129 -19.7686 -32.1016";
@@ -218,8 +219,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2579";
          checkpointNum = "1";
+         node = "6732";
    };
    new Item() {
       position = "21.5887 4.17108 -26.0802";
@@ -229,8 +230,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2580";
          checkpointNum = "1";
+         node = "6733";
    };
    new StaticShape() {
       position = "27.11 -23.098 -4.62603";
@@ -256,8 +257,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2581";
          checkpointNum = "1";
+         node = "6734";
    };
    new Item() {
       position = "19.0675 -54.3072 0.372788";
@@ -277,8 +278,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2582";
          checkpointNum = "1";
+         node = "6735";
    };
    new Item() {
       position = "-38.9044 -54.1986 19.8715";
@@ -393,7 +394,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "2559";
+         beam = "6095";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

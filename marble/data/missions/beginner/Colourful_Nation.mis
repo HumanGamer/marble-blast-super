@@ -6,8 +6,9 @@ new SimGroup(MissionGroup) {
          level = "1";
          type = "beginner";
          name = "Colourful Nation";
-		 goldTime = "8000";
-		 artist = "Matthieu Parizeau";
+         hyperTime = "10250";
+         artist = "Matthieu Parizeau";
+         goldTime = "15000";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -59,13 +60,14 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "1781";
+         beam = "5774";
    };
    new StaticShape(StartPoint) {
       position = "-6 -15 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
+         beam = "5890";
    };
    new Item() {
       position = "-18 3 4";
@@ -75,6 +77,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
+         node = "5887";
    };
    new Item() {
       position = "6 15 4";
@@ -84,6 +88,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
+         node = "5888";
    };
    new Item() {
       position = "0 15 0";
@@ -111,6 +117,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
+         node = "5889";
    };
    new Trigger(Bounds) {
       position = "-24 21 -5.5";
@@ -118,6 +126,11 @@ new SimGroup(MissionGroup) {
       scale = "48 42 28.5";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---
