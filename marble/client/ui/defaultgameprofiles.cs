@@ -256,10 +256,10 @@ if (!isObject(PlayMissionDifficultyPopupProfile)) new GuiControlProfile(PlayMiss
 if (!isObject(PlayMissionScrollProfile)) new GuiControlProfile(PlayMissionScrollProfile)
 {
    opaque = false;
-   //fillColor = "255 255 255";
+   fillColor = "255 255 255";
    border = 0;
    borderThickness = 0;
-   borderColor = "0 128 0";
+   borderColor = "0 0 0";
    bitmap = "marble/client/ui/play/scrollTransparent";
    hasBitmapArray = true;
 };
@@ -269,7 +269,6 @@ if (!isObject(PlayMissionDifficultyScrollProfile)) new GuiControlProfile(PlayMis
    opaque = false;
    //fillColor = "255 255 255";
    border = 0;
-   borderThickness = 0;
    borderColor = "0 128 0";
    bitmap = "marble/client/ui/play/scrollTransparent";
    hasBitmapArray = true;
