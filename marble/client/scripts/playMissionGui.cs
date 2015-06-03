@@ -182,7 +182,7 @@ function populatePMList()
       PM_LBL.setText(%i + 1 @ ". " @ %mission.name);
       PM_missionSelectList.add(%ctrl);
    }
-   PM_missionSelectList.resize(1, 1, "114", PM_missionSelectList.getCount() * 110);
+   PM_missionSelectList.resize(1, 1, "114", %group.getCount() * 110);
    
    PM_Scroll.scrollToTop();  
 }
