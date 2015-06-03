@@ -168,14 +168,6 @@ function MarbleSelectGui::AddMarbles(%this)
    %this.AddMarble("yellowabstract");
    %this.AddMarble("greenabstract");
    %this.AddMarble("redabstract");
-   %this.AddMarble("rscribble");
-   %this.AddMarble("tscribble");
-   %this.AddMarble("bscribble");
-   %this.AddMarble("blackscribble");
-   %this.AddMarble("yscribble");
-   %this.AddMarble("oscribble");
-   %this.AddMarble("gscribble");
-   %this.AddMarble("pscribble");
-   %this.AddMarble("marble01.normal");
    %this.AddMarble("neon");
+   %this.AddMarble("rozi");
 }
