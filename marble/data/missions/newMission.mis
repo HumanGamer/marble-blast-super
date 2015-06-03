@@ -2,13 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         desc = "A Template Mission";
          level = "1";
-         artist = "Your name here";
          goldTime = "0";
          name = "Template Mission";
          type = "template";
          time = "0";
+         desc = "A Template Mission";
+         artist = "Your name here";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -60,7 +60,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "2197";
+         beam = "2275";
    };
    new Trigger(Bounds) {
       position = "-4 12 95";
@@ -70,12 +70,12 @@ new SimGroup(MissionGroup) {
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new ScriptObject() {
-         gemCount = "0";
-         powerUp = "0";
          bonusTime = "0";
          pad = "2195";
-         time = "0";
          penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

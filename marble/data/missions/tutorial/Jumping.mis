@@ -3,13 +3,13 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          level = "2";
+         goldTime = "7000";
+         hyperTime = "3000";
+         startHelpText = "Press the Space Bar to make your marble jump!";
          type = "Tutorial";
          name = "Jumping Tutorial";
          desc = "You can jump in Marble Blast? No way!";
          artist = "Rozi";
-         hyperTime = "3000";
-         goldTime = "7000";
-         startHelpText = "Press the Space Bar to make your marble jump!";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -57,9 +57,9 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         powerUp = "0";
-         gemCount = "0";
          penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
          time = "0";
          bonusTime = "0";
          pad = "3690";
@@ -73,25 +73,25 @@ new SimGroup(MissionGroup) {
       velocity = "1";
    };
    new ScriptObject() {
-         powerUp = "0";
-         gemCount = "0";
          penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
          time = "0";
          bonusTime = "0";
          pad = "2615";
    };
    new ScriptObject() {
-         powerUp = "0";
-         gemCount = "0";
          penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
          time = "0";
          bonusTime = "0";
          pad = "2406";
    };
    new ScriptObject() {
-         powerUp = "0";
-         gemCount = "0";
          penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
          time = "0";
          bonusTime = "0";
          pad = "3708";
@@ -100,15 +100,15 @@ new SimGroup(MissionGroup) {
       position = "43.8028 -133.681 59.9232";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "StartPad";
-         beam = "5284";
+      dataBlock = "startpad";
+         beam = "2143";
    };
    new StaticShape(EndPoint) {
       position = "26.1533 -132.173 64.9838";
       rotation = "0 0 -1 90";
       scale = "1 1 1";
-      dataBlock = "EndPad";
-         beam = "5230";
+      dataBlock = "endpad";
+         beam = "2108";
    };
    new InteriorInstance() {
       position = "31.1931 -137.222 61.8666";
@@ -184,6 +184,15 @@ new SimGroup(MissionGroup) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new Item() {
+      position = "51.493 -112.341 60.029";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---

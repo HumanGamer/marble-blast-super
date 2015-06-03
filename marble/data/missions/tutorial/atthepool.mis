@@ -2,15 +2,15 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         desc = "Learn how to roll with water!";
          level = "4";
-         type = "tutorial";
-         name = "At The Pool";
+         goldTime = "20000";
          hyperTime = "7000";
-         artist = "Matthieu Parizeau";
          time = "45000";
          startHelpText = "What is this blue liquid?";
-         goldTime = "20000";
+         type = "tutorial";
+         name = "At The Pool";
+         desc = "Learn how to roll with water!";
+         artist = "Matthieu Parizeau";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -61,15 +61,15 @@ new SimGroup(MissionGroup) {
       position = "-2.5 2 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "StartPad";
-         beam = "4797";
+      dataBlock = "startpad";
+         beam = "4334";
    };
    new StaticShape(EndPoint) {
       position = "16.5 2 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "EndPad";
-         beam = "4766";
+      dataBlock = "endpad";
+         beam = "3714";
    };
    new Item() {
       position = "7.5 -6 0";
@@ -79,7 +79,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4793";
+         checkpointNum = "1";
+         node = "4330";
    };
    new Item() {
       position = "7.5 18 0";
@@ -89,7 +90,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4794";
+         checkpointNum = "1";
+         node = "4331";
    };
    new Item() {
       position = "4 12 -4";
@@ -99,7 +101,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4795";
+         node = "4332";
    };
    new Item() {
       position = "9 2 -4";
@@ -109,7 +111,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4796";
+         node = "4333";
    };
    new StaticShape() {
       position = "12.5 14 1.2";
@@ -151,11 +153,21 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new Item() {
+      position = "-6.29951 -9.79992 -4.94329";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---

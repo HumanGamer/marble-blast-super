@@ -3,13 +3,13 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          level = "3";
+         goldTime = "10000";
+         hyperTime = "6500";
+         startHelpText = "You can\'t finish the level without collecting every gem. Find them all!";
          name = "Collection";
          type = "tutorial";
          desc = "Something is disallowing you from the finish!";
          artist = "Rozi";
-         hyperTime = "6500";
-         goldTime = "10000";
-         startHelpText = "You can\'t finish the level without collecting every gem. Find them all!";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -57,26 +57,26 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         powerUp = "0";
-         gemCount = "0";
-         time = "0";
          penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         time = "0";
          bonusTime = "0";
          pad = "2406";
    };
    new ScriptObject() {
-         powerUp = "0";
-         gemCount = "0";
-         time = "0";
          penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         time = "0";
          bonusTime = "0";
          pad = "3708";
    };
    new ScriptObject() {
-         powerUp = "0";
-         gemCount = "0";
-         time = "0";
          penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         time = "0";
          bonusTime = "0";
          pad = "3690";
    };
@@ -89,10 +89,10 @@ new SimGroup(MissionGroup) {
       velocity = "1";
    };
    new ScriptObject() {
-         powerUp = "0";
-         gemCount = "0";
-         time = "0";
          penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         time = "0";
          bonusTime = "0";
          pad = "2615";
    };
@@ -100,15 +100,15 @@ new SimGroup(MissionGroup) {
       position = "-11.2104 -25.8496 -0.95";
       rotation = "1 0 0 0";
       scale = "0.7 0.7 0.7";
-      dataBlock = "StartPad";
-         beam = "4765";
+      dataBlock = "startpad";
+         beam = "2566";
    };
    new StaticShape(EndPoint) {
       position = "-8.24642 -28.4498 2.55";
       rotation = "0 0 1 180";
       scale = "0.35 0.35 0.35";
-      dataBlock = "EndPad";
-         beam = "4741";
+      dataBlock = "endpad";
+         beam = "2488";
    };
    new Item() {
       position = "1.84755 -20.6548 0.96888";
@@ -118,8 +118,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4761";
          checkpointNum = "1";
+         node = "2562";
    };
    new Item() {
       position = "-2.25626 -16.5655 -1.06";
@@ -129,8 +129,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4762";
          checkpointNum = "1";
+         node = "2563";
    };
    new Item() {
       position = "-4.34199 -10.7436 -1.06";
@@ -140,8 +140,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4763";
          checkpointNum = "1";
+         node = "2564";
    };
    new Item() {
       position = "-6.304 -24.5487 2.5";
@@ -151,12 +151,21 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4764";
+         node = "2565";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new Item() {
+      position = "-14.7635 -10.5455 0.775637";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---

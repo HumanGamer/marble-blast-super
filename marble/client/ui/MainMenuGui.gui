@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "~/client/backgrounds/helpbg.jpg";
+   bitmap = "~/client/backgrounds/background.jpg";
    useVariable = "0";
    tile = "0";
 
@@ -79,7 +79,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "24 278";
+         position = "24 283";
          extent = "104 34";
          minExtent = "8 8";
          visible = "1";
@@ -113,8 +113,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          profile = "GuiButtonProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "26 59";
-         extent = "155 37";
+         position = "26 58";
+         extent = "155 38";
          minExtent = "8 8";
          visible = "1";
          command = "StopDemoTimer();Canvas.setContent(ReplayCenterGui);";

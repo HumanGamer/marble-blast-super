@@ -2,13 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         desc = "A nation full of colour.";
          level = "1";
+         goldTime = "15000";
+         hyperTime = "10250";
          type = "beginner";
          name = "Colourful Nation";
-         hyperTime = "10250";
+         desc = "A nation full of colour.";
          artist = "Matthieu Parizeau";
-         goldTime = "15000";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -59,15 +59,15 @@ new SimGroup(MissionGroup) {
       position = "18 -9 6";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "EndPad";
-         beam = "5774";
+      dataBlock = "endpad";
+         beam = "6501";
    };
    new StaticShape(StartPoint) {
       position = "-6 -15 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "StartPad";
-         beam = "5890";
+      dataBlock = "startpad";
+         beam = "6836";
    };
    new Item() {
       position = "-18 3 4";
@@ -78,7 +78,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "5887";
+         node = "6833";
    };
    new Item() {
       position = "6 15 4";
@@ -89,7 +89,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "5888";
+         node = "6834";
    };
    new Item() {
       position = "0 15 0";
@@ -99,6 +99,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-18 9 0";
@@ -108,6 +109,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-6 -9 6";
@@ -118,7 +120,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "5889";
+         node = "6835";
    };
    new Trigger(Bounds) {
       position = "-24 21 -5.5";
@@ -131,6 +133,23 @@ new SimGroup(MissionGroup) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "6502";
+   };
+   new Item() {
+      position = "-6 -15.9054 -2.74329";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---

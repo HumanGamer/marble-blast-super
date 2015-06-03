@@ -2,13 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         level = "5";
+         goldTime = "4500";
+         hyperTime = "3500";
          name = "Pick your demise!";
          type = "beginner";
-         hyperTime = "3500";
          desc = "Should I pick left or right?";
          artist = "Matthieu Parizeau";
-         goldTime = "4500";
-         level = "5";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -59,26 +59,26 @@ new SimGroup(MissionGroup) {
       position = "8 -8 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "StartPad";
-         beam = "5695";
+      dataBlock = "startpad";
+         beam = "8721";
    };
    new StaticShape(EndPoint) {
       position = "8 26 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "EndPad";
-         beam = "5406";
+      dataBlock = "endpad";
+         beam = "8338";
    };
    new StaticShape(Platform1) {
       position = "5 4.5 1";
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         Trigger = "1";
          hide = "708576";
-         skin = "wall";
          permanent = "1";
+         skin = "wall";
          normalScale = "1 1 1";
+         Trigger = "1";
          used = "0";
    };
    new StaticShape(Platform1) {
@@ -86,11 +86,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         Trigger = "1";
          hide = "708577";
-         skin = "wall";
          permanent = "1";
+         skin = "wall";
          normalScale = "1 1 1";
+         Trigger = "1";
          used = "0";
    };
    new StaticShape(Platform1) {
@@ -98,13 +98,13 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
+         hide = "708578";
+         permanent = "1";
+         skin = "wall";
+         normalScale = "1 1 1";
          unhide1 = "1099";
          Trigger = "1";
          unhide = "1098";
-         hide = "708578";
-         skin = "wall";
-         permanent = "1";
-         normalScale = "1 1 1";
          used = "0";
    };
    new StaticShape(Platform1) {
@@ -112,11 +112,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         Trigger = "1";
          hide = "708579";
-         skin = "wall";
          permanent = "1";
+         skin = "wall";
          normalScale = "1 1 1";
+         Trigger = "1";
          used = "0";
    };
    new StaticShape(Platform1) {
@@ -124,11 +124,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         Trigger = "1";
          hide = "708580";
-         skin = "wall";
          permanent = "1";
+         skin = "wall";
          normalScale = "1 1 1";
+         Trigger = "1";
          used = "0";
    };
    new StaticShape(Platform1) {
@@ -136,11 +136,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         Trigger = "1";
          hide = "708581";
-         skin = "wall";
          permanent = "1";
+         skin = "wall";
          normalScale = "1 1 1";
+         Trigger = "1";
          used = "0";
    };
    new StaticShape(Platform1) {
@@ -148,11 +148,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         Trigger = "1";
          hide = "708582";
-         skin = "wall";
          permanent = "1";
+         skin = "wall";
          normalScale = "1 1 1";
+         Trigger = "1";
          used = "0";
    };
    new StaticShape(Platform1) {
@@ -160,11 +160,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         Trigger = "1";
          hide = "708583";
-         skin = "wall";
          permanent = "1";
+         skin = "wall";
          normalScale = "1 1 1";
+         Trigger = "1";
          used = "0";
    };
    new StaticShape(Bomb1) {
@@ -180,9 +180,9 @@ new SimGroup(MissionGroup) {
       dataBlock = "Bomb";
    };
    new Trigger(Bounds) {
-      position = "-7.5 33.5 -3.5";
+      position = "-7.40219 33.4909 -3.5";
       rotation = "1 0 0 0";
-      scale = "31 49 28.5";
+      scale = "31 49 50";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
@@ -212,29 +212,28 @@ new SimGroup(MissionGroup) {
       rotate = "1";
    };
    new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
          bonusTime = "0";
          pad = "4362";
-         time = "0";
-         penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
-   };
-   new Item() {
-      position = "11.9777 7.71041 -0.00159114";
-      rotation = "1 0 0 0";
-      scale = "0.1 0.1 0.01";
-      dataBlock = "SuperJumpItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         pad = "5404";
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
+         bonusTime = "0";
+         pad = "5404";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "8336";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

@@ -2,13 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         goldTime = "23000";
-         artist = "Matthieu Parizeau";
-         hyperTime = "17500";
          name = "Purple Climb";
          type = "beginner";
-         desc = "A climb in purple glory.";
          level = "10";
+         hyperTime = "26000";
+         artist = "Matthieu Parizeau";
+         desc = "A climb in purple glory.";
+         goldTime = "35000";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -63,6 +63,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "8658";
          checkpointNum = "1";
    };
    new Item() {
@@ -74,10 +75,12 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
+   new Trigger(Bounds) {
+      position = "-79.5 131 -11";
+      rotation = "1 0 0 0";
+      scale = "118.5 138 52";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new Item() {
       position = "-6 118 0";
@@ -87,7 +90,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "9473";
+         node = "8659";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-68 72 -4";
@@ -97,21 +101,22 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "9474";
+         node = "8660";
+         checkpointNum = "1";
    };
    new StaticShape(StartPoint) {
       position = "-2 2 0";
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "9475";
+         beam = "8661";
    };
    new StaticShape(EndPoint) {
       position = "-24 100 24";
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "9413";
+         beam = "8562";
    };
    new Item() {
       position = "-6 2 0";
@@ -131,13 +136,12 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
-   new Trigger(Bounds) {
-      position = "-79.5 131 -11";
-      rotation = "1 0 0 0";
-      scale = "118.5 138 52";
-      dataBlock = "InBoundsTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---
