@@ -10,6 +10,7 @@
 /marble/client/prefs.cs.dso
 /marble/server/prefs.cs.dso
 /common/server/prefs.cs
+/marble/client/config.cs
 *.dso
 *.db
 Thumbs.db
