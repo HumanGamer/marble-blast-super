@@ -1,0 +1,34 @@
+Stuff Needed to be Changed:
+-----------------------------------------------------------
+- "MBS" on playmissiongui.gui
+
+- Manual
+
+- .gui for Options -> Camera
+
+- Buttons in Options
+
+- Text font for level select
+
+- Marble Selection
+
+- Credits
+
+- Take out current inserted .rec files in Replay Center
+
+- Finish Tutorial Levels
+
+- The "Final 5" can only be achieved by beating every other level (including tutorial) [taking out Expert?]
+
+- Finishing Easter Eggs
+
+- Dedicated marble to everyone in the staff
+
+- Official MBS Marble
+
+- Taking out "Potato Farm"
+
+- Redoing Level Pictures
+
+- Fixing "Champion's Road" so it's not too laggy
+

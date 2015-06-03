@@ -37,9 +37,9 @@ function HelpCreditsGui::setPage(%this, %page)
    {
       case 1:
          %text = "<font:Whitestone:50><color:000000><just:center>Overview<font:Whitestone:24><just:left>\n\n" @
-                 "Roll your marble through a rich cartoon landscape of moving platforms and dangerous hazards.  Along the way find power ups to increase your speed, jumping ability or flight power, and use them to collect the hidden gems and race to the finish for the fastest time.";
+                 "Roll your marble through a colorful landscape of platforms! Along the way, you will find boosts that will increase speed, flight, and many others.";
       %text = "<font:Whitestone:50><color:000000><just:center>Overview<font:Whitestone:24><just:left>\n\n" @
-              "Marble Blast Super is a modification of the classic platformer Marble Blast Gold. There are new levels, features, and graphics. There are hazards you must avoid on your trip to the finish.";
+              "Marble Blast Super is a modification of the classic platformer game - Marble Blast Gold. There are new levels, features, and graphics. There are hazards you must avoid on your trip to the finish.";
       case 2:
          %text = "<font:Whitestone:50><color:000000><just:center>Basic Controls<font:Whitestone:24><just:left>\n\n" @
                  "The marble can be moved forward, back, left and right by pressing <func:bind moveforward>, <func:bind movebackward>, <func:bind moveleft> and <func:bind moveright>, respectively.  Pressing <func:bind jump> causes the marble to jump, and pressing <func:bind mouseFire> uses whatever powerup you currently have available.  All movement is relative to the view direction.";
@@ -56,7 +56,7 @@ function HelpCreditsGui::setPage(%this, %page)
          HC_Gem3.setVisible(true);
 
       case 5:
-         %text = "<font:Whitestone:50><color:000000><just:center>Bonus Items (1/2)<font:Whitestone:24>\n\n<font:Whitestone:24><just:left>" @
+         %text = "<font:Whitestone:50><color:000000><just:center>Bonus Items (Part 1)<font:Whitestone:24>\n\n<font:Whitestone:24><just:left>" @
                  "<lmargin:70>SuperSprint PowerUp - gives you a burst of speed.\n\nSuperSpring PowerUp - gives you a big jump up.\n\nShockStopper PowerUp - absorbs bounce impacts.\n\nSuperRicochet PowerUp - makes you bounce higher.";
          HC_SuperSpeed.setVisible(true);
          HC_SuperJump.setVisible(true);
