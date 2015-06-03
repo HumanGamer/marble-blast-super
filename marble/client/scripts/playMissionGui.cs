@@ -331,14 +331,24 @@ function PM_setSelected(%index)
    }
    %mission = getField(PM_missionList.getRowTextById(%index), 1);
    %name = "<color:000000><spush><font:Bauhaus 93:24>" @ %mission.name @ "<spop><lmargin:10>\n\n";
-   if (%mission.time)
-      %qualify = "<spush><font:Bauhaus 93:20><lmargin:0>Spare Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n\n";
    if (%mission.artist !$= "")
    {
       %author = "<spush><font:Bauhaus 93:18>" @ %mission.artist @ "<spop>\n\n";
    } else {
-      %author = "<spush><font:Bauhaus 93:18>" @ "Unknown Artist" @ "<spop>\n\n";
+      %author = "<spush><font:Bauhaus 93:18>" @ "(Anonymous)" @ "<spop>\n\n";
    }
+   if (%mission.time)
+      %qualify = "<spush><font:Bauhaus 93:20><color:CCCCCC><shadowcolor:000000><shadow:1:1><lmargin:10>Par Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n";
+   else
+      %qualify = "<spush><font:Bauhaus 93:20><color:CCCCCC><shadowcolor:000000><shadow:1:1><lmargin:10>Par Time: " @ "None" @ "<spop><lmargin:0>\n";
+   if (%mission.goldTime)
+      %qualify = %qualify @ "<spush><font:Bauhaus 93:20><color:17e299><shadowcolor:000000><shadow:1:1><lmargin:10>Super Time: " @ formatTime(%mission.goldTime) @ "<spop><lmargin:0>\n";
+   else
+      %qualify = %qualify @ "<spush><font:Bauhaus 93:20><color:17e299><shadowcolor:000000><shadow:1:1><lmargin:10>Super Time: " @ "None" @ "<spop><lmargin:0>\n";
+   if (%mission.hyperTime)
+      %qualify = %qualify @ "<spush><font:Bauhaus 93:20><color:834396><shadowcolor:000000><shadow:1:1><lmargin:10>Hyper Time: " @ formatTime(%mission.hyperTime) @ "<spop><lmargin:0>\n\n";
+   else
+      %qualify = %qualify @ "<spush><font:Bauhaus 93:20><color:834396><shadowcolor:000000><shadow:1:1><lmargin:10>Hyper Time: " @ "None" @ "<spop><lmargin:0>\n\n";
    %desc = %mission.desc @ "\n\n";
    %best = "<spush><font:Bauhaus 93:20>Your best times:<spop><lmargin:10><tab:0,130,180><font:Whitestone:14>\n";
    getBestTimes(%mission.file);
@@ -354,7 +364,7 @@ function PM_setSelected(%index)
       %time = %time @ "\n";
       %total = %total @ %time;
    }
-   PM_description.setText(%name @ %qualify @ %desc @ %author @ %best @ %total);
+   PM_description.setText(%name @ %desc @ %author @ %qualify @ %best @ %total);
    %bmp = strreplace(%mission.file, ".mis", "");
    PM_preview.setBitmap(%bmp);
    //if (isFile(%bmp @ ".png"))

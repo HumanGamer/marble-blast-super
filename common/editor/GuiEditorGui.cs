@@ -1,28 +1,28 @@
-function GuiEditorGui::init(%this)
-{
-   GuiEditorMenuBar.clearMenus();
-   GuiEditorMenuBar.addMenu("File", 0);
-   GuiEditorMenuBar.addMenuItem("File", "New Gui...", 1);
-   GuiEditorMenuBar.addMenuItem("File", "Save Gui...", 3, "Ctrl S");
-
-   GuiEditorMenuBar.addMenu("Edit", 1);
-   GuiEditorMenuBar.addMenuItem("Edit", "Undo", 1, "Ctrl Z");
-   GuiEditorMenuBar.setMenuItemBitmap("Edit", "Undo", 1);
-   GuiEditorMenuBar.addMenuItem("Edit", "Redo", 2, "Ctrl R");
-   GuiEditorMenuBar.setMenuItemBitmap("Edit", "Redo", 2);
-   GuiEditorMenuBar.addMenuItem("Edit", "-", 0);
-   GuiEditorMenuBar.addMenuItem("Edit", "Cut", 3, "Ctrl X");
-   GuiEditorMenuBar.setMenuItemBitmap("Edit", "Cut", 3);
-   GuiEditorMenuBar.addMenuItem("Edit", "Copy", 4, "Ctrl C");
-   GuiEditorMenuBar.setMenuItemBitmap("Edit", "Copy", 4);
-   GuiEditorMenuBar.addMenuItem("Edit", "Paste", 5, "Ctrl V");
-   GuiEditorMenuBar.setMenuItemBitmap("Edit", "Paste", 5);
-   GuiEditorMenuBar.addMenuItem("Edit", "-", 0);
-   GuiEditorMenuBar.addMenuItem("Edit", "Select All", 6, "Ctrl A");
-   GuiEditorMenuBar.addMenuItem("Edit", "Select None", 7, "Ctrl N");
-   GuiEditorMenuBar.addMenuItem("Edit", "-", 0);
-   GuiEditorMenuBar.addMenuItem("Edit", "Gui Editor Settings...", 12);
-}
+//function GuiEditorGui::init(%this)
+//{
+   //GuiEditorMenuBar.clearMenus();
+   //GuiEditorMenuBar.addMenu("File", 0);
+   //GuiEditorMenuBar.addMenuItem("File", "New Gui...", 1);
+   //GuiEditorMenuBar.addMenuItem("File", "Save Gui...", 3, "Ctrl S");
+//
+   //GuiEditorMenuBar.addMenu("Edit", 1);
+   //GuiEditorMenuBar.addMenuItem("Edit", "Undo", 1, "Ctrl Z");
+   //GuiEditorMenuBar.setMenuItemBitmap("Edit", "Undo", 1);
+   //GuiEditorMenuBar.addMenuItem("Edit", "Redo", 2, "Ctrl R");
+   //GuiEditorMenuBar.setMenuItemBitmap("Edit", "Redo", 2);
+   //GuiEditorMenuBar.addMenuItem("Edit", "-", 0);
+   //GuiEditorMenuBar.addMenuItem("Edit", "Cut", 3, "Ctrl X");
+   //GuiEditorMenuBar.setMenuItemBitmap("Edit", "Cut", 3);
+   //GuiEditorMenuBar.addMenuItem("Edit", "Copy", 4, "Ctrl C");
+   //GuiEditorMenuBar.setMenuItemBitmap("Edit", "Copy", 4);
+   //GuiEditorMenuBar.addMenuItem("Edit", "Paste", 5, "Ctrl V");
+   //GuiEditorMenuBar.setMenuItemBitmap("Edit", "Paste", 5);
+   //GuiEditorMenuBar.addMenuItem("Edit", "-", 0);
+   //GuiEditorMenuBar.addMenuItem("Edit", "Select All", 6, "Ctrl A");
+   //GuiEditorMenuBar.addMenuItem("Edit", "Select None", 7, "Ctrl N");
+   //GuiEditorMenuBar.addMenuItem("Edit", "-", 0);
+   //GuiEditorMenuBar.addMenuItem("Edit", "Gui Editor Settings...", 12);
+//}
 
 function GuiEditorGui::onWake(%this)
 {

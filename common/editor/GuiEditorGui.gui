@@ -14,7 +14,7 @@ new GuiControl(GuiEditorGui) {
       profile = "BackFillProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "0 22";
+      position = "0 0";
       extent = "640 480";
       minExtent = "8 8";
       visible = "1";
@@ -24,7 +24,7 @@ new GuiControl(GuiEditorGui) {
       profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "0 22";
+      position = "0 0";
       extent = "640 480";
       minExtent = "8 8";
       visible = "1";
@@ -34,7 +34,7 @@ new GuiControl(GuiEditorGui) {
       profile = "GuiTextEditProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "0 22";
+      position = "0 0";
       extent = "640 480";
       minExtent = "8 8";
       visible = "1";
@@ -44,7 +44,7 @@ new GuiControl(GuiEditorGui) {
       profile = "GuiButtonProfile";
       horizSizing = "width";
       vertSizing = "height";
-      position = "640 22";
+      position = "640 0";
       extent = "160 600";
       minExtent = "8 8";
       visible = "1";
@@ -406,15 +406,15 @@ new GuiControl(GuiEditorGui) {
          repeatDecay = "1";
       };
    };
-   new GuiMenuBar(GuiEditorMenuBar) {
-      profile = "GuiMenuBarProfile";
-      horizSizing = "width";
-      vertSizing = "bottom";
-      position = "0 0";
-      extent = "1024 22";
-      minExtent = "8 8";
-      visible = "1";
-      helpTag = "0";
-   };
+   //new GuiMenuBar(GuiEditorMenuBar) {
+      //profile = "GuiMenuBarProfile";
+      //horizSizing = "width";
+      //vertSizing = "bottom";
+      //position = "0 0";
+      //extent = "1024 22";
+      //minExtent = "8 8";
+      //visible = "1";
+      //helpTag = "0";
+   //};
 };
 //--- OBJECT WRITE END ---

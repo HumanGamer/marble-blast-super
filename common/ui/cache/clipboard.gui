@@ -1,20 +1,16 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapButtonCtrl() {
-      profile = "GuiDefaultProfile";
-      horizSizing = "relative";
-      vertSizing = "relative";
-      position = "428 371";
-      extent = "140 51";
+   new GuiMLTextCtrl(PM_description) {
+      profile = "GuiMLTextProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "8 5";
+      extent = "267 228";
       minExtent = "8 8";
       visible = "1";
-      command = "Canvas.setContent(mainMenuGui);";
       helpTag = "0";
-      text = "button";
-      groupNum = "-1";
-      buttonType = "PushButton";
-      repeatPeriod = "1000";
-      repeatDecay = "1";
-      bitmap = "marble/client/ui/credits/home";
+      lineSpacing = "2";
+      allowColorChars = "0";
+      maxChars = "-1";
    };
 };
