@@ -1124,7 +1124,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             visible = "1";
             command = "optionsDlg.applyGraphics();";
             helpTag = "0";
-            text = "OK";
+            text = "Apply";
             groupNum = "-1";
             buttonType = "PushButton";
             repeatPeriod = "1000";
@@ -1155,12 +1155,12 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          visible = "1";
          command = "OptionsDlg.applyGraphics();Canvas.setContent($optionsBackGui);";
          helpTag = "0";
-         text = "OK";
+         text = "Back";
          groupNum = "-1";
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/back";
+         bitmap = "./Options/home";
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiDefaultProfile";
