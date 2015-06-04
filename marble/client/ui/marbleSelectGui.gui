@@ -170,4 +170,5 @@ function MarbleSelectGui::AddMarbles(%this)
    %this.AddMarble("redabstract");
    %this.AddMarble("neon");
    %this.AddMarble("rozi");
+	%this.AddMarble("lee");
 }
