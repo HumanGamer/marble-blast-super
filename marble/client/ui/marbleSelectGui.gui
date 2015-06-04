@@ -154,6 +154,7 @@ function MarbleSelectGui::GetMarble(%this, %index)
 function MarbleSelectGui::AddMarbles(%this)
 {
    %this.AddMarble("base");
+   %this.AddMarble("green");
    %this.AddMarble("blue");
    %this.AddMarble("red");
    %this.AddMarble("purple");
@@ -168,7 +169,9 @@ function MarbleSelectGui::AddMarbles(%this)
    %this.AddMarble("yellowabstract");
    %this.AddMarble("greenabstract");
    %this.AddMarble("redabstract");
-   %this.AddMarble("neon");
+   %this.AddMarble("blast");
+	%this.AddMarble("matt");
    %this.AddMarble("rozi");
 	%this.AddMarble("lee");
+   %this.AddMarble("neon");
 }
