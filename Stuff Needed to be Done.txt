@@ -32,3 +32,24 @@ Stuff Needed to be Changed:
 
 - Fixing "Champion's Road" so it's not too laggy
 
+- Retaking every level picture
+
+- Change "Danger Castle"'s Skybox
+
+- Bouncy -> Tutorial
+
+- "Pick your demise!" needs to be longer
+
+- Fix Recording system
+
+- More checkpoints in Advanced and Expert levels
+
+- Block Towers -> Intermediate
+
+- Remove ssome bumpers in "Agility"
+
+- Make new sign textures
+
+- Redo the .dts shape for Start+End pads to 2x2
+
+- Resize Bumpers
