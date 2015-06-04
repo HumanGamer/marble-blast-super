@@ -299,8 +299,8 @@ function nextLevel()
       if (%type $= "Tutorial")
          %type = "Beginner";
       else if (%type $= "Beginner")
-         %type = "Medium";
-      else if (%type $= "Medium")
+         %type = "Intermediate";
+      else if (%type $= "Intermediate")
          %type = "Advanced";
       else if (%type $= "Advanced")
          %type = "Expert";
