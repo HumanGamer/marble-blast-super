@@ -10,6 +10,7 @@ new SimGroup(MissionGroup) {
          type = "Beginner";
          desc = "Use some really creative ways of climbing up this course.";
          artist = "Ender";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

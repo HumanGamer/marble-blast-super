@@ -10,6 +10,7 @@ new SimGroup(MissionGroup) {
          name = "Jumping Tutorial";
          desc = "You can jump in Marble Blast? No way!";
          artist = "Rozi";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

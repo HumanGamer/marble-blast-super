@@ -9,6 +9,7 @@ new SimGroup(MissionGroup) {
          hyperTime = "22500";
          desc = "Beginner Finale. Are you ready to face the challlenges medium has for you?";
          artist = "Ender";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

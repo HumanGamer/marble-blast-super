@@ -9,6 +9,7 @@ new SimGroup(MissionGroup) {
          name = "Colourful Nation";
          desc = "A nation full of colour.";
          artist = "Matthieu Parizeau";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

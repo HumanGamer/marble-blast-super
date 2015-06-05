@@ -9,6 +9,7 @@ new SimGroup(MissionGroup) {
          hyperTime = "12000";
          desc = "Explore this dangerous castle!";
          artist = "Matthieu Parizeau";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

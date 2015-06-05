@@ -27,14 +27,16 @@ function EasterEggItem::onPickup(%this, %obj, %user, %amount)
 {
    Parent::onPickup(%this,%obj,%user,%amount);
    
-   if (MissionInfo.type $= "custom" || MissionInfo.type $= "multiplayer")
-   {
-      %found = false;
-   } else {
-      eval("%found = $pref::EasterEgg::" @ MissionInfo.type @ "[" @ MissionInfo.level @ "];");   
+   //if (MissionInfo.type $= "custom" || MissionInfo.type $= "multiplayer")
+   //{
+   //   %found = false;
+   //} else {
+      %found = $pref::EasterEgg[$Server::MissionFile];
+      $pref::EasterEgg[$Server::MissionFile] = "1";
+      //eval("%found = $pref::EasterEgg[" @ $Server::MissionFile @ "];");// @ MissionInfo.type @ "[" @ MissionInfo.level @ "];");   
    
-      eval("$pref::EasterEgg::" @ MissionInfo.type @ "[" @ MissionInfo.level @ "] = \"1\";"); 
-   }
+      //eval("$pref::EasterEgg[" @ $Server::MissionFile @ "] = \"1\";");// @ MissionInfo.type @ "[" @ MissionInfo.level @ "] = \"1\";"); 
+   //}
    
    if (%found)
       %user.client.play2d(EasterEggAlreadySfx);

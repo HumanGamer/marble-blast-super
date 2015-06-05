@@ -307,6 +307,16 @@ function PM_GetBitmap(%mission)
       return strreplace(%mission, ".mis", "");
 }
 
+function containsEgg(%mission)
+{
+   return %mission.hasEgg;
+}
+
+function hasEgg(%mission)
+{
+   %found = $pref::EasterEgg[%mission.file];
+}
+
 function PM_setSelected(%index)
 {
    %group = "MTYPE_" @ $MissionType;
@@ -330,7 +340,18 @@ function PM_setSelected(%index)
       return;
    }
    %mission = getField(PM_missionList.getRowTextById(%index), 1);
-   %name = "<color:000000><spush><font:Bauhaus 93:24>" @ %mission.name @ "<spop><lmargin:10>\n\n";
+   %name = "<color:000000><spush><font:Bauhaus 93:24>" @ %mission.name @ "<spop><lmargin:10>";
+   if (containsEgg(%mission))
+   {
+      if (hasEgg(%mission))
+      {
+         %egg = " <bitmap:marble/client/ui/play/easteregg_has.png>\n\n";
+      } else {
+         %egg = " <bitmap:marble/client/ui/play/easteregg_noegg.png>\n\n";
+      }
+   } else {
+      %egg = "\n\n";
+   }
    if (%mission.artist !$= "")
    {
       %author = "<spush><font:Bauhaus 93:18>" @ %mission.artist @ "<spop>\n\n";
@@ -364,7 +385,7 @@ function PM_setSelected(%index)
       %time = %time @ "\n";
       %total = %total @ %time;
    }
-   PM_description.setText(%name @ %desc @ %author @ %qualify @ %best @ %total);
+   PM_description.setText(%name @ %egg @ %desc @ %author @ %qualify @ %best @ %total);
    %bmp = strreplace(%mission.file, ".mis", "");
    PM_preview.setBitmap(%bmp);
    //if (isFile(%bmp @ ".png"))

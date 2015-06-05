@@ -9,6 +9,7 @@ new SimGroup(MissionGroup) {
          level = "0";
          artist = "Matthieu Parizeau";
          hyperTime = "10000";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

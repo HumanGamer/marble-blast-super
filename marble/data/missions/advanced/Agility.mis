@@ -11,6 +11,7 @@ new SimGroup(MissionGroup) {
          startHelpText = "Grab as many Time Travels aas possible in order to get the lowest time!";
          hyperTime = "50000";
          level = "5";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

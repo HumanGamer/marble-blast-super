@@ -8,6 +8,7 @@ new SimGroup(MissionGroup) {
          level = "0";
          goldTime = "15000";
          artist = "Matthieu Parizeau";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -97,15 +98,6 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-   };
-   new Item() {
-      position = "-32.4812 51.3936 5.29141";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "EasterEggItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
    };
    new ScriptObject() {
          time = "0";

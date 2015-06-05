@@ -11,6 +11,7 @@ new SimGroup(MissionGroup) {
          startHelpText = "Climb to your victory!";
          artist = "Ender, davidjl123";
          hyperTime = "9000";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

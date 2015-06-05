@@ -9,6 +9,7 @@ new SimGroup(MissionGroup) {
          type = "beginner";
          desc = "Should I pick left or right?";
          artist = "Matthieu Parizeau";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

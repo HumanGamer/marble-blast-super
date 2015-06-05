@@ -9,6 +9,7 @@ new SimGroup(MissionGroup) {
          artist = "Matthieu Parizeau";
          desc = "A climb in purple glory.";
          goldTime = "35000";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

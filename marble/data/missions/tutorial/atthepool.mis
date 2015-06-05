@@ -11,6 +11,7 @@ new SimGroup(MissionGroup) {
          name = "At The Pool";
          desc = "Learn how to roll with water!";
          artist = "Matthieu Parizeau";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

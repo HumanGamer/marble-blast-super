@@ -10,6 +10,7 @@ new SimGroup(MissionGroup) {
          type = "Tutorial";
          desc = "Go from platform to platform with the game\'s acceleration PowerUp!";
          artist = "Rozi";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

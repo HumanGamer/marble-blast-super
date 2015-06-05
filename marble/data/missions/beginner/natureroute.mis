@@ -11,6 +11,7 @@ new SimGroup(MissionGroup) {
          name = "Hippie Playground";
          desc = "Find all the gems in this nature-based level.";
          artist = "Ender";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

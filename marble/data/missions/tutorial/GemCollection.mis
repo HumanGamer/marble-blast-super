@@ -10,6 +10,7 @@ new SimGroup(MissionGroup) {
          type = "tutorial";
          desc = "Something is disallowing you from the finish!";
          artist = "Rozi";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

@@ -9,6 +9,7 @@ new SimGroup(MissionGroup) {
          hyperTime = "5250";
          desc = "Not all platforms are as safe as they seem...";
          artist = "Matthieu Parizeau";
+         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
