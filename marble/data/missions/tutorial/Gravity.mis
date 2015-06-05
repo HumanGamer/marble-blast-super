@@ -2,15 +2,15 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         time = "0";
+         level = "8";
          hyperTime = "19000";
          desc = "Which ever way the arrow on the PowerUp is facing will be the new \"down\" once picked up.";
-         level = "1";
+         time = "0";
          artist = "Rozi";
-         startHelpText = "Gravity Modifiers will change gravity instantly. Gravity Inverters will change gravity on command.";
          name = "Flipping Gravity";
          type = "tutorial";
          goldTime = "26000";
+         startHelpText = "Gravity Modifiers will change gravity instantly. Gravity Inverters will change gravity on command.";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -51,12 +51,12 @@ new SimGroup(MissionGroup) {
       ambient = "0.400000 0.400000 0.400000 1.000000";
    };
    new ScriptObject() {
+         bonusTime = "0";
+         pad = "2195";
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
-         bonusTime = "0";
-         pad = "2195";
    };
    new InteriorInstance() {
       position = "-20.3175 -44.559 0";
@@ -66,19 +66,19 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
+         bonusTime = "0";
+         pad = "2273";
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
-         bonusTime = "0";
-         pad = "2273";
    };
    new StaticShape(StartPoint) {
       position = "-18.9258 -49.57 0.668999";
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "9507";
+         beam = "9044";
    };
    new Item() {
       position = "-9.3291 -49.6342 1.05089";
@@ -91,12 +91,12 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
+         bonusTime = "0";
+         pad = "3512";
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
-         bonusTime = "0";
-         pad = "3512";
    };
    new Item() {
       position = "-19.0663 -53.1078 4.53359";
@@ -109,12 +109,12 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
+         bonusTime = "0";
+         pad = "2386";
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
-         bonusTime = "0";
-         pad = "2386";
    };
    new Item() {
       position = "-17.4993 -41.4557 9.9469";
@@ -141,7 +141,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "9162";
+         beam = "9011";
    };
    new Item() {
       position = "-23.871 -49.5774 4.42143";
@@ -152,7 +152,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9504";
+         node = "9041";
    };
    new Item() {
       position = "-22.9502 -39.5393 14.4171";
@@ -202,15 +202,15 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9505";
+         node = "9042";
    };
    new ScriptObject() {
+         bonusTime = "0";
+         pad = "3596";
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
-         bonusTime = "0";
-         pad = "3596";
    };
    new Item() {
       position = "-23.3253 -40.5384 9.58206";
@@ -221,15 +221,15 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9506";
+         node = "9043";
    };
    new ScriptObject() {
+         bonusTime = "0";
+         pad = "5251";
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
-         bonusTime = "0";
-         pad = "5251";
    };
    new StaticShape() {
       position = "-22.2843 -52.6001 8.36101";
@@ -257,12 +257,21 @@ new SimGroup(MissionGroup) {
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new ScriptObject() {
+         bonusTime = "0";
+         pad = "9154";
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
-         bonusTime = "0";
-         pad = "9154";
+   };
+   new Item() {
+      position = "-35.2888 -41.5395 -12.4433";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

@@ -3,15 +3,15 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          level = "2";
-         goldTime = "30000";
-         hyperTime = "15000";
-         time = "0";
          startHelpText = "The Bouncy Floor will launch you upwards. Use it to complete this level.";
          name = "Bouncy";
          type = "Beginner";
-         desc = "Learn how to use the Bouncy Floor.";
          artist = "Ender";
-         hasEgg = "1";
+         goldTime = "30000";
+         hyperTime = "15000";
+         time = "0";
+         desc = "Learn how to use the Bouncy Floor.";
+		 hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -52,99 +52,99 @@ new SimGroup(MissionGroup) {
       ambient = "0.300000 0.300000 0.400000 1.000000";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
-         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "2009";
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
    };
    new StaticShape(StartPoint) {
       position = "-1.49252 -48.4825 -20.2521";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "startpad";
-         beam = "7456";
+      dataBlock = "StartPad";
+         beam = "5202";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
-         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "1649";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
+   };
+   new ScriptObject() {
          powerUp = "0";
          bonusTime = "0";
          pad = "1721";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
+   };
+   new ScriptObject() {
          powerUp = "0";
          bonusTime = "0";
          pad = "2727";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
+   };
+   new ScriptObject() {
          powerUp = "0";
          bonusTime = "0";
          pad = "2784";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
+   };
+   new ScriptObject() {
          powerUp = "0";
          bonusTime = "0";
          pad = "4691";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
+   };
+   new ScriptObject() {
          powerUp = "0";
          bonusTime = "0";
          pad = "1602";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
+   };
+   new ScriptObject() {
          powerUp = "0";
          bonusTime = "0";
          pad = "1602";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
+   };
+   new ScriptObject() {
          powerUp = "0";
          bonusTime = "0";
          pad = "1602";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
+   };
+   new ScriptObject() {
          powerUp = "0";
          bonusTime = "0";
          pad = "1602";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
+   };
+   new ScriptObject() {
          powerUp = "0";
          bonusTime = "0";
          pad = "1672";
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
    };
    new InteriorInstance() {
       position = "-5.97765 -46.3882 -25.1768";
@@ -157,8 +157,8 @@ new SimGroup(MissionGroup) {
       position = "-6.47129 -40.4471 2.2393";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "endpad";
-         beam = "7107";
+      dataBlock = "EndPad";
+         beam = "5110";
    };
    new StaticShape() {
       position = "-6.60981 -40.2909 7.23443";
@@ -167,15 +167,15 @@ new SimGroup(MissionGroup) {
       dataBlock = "SignFinish";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
-         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "1752";
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
    };
    new Trigger() {
-      position = "-42.8071 13.2622 -25.6317";
+      position = "-42.8071 13.2622 -44.0317";
       rotation = "1 0 0 0";
       scale = "80 80 80";
       dataBlock = "InBoundsTrigger";
@@ -206,7 +206,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "7453";
+         node = "5199";
    };
    new Trigger() {
       position = "-8.49409 -15.3658 -1.25408";
@@ -225,7 +225,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "7454";
+         node = "5200";
    };
    new Item() {
       position = "-7.26783 -20.9645 4.4689";
@@ -236,7 +236,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "7455";
+         node = "5201";
    };
    new Trigger() {
       position = "-8.4501 -36.1243 2.27598";
@@ -246,11 +246,6 @@ new SimGroup(MissionGroup) {
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
          text = "You have mastered the basics of Bouncy Floor. ";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
-   };
    new Item() {
       position = "-13.7015 -0.680701 9.13264";
       rotation = "1 0 0 0";
@@ -259,6 +254,11 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---

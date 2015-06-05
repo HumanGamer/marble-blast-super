@@ -3,14 +3,14 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          level = "3";
-         goldTime = "10000";
          hyperTime = "6500";
-         startHelpText = "You can\'t finish the level without collecting every gem. Find them all!";
-         name = "Collection";
-         type = "tutorial";
          desc = "Something is disallowing you from the finish!";
          artist = "Rozi";
-         hasEgg = "1";
+         name = "Collection";
+         type = "tutorial";
+         goldTime = "10000";
+         startHelpText = "You can\'t finish the level without collecting every gem. Find them all!";
+		 hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -58,28 +58,28 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
-         time = "0";
          bonusTime = "0";
          pad = "2406";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
-         time = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "3708";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
-         time = "0";
+   };
+   new ScriptObject() {
          bonusTime = "0";
          pad = "3690";
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         powerUp = "0";
    };
    new ParticleEmitterNode() {
       position = "49.5233 -140.767 -10.0601";
@@ -90,26 +90,26 @@ new SimGroup(MissionGroup) {
       velocity = "1";
    };
    new ScriptObject() {
+         bonusTime = "0";
+         pad = "2615";
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
-         time = "0";
-         bonusTime = "0";
-         pad = "2615";
    };
    new StaticShape(StartPoint) {
       position = "-11.2104 -25.8496 -0.95";
       rotation = "1 0 0 0";
       scale = "0.7 0.7 0.7";
-      dataBlock = "startpad";
-         beam = "2566";
+      dataBlock = "StartPad";
+         beam = "7090";
    };
    new StaticShape(EndPoint) {
       position = "-8.24642 -28.4498 2.55";
       rotation = "0 0 1 180";
       scale = "0.35 0.35 0.35";
-      dataBlock = "endpad";
-         beam = "2488";
+      dataBlock = "EndPad";
+         beam = "6875";
    };
    new Item() {
       position = "1.84755 -20.6548 0.96888";
@@ -120,7 +120,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "2562";
+         node = "7086";
    };
    new Item() {
       position = "-2.25626 -16.5655 -1.06";
@@ -131,7 +131,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "2563";
+         node = "7087";
    };
    new Item() {
       position = "-4.34199 -10.7436 -1.06";
@@ -142,7 +142,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "2564";
+         node = "7088";
    };
    new Item() {
       position = "-6.304 -24.5487 2.5";
@@ -152,12 +152,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2565";
-   };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
+         node = "7089";
    };
    new Item() {
       position = "-14.7635 -10.5455 0.775637";
@@ -167,6 +162,19 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+   new Trigger(OOBTrigger) {
+      position = "-16.6184 -6.92253 -2.65";
+      rotation = "1 0 0 0";
+      scale = "25 25 15";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
 };
 //--- OBJECT WRITE END ---

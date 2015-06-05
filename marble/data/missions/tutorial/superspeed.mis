@@ -3,14 +3,14 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          level = "4";
-         goldTime = "8000";
-         hyperTime = "4000";
-         startHelpText = "The Super Speed PowerUp will give you a nice boost of acceleration!";
          name = "Speeding";
          type = "Tutorial";
-         desc = "Go from platform to platform with the game\'s acceleration PowerUp!";
+         startHelpText = "The Super Speed PowerUp will give you a nice boost of acceleration!";
          artist = "Rozi";
-         hasEgg = "1";
+         goldTime = "8000";
+         hyperTime = "4000";
+         desc = "Go from platform to platform with the game\'s acceleration PowerUp!";
+		 hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -54,32 +54,32 @@ new SimGroup(MissionGroup) {
       position = "7.45031 -95.4594 -3.73196";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "startpad";
-         beam = "3127";
+      dataBlock = "StartPad";
+         beam = "2826";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
-         time = "0";
          bonusTime = "0";
          pad = "2406";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+   };
+   new ScriptObject() {
          powerUp = "0";
-         time = "0";
          bonusTime = "0";
          pad = "3708";
-   };
-   new ScriptObject() {
+         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+   };
+   new ScriptObject() {
          powerUp = "0";
-         time = "0";
          bonusTime = "0";
          pad = "3690";
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
    };
    new Item() {
       position = "7.36248 -84.6107 -3.7138";
@@ -92,12 +92,12 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
-         time = "0";
          bonusTime = "0";
          pad = "2615";
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
    };
    new InteriorInstance() {
       position = "3.39656 -93.5257 -4.3243";
@@ -120,23 +120,23 @@ new SimGroup(MissionGroup) {
       position = "7.4269 -9.01764 1.29424";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "endpad";
-         beam = "2935";
+      dataBlock = "EndPad";
+         beam = "2808";
    };
    new Trigger(OOBTrigger) {
-      position = "-25.5008 -3.2877 -6.9243";
+      position = "-2.1008 -3.2877 -6.9243";
       rotation = "1 0 0 0";
       scale = "20 100 40";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
-         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "2926";
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
@@ -144,7 +144,7 @@ new SimGroup(MissionGroup) {
       preload = "0";
    };
    new Item() {
-      position = "7.95913 -91.2609 15.5298";
+      position = "7.44086 -80.1945 -3.92046";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EasterEggItem";

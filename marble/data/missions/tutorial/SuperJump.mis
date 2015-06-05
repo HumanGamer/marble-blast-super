@@ -2,15 +2,16 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         level = "5";
          startHelpText = "Use the SuperJump PowerUp to get boosted! Jump before using the PowerUp to gain extra height!";
          name = "Jumping Higher";
          type = "tutorial";
-         time = "0";
-         desc = "Your jump can go higher than normal!";
-         goldTime = "7000";
-         level = "5";
          artist = "Rozi";
+         goldTime = "7000";
+         time = "0";
          hyperTime = "3000";
+         desc = "Your jump can go higher than normal!";
+		 hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -78,7 +79,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "10438";
+         beam = "3258";
    };
    new Item() {
       position = "0.432328 -47.565 20.27";
@@ -95,7 +96,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "10397";
+         beam = "3240";
    };
    new Item() {
       position = "-1.60371 -39.5804 0.25";
@@ -117,17 +118,26 @@ new SimGroup(MissionGroup) {
       rotate = "1";
          checkpointNum = "1";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
-   };
    new Trigger(OOBTrigger) {
       position = "-30.0178 -28.7764 -5.45";
       rotation = "1 0 0 0";
       scale = "45 30 45";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+   new Item() {
+      position = "-11.4045 -43.3793 -14.6371";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---
