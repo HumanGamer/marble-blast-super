@@ -17,16 +17,16 @@ addMessageCallback('MsgClientScoreChanged', handleClientScoreChanged);
 function handleClientJoin(%msgType, %msgString, %clientName, %clientId,
    %guid, %score, %isAI, %isAdmin, %isSuperAdmin )
 {
-   PlayerListGui.update(%clientId,detag(%clientName),%isSuperAdmin,
-      %isAdmin,%isAI,%score);
+   //PlayerListGui.update(%clientId,detag(%clientName),%isSuperAdmin,
+   //   %isAdmin,%isAI,%score);
 }
 
 function handleClientDrop(%msgType, %msgString, %clientName, %clientId)
 {
-   PlayerListGui.remove(%clientId);
+   //PlayerListGui.remove(%clientId);
 }
 
 function handleClientScoreChanged(%msgType, %msgString, %score, %clientId)
 {
-   PlayerListGui.updateScore(%clientId,%score);
+   //PlayerListGui.updateScore(%clientId,%score);
 }

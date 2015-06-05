@@ -102,20 +102,20 @@ function initClient()
    exec("./ui/ExitGameDlg.gui");
    exec("./ui/MiniShotGui.gui");
    exec("./ui/MegaShotGui.gui");
-   exec("./ui/EnterIPDlg.gui");
-   exec("./ui/MultiplayerGui.gui");
-   exec("./ui/ConnectGui.gui");
+   //exec("./ui/EnterIPDlg.gui");
+   //exec("./ui/MultiplayerGui.gui");
+   //exec("./ui/ConnectGui.gui");
    exec("./ui/MarbleSelectGui.gui");
-   exec("./ui/playerListGui.gui");   
+   //exec("./ui/playerListGui.gui");   
    exec("./ui/gemPopupGui.gui");
-   exec("./ui/lobbyGui.gui");
-   exec("./ui/MultiplayerExitGui.gui");
-   exec("./ui/LoginGui.gui");
+   //exec("./ui/lobbyGui.gui");
+   //exec("./ui/MultiplayerExitGui.gui");
+   //exec("./ui/LoginGui.gui");
    exec("./ui/chatDlg.gui");
    exec("./ui/recordingDlg.gui");
    exec("./ui/replayCenterGui.gui");
-   exec("./ui/preMissionGui.gui");
-   exec("./ui/multiplayerEndGui.gui");
+   //exec("./ui/preMissionGui.gui");
+   //exec("./ui/multiplayerEndGui.gui");
 
    // Client scripts
    exec("./scripts/client.cs");
@@ -137,18 +137,18 @@ function initClient()
    exec("./scripts/multiplayerGui.cs");
    exec("./scripts/playerListGui.cs");
    exec("./scripts/gemPopupGui.cs");
-   exec("./scripts/radar.cs");
-   exec("./scripts/lobby.cs");
-   exec("./scripts/multiplayerExitGui.cs");
-   exec("./scripts/login.cs");
-   exec("./scripts/register.cs");
+   //exec("./scripts/radar.cs");
+   //exec("./scripts/lobby.cs");
+   //exec("./scripts/multiplayerExitGui.cs");
+   //exec("./scripts/login.cs");
+   //exec("./scripts/register.cs");
    exec("./scripts/chat.cs");
    exec("./scripts/recording.cs");
    exec("./scripts/replayCenter.cs");
-   exec("./scripts/preMissionGui.cs");
+   //exec("./scripts/preMissionGui.cs");
    exec("./scripts/compass.cs");
    exec("./scripts/endgamegui.cs");
-   exec("./scripts/multiplayerEndGui.cs");
+   //exec("./scripts/multiplayerEndGui.cs");
 
    // Default player key bindings
    exec("./scripts/default.bind.cs");
@@ -157,7 +157,7 @@ function initClient()
    // Really shouldn't be starting the networking unless we are
    // going to connect to a remote server, or host a multi-player
    // game.
-   setNetPort(0);
+   //setNetPort(0);
 
    // Copy saved script prefs into C++ code.
    setShadowDetailLevel( $pref::shadows );

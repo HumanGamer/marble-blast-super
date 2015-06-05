@@ -55,18 +55,18 @@ function escapeToLobby()
    Canvas.setContent(LobbyGui);
 }
 
-function hostEscapeToLobby()
-{
-   if($Multiplayer::isHosting)
-   {
-      for (%index = 0; %index < ClientGroup.getCount(); %index++)  {
-         %client = ClientGroup.getObject(%index);
-         commandToClient(%client, 'SetLobby');
-      }
-   } else {
-      escapeToLobby();
-   }
-}
+//function hostEscapeToLobby()
+//{
+//   if($Multiplayer::isHosting)
+//   {
+//      for (%index = 0; %index < ClientGroup.getCount(); %index++)  {
+//         %client = ClientGroup.getObject(%index);
+//         commandToClient(%client, 'SetLobby');
+//      }
+//   } else {
+//      escapeToLobby();
+//   }
+//}
 
 moveMap.bindCmd(keyboard, "escape", "", "escapeFromGame();");
 

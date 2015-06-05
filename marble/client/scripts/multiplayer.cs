@@ -137,8 +137,8 @@ function clientCmdUpdateTransform()
    }
    if (!isEventPending($CompassUpdate))
       updateCompass();
-   if (!isEventPending($radarUpdate))
-      updateRadar();
+   //if (!isEventPending($radarUpdate))
+   //   updateRadar();
    hideMarbles();
    %trans = $Multiplayer::MyMarble.getTransform();
    commandToServer('UpdateTransform', %trans);
@@ -277,35 +277,35 @@ function clientCmdGetMarbleSkin()
    commandToServer('SetMarbleSkin', MS_skinGroup.getObject($pref::MarbleIndex).skin);
 }
 
-function clientCmdAddPlayer(%clientId, %name, %isMe, %score, %ready)
-{
-   PlayerListGui.addPlayer(%clientId, %name, %isMe, %score, %ready);
-}
+//function clientCmdAddPlayer(%clientId, %name, %isMe, %score, %ready)
+//{
+   //PlayerListGui.addPlayer(%clientId, %name, %isMe, %score, %ready);
+//}
 
-function clientCmdUpdateScore(%clientId, %name, %isMe, %score, %ready)
-{
-   PlayerListGui.update(%clientId, %name, %isMe, %score, %ready);
-}
+//function clientCmdUpdateScore(%clientId, %name, %isMe, %score, %ready)
+//{
+//   PlayerListGui.update(%clientId, %name, %isMe, %score, %ready);
+//}
 
-function clientCmdRemovePlayer(%clientId)
-{
-   PlayerListGui.removePlayer(%clientId);
-}
+//function clientCmdRemovePlayer(%clientId)
+//{
+//   PlayerListGui.removePlayer(%clientId);
+//}
 
-function clientCmdClearPlayerList()
-{
-   PlayerListGui.clear();
-}
+//function clientCmdClearPlayerList()
+//{
+//   PlayerListGui.clear();
+//}
 
 function clientCmdShowGemPickup(%points, %lost)
 {
    GemPopUpGui.showPopup(%points, %lost);
 }
 
-function clientCmdSetLobby()
-{
-   escapeToLobby();
-}
+//function clientCmdSetLobby()
+//{
+//   escapeToLobby();
+//}
 
 function clientCmdApplyImpulse(%impulseVec, %impulse)
 {

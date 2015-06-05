@@ -261,7 +261,7 @@ function disconnect()
 
 function disconnectedCleanup()
 {
-   clientCmdClearRadar();
+   //clientCmdClearRadar();
    // Clear misc script stuff
    HudMessageVector.clear();
 
@@ -285,6 +285,6 @@ function disconnectedCleanup()
    
    $Client::ConnectedMultiplayer = false;
    resetGhostVars();
-   PlayerListGui.clear();
+   //PlayerListGui.clear();
 }
 

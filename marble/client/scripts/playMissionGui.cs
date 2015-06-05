@@ -3,7 +3,7 @@ function playMissionGui::onWake(%this)
    %this.bitmap = getRandomBackground();
    buildMissionList();
    clearMissionList();
-   clearLBMissionList();
+   //clearLBMissionList();
    
    PM_DifficultyButton.setText("Select Difficulty");
    
@@ -123,10 +123,10 @@ function populatePMList()
    //}
    
    clearMissionList(); 
-   clearLBMissionList();
+   //clearLBMissionList();
    
    clearMissionList();
-   clearLBMissionList();
+   //clearLBMissionList();
    
    %group = "MTYPE_" @ $MissionType;
    
@@ -151,7 +151,7 @@ function populatePMList()
             extent = "90 60";
             minExtent = "8 8";
             visible = "1";
-            command = "PM_setSelected(" @ %i @ ");LB_SetSelected(" @ %i @ ");setLevelLocked();";
+            command = "PM_setSelected(" @ %i @ ");LB_SetSelected(" @ %i @ ");";
             helpTag = "0";
             groupNum = "-1";
             buttonType = "PushButton";
@@ -170,7 +170,7 @@ function populatePMList()
             extent = "90 20";
             minExtent = "8 8";
             visible = "1";
-            command = "PM_setSelected(" @ %i @ ");LB_SetSelected(" @ %i @ ");setLevelLocked();";
+            command = "PM_setSelected(" @ %i @ ");LB_SetSelected(" @ %i @ ");";
             helpTag = "0";
             groupNum = "-1";
             buttonType = "PushButton";
@@ -197,7 +197,7 @@ function buildMissionList()
    PM_missionList.clear();
    //PM_missionSelectList.clear();
    clearMissionList();
-   clearLBMissionList();
+   //clearLBMissionList();
    
    if ($MissionType $= "")
       $MissionType = "Tutorial";
@@ -232,10 +232,10 @@ function buildMissionList()
       populatePMList();
    }
    
-   if (lobbyGui.isAwake())
-   {
-      populateLBList();
-   }
+   //if (lobbyGui.isAwake())
+   //{
+   //   populateLBList();
+   //}
    
    //PM_missionSelectList.extent = "170" SPC PM_missionSelectList.getCount() * 110;
    //PM_missionSelectList.resize(1, 1, "114", PM_missionSelectList.getCount() * 110);
@@ -262,7 +262,7 @@ function buildMissionList()
       %level = 0;
       
    PM_setSelected(%level);
-   LB_SetSelected(%level);
+   //LB_SetSelected(%level);
    //PM_missionSelectList.setSelectedById(%level);
 }
 
@@ -502,8 +502,8 @@ function getMissionObject(%mission) {
    if (%infoObject.gameType $= "")
       %infoObject.gameType = "SinglePlayer";
       
-   if (LobbyGui.isAwake() && %infoObject.gameType !$= "Multiplayer")
-      return;
+   //if (LobbyGui.isAwake() && %infoObject.gameType !$= "Multiplayer")
+   //   return;
       
    if (playMissionGui.isAwake() && %infoObject.gameType !$= "SinglePlayer")
       return;
