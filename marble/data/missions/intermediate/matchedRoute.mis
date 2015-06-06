@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          level = "5";
          type = "intermediate";
-         name = "Matched Route ( Needs a better name, also, Rozi is a pretty girl )";
+         name = "Winding Ascent";
          artist = "Matthieu Parizeau";
          desc = "Climb to the finish, but don\'t forget the gems!";
    };
