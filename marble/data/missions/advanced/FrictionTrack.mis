@@ -2,14 +2,15 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         type = "Intermediate";
+         type = "Advanced";
          name = "Friction Track";
-         level = "1";
-         hyperTime = "30000";
-         startHelpText = "Can you survive? DURDURDURDURDUR";
+         level = "6";
          artist = "Rozi";
+         hyperTime = "30000";
+         hasEgg = "1";
+         startHelpText = "Don\'t slip off!";
          time = "0";
-         desc = "Dis iz frikshun";
+         desc = "How quickly can you go through the challenges?";
          goldTime = "45000";
    };
    new MissionArea(MissionArea) {
@@ -207,11 +208,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "0.2 0.2 0.2";
       dataBlock = "Cannon";
-         ball = "3623";
+         currentTime = "120";
          power = "25";
-         currentTime = "360";
          timer = "3000";
          radius = "15";
+         ball = "3623";
    };
    new InteriorInstance() {
       position = "-43.5339 -43.4364 381.25";
@@ -233,7 +234,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "0.7 0.7 0.7";
       dataBlock = "StartPad";
-         beam = "14517";
+         beam = "3667";
    };
    new ScriptObject() {
          penaltyTime = "0";
@@ -248,7 +249,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "14488";
+         beam = "3637";
    };
    new Item() {
       position = "-51.1335 -16.8828 381.836";
@@ -288,8 +289,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "14513";
          checkpointNum = "1";
+         node = "3663";
    };
    new Item() {
       position = "-26.5371 -53.4332 381.73";
@@ -299,8 +300,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "14514";
          checkpointNum = "1";
+         node = "3664";
    };
    new Item() {
       position = "-11.4457 -10.5299 383.631";
@@ -310,8 +311,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "14515";
          checkpointNum = "1";
+         node = "3665";
    };
    new Item() {
       position = "-103.526 -58.9663 381.8";
@@ -321,8 +322,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "14516";
          checkpointNum = "1";
+         node = "3666";
    };
    new ScriptObject() {
          penaltyTime = "0";
@@ -331,6 +332,15 @@ new SimGroup(MissionGroup) {
          time = "0";
          bonusTime = "0";
          pad = "12521";
+   };
+   new Item() {
+      position = "-51.189 7.03266 383.922";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

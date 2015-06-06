@@ -4,10 +4,11 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          name = "Catwalks";
          type = "intermediate";
+         hasEgg = "1";
+         artist = "Rozi";
          desc = "The pathway has gotten thinner. Can you keep your balance?";
          goldTime = "15500";
          level = "1";
-         artist = "Rozi";
          hyperTime = "12000";
    };
    new MissionArea(MissionArea) {
@@ -56,9 +57,9 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "3690";
@@ -71,8 +72,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "8810";
          checkpointNum = "1";
-         node = "6476";
    };
    new ParticleEmitterNode() {
       position = "49.5233 -140.767 -10.0601";
@@ -83,25 +84,25 @@ new SimGroup(MissionGroup) {
       velocity = "1";
    };
    new ScriptObject() {
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "2615";
    };
    new ScriptObject() {
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "3708";
    };
    new ScriptObject() {
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "2406";
@@ -111,14 +112,14 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90";
       scale = "0.65 0.65 0.65";
       dataBlock = "StartPad";
-         beam = "6479";
+         beam = "8813";
    };
    new StaticShape(EndPoint) {
       position = "-52.6201 11.6039 11.5877";
       rotation = "0 0 1 180";
       scale = "0.68 0.68 0.68";
       dataBlock = "EndPad";
-         beam = "6257";
+         beam = "8791";
    };
    new Item() {
       position = "-39.4704 22.5349 0.482546";
@@ -128,8 +129,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "8811";
          checkpointNum = "1";
-         node = "6477";
    };
    new Item() {
       position = "-66.5608 13.5687 0.577373";
@@ -139,8 +140,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "8812";
          checkpointNum = "1";
-         node = "6478";
    };
    new Trigger() {
       position = "-95.627 48.8637 -8.6858";
@@ -150,9 +151,9 @@ new SimGroup(MissionGroup) {
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new ScriptObject() {
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "40774";
@@ -161,6 +162,15 @@ new SimGroup(MissionGroup) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new Item() {
+      position = "-87.419 12.5927 -11.6972";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---

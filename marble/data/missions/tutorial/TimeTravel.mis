@@ -2,15 +2,16 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         level = "8";
-         hyperTime = "1500";
-         desc = "Stop time with the Time Travel PowerUp";
-         time = "10000";
-         artist = "Rozi";
          name = "Stopping Time";
          type = "Tutorial";
-         goldTime = "1750";
+         hasEgg = "1";
+         time = "10000";
+         artist = "Rozi";
+         desc = "Stop time with the Time Travel PowerUp";
          startHelpText = "Either go straightforward to the finish, or get the Time Travels first and get a lower time!";
+         goldTime = "1750";
+         level = "8";
+         hyperTime = "1500";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -51,20 +52,20 @@ new SimGroup(MissionGroup) {
       ambient = "0.400000 0.400000 0.400000 1.000000";
    };
    new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
          bonusTime = "0";
          pad = "2195";
-         time = "0";
-         penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         pad = "3376";
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
+         bonusTime = "0";
+         pad = "3376";
    };
    new InteriorInstance() {
       position = "-32.7961 7.98327 132.588";
@@ -78,14 +79,14 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "8559";
+         beam = "2126";
    };
    new StaticShape(StartPoint) {
       position = "-32.7989 -9.15574 133.176";
       rotation = "0 0 1 45";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "8581";
+         beam = "2148";
    };
    new Item() {
       position = "-33.8439 5.89988 133.24";
@@ -108,20 +109,20 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
          bonusTime = "0";
          pad = "4625";
-         time = "0";
-         penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
    };
    new ScriptObject() {
-         bonusTime = "0";
-         pad = "5143";
-         time = "0";
          penaltyTime = "0";
          gemCount = "0";
+         time = "0";
          powerUp = "0";
+         bonusTime = "0";
+         pad = "5143";
    };
    new Item() {
       position = "2.33205 -8.11183 117.455";
