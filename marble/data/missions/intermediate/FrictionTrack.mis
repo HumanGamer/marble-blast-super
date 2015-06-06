@@ -6,10 +6,10 @@ new SimGroup(MissionGroup) {
          name = "Friction Track";
          level = "1";
          hyperTime = "30000";
-         startHelpText = "Can you survive? DURDURDURDURDUR";
+         startHelpText = "Can you survive?";
          artist = "Rozi";
          time = "0";
-         desc = "Dis iz frikshun";
+         desc = "Traverse through a challenging frictional course.";
          goldTime = "45000";
    };
    new MissionArea(MissionArea) {

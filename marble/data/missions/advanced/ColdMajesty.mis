@@ -9,7 +9,7 @@ new SimGroup(MissionGroup) {
          time = "0";
          name = "Cold Majesty";
          type = "Advanced";
-         desc = "A Template Mission";
+         desc = "Burrr!";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
