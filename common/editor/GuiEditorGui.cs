@@ -26,7 +26,7 @@
 
 function GuiEditorGui::onWake(%this)
 {
-   GuiEditorGui.init();
+   //GuiEditorGui.init();
    
    exec("./GuiNewGuiDlg.gui");
 }
