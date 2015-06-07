@@ -2,14 +2,15 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         level = "2";
+         music = "Memories";
          goldTime = "25000";
-         desc = "Climb a level that doesn\'t eat alot.";
+         startHelpText = "Can you make it through the skinny course?";
+         artist = "Endy";
          type = "intermediate";
          name = "Thin Path";
-         artist = "Endy";
-         level = "2";
          hyperTime = "16000";
-         startHelpText = "Can you make it through the skinny course?";
+         desc = "Climb a level that doesn\'t eat alot.";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -50,19 +51,19 @@ new SimGroup(MissionGroup) {
       ambient = "0.400000 0.400000 0.500000 1.000000";
    };
    new ScriptObject() {
-         pad = "2252";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
          time = "0";
          bonusTime = "0";
+         pad = "2252";
    };
    new StaticShape(StartPoint) {
       position = "1.71485 -6.43843 -1.573";
       rotation = "1 0 0 0";
       scale = "0.7 0.7 0.7";
       dataBlock = "StartPad";
-         beam = "2356";
+         beam = "3168";
    };
    new InteriorInstance() {
       position = "0.191024 -7.95855 -7.72897";
@@ -79,8 +80,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3161";
          checkpointNum = "1";
-         node = "2349";
    };
    new Item() {
       position = "1.6871 16.5363 8.25126";
@@ -90,8 +91,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3162";
          checkpointNum = "1";
-         node = "2350";
    };
    new StaticShape() {
       position = "-20.2095 -12.3923 7.44226";
@@ -113,8 +114,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3163";
          checkpointNum = "1";
-         node = "2351";
    };
    new Item() {
       position = "3.27583 -10.8707 6.70385";
@@ -124,8 +125,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3164";
          checkpointNum = "1";
-         node = "2352";
    };
    new StaticShape() {
       position = "-5.46605 -10.3749 6.47532";
@@ -283,8 +284,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3165";
          checkpointNum = "1";
-         node = "2353";
    };
    new StaticShape() {
       position = "-22.2146 -12.4346 7.50895";
@@ -309,7 +310,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 0.389667";
       scale = "0.7 0.7 0.7";
       dataBlock = "EndPad";
-         beam = "2181";
+         beam = "3035";
    };
    new Item() {
       position = "-15.8084 2.06991 14.7438";
@@ -319,8 +320,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3166";
          checkpointNum = "1";
-         node = "2354";
    };
    new Item() {
       position = "-15.9002 13.999 21.7478";
@@ -330,8 +331,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3167";
          checkpointNum = "1";
-         node = "2355";
    };
    new Trigger() {
       position = "-19.7901 3.54367 14.7062";
@@ -342,12 +343,12 @@ new SimGroup(MissionGroup) {
          text = "Super Diagonal movement is needed to make it up this slope.";
    };
    new ScriptObject() {
-         pad = "5273";
          penaltyTime = "0";
          gemCount = "0";
          powerUp = "0";
          time = "0";
          bonusTime = "0";
+         pad = "5273";
    };
    new Trigger() {
       position = "-44.0898 43.6389 -5.56877";
