@@ -102,7 +102,9 @@ function playGameMusic()
       }
       $musicFound = true;
    }   
-   if($NumMusicFiles)
+	if (MissionInfo.music)
+      playMusic(MissionInfo.music);
+   else if($NumMusicFiles)
       playMusic($Music[MissionInfo.level % $NumMusicFiles]);
    else
       playMusic("Shell.ogg");
