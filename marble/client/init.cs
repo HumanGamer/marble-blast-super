@@ -48,6 +48,8 @@ function initClient()
       $pref::QualifiedLevel["Expert"] = 1;
    if (!$pref::QualifiedLevel["Multiplayer"])
       $pref::QualifiedLevel["Multiplayer"] = 1000;
+		
+	$pref::environmentMaps = "0";
 
    // The common module provides basic client functionality
    initBaseClient();
