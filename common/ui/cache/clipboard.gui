@@ -1,16 +1,15 @@
 new SimSet(guiClipboard) {
 
-   new GuiMLTextCtrl(PM_description) {
-      profile = "GuiMLTextProfile";
+   new GuiBitmapCtrl(GemsTotalOne) {
+      profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "8 5";
-      extent = "267 228";
+      position = "168 0";
+      extent = "43 55";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      lineSpacing = "2";
-      allowColorChars = "0";
-      maxChars = "-1";
+      bitmap = "marble/client/ui/game/numbers/4.png";
+      wrap = "0";
    };
 };

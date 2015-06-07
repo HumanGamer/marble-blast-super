@@ -497,7 +497,13 @@ function GameConnection::StateStart(%this)
    if (MissionInfo.gameMode !$= "hunt")
    {
 	   %this.setGemCount(0);
-	   %this.setMaxGems($Game::GemCount);
+	   if (MissionInfo.gameMode $= "Quota")
+	   {
+	      %this.setMaxGems(MissionInfo.quotaCount);
+	      %this.setQuotaGems($Game::GemCount);
+	   } else {
+	      %this.setMaxGems($Game::GemCount);
+	   }
    } else {
        %this.setTime(MissionInfo.time);
 	   %this.setGemCount(0);
@@ -810,8 +816,19 @@ function GameConnection::resetStats(%this)
 function GameConnection::onEnterPad(%this)
 {
    if (%this.player.getPad() == $Game::EndPad && MissionInfo.gameMode !$= "hunt") {
-
-      if ($Game::GemCount && %this.gemCount < $Game::GemCount) {
+      
+      if (MissionInfo.gameMode $= "Quota")
+      {
+         if (%this.gemCount < MissionInfo.quotaCount)
+         {
+            %this.play2d(MissingGemsSfx);
+            messageClient(%this, 'MsgMissingGems', '\c0You can\'t finish without enough gems!!');
+         } else {
+            %this.player.setMode(Victory);
+            messageClient(%this, 'MsgRaceOver', '\c0Congratulations! You\'ve finished!');
+            %this.setGameState("End");
+         }
+      } else if ($Game::GemCount && %this.gemCount < $Game::GemCount) {
          %this.play2d(MissingGemsSfx);
          messageClient(%this, 'MsgMissingGems', '\c0You can\'t finish without all the gems!!');
       }
@@ -882,21 +899,41 @@ function GameConnection::onFoundGem(%this,%amount, %gem)
    %this.gemCount += %amount;
    if (MissionInfo.gameMode !$= "hunt")
    {
-	   %remaining = $Game::gemCount - %this.gemCount;
-	   if (%remaining <= 0) {
-		  messageClient(%this, 'MsgHaveAllGems', '\c0You have all the gems, head for the finish!');
-		  %this.play2d(GotAllGemsSfx);
-		  %this.gemCount = $Game::GemCount;
-	   }
-	   else
+	   if (MissionInfo.gameMode $= "Quota")
 	   {
-		  if(%remaining == 1)
-			 %msg = '\c0You picked up a gem.  Only one gem to go!';
-		  else
-			 %msg = '\c0You picked up a gem.  %1 gems to go!';
+	      %remaining = MissionInfo.quotaCount - %this.gemCount;
+	      if (%remaining == 0) {
+           messageClient(%this, 'MsgHaveAllGems', '\c0You have reached the gem quota, head for the finish!');
+           %this.play2d(GotAllGemsSfx);
+           //%this.gemCount = $Game::GemCount;
+         } else if (%remaining < 0) {
+            %this.onOutOfBounds();
+         } else {
+           if(%remaining == 1)
+             %msg = '\c0You picked up a gem.  Only one gem to go!';
+           else
+             %msg = '\c0You picked up a gem.  %1 gems to go!';
 
-		  messageClient(%this, 'MsgItemPickup', %msg, %remaining);
-		  %this.play2d(GotGemSfx);
+           messageClient(%this, 'MsgItemPickup', %msg, %remaining);
+           %this.play2d(GotGemSfx);
+         }
+	   } else {
+	      %remaining = $Game::gemCount - %this.gemCount;
+         if (%remaining <= 0) {
+           messageClient(%this, 'MsgHaveAllGems', '\c0You have all the gems, head for the finish!');
+           %this.play2d(GotAllGemsSfx);
+           %this.gemCount = $Game::GemCount;
+         }
+         else
+         {
+           if(%remaining == 1)
+             %msg = '\c0You picked up a gem.  Only one gem to go!';
+           else
+             %msg = '\c0You picked up a gem.  %1 gems to go!';
+
+           messageClient(%this, 'MsgItemPickup', %msg, %remaining);
+           %this.play2d(GotGemSfx);
+         }
 	   }
 	   
 	   //commandToAll('RemoveRadarObject', %gem.getId());

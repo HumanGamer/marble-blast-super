@@ -261,6 +261,11 @@ function GameConnection::setMaxGems(%this, %max)
    commandToClient(%this, 'SetMaxGems', %max);
 }
 
+function GameConnection::setQuotaGems(%this, %quota)
+{
+   commandToClient(%this, 'SetQuotaGems', %quota);
+}
+
 function GameConnection::addHelpLine(%this, %msg, %bool)
 {
    commandToClient(%this, 'AddHelpLine', %msg, %bool);

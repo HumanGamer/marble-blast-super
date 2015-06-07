@@ -438,7 +438,8 @@ function toggleHud(%val)
          %visible = false;
          $Client::HudHidden = true;
       }
-      
+      PG_GemBox.visible = %visible;
+      CompassDlg.visible = %visible;
       PG_NumBG.visible = %visible;
       //PG_NegSign.visible = %visible;
       PG_Rear.visible = %visible;
@@ -460,6 +461,8 @@ function toggleHud(%val)
       //PG_ChatText.visible = %visible;
       HUD_ShowPowerUp.visible = %visible;
       PG_PowerUp.visible = %visible;
+      PG_BlastOverlay.visible = %visible;
+      PG_BlastBar.visible = %visible;
       RadarContainer.visible = %visible;
    }
 }
