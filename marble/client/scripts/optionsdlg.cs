@@ -167,7 +167,7 @@ function OptionsDlg::onWake(%this)
 	OptFreeLookLabel.setText("Always Freelook:");
 	OptInvertYLabel.setText("Invert Y Axis:");
 	OptShowRearView.setText("Show Rear View:");
-	OptShowRadar.setText("Show Radar:");
+	//OptShowRadar.setText("Show Radar:");
 	OptMouseSensitivityLabel.setText("Mouse Sensitivity:");
 }
 

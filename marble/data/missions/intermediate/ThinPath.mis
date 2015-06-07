@@ -3,7 +3,7 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          level = "2";
-         music = "Memories";
+         music = "Memories.ogg";
          goldTime = "25000";
          startHelpText = "Can you make it through the skinny course?";
          artist = "Endy";

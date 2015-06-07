@@ -101,8 +101,8 @@ function playGameMusic()
          }
       }
       $musicFound = true;
-   }   
-	if (MissionInfo.music)
+   } 
+	if (MissionInfo.music !$= "")
       playMusic(MissionInfo.music);
    else if($NumMusicFiles)
       playMusic($Music[MissionInfo.level % $NumMusicFiles]);
