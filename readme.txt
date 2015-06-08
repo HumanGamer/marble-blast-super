@@ -25,6 +25,7 @@ Erik Martin		Neon Lightning
 Greg McFadden		Skail
 James Colsey		BlastedMarble
 Chris Schroeppel	Rozi
+Lee Zi Xian		LZX
 
 Overview
 --------
