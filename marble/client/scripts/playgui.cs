@@ -105,6 +105,17 @@ function PlayGui::setMaxGems(%this,%count)
    //%visible = %count != 0 || MissionInfo.gameMode $= "hunt";
    if (MissionInfo.gameMode $= "Quota")
    {
+      HUD_ShowGem.setVisible(true);
+      GemsFoundHundred.setVisible(true);
+      GemsFoundTen.setVisible(true);
+      GemsFoundOne.setVisible(true);
+      //PG_GemBG.setVisible(true);
+      
+      GemsSlash.setVisible(true);
+      GemsTotalHundred.setVisible(true);
+      GemsTotalTen.setVisible(true);
+      GemsTotalOne.setVisible(true);
+      
       GemsQuotaHundred.setVisible(true);
       GemsQuotaTen.setVisible(true);
       GemsQuotaOne.setVisible(true);
