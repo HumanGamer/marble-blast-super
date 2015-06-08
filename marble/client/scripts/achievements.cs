@@ -4,11 +4,19 @@ function initAchievements()
    $Const::Achievements[0] = new ScriptObject() {
       name = "Timely Player";
       desc = "Complete any level under par time!";
+      img = "timely";
    };
    // Easter Egg
    $Const::Achievements[1] = new ScriptObject() {
       name = "Egg Seeker";
       desc = "Collect any Easter Egg!";
+      img = "egg";
+   };
+   // Side Scrolling
+   $Const::Achievements[2] = new ScriptObject() {
+      name = "Retro Dude";
+      desc = "Complete any side scrolling level!";
+      img = "retro";
    };
 }
 
@@ -23,11 +31,16 @@ function checkAchievements()
    {
       awardAchievement(1);
    }
+   
+   if ($Dynamic::Achievement::SideScrolling && !hasAchievement(2))
+   {
+      awardAchievement(2);
+   }
 }
 
 function awardAchievement(%id)
 {
-   showAchievementPopup(%id);
+   notifyAchievement(%id);
    $pref::Achievements[%id] = true;
 }
 
@@ -49,6 +62,11 @@ function AchievementPopupDlg::onWake(%this)
    AP_AchievementHeadText.setText("<spush><font:Whitestone:32><color:FFFFFF><shadowcolor:AAAAAA><shadow:1:1><just:center>New Achievement!<spop>");
 }
 
+function notifyAchievement(%id)
+{
+   addTask("showAchievementPopup(" @ %id @ ");");
+}
+
 function showAchievementPopup(%id)
 {
    AchievementPopupDlg.achievement = %id;
@@ -58,6 +76,7 @@ function showAchievementPopup(%id)
 
 function hideAchievementPopup()
 {
+	$Tasks::Achievement = schedule(500, 0, nextTask);
    Canvas.popDialog(AchievementPopupDlg);
 }
 

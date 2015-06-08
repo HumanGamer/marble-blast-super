@@ -20,6 +20,7 @@ function initCommon()
    exec("./client/canvas.cs");
    exec("./client/audio.cs");
    exec("./util/math.cs");
+   exec("./util/tasks.cs");
 }
 
 function initBaseClient()

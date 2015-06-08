@@ -401,7 +401,7 @@ function spawnGemGroup()
 function endGame()
 {
    cancel($endGameDelay);
-   if (AchievementPopupDlg.isAwake())
+   if (AchievementPopupDlg.isAwake() || isEventPending($Tasks::Achievement))
    {
       $endGameDelay = schedule(1000, 0, endGame);
       return;
@@ -597,8 +597,13 @@ function GameConnection::StateEnd(%this)
    
    if ($Server::ServerType $= "SinglePlayer")
    {
-      //startFireWorks(EndPoint);
-      $Dynamic::Achievement::ParTime = MissionInfo.time? PlayGui.elapsedTime < MissionInfo.time: false;
+      // Show Fireworks
+      startFireWorks(EndPoint);
+      
+      %qualified = MissionInfo.time? PlayGui.elapsedTime < MissionInfo.time: true;
+      
+      $Dynamic::Achievement::ParTime = MissionInfo.time && %qualified;
+      $Dynamic::Achievement::SideScrolling = %qualified && MissionInfo.gameMode $= "Side";
       checkAchievements();
       %this.StateSchedule = schedule( 2000, 0, "endGame");
    }
