@@ -36,7 +36,9 @@ function clientCmdGameEnd()
    
    if ($Client::ConnectedMultiplayer)
    {
-      Canvas.pushDialog(MultiplayerEndGui);      
+      Canvas.pushDialog(MultiplayerEndGui);  
+      
+      //checkAchievements();    
       
       return;
    }
@@ -70,6 +72,10 @@ function clientCmdGameEnd()
       Canvas.pushDialog(EnterNameDlg);
       EnterNameEdit.setSelectionRange(0, 100000);
    }
+   
+   //if ($Game::Qualified)
+   //   $Dynamic::Achievement::ParTime = true;
+   //checkAchievements();
 }
 
 function highScoreNameAccept()

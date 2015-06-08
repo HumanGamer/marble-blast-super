@@ -10,15 +10,15 @@ new GameTSCtrl(PlayGui) {
    helpTag = "0";
    cameraZRot = "0";
    forceFOV = "0";
-      noCursor = "1";
-      maxGems = "1";
-      totalBonus = "0";
-      timerInc = "50";
-      gemCount = "0";
       timerId = "3512";
-      timeInc = "50";
-      elapsedTime = "2844";
+      gemCount = "0";
+      timerInc = "50";
+      maxGems = "4";
+      elapsedTime = "4015";
       bonusTime = "0";
+      noCursor = "1";
+      timeInc = "50";
+      totalBonus = "0";
 
    new GuiBitmapCtrl(PG_Water) {
       profile = "GuiDefaultProfile";
@@ -61,7 +61,7 @@ new GameTSCtrl(PlayGui) {
       horizSizing = "center";
       vertSizing = "relative";
       position = "270 120";
-      extent = "100 48";
+      extent = "100 60";
       minExtent = "8 8";
       visible = "0";
       helpTag = "0";
@@ -241,7 +241,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/1.png";
+         bitmap = "./game/numbers/4.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(GemsQuotaHundred) {
@@ -309,7 +309,7 @@ new GameTSCtrl(PlayGui) {
       };
    };
    new GuiProgressCtrl(PG_BlastBar) {
-      profile = "GuiBlastProfile";
+      profile = "GuiBlastUsableProfile";
       horizSizing = "right";
       vertSizing = "top";
       position = "20 405";
@@ -343,16 +343,42 @@ new GameTSCtrl(PlayGui) {
       allowColorChars = "0";
       maxChars = "-1";
    };
-   new GuiBitmapCtrl(RadarContainer) {
+   new GuiControl(PG_ChatText) {
       profile = "GuiDefaultProfile";
       horizSizing = "width";
-      vertSizing = "height";
-      position = "0 0";
-      extent = "640 480";
+      vertSizing = "top";
+      position = "4 314";
+      extent = "640 58";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      wrap = "0";
+
+      new GuiMLTextCtrl(ChatTextBackground) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "1 1";
+         extent = "640 32";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiMLTextCtrl(ChatTextForeground) {
+         profile = "ChatHudMessageProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "0 0";
+         extent = "640 32";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
    };
    new GuiBitmapCtrl(PG_Rear) {
       profile = "GuiDefaultProfile";
@@ -392,7 +418,7 @@ new GameTSCtrl(PlayGui) {
       skin = "base";
       cameraRotX = "0";
       cameraZRotSpeed = "0.001";
-      orbitDistance = "8.71853e+012";
+      orbitDistance = "50";
       autoSize = "1";
    };
    new GuiControl(PG_Timer) {
@@ -474,7 +500,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/2.png";
+         bitmap = "./game/numbers/4.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(MinSec_Point) {
@@ -498,7 +524,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/8.png";
+         bitmap = "./game/numbers/0.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(Sec_Hundredth) {
@@ -510,7 +536,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/4.png";
+         bitmap = "./game/numbers/1.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(PG_NegSign) {
@@ -526,22 +552,23 @@ new GameTSCtrl(PlayGui) {
          wrap = "0";
       };
    };
-   new GuiControl(PG_HelpText) {
+   new GuiBitmapCtrl(PG_HelpText) {
       profile = "GuiDefaultProfile";
       horizSizing = "width";
-      vertSizing = "center";
-      position = "0 197";
-      extent = "640 86";
+      vertSizing = "top";
+      position = "98 480";
+      extent = "352 86";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
+      bitmap = "./game/helpbg";
 
       new GuiMLTextCtrl(HelpTextBackground) {
          profile = "GuiMLTextProfile";
          horizSizing = "width";
          vertSizing = "height";
          position = "1 1";
-         extent = "640 70";
+         extent = "352 86";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -554,44 +581,7 @@ new GameTSCtrl(PlayGui) {
          horizSizing = "width";
          vertSizing = "height";
          position = "0 0";
-         extent = "640 70";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         lineSpacing = "2";
-         allowColorChars = "0";
-         maxChars = "-1";
-      };
-   };
-   new GuiControl(PG_ChatText) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "width";
-      vertSizing = "top";
-      position = "0 418";
-      extent = "640 58";
-      minExtent = "8 8";
-      visible = "1";
-      helpTag = "0";
-
-      new GuiMLTextCtrl(ChatTextBackground) {
-         profile = "GuiMLTextProfile";
-         horizSizing = "width";
-         vertSizing = "height";
-         position = "1 1";
-         extent = "640 14";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         lineSpacing = "2";
-         allowColorChars = "0";
-         maxChars = "-1";
-      };
-      new GuiMLTextCtrl(ChatTextForeground) {
-         profile = "ChatHudMessageProfile";
-         horizSizing = "width";
-         vertSizing = "height";
-         position = "0 0";
-         extent = "640 16";
+         extent = "352 86";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";

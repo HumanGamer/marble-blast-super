@@ -163,30 +163,69 @@ function GuiMLTextCtrl::evalTextFunc(%this, %text)
    }
 }
 
-function helpFade(%fade)
+function helpClose(%time)
 {
-   HelpTextForeground.setAlpha(1.0 * %fade);
-   HelpTextBackground.setAlpha(%fade);
-   if(%fade > 0)
+   //if (%time == 1.0)
+   //   PG_HelpText.position = "98 362";
+   //HelpTextForeground.setAlpha(1.0 * %fade);
+   //HelpTextBackground.setAlpha(%fade);
+   %pos = PG_HelpText.position;
+   %xpos = getWord(%pos, 0);
+   %ypos = getWord(%pos, 1) + 3;
+   PG_HelpText.position = %xpos SPC %ypos;
+   //PG_HelpText.setVisible(false);
+   if(%time > 0)
    {
-      %nextFade = %fade - 0.03;
-      if(%nextFade < 0)
-         %nextFade = 0;
-      $HelpFadeTimer = schedule(32, 0, helpFade, %nextFade);
+      %nextTime = %time - 0.03;
+      if(%nextTime < 0)
+         %nextTime = 0;
+      $HelpCloseTimer = schedule(32, 0, helpClose, %nextTime);
+   } else {
+      cancel($HelpOpenTimer);
+      cancel($HelpCloseTimer);
+      PG_HelpText.position = "98" SPC getWord(getRes(), 1);
+   }
+}
+
+function helpOpen(%message, %time)
+{
+   //HelpTextForeground.setAlpha(1.0 * %fade);
+   //HelpTextBackground.setAlpha(%fade);
+   %pos = PG_HelpText.position;
+   %xpos = getWord(%pos, 0);
+   %ypos = getWord(%pos, 1) - 3;
+   PG_HelpText.position = %xpos SPC %ypos;
+   //PG_HelpText.setVisible(false);
+   if(%time < 1)
+   {
+      %nextTime = %time + 0.03;
+      if(%nextTime < 0)
+         %nextTime = 0;
+      $HelpOpenTimer = schedule(32, 0, helpOpen, %message, %nextTime);
+   } else {
+      cancel($HelpOpenTimer);
+      cancel($HelpCloseTimer);
+      $HelpCloseTimer = schedule(3000, 0, helpClose, 1.0); // default ms: 3000
    }
 }
 
 function addHelpLine(%message, %playBeep)
 {
    if (getWordCount(%message)) {
-      %text = "<just:center><font:Whitestone:35>" @ %message;
+      cancel($HelpOpenTimer);
+      cancel($HelpCloseTimer);
+      if (!$FirstHelp)
+      {
+         PG_HelpText.position = "98" SPC 480;
+         $FirstHelp = true;
+      } else {
+         PG_HelpText.position = "98" SPC getWord(getRes(), 1);
+      }
+      %text = "<just:center><font:Arial Bold:24>" @ %message;
       HelpTextBackground.setText("<color:000000>" @ %text);
       HelpTextForeground.setText("<color:FFFFFF>" @ %text);
 
-      cancel($HelpFadeTimer);
-      HelpTextForeground.setAlpha(1.0);
-      HelpTextBackground.setAlpha(1.0);
-      $HelpFadeTimer = schedule(3000, 0, helpFade, 1.0);
+      helpOpen(%message);
    }
    if(%playBeep)
    {

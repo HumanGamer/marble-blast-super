@@ -33,6 +33,9 @@ function EasterEggItem::onPickup(%this, %obj, %user, %amount)
    //} else {
       %found = $pref::EasterEgg[$Server::MissionFile];
       $pref::EasterEgg[$Server::MissionFile] = "1";
+      
+      $Dynamic::Achievement::FoundEasterEgg = true;
+      checkAchievements();
       //eval("%found = $pref::EasterEgg[" @ $Server::MissionFile @ "];");// @ MissionInfo.type @ "[" @ MissionInfo.level @ "];");   
    
       //eval("$pref::EasterEgg[" @ $Server::MissionFile @ "] = \"1\";");// @ MissionInfo.type @ "[" @ MissionInfo.level @ "] = \"1\";"); 

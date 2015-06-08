@@ -1,0 +1,85 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(AchievementPopupDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   noCursor = "1";
+   
+   new GuiControl(AchievementPopupContainer) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "relative";
+      vertSizing = "center";
+      position = "0 0";
+      extent = "640 250";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      new GuiBitmapCtrl(AP_AchievementHead) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "relative";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "640 50";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./achievements/achievement_head";
+         wrap = "0";
+         
+         new GuiMLTextCtrl(AP_AchievementHeadText) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "center";
+            vertSizing = "center";
+            position = "0 0";
+            extent = "640 25";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            wrap = "0";
+         };
+      };
+      new GuiBitmapCtrl(AP_AchievementBody) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "0 50";
+         extent = "640 150";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./achievements/achievement_body";
+         wrap = "0";
+         
+         new GuiBitmapCtrl(AP_AchievementIcon) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "center";
+            position = "25 0";
+            extent = "100 100";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./achievements/achievement_placeholder";
+            wrap = "0";
+         };
+         
+         new GuiMLTextCtrl(AP_AchievementBodyText) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "width";
+            vertSizing = "bottom";
+            position = "150 20";
+            extent = "465 0";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            wrap = "0";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
