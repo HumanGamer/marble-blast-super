@@ -151,7 +151,7 @@ function populatePMList()
             extent = "90 60";
             minExtent = "8 8";
             visible = "1";
-            command = "PM_setSelected(" @ %i @ ");LB_SetSelected(" @ %i @ ");";
+            command = "PM_setSelected(" @ %i @ ");"; //LB_SetSelected(" @ %i @ ");";
             helpTag = "0";
             groupNum = "-1";
             buttonType = "PushButton";
@@ -170,7 +170,7 @@ function populatePMList()
             extent = "90 20";
             minExtent = "8 8";
             visible = "1";
-            command = "PM_setSelected(" @ %i @ ");LB_SetSelected(" @ %i @ ");";
+            command = "PM_setSelected(" @ %i @ ");"; //LB_SetSelected(" @ %i @ ");";
             helpTag = "0";
             groupNum = "-1";
             buttonType = "PushButton";
@@ -325,6 +325,8 @@ function getGameModeName(%gamemode)
          return "Quota";
       case "Hunt":
          return "Gem Hunt";
+      case "Side":
+         return "Side Scrolling";
    }
    
    return "Standard";

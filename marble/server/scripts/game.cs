@@ -1300,6 +1300,15 @@ function GameConnection::createPlayer(%this, %spawnPoint)
    //%this.createGhost();
    
    %this.player.updateBlast();
+   
+   if (MissionInfo.gameMode $= "Side")
+   {
+      %this.player.getDataBlock().cameraDistance = 5;
+      %this.player.getDataBlock().jumpImpulse = 10;
+   } else {
+      %this.player.getDataBlock().cameraDistance = 2.5;
+      %this.player.getDataBlock().jumpImpulse = 7.5;
+   }
 }
 
 
