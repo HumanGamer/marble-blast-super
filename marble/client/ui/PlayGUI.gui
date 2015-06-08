@@ -248,8 +248,8 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "120 60";
-         extent = "43 55";
+         position = "159 60";
+         extent = "21 27";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -260,8 +260,8 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "144 60";
-         extent = "43 55";
+         position = "172 60";
+         extent = "21 27";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -272,8 +272,8 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "168 60";
-         extent = "43 55";
+         position = "185 60";
+         extent = "21 27";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
