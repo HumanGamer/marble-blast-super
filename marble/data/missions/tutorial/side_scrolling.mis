@@ -6,12 +6,13 @@ new SimGroup(MissionGroup) {
       canSaveDynamicFields = "1";
 		artist = "Matthieu Parizeau";
 		gameMode = "Side";
-		desc = "A level with a view";
+		desc = "A level with a view!";
 		goldTime = "15000";
 		level = "37";
 		name = "A Different Perspective";
-		type = "beginner";
+		type = "tutorial";
 		gameType = "SinglePlayer";
+		startHelpText = "In this mode your camera is locked and you can only move left or right.";
    };
    new MissionArea(MissionArea) {
       canSaveDynamicFields = "1";
