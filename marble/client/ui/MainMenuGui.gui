@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "~/client/backgrounds/background.jpg";
+   bitmap = getRandomBackground();
    useVariable = "0";
    tile = "0";
 

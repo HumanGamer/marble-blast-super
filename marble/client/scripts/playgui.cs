@@ -103,7 +103,7 @@ function PlayGui::setMaxGems(%this,%count)
    GemsTotalOne.setNumber(%one);
 
    //%visible = %count != 0 || MissionInfo.gameMode $= "hunt";
-   if ($Multiplayer::GameMode !$= "hunt" && %count != 0)
+   if (MissionInfo.gameMode $= "Quota")
    {
       HUD_ShowGem.setVisible(true);
       GemsFoundHundred.setVisible(true);
@@ -115,6 +115,26 @@ function PlayGui::setMaxGems(%this,%count)
       GemsTotalHundred.setVisible(true);
       GemsTotalTen.setVisible(true);
       GemsTotalOne.setVisible(true);
+      
+      GemsQuotaHundred.setVisible(true);
+      GemsQuotaTen.setVisible(true);
+      GemsQuotaOne.setVisible(true);
+   } else if ($Multiplayer::GameMode !$= "hunt" && %count != 0)
+   {
+      HUD_ShowGem.setVisible(true);
+      GemsFoundHundred.setVisible(true);
+      GemsFoundTen.setVisible(true);
+      GemsFoundOne.setVisible(true);
+      //PG_GemBG.setVisible(true);
+      
+      GemsSlash.setVisible(true);
+      GemsTotalHundred.setVisible(true);
+      GemsTotalTen.setVisible(true);
+      GemsTotalOne.setVisible(true);
+      
+      GemsQuotaHundred.setVisible(false);
+      GemsQuotaTen.setVisible(false);
+      GemsQuotaOne.setVisible(false);
    } else {
       HUD_ShowGem.setVisible(false);
       GemsFoundHundred.setVisible(false);
@@ -126,6 +146,9 @@ function PlayGui::setMaxGems(%this,%count)
       GemsTotalHundred.setVisible(false);
       GemsTotalTen.setVisible(false);
       GemsTotalOne.setVisible(false);
+      GemsQuotaHundred.setVisible(false);
+      GemsQuotaTen.setVisible(false);
+      GemsQuotaOne.setVisible(false);
    }
    //if ($Multiplayer::GameMode !$= "hunt" && %count != 0)
    //{
@@ -151,6 +174,17 @@ function PlayGui::setGemCount(%this,%count)
    GemsFoundHundred.setNumber(%hundred);
    GemsFoundTen.setNumber(%ten);
    GemsFoundOne.setNumber(%one);
+}   
+
+function PlayGui::setQuotaGems(%this,%count)
+{
+   %this.quotaGems = %count;
+   %one = %count % 10;
+   %ten = (((%count % 100) - %one) / 10);
+   %hundred = ((%count - %one) - (%ten * 10)) / 100;
+   GemsQuotaHundred.setNumber(%hundred);
+   GemsQuotaTen.setNumber(%ten);
+   GemsQuotaOne.setNumber(%one);
 }   
 
 

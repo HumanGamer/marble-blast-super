@@ -420,7 +420,7 @@ datablock MarbleData(DefaultMarble)
    blastRechargeTime = 36000;
    maxBlastRecharge = 5500;
    maxBlast = 6500;
-   minUsableBlast = 1000;
+   minUsableBlast = 1100;
 };
 
 datablock MarbleData(MegaMarbleBall : DefaultMarble)

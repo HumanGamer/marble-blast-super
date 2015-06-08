@@ -95,11 +95,21 @@ function moveright(%val)
 
 function moveforward(%val)
 {
+   if (MissionInfo.gameMode $= "Side" && LocalClientConnection.getControlObject() $= LocalClientConnection.player)
+   {
+      $mvForwardAction = 0;
+      return;
+   }
    $mvForwardAction = %val;
 }
 
 function movebackward(%val)
 {
+   if (MissionInfo.gameMode $= "Side" && LocalClientConnection.getControlObject() $= LocalClientConnection.player)
+   {
+      $mvBackwardAction = 0;
+      return;
+   }
    $mvBackwardAction = %val;
 }
 
@@ -137,6 +147,8 @@ function moveYAxis(%val)
 
 function moveYawAxis(%val)
 {
+   if (MissionInfo.gameMode $= "Side" && LocalClientConnection.getControlObject() $= LocalClientConnection.player)
+      return;
    if(mAbs(%val) < 0.05)
       %val = 0;
    if(%val < 0)
@@ -153,6 +165,8 @@ function moveYawAxis(%val)
 
 function movePitchAxis(%val)
 {
+   if (MissionInfo.gameMode $= "Side" && LocalClientConnection.getControlObject() $= LocalClientConnection.player)
+      return;
    //if(mAbs(%val) < 0.3)
    //{
    //   %val = 0;
@@ -221,6 +235,8 @@ function movedown(%val)
 
 function turnLeft( %val )
 {
+   if (MissionInfo.gameMode $= "Side" && LocalClientConnection.getControlObject() $= LocalClientConnection.player)
+      return;
    $mvYawRightSpeed = %val ? $Pref::Input::KeyboardTurnSpeed : 0;
    
    //$Client::MyYaw -= mRadToDeg($mvYawRightSpeed);
@@ -233,6 +249,8 @@ function turnLeft( %val )
 
 function turnRight( %val )
 {
+   if (MissionInfo.gameMode $= "Side" && LocalClientConnection.getControlObject() $= LocalClientConnection.player)
+      return;
    $mvYawLeftSpeed = %val ? $Pref::Input::KeyboardTurnSpeed : 0;
    
    //$Client::MyYaw += mRadToDeg($mvYawLeftSpeed);
@@ -245,6 +263,8 @@ function turnRight( %val )
 
 function panUp( %val )
 {
+   if (MissionInfo.gameMode $= "Side" && LocalClientConnection.getControlObject() $= LocalClientConnection.player)
+      return;
    $mvPitchDownSpeed = %val ? $Pref::Input::KeyboardTurnSpeed : 0;
    
    //$Client::MyPitch += mRadToDeg($mvPitchDownSpeed);
@@ -256,6 +276,8 @@ function panUp( %val )
 
 function panDown( %val )
 {
+   if (MissionInfo.gameMode $= "Side" && LocalClientConnection.getControlObject() $= LocalClientConnection.player)
+      return;
    $mvPitchUpSpeed = %val ? $Pref::Input::KeyboardTurnSpeed : 0;
    
    //$Client::MyPitch -= mRadToDeg($mvPitchUpSpeed);
@@ -279,6 +301,8 @@ function getMouseAdjustAmount(%val)
 
 function yaw(%val)
 {
+   if (MissionInfo.gameMode $= "Side" && LocalClientConnection.getControlObject() $= LocalClientConnection.player)
+      return;
    $mvYaw += getMouseAdjustAmount(%val);
    if($pref::input::InvertXAxis)
       $mvYaw -= getMouseAdjustAmount(%val);
@@ -295,6 +319,8 @@ function yaw(%val)
 
 function pitch(%val)
 {
+   if (MissionInfo.gameMode $= "Side" && LocalClientConnection.getControlObject() $= LocalClientConnection.player)
+      return;
    if($freelooking || $pref::Input::AlwaysFreeLook)
    {
       if($pref::input::InvertYAxis)
@@ -438,7 +464,8 @@ function toggleHud(%val)
          %visible = false;
          $Client::HudHidden = true;
       }
-      
+      PG_GemBox.visible = %visible;
+      CompassDlg.visible = %visible;
       PG_NumBG.visible = %visible;
       //PG_NegSign.visible = %visible;
       PG_Rear.visible = %visible;
@@ -460,6 +487,8 @@ function toggleHud(%val)
       //PG_ChatText.visible = %visible;
       HUD_ShowPowerUp.visible = %visible;
       PG_PowerUp.visible = %visible;
+      PG_BlastOverlay.visible = %visible;
+      PG_BlastBar.visible = %visible;
       RadarContainer.visible = %visible;
    }
 }

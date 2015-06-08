@@ -2,16 +2,29 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+<<<<<<< HEAD:marble/data/missions/advanced/FrictionTrack.mis
          type = "Advanced";
          name = "Friction Track";
          level = "6";
+=======
+         startHelpText = "Can you survive?";
+         type = "Intermediate";
+         name = "Friction Track";
+         level = "1";
+         desc = "Traverse through a challenging frictional course.";
+         goldTime = "45000";
+>>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1:marble/data/missions/intermediate/FrictionTrack.mis
          artist = "Rozi";
          hyperTime = "30000";
          hasEgg = "1";
          startHelpText = "Don\'t slip off!";
          time = "0";
+<<<<<<< HEAD:marble/data/missions/advanced/FrictionTrack.mis
          desc = "How quickly can you go through the challenges?";
          goldTime = "45000";
+=======
+         hyperTime = "30000";
+>>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1:marble/data/missions/intermediate/FrictionTrack.mis
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -52,157 +65,158 @@ new SimGroup(MissionGroup) {
       ambient = "0.300000 0.300000 0.400000 1.000000";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
-         time = "0";
-         bonusTime = "0";
          pad = "2009";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "2476";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "1649";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "1721";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "2727";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "2784";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "4691";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "1602";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "1602";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "1602";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "1602";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "1672";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "1752";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "3372";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "1624";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "1783";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "1965";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
+   };
+   new ScriptObject() {
          pad = "2161";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
-         pad = "1789";
    };
+   new ScriptObject() {
+         pad = "1789";
+         powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
+         time = "0";
+         bonusTime = "0";
+   };
+<<<<<<< HEAD:marble/data/missions/advanced/FrictionTrack.mis
    new StaticShape() {
       position = "-90.7636 -49.7295 381.559";
       rotation = "1 0 0 0";
@@ -213,6 +227,12 @@ new SimGroup(MissionGroup) {
          timer = "3000";
          radius = "15";
          ball = "3623";
+=======
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+>>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1:marble/data/missions/intermediate/FrictionTrack.mis
    };
    new InteriorInstance() {
       position = "-43.5339 -43.4364 381.25";
@@ -222,34 +242,42 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
+         pad = "0";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
-         pad = "0";
    };
    new StaticShape(StartPoint) {
       position = "-40.568 -40.1656 381.85";
       rotation = "0 0 1 180";
       scale = "0.7 0.7 0.7";
       dataBlock = "StartPad";
+<<<<<<< HEAD:marble/data/missions/advanced/FrictionTrack.mis
          beam = "3667";
+=======
+         beam = "2978";
+>>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1:marble/data/missions/intermediate/FrictionTrack.mis
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
+         pad = "2805";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
-         pad = "2805";
    };
    new StaticShape(EndPoint) {
       position = "-103.674 -70.7673 381.85";
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
+<<<<<<< HEAD:marble/data/missions/advanced/FrictionTrack.mis
          beam = "3637";
+=======
+         beam = "2276";
+>>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1:marble/data/missions/intermediate/FrictionTrack.mis
    };
    new Item() {
       position = "-51.1335 -16.8828 381.836";
@@ -262,12 +290,12 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
+         pad = "2230";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
-         pad = "2230";
    };
    new Item() {
       position = "-80.9547 -22.9066 381.477";
@@ -289,6 +317,10 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+<<<<<<< HEAD:marble/data/missions/advanced/FrictionTrack.mis
+=======
+         node = "2974";
+>>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1:marble/data/missions/intermediate/FrictionTrack.mis
          checkpointNum = "1";
          node = "3663";
    };
@@ -300,6 +332,10 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+<<<<<<< HEAD:marble/data/missions/advanced/FrictionTrack.mis
+=======
+         node = "2975";
+>>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1:marble/data/missions/intermediate/FrictionTrack.mis
          checkpointNum = "1";
          node = "3664";
    };
@@ -311,6 +347,10 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+<<<<<<< HEAD:marble/data/missions/advanced/FrictionTrack.mis
+=======
+         node = "2976";
+>>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1:marble/data/missions/intermediate/FrictionTrack.mis
          checkpointNum = "1";
          node = "3665";
    };
@@ -322,17 +362,30 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+<<<<<<< HEAD:marble/data/missions/advanced/FrictionTrack.mis
+=======
+         node = "2977";
+>>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1:marble/data/missions/intermediate/FrictionTrack.mis
          checkpointNum = "1";
          node = "3666";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
+         pad = "12521";
          powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          time = "0";
          bonusTime = "0";
-         pad = "12521";
    };
+   new ScriptObject() {
+         pad = "2273";
+         powerUp = "0";
+         gemCount = "0";
+         penaltyTime = "0";
+         time = "0";
+         bonusTime = "0";
+   };
+<<<<<<< HEAD:marble/data/missions/advanced/FrictionTrack.mis
    new Item() {
       position = "-51.189 7.03266 383.922";
       rotation = "1 0 0 0";
@@ -346,6 +399,14 @@ new SimGroup(MissionGroup) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+=======
+   new Trigger() {
+      position = "-120.693 35.735 350.7";
+      rotation = "1 0 0 0";
+      scale = "135 135 100";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+>>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1:marble/data/missions/intermediate/FrictionTrack.mis
    };
 };
 //--- OBJECT WRITE END ---

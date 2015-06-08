@@ -10,16 +10,16 @@ new GameTSCtrl(PlayGui) {
    helpTag = "0";
    cameraZRot = "0";
    forceFOV = "0";
-      gemCount = "0";
-      elapsedTime = "288390";
       noCursor = "1";
-      maxGems = "0";
+      maxGems = "1";
       totalBonus = "0";
       timerInc = "50";
-      bonusTime = "0";
+      gemCount = "0";
       timerId = "3512";
       timeInc = "50";
-	  
+      elapsedTime = "2844";
+      bonusTime = "0";
+
    new GuiBitmapCtrl(PG_Water) {
       profile = "GuiDefaultProfile";
       horizSizing = "width";
@@ -32,7 +32,6 @@ new GameTSCtrl(PlayGui) {
       bitmap = "./game/water.png";
       wrap = "0";
    };
-	
    new GuiBitmapCtrl(PG_PhysMod) {
       profile = "GuiDefaultProfile";
       horizSizing = "width";
@@ -45,7 +44,6 @@ new GameTSCtrl(PlayGui) {
       bitmap = "./game/physmod.png";
       wrap = "0";
    };
-
    new GameTSCtrl(PG_RearView) {
       profile = "GuiDefaultProfile";
       horizSizing = "left";
@@ -135,106 +133,267 @@ new GameTSCtrl(PlayGui) {
       bitmap = "./lagIcon.png";
       wrap = "0";
    };
-   new GuiObjectView(HUD_ShowGem) {
-      profile = "GuiButtonProfile";
+   new GuiControl(PG_GemBox) {
+      profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "-4 -4";
-      extent = "60 60";
+      position = "0 0";
+      extent = "225 125";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+
+      new GuiObjectView(HUD_ShowGem) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "-4 -4";
+         extent = "60 60";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         cameraZRot = "0";
+         forceFOV = "0";
+         skin = "base";
+         cameraRotX = "0";
+         cameraZRotSpeed = "0.001";
+         orbitDistance = "1.3766";
+         autoSize = "1";
+      };
+      new GuiBitmapCtrl(GemsFoundHundred) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "30 0";
+         extent = "43 55";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./game/numbers/0.png";
+         wrap = "0";
+      };
+      new GuiBitmapCtrl(GemsFoundTen) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "54 0";
+         extent = "43 55";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./game/numbers/0.png";
+         wrap = "0";
+      };
+      new GuiBitmapCtrl(GemsFoundOne) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "78 0";
+         extent = "43 55";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./game/numbers/0.png";
+         wrap = "0";
+      };
+      new GuiBitmapCtrl(GemsSlash) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "99 0";
+         extent = "43 55";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./game/numbers/slash.png";
+         wrap = "0";
+      };
+      new GuiBitmapCtrl(GemsTotalHundred) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "120 0";
+         extent = "43 55";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./game/numbers/0.png";
+         wrap = "0";
+      };
+      new GuiBitmapCtrl(GemsTotalTen) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "144 0";
+         extent = "43 55";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./game/numbers/0.png";
+         wrap = "0";
+      };
+      new GuiBitmapCtrl(GemsTotalOne) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "168 0";
+         extent = "43 55";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./game/numbers/1.png";
+         wrap = "0";
+      };
+      new GuiBitmapCtrl(GemsQuotaHundred) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "159 60";
+         extent = "21 27";
+         minExtent = "8 8";
+         visible = "0";
+         helpTag = "0";
+         bitmap = "./game/numbers/0.png";
+         wrap = "0";
+      };
+      new GuiBitmapCtrl(GemsQuotaTen) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "172 60";
+         extent = "21 27";
+         minExtent = "8 8";
+         visible = "0";
+         helpTag = "0";
+         bitmap = "./game/numbers/0.png";
+         wrap = "0";
+      };
+      new GuiBitmapCtrl(GemsQuotaOne) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "185 60";
+         extent = "21 27";
+         minExtent = "8 8";
+         visible = "0";
+         helpTag = "0";
+         bitmap = "./game/numbers/4.png";
+         wrap = "0";
+      };
+   };
+   new GuiBitmapCtrl(CompassDlg) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "bottom";
+      position = "242 61";
+      extent = "156 35";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./hudfill.png";
+      wrap = "0";
+
+      new GuiTextCtrl(CompassText) {
+         profile = "GuiCompassProfile";
+         horizSizing = "center";
+         vertSizing = "center";
+         position = "-2 -1";
+         extent = "160 36";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+            maxChars = "-1";
+            lineSpacing = "2";
+            allowColorChars = "0";
+      };
+   };
+   new GuiProgressCtrl(PG_BlastBar) {
+      profile = "GuiBlastProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "20 405";
+      extent = "100 27";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+   };
+   new GuiBitmapCtrl(PG_BlastOverlay) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "16 400";
+      extent = "108 36";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./game/blast.png";
+      wrap = "0";
+   };
+   new GuiMLTextCtrl(ChatText) {
+      profile = "GuiMLTextProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "20 185";
+      extent = "300 14";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      lineSpacing = "2";
+      allowColorChars = "0";
+      maxChars = "-1";
+   };
+   new GuiBitmapCtrl(RadarContainer) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "width";
+      vertSizing = "height";
+      position = "0 0";
+      extent = "640 480";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      wrap = "0";
+   };
+   new GuiBitmapCtrl(PG_Rear) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "left";
+      vertSizing = "bottom";
+      position = "461 95";
+      extent = "169 181";
       minExtent = "8 8";
       visible = "0";
+      helpTag = "0";
+      bitmap = "./game/rear.png";
+      wrap = "0";
+   };
+   new GuiBitmapCtrl(PG_PowerUp) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "left";
+      vertSizing = "bottom";
+      position = "548 6";
+      extent = "82 83";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./game/powerup.png";
+      wrap = "0";
+   };
+   new GuiObjectView(HUD_ShowPowerUp) {
+      profile = "GuiButtonProfile";
+      horizSizing = "left";
+      vertSizing = "bottom";
+      position = "559 8";
+      extent = "68 67";
+      minExtent = "8 8";
+      visible = "1";
       helpTag = "0";
       cameraZRot = "0";
       forceFOV = "0";
       skin = "base";
       cameraRotX = "0";
       cameraZRotSpeed = "0.001";
-      orbitDistance = "1.3766";
+      orbitDistance = "8.71853e+012";
       autoSize = "1";
-   };
-   new GuiBitmapCtrl(GemsFoundHundred) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "right";
-      vertSizing = "bottom";
-      position = "30 0";
-      extent = "43 55";
-      minExtent = "8 8";
-      visible = "0";
-      helpTag = "0";
-      bitmap = "./game/numbers/0.png";
-      wrap = "0";
-   };
-   new GuiBitmapCtrl(GemsFoundTen) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "right";
-      vertSizing = "bottom";
-      position = "54 0";
-      extent = "43 55";
-      minExtent = "8 8";
-      visible = "0";
-      helpTag = "0";
-      bitmap = "./game/numbers/0.png";
-      wrap = "0";
-   };
-   new GuiBitmapCtrl(GemsFoundOne) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "right";
-      vertSizing = "bottom";
-      position = "78 0";
-      extent = "43 55";
-      minExtent = "8 8";
-      visible = "0";
-      helpTag = "0";
-      bitmap = "./game/numbers/0.png";
-      wrap = "0";
-   };
-   new GuiBitmapCtrl(GemsSlash) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "right";
-      vertSizing = "bottom";
-      position = "99 0";
-      extent = "43 55";
-      minExtent = "8 8";
-      visible = "0";
-      helpTag = "0";
-      bitmap = "./game/numbers/slash.png";
-      wrap = "0";
-   };
-   new GuiBitmapCtrl(GemsTotalHundred) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "right";
-      vertSizing = "bottom";
-      position = "120 0";
-      extent = "43 55";
-      minExtent = "8 8";
-      visible = "0";
-      helpTag = "0";
-      bitmap = "./game/numbers/0.png";
-      wrap = "0";
-   };
-   new GuiBitmapCtrl(GemsTotalTen) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "right";
-      vertSizing = "bottom";
-      position = "144 0";
-      extent = "43 55";
-      minExtent = "8 8";
-      visible = "0";
-      helpTag = "0";
-      bitmap = "./game/numbers/0.png";
-      wrap = "0";
-   };
-   new GuiBitmapCtrl(GemsTotalOne) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "right";
-      vertSizing = "bottom";
-      position = "168 0";
-      extent = "43 55";
-      minExtent = "8 8";
-      visible = "0";
-      helpTag = "0";
-      bitmap = "./game/numbers/0.png";
-      wrap = "0";
    };
    new GuiControl(PG_Timer) {
       profile = "GuiDefaultProfile";
@@ -279,7 +438,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/4.png";
+         bitmap = "./game/numbers/0.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(MinSec_Colon) {
@@ -303,7 +462,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/4.png";
+         bitmap = "./game/numbers/0.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(Sec_One) {
@@ -315,7 +474,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/8.png";
+         bitmap = "./game/numbers/2.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(MinSec_Point) {
@@ -339,7 +498,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/3.png";
+         bitmap = "./game/numbers/8.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(Sec_Hundredth) {
@@ -351,7 +510,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/9.png";
+         bitmap = "./game/numbers/4.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(PG_NegSign) {
@@ -371,8 +530,8 @@ new GameTSCtrl(PlayGui) {
       profile = "GuiDefaultProfile";
       horizSizing = "width";
       vertSizing = "center";
-      position = "0 210";
-      extent = "640 60";
+      position = "0 197";
+      extent = "640 86";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
@@ -382,7 +541,7 @@ new GameTSCtrl(PlayGui) {
          horizSizing = "width";
          vertSizing = "height";
          position = "1 1";
-         extent = "640 14";
+         extent = "640 70";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -395,7 +554,7 @@ new GameTSCtrl(PlayGui) {
          horizSizing = "width";
          vertSizing = "height";
          position = "0 0";
-         extent = "640 16";
+         extent = "640 70";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -419,7 +578,7 @@ new GameTSCtrl(PlayGui) {
          horizSizing = "width";
          vertSizing = "height";
          position = "1 1";
-         extent = "640 32";
+         extent = "640 14";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -432,127 +591,13 @@ new GameTSCtrl(PlayGui) {
          horizSizing = "width";
          vertSizing = "height";
          position = "0 0";
-         extent = "640 32";
+         extent = "640 16";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
          lineSpacing = "2";
          allowColorChars = "0";
          maxChars = "-1";
-      };
-   };
-   new GuiObjectView(HUD_ShowPowerUp) {
-      profile = "GuiButtonProfile";
-      horizSizing = "left";
-      vertSizing = "bottom";
-      position = "559 8";
-      extent = "68 67";
-      minExtent = "8 8";
-      visible = "1";
-      helpTag = "0";
-      cameraZRot = "0";
-      forceFOV = "0";
-      skin = "base";
-      cameraRotX = "0";
-      cameraZRotSpeed = "0.001";
-      orbitDistance = "1.60669";
-      autoSize = "1";
-   };
-   new GuiBitmapCtrl(PG_PowerUp) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "left";
-      vertSizing = "bottom";
-      position = "548 6";
-      extent = "82 83";
-      minExtent = "8 8";
-      visible = "1";
-      helpTag = "0";
-      bitmap = "./game/powerup.png";
-      wrap = "0";
-   };
-   new GuiBitmapCtrl(PG_Rear) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "left";
-      vertSizing = "bottom";
-      position = "461 95";
-      extent = "169 181";
-      minExtent = "8 8";
-      visible = "0";
-      helpTag = "0";
-      bitmap = "./game/rear.png";
-      wrap = "0";
-   };
-   new GuiBitmapCtrl(RadarContainer) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "width";
-      vertSizing = "height";
-      position = "0 0";
-      extent = "640 480";
-      minExtent = "8 8";
-      visible = "1";
-      helpTag = "0";
-      wrap = "0";
-   };
-   new GuiMLTextCtrl(ChatText) {
-      profile = "GuiMLTextProfile";
-      horizSizing = "right";
-      vertSizing = "top";
-      position = "20 185";
-      extent = "300 14";
-      minExtent = "8 8";
-      visible = "1";
-      helpTag = "0";
-      lineSpacing = "2";
-      allowColorChars = "0";
-      maxChars = "-1";
-   };
-   new GuiProgressCtrl(PG_BlastBar) {
-      profile = "GuiBlastUsableProfile";
-      horizSizing = "right";
-      vertSizing = "top";
-      position = "20 405";
-      extent = "100 27";
-      minExtent = "8 8";
-      visible = "1";
-      helpTag = "0";
-   };
-   new GuiBitmapCtrl(PG_PowerUp) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "right";
-      vertSizing = "top";
-      position = "16 400";
-      extent = "108 36";
-      minExtent = "8 8";
-      visible = "1";
-      helpTag = "0";
-      bitmap = "./game/blast.png";
-      wrap = "0";
-   };
-   new GuiBitmapCtrl(CompassDlg) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "center";
-      vertSizing = "bottom";
-      position = "242 61";
-      extent = "156 35";
-      minExtent = "8 8";
-      visible = "1";
-      helpTag = "0";
-      bitmap = "./hudfill.png";
-      wrap = "0";
-
-      new GuiTextCtrl(CompassText) {
-         profile = "GuiCompassProfile";
-         horizSizing = "center";
-         vertSizing = "center";
-         position = "-2 -1";
-         extent = "160 36";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         maxLength = "255";
-            maxChars = "-1";
-            lineSpacing = "2";
-            allowColorChars = "0";
       };
    };
 };

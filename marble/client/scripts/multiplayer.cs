@@ -179,6 +179,11 @@ function clientCmdSetMaxGems(%count)
    PlayGui.setMaxGems(%count);
 }
 
+function clientCmdSetQuotaGems(%count)
+{
+   PlayGui.setQuotaGems(%count);
+}
+
 function clientCmdAddHelpLine(%msg, %bool)
 {
    addHelpLine(%msg, %bool);

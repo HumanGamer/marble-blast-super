@@ -151,7 +151,7 @@ function populatePMList()
             extent = "90 60";
             minExtent = "8 8";
             visible = "1";
-            command = "PM_setSelected(" @ %i @ ");LB_SetSelected(" @ %i @ ");";
+            command = "PM_setSelected(" @ %i @ ");"; //LB_SetSelected(" @ %i @ ");";
             helpTag = "0";
             groupNum = "-1";
             buttonType = "PushButton";
@@ -170,7 +170,7 @@ function populatePMList()
             extent = "90 20";
             minExtent = "8 8";
             visible = "1";
-            command = "PM_setSelected(" @ %i @ ");LB_SetSelected(" @ %i @ ");";
+            command = "PM_setSelected(" @ %i @ ");"; //LB_SetSelected(" @ %i @ ");";
             helpTag = "0";
             groupNum = "-1";
             buttonType = "PushButton";
@@ -317,6 +317,21 @@ function hasEgg(%mission)
    %found = $pref::EasterEgg[%mission.file];
 }
 
+function getGameModeName(%gamemode)
+{
+   switch$ (%gamemode)
+   {
+      case "Quota":
+         return "Quota";
+      case "Hunt":
+         return "Gem Hunt";
+      case "Side":
+         return "Side Scrolling";
+   }
+   
+   return "Standard";
+}
+
 function PM_setSelected(%index)
 {
    %group = "MTYPE_" @ $MissionType;
@@ -340,23 +355,24 @@ function PM_setSelected(%index)
       return;
    }
    %mission = getField(PM_missionList.getRowTextById(%index), 1);
-   %name = "<color:000000><spush><font:Bauhaus 93:24>" @ %mission.name @ "<spop><lmargin:10>";
+   %name = "<color:000000><spush><font:Bauhaus 93:24><lmargin:1>" @ %mission.name @ "<spop><lmargin:10>";
    if (containsEgg(%mission))
    {
       if (hasEgg(%mission))
       {
-         %egg = " <bitmap:marble/client/ui/play/easteregg_has.png>\n\n";
+         %egg = " <bitmap:marble/client/ui/play/easteregg_has.png>\n";
       } else {
-         %egg = " <bitmap:marble/client/ui/play/easteregg_noegg.png>\n\n";
+         %egg = " <bitmap:marble/client/ui/play/easteregg_noegg.png>\n";
       }
    } else {
-      %egg = "\n\n";
+      %egg = "\n";
    }
+   %gamemode = "<spush><font:Bauhaus 93:18><color:CCCCCC><shadowcolor:000000><shadow:1:1><lmargin:10>" @ getGameModeName(%mission.gameMode) @ "<spop><lmargin:0>\n\n";
    if (%mission.artist !$= "")
    {
-      %author = "<spush><font:Bauhaus 93:18>" @ %mission.artist @ "<spop>\n\n";
+      %author = "<spush><font:Bauhaus 93:18><lmargin:1>" @ %mission.artist @ "<spop>\n\n";
    } else {
-      %author = "<spush><font:Bauhaus 93:18>" @ "(Anonymous)" @ "<spop>\n\n";
+      %author = "<spush><font:Bauhaus 93:18><lmargin:1>" @ "(Anonymous)" @ "<spop>\n\n";
    }
    if (%mission.time)
       %qualify = "<spush><font:Bauhaus 93:20><color:CCCCCC><shadowcolor:000000><shadow:1:1><lmargin:10>Par Time: " @ formatTime(%mission.time) @ "<spop><lmargin:0>\n";
@@ -370,14 +386,14 @@ function PM_setSelected(%index)
       %qualify = %qualify @ "<spush><font:Bauhaus 93:20><color:834396><shadowcolor:000000><shadow:1:1><lmargin:10>Hyper Time: " @ formatTime(%mission.hyperTime) @ "<spop><lmargin:0>\n\n";
    else
       %qualify = %qualify @ "<spush><font:Bauhaus 93:20><color:834396><shadowcolor:000000><shadow:1:1><lmargin:10>Hyper Time: " @ "None" @ "<spop><lmargin:0>\n\n";
-   %desc = %mission.desc @ "\n\n";
-   %best = "<spush><font:Bauhaus 93:20>Your best times:<spop><lmargin:10><tab:0,130,180><font:Whitestone:14>\n";
+   %desc = "<lmargin:1>" @ %mission.desc @ "\n\n";
+   %best = "<spush><font:Bauhaus 93:20><lmargin:1>Your best times:<spop><lmargin:10><tab:0,130,180><font:Whitestone:14>\n";
    getBestTimes(%mission.file);
    %total = "";
    for (%i = 0; %i < 3; %i++)
    {
       %thetime = getField($hs[%i], 1) @ "\t" @ formatTime(getField($hs[%i], 0));
-      %time = "<shadow:1:1><color:000000><shadowcolor:ffffff4f>" @ %thetime;
+      %time = "<shadow:1:1><color:000000><shadowcolor:ffffff4f><lmargin:10>" @ %thetime;
       if (%mission.hyperTime && getField($hs[%i], 0) < %mission.hyperTime)
          %time = %time @ "<bitmap:marble/client/ui/play/hyperscore.png>";
       else if (%mission.goldTime && getField($hs[%i], 0) < %mission.goldTime)
@@ -385,7 +401,7 @@ function PM_setSelected(%index)
       %time = %time @ "\n";
       %total = %total @ %time;
    }
-   PM_description.setText(%name @ %egg @ %desc @ %author @ %qualify @ %best @ %total);
+   PM_description.setText(%name @ %egg @ %gamemode @ %desc @ %author @ %qualify @ %best @ %total);
    %bmp = strreplace(%mission.file, ".mis", "");
    PM_preview.setBitmap(%bmp);
    //if (isFile(%bmp @ ".png"))

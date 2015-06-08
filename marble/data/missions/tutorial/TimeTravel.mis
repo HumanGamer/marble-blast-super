@@ -2,6 +2,7 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+<<<<<<< HEAD
          name = "Stopping Time";
          type = "Tutorial";
          hasEgg = "1";
@@ -12,6 +13,17 @@ new SimGroup(MissionGroup) {
          goldTime = "1750";
          level = "8";
          hyperTime = "1500";
+=======
+         level = "8";
+         hyperTime = "1500";
+         desc = "Stop time with the Time Travel PowerUp.";
+         time = "10000";
+         artist = "Rozi";
+         name = "Stopping Time";
+         type = "Tutorial";
+         goldTime = "1750";
+         startHelpText = "Either go straight to the finish, or get the Time Travels first and get a lower time!";
+>>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
