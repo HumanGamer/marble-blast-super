@@ -118,6 +118,7 @@ function initClient()
    exec("./ui/replayCenterGui.gui");
    //exec("./ui/preMissionGui.gui");
    //exec("./ui/multiplayerEndGui.gui");
+   exec("./ui/AchievementPopupDlg.gui");
 
    // Client scripts
    exec("./scripts/client.cs");
@@ -151,6 +152,7 @@ function initClient()
    exec("./scripts/compass.cs");
    exec("./scripts/endgamegui.cs");
    //exec("./scripts/multiplayerEndGui.cs");
+   exec("./scripts/achievements.cs");
 
    // Default player key bindings
    exec("./scripts/default.bind.cs");

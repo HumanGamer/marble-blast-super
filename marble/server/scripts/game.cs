@@ -400,6 +400,12 @@ function spawnGemGroup()
 
 function endGame()
 {
+   cancel($endGameDelay);
+   if (AchievementPopupDlg.isAwake())
+   {
+      $endGameDelay = schedule(1000, 0, endGame);
+      return;
+   }
    if (!$Game::Running) {
       error("endGame: No game running!");
       return;
@@ -592,6 +598,8 @@ function GameConnection::StateEnd(%this)
    if ($Server::ServerType $= "SinglePlayer")
    {
       //startFireWorks(EndPoint);
+      $Dynamic::Achievement::ParTime = MissionInfo.time? PlayGui.elapsedTime < MissionInfo.time: false;
+      checkAchievements();
       %this.StateSchedule = schedule( 2000, 0, "endGame");
    }
    else {
