@@ -1,15 +1,21 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapCtrl(GemsTotalOne) {
+   new GuiObjectView(HC_Oilslick) {
       profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "168 0";
-      extent = "43 55";
+      position = "80 194";
+      extent = "69 65";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "marble/client/ui/game/numbers/4.png";
-      wrap = "0";
+      cameraZRot = "0";
+      forceFOV = "0";
+      model = "marble/data/shapes/hazards/oilslick.dts";
+      skin = "base";
+      cameraRotX = "0.35";
+      cameraZRotSpeed = "0.001";
+      orbitDistance = "5.5";
+      autoSize = "0";
    };
 };

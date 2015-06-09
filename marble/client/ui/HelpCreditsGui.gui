@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "~/client/backgrounds/BlockTowers.png";
+   bitmap = "~/client/backgrounds/thetrickster.png";
    useVariable = "0";
    tile = "0";
 
@@ -362,7 +362,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             position = "61 135";
             extent = "91 66";
             minExtent = "8 8";
-            visible = "1";
+            visible = "0";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -380,7 +380,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             position = "91 98";
             extent = "31 33";
             minExtent = "8 8";
-            visible = "1";
+            visible = "0";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -468,6 +468,24 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             helpTag = "0";
             bitmap = "./fullVersion";
             wrap = "0";
+         };
+         new GuiObjectView(HC_Cannon) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "78 89";
+            extent = "69 65";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            cameraZRot = "0";
+            forceFOV = "0";
+            model = "~/data/shapes/hazards/cannon.dts";
+            skin = "base";
+            cameraRotX = "0.35";
+            cameraZRotSpeed = "0.001";
+            orbitDistance = "1.62787";
+            autoSize = "1";
          };
       };
       new GuiBitmapButtonCtrl() {
