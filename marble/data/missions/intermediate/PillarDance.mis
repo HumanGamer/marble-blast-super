@@ -4,11 +4,12 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          name = "Pillar Dance";
          type = "intermediate";
+         hasEgg = "1";
          time = "0";
+         artist = "James Colsey";
          desc = "Make it through this vicious square dance.";
          goldTime = "3000";
          level = "3";
-         artist = "James Colsey";
          hyperTime = "1900";
    };
    new MissionArea(MissionArea) {
@@ -61,7 +62,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "8919";
+         beam = "10871";
    };
    new Item() {
       position = "0 8 11";
@@ -71,15 +72,15 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "10870";
          checkpointNum = "1";
-         node = "8918";
    };
    new StaticShape(EndPoint) {
       position = "0 16 10";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "8664";
+         beam = "10682";
    };
    new SimGroup(MustChange_g) {
 
@@ -314,7 +315,7 @@ new SimGroup(MissionGroup) {
       };
    };
    new Trigger(Bounds) {
-      position = "-9 21.5 -13";
+      position = "-9 51.3 -13";
       rotation = "1 0 0 0";
       scale = "18 27 50";
       dataBlock = "InBoundsTrigger";
@@ -330,6 +331,32 @@ new SimGroup(MissionGroup) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "10679";
+   };
+   new Item() {
+      position = "-2.28773 -2.26213 10.1783";
+      rotation = "1 0 0 0";
+      scale = "0.01 0.01 0.01";
+      dataBlock = "SuperJumpItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "0.0103437 7.98034 20.1567";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
    };
 };
 //--- OBJECT WRITE END ---

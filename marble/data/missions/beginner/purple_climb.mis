@@ -4,12 +4,12 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          name = "Purple Climb";
          type = "beginner";
-         level = "10";
-         hyperTime = "26000";
+         hasEgg = "1";
          artist = "Matthieu Parizeau";
          desc = "A climb in purple glory.";
          goldTime = "35000";
-         hasEgg = "1";
+         level = "10";
+         hyperTime = "26000";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -64,11 +64,11 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "8658";
+         node = "6770";
          checkpointNum = "1";
    };
    new Item() {
-      position = "12.0631 61.9377 -7.14355";
+      position = "12.0631 63.7377 -4.94355";
       rotation = "1 0 0 0";
       scale = "0.3 0.3 0.3";
       dataBlock = "EasterEggItem";
@@ -91,7 +91,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "8659";
+         node = "6771";
          checkpointNum = "1";
    };
    new Item() {
@@ -102,7 +102,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "8660";
+         node = "6772";
          checkpointNum = "1";
    };
    new StaticShape(StartPoint) {
@@ -110,14 +110,14 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "8661";
+         beam = "6773";
    };
    new StaticShape(EndPoint) {
       position = "-24 100 24";
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "8562";
+         beam = "6652";
    };
    new Item() {
       position = "-6 2 0";
@@ -138,6 +138,14 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "6650";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

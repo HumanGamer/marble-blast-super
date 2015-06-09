@@ -4,15 +4,16 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          name = "Upward";
-         proTime = "40000";
          type = "intermediate";
-         desc = "An amazing upward level!";
          gameType = "SinglePlayer";
-         difficulty = "4";
-         goldTime = "18000";
-         level = "1";
-         artist = "Matthieu Parizeau";
          include = "1";
+         hasEgg = "1";
+         artist = "Matthieu Parizeau";
+         desc = "An amazing upward level!";
+         goldTime = "18000";
+         proTime = "40000";
+         level = "1";
+         difficulty = "4";
          hyperTime = "8000";
    };
    new MissionArea(MissionArea) {
@@ -48,12 +49,12 @@ new SimGroup(MissionGroup) {
       fogVolumeColor1 = "128.000000 128.000000 128.000000 274952335980479310000000000.000000";
       fogVolumeColor2 = "128.000000 128.000000 128.000000 11918.598633";
       fogVolumeColor3 = "128.000000 128.000000 128.000000 1109264997360148200000000000.000000";
-         fogStorm1 = "0";
-         canSaveDynamicFields = "1";
-         skyGlow = "0";
          fogStorm2 = "0";
+         canSaveDynamicFields = "1";
          skyGlowColor = "-0.026242 -0.031545 0.999158 0.887938";
+         fogStorm1 = "0";
          fogStorm3 = "0";
+         skyGlow = "0";
          hidden = "0";
          renderBanOffsetHeight = "50";
    };
@@ -76,26 +77,26 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         customAmbientLighting = "0 0 0 1";
-         canSaveDynamicFields = "1";
-         receiveLMLighting = "1";
-         beam = "5654";
          useCustomAmbientLighting = "0";
-         hidden = "0";
+         canSaveDynamicFields = "1";
+         beam = "8390";
+         customAmbientLighting = "0 0 0 1";
          receiveSunLight = "1";
+         receiveLMLighting = "1";
+         hidden = "0";
    };
    new StaticShape(EndPoint) {
       position = "0 42 28.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         customAmbientLighting = "0 0 0 1";
-         canSaveDynamicFields = "1";
-         receiveLMLighting = "1";
-         beam = "5056";
          useCustomAmbientLighting = "0";
-         hidden = "0";
+         canSaveDynamicFields = "1";
+         beam = "8170";
+         customAmbientLighting = "0 0 0 1";
          receiveSunLight = "1";
+         receiveLMLighting = "1";
+         hidden = "0";
    };
    new Item() {
       position = "0 42 16";
@@ -105,13 +106,13 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
-         canSaveDynamicFields = "1";
-         node = "5651";
-         rotate2 = "0";
+         node = "8387";
          checkPointConfirmationNumber = "0";
-         permanent = "0";
+         canSaveDynamicFields = "1";
+         checkpointNum = "1";
+         rotate2 = "0";
          hidden = "0";
+         permanent = "0";
    };
    new Item() {
       position = "12 42 4.5";
@@ -121,13 +122,13 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
-         canSaveDynamicFields = "1";
-         node = "5652";
-         rotate2 = "0";
+         node = "8388";
          checkPointConfirmationNumber = "0";
-         permanent = "0";
+         canSaveDynamicFields = "1";
+         checkpointNum = "1";
+         rotate2 = "0";
          hidden = "0";
+         permanent = "0";
    };
    new Item() {
       position = "-4 54 4.5";
@@ -137,13 +138,13 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
-         canSaveDynamicFields = "1";
-         node = "5653";
-         rotate2 = "0";
+         node = "8389";
          checkPointConfirmationNumber = "0";
-         permanent = "0";
+         canSaveDynamicFields = "1";
+         checkpointNum = "1";
+         rotate2 = "0";
          hidden = "0";
+         permanent = "0";
    };
    new Item() {
       position = "0 32 8.5";
@@ -153,12 +154,12 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
-         canSaveDynamicFields = "1";
-         rotate2 = "0";
          checkPointConfirmationNumber = "0";
-         permanent = "0";
+         canSaveDynamicFields = "1";
+         checkpointNum = "1";
+         rotate2 = "0";
          hidden = "0";
+         permanent = "0";
    };
    new Item() {
       position = "-8 42 4.5";
@@ -168,13 +169,13 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
-         canSaveDynamicFields = "1";
-         rotate2 = "0";
          checkPointConfirmationNumber = "0";
-         permanent = "0";
-         hidden = "0";
+         canSaveDynamicFields = "1";
          timeBonus = "5000";
+         checkpointNum = "1";
+         rotate2 = "0";
+         hidden = "0";
+         permanent = "0";
    };
    new Trigger(Bounds) {
       position = "-11.5 61.5 -7.5";
@@ -194,6 +195,24 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
+   };
+   new Item() {
+      position = "-0.115835 49.8632 -3.04714";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "8168";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
