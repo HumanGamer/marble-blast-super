@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = getRandomBackground();
+   bitmap = "~/client/backgrounds/BlockTowers.png";
    useVariable = "0";
    tile = "0";
 
@@ -26,9 +26,9 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
 
       new GuiBitmapCtrl() {
          profile = "GuiDefaultProfile";
-         horizSizing = "width";
+         horizSizing = "center";
          vertSizing = "height";
-         position = "31 27";
+         position = "32 27";
          extent = "637 399";
          minExtent = "8 8";
          visible = "1";
@@ -41,7 +41,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "76 33";
-            extent = "488 274";
+            extent = "488 218";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -92,7 +92,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             position = "60 238";
             extent = "64 55";
             minExtent = "8 8";
-            visible = "1";
+            visible = "0";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -110,7 +110,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             position = "88 255";
             extent = "64 55";
             minExtent = "8 8";
-            visible = "1";
+            visible = "0";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -128,7 +128,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             position = "88 218";
             extent = "64 55";
             minExtent = "8 8";
-            visible = "1";
+            visible = "0";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -143,7 +143,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "74 88";
+            position = "78 108";
             extent = "65 49";
             minExtent = "8 8";
             visible = "0";
@@ -161,7 +161,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "66 143";
+            position = "69 172";
             extent = "79 66";
             minExtent = "8 8";
             visible = "0";
@@ -179,7 +179,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "75 213";
+            position = "78 254";
             extent = "65 49";
             minExtent = "8 8";
             visible = "0";
@@ -200,7 +200,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             position = "74 81";
             extent = "64 77";
             minExtent = "8 8";
-            visible = "1";
+            visible = "0";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -218,7 +218,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             position = "74 145";
             extent = "64 77";
             minExtent = "8 8";
-            visible = "1";
+            visible = "0";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -341,10 +341,10 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "67 224";
+            position = "80 194";
             extent = "69 65";
             minExtent = "8 8";
-            visible = "0";
+            visible = "1";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -359,10 +359,10 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "61 158";
+            position = "61 135";
             extent = "91 66";
             minExtent = "8 8";
-            visible = "0";
+            visible = "1";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -377,10 +377,10 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "76 100";
-            extent = "57 47";
+            position = "91 98";
+            extent = "31 33";
             minExtent = "8 8";
-            visible = "0";
+            visible = "1";
             helpTag = "0";
             cameraZRot = "0";
             forceFOV = "0";
@@ -395,7 +395,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "71 263";
+            position = "72 315";
             extent = "72 61";
             minExtent = "8 8";
             visible = "0";
@@ -472,10 +472,10 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
-         horizSizing = "right";
+         horizSizing = "center";
          vertSizing = "bottom";
-         position = "547 357";
-         extent = "79 61";
+         position = "294 372";
+         extent = "114 48";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.setContent(mainMenuGui);";
@@ -486,13 +486,13 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./play/back";
+         bitmap = "./play/home";
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "528 52";
+         position = "578 55";
          extent = "75 69";
          minExtent = "8 8";
          visible = "1";
@@ -509,7 +509,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "97 57";
+         position = "56 56";
          extent = "77 58";
          minExtent = "8 8";
          visible = "1";
