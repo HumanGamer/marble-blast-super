@@ -1,0 +1,933 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         level = "1";
+         name = "Revealing Secrets";
+         type = "intermediate";
+         goldTime = "100000";
+         artist = "Ender";
+         hyperTime = "80000";
+         music = "Fight or Flight.ogg";
+         desc = "Pass ordeals to unlock secret parts of the map.";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0";
+      cloudHeightPer[1] = "0";
+      cloudHeightPer[2] = "0";
+      cloudSpeed1 = "0.0001";
+      cloudSpeed2 = "0.0002";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "-1 0 0";
+      fogVolume2 = "-1 0 0";
+      fogVolume3 = "-1 0 0";
+      materialList = "~/data/skies/sky3/sky_day.dml";
+      windVelocity = "1 0 0";
+      windEffectPrecipitation = "0";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 0.000000";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.400000 0.400000 0.400000 1.000000";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "40774";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "3690";
+   };
+   new InteriorInstance() {
+      position = "-81.9827 20.5948 -33.4587";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/revealingthecourse.dif";
+      showTerrainInside = "0";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2206";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2615";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "3708";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2406";
+   };
+   new StaticShape(StartPoint) {
+      position = "-79.4684 24.9579 -24.8243";
+      rotation = "0 0 1 180.137";
+      scale = "0.65 0.65 0.65";
+      dataBlock = "startpad";
+         beam = "15626";
+   };
+   new StaticShape(Platform1) {
+      position = "-79.4451 13.0982 -25.4608";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         Trigger = "1";
+         normalScale = "1 1 1";
+         hide = "2115124";
+         used = "0";
+         permanent = "1";
+         skin = "yelloww";
+         unhide1 = "1099";
+         unhide = "1098";
+   };
+   new Trigger() {
+      position = "-98.4371 26.1137 -24.8201";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "HidingPlatformTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "Platform1";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "3142";
+   };
+   new Trigger(tele1) {
+      position = "-78.9378 2.60202 -13.7832";
+      rotation = "0 0 1 178.945";
+      scale = "1 1 1";
+      dataBlock = "TeleportTargetTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new Item() {
+      position = "-99.418 17.1156 -28.9667";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15605";
+         checkpointNum = "1";
+   };
+   new Trigger() {
+      position = "-80.4471 20.1149 -30.0043";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "tele1";
+   };
+   new Trigger() {
+      position = "-80.4443 4.09512 -15.057";
+      rotation = "1 0 0 0";
+      scale = "2 2 1";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Turn around.";
+   };
+   new Item() {
+      position = "-88.7237 23.2401 -10.446";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15606";
+         checkpointNum = "1";
+   };
+   new SimGroup(CannonBalls) {
+   };
+   new Item() {
+      position = "-97.4365 -8.84195 -6.50701";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15607";
+         checkpointNum = "2";
+   };
+   new TSStatic() {
+      position = "-76.5868 18.5362 -31.2693";
+      rotation = "1 0 0 0";
+      scale = "0.1 9 3";
+      shapeName = "~/data/shapes/colmesh.dts";
+   };
+   new StaticShape() {
+      position = "-81.494 -14.8764 -1.45021";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Cannon";
+         currentTime = "960";
+         timer = "1000";
+         ball = "6703";
+         power = "25";
+         radius = "15";
+   };
+   new TSStatic() {
+      position = "-82.4344 17.9913 -31.3911";
+      rotation = "1 0 0 0";
+      scale = "0.1 9 3";
+      shapeName = "~/data/shapes/colmesh.dts";
+   };
+   new Item() {
+      position = "-65.3982 -5.07353 -7.05278";
+      rotation = "-1 0 0 90";
+      scale = "1 1 1";
+      dataBlock = "AntiGravityItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-91.4908 -12.9437 -6.49654";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15608";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-83.448 -14.9262 -6.48216";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15609";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-77.494 -16.9424 -6.48546";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15610";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-71.4111 -14.8874 -6.47765";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15611";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-65.4339 -6.31237 -17.0762";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "AntiGravityItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-65.3839 -14.9718 -5.54809";
+      rotation = "1 0 0 180";
+      scale = "0.6 0.6 0.6";
+      dataBlock = "AntiGravityItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-65.5178 -5.94071 -10.7071";
+      rotation = "1 0 0 90";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15612";
+         checkpointNum = "2";
+   };
+   new Trigger() {
+      position = "-66.4552 -7.90631 -18.3644";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "tele2";
+   };
+   new Trigger(tele2) {
+      position = "-64.8627 -15.3965 -5.55053";
+      rotation = "0 0 1 178.945";
+      scale = "1 1 1";
+      dataBlock = "TeleportTargetTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new Trigger() {
+      position = "-99.3768 11.1878 -15.4407";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check1";
+   };
+   new StaticShape(check1) {
+      position = "-97.4598 9.07844 -14.9469";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "CheckPointShape";
+   };
+   new StaticShape(Platform2) {
+      position = "-103.431 -14.9027 -6.95008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         Trigger = "1";
+         normalScale = "1 1 1";
+         hide = "2159332";
+         used = "0";
+         permanent = "1";
+         skin = "yelloww";
+         unhide1 = "1099";
+         unhide = "1098";
+   };
+   new Trigger() {
+      position = "-66.4116 -7.84269 -18.4726";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "HidingPlatformTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "Platform2";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "10339";
+   };
+   new Trigger() {
+      position = "-106.448 -13.8998 4.30538";
+      rotation = "1 0 0 0";
+      scale = "2 2 1";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Turn around.";
+   };
+   new Trigger() {
+      position = "-57.4659 6.5976 37.3402";
+      rotation = "1 0 0 0";
+      scale = "4 8 8";
+      dataBlock = "PhysicsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         value = "0.1";
+         var = "jumpImpulse";
+   };
+   new Trigger() {
+      position = "-51.4836 18.6125 41.8976";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "tele4";
+   };
+   new StaticShape(Platform3) {
+      position = "-88.243 44.0915 25.9287";
+      rotation = "0 1 0 37.75";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "2286980";
+         used = "0";
+         skin = "yelloww";
+         unhide1 = "2286982";
+         unhide = "2286981";
+   };
+   new StaticShape(Platform3) {
+      position = "-92.1509 44.0953 22.9125";
+      rotation = "0 1 0 37.75";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "2059119";
+         used = "0";
+         skin = "yelloww";
+         unhide1 = "2059121";
+         unhide = "2059120";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "3545";
+   };
+   new StaticShape(Platform3) {
+      position = "-90.2072 44.0931 24.4103";
+      rotation = "0 1 0 37.75";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "1731482";
+         used = "0";
+         skin = "yelloww";
+         unhide1 = "1731484";
+         unhide = "1731483";
+   };
+   new Trigger() {
+      position = "-101.535 40.1664 20.968";
+      rotation = "0 0 -1 89.3814";
+      scale = "1 6 6";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Go fast on this part.";
+   };
+   new StaticShape() {
+      position = "-80.1375 26.2084 30.7095";
+      rotation = "0 0 1 64.5712";
+      scale = "1 1 1";
+      dataBlock = "RotationPlatform";
+         currentTime = "0";
+         axis = "z";
+         timer = "30";
+         skin = "yelloww";
+         inc = "1";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "8739";
+   };
+   new StaticShape(Platform3) {
+      position = "-77.5041 19.4223 31.2312";
+      rotation = "1 0 0 34";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "2222457";
+         used = "0";
+         skin = "yelloww";
+         unhide1 = "2222459";
+         unhide = "2222458";
+   };
+   new Item() {
+      position = "-82.9063 28.3709 30.9366";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15613";
+         checkpointNum = "4";
+   };
+   new StaticShape() {
+      position = "-76.2666 12.2791 35.1817";
+      rotation = "0 0 1 64.5712";
+      scale = "1 1 1";
+      dataBlock = "RotationPlatform";
+         currentTime = "0";
+         axis = "z";
+         timer = "30";
+         skin = "yelloww";
+         inc = "1";
+   };
+   new StaticShape(Platform3) {
+      position = "-80.981 0.496051 37.2913";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "2236644";
+         used = "0";
+         skin = "yelloww";
+         unhide1 = "2236646";
+         unhide = "2236645";
+   };
+   new Item() {
+      position = "-73.3431 12.6794 35.4543";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15614";
+         checkpointNum = "4";
+   };
+   new StaticShape(Platform3) {
+      position = "-81.3044 10.5113 36.0773";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "2232894";
+         used = "0";
+         skin = "yelloww";
+         unhide1 = "2232896";
+         unhide = "2232895";
+   };
+   new StaticShape(Platform3) {
+      position = "-81.4865 7.42597 37.2913";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "2234064";
+         used = "0";
+         skin = "yelloww";
+         unhide1 = "2234066";
+         unhide = "2234065";
+   };
+   new StaticShape(Platform3) {
+      position = "-81.1726 4.37821 37.7486";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "2235651";
+         used = "0";
+         skin = "yelloww";
+         unhide1 = "2235653";
+         unhide = "2235652";
+   };
+   new Trigger() {
+      position = "-82.4493 40.1578 29.6368";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check3";
+   };
+   new StaticShape(check2) {
+      position = "-105.474 -6.94272 4.12837";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "CheckPointShape";
+   };
+   new Trigger() {
+      position = "-107.399 -4.84737 3.63457";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check2";
+   };
+   new StaticShape(check3) {
+      position = "-80.5216 38.0568 30.1306";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "CheckPointShape";
+   };
+   new Trigger(teleoob) {
+      position = "-42.9313 21.4374 32.4731";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TeleportTargetTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new Item() {
+      position = "-105.441 3.6114 7.98653";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15615";
+         checkpointNum = "3";
+   };
+   new Item() {
+      position = "-98.4697 40.0764 21.0262";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15616";
+         checkpointNum = "3";
+   };
+   new Item() {
+      position = "-80.5211 44.1433 30.0257";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15617";
+         checkpointNum = "3";
+   };
+   new Item() {
+      position = "-80.526 -4.43838 37.4813";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15618";
+         checkpointNum = "4";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2206";
+   };
+   new Item() {
+      position = "-66.4695 -4.48502 37.4829";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "4";
+   };
+   new Item() {
+      position = "-54.4221 -4.39045 37.5168";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15619";
+         checkpointNum = "4";
+   };
+   new Item() {
+      position = "-62.5293 -4.32987 37.5147";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15620";
+         checkpointNum = "4";
+   };
+   new Item() {
+      position = "-60.4243 -6.43927 37.4776";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15621";
+         checkpointNum = "4";
+   };
+   new Item() {
+      position = "-72.4753 -6.38138 37.528";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15622";
+         checkpointNum = "4";
+   };
+   new Trigger() {
+      position = "-77.4701 -5.42123 37.5048";
+      rotation = "1 0 0 0";
+      scale = "4 2 5";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "teleoob";
+         time = "1";
+   };
+   new Trigger() {
+      position = "-75.5027 -3.4052 37.4928";
+      rotation = "1 0 0 0";
+      scale = "4 2 5";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "teleoob";
+         time = "1";
+   };
+   new Trigger() {
+      position = "-69.4797 -5.41218 37.4839";
+      rotation = "1 0 0 0";
+      scale = "8 2 5";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "teleoob";
+         time = "1";
+   };
+   new Trigger() {
+      position = "-57.4759 -5.42461 37.4614";
+      rotation = "1 0 0 0";
+      scale = "4 2 5";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "teleoob";
+         time = "1";
+   };
+   new Trigger() {
+      position = "-69.4827 -3.41686 37.4752";
+      rotation = "1 0 0 0";
+      scale = "2 2 5";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "teleoob";
+         time = "1";
+   };
+   new Trigger() {
+      position = "-65.4959 -3.41676 37.4303";
+      rotation = "1 0 0 0";
+      scale = "2 2 5";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "teleoob";
+         time = "1";
+   };
+   new Trigger() {
+      position = "-61.4989 -3.43153 37.51";
+      rotation = "1 0 0 0";
+      scale = "2 2 5";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "teleoob";
+         time = "1";
+   };
+   new Trigger() {
+      position = "-57.4734 -3.42383 37.534";
+      rotation = "1 0 0 0";
+      scale = "2 2 5";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "teleoob";
+         time = "1";
+   };
+   new Trigger(tele4) {
+      position = "-97.955 33.5356 22.1028";
+      rotation = "0 0 1 178.945";
+      scale = "1 1 1";
+      dataBlock = "TeleportTargetTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new Trigger() {
+      position = "-51.4711 18.6234 41.8984";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "HidingPlatformTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "Platform5";
+   };
+   new StaticShape(Platform5) {
+      position = "-80.4816 52.0917 29.5414";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         Trigger = "1";
+         normalScale = "1 1 1";
+         hide = "2274806";
+         used = "0";
+         permanent = "1";
+         skin = "yelloww";
+         unhide1 = "1099";
+         unhide = "1098";
+   };
+   new TSStatic() {
+      position = "-77.1031 51.6003 23.911";
+      rotation = "1 0 0 0";
+      scale = "0.1 9 3";
+      shapeName = "~/data/shapes/colmesh.dts";
+   };
+   new TSStatic() {
+      position = "-83.8988 51.6067 23.556";
+      rotation = "1 0 0 0";
+      scale = "0.1 9 3";
+      shapeName = "~/data/shapes/colmesh.dts";
+   };
+   new Trigger(tele6) {
+      position = "-105.056 -15.5471 6.26779";
+      rotation = "0 0 1 178.945";
+      scale = "1 1 1";
+      dataBlock = "TeleportTargetTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new TSStatic() {
+      position = "-102.601 -11.8908 -12.8032";
+      rotation = "0 0 -1 90.5273";
+      scale = "0.1 9 3";
+      shapeName = "~/data/shapes/colmesh.dts";
+   };
+   new TSStatic() {
+      position = "-99.2936 -18.0444 -12.9401";
+      rotation = "0 0 -1 90.5273";
+      scale = "0.1 9 3";
+      shapeName = "~/data/shapes/colmesh.dts";
+   };
+   new Trigger() {
+      position = "-102.475 -13.9076 -12.4943";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "tele6";
+   };
+   new StaticShape(EndPoint) {
+      position = "-46.0453 54.154 60.1081";
+      rotation = "0 0 1 88.9909";
+      scale = "0.6 0.6 0.6";
+      dataBlock = "endpad";
+         beam = "15558";
+   };
+   new Trigger(tele8) {
+      position = "-80.0041 53.6041 45.3266";
+      rotation = "0 0 1 178.945";
+      scale = "1 1 1";
+      dataBlock = "TeleportTargetTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new Trigger() {
+      position = "-81.4559 47.0782 26.2175";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "TeleportTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "tele8";
+   };
+   new StaticShape() {
+      position = "-62.4815 54.0901 50.06";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-56.98 52.1256 53.5478";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new StaticShape() {
+      position = "-52.5187 56.13 57.0133";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "RoundBumper";
+   };
+   new Item() {
+      position = "-54.5364 54.0787 57.0113";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15623";
+         checkpointNum = "4";
+   };
+   new Item() {
+      position = "-59.1968 54.1428 53.4931";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15624";
+         checkpointNum = "4";
+   };
+   new Item() {
+      position = "-66.4834 52.0617 49.9771";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         node = "15625";
+         checkpointNum = "4";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         time = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "3452";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+   new Trigger() {
+      position = "-185.51 124.189 -37.507";
+      rotation = "1 0 0 0";
+      scale = "200 200 200";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+};
+//--- OBJECT WRITE END ---
