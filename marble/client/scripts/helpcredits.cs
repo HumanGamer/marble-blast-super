@@ -32,6 +32,10 @@ function HelpCreditsGui::setPage(%this, %page)
    HC_FullVersion3.setVisible(false);
    HC_FullVersion4.setVisible(false);
    HC_FullVersion5.setVisible(false);
+   HC_Cannon.setvisible(false);
+   HC_Bomb.setvisible(false);
+   
+  
 
    switch(%page)
    {
@@ -92,30 +96,39 @@ function HelpCreditsGui::setPage(%this, %page)
          {
             //No demo build requirements
          }
-      case 9:
+		 case 9: %text = "<font:Whitestone:50><color:000000><just:center>Hazards (2/2)<font:Whitestone:24><just:left>\n\n" @
+                 "<lmargin:70>Bumper - this'll bounce you if you touch it.\n\nLand Mine - Warning!  Explodes on contact!\n\nOil Slick - you won't have much traction on these surfaces.";
+         HC_Cannon.setVisible(true);
+         HC_Bomb.setVisible(true);
+         HC_Oilslick.setVisible(true);
+         if($DemoBuild)
+		 {
+			 //No demo build requirements
+		 }
+      case 10:
          %text = "<font:Whitestone:50><color:000000><just:center>About GarageGames<font:Whitestone:24><just:left>\n\n" @
                  "GarageGames is a unique Internet publishing label for independent games and gamemakers.  Our mission is to provide the independent developer with tools, knowledge, co-conspirators - whatever is needed to unleash the creative spirit and get great innovative independent games to market.";
-      case 10:
+      case 11:
         %text = "<font:Whitestone:50><color:000000><just:center>About Torque<font:Whitestone:24><just:left>\n\n" @
                 "The Torque Game Engine (TGE) is a full featured AAA title engine with the latest in scripting, geometry, particle effects, animation and texturing, as well as award winning multi-player networking code.  For $100 per programmer, you get the source to the engine!";
 
-      case 11:
+      case 12:
          %text = "<font:Whitestone:50><color:000000><just:center>The Marble Blast Super Team<font:Whitestone:24><just:left>\n\n" @
             "<lmargin%:15><rmargin%:85>" @
             "<just:left>StewMan46" @ 
             "<just:right>Ender" @
             "\n<just:left>davidjl123" @
             "<just:right>cooldudepoke" @
-            "\n<just:left>Ralph" @
+            "\n<just:left>Rozi" @
             "<just:right>BlastedMarble" @
             "\n<just:left>Neon Lightning" @
             "<just:right>Skail" @
-            "\n<just:left>" @
-            "<just:right>" @
+            "\n<just:left>Lee Zi Xian" @
+            "<just:right>Eguy" @
             "\n<just:left>" @
             "<just:right>";
 
-      case 12:
+      case 13:
          %text = "<font:Whitestone:50><color:000000><just:center>Special Thanks<font:Whitestone:24><just:left>\n\n" @
             "We'd like to thank the Marble Blast Community, for their advice, " @
             "and everyone, including the team itself, who has helped make Marble Blast Super happen."  @
