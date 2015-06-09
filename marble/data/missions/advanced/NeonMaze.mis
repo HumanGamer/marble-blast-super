@@ -2,14 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         time = "0";
          desc = "Green and black together make the best mix for neon! Make your ways through the darkness.";
-         level = "3";
          goldTime = "45000";
-         name = "Neon Maze";
-         type = "advanced";
+         level = "3";
          artist = "Rozi";
          hyperTime = "28000";
-         time = "0";
+         name = "Neon Maze";
+         type = "advanced";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -50,20 +50,20 @@ new SimGroup(MissionGroup) {
       ambient = "0.400000 0.400000 0.400000 1.000000";
    };
    new ScriptObject() {
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "2195";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
    };
    new ScriptObject() {
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "2325";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
    };
    new InteriorInstance() {
       position = "1.28017 64.7484 48";
@@ -77,15 +77,15 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "4151";
+         beam = "2565";
    };
    new ScriptObject() {
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "3244";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
    };
    new Item() {
       position = "-1.92661 22.8296 57.3715";
@@ -98,12 +98,12 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "8209";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
    };
    new StaticShape() {
       position = "-0.262238 -17.1326 68.9369";
@@ -134,7 +134,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "4081";
+         beam = "2188";
    };
    new Item() {
       position = "-37.7405 28.8793 52.808";
@@ -145,7 +145,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "4147";
+         node = "2561";
    };
    new Item() {
       position = "-16.7212 23.6864 55.3963";
@@ -156,7 +156,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "4148";
+         node = "2562";
    };
    new Item() {
       position = "-29.7077 24.8779 57.2194";
@@ -291,12 +291,12 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
+         time = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "13653";
          penaltyTime = "0";
          gemCount = "0";
-         time = "0";
    };
    new StaticShape() {
       position = "-37.7388 21.7476 54.3361";
@@ -319,7 +319,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "4149";
+         node = "2563";
    };
    new StaticShape() {
       position = "-22.2858 21.7472 56.6306";
@@ -336,7 +336,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "4150";
+         node = "2564";
    };
    new Item() {
       position = "-9.2811 78.1031 60.4548";
@@ -358,17 +358,31 @@ new SimGroup(MissionGroup) {
       rotate = "1";
          checkpointNum = "1";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
-   };
    new Trigger() {
       position = "-67.972 89.4829 31.241";
       rotation = "1 0 0 0";
       scale = "110 120 80";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new StaticShape(check1) {
+      position = "-45.6967 24.7597 52.016";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "CheckPointShape";
+   };
+   new Trigger(check1t) {
+      position = "-47.7468 26.7414 51.9938";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check1";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---

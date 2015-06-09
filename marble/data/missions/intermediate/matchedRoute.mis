@@ -3,12 +3,9 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          type = "intermediate";
-<<<<<<< HEAD
          name = "Digital";
          hasEgg = "1";
-=======
          name = "Winding Ascent";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
          artist = "Matthieu Parizeau";
          desc = "Climb to the finish, but don\'t forget the gems!";
          hassEgg = "1";

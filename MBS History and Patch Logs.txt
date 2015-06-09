@@ -1,4 +1,74 @@
 =========================================================
+BETA 4.3
+June 9, 2015
+
+- 2 new levels (Thin Path, Agility, A Different Perspective)
+- 2 modified levels (Neon Maze, Ender's Agility)
+- 2 new game modes (Quota, SideScrolling)
+- Added achievements
+- Fancy help boxes
+- New menu background (Ender's Agility)
+- New Trapdoor and Ice textures
+- Fixed MissionInfo.music
+- Disabled enviro maps due to Mac sky reflection bugs
+- Added icon for Mac
+
+=========================================================
+BETA 4.2
+June 5, 2015
+
+- 5 new levels (Winding Ascent, Cold Majesty, Flipping Gravity, Stopping Time, Neon Maze)
+- 2 modified levels (Friction Track, Stopping Time)
+- Added Mac support
+- Enlarged Bumpers
+- Added Easter Egg display in playMissionGui
+- Removed radar option from optionsDlg.gui
+- Fixed next level button not working on final Medium level
+
+=========================================================
+BETA 4.1
+June 3, 2015
+
+- 4 new levels (Collection, Speeding, Jumping Higher, Friction Track)
+- 4 modified levels (Colourful Nation, Golden Path, Catwalks, At The Pool!)
+- Replaced grid_X, friction_low, friction_none, pattern_cool1, and water_tex textures
+- Added Hyper Time
+- Added Rozi and LZX marble skins
+- Removed GhostMarble
+- Removed GuiEditor menu bar
+- Removed playMissionGui scroll bar borders
+- Fixed gem rendering bug on Mac OS X
+- Modified EndGameGui
+
+=========================================================
+BETA 4.0
+June 2, 2015
+
+- 4 new levels (Gemlings, Oranged Gems, Upward, At The Pool!)
+- Removed Multiplayer
+- Removed Directors' Cut
+- Added water
+- Added random backgrounds
+- Added alternate old pads
+- Added ability to take screenshots without HUD (Ctrl+M)
+- Added Neon marble skin
+- Added indicator line on Blast HUD
+- Directors' Cut changes
+- Fixed Checkpoints not resetting Moving Platforms
+- Fixed multiplayer marble skins
+- Prevented creation of useless prefs.cs files in /common
+
+=========================================================
+BETA 3.9
+April 16, 2015
+
+- 2 new levels (Golden Path, Jumping Tutorial)
+- 1 removed Beginner level (Frictional Pathway)
+- New Credits GUI
+- Option to change blast button
+- Fixed Exploding Platforms not respawning
+
+=========================================================
 BETA 3.8
 April 11, 2015
 
