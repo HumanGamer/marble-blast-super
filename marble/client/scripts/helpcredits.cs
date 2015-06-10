@@ -34,6 +34,8 @@ function HelpCreditsGui::setPage(%this, %page)
    HC_FullVersion5.setVisible(false);
    HC_Cannon.setvisible(false);
    HC_Bomb.setvisible(false);
+   HC_RotatingPlatform.setvisible(false);
+   HC_HidingPlatform.setVisible(false);
    
   
 
@@ -77,7 +79,7 @@ function HelpCreditsGui::setPage(%this, %page)
          HC_Helicopter.setVisible(true);
          HC_TimeTravel.setVisible(true);
       case 7:
-         %text = "<font:Whitestone:50><color:000000><just:center>Hazards (1/2)<font:Whitestone:24><just:left>\n\n" @
+         %text = "<font:Whitestone:50><color:000000><just:center>Hazards (1/3)<font:Whitestone:24><just:left>\n\n" @
                  "<lmargin:70>Duct Fan - be careful this doesn't blow you away!\n\nWind Tunnel - it'll pull you in and spit you out.\n\nTrap Door - keep moving when you're rolling over one of these.";
          HC_DuctFan.setVisible(true);
          HC_Tornado.setVisible(true);
@@ -87,20 +89,21 @@ function HelpCreditsGui::setPage(%this, %page)
             //No demo build requirements
          }
       case 8:
-         %text = "<font:Whitestone:50><color:000000><just:center>Hazards (2/2)<font:Whitestone:24><just:left>\n\n" @
-                 "<lmargin:70>Bumper - this'll bounce you if you touch it.\n\nLand Mine - Warning!  Explodes on contact!\n\nOil Slick - you won't have much traction on these surfaces.";
+         %text = "<font:Whitestone:50><color:000000><just:center>Hazards (2/3)<font:Whitestone:24><just:left>\n\n" @
+                 "<lmargin:70>Bumper - this'll bounce you if you touch it.\n\nLand Mine - Warning!  Explodes on contact!\n\nOil Slick - you won't have much traction on these surfaces.\n\nPlatform - can be anything. they can collapse or even explode.
          HC_Bumper.setVisible(true);
          HC_Landmine.setVisible(true);
          HC_Oilslick.setVisible(true);
+		 HC_HidingPlatform(true);
          if($DemoBuild)
          {
             //No demo build requirements
          }
-		 case 9: %text = "<font:Whitestone:50><color:000000><just:center>Hazards (2/2)<font:Whitestone:24><just:left>\n\n" @
-                 "<lmargin:70>Bumper - this'll bounce you if you touch it.\n\nLand Mine - Warning!  Explodes on contact!\n\nOil Slick - you won't have much traction on these surfaces.";
+		 case 9: %text = "<font:Whitestone:50><color:000000><just:center>Hazards (3/3)<font:Whitestone:24><just:left>\n\n" @
+                 "<lmargin:70>Cannon - shoots cannon balls that blow you off the map.\n\nBomb - Can be triggered in unexpected ways..\n\nRotating Platform - time to get dizzy!";
          HC_Cannon.setVisible(true);
          HC_Bomb.setVisible(true);
-         HC_Oilslick.setVisible(true);
+         HC_RotatingPlatform.setvisible(false);
          if($DemoBuild)
 		 {
 			 //No demo build requirements
