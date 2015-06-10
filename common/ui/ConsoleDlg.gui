@@ -45,8 +45,10 @@ $ConsoleActive = false;
 function ConsoleEntry::eval()
 {
    %text = ConsoleEntry.getValue();
-   echo("==>" @ %text);
-   eval(%text);
+   user("==>" @ %text);
+	%return = eval(%text);
+	if (%return !$= "")
+		echo("(Returned value \"" @ %return @ "\")");
    ConsoleEntry.setValue("");
 }
 
@@ -72,4 +74,8 @@ function ToggleConsole(%make)
    }
 }
 
-
+// This function is to go along with echo, warn, and error
+function user(%message)
+{
+	echo("\c3" @ %message);
+}

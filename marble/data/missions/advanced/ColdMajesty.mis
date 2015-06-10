@@ -2,25 +2,15 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-<<<<<<< HEAD
-         level = "1";
          goldTime = "40000";
-=======
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
          time = "0";
-         goldTime = "0";
-         desc = "Burrr!";
          name = "Cold Majesty";
          type = "Advanced";
          artist = "Rozi";
-<<<<<<< HEAD
          desc = "Get your jacket! It\'s cold!";
          hyperTime = "27000";
          hasEgg = "1";
-=======
-         hyperTime = "0";
          level = "1";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

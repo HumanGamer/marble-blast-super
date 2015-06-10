@@ -27,6 +27,9 @@ function playMissionGui::onWake(%this)
    
    
    PM_DifficultyPopup.setVisible(false);
+   
+   if ($InvalidLevels)
+      MessageBoxOK("Error!", "Some levels did not load correctly!\nThis is most likely caused by syntax error(s)\n\nCheck the console for more info.");
 }
 
 function PM_DifficultyList::onSelect(%this, %id)
@@ -214,6 +217,16 @@ function buildMissionList()
       }
    }
    
+   //if ($MissionErrorCount > 0)
+   //{
+   //   %invalidLevels = "";
+   //   //%invalidLevels = "<font:Whitestone:32>Invalid Levels<font:Arial Bold:18>\n";
+   //   for (%j = 0; %j < $MissionErrorCount; %j++)
+   //   {
+   //      %invalidLevels = %invalidLevels @ $MissionErrors[%j] @ "\n";
+   //   }
+   //}
+   
    %group = "MTYPE_" @ $MissionType;
    
    sortByLevel(%group);
@@ -264,6 +277,8 @@ function buildMissionList()
    PM_setSelected(%level);
    //LB_SetSelected(%level);
    //PM_missionSelectList.setSelectedById(%level);
+   
+   //MessageBoxOK("Invalid Levels", %invalidLevels, "");
 }
 
 function sortByLevel(%grp)
@@ -524,8 +539,15 @@ function getMissionObject(%mission) {
    if (playMissionGui.isAwake() && %infoObject.gameType !$= "SinglePlayer")
       return;
       
-   eval("MTYPE_" @ %infoObject.type @ ".add(%infoObject);");
-	
+   if (!isObject(%infoObject)) {
+      error("Invalid Level: " @ %mission);
+      $InvalidLevels = true;
+      //$MissionErrorCount++;
+      //$MissionErrors[$MissionErrorCount] = %mission;
+   } else {
+      eval("MTYPE_" @ %infoObject.type @ ".add(%infoObject);");
+   }
+   
 	%infoObject.file = %mission;
 	
 	return %infoObject;

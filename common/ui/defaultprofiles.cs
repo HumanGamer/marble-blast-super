@@ -414,6 +414,7 @@ if(!isObject(GuiConsoleProfile)) new GuiControlProfile ("GuiConsoleProfile")
    fontColor = "0 0 0";
    fontColorHL = "130 130 130";
    fontColorNA = "255 0 0";
+   fontColors[3] = "0 130 0";
    fontColors[6] = "50 50 50";
    fontColors[7] = "50 50 0";  
    fontColors[8] = "0 0 50"; 
