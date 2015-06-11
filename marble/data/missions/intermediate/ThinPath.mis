@@ -2,15 +2,15 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         startHelpText = "Can you make it through the skinny course?";
-         hyperTime = "16000";
          type = "intermediate";
          name = "Thin Path";
-         desc = "Climb a level that doesn\'t eat alot.";
-         level = "2";
-         artist = "Endy";
-         music = "Blackout.ogg";
          goldTime = "25000";
+         startHelpText = "Can you make it through the skinny course?";
+         artist = "Endy";
+         hyperTime = "16000";
+         desc = "Climb a level that doesn\'t eat alot.";
+         music = "Blackout.ogg";
+         level = "2";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -63,7 +63,7 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "0.7 0.7 0.7";
       dataBlock = "StartPad";
-         beam = "3511";
+         beam = "4500";
    };
    new InteriorInstance() {
       position = "0.191024 -7.95855 -7.72897";
@@ -81,7 +81,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "3504";
+         node = "4493";
    };
    new Item() {
       position = "1.6871 16.5363 8.25126";
@@ -92,19 +92,22 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "3505";
+         node = "4494";
    };
-   new StaticShape() {
-      position = "-20.2095 -12.3923 7.44226";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
+   new Trigger() {
+      position = "-44.0898 43.6389 -5.56877";
+      rotation = "1 0 0 0";
+      scale = "100 100 100";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
-   new StaticShape() {
-      position = "-9.2244 -15.3293 8.90178";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
+   new ScriptObject() {
+         powerUp = "0";
+         time = "0";
+         bonusTime = "0";
+         pad = "5273";
+         penaltyTime = "0";
+         gemCount = "0";
    };
    new Item() {
       position = "17.1009 -0.896688 7.38615";
@@ -115,7 +118,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "3506";
+         node = "4495";
    };
    new Item() {
       position = "3.27583 -10.8707 6.70385";
@@ -126,85 +129,44 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "3507";
+         node = "4496";
    };
-   new StaticShape() {
-      position = "-5.46605 -10.3749 6.47532";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
+   new Trigger() {
+      position = "-19.7901 3.54367 14.7062";
+      rotation = "1 0 0 0";
+      scale = "6 3 6";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Super Diagonal movement is needed to make it up this slope.";
    };
-   new StaticShape() {
-      position = "-9.51515 -16.2692 9.35398";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
+   new Item() {
+      position = "-15.9002 13.999 21.7478";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+         node = "4497";
    };
-   new StaticShape() {
-      position = "-4.18761 -11.7434 7.12502";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
+   new Item() {
+      position = "-15.8084 2.06991 14.7438";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+         node = "4498";
    };
-   new StaticShape() {
-      position = "-7.47711 -16.2906 9.42053";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-5.39697 -11.6277 7.11707";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-5.40267 -13.5525 8.11676";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-6.19867 -17.6591 10.0702";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-4.5669 -12.7673 7.72178";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-8.38863 -14.5441 8.5068";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-5.31858 -17.3737 10.0146";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-8.36307 -17.379 9.98179";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-4.47711 -14.6637 8.61997";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-4.03098 -16.1955 9.34461";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
+   new StaticShape(EndPoint) {
+      position = "-15.7779 31.728 28.8251";
+      rotation = "0 0 -1 0.389667";
+      scale = "0.7 0.7 0.7";
+      dataBlock = "EndPad";
+         beam = "4207";
    };
    new Item() {
       position = "19.1874 5.56292 6.22157";
@@ -216,66 +178,6 @@ new SimGroup(MissionGroup) {
       rotate = "1";
          checkpointNum = "1";
    };
-   new StaticShape() {
-      position = "-10.3055 -14.4568 8.46501";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-11.1413 -15.242 8.85999";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-13.1464 -15.2843 8.92668";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-12.3106 -14.4991 8.5317";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-19.0367 -15.2925 8.9484";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-18.2009 -14.5073 8.55342";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-17.0316 -15.2502 8.88171";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-16.1958 -14.465 8.48673";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-15.1147 -15.3375 8.9235";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-14.2789 -14.5523 8.52852";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
    new Item() {
       position = "-18.7761 -12.9361 7.71645";
       rotation = "1 0 0 23";
@@ -285,77 +187,15 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "3508";
-   };
-   new StaticShape() {
-      position = "-22.2146 -12.4346 7.50895";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-23.0504 -13.2198 7.90393";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape() {
-      position = "-21.0453 -13.1775 7.83724";
-      rotation = "1 0 0 28";
-      scale = "0.6 0.6 0.6";
-      dataBlock = "RoundBumper";
-   };
-   new StaticShape(EndPoint) {
-      position = "-15.7779 31.728 28.8251";
-      rotation = "0 0 -1 0.389667";
-      scale = "0.7 0.7 0.7";
-      dataBlock = "EndPad";
-         beam = "3456";
-   };
-   new Item() {
-      position = "-15.8084 2.06991 14.7438";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "GemItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-         checkpointNum = "1";
-         node = "3509";
-   };
-   new Item() {
-      position = "-15.9002 13.999 21.7478";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "GemItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-         checkpointNum = "1";
-         node = "3510";
-   };
-   new Trigger() {
-      position = "-19.7901 3.54367 14.7062";
-      rotation = "1 0 0 0";
-      scale = "6 3 6";
-      dataBlock = "HelpTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Super Diagonal movement is needed to make it up this slope.";
+         node = "4499";
    };
    new ScriptObject() {
          powerUp = "0";
          time = "0";
          bonusTime = "0";
-         pad = "5273";
+         pad = "4170";
          penaltyTime = "0";
          gemCount = "0";
-   };
-   new Trigger() {
-      position = "-44.0898 43.6389 -5.56877";
-      rotation = "1 0 0 0";
-      scale = "100 100 100";
-      dataBlock = "InBoundsTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
