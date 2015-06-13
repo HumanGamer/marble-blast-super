@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = getRandomBackground();
+   bitmap = "~/client/backgrounds/SuperJump.png";
    useVariable = "0";
    tile = "0";
 
@@ -51,7 +51,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          position = "5 31";
          extent = "667 450";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
 
          new GuiBitmapCtrl(OptMarbleControlsPane) {
@@ -61,7 +61,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             position = "14 55";
             extent = "596 349";
             minExtent = "8 8";
-            visible = "1";
+            visible = "0";
             helpTag = "0";
             bitmap = "./options/options";
             wrap = "0";
@@ -424,7 +424,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             position = "14 55";
             extent = "596 349";
             minExtent = "8 8";
-            visible = "0";
+            visible = "1";
             helpTag = "0";
             bitmap = "./options/options";
             wrap = "0";
@@ -470,7 +470,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                helpTag = "0";
                range = "0.200000 3.000000";
                ticks = "10";
-               value = "0.2";
+               value = "0.75";
                bitmap = "./Options/knob";
             };
             new GuiBitmapCtrl() {
@@ -629,7 +629,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
          position = "-2 6";
          extent = "637 648";
          minExtent = "8 8";
-         visible = "0";
+         visible = "1";
          helpTag = "0";
 
          new GuiBitmapCtrl() {
@@ -811,7 +811,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "414 106";
-            extent = "177 319";
+            extent = "177 289";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -826,7 +826,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "0 0";
-               extent = "177 128";
+               extent = "159 672";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
@@ -948,7 +948,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             helpTag = "0";
             range = "0.000000 1.000000";
             ticks = "10";
-            value = "0.511883";
+            value = "1";
             bitmap = "./Options/knob";
          };
          new GuiSliderCtrl() {
@@ -964,7 +964,7 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             helpTag = "0";
             range = "0.000000 1.000000";
             ticks = "10";
-            value = "0.265082";
+            value = "0.7";
             bitmap = "./Options/knob";
          };
       };
@@ -1272,36 +1272,6 @@ new GuiChunkedBitmapCtrl(optionsDlg) {
             repeatDecay = "1";
             bitmap = "./Options/graf_chkbx";
          };
-         //new GuiMLTextCtrl(OptShowRadar) {
-            //profile = "GuiBigTextProfile";
-            //horizSizing = "right";
-            //vertSizing = "bottom";
-            //position = "30 60";
-            //extent = "303 36";
-            //minExtent = "8 8";
-            //visible = "1";
-            //helpTag = "0";
-            //lineSpacing = "2";
-            //allowColorChars = "0";
-            //maxChars = "-1";
-         //};
-         //new GuiBitmapButtonCtrl(OptShowRadarButton) {
-            //profile = "GuiButtonProfile";
-            //horizSizing = "right";
-            //vertSizing = "bottom";
-            //position = "290 61";
-            //extent = "37 37";
-            //minExtent = "8 8";
-            //visible = "1";
-            //variable = "$pref::ShowRadar";
-            //helpTag = "0";
-            //text = "OK";
-            //groupNum = "-1";
-            //buttonType = "ToggleButton";
-            //repeatPeriod = "1000";
-            //repeatDecay = "1";
-            //bitmap = "./Options/graf_chkbx";
-         //};
       };
    };
 };
