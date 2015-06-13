@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          level = "3";
          hyperTime = "6500";
-         desc = "Something is disallowing you from the finish!";
+         desc = "Something is keeping you from finishing the level!";
          artist = "Rozi";
          name = "Collection";
          type = "tutorial";

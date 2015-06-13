@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          name = "Block Towers";
          type = "Advanced";
          goldTime = "15000";
-         desc = "Ascend up the towers to reach the finish!";
+         desc = "Ascend the towers to reach the finish!";
          artist = "Rozi";
          hyperTime = "5000";
          level = "4";

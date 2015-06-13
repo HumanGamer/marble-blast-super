@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          type = "advanced";
          name = "Slanted Route";
          time = "0";
-         desc = "Wait until you see this course become slanted.";
+         desc = "Wait until you see this course become slanted!";
          goldTime = "20000";
          level = "4";
          startHelpText = "Pick up the GravityChanger, there is no way to pass it.";

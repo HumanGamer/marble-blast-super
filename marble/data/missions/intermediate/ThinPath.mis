@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          startHelpText = "Can you make it through the skinny course?";
          artist = "Endy";
          hyperTime = "16000";
-         desc = "Climb a level that doesn\'t eat alot.";
+         desc = "Climb a level that doesn\'t eat a lot.";
          music = "Blackout.ogg";
          level = "2";
    };
@@ -137,7 +137,7 @@ new SimGroup(MissionGroup) {
       scale = "6 3 6";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Super Diagonal movement is needed to make it up this slope.";
+         text = "Super diagonal movement is needed to make it up this slope!";
    };
    new Item() {
       position = "-15.9002 13.999 21.7478";

@@ -37,11 +37,8 @@ new SimGroup(MissionGroup) {
       fogVolume1 = "-1 3341.52 6.54902e-039";
       fogVolume2 = "-1 3.33514e-039 4.42466e-039";
       fogVolume3 = "-1 1.90857e-042 3.43597e+010";
-<<<<<<< HEAD
       materialList = "~/data/skies/sky4/sky_day.dml";
-=======
       materialList = "~/data/skies/sky7/sky_day.dml";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
       windVelocity = "1 0 0";
       windEffectPrecipitation = "0";
       noRenderBans = "1";
@@ -90,11 +87,6 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-<<<<<<< HEAD
-         beam = "10510";
-=======
-         beam = "17714";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new ScriptObject() {
          penaltyTime = "0";
@@ -109,11 +101,6 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-<<<<<<< HEAD
-         beam = "10470";
-=======
-         beam = "17678";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new Item() {
       position = "-12.2966 66.0288 91.493";
@@ -143,12 +130,9 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-<<<<<<< HEAD
          checkpointNum = "1";
          node = "10501";
-=======
          node = "17705";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new Item() {
       position = "-12.1807 21.0495 91.4274";
@@ -158,12 +142,9 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-<<<<<<< HEAD
          checkpointNum = "1";
          node = "10502";
-=======
          node = "17706";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new Item() {
       position = "-12.2563 36.037 91.4182";
@@ -173,12 +154,9 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-<<<<<<< HEAD
          checkpointNum = "1";
          node = "10503";
-=======
          node = "17707";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new Item() {
       position = "-15.3389 54.9253 91.5019";
@@ -188,12 +166,9 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-<<<<<<< HEAD
          checkpointNum = "1";
          node = "10504";
-=======
          node = "17708";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new Item() {
       position = "7.65881 54.1476 102.498";
@@ -203,12 +178,9 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-<<<<<<< HEAD
          checkpointNum = "1";
          node = "10505";
-=======
          node = "17709";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new Item() {
       position = "-12.2002 26.1422 105.473";
@@ -218,12 +190,9 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-<<<<<<< HEAD
          checkpointNum = "1";
          node = "10506";
-=======
          node = "17710";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new Item() {
       position = "6.96732 50.9667 91.5929";
@@ -233,12 +202,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-<<<<<<< HEAD
          checkpointNum = "1";
-         node = "10507";
-=======
          node = "17711";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new Item() {
       position = "-0.877878 52.3753 92.38";
@@ -258,12 +223,9 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-<<<<<<< HEAD
          checkpointNum = "1";
          node = "10508";
-=======
          node = "17712";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new Item() {
       position = "-12.2696 64.099 95.5311";
@@ -273,7 +235,6 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-<<<<<<< HEAD
          checkpointNum = "1";
          node = "10509";
    };
@@ -308,9 +269,7 @@ new SimGroup(MissionGroup) {
       scale = "70 60 40";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-=======
          node = "17713";
->>>>>>> a6e2e09aa30748916da75cc25dccd71be2634ab1
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

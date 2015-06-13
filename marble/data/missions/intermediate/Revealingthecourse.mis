@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          goldTime = "100000";
          startHelpText = "Pay attention to yellow platforms. They are the most important part of the level.";
-         desc = "Pass ordeals to unlock secret parts of the map.";
+         desc = "Pass ordeals to unlock secret parts of the map!";
          artist = "Ender";
          hyperTime = "80000";
          level = "1";

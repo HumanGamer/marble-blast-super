@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          hasEgg = "1";
          time = "10000";
          artist = "Rozi";
-         desc = "Stop time with the Time Travel PowerUp";
+         desc = "Stop time with the Time Travel PowerUp!";
          startHelpText = "Either go straight to the finish, or get the Time Travels first and get a lower time!";
          goldTime = "1750";
          level = "8";

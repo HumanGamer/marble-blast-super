@@ -7,8 +7,8 @@ new SimGroup(MissionGroup) {
          hasEgg = "1";
          time = "0";
          artist = "Rozi";
-         desc = "Which ever way the arrow on the PowerUp is facing will be the new \"down\" once picked up.";
-         startHelpText = "Gravity Modifiers will change gravity instantly. Gravity Inverters will change gravity on command.";
+         desc = "The way the arrow on the PowerUp is facing will be the new \"down\" once picked up.";
+         startHelpText = "GravityChangers will change gravity instantly. Gravity Inverters will change gravity on command.";
          goldTime = "26000";
          level = "8";
          hyperTime = "19000";

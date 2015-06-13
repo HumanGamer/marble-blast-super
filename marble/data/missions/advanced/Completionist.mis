@@ -5,7 +5,7 @@ new SimGroup(MissionGroup) {
          type = "Advanced";
          name = "Completionist";
          goldTime = "30000";
-         desc = "Ascend up the path facing various challenges as you go!";
+         desc = "Ascend the path facing various challenges as you go!";
          artist = "Rozi";
          hyperTime = "21000";
          level = "5";

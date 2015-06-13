@@ -244,7 +244,7 @@ new SimGroup(MissionGroup) {
       scale = "4 0.1 4";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "You have mastered the basics of Bouncy Floor. ";
+         text = "You have mastered the basics of Bouncy Floor!";
    };
    new Item() {
       position = "-13.7015 -0.680701 9.13264";

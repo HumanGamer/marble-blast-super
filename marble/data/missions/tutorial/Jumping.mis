@@ -3,9 +3,9 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          level = "2";
-         startHelpText = "Press the Space Bar to make your marble jump!";
+         startHelpText = "Press <func:bind jump> to make your marble jump!";
          type = "Tutorial";
-         name = "Jumping Tutorial";
+         name = "Hopping";
          artist = "Rozi";
          goldTime = "7000";
          hyperTime = "3000";

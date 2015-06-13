@@ -3,7 +3,7 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          time = "0";
-         desc = "Green and black together make the best mix for neon! Make your ways through the darkness.";
+         desc = "Green and black together make the best mix for neon! Make your way through the darkness!";
          goldTime = "45000";
          level = "3";
          artist = "Rozi";

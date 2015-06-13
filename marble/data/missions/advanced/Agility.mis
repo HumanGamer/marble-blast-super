@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          level = "5";
          startHelpText = "Grab as many Time Travels as possible in order to get the lowest time!";
          goldTime = "60000";
-         artist = "Endy";
+         artist = "Ender";
          name = "Agility";
          type = "advanced";
          hyperTime = "50000";
@@ -1095,7 +1095,7 @@ new SimGroup(MissionGroup) {
       scale = "4 4 4";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Use the exploding platforms to be launched upwards! Aim for the middle for the best boost. (Can only be used 3 times.)";
+         text = "Use the exploding platforms to be launched upwards! Aim for the middle for the best boost.";
    };
    new StaticShape(check4) {
       position = "-105.711 -6.36884 53.5538";
@@ -1213,7 +1213,7 @@ new SimGroup(MissionGroup) {
       scale = "6 6 6";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Run quickly and flawless without hitting any walls, for if you fail to make it in time, you will meet your demise!";
+         text = "Run quickly and flawlessly without hitting any walls, for if you fail to make it in time, you will meet your demise!";
    };
    new Trigger() {
       position = "-102.568 34.3618 27.3707";
@@ -1261,7 +1261,7 @@ new SimGroup(MissionGroup) {
       scale = "6 6 6";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "How can you get back up? You have the Gravity Inverter right?";
+         text = "How can you get back up? You have the Gravity Inverter, right?";
    };
    new Item() {
       position = "-105.711 -6.39683 53.6239";
@@ -1287,7 +1287,7 @@ new SimGroup(MissionGroup) {
       scale = "4 4 4";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "You did it!";
+         text = "You did it! Congratulations!";
    };
    new StaticShape(EndPoint) {
       position = "-55.6821 31.5066 56.6259";
