@@ -171,6 +171,16 @@ function initClient()
    setZoomSpeed( $pref::Player::zoomSpeed );
 
    initMS();
+   
+	if (!isExtenderLoaded())
+	{
+		%message = "Engine Extender Failed To Load! Some features may not work correctly.";
+      error(%message);
+      MessageBoxOk("Error", %message, "loadMainMenu();");
+      return;
+	} else {
+	   echo("Extender Loaded Successfully!");
+	}
 
    // Start up the main menu... this is separated out into a 
    // method for easier mod override.

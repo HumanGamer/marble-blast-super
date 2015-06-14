@@ -90,7 +90,7 @@ function HelpCreditsGui::setPage(%this, %page)
          }
       case 8:
          %text = "<font:Whitestone:50><color:000000><just:center>Hazards (2/3)<font:Whitestone:24><just:left>\n\n" @
-                 "<lmargin:70>Bumper - this'll bounce you if you touch it.\n\nLand Mine - Warning!  Explodes on contact!\n\nOil Slick - you won't have much traction on these surfaces.\n\nPlatform - can be anything. they can collapse or even explode.
+                 "<lmargin:70>Bumper - this'll bounce you if you touch it.\n\nLand Mine - Warning!  Explodes on contact!\n\nOil Slick - you won't have much traction on these surfaces.\n\nPlatform - can be anything. they can collapse or even explode.";
          HC_Bumper.setVisible(true);
          HC_Landmine.setVisible(true);
          HC_Oilslick.setVisible(true);
