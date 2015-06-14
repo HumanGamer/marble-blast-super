@@ -50,6 +50,8 @@ function initClient()
       $pref::QualifiedLevel["Multiplayer"] = 1000;
 		
 	$pref::environmentMaps = "0";
+	
+	$pref::Video::displayDevice = "OpenGL";
 
    // The common module provides basic client functionality
    initBaseClient();
