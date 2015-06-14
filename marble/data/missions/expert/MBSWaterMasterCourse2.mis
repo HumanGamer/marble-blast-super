@@ -3,12 +3,12 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          type = "Expert";
-         name = "Water Master Course";
+         name = "Ice Master Course";
          goldTime = "165000";
          time = "0";
-         startHelpText = "Welcome to the Water Master Course!";
+         startHelpText = "Welcome to the Ice Master Course!";
          artist = "James Colsey";
-         desc = "Master this water filled course!";
+         desc = "Master this ice filled course!";
          hyperTime = "60000";
          level = "6";
    };
@@ -1302,7 +1302,7 @@ new SimGroup(MissionGroup) {
       scale = "1 6.99178 4.40355";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Thanks for playing the Water Master Course. Come and play again soon.";
+         text = "Thanks for playing the Ice Master Course. Come and play again soon.";
    };
    new Trigger(help1) {
       position = "-2.46999 9.97554 0.485004";
@@ -1326,7 +1326,7 @@ new SimGroup(MissionGroup) {
       scale = "1 9.00221 6.00675";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #1: Basic Water Trail";
+         text = "Challenge #1: Basic Ice Trail";
    };
    new Trigger(help3) {
       position = "-21.9985 60.5007 -2.00416";
@@ -1342,7 +1342,7 @@ new SimGroup(MissionGroup) {
       scale = "1 4.95901 3.73658";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #2: Water Bounce";
+         text = "Challenge #2: Ice Bounce";
    };
    new Trigger(challenge3) {
       position = "6.5143 29.0062 -8.5028";
@@ -1350,7 +1350,7 @@ new SimGroup(MissionGroup) {
       scale = "4.94872 1 4.75754";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #3: Torrent Tightropes";
+         text = "Challenge #3: Icy Tightropes";
    };
    new Trigger(challenge4) {
       position = "71.5005 4.5411 -5.99757";
@@ -1358,7 +1358,7 @@ new SimGroup(MissionGroup) {
       scale = "6.97112 1 4.56261";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #4: Aqua Wall-hits";
+         text = "Challenge #4: Icy Wall-hits";
    };
    new Trigger(challenge5) {
       position = "64.9921 16.9925 4.49337";
@@ -1366,7 +1366,7 @@ new SimGroup(MissionGroup) {
       scale = "1 6.97769 5.35926";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #5: Water Ramp";
+         text = "Challenge #5: Ice Ramp";
    };
    new Trigger(challenge6) {
       position = "43.5129 30.5067 12.9953";
@@ -1374,7 +1374,7 @@ new SimGroup(MissionGroup) {
       scale = "6.98229 1 7.67891";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #6: Wet Bumpers";
+         text = "Challenge #6: Cold Bumpers";
    };
    new Trigger(challenge7) {
       position = "43.5097 64.4926 12.9911";
@@ -1382,7 +1382,7 @@ new SimGroup(MissionGroup) {
       scale = "6.94487 1 6.69592";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #7: Half-Pipe of the Oceans";
+         text = "Challenge #7: Half-Pipe of the Winter";
    };
    new Trigger(challenge8) {
       position = "16.5095 49.5048 12.9974";
@@ -1390,7 +1390,7 @@ new SimGroup(MissionGroup) {
       scale = "4.96922 1 5.02124";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #8: Water Stairs";
+         text = "Challenge #8: Ice Stairs";
    };
    new Trigger(challenge9) {
       position = "-20.0072 17.0175 30.4957";
@@ -1398,7 +1398,7 @@ new SimGroup(MissionGroup) {
       scale = "6.9706 1 5.38963";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #9: Water Wind Tunnels";
+         text = "Challenge #9: Ice Wind Tunnels";
    };
    new Trigger(challenge10) {
       position = "-5.54187 69.5072 30.4974";
@@ -1406,7 +1406,7 @@ new SimGroup(MissionGroup) {
       scale = "1 8.96802 6.01752";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #10: Gravity Water Cube";
+         text = "Challenge #10: Gravity Ice Cube";
    };
    new Trigger(challenge11) {
       position = "-12.5035 69.5007 14.4915";
@@ -1414,7 +1414,7 @@ new SimGroup(MissionGroup) {
       scale = "1 8.97765 4.83764";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #11: Mines on Water";
+         text = "Challenge #11: Mines on Ice";
    };
    new Trigger(challenge12) {
       position = "-61.0127 69.5026 26.4954";
@@ -1422,7 +1422,7 @@ new SimGroup(MissionGroup) {
       scale = "1 8.96731 5.71941";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #12: Water Catwalks";
+         text = "Challenge #12: Ice Catwalks";
    };
    new Trigger(challenge13) {
       position = "-49.5032 71.9857 31.4982";
@@ -1430,7 +1430,7 @@ new SimGroup(MissionGroup) {
       scale = "6.96885 1 4.57";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #13: Aqua Launch";
+         text = "Challenge #13: Icy Launch";
    };
    new Trigger(challenge14) {
       position = "-49.5246 228.016 10.9974";
@@ -1438,7 +1438,7 @@ new SimGroup(MissionGroup) {
       scale = "6.96002 1 4.65791";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #14: Wet Fans";
+         text = "Challenge #14: Freezing Fans";
    };
    new Trigger(help4) {
       position = "-45.5219 69.4461 19.9935";
@@ -1469,7 +1469,7 @@ new SimGroup(MissionGroup) {
       scale = "1 6.94061 6.02725";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #16: Torrent Drop-down";
+         text = "Challenge #16: Icy Drop-Down";
    };
    new Trigger(challenge17) {
       position = "2.03934 177.02 17.9939";
@@ -1477,7 +1477,7 @@ new SimGroup(MissionGroup) {
       scale = "6.95891 1 5.09071";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #17: Slanted Water";
+         text = "Challenge #17: Slanted Ice";
    };
    new Trigger(help5) {
       position = "-7.01171 128.508 21.4976";
@@ -1493,7 +1493,7 @@ new SimGroup(MissionGroup) {
       scale = "6.99262 1 4.54317";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #18: Grass and Water Combo";
+         text = "Challenge #18: Grass and Ice Combo";
    };
    new Trigger(challenge19) {
       position = "-13.509 170.486 29.5001";
@@ -1501,7 +1501,7 @@ new SimGroup(MissionGroup) {
       scale = "1 6.96754 5.12218";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #19: Ice and Water Combo";
+         text = "Challenge #19: Space and Ice Combo";
    };
    new Trigger(challenge20) {
       position = "17.5235 176.501 37.4964";
@@ -1509,7 +1509,7 @@ new SimGroup(MissionGroup) {
       scale = "1 6.97214 4.72199";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #20: Water Tubes";
+         text = "Challenge #20: Ice Tubes";
    };
    new Trigger(challenge21) {
       position = "-56.5266 166.487 40.4962";
@@ -1517,7 +1517,7 @@ new SimGroup(MissionGroup) {
       scale = "1 6.97742 4.96154";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Challenge #21: Water Slalom";
+         text = "Challenge #21: Ice Slalom";
    };
    new Trigger(finish) {
       position = "-135.535 166.49 40.4921";
@@ -1525,7 +1525,7 @@ new SimGroup(MissionGroup) {
       scale = "1 6.96437 4.50405";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Congratulations! You\'ve finished the Water Master Course!";
+         text = "Congratulations! You\'ve finished the Ice Master Course!";
    };
    new Trigger() {
       position = "15.7673 56.9702 12.9747";
