@@ -82,6 +82,8 @@ function onServerCreated()
    exec("./pathedInteriors.cs");
    exec("./hidingPlatforms.cs");
    exec("./rotationPlatforms.cs");
+   
+   exec("./physics.cs");
 
    // Multiplayer
    //exec("./multiplayer.cs");
@@ -486,6 +488,11 @@ function destroyGame()
 
 //-----------------------------------------------------------------------------
 
+function GameConnection::getGameState(%this)
+{
+   return %this.GameState;
+}
+
 function GameConnection::setGameState(%this, %state)
 {
    cancel(%this.StateSchedule);
@@ -866,6 +873,8 @@ function GameConnection::onOutOfBounds(%this)
    if (%this.GameState $= "End")
       return;
       
+   $Core::PhysicsDisabled = false;
+      
    if (MissionInfo.gameMode $= "hunt")
    {
       %this.player.lastPowerUp = %this.player.getPowerUp();
@@ -1054,6 +1063,8 @@ function GameConnection::respawnPlayer(%this)
    // Reset the player back to the last checkpoint
    cancel(%this.respawnSchedule);
    
+   $Core::PhysicsDisabled = false;
+   
    if (!$Client::ConnectedMultiplayer && (!isObject(%this.checkPoint) || !isObject(%this.checkPoint.pad)))
       %this.resetStats();
    
@@ -1207,6 +1218,8 @@ function GameConnection::respawnPlayerHunt(%this)
    // Reset the player back to the last checkpoint
    cancel(%this.respawnSchedule);
    
+   $Core::PhysicsDisabled = false;
+   
    %this.player.unmountImage(0);
    %this.player.unmountImage(2);
    //%this.ghost.unmountImage(0);
@@ -1273,6 +1286,8 @@ function GameConnection::createPlayer(%this, %spawnPoint)
       // a player ghost.
       error( "Attempting to create an angus ghost!" );
    }
+   
+   $Core::PhysicsDisabled = false;
    
    %scale = 1 - $Multiplayer::MarbleCount / 10000;
    //commandToClient(%this, 'SetGhostScale', %scale);

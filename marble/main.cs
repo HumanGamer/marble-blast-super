@@ -94,6 +94,9 @@ function onStart()
    Parent::onStart();
    echo("\n--------- Initializing MOD: FPS ---------");
 
+   // Load utility scripts
+   exec("./utilities.cs");
+
    // Load the scripts that start it all...
    exec("./client/init.cs");
    exec("./server/init.cs");

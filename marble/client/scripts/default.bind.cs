@@ -321,13 +321,13 @@ function pitch(%val)
 {
    if (MissionInfo.gameMode $= "Side" && LocalClientConnection.getControlObject() $= LocalClientConnection.player)
       return;
-   if($freelooking || $pref::Input::AlwaysFreeLook)
-   {
+   //if($freelooking || $pref::Input::AlwaysFreeLook)
+   //{
       if($pref::input::InvertYAxis)
          $mvPitch -= getMouseAdjustAmount(%val);
       else
          $mvPitch += getMouseAdjustAmount(%val);
-   }
+   //}
    //$Client::MyPitch += mRadToDeg($mvPitch);
    //if ($Client::MyPitch >= 360)
       //$Client::MyPitch -= 360;
@@ -351,10 +351,10 @@ function jump(%val)
    $mvTriggerCount2++;
 }
 
-function freelook(%val)
-{
-   $freeLooking = %val;
-}
+//function freelook(%val)
+//{
+//   $freeLooking = %val;
+//}
 
 moveMap.bind( keyboard, a, moveleft );
 moveMap.bind( keyboard, d, moveright );
@@ -367,6 +367,8 @@ moveMap.bind(keyboard, up, panUp);
 moveMap.bind(keyboard, down, panDown);
 moveMap.bind(keyboard, left, turnLeft);
 moveMap.bind(keyboard, right, turnRight);
+
+moveMap.bind(keyboard, "f", togglePhysics);
 
 
 //------------------------------------------------------------------------------
@@ -408,7 +410,7 @@ moveMap.bind( mouse, button0, mouseFire );
 //else
    moveMap.bind( mouse, button1, altTrigger );
    
-moveMap.bind( keyboard, f, freelook );
+//moveMap.bind( keyboard, f, freelook );
    
 function openChat(%val)
 {
@@ -427,7 +429,7 @@ moveMap.bind(keyboard, "enter", openChat);
 
 function toggleCamera(%val)
 {
-   if (%val && $testCheats)
+   if (%val)// && $testCheats)
       commandToServer('ToggleCamera');
 }
 

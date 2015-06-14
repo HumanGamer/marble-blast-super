@@ -9,14 +9,14 @@ function optionsDlg::setPane(%this, %pane)
    OptControlsPane.setVisible(false);
    if(%pane $= "Graphics")
    {
-      if($platform $= "windows")
+      //if($platform $= "windows")
          OptGraphicsPane.setVisible(true);
-      else
-      {
-         OptGraphicsPaneMac.setVisible(true);
-         if ($platform $= "x86UNIX")
-            StencilShadowsButtonMac.setVisible(true);
-      }
+      //else
+      //{
+      //   OptGraphicsPaneMac.setVisible(true);
+      //   if ($platform $= "x86UNIX")
+      //      StencilShadowsButtonMac.setVisible(true);
+      //}
    }
    else
       ("Opt" @ %pane @ "Pane").setVisible(true);
@@ -60,6 +60,8 @@ function OptResolutionList::onSelect(%this, %id)
 function populateResolutions()
 {
    OptResolutionList.clear();   
+   
+   $pref::Video::displayDevice = "OpenGL";   
    
    %displayDevice = $pref::Video::displayDevice;
    %resList = getResolutionList(%displayDevice);
@@ -125,9 +127,9 @@ function OptionsDlg::onWake(%this)
          //OptGfx16001200Mac.setValue(true);
       //
    //}
-   %isOgl = $pref::Video::displayDevice $= "OpenGL";
-   OptGfxOpenGL.setValue(%isOgl);
-   OptGfxD3D.setValue(!%isOgl);
+   //%isOgl = $pref::Video::displayDevice $= "OpenGL";
+   //OptGfxOpenGL.setValue(%isOgl);
+   //OptGfxD3D.setValue(!%isOgl);
 
    OptGfxFull.setValue($pref::Video::fullScreen);
    OptGfxWindow.setValue(!$pref::Video::fullScreen);
@@ -163,12 +165,20 @@ function OptionsDlg::onWake(%this)
 	//OptAudioDriverList.setSelected( %selId );
 	//OptAudioDriverList.onSelect( %selId, "" );
 	
-	OptFreeLookMapLabel.setText("Freelook:");
-	OptFreeLookLabel.setText("Always Freelook:");
+	//OptFreeLookMapLabel.setText("Freelook:");
+	//OptFreeLookLabel.setText("Always Freelook:");
 	OptInvertYLabel.setText("Invert Y Axis:");
 	OptShowRearView.setText("Show Rear View:");
 	//OptShowRadar.setText("Show Radar:");
 	OptMouseSensitivityLabel.setText("Mouse Sensitivity:");
+	OptFreezePhysicsLabel.setText("Freeze Physics:");
+	OptJumpLabel.setText("Jump:");
+	OptPowerUpLabel.setText("Use PowerUp:");
+	OptBlastLabel.setText("Blast:");
+	OptCamRightLabel.setText("Camera Right:");
+	OptCamLeftLabel.setText("Camera Left:");
+	OptCamDownLabel.setText("Camera Down:");
+	OptCamUpLabel.setText("Camera Up:");
 }
 
 function OptionsDlg::onSleep(%this)
@@ -361,8 +371,11 @@ $RemapCount++;
 $RemapName[$RemapCount] = "Rotate Camera Down";
 $RemapCmd[$RemapCount] = "panDown";
 $RemapCount++;
-$RemapName[$RemapCount] = "Free Look";
-$RemapCmd[$RemapCount] = "freelook";
+//$RemapName[$RemapCount] = "Free Look";
+//$RemapCmd[$RemapCount] = "freelook";
+//$RemapCount++;
+$RemapName[$RemapCount] = "Freeze Physics";
+$RemapCmd[$RemapCount] = "togglePhysics";
 $RemapCount++;
 
 

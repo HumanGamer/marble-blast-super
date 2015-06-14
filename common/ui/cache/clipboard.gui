@@ -1,21 +1,16 @@
 new SimSet(guiClipboard) {
 
-   new GuiObjectView(HC_Oilslick) {
-      profile = "GuiDefaultProfile";
+   new GuiMLTextCtrl(OptCamDownLabel) {
+      profile = "GuiBigTextProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "80 194";
-      extent = "69 65";
+      position = "259 133";
+      extent = "185 36";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      cameraZRot = "0";
-      forceFOV = "0";
-      model = "marble/data/shapes/hazards/oilslick.dts";
-      skin = "base";
-      cameraRotX = "0.35";
-      cameraZRotSpeed = "0.001";
-      orbitDistance = "5.5";
-      autoSize = "0";
+      lineSpacing = "2";
+      allowColorChars = "0";
+      maxChars = "-1";
    };
 };
