@@ -58,7 +58,7 @@ $pref::Video::disableVerticalSync = 1;
 $pref::Video::monitorNum = 0;
 $pref::Video::resolution = "800 600 32";
 $pref::Video::windowedRes = "800 600";
-$pref::Video::fullScreen = "1";
+$pref::Video::fullScreen = "0";
 
 $pref::OpenGL::force16BitTexture = "0";
 $pref::OpenGL::forcePalettedTexture = "0";
