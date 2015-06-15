@@ -645,7 +645,7 @@ function Marble::updateBlast(%this)
    
    %nextTime = 8.4;
    
-   if (%this.blastEnergy < %this.getDataBlock().maxBlastRecharge)
+   if (%this.blastEnergy < %this.getDataBlock().maxBlastRecharge && !$Core::PhysicsDisabled)
    {
       %energy = %this.blastEnergy + 1.2;
       if (%energy > %this.getDataBlock().maxBlastRecharge)
@@ -658,7 +658,7 @@ function Marble::updateBlast(%this)
 
 function Marble::useBlast(%this)
 {
-   if (%this.blastEnergy >= %this.getDatablock().getName().minUsableBlast)
+   if (%this.blastEnergy >= %this.getDatablock().getName().minUsableBlast && !$Core::PhysicsDisabled)
    {
       %energy = (%this.blastEnergy / 1000) * -1;
       %from = %energy SPC %energy SPC %energy;
