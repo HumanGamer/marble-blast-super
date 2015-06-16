@@ -21,6 +21,8 @@ $baseMods   = "common";
 $userMods   = "marble";
 $displayHelp = false;
 
+$pref::DisplayDevice = "OpenGL";
+
 
 //-----------------------------------------------------------------------------
 // Support functions used to manage the mod string

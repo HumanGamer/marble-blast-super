@@ -1,24 +1,24 @@
 function optionsDlg::setPane(%this, %pane)
 {
    OptAudioPane.setVisible(false);
-   OptGraphicsPaneMac.setVisible(false);
+   //OptGraphicsPaneMac.setVisible(false);
    OptGraphicsPane.setVisible(false);
    
    OptGamePane.setVisible(false);
    //OptNetworkPane.setVisible(false);
    OptControlsPane.setVisible(false);
-   if(%pane $= "Graphics")
-   {
+   //if(%pane $= "Graphics")
+   //{
       //if($platform $= "windows")
-         OptGraphicsPane.setVisible(true);
+   //      OptGraphicsPane.setVisible(true);
       //else
       //{
       //   OptGraphicsPaneMac.setVisible(true);
       //   if ($platform $= "x86UNIX")
       //      StencilShadowsButtonMac.setVisible(true);
       //}
-   }
-   else
+   //}
+   //else
       ("Opt" @ %pane @ "Pane").setVisible(true);
    OptControlsPane.showMappings();
    //%par = OptBoxFrame.getGroup();
@@ -84,11 +84,11 @@ function populateResolutions()
 function OptionsDlg::onWake(%this)
 {
    %this.bitmap = getRandomBackground();
-   if ($platform $= "x86UNIX")
+   //if ($platform $= "x86UNIX")
       // enable stencil shadows button text on unix
-      OptGfxText.setText("<font:DomCasualD:32><just:right>Screen Resolution:\n\nScreen Style:\n\nColor Depth:\n\nStencil Shadows:\n\n");
-   else
-      OptGfxText.setText("<font:DomCasualD:32><just:right>Screen Resolution:\n\nScreen Style:\n\nColor Depth:\n\n");
+   //   OptGfxText.setText("<font:DomCasualD:32><just:right>Screen Resolution:\n\nScreen Style:\n\nColor Depth:\n\nStencil Shadows:\n\n");
+   //else
+   //   OptGfxText.setText("<font:DomCasualD:32><just:right>Screen Resolution:\n\nScreen Style:\n\nColor Depth:\n\n");
       
    %this.setPane("Graphics");
    %buffer = getDisplayDeviceList();
@@ -133,14 +133,14 @@ function OptionsDlg::onWake(%this)
 
    OptGfxFull.setValue($pref::Video::fullScreen);
    OptGfxWindow.setValue(!$pref::Video::fullScreen);
-   OptGfxFullMac.setValue($pref::Video::fullScreen);
-   OptGfxWindowMac.setValue(!$pref::Video::fullScreen);
+   //OptGfxFullMac.setValue($pref::Video::fullScreen);
+   //OptGfxWindowMac.setValue(!$pref::Video::fullScreen);
    
    %is32 = getWord($pref::Video::resolution, 2) == 32;
    //OptGfx16.setValue(!%is32);
    //OptGfx32.setValue(%is32);
-   OptGfx16Mac.setValue(!%is32);
-   OptGfx32Mac.setValue(%is32);
+   //OptGfx16Mac.setValue(!%is32);
+   //OptGfx32Mac.setValue(%is32);
 
    //OptGraphicsDriverMenu.clear();
    //for(%i = 0; %i < %count; %i++)
