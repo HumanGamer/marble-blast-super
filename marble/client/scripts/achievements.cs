@@ -59,10 +59,12 @@ function checkAchievements()
    {
       awardAchievement(3);
    }
+   
    if ($Dynamic::Achievement::BeatAny5Levels && !hasAchievement(4))
    {
       awardAchievement(4);
    }
+   
    if ($Dynamic::Achievement::BeatAny10Levels && !hasAchievement(5))
    {
       awardAchievement(5);

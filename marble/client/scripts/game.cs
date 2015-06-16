@@ -61,17 +61,6 @@ function clientCmdGameEnd()
    reformatGameEndText();
    Canvas.pushDialog(EndGameGui);
    
-   //Completed Levels Count
-   if(!$pref::LevelComplete[$server::missionfile])
-   {
-		$pref::LevelComplete[$server::missionfile]=1;
-		$pref::LevelsComplete++;
-		$Dynamic::Achievement::BeatAnyLevel=($pref::LevelsComplete > 0);
-		$Dynamic::Achievement::BeatAny5Levels=($pref::LevelsComplete >=5);
-		$Dynamic::Achievement::BeatAny10Levels=($pref::LevelsComplete >=10);		
-		}
-		checkachievements();
-   
    if($highScoreIndex !$= "")
    {
       if($highScoreIndex == 0)

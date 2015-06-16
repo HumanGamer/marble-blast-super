@@ -611,6 +611,17 @@ function GameConnection::StateEnd(%this)
       
       $Dynamic::Achievement::ParTime = MissionInfo.time && %qualified;
       $Dynamic::Achievement::SideScrolling = %qualified && MissionInfo.gameMode $= "Side";
+      
+      //Completed Levels Count
+      if(!$pref::LevelComplete[$Server::MissionFile])
+      {
+         $pref::LevelComplete[$Server::MissionFile] = true;
+         $pref::LevelsComplete++;
+         $Dynamic::Achievement::BeatAnyLevel = ($pref::LevelsComplete > 0);
+         $Dynamic::Achievement::BeatAny5Levels = ($pref::LevelsComplete >= 5);
+         $Dynamic::Achievement::BeatAny10Levels = ($pref::LevelsComplete >= 10);		
+      }
+      
       checkAchievements();
       %this.StateSchedule = schedule( 2000, 0, "endGame");
    }
