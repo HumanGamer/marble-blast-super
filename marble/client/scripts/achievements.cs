@@ -55,6 +55,12 @@ function AchievementPopupDlg::onWake(%this)
    
    AP_AchievementBodyText.setAlpha(0.5);
    AP_AchievementHeadText.setAlpha(0.5);
+
+   %iconFile = "marble/client/ui/achievements/achievement_" @ %ach.img;
+   if (!isFile(%iconFile @ ".png") && !isFile(%iconFile @ ".jpg"))
+      AP_AchievementIcon.setBitmap("marble/client/ui/achievements/achievement_placeholder");  
+   else
+      AP_AchievementIcon.setBitmap("marble/client/ui/achievements/achievement_" @ %ach.img);
    
    %name = "<spush><font:Whitestone:28><color:333333><shadowcolor:000000><shadow:1:1>" @ %ach.name @ "<spop>\n\n";
    %desc = "<spush><font:Whitestone:24><color:FFFFFF><shadowcolor:000000><shadow:1:1>" @ %ach.desc @ "<spop>";
