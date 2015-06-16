@@ -1,0 +1,483 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         type = "tutorial";
+         time = "0";
+         goldTime = "15000";
+         name = "Different Platforms";
+         desc = "There are three different kinds of platforms that have purposes other than giving the marble a place to roll on!";
+         hyperTime = "9000";
+         level = "10";
+         artist = "Rozi";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0";
+      cloudHeightPer[1] = "0";
+      cloudHeightPer[2] = "0";
+      cloudSpeed1 = "0.0001";
+      cloudSpeed2 = "0.0002";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "-1 3341.52 6.54902e-039";
+      fogVolume2 = "-1 3.33514e-039 4.42466e-039";
+      fogVolume3 = "-1 1.90857e-042 3.43597e+010";
+      materialList = "~/data/skies/sky2/sky_day.dml";
+      windVelocity = "1 0 0";
+      windEffectPrecipitation = "0";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 0.000030";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 0.000000";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.400000 0.400000 0.400000 1.000000";
+   };
+   new ScriptObject() {
+         powerUp = "0";
+         time = "0";
+         bonusTime = "0";
+         pad = "2195";
+         penaltyTime = "0";
+         gemCount = "0";
+   };
+   new InteriorInstance() {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      interiorFile = "~/data/interiors/Rozi/MBSDifferentPlatforms.dif";
+      showTerrainInside = "0";
+   };
+   new ScriptObject() {
+         powerUp = "0";
+         time = "0";
+         bonusTime = "0";
+         pad = "2288";
+         penaltyTime = "0";
+         gemCount = "0";
+   };
+   new ScriptObject() {
+         powerUp = "0";
+         time = "0";
+         bonusTime = "0";
+         pad = "2792";
+         penaltyTime = "0";
+         gemCount = "0";
+   };
+   new StaticShape() {
+      position = "8 19 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5143176";
+         unhide1 = "5143178";
+         used = "0";
+         unhide = "5143177";
+   };
+   new ScriptObject() {
+         powerUp = "0";
+         time = "0";
+         bonusTime = "0";
+         pad = "2522";
+         penaltyTime = "0";
+         gemCount = "0";
+   };
+   new StaticShape() {
+      position = "2 -7 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "ExplodingPlatform";
+         normalScale = "1 1 1";
+         hide = "381852";
+         unhide1 = "381854";
+         unhide = "381853";
+   };
+   new StaticShape() {
+      position = "2 -5 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "ExplodingPlatform";
+         normalScale = "1 1 1";
+         hide = "5303981";
+         unhide1 = "5303983";
+         unhide = "5303982";
+   };
+   new StaticShape() {
+      position = "6 9 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5123326";
+         unhide1 = "5123328";
+         used = "0";
+         unhide = "5123327";
+   };
+   new StaticShape() {
+      position = "4 9 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5125128";
+         unhide1 = "5125130";
+         used = "0";
+         unhide = "5125129";
+   };
+   new StaticShape() {
+      position = "6 11 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5121528";
+         unhide1 = "5121530";
+         used = "0";
+         unhide = "5121529";
+   };
+   new StaticShape() {
+      position = "6 13 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5130567";
+         unhide1 = "5130569";
+         used = "0";
+         unhide = "5130568";
+   };
+   new StaticShape() {
+      position = "6 15 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5132369";
+         unhide1 = "5132371";
+         used = "0";
+         unhide = "5132370";
+   };
+   new StaticShape() {
+      position = "4 11 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "339985";
+         unhide1 = "339987";
+         used = "0";
+         unhide = "339986";
+   };
+   new StaticShape() {
+      position = "4 13 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5128762";
+         unhide1 = "5128764";
+         used = "0";
+         unhide = "5128763";
+   };
+   new StaticShape() {
+      position = "4 15 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5134171";
+         unhide1 = "5134173";
+         used = "0";
+         unhide = "5134172";
+   };
+   new StaticShape() {
+      position = "4 17 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "341802";
+         unhide1 = "341804";
+         used = "0";
+         unhide = "341803";
+   };
+   new StaticShape() {
+      position = "4 19 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "343613";
+         unhide1 = "343615";
+         used = "0";
+         unhide = "343614";
+   };
+   new StaticShape() {
+      position = "6 17 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5137776";
+         unhide1 = "5137778";
+         used = "0";
+         unhide = "5137777";
+   };
+   new StaticShape() {
+      position = "6 19 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "344502";
+         unhide1 = "344504";
+         used = "0";
+         unhide = "344503";
+   };
+   new StaticShape() {
+      position = "8 17 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5144978";
+         unhide1 = "5144980";
+         used = "0";
+         unhide = "5144979";
+   };
+   new StaticShape() {
+      position = "10 17 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5146783";
+         unhide1 = "5146785";
+         used = "0";
+         unhide = "5146784";
+   };
+   new StaticShape() {
+      position = "12 17 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5152190";
+         unhide1 = "5152192";
+         used = "0";
+         unhide = "5152191";
+   };
+   new StaticShape() {
+      position = "14 17 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5153992";
+         unhide1 = "5153994";
+         used = "0";
+         unhide = "5153993";
+   };
+   new StaticShape() {
+      position = "16 17 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5159411";
+         unhide1 = "5159413";
+         used = "0";
+         unhide = "5159412";
+   };
+   new StaticShape() {
+      position = "16 19 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "346303";
+         unhide1 = "346305";
+         used = "0";
+         unhide = "346304";
+   };
+   new StaticShape() {
+      position = "14 19 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "346306";
+         unhide1 = "346308";
+         used = "0";
+         unhide = "346307";
+   };
+   new StaticShape() {
+      position = "12 19 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5150391";
+         unhide1 = "5150393";
+         used = "0";
+         unhide = "5150392";
+   };
+   new StaticShape() {
+      position = "10 19 5.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "HidingPlatform";
+         normalScale = "1 1 1";
+         hide = "5148585";
+         unhide1 = "5148587";
+         used = "0";
+         unhide = "5148586";
+   };
+   new StaticShape(StartPoint) {
+      position = "-14.5569 -6.08612 0.67";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "StartPad";
+         beam = "3979";
+   };
+   new ScriptObject() {
+         powerUp = "0";
+         time = "0";
+         bonusTime = "0";
+         pad = "4552";
+         penaltyTime = "0";
+         gemCount = "0";
+   };
+   new StaticShape() {
+      position = "29 -12 5.75";
+      rotation = "0 0 1 146.565";
+      scale = "1 1 1";
+      dataBlock = "RotationPlatform";
+         axis = "z";
+         currentTime = "30";
+         timer = "60";
+         inc = "1";
+   };
+   new StaticShape() {
+      position = "25 -6 5.75";
+      rotation = "0 0 1 146.565";
+      scale = "1 1 1";
+      dataBlock = "RotationPlatform";
+         axis = "z";
+         currentTime = "0";
+         timer = "60";
+         inc = "1";
+   };
+   new StaticShape() {
+      position = "33 -18 5.75";
+      rotation = "0 0 1 146.565";
+      scale = "1 1 1";
+      dataBlock = "RotationPlatform";
+         axis = "z";
+         currentTime = "30";
+         timer = "60";
+         inc = "1";
+   };
+   new StaticShape(EndPoint) {
+      position = "5.46694 -25.9828 6.17";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "EndPad";
+         beam = "3279";
+   };
+   new Item() {
+      position = "4.99066 -6.03272 6.00517";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+         node = "3977";
+   };
+   new Item() {
+      position = "3.44457 19.552 5.9518";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "29.0174 12.0104 6.00517";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+         node = "3978";
+   };
+   new ScriptObject() {
+         powerUp = "0";
+         time = "0";
+         bonusTime = "0";
+         pad = "7155";
+         penaltyTime = "0";
+         gemCount = "0";
+   };
+   new Trigger(MBSHelpTrigger) {
+      position = "-1.00454 -2.01508 0.418627";
+      rotation = "1 0 0 0";
+      scale = "0.5 8 2.5";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Exploding Platforms explode on contact, like a mine. They give you an upward boost, like a Super Jump";
+   };
+   new Trigger(MBSHelpTrigger) {
+      position = "2.97925 5.96732 5.95";
+      rotation = "1 0 0 0";
+      scale = "4 0.5 2.5";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Hiding Platforms dissapear on contact. Step quickly through these to avoid falling off!";
+   };
+   new Trigger(MBSHelpTrigger) {
+      position = "24.9977 2.5106 5.95";
+      rotation = "1 0 0 0";
+      scale = "8 0.5 2.5";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Rotating Platforms will rotate one way or another. ";
+   };
+   new ScriptObject() {
+         powerUp = "0";
+         time = "0";
+         bonusTime = "0";
+         pad = "3273";
+         penaltyTime = "0";
+         gemCount = "0";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+};
+//--- OBJECT WRITE END ---

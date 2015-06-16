@@ -18,6 +18,24 @@ function initAchievements()
       desc = "Complete any side scrolling level!";
       img = "retro";
    };
+   // 1st Level Complete
+   $Const::Achievements[3] = new ScriptObject() {
+      name = "Just Started";
+      desc = "Finish any level";
+      img = "1stlevel";
+   };
+   // 5 Levels Complete
+   $Const::Achievements[4] = new ScriptObject() {
+      name = "5 Down!";
+      desc = "Finish any 5 levels";
+      img = "5thlevel";
+   };
+   // 10 Levels Complete
+   $Const::Achievements[5] = new ScriptObject() {
+      name = "10 Levels!";
+      desc = "Finish any 10 levels";
+      img = "10thlevel";
+   };   
 }
 
 function checkAchievements()
@@ -36,6 +54,19 @@ function checkAchievements()
    {
       awardAchievement(2);
    }
+   
+   if ($Dynamic::Achievement::BeatAnyLevel && !hasAchievement(3))
+   {
+      awardAchievement(3);
+   }
+   if ($Dynamic::Achievement::BeatAny5Levels && !hasAchievement(4))
+   {
+      awardAchievement(4);
+   }
+   if ($Dynamic::Achievement::BeatAny10Levels && !hasAchievement(5))
+   {
+      awardAchievement(5);
+   }   
 }
 
 function awardAchievement(%id)

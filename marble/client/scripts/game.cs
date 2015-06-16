@@ -20,9 +20,9 @@ function getBestTimes(%mis)
       if($hs[%i] $= "")
       {
          if(MissionInfo.time)
-            $hs[%i] = MissionInfo.time @ "\tStewart Inglis";
+            $hs[%i] = MissionInfo.time @ "\tMBS";
          else
-            $hs[%i] = "5998999\tStewart Inglis";
+            $hs[%i] = "5998999\tMBS";
       }
    }
 }
@@ -60,6 +60,18 @@ function clientCmdGameEnd()
    }
    reformatGameEndText();
    Canvas.pushDialog(EndGameGui);
+   
+   //Completed Levels Count
+   if(!$pref::LevelComplete[$server::missionfile])
+   {
+		$pref::LevelComplete[$server::missionfile]=1;
+		$pref::LevelsComplete++;
+		$Dynamic::Achievement::BeatAnyLevel=($pref::LevelsComplete > 0);
+		$Dynamic::Achievement::BeatAny5Levels=($pref::LevelsComplete >=5);
+		$Dynamic::Achievement::BeatAny10Levels=($pref::LevelsComplete >=10);		
+		}
+		checkachievements();
+   
    if($highScoreIndex !$= "")
    {
       if($highScoreIndex == 0)

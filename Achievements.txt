@@ -1,0 +1,40 @@
+Just Started
+(Finish a level)
+
+5 down
+(Finish 5 levels)
+
+10 Levels!
+(Finish 10 levels)
+
+Quarter of a Hundred
+(Finish 25 levels)
+
+Completion
+(Finish every level)
+
+So Super!
+(Achieve every Super Time)
+
+Hyped!
+(Achieve every Hyper Time)
+
+Easter Sunday
+(Find every easter egg)
+
+Failure
+(Finish a level without passing the Par time)
+
+Hugs for everyone!
+(Type "giveHugs(1);" in the console)
+
+Cheater!
+(Open the level editor)
+
+Advanced Roller
+(Complete any level with a diffuculty of Advanced or higher without jumping)
+
+True Champion
+(Complete Champion's Road)
+
+
