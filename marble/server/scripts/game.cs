@@ -77,6 +77,7 @@ function onServerCreated()
    exec("./easter.cs");
    exec("./cannon.cs");
    exec("./water.cs");
+	exec("./worldObjects.cs");
 
    // Platforms and interior doors
    exec("./pathedInteriors.cs");
