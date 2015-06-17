@@ -2,14 +2,13 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         startHelpText = "The SuperSpeed PowerUp will give you a nice boost of acceleration! It also has a large variety of uses!";
          hyperTime = "10500";
-         level = "4";
-         name = "Speeding";
-         type = "Tutorial";
+         level = "13";
+         name = "Booster Tricks";
+         type = "Beginner";
          hasEgg = "1";
          goldTime = "12000";
-         desc = "Go from platform to platform with the game\'s acceleration PowerUp!";
+         desc = "The SuperSpeed PowerUp has a variety of uses, other than passing large gaps!";
          artist = "davidjl123";
    };
    new MissionArea(MissionArea) {
@@ -130,7 +129,7 @@ new SimGroup(MissionGroup) {
       position = "1.58154 -67.376 5.67499";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/tutorial/speeding.dif";
+      interiorFile = "~/data/interiors/beginner/speeding.dif";
       showTerrainInside = "0";
    };
    new ScriptObject() {

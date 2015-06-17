@@ -385,7 +385,7 @@ function PM_setSelected(%index)
    %gamemode = "<spush><font:Bauhaus 93:18><color:CCCCCC><shadowcolor:000000><shadow:1:1><lmargin:10>" @ getGameModeName(%mission.gameMode) @ "<spop><lmargin:0>\n\n";
    if (%mission.artist !$= "")
    {
-      %author = "<spush><font:Bauhaus 93:18><lmargin:1>" @ %mission.artist @ "<spop>\n\n";
+      %author = "<spush><font:Arial 93:18><lmargin:1>" @ %mission.artist @ "<spop>\n\n";
    } else {
       %author = "<spush><font:Bauhaus 93:18><lmargin:1>" @ "(Anonymous)" @ "<spop>\n\n";
    }

@@ -3,13 +3,13 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          time = "0";
-         hyperTime = "60000";
-         level = "4";
-         artist = "Ender/Rozi";
          name = "Oceanic Nightmare";
-         type = "expert";
-         goldTime = "90000";
          desc = "Water everywhere!";
+         type = "expert";
+         level = "4";
+         goldTime = "90000";
+         artist = "Ender/Rozi";
+         hyperTime = "60000";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -51,14 +51,14 @@ new SimGroup(MissionGroup) {
    };
    new ScriptObject() {
          time = "0";
-         powerUp = "0";
          gemCount = "0";
+         powerUp = "0";
          bonusTime = "0";
          pad = "2195";
          penaltyTime = "0";
    };
    new InteriorInstance() {
-      position = "-78.9728 -49.4353 88.9465";
+      position = "-78.9728 -49.4353 90.4325";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       interiorFile = "~/data/interiors/Oceananic Nightmare.dif";
@@ -66,16 +66,16 @@ new SimGroup(MissionGroup) {
    };
    new ScriptObject() {
          time = "0";
-         powerUp = "0";
          gemCount = "0";
+         powerUp = "0";
          bonusTime = "0";
          pad = "4348";
          penaltyTime = "0";
    };
    new ScriptObject() {
          time = "0";
-         powerUp = "0";
          gemCount = "0";
+         powerUp = "0";
          bonusTime = "0";
          pad = "5092";
          penaltyTime = "0";
@@ -101,7 +101,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90";
       scale = "0.7 0.7 0.7";
       dataBlock = "StartPad";
-         beam = "13991";
+         beam = "4539";
    };
    new Item() {
       position = "-72.1377 -47.4065 117.082";
@@ -136,8 +136,8 @@ new SimGroup(MissionGroup) {
    };
    new ScriptObject() {
          time = "0";
-         powerUp = "0";
          gemCount = "0";
+         powerUp = "0";
          bonusTime = "0";
          pad = "7084";
          penaltyTime = "0";
@@ -177,7 +177,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "13984";
+         node = "4532";
    };
    new Item() {
       position = "-64.4867 -43.4907 91.0769";
@@ -188,7 +188,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "13985";
+         node = "4533";
    };
    new Item() {
       position = "-78.4086 -55.4827 103.02";
@@ -199,14 +199,14 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "13986";
+         node = "4534";
    };
    new StaticShape(EndPoint) {
-      position = "-63.1976 -101.975 149.534";
+      position = "-63.1976 -101.975 155.545";
       rotation = "0 0 1 90";
       scale = "0.7 0.7 0.7";
       dataBlock = "EndPad";
-         beam = "12266";
+         beam = "4328";
    };
    new Item() {
       position = "-82.3682 -47.4673 110.14";
@@ -228,7 +228,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "13987";
+         node = "4535";
    };
    new Item() {
       position = "-56.9595 -29.9314 132.99";
@@ -239,7 +239,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "13988";
+         node = "4536";
    };
    new Item() {
       position = "-44.9529 -57.9311 131.061";
@@ -250,7 +250,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "13989";
+         node = "4537";
    };
    new Item() {
       position = "-116.474 -99.935 144.57";
@@ -260,12 +260,12 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "13990";
+         node = "4538";
    };
    new ScriptObject() {
          time = "0";
-         powerUp = "0";
          gemCount = "0";
+         powerUp = "0";
          bonusTime = "0";
          pad = "12248";
          penaltyTime = "0";
@@ -280,17 +280,25 @@ new SimGroup(MissionGroup) {
       rotate = "1";
          checkpointNum = "1";
    };
+   new Trigger(OOBTrigger) {
+      position = "-8.691 -22.8688 87.6944";
+      rotation = "1 0 0 0";
+      scale = "90 90 75";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
    };
-   new Trigger(OOBTrigger) {
-      position = "-130.291 -22.8688 86.347";
-      rotation = "1 0 0 0";
-      scale = "90 90 75";
-      dataBlock = "InBoundsTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   new ScriptObject() {
+         time = "0";
+         gemCount = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "4316";
+         penaltyTime = "0";
    };
 };
 //--- OBJECT WRITE END ---
