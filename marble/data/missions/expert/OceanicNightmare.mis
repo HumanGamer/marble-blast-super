@@ -61,7 +61,7 @@ new SimGroup(MissionGroup) {
       position = "-78.9728 -49.4353 90.4325";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/Oceananic Nightmare.dif";
+      interiorFile = "~/data/interiors/expert/Oceananic Nightmare.dif";
       showTerrainInside = "0";
    };
    new ScriptObject() {

@@ -116,7 +116,7 @@ new SimGroup(MissionGroup) {
       scale = "0.5 6 6";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Chocolate is not so slippery, but has not as much friction as a normal surface. Try to climb up the chocolate slope.";
+         text = "Mud is not so slippery, but has not as much friction as a normal surface. Try to climb up the muddy slope.";
    };
    new Item() {
       position = "-18.4772 -33.3848 -6.83305";
@@ -142,7 +142,7 @@ new SimGroup(MissionGroup) {
       scale = "6 0.5 6";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Grip Tape is a lot stronger than grass, and can give you a bigger boost against steep slopes.";
+         text = "Sand is a lot stronger than grass, and can give you a bigger boost against steep slopes.";
    };
    new Trigger() {
       position = "-64.6649 36.5285 -21.9558";
