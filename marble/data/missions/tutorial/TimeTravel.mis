@@ -56,7 +56,7 @@ new SimGroup(MissionGroup) {
    };
    new StaticShape(StartPoint) {
       position = "10 -2.5 2";
-      rotation = "1 0 0 0";
+      rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
          beam = "10708";

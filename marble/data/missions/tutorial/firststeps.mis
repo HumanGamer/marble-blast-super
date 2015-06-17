@@ -2,7 +2,7 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         hyperTime = "2300";
+         hyperTime = "3300";
          name = "First Steps";
          time = "0";
          type = "Tutorial";
@@ -10,7 +10,7 @@ new SimGroup(MissionGroup) {
          desc = "Welcome to Marble Blast Super! Learn how to roll in this level.";
          hasEgg = "1";
          level = "1";
-         goldTime = "6000";
+         goldTime = "5300";
          artist = "davidjl123";
    };
    new MissionArea(MissionArea) {
