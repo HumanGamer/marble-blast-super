@@ -11,6 +11,7 @@ new SimGroup(MissionGroup) {
          name = "Hopping";
          goldTime = "7250";
 	 hyperTime = "5250";
+	 hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

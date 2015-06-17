@@ -2,15 +2,15 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         startHelpText = "The SuperSpeed PowerUp will give you a nice boost of acceleration! It also has a large variety of uses!";
+         hyperTime = "10500";
          level = "4";
          name = "Speeding";
          type = "Tutorial";
-         startHelpText = "The Super Speed PowerUp will give you a nice boost of acceleration!";
-         artist = "Rozi";
-         goldTime = "8000";
-         hyperTime = "4000";
+         hasEgg = "1";
+         goldTime = "12000";
          desc = "Go from platform to platform with the game\'s acceleration PowerUp!";
-		 hasEgg = "1";
+         artist = "davidjl123";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -51,63 +51,66 @@ new SimGroup(MissionGroup) {
       ambient = "0.400000 0.400000 0.400000 1.000000";
    };
    new StaticShape(StartPoint) {
-      position = "7.45031 -95.4594 -3.73196";
-      rotation = "1 0 0 0";
+      position = "20.1335 -67.3151 -1.65702";
+      rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "2826";
+         beam = "2548";
    };
    new ScriptObject() {
+         gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
+         time = "0";
          bonusTime = "0";
          pad = "2406";
-         time = "0";
-         penaltyTime = "0";
-         gemCount = "0";
    };
    new ScriptObject() {
+         gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
+         time = "0";
          bonusTime = "0";
          pad = "3708";
-         time = "0";
-         penaltyTime = "0";
-         gemCount = "0";
    };
    new ScriptObject() {
+         gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
+         time = "0";
          bonusTime = "0";
          pad = "3690";
-         time = "0";
-         penaltyTime = "0";
-         gemCount = "0";
    };
    new Item() {
-      position = "7.36248 -84.6107 -3.7138";
+      position = "-24.8393 -42.4066 4.5889";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "SuperSpeedItem";
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
+         checkpointNum = "2";
    };
    new ScriptObject() {
+         gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
+         time = "0";
          bonusTime = "0";
          pad = "2615";
-         time = "0";
-         penaltyTime = "0";
-         gemCount = "0";
-   };
-   new InteriorInstance() {
-      position = "3.39656 -93.5257 -4.3243";
-      rotation = "1 0 0 0";
-      scale = "0.5 0.5 0.5";
-      interiorFile = "~/data/interiors/Rozi/MBSSuperSpeed.dif";
-      showTerrainInside = "0";
    };
    new Item() {
-      position = "7.28683 -54.0131 1.1246";
+      position = "2.50333 -67.3895 -2.98676";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EasterEggItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "10.4458 -67.38 -1.90852";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "SuperSpeedItem";
@@ -117,40 +120,143 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new StaticShape(EndPoint) {
-      position = "7.4269 -9.01764 1.29424";
+      position = "-40.7294 -42.3052 12.798";
+      rotation = "0 0 -1 90";
+      scale = "0.75 0.75 0.75";
+      dataBlock = "EndPad";
+         beam = "2471";
+   };
+   new InteriorInstance() {
+      position = "1.58154 -67.376 5.67499";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "EndPad";
-         beam = "2808";
-   };
-   new Trigger(OOBTrigger) {
-      position = "-2.1008 -3.2877 -6.9243";
-      rotation = "1 0 0 0";
-      scale = "20 100 40";
-      dataBlock = "InBoundsTrigger";
-      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+      interiorFile = "~/data/interiors/tutorial/speeding.dif";
+      showTerrainInside = "0";
    };
    new ScriptObject() {
+         gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
+         time = "0";
          bonusTime = "0";
          pad = "2926";
-         time = "0";
-         penaltyTime = "0";
+   };
+   new Trigger(check1t) {
+      position = "-32.6448 -52.3248 4.17994";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check1";
+   };
+   new Item() {
+      position = "-30.8385 -42.4066 8.58815";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperSpeedItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "2";
+   };
+   new Item() {
+      position = "-15.9418 -54.3662 6.40957";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "2";
+         node = "2547";
+   };
+   new Item() {
+      position = "-12.6998 -67.3951 10.4398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TimeTravelItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "-40.8449 -67.3863 -1.92114";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperSpeedItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new StaticShape(check1) {
+      position = "-30.6826 -54.375 4.66744";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "CheckPointShape";
+   };
+   new Item() {
+      position = "-24.8394 -54.3377 4.58679";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperSpeedItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "2";
+   };
+   new Trigger(help2) {
+      position = "-34.1692 -63.3765 -1.83229";
+      rotation = "1 0 0 0";
+      scale = "1 8 3.5";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "You can use the SuperSpeed to climb steep slopes!";
+   };
+   new Trigger(help1) {
+      position = "10.0473 -63.363 -1.82839";
+      rotation = "1 0 0 0";
+      scale = "1 8 3.5";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Use the SuperSpeed to cross the large gap!";
+   };
+   new Trigger(help3) {
+      position = "-36.6583 -51.3666 4.64703";
+      rotation = "1 0 0 0";
+      scale = "1 6 3.5";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Use the SuperSpeed to get the Gem and bounce back!";
+   };
+   new Trigger(help4) {
+      position = "-21.7014 -48.3624 4.6687";
+      rotation = "0 0 1 90";
+      scale = "1 6 3.5";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Begin rolling off the edge, then use the SuperSpeed just before falling to reach higher ground (jump if you need to)!";
+   };
+   new ScriptObject() {
          gemCount = "0";
+         penaltyTime = "0";
+         powerUp = "0";
+         time = "0";
+         bonusTime = "0";
+         pad = "2122";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
    };
-   new Item() {
-      position = "7.44086 -80.1945 -3.92046";
+   new Trigger() {
+      position = "-49.6816 -35.0222 -13.1356";
       rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "EasterEggItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
+      scale = "80 40 80";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
 };
 //--- OBJECT WRITE END ---

@@ -3,7 +3,7 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          time = "0";
-         name = "Different Platforms";
+         name = "Meet the Platform Trio";
          desc = "There are three different kinds of platforms that have purposes other than giving the marble a place to roll on!";
          goldTime = "15000";
          type = "tutorial";
@@ -448,7 +448,7 @@ new SimGroup(MissionGroup) {
       scale = "0.5 8 2.5";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Exploding Platforms explode on contact, like a mine. They give you an upward boost, like a Super Jump";
+         text = "Exploding Platforms explode on contact, like a Mine. They give you an upward boost, like a SuperJump.";
    };
    new Trigger(MBSHelpTrigger) {
       position = "2.97925 5.96732 5.95";
@@ -456,7 +456,7 @@ new SimGroup(MissionGroup) {
       scale = "4 0.5 2.5";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Hiding Platforms dissapear on contact. Step quickly through these to avoid falling off!";
+         text = "Hiding Platforms disappear on contact. Step quickly through these to avoid falling off.";
    };
    new Trigger(MBSHelpTrigger) {
       position = "24.9977 2.5106 5.95";
@@ -464,7 +464,7 @@ new SimGroup(MissionGroup) {
       scale = "8 0.5 2.5";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Rotating Platforms will rotate one way or another. ";
+         text = "Rotating Platforms will rotate one way or another.";
    };
    new ScriptObject() {
          time = "0";

@@ -1,4 +1,4 @@
-QuArKLog> QuArK started at 11/15/2014 8:39:10 PM
+QuArKLog> QuArK started at 6/16/2015 7:05:15 PM
 QuArKLog> QuArK version is QuArK 6.6 Beta 6
 QuArKLog> Loglevel is 20
 SysLog> CPU:
@@ -9,7 +9,7 @@ SysLog>
 SysLog> MEMORY:
 SysLog> Physical Memory Total: 4,294,967,295 Bytes
 SysLog> Physical Memory Free: 4,294,967,295 Bytes
-SysLog> Virtual Memory Free: 2,075,721,728 Bytes
+SysLog> Virtual Memory Free: 2,075,656,192 Bytes
 SysLog> 
 SysLog> OS:
 SysLog> Platform: Windows 7 or Windows Server 2008 R2
@@ -28,6 +28,4 @@ SysLog> Microsoft Direct3D RGB Software Emulation
 PythonLog> PYTHON:
 PythonLog> Version: 2.4.4 (#71, Oct 18 2006, 08:34:43) [MSC v.1310 32 bit (Intel)]
 PythonLog> DLL: C:\Program Files (x86)\QuArK 6.6.0 Beta 6\dlls\python.dll
-Log> Global warning: Texture 'levelcreating/mbs_wall' not found.
-Log> Global warning: Texture 'levelcreating/edge_white2' not found.
-Log> Global warning: Texture 'levelcreating/grid_warm3' not found.
+QuArKLog> QuArK closed at 6/16/2015 7:48:47 PM
