@@ -2,14 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         level = "5";
+         type = "beginner";
+         hasEgg = "1";
+         desc = "Should I pick left or right?";
          goldTime = "4500";
+         level = "5";
+         artist = "Matthieu Parizeau & davidjl123";
          hyperTime = "3500";
          name = "Pick your demise!";
-         type = "beginner";
-         desc = "Should I pick left or right?";
-         artist = "Matthieu Parizeau";
-         hasEgg = "1";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -60,113 +60,113 @@ new SimGroup(MissionGroup) {
       position = "8 -8 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "startpad";
-         beam = "8721";
+      dataBlock = "StartPad";
+         beam = "3059";
    };
    new StaticShape(EndPoint) {
       position = "8 26 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "endpad";
-         beam = "8338";
+      dataBlock = "EndPad";
+         beam = "2293";
    };
    new StaticShape(Platform1) {
       position = "5 4.5 1";
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         hide = "708576";
-         permanent = "1";
-         skin = "wall";
-         normalScale = "1 1 1";
          Trigger = "1";
+         hide = "2628651";
+         normalScale = "1 1 1";
+         skin = "wall256";
          used = "0";
+         permanent = "1";
    };
    new StaticShape(Platform1) {
       position = "7 4.5 1";
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         hide = "708577";
-         permanent = "1";
-         skin = "wall";
-         normalScale = "1 1 1";
          Trigger = "1";
+         hide = "2628652";
+         normalScale = "1 1 1";
+         skin = "wall256";
          used = "0";
+         permanent = "1";
    };
    new StaticShape(Platform1) {
       position = "9 4.5 1";
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         hide = "708578";
-         permanent = "1";
-         skin = "wall";
-         normalScale = "1 1 1";
-         unhide1 = "1099";
          Trigger = "1";
+         hide = "2628653";
+         normalScale = "1 1 1";
+         skin = "wall256";
+         unhide1 = "1099";
          unhide = "1098";
          used = "0";
+         permanent = "1";
    };
    new StaticShape(Platform1) {
       position = "11 4.5 1";
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         hide = "708579";
-         permanent = "1";
-         skin = "wall";
-         normalScale = "1 1 1";
          Trigger = "1";
+         hide = "2628654";
+         normalScale = "1 1 1";
+         skin = "wall256";
          used = "0";
+         permanent = "1";
    };
    new StaticShape(Platform1) {
       position = "11 4.5 3";
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         hide = "708580";
-         permanent = "1";
-         skin = "wall";
-         normalScale = "1 1 1";
          Trigger = "1";
+         hide = "2628655";
+         normalScale = "1 1 1";
+         skin = "wall256";
          used = "0";
+         permanent = "1";
    };
    new StaticShape(Platform1) {
       position = "9 4.5 3";
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         hide = "708581";
-         permanent = "1";
-         skin = "wall";
-         normalScale = "1 1 1";
          Trigger = "1";
+         hide = "2628656";
+         normalScale = "1 1 1";
+         skin = "wall256";
          used = "0";
+         permanent = "1";
    };
    new StaticShape(Platform1) {
       position = "7 4.5 3";
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         hide = "708582";
-         permanent = "1";
-         skin = "wall";
-         normalScale = "1 1 1";
          Trigger = "1";
+         hide = "2628657";
+         normalScale = "1 1 1";
+         skin = "wall256";
          used = "0";
+         permanent = "1";
    };
    new StaticShape(Platform1) {
       position = "5 4.5 3";
       rotation = "1 0 0 90";
       scale = "1 1 1";
       dataBlock = "HidingPlatform";
-         hide = "708583";
-         permanent = "1";
-         skin = "wall";
-         normalScale = "1 1 1";
          Trigger = "1";
+         hide = "2628658";
+         normalScale = "1 1 1";
+         skin = "wall256";
          used = "0";
+         permanent = "1";
    };
    new StaticShape(Bomb1) {
       position = "0 0 2";
@@ -204,37 +204,182 @@ new SimGroup(MissionGroup) {
          target = "Platform1";
    };
    new Item() {
-      position = "7.7375 8.63605 8.20336";
+      position = "3.2917 12.7526 -0.350504";
       rotation = "1 0 0 0";
-      scale = "1 1 1";
+      scale = "0.75 0.75 0.75";
       dataBlock = "EasterEggItem";
       collideable = "0";
       static = "1";
       rotate = "1";
+         checkpointNum = "1";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          time = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "4362";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          time = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "5404";
    };
    new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
          time = "0";
+         gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "8336";
+   };
+   new StaticShape() {
+      position = "0.0186377 4.72682 0.537022";
+      rotation = "1 0 0 0";
+      scale = "1 1 1.075";
+      dataBlock = "Glass1";
+   };
+   new StaticShape() {
+      position = "0.00356531 12.2504 0.490055";
+      rotation = "1 0 0 0";
+      scale = "1 1 1.075";
+      dataBlock = "Glass1";
+   };
+   new StaticShape() {
+      position = "15.9959 12.2542 0.490081";
+      rotation = "1 0 0 0";
+      scale = "1 1 1.075";
+      dataBlock = "Glass1";
+   };
+   new StaticShape() {
+      position = "15.9932 4.75867 0.495653";
+      rotation = "1 0 0 0";
+      scale = "1 1 1.075";
+      dataBlock = "Glass1";
+   };
+   new StaticShape() {
+      position = "16.1583 14.3948 -0.0669345";
+      rotation = "1 0 0 0";
+      scale = "2 1 1";
+      dataBlock = "WaterShape";
+   };
+   new StaticShape() {
+      position = "-0.474955 14.412 -0.0479086";
+      rotation = "1 0 0 0";
+      scale = "2 1 1";
+      dataBlock = "WaterShape";
+   };
+   new Trigger() {
+      position = "-3.99693 13.5008 -1.09806";
+      rotation = "1 0 0 0";
+      scale = "24 1 1";
+      dataBlock = "WaterTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new StaticShape() {
+      position = "-4.7449 21.4197 0.500862";
+      rotation = "0 0 -1 90";
+      scale = "2.975 1 1.25";
+      dataBlock = "Glass1";
+   };
+   new StaticShape() {
+      position = "20.7415 21.4227 0.485727";
+      rotation = "0 0 -1 90";
+      scale = "2.975 1 1.25";
+      dataBlock = "Glass1";
+   };
+   new StaticShape() {
+      position = "8.03781 30.5832 0.528903";
+      rotation = "1 0 0 0";
+      scale = "4.175 1 1.25";
+      dataBlock = "Glass1";
+   };
+   new StaticShape() {
+      position = "7.98011 21.4086 8.24225";
+      rotation = "1 0 0 0";
+      scale = "4.175 2.975 1";
+      dataBlock = "Glass_Floor";
+   };
+   new StaticShape() {
+      position = "-0.540965 26.546 0.254417";
+      rotation = "1 0 0 0";
+      scale = "1.35 1.35 1";
+      dataBlock = "Glass_Floor";
+   };
+   new StaticShape() {
+      position = "16.527 26.5207 0.261393";
+      rotation = "1 0 0 0";
+      scale = "1.35 1.35 1";
+      dataBlock = "Glass_Floor";
+   };
+   new ScriptObject() {
+         time = "0";
+         gemCount = "0";
+         penaltyTime = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "4980";
+   };
+   new StaticShape() {
+      position = "16.1591 -8.48079 -0.00144028";
+      rotation = "1 0 0 0";
+      scale = "2 2 3";
+      dataBlock = "WaterShape";
+   };
+   new StaticShape() {
+      position = "-0.27888 -8.07165 -0.0155613";
+      rotation = "1 0 0 0";
+      scale = "2 2 3";
+      dataBlock = "WaterShape";
+   };
+   new Trigger() {
+      position = "-4.26153 -4.15415 -2.04363";
+      rotation = "1 0 0 0";
+      scale = "24.5 8 2";
+      dataBlock = "WaterTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new StaticShape() {
+      position = "0.4386 15.6115 0.75125";
+      rotation = "0 0 -1 90";
+      scale = "3 2 3";
+      dataBlock = "TallGrass";
+   };
+   new StaticShape() {
+      position = "5.57883 16.7799 0.742763";
+      rotation = "1 0 0 0";
+      scale = "3 3 3";
+      dataBlock = "TallGrass";
+   };
+   new StaticShape() {
+      position = "15.4386 15.6115 0.75125";
+      rotation = "0 0 -1 90";
+      scale = "3 2 3";
+      dataBlock = "TallGrass";
+   };
+   new StaticShape() {
+      position = "3.4937 13.0556 7.44171";
+      rotation = "0 1 0 180";
+      scale = "3 3 3";
+      dataBlock = "LightBulb";
+   };
+   new StaticShape() {
+      position = "12.4937 13.0556 7.44171";
+      rotation = "0 1 0 180";
+      scale = "3 3 3";
+      dataBlock = "LightBulb";
+   };
+   new ScriptObject() {
+         time = "0";
+         gemCount = "0";
+         penaltyTime = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2291";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
