@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = getRandomBackground();
+   bitmap = "~/client/backgrounds/Elevation.png";
    useVariable = "0";
    tile = "0";
 
@@ -41,7 +41,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "200 33";
-            extent = "422 218";
+            extent = "422 146";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -414,7 +414,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             skin = "base";
             cameraRotX = "0.5";
             cameraZRotSpeed = "0.001";
-            orbitDistance = "1.3";
+            orbitDistance = "1.19";
             autoSize = "0";
          };
          new GuiObjectView(HC_SuperBounce) {
@@ -487,6 +487,24 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             cameraRotX = "0.35";
             cameraZRotSpeed = "0.001";
             orbitDistance = "2";
+            autoSize = "0";
+         };
+         new GuiObjectView(HC_Water) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "192 109";
+            extent = "69 63";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            cameraZRot = "0";
+            forceFOV = "0";
+            model = "~/data/shapes/water/water.dts";
+            skin = "base";
+            cameraRotX = "0.35";
+            cameraZRotSpeed = "0.001";
+            orbitDistance = "6";
             autoSize = "0";
          };
       };

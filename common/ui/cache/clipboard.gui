@@ -1,47 +1,21 @@
 new SimSet(guiClipboard) {
 
-   new GuiBitmapCtrl(CR_ScrollBG) {
+   new GuiObjectView(HC_Water) {
       profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "9 20";
-      extent = "176 304";
+      position = "273 206";
+      extent = "69 63";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "marble/client/ui/play/scrollbg";
-      wrap = "0";
-
-      new GuiScrollCtrl(CR_Scroll) {
-         profile = "PlayMissionScrollProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "4 8";
-         extent = "166 295";
-         minExtent = "8 8";
-         visible = "1";
-         helpTag = "0";
-         willFirstRespond = "1";
-         hScrollBar = "dynamic";
-         vScrollBar = "dynamic";
-         constantThumbHeight = "0";
-         childMargin = "0 0";
-
-         new GuiTextListCtrl(CR_List) {
-            profile = "GuiTextListProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "0 0";
-            extent = "166 8";
-            minExtent = "8 8";
-            visible = "1";
-            helpTag = "0";
-            enumerate = "0";
-            resizeCell = "1";
-            columns = "0";
-            fitParentWidth = "1";
-            clipColumnText = "0";
-         };
-      };
+      cameraZRot = "0";
+      forceFOV = "0";
+      model = "marble/data/shapes/water/water.dts";
+      skin = "base";
+      cameraRotX = "0.35";
+      cameraZRotSpeed = "0.001";
+      orbitDistance = "3.82843";
+      autoSize = "1";
    };
 };
