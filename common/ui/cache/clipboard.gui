@@ -1,34 +1,47 @@
 new SimSet(guiClipboard) {
 
-   new GuiScrollCtrl(HC_Scroll) {
-      profile = "PlayMissionScrollProfile";
+   new GuiBitmapCtrl(CR_ScrollBG) {
+      profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "15 27";
-      extent = "166 295";
+      position = "9 20";
+      extent = "176 304";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      willFirstRespond = "1";
-      hScrollBar = "dynamic";
-      vScrollBar = "dynamic";
-      constantThumbHeight = "0";
-      childMargin = "0 0";
+      bitmap = "marble/client/ui/play/scrollbg";
+      wrap = "0";
 
-      new GuiTextListCtrl(HC_List) {
-         profile = "GuiTextListProfile";
+      new GuiScrollCtrl(CR_Scroll) {
+         profile = "PlayMissionScrollProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "0 0";
-         extent = "166 208";
+         position = "4 8";
+         extent = "166 295";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         enumerate = "0";
-         resizeCell = "1";
-         columns = "0";
-         fitParentWidth = "1";
-         clipColumnText = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(CR_List) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "166 8";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
       };
    };
 };
