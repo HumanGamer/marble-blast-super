@@ -23,11 +23,6 @@ function HelpCreditsGui::onWake(%this)
    HC_List.setSelectedByID(0);
 }
 
-function HC_List::addPage(%this, %id, %page)
-{
-   %this.addRow(%id, %page, %id);
-}
-
 function HC_List::onSelect(%this, %index)
 {
    HelpCreditsGui.setPage(%index + 1);
