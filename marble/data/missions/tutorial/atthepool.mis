@@ -2,16 +2,16 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         level = "4";
-         goldTime = "20000";
-         hyperTime = "7000";
-         time = "45000";
-         startHelpText = "What is this blue liquid?";
          type = "tutorial";
-         name = "At The Pool";
-         desc = "Learn how to roll with water!";
-         artist = "Matthieu Parizeau";
          hasEgg = "1";
+         goldTime = "20000";
+         startHelpText = "What is this blue liquid?";
+         time = "45000";
+         artist = "Matthieu Parizeau";
+         hyperTime = "7000";
+         desc = "Learn how to roll with water!";
+         name = "At The Pool";
+         level = "4";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -62,15 +62,15 @@ new SimGroup(MissionGroup) {
       position = "-2.5 2 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "startpad";
-         beam = "4334";
+      dataBlock = "StartPad";
+         beam = "6899";
    };
    new StaticShape(EndPoint) {
       position = "16.5 2 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "endpad";
-         beam = "3714";
+      dataBlock = "EndPad";
+         beam = "6418";
    };
    new Item() {
       position = "7.5 -6 0";
@@ -81,7 +81,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "4330";
+         node = "6895";
    };
    new Item() {
       position = "7.5 18 0";
@@ -92,7 +92,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "4331";
+         node = "6896";
    };
    new Item() {
       position = "4 12 -4";
@@ -102,7 +102,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4332";
+         checkpointNum = "1";
+         node = "6897";
    };
    new Item() {
       position = "9 2 -4";
@@ -112,7 +113,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "4333";
+         checkpointNum = "1";
+         node = "6898";
    };
    new StaticShape() {
       position = "12.5 14 1.2";
@@ -156,11 +158,6 @@ new SimGroup(MissionGroup) {
       rotate = "1";
          checkpointNum = "1";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
-   };
    new Item() {
       position = "-6.29951 -9.79992 -4.94329";
       rotation = "1 0 0 0";
@@ -169,6 +166,65 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+   };
+   new StaticShape() {
+      position = "-2.00676 -10.7478 0.00117403";
+      rotation = "1 0 0 0";
+      scale = "1.675 1 1";
+      dataBlock = "Glass1";
+   };
+   new StaticShape() {
+      position = "12.018 -10.7488 0.00589639";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Glass3";
+   };
+   new StaticShape() {
+      position = "-7.22845 15.0414 0.012851";
+      rotation = "0 0 -1 90";
+      scale = "0.84 1 1";
+      dataBlock = "Glass3";
+   };
+   new StaticShape() {
+      position = "-7.23204 -1.50321 0.00422439";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "Glass3";
+   };
+   new StaticShape() {
+      position = "12.0561 22.741 -0.000725776";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Glass3";
+   };
+   new StaticShape() {
+      position = "21.2477 -1.49916 -0.00422841";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "Glass3";
+   };
+   new StaticShape() {
+      position = "21.2368 15.054 0.00362808";
+      rotation = "0 0 -1 90";
+      scale = "0.84 1 1";
+      dataBlock = "Glass3";
+   };
+   new StaticShape() {
+      position = "-1.95711 22.7392 0.0105636";
+      rotation = "1 0 0 0";
+      scale = "1.675 1 1";
+      dataBlock = "Glass1";
+   };
+   new StaticShape() {
+      position = "7.16866 6.27747 6.24334";
+      rotation = "1 0 0 0";
+      scale = "4.8 5.75 1";
+      dataBlock = "Glass_Floor";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---
