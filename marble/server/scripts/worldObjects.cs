@@ -6,7 +6,31 @@ datablock StaticShapeData(Glass1)
 {
    className = "Structure";
 	category = "Structures";
-	shapeFile = "~/data/shapes/structures/glass.dts";
+	shapeFile = "~/data/shapes/structures/glass1.dts";
+	emap = false;
+};
+
+datablock StaticShapeData(Glass2)
+{
+   className = "Structure";
+	category = "Structures";
+	shapeFile = "~/data/shapes/structures/glass2.dts";
+	emap = false;
+};
+
+datablock StaticShapeData(Glass3)
+{
+   className = "Structure";
+	category = "Structures";
+	shapeFile = "~/data/shapes/structures/glass3.dts";
+	emap = false;
+};
+
+datablock StaticShapeData(Glass_Floor)
+{
+   className = "Structure";
+	category = "Structures";
+	shapeFile = "~/data/shapes/structures/glass_floor.dts";
 	emap = false;
 };
 
