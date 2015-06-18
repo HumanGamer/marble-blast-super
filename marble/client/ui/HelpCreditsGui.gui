@@ -67,7 +67,7 @@ new GuiChunkedBitmapCtrl(HelpCreditsGui) {
             orbitDistance = "1.62787";
             autoSize = "1";
          };
-         new GuiBitmapCtrl(PM_ScrollBG) {
+         new GuiBitmapCtrl(HC_ScrollBG) {
             profile = "GuiDefaultProfile";
             horizSizing = "right";
             vertSizing = "bottom";
