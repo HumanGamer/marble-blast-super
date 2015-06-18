@@ -32,6 +32,18 @@ new GameTSCtrl(PlayGui) {
       bitmap = "./game/water.png";
       wrap = "0";
    };
+   new GuiBitmapCtrl(PG_Lava) {
+		profile = "GuiDefaultProfile";
+		horizSizing = "width";
+		vertSizing = "height";
+		position = "0 0";
+		extent = "640 480";
+		minExtent = "8 8";
+		visible = "0";
+		helpTag = "0";
+		bitmap = "./game/lava.png";
+		wrap = "0";
+	};
    new GuiBitmapCtrl(PG_PhysMod) {
       profile = "GuiDefaultProfile";
       horizSizing = "width";
@@ -44,6 +56,17 @@ new GameTSCtrl(PlayGui) {
       bitmap = "./game/physmod.png";
       wrap = "0";
    };
+   new GuiProgressCtrl(PG_LavaTime) {
+		profile = "GuiProgressProfile";
+		horizSizing = "center";
+		vertSizing = "bottom";
+		position = "25 75";
+		extent = "550 25";
+		minExtent = "8 8";
+		visible = "0";
+		helpTag = "0";
+		wrap = "0";
+	};
    new GameTSCtrl(PG_RearView) {
       profile = "GuiDefaultProfile";
       horizSizing = "left";

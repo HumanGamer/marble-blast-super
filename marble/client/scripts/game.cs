@@ -211,6 +211,15 @@ function clientCmdSetBlastEnergy(%energy, %max, %extra)
 function clientCmdHideWater()
 {
    PG_Water.setVisible(false);
+   $isUnderwater = false;
+}
+
+function clientCmdHideLava()
+{
+   PG_Lava.setVisible(false);
+   
+	PG_LavaTime.setVisible(false);
+	PG_LavaTime.setValue(1);
 }
 
 function clientCmdHidePhysMod()

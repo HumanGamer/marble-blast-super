@@ -139,10 +139,16 @@ datablock StaticShapeData(WaterShape)
 {
    category = "Water";
    className = "Water";
-   shapeFile = "~/data/shapes/water/water.dts";
+   shapeFile = "~/data/shapes/liquid/liquid.dts";
    scopeAlways = true;
-   
+   skin = "Water";
 };
+
+function WaterShape::onAdd(%this, %obj)
+{
+   if (%this.skin !$= "")
+      %obj.setSkinName(%this.skin);
+}
 
 // ---------------------------------------------------------
 // Triggers

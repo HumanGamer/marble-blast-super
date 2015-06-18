@@ -1,0 +1,145 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         startHelpText = "What is this orange liquid?";
+         level = "39";
+         type = "custom";
+         goldTime = "20000";
+         name = "At The Fire!";
+         artist = "Matthieu Parizeau";
+         desc = "A typical day at the fire hole!";
+			music = "Road To Heaven.ogg";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0";
+      cloudHeightPer[1] = "0";
+      cloudHeightPer[2] = "0";
+      cloudSpeed1 = "0.0001";
+      cloudSpeed2 = "0.0002";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "-1 0.8 0.45";
+      fogVolume2 = "-1 0.8 0.65";
+      fogVolume3 = "-1 0.8 0.85";
+      materialList = "~/data/skies/sky_day.dml";
+      windVelocity = "1 0 0";
+      windEffectPrecipitation = "0";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 0.800000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.800000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 0.800000";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "1.000000 1.000000 0.900000 1.000000";
+      ambient = "0.400000 0.400000 0.400000 1.000000";
+   };
+   new InteriorInstance() {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/custom/atthefire.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape(StartPoint) {
+      position = "-2.5 2 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "StartPad";
+   };
+   new StaticShape(EndPoint) {
+      position = "16.5 2 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EndPad";
+   };
+   new Item() {
+      position = "7.5 -6 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "7.5 18 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "4 12 -4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "9 2 -4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "GemItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new StaticShape() {
+      position = "12.5 14 1.2";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "SignCautionCaution";
+   };
+   new StaticShape() {
+      position = "7.5 -2 1.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SignCautionDanger";
+   };
+   new Trigger(Bounds) {
+      position = "-10 25.5 -7.5";
+      rotation = "1 0 0 0";
+      scale = "34 39 24.5";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new Trigger() {
+      position = "1.755 14.2557 -6.3";
+      rotation = "1 0 0 0";
+      scale = "12 16 6";
+      dataBlock = "LavaTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new StaticShape() {
+      position = "7.78195 6.39032 -0.3";
+      rotation = "1 0 0 0";
+      scale = "3 4 1";
+      dataBlock = "LavaShape";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+};
+//--- OBJECT WRITE END ---
