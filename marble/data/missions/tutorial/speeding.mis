@@ -3,12 +3,13 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          artist = "davidjl123";
+         level = "6";
+         name = "Speeding";
          music = "Blackout.ogg";
+         type = "Tutorial";
          time = "0";
          desc = "Use the SuperSpeed PowerUp to cross large gaps!";
-         name = "Speeding";
-         type = "Tutorial";
-         level = "6";
+			startHelpText = "Get a good running start, then use the SuperSpeed to cross the gap!"
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -60,14 +61,14 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "5265";
+         beam = "3514";
    };
    new StaticShape(EndPoint) {
       position = "19 20 5";
       rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "3093";
+         beam = "2633";
    };
    new Trigger(Bounds) {
       position = "-54.8125 35.5 -7.78178";
@@ -83,12 +84,12 @@ new SimGroup(MissionGroup) {
       dataBlock = "WaterShape";
    };
    new ScriptObject() {
-         gemCount = "0";
-         time = "0";
          penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
          pad = "3091";
+         time = "0";
+         gemCount = "0";
    };
    new StaticShape() {
       position = "8.86406 -3.284 -7.26163";
@@ -192,6 +193,42 @@ new SimGroup(MissionGroup) {
       scale = "160 100 60";
       dataBlock = "WaterTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new Item() {
+      position = "-30.8415 19.996 -3.68031";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperSpeedItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "1.48726 -0.00446799 -7.58389";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperSpeedItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2631";
+         time = "0";
+         gemCount = "0";
+   };
+   new Trigger() {
+      position = "-36.8862 24.0064 -3.60775";
+      rotation = "1 0 0 0";
+      scale = "1 8 3";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Use the SuperSpeed to reach the finish!";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
