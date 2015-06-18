@@ -1,16 +1,34 @@
 new SimSet(guiClipboard) {
 
-   new GuiMLTextCtrl(OptCamDownLabel) {
-      profile = "GuiBigTextProfile";
+   new GuiScrollCtrl(HC_Scroll) {
+      profile = "PlayMissionScrollProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "259 133";
-      extent = "185 36";
+      position = "15 27";
+      extent = "166 295";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      lineSpacing = "2";
-      allowColorChars = "0";
-      maxChars = "-1";
+      willFirstRespond = "1";
+      hScrollBar = "dynamic";
+      vScrollBar = "dynamic";
+      constantThumbHeight = "0";
+      childMargin = "0 0";
+
+      new GuiTextListCtrl(HC_List) {
+         profile = "GuiTextListProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "166 208";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         enumerate = "0";
+         resizeCell = "1";
+         columns = "0";
+         fitParentWidth = "1";
+         clipColumnText = "0";
+      };
    };
 };
