@@ -109,8 +109,7 @@ addMaterialMapping( "friction_none" ,    NoFrictionMaterial);
 addMaterialMapping( "friction_low" ,     LowFrictionMaterial);
 addMaterialMapping( "friction_high" ,    HighFrictionMaterial);
 addMaterialMapping( "friction_sand" ,    VeryHighFrictionMaterial);
-// used for ramps in escher level
-addMaterialMapping( "friction_ramp_yellow" ,    VeryHighFrictionMaterial); // TO BE REMOVED
+addMaterialMapping( "friction_sand_shadow" ,    VeryHighFrictionMaterial);
 
 // old textures (to be removed?)
 addMaterialMapping( "grid1" , RubberFloorMaterial);
