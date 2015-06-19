@@ -6,8 +6,8 @@ new SimGroup(MissionGroup) {
          level = "20";
          name = "Sand Box";
          type = "Intermediate";
-         goldTime = "75000";
-         time = "120000";
+         goldTime = "60000";
+         time = "110000";
          startHelpText = "Remember that sand has a higher friction than a standard floor!";
          artist = "Rozi";
          desc = "You\'re at the end of the Intermediate levels! Make this run count!";
