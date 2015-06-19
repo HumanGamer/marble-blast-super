@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          type = "expert";
          level = "4";
          goldTime = "90000";
-         artist = "Ender/Rozi";
+         artist = "Ender & Rozi";
          hyperTime = "60000";
    };
    new MissionArea(MissionArea) {
