@@ -61,16 +61,16 @@ function HelpCreditsGui::setPage(%this, %page)
    {
       case 1:
          %text = "<font:Whitestone:50><color:000000><just:center>Overview<font:EntangledMBS:24><just:left>\n\n" @
-              "Marble Blast Super is a modification of the classic platformer game - Marble Blast Gold. There are new levels, features, and graphics. There are hazards you must avoid on your trip to the finish.";
+              "Marble Blast Super is a modification of the well known classic platformer game - Marble Blast Gold. Roll your marble through new textures, through new obstacles, and new levels! ";
       case 2:
          %text = "<font:Whitestone:50><color:000000><just:center>Basic Controls<font:EntangledMBS:24><just:left>\n\n" @
-                 "The marble can be moved forward, back, left and right by pressing <func:bind moveforward>, <func:bind movebackward>, <func:bind moveleft> and <func:bind moveright>, respectively.  Pressing <func:bind jump> causes the marble to jump, and pressing <func:bind mouseFire> uses whatever powerup you currently have available.  All movement is relative to the view direction.";
+                 "The marble can be moved forward, back, left and right by pressing the <func:bind moveforward>, <func:bind movebackward>, <func:bind moveleft> and <func:bind moveright>, keys respectively.  Pressing <func:bind jump> causes the marble to jump, and pressing <func:bind mouseFire> uses whatever powerup you currently have available.  All movement is relative to the view direction.";
       case 3:
          %text = "<font:Whitestone:50><color:000000><just:center>Camera Controls<font:EntangledMBS:24><just:left>\n\n" @
                  "The camera direction can be changed by moving the mouse or by pressing <func:bind panUp>, <func:bind panDown>, <func:bind turnLeft> or <func:bind turnRight>.  In order to look up and down freely with the mouse, hold down <func:bind freelook>.  You can turn free look on always from the Mouse pane of the Control Options screen.";
       case 4:
          %text = "<font:Whitestone:50><color:000000><just:center>Goals<font:EntangledMBS:24><just:left>\n\n" @
-                 "<lmargin:70>Start Pad - this is where you start the level.\n\nEnd Pad - roll your marble here to end the level.\n\nGems - if a level has gems, you must pick them all up before you can exit.";
+                 "<lmargin:70>Start Pad - this is where you start the level you're currently in.\n\nEnd Pad - roll your marble onto here to complete the level.\n\nGems - if a level has any gems, you must pick all of them up before successfully exiting the level. Check the top left for a gem counter.";
          HC_StartPad.setVisible(true);
          HC_EndPad.setVisible(true);
          HC_Gem1.setVisible(true);
@@ -92,24 +92,24 @@ function HelpCreditsGui::setPage(%this, %page)
          HC_TimeTravel.setVisible(true);
       case 7:
          %text = "<font:Whitestone:50><color:000000><just:center>Hazards (Part 1/3)<font:EntangledMBS:24><just:left>\n\n" @
-                 "<lmargin:70>Duct Fan - be careful this doesn't blow you away!\n\nTornado - it'll pull you in and spit you out.\n\nTrap Door - keep moving when you're rolling over one of these.";
+                 "<lmargin:70>Duct Fan - don't let these blow you away!!\n\nTornado - don't get too close, or it'll pull you in and spit you out!\n\nTrap Door - if you don't keep moving while you're on one of these, it'll collapse under you!";
          HC_DuctFan.setVisible(true);
          HC_Tornado.setVisible(true);
          HC_Trapdoor.setVisible(true);
       case 8:
          %text = "<font:Whitestone:50><color:000000><just:center>Hazards (Part 2/3)<font:EntangledMBS:24><just:left>\n\n" @
-                 "<lmargin:70>Bumper - this'll bounce you if you touch it.\n\nLand Mine - Warning!  Explodes on contact!\n\nOil Slick - you won't have much traction on these surfaces.\n\nPlatform - can be anything. They can collapse or even explode.";
+                 "<lmargin:70>Bumper - this'll bump you away if you touch it.\n\nLand Mine - Warning!  Explodes on contact!\n\nOil Slick - you won't have much traction on these surfaces.\n\nPlatform - can be anything. They can collapse or even explode.";
          HC_Bumper.setVisible(true);
          HC_Landmine.setVisible(true);
          HC_Oilslick.setVisible(true);
 		 HC_HidingPlatform.setVisible(true);
 		case 9: %text = "<font:Whitestone:50><color:000000><just:center>Hazards (Part 3/3)<font:EntangledMBS:24><just:left>\n\n" @
-                 "<lmargin:70>Cannon - shoots cannon balls that blow you off the map.\n\nBomb - Can be triggered in unexpected ways..\n\nRotating Platform - time to get dizzy!";
+                 "<lmargin:70>Cannon - shoots cannon balls that blow you off the map.\n\nBomb - Can be triggered in unexpected ways..\n\nRotating Platform - don't get dizzy while you're on one of these!!";
          HC_Cannon.setVisible(true);
          HC_Bomb.setVisible(true);
          HC_RotatingPlatform.setvisible(true);
 		case 10: %text = "<font:Whitestone:50><color:000000><just:center>Environment<font:EntangledMBS:24><just:left>\n\n" @
-                 "<lmargin:70>Water - Slows you down and you can swim in it, just like real life water!";
+                 "<lmargin:70>Water - Slows you down and you can swim in it, just like real life water!\n\nLava - you can swim in it, like water, but don't stay in too long or you'll disintegrate!";
          HC_Water.setVisible(true);
       case 11:
          %text = "<font:Whitestone:50><color:000000><just:center>About GarageGames<font:EntangledMBS:24><just:left>\n\n" @
