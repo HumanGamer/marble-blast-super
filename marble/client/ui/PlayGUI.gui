@@ -575,16 +575,15 @@ new GameTSCtrl(PlayGui) {
          wrap = "0";
       };
    };
-   new GuiBitmapCtrl(PG_HelpText) {
+   new GuiControl(PG_HelpText) {
       profile = "GuiDefaultProfile";
-      horizSizing = "width";
-      vertSizing = "top";
-      position = "98 480";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "0 0";
       extent = "352 86";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "./game/helpbg";
 
       new GuiMLTextCtrl(HelpTextBackground) {
          profile = "GuiMLTextProfile";

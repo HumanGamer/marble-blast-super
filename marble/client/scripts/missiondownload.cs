@@ -107,10 +107,7 @@ addMessageCallback( 'MsgLoadInfoDone', handleLoadInfoDoneMessage );
 function handleLoadInfoMessage( %msgType, %msgString, %mapName ) {
 	
 	// Need to pop up the loading gui to display this stuff.
-	if (!$Client::NoGuiChange)
-	   Canvas.setContent("LoadingGui");
-   
-   $Client::NoGuiChange = false;
+   Canvas.setContent("LoadingGui");
 
 	// Clear all of the loading info lines:
 	for( %line = 0; %line < LoadingGui.qLineCount; %line++ )
@@ -144,10 +141,4 @@ function handleLoadDescriptionMessage( %msgType, %msgString, %line )
 function handleLoadInfoDoneMessage( %msgType, %msgString )
 {
    // This will get called after the last description line is sent.
-}
-
-function clearLoading()
-{
-   LG_ProgressBar.setValue(0);
-   LG_Name.setText("<font:Whitestone:32><just:left>" @ "Processing...");
 }

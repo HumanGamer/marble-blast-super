@@ -38,7 +38,7 @@ function GameConnection::initialControlSet(%this)
    // first check if the editor is active
    if (!Editor::checkActiveLoadDone())
    {
-      if (Canvas.getContent() != PlayGui.getId() && !$Client::NoGuiChange)
+      if (Canvas.getContent() != PlayGui.getId())
       {
          Canvas.setContent(PlayGui);
       }

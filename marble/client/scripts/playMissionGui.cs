@@ -73,14 +73,6 @@ function PM_ToggleDifficultyPopUp()
 
 function PM_StartMission()
 {
-   Canvas.setContent(LoadingGui);
-   clearLoading();
-   
-   schedule(100, 0, "PM_ContinueStartMission");
-}
-
-function PM_ContinueStartMission()
-{
    %id = PM_missionList.getSelectedId();
    %mission = getField(PM_missionList.getRowTextById(%id), 1);
    $LastMissionId = %id;

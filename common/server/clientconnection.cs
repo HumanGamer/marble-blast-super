@@ -31,7 +31,7 @@ function GameConnection::onConnect( %client, %name, %version, %game )
    messageClient(%client,'MsgConnectionError',"",$Pref::Server::ConnectionError);
 
    // Send mission information to the client
-   //sendLoadInfoToClient( %client );
+   sendLoadInfoToClient( %client );
 
    // Simulated client lag for testing...
    // %client.setSimulatedNetParams(0.1, 30);
