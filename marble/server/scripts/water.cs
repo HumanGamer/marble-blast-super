@@ -175,7 +175,7 @@ function WaterTrigger::onEnterTrigger(%this, %trigger, %obj)
 	  %rej = VectorRej($marbleVelocity,%nor);
 	  %rejlen = VectorLen(%rej);
 	  // user(-1.75+1.25*mPow(2,-%rejlen/30));
-	  findRealMarble().applyVelocity("0 0 0",VectorScale(%proj,-1.75+1.25*mPow(2,-%rejlen/30)));
+	  findRealMarble().applyVelocity("0 0 0",VectorScale(%proj,-1.75+1.25*mPow(2,-%rejlen/20)));
 	  %emit = new ParticleEmitterNode() {
 		  position = VectorSub(%obj.position,"0 0 1");
 		  rotation = "1 0 0 0";
