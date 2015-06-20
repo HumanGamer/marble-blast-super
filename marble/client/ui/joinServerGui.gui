@@ -108,7 +108,7 @@ new GuiChunkedBitmapCtrl(JoinServerGui) {
          extent = "134 16";
          minExtent = "8 8";
          visible = "1";
-         variable = "$pref::Multiplayer::Name";
+         variable = "$pref::Player::Name";
          helpTag = "0";
          maxLength = "255";
          maxPixelWidth = "0";
@@ -325,7 +325,7 @@ function JoinServerGui::join(%this)
    %index = getField(JS_serverList.getRowTextById(%id),6);
    if (setServerInfo(%index)) {
       %conn = new GameConnection(ServerConnection);
-      %conn.setConnectArgs($pref::Multiplayer::Name, $Multiplayer::Version, $Multiplayer::GameName);
+      %conn.setConnectArgs($pref::Player::Name);
       %conn.setJoinPassword($Client::Password);
       %conn.connect($ServerInfo::Address);
    }

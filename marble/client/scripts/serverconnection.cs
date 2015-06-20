@@ -129,121 +129,6 @@ function GameConnection::onConnectRequestTimedOut(%this)
 }
 
 //-----------------------------------------------------------------------------
-// Host
-//-----------------------------------------------------------------------------
-
-function enterMPName()
-{
-   EnterIPDlg.show("$pref::Multiplayer::Name", "checkMPName();", "What is your name?");
-}
-
-function checkMPName()
-{
-   if ($pref::Multiplayer::Name $= "")
-   {
-      disconnect();
-   } else {
-      Canvas.popDialog(EnterIPDlg);
-   }
-}
-
-function startServer(%serverType, %mission)
-{
-   //if (%serverType $= "Multiplayer")
-   //   EnterIPDlg.show("$pref::Multiplayer::Name", "continueStartServer(" @ %serverType @ "," @ %mission @ ");", "What is your name?");
-   //else 
-      continueStartServer(%serverType, %mission);
-}
-
-function continueStartServer(%serverType, %mission)
-{
-   createServer(%serverType, %mission.file);
-   %conn = new GameConnection(ServerConnection);
-   RootGroup.add(ServerConnection);
-   %conn.setConnectArgs($pref::Multiplayer::Name, $Multiplayer::Version, $Multiplayer::GameName);
-   %conn.setJoinPassword($Client::Password);
-   %conn.connectLocal();
-}
-
-//-----------------------------------------------------------------------------
-// Connect
-//-----------------------------------------------------------------------------
-
-function connectTo()
-{
-   EnterIPDlg.show("$pref::Multiplayer::IP", "connect($pref::Multiplayer::IP);", "Enter the IP of the server");
-}
-
-function connect(%ip)
-{
-   if (isObject(ServerConnection))
-   {
-      warn("Already connected to a server!");
-      return;
-   }
-   //EnterIPDlg.show("$pref::Multiplayer::Name", "continueConnect(\""@%ip@"\");", "What is your name?");
-   continueConnect(%ip);
-}
-
-function continueConnect(%ip)
-{
-   if (%ip !$= "")
-   {
-      $Client::ConnectedMultiplayer = true;
-      echo("IP: " @ %ip);
-   } else {
-      echo("IP: 127.0.0.1");
-   }
-   //%ip = %ip @ ":28000";
-   if (!$Client::NoGuiChange)
-      Canvas.setContent(ConnectGui);
-   %conn = new GameConnection(ServerConnection);
-   RootGroup.add(%conn);
-   %conn.setConnectArgs($pref::Multiplayer::Name, $Multiplayer::Version, $Multiplayer::GameName);
-   %conn.setJoinPassword($Client::Password);
-   if (%ip $= "")
-      %conn.connectLocal();
-   else
-      %conn.connect(%ip);
-}
-
-function stopRandomConnect()
-{
-   //if (isEventPending($connectRandSchedule))
-   //   cancel($connectRandSchedule);
-   cancel($connectDelay);
-   cancelServerQuery();
-   //Canvas.setContent(MainMenuGui);
-}
-
-function connectRandom()
-{
-   stopRandomConnect();
-   Canvas.setContent(ConnectGui);
-   queryMasterServer(28000, 0, $Client::GameTypeQuery, $Client::MissionTypeQuery, 0, 100, 0, 2, 500, 0, 0);
-   //$connectRandSchedule = schedule(2500, 0, continueConnectRandom);
-}
-
-function onServerQueryStatus(%status, %msg, %value)
-{
-	if (%status !$= "done")
-		return;
-   if (getServerCount() > 0)
-   {
-      %rand = getRandom(0, getServerCount());
-      %flag = setServerInfo(%rand);
-      if (%flag)
-      {
-         cancel($connectDelay);
-         $connectDelay = schedule(2500, 0, connect, $ServerInfo::Address);
-      }
-   } else {
-      Canvas.setContent(MultiplayerGui);
-      MessageBoxOK("Information", "No Games Avaliable", "");
-   }
-}
-
-//-----------------------------------------------------------------------------
 // Disconnect
 //-----------------------------------------------------------------------------
 
@@ -253,7 +138,6 @@ function disconnect()
    if (isObject(ServerConnection))
       ServerConnection.delete();
    disconnectedCleanup();
-   //resetGhostVars();
 
    // Call destroyServer in case we're hosting
    destroyServer();
@@ -269,7 +153,6 @@ function disconnectedCleanup()
       MusicPlayer.stop();
    //
    //LagIcon.setVisible(false);
-   //PlayerListGui.clear();
    
    // Clear all print messages
    clientCmdclearBottomPrint();
@@ -284,7 +167,6 @@ function disconnectedCleanup()
    stopDemo();
    
    $Client::ConnectedMultiplayer = false;
-   resetGhostVars();
-   //PlayerListGui.clear();
+   cancel($CompassUpdate);
 }
 

@@ -57,9 +57,11 @@ function initServer()
 
    // Load up game server support scripts
    exec("./scripts/commands.cs");
+   exec("./scripts/gameCommands.cs");
    exec("./scripts/centerPrint.cs");
    exec("./scripts/game.cs");
-   exec("./scripts/multiplayer.cs");
+   exec("./scripts/gameUpdate.cs");
+   exec("./scripts/gameConnection.cs");
 }
 
 

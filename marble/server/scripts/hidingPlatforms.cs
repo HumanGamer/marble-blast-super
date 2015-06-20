@@ -76,7 +76,7 @@ function checkHidingPlatforms()
          if (%obj.currentTime $= "")
             %obj.currentTime = 0;          
             
-         %obj.currentTime += $Multiplayer::UpdateInterval;
+         %obj.currentTime += $Game::UpdateInterval;
          
          if (%obj.currentTime >= %obj.timer)
          {

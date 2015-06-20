@@ -17,8 +17,13 @@ new MaterialProperty(NoFrictionMaterial) {
    restitution = 0.5;
 };
 
-new MaterialProperty(LowFrictionMaterial) {
+new MaterialProperty(VeryLowFrictionMaterial) {
    friction = 0.20;
+   restitution = 0.5;
+};
+
+new MaterialProperty(LowFrictionMaterial) {
+   friction = 0.5;
    restitution = 0.5;
 };
 
@@ -106,7 +111,7 @@ addMaterialMapping( "pattern_warm2" ,      DefaultMaterial);
 
 addMaterialMapping( "friction_mud" ,     LowFrictionMaterial);
 addMaterialMapping( "friction_none" ,    NoFrictionMaterial);
-addMaterialMapping( "friction_low" ,     LowFrictionMaterial);
+addMaterialMapping( "friction_low" ,     VeryLowFrictionMaterial);
 addMaterialMapping( "friction_high" ,    HighFrictionMaterial);
 addMaterialMapping( "friction_sand" ,    VeryHighFrictionMaterial);
 addMaterialMapping( "friction_sand_shadow" ,    VeryHighFrictionMaterial);

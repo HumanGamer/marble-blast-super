@@ -35,7 +35,7 @@ function createDemoInfo()
 		%file.writeLine("\t\tname = \"" @ $Recording::File @ "\";");
 		%file.writeLine("\t\tdesc = \"" @ $Recording::Desc @ "\";");
 		%file.writeLine("\t\tmission = \"" @ $Recording::Mission @ "\";");
-		%file.writeLine("\t\tartist = \"" @ $pref::Multiplayer::Name @ "\";");
+		%file.writeLine("\t\tartist = \"" @ $pref::Player::Name @ "\";");
 		%file.writeLine("\t\tblastCount = \"" @ $BlastCount @ "\";");
 		for (%i = 0; %i < $BlastCount; %i++)
 		{

@@ -39,11 +39,6 @@ function PlayGui::onWake(%this)
    playGameMusic();
    
    setupPlayGui();
-   
-   if ($Client::ConnectedMultiplayer || MissionInfo.gameMode $= "hunt")
-   {
-      Canvas.pushDialog(PlayerListGui);
-   }
 }
 
 function PlayGui::onSleep(%this)
@@ -119,7 +114,7 @@ function PlayGui::setMaxGems(%this,%count)
       GemsQuotaHundred.setVisible(true);
       GemsQuotaTen.setVisible(true);
       GemsQuotaOne.setVisible(true);
-   } else if ($Multiplayer::GameMode !$= "hunt" && %count != 0)
+   } else if (MissionInfo.gameMode !$= "hunt" && %count != 0)
    {
       HUD_ShowGem.setVisible(true);
       GemsFoundHundred.setVisible(true);
@@ -150,7 +145,7 @@ function PlayGui::setMaxGems(%this,%count)
       GemsQuotaTen.setVisible(false);
       GemsQuotaOne.setVisible(false);
    }
-   //if ($Multiplayer::GameMode !$= "hunt" && %count != 0)
+   //if (MissionInfo.gameMode !$= "hunt" && %count != 0)
    //{
 	//GemsSlash.setVisible(true);
    //GemsTotalHundred.setVisible(true);
@@ -211,7 +206,7 @@ function PlayGui::resetTimer(%this,%dt)
    %this.updateControls();
    %this.stopTimer();
    
-   $Multiplayer::Ended = false;
+   $Game::Ended = false;
 }
 
 function PlayGui::adjustTimer(%this,%dt)
@@ -274,22 +269,22 @@ function PlayGui::updateTimer(%this, %timeInc)
          $BonusSfx = "";
       }
    }
-   if ($Multiplayer::GameMode $= "hunt")
-	%this.elapsedTime -= %timeInc;
+   if (MissionInfo.gameMode $= "hunt")
+	   %this.elapsedTime -= %timeInc;
    else 
-    %this.elapsedTime += %timeInc;
+      %this.elapsedTime += %timeInc;
 
    // Some sanity checking
    if (%this.elapsedTime > 3600000)
       %this.elapsedTime = 3599999;
 	  
-   if (%this.elapsedTime < 0 && isObject(ServerConnection) && $Multiplayer::GameMode $= "hunt")
+   if (%this.elapsedTime < 0 && isObject(ServerConnection) && MissionInfo.gameMode $= "hunt")
       %this.elapsedTime = 0;
    
-   if ((%this.elapsedTime == 0 && isObject(ServerConnection) && $Multiplayer::GameMode $= "hunt" && !$Multiplayer::Ended) && !$infiniteTime)
+   if ((%this.elapsedTime == 0 && isObject(ServerConnection) && MissionInfo.gameMode $= "hunt" && !$Game::Ended) && !$infiniteTime)
    {
        commandToServer('GameFinished');
-       $Multiplayer::Ended = true;
+       $Game::Ended = true;
    }
 
    %this.updateControls();
@@ -357,13 +352,6 @@ function setupPlayGui()
    } else {
       PG_Rear.visible = false;
       PG_RearView.visible = false;
-   }
-   
-   if (($pref::ShowRadar && !MissionInfo.hideRadar) || $Client::ConnectedMultiplayer)
-   {
-      RadarContainer.visible = true;
-   } else {
-      RadarContainer.visible = false;
    }
 }
 

@@ -36,7 +36,7 @@ function onServerCreated()
 {
    // Server::GameType is sent to the master server.
    // This variable should uniquely identify your game and/or mod.
-   $Server::GameType = $Multiplayer::GameName;
+   $Server::GameType = "MarbleBlast";
 
    // Server::MissionType sent to the master server.  Clients can
    // filter servers based on mission type.
@@ -62,7 +62,6 @@ function onServerCreated()
 
    // Basic items
    exec("./marble.cs");
-   //exec("./ghost.cs");
    exec("./gems.cs");
    exec("./powerUps.cs");
    exec("./buttons.cs");
@@ -87,9 +86,6 @@ function onServerCreated()
    
    exec("./physics.cs");
 
-   // Multiplayer
-   //exec("./multiplayer.cs");
-
    // Keep track of when the game started
    $Game::StartTime = $Sim::Time;
 }
@@ -112,10 +108,6 @@ function onMissionLoaded()
 
    setGravityDir("1 0 0 0 -1 0 0 0 -1",true);
    $Game::CurrentGravityDir = "1 0 0 0 -1 0 0 0 -1";
-
-   // Start the game here if multiplayer...
-   //if ($Server::ServerType $= "MultiPlayer")
-   //   startGame();
 }
 
 function onMissionEnded()
@@ -192,7 +184,7 @@ function GameBase::onMissionReset(%this)
 function startGame()
 {
    //if ($Game::Running) {
-   //   error("startGame: End the game first!");
+   //   debug("startGame: End the game first!");
    //   return;
    //}
    $Game::Running = true;
@@ -411,15 +403,14 @@ function endGame()
       return;
    }
    if (!$Game::Running) {
-      error("endGame: No game running!");
+      debug("endGame: No game running!");
       return;
    }
    $Game::GameLoops = 0;
-   cancel($Multiplayer::UpdateSchedule);
-   cancel($Multiplayer::DeltaUpdate);   
-   cancel($Multiplayer::CollisionUpdate);
-   cancel($Multiplayer::OOBUpdate);
-   cancel($Multiplayer::SpeedUpdate);
+   cancel($Game::UpdateSchedule);
+   cancel($Game::DeltaUpdate);   
+   cancel($Game::CollisionUpdate);
+   cancel($Game::OOBUpdate);
    destroyGame();
 
    // Inform the clients the game is over
@@ -427,7 +418,6 @@ function endGame()
    {
       for (%index = 0; %index < ClientGroup.getCount(); %index++)  {
          %client = ClientGroup.getObject(%index);
-         //if (!$Client::ConnectedMultiplayer)
          commandToClient(%client, 'GameEnd');
          %client.stopTimer();
       }
@@ -449,14 +439,6 @@ function endGame()
    // Bump up the max level
    if (!$DemoBuild && !$playingDemo && $Game::Qualified && (MissionInfo.level + 1) > $Pref::QualifiedLevel[MissionInfo.type])
          $Pref::QualifiedLevel[MissionInfo.type] = MissionInfo.level + 1;
-         
-   //if ($Client::ConnectedMultiplayer)
-   //{
-      //for (%index = 0; %index < ClientGroup.getCount(); %index++)  {
-         //%client = ClientGroup.getObject(%index);
-         //commandToClient(%client, 'SetLobby');
-      //}
-   //}
 }
 
 function pauseGame()
@@ -500,7 +482,7 @@ function GameConnection::setGameState(%this, %state)
    cancel(%this.StateSchedule);
    %this.GameState = %state;
    eval("%this.State"@%state@"();");
-   //echo("State "@%state@"");
+   info("State "@%state@"");
 }
 
 function GameConnection::StateStart(%this)
@@ -738,25 +720,12 @@ function GameConnection::incBonusTime(%this,%dt)
 
 function GameConnection::onClientEnterGame(%this)
 {
+   info("Player Joined Game");
    commandToClient(%this, 'HideWater');
    commandToClient(%this, 'HideLava');
    commandToClient(%this, 'HidePhysMod');
-   //setupGameRadar();
-   // Matt: for some reason this doesn't work without doing it multiple times
-   //for (%i = 0; %i < 100; %i++)
-   //   commandToClient(%this, 'ClearRadar');
-   commandToClient(%this, 'SetMode', MissionInfo.gameMode);
-   //commandToClient(%this, 'AddPlayer', %this.getId(), %this.nameBase, true, 0, false);
    
    resetGems();
-   
-   //for (%i = 0; %i < ClientGroup.getCount(); %i++)
-   //{
-   //   %client = ClientGroup.getObject(%i);
-      
-      //if (%client.getId() !$= %this.getId())
-      //   commandToClient(%client, 'AddPlayer', %this.getId(), %this.nameBase, false, 0, false);
-   //}
    
    // Create a new camera object.
    %this.camera = new Camera() {
@@ -771,60 +740,33 @@ function GameConnection::onClientEnterGame(%this)
    {
       %this.resetStats();
       %this.spawnPlayer();
-
-      if (%this.isHost())
-      {
-         // Anchor the player to the start pad
-         %this.player.setMode(Start);
-      } else {
-         %this.player.setMode("normal");//(ClientGroup.getObject(0).player.getMode());
-      }
+      
+      // Anchor the player to the start pad
+      %this.player.setMode(Start);
    }
 
    // Start the game here for single player
    if ($Server::ServerType $= "SinglePlayer")
       startGame();
    
-   if (%this.isHost())   
-      if ($Server::ServerType $= "MultiPlayer")
-         %this.setGameState("wait");
-      else
-         %this.setGameState("start");
-   else {
-      %this.setGameState(ClientGroup.getObject(0).GameState);
-      %this.setTime(PlayGui.elapsedTime);
-      %this.startTimer();
-   }
+   %this.setGameState("start");
    
    $Server::MissionLoaded = true;
-   
-   if ($Server::ServerType $= "MultiPlayer")
-      %this.schedule(1000, "ShowPreMission");
-      
-   //setupGameRadar();
-}
-
-function GameConnection::ShowPreMission(%this)
-{
-   commandToClient(%this, 'ShowPreMission');
 }
 
 function GameConnection::onClientLeaveGame(%this)
 {
-   
+   info("Player Left Game");
    commandToClient(%this, 'StopBlast');
-   //commandToAll('RemovePlayer', %this.getId());
    if (isObject(%this.camera))
       %this.camera.delete();
    if (isObject(%this.player))
       %this.player.delete();
-   //if (isObject(%this.ghost))
-      //%this.ghost.delete();
-   $Multiplayer::MarbleCount--;
 }
 
 function GameConnection::resetStats(%this)
 {
+   info("Resetting Stats");
    // Reset game stats
    %this.bonusTime = 0;
    %this.penaltyTime = 0;
@@ -849,6 +791,7 @@ function GameConnection::resetStats(%this)
 
 function GameConnection::onEnterPad(%this)
 {
+   info("On Enter Pad");
    if (%this.player.getPad() == $Game::EndPad && MissionInfo.gameMode !$= "hunt") {
       
       if (MissionInfo.gameMode $= "Quota")
@@ -885,15 +828,17 @@ function GameConnection::onLeavePad(%this)
 function GameConnection::onOutOfBounds(%this)
 {
    if (%this.GameState $= "End")
+   {
+      debug("Game has ended, cannot go out of bounds!");
       return;
+   }
+   
+   info("Out of Bounds!");
    
    if (!$LavaDeath)
    {
       $Core::PhysicsDisabled = false;
-      //error("Fucksickle");
    }
-   //else
-      //error("AW SHIT!!");
    
    $LavaDeath = false;
       
@@ -940,6 +885,7 @@ function GameConnection::onDestroyed(%this)
 
 function GameConnection::onFoundGem(%this,%amount, %gem)
 {
+   info("On Found Gem");
    %this.gemCount += %amount;
    if (MissionInfo.gameMode !$= "hunt")
    {
@@ -1026,7 +972,7 @@ function GameConnection::spawnPlayer(%this)
    // Combination create player and drop him somewhere
 	if (MissionInfo.gameMode $= "hunt")
 	{
-		%spawnPoint = %this.getMultiplayerSpawnPos();
+		%spawnPoint = %this.getHuntSpawnPos();
 	} else {
 		%spawnPoint = %this.getCheckpointPos();
 	}	
@@ -1053,44 +999,20 @@ function restartLevel()
       %client.respawnPlayer();
    }
    onGameStartup();
-   
-   if ($Client::ConnectedMultiplayer)
-   {
-      if (!$Game::Running) {
-         error("endGame: No game running!");
-         return;
-      }
-      $Game::GameLoops = 0;
-      cancel($Multiplayer::UpdateSchedule);
-      cancel($Multiplayer::DeltaUpdate);   
-      cancel($Multiplayer::CollisionUpdate);
-      cancel($Multiplayer::OOBUpdate);
-      cancel($Multiplayer::SpeedUpdate);
-      destroyGame();
-      commandToAll('ResetGhostVars');
-      for (%i = 0; %i < ClientGroup.getCount(); %i++)
-      {
-         %cl = ClientGroup.getObject(%i);
-         %cl.player.delete();
-         %cl.ShowPreMission();
-         //%cl.resetTimer();
-         %cl.setGameState("wait");
-      }
-   }
-   //LocalClientConnection.respawnPlayer();
 }
 
 function GameConnection::respawnPlayer(%this)
 {
+   info("Respawning Player");
    // Reset the player back to the last checkpoint
    cancel(%this.respawnSchedule);
    
    $Core::PhysicsDisabled = false;
    
-   if (!$Client::ConnectedMultiplayer && (!isObject(%this.checkPoint) || !isObject(%this.checkPoint.pad)))
+   if (!isObject(%this.checkPoint || !isObject(%this.checkPoint.pad)))
       %this.resetStats();
    
-   if (!$Client::ConnectedMultiplayer && (isObject(%this.checkPoint.pad) && %this.checkPoint.pad.getName() $= "StartPoint"))
+   if (isObject(%this.checkPoint.pad) && %this.checkPoint.pad.getName() $= "StartPoint")
       $resetLevel = true;
       
    findRealMarble().setScale("1 1 1");
@@ -1145,7 +1067,7 @@ function GameConnection::respawnPlayer(%this)
 
    if (MissionInfo.gameMode !$= "hunt" || $resetLevel)
    {
-      if (!$Client::ConnectedMultiplayer && (isObject(%this.checkPoint.pad) && %this.checkPoint.pad.getName() $= "StartPoint") || $resetLevel)
+      if ((isObject(%this.checkPoint.pad) && %this.checkPoint.pad.getName() $= "StartPoint") || $resetLevel)
       {
          ServerGroup.onMissionReset();
       } else if (%this.checkPoint.pad.getName() !$= "StartPoint")
@@ -1174,7 +1096,7 @@ function GameConnection::respawnPlayer(%this)
 	   {
 	      %this.player.setMode(Start);
 	      
-		   %spawnPoint = %this.getMultiplayerSpawnPos();
+		   %spawnPoint = %this.getHuntSpawnPos();
 		 
 		 
          %this.player.setPowerUp(%this.checkPoint.powerUp,true);
@@ -1182,7 +1104,7 @@ function GameConnection::respawnPlayer(%this)
       else
       {
          %this.player.setMode("normal");
-         %spawnPoint = %this.getMultiplayerSpawnPos(%this.player.getTransform());
+         %spawnPoint = %this.getHuntSpawnPos(%this.player.getTransform());
          %this.player.setPowerUp(%this.player.lastPowerUp,true);
       }
 	} else
@@ -1276,7 +1198,7 @@ function GameConnection::respawnPlayerHunt(%this)
    %this.player.setMode(Start);
 	if (MissionInfo.gameMode $= "hunt")
 	{
-		%spawnPoint = %this.getMultiplayerSpawnPos(%this.player.getTransform());
+		%spawnPoint = %this.getHuntSpawnPos(%this.player.getTransform());
 	} else {
 		%spawnPoint = %this.getCheckpointPos();
 	}
@@ -1304,40 +1226,26 @@ function GameConnection::respawnPlayerHunt(%this)
 
 function GameConnection::createPlayer(%this, %spawnPoint)
 {
+   info("Creating Player");
    if (%this.player > 0)  {
       // The client should not have a player currently
       // assigned.  Assigning a new one could result in
       // a player ghost.
-      error( "Attempting to create an angus ghost!" );
+      debug( "Attempting to create an angus ghost!" );
    }
    
    $Core::PhysicsDisabled = false;
-   
-   %scale = 1 - $Multiplayer::MarbleCount / 10000;
-   //commandToClient(%this, 'SetGhostScale', %scale);
-   $Multiplayer::MarbleCount++;
-   
-   if ($Server::ServerType $= "SinglePlayer")
-   {
-      %this.spawnOffset = 0 SPC 0 SPC 0;
-   } else {
-      %offset = $Multiplayer::MarbleCount * (getRandom() - 0.5);
-      %this.spawnOffset = %offset SPC %offset SPC 0;
-   }
 
    %player = new Marble() {
       dataBlock = DefaultMarble;
       client = %this;
-      scale = %scale SPC %scale SPC %scale;
    };  
    
    if (isObject(MissionCleanup))
       MissionCleanup.add(%player);
-   
-   %pos = getWord(%spawnPoint, 0) + getWord(%this.spawnOffset, 0) SPC getWord(%spawnPoint, 1) + getWord(%this.spawnOffset, 1) SPC getWord(%spawnPoint, 2) + getWord(%this.spawnOffset, 2) SPC getWord(%spawnPoint, 3) SPC getWord(%spawnPoint, 4) SPC getWord(%spawnPoint, 5) SPC getWords(%spawnPoint, 6);
 
    // Player setup...
-   %player.setPosition(%pos, 0.45);
+   %player.setPosition(%spawnPoint, 0.45);
    %player.setEnergyLevel(60);
    %player.setShapeName(%this.name);
    %player.client.status = 1;
@@ -1351,8 +1259,6 @@ function GameConnection::createPlayer(%this, %spawnPoint)
    // Give the client control of the player
    %this.player = %player;
    %this.setControlObject(%player);
-   
-   //%this.createGhost();
    
    %this.player.updateBlast();
    

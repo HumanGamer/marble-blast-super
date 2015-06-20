@@ -49,7 +49,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
          extent = "139 40";
          minExtent = "8 8";
          visible = "1";
-         command = "StopDemoTimer();$pref::Multiplayer::isMultiplayer=0; PMSetMissionTab(\"tutorial\"); Canvas.setContent(playmissiongui);";
+         command = "StopDemoTimer();PMSetMissionTab(\"tutorial\"); Canvas.setContent(playmissiongui);";
          helpTag = "0";
          text = "play";
          groupNum = "-1";

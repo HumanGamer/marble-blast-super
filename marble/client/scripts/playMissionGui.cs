@@ -86,11 +86,6 @@ function PM_ContinueStartMission()
    $LastMissionId = %id;
    $LastMissionType = %mission.type;
 
-   if ($pref::Multiplayer::isMultiplayer)
-      %serverType = "MultiPlayer";
-   else
-      %serverType = "SinglePlayer";
-
    // We need to start a server if one isn't already running
    if ($Server::ServerType $= "") {
       if($doRecordDemo)
@@ -98,7 +93,7 @@ function PM_ContinueStartMission()
          //recordDemo("~/client/demos/demo.rec", %mission.file);
          startRecordingDemo(%mission);
       } else {
-         startServer(%serverType, %mission);
+         startServer("SinglePlayer", %mission);
       }
    }
    else
@@ -429,7 +424,7 @@ function PM_setSelected(%index)
    //EG_level_fgnd.setText("<color:FFFFFF><font:Bauhaus 93:24><just:center>" @ %type @ " Level " @ %index + 1);
    PM_missionList.setSelectedById(%index);
    
-   //$CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels && %mission.gameType !$= "Multiplayer";
+   //$CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels;
    
    //setLevelLocked();
    
@@ -532,9 +527,6 @@ function getMissionObject(%mission) {
       
    if (%infoObject.gameType $= "")
       %infoObject.gameType = "SinglePlayer";
-      
-   //if (LobbyGui.isAwake() && %infoObject.gameType !$= "Multiplayer")
-   //   return;
       
    if (playMissionGui.isAwake() && %infoObject.gameType !$= "SinglePlayer")
       return;
