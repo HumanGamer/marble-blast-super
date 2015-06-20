@@ -2,12 +2,14 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         name = "Riverside";
          hasEgg = "0";
-         type = "Intermediate";
+         name = "Riverside";
+         goldTime = "90000";
          desc = "A stroll by the river.";
+         type = "Intermediate";
          artist = "Matthieu Parizeau";
          level = "1";
+         hyperTime = "50000";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -62,7 +64,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "5661";
+         node = "4200";
    };
    new StaticShape() {
       position = "7 6.5 1";
@@ -96,7 +98,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "5662";
+         node = "4201";
    };
    new StaticShape() {
       position = "-38 -3.5 1";
@@ -127,7 +129,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 90";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "5678";
+         beam = "4217";
    };
    new Item() {
       position = "-3 29 -1";
@@ -137,8 +139,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4202";
          checkpointNum = "1";
-         node = "5663";
    };
    new Item() {
       position = "5 29 -1";
@@ -148,7 +150,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "5664";
+         node = "4203";
    };
    new Item() {
       position = "5 34 -0.25";
@@ -158,7 +160,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "5665";
+         node = "4204";
    };
    new Item() {
       position = "-3 34 -0.25";
@@ -168,8 +170,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4205";
          checkpointNum = "1";
-         node = "5666";
    };
    new Item() {
       position = "-3 24 -0.25";
@@ -179,8 +181,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4206";
          checkpointNum = "1";
-         node = "5667";
    };
    new Item() {
       position = "5 24 -0.25";
@@ -190,7 +192,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "5668";
+         node = "4207";
    };
    new Item() {
       position = "10 29 -0.25";
@@ -200,7 +202,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "5669";
+         node = "4208";
    };
    new Item() {
       position = "10 24 -0.25";
@@ -210,7 +212,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "5670";
+         node = "4209";
    };
    new Item() {
       position = "10 34 -0.25";
@@ -220,7 +222,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "5671";
+         node = "4210";
    };
    new Item() {
       position = "-8 34 -0.25";
@@ -230,7 +232,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "5672";
+         node = "4211";
    };
    new Item() {
       position = "-8 24 -0.25";
@@ -240,7 +242,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "5673";
+         node = "4212";
    };
    new Item() {
       position = "-17 36 -3.5";
@@ -250,7 +252,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "5674";
+         node = "4213";
    };
    new Item() {
       position = "-41 7 -3.5";
@@ -260,8 +262,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4214";
          checkpointNum = "1";
-         node = "5675";
    };
    new Item() {
       position = "-4 -2 -3.5";
@@ -271,15 +273,15 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4215";
          checkpointNum = "1";
-         node = "5676";
    };
    new StaticShape(EndPoint) {
       position = "-35 33 1";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "5629";
+         beam = "4062";
    };
    new StaticShape() {
       position = "-14.2 14.5 0";
@@ -381,13 +383,14 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "4216";
          checkpointNum = "1";
-         node = "5677";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
+   new StaticShape() {
+      position = "5.69817 3.7958 0.378057";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TallGrass";
    };
    new StaticShape() {
       position = "-42.203 13.1903 -2.46858";
@@ -1019,11 +1022,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "TallGrass";
    };
-   new StaticShape() {
-      position = "5.69817 3.7958 0.378057";
-      rotation = "1 0 0 0";
-      scale = "1 1 1";
-      dataBlock = "TallGrass";
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---
