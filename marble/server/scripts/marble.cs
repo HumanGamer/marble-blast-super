@@ -712,3 +712,16 @@ function metricsMarble()
    Canvas.pushDialog(FrameOverlayGui, 1000);
    TextOverlayControl.setValue("$MarbleVelocity");
 }
+
+package MarblePackage {
+	function onFrameAdvance(%delta)
+	{
+		Parent::onFrameAdvance(%delta);
+		if (!isObject(DefaultMarble)) return;
+		if (!isObject(findRealMarble())) return;
+		$marbleVelocity = VectorScale(VectorSub(findRealMarble().getPosition(),$previousPosition),1000/%delta);
+		$previousPosition = findRealMarble().getPosition();
+	}
+};
+
+activatePackage(MarblePackage);

@@ -890,10 +890,10 @@ function GameConnection::onOutOfBounds(%this)
    if (!$LavaDeath)
    {
       $Core::PhysicsDisabled = false;
-      error("Fucksickle");
+      //error("Fucksickle");
    }
-   else
-      error("AW SHIT!!");
+   //else
+      //error("AW SHIT!!");
    
    $LavaDeath = false;
       

@@ -20,11 +20,14 @@ function serverCmdToggleCamera(%client)
       {
          %control = %client.camera;
          %control.mode = toggleCameraFly;
+         PG_Water.setVisible(false);
       }
       else
       {
          %control = %client.player;
          %control.mode = observerFly;
+         if ($isUnderwater)
+            PG_Water.setVisible(true);
       }
       %client.setControlObject(%control);
    }
