@@ -114,7 +114,7 @@ function EditorGui::init(%this)
 
    EditorMenuBar.clearMenus();
    EditorMenuBar.addMenu("File", 0);
-   EditorMenuBar.addMenuItem("File", "New Mission...", 1);
+   EditorMenuBar.addMenuItem("File", "New Mission...", 1, "Ctrl N");
    EditorMenuBar.addMenuItem("File", "Open Mission...", 2, "Ctrl O");
    EditorMenuBar.addMenuItem("File", "Save Mission...", 3, "Ctrl S");
    EditorMenuBar.addMenuItem("File", "Save Mission As...", 4);
