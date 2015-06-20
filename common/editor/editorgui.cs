@@ -131,6 +131,8 @@ function EditorGui::init(%this)
    EditorMenuBar.setMenuItemBitmap("Edit", "Copy", 4);
    EditorMenuBar.addMenuItem("Edit", "Paste", 5, "Ctrl V");
    EditorMenuBar.setMenuItemBitmap("Edit", "Paste", 5);
+   EditorMenuBar.addMenuItem("Edit", "Duplicate", 6, "Ctrl D");
+   EditorMenuBar.setMenuItemBitmap("Edit", "Duplicate", 6);
    EditorMenuBar.addMenuItem("Edit", "-", 0);
    EditorMenuBar.addMenuItem("Edit", "Select All", 6, "Ctrl A");
    EditorMenuBar.addMenuItem("Edit", "Select None", 7, "Ctrl N");
@@ -340,6 +342,7 @@ function EditorMenuBar::onMenuSelect(%this, %menuId, %menu)
 
          EditorMenuBar.setMenuItemEnable("Edit", "Cut", %canCutCopy);
          EditorMenuBar.setMenuItemEnable("Edit", "Copy", %canCutCopy);
+         EditorMenuBar.setMenuItemEnable("Edit", "Duplicate", %canCutCopy);
 
       }
       else if(ETerrainEditor.isVisible())
@@ -578,6 +581,8 @@ function EditorMenuBar::onEditMenuItemSelect(%this, %itemId, %item)
             EWorldEditor.deleteSelection();
          case "Paste":
             EWorldEditor.pasteSelection();
+         case "Duplicate":
+            EWorldEditor.duplicateSelection();
          case "Select All":
          case "Select None":
       }
@@ -974,6 +979,23 @@ function WorldEditor::moveSelectionInPlace(%this)
    %this.deleteSelection();
    %this.pasteSelection();
    %this.dropType = %saveDropType;
+}
+
+function WorldEditor::duplicateSelection(%this)
+{
+   for(%i = 0; %i < %this.getSelectionSize(); %i++)
+   {
+      %obj = %this.getSelectedObject(%i);
+      %thetransform[%i] = %obj.getTransform();
+   }
+   %this.copySelection();
+   %this.pasteSelection();
+   for(%i = 0; %i < %this.getSelectionSize(); %i++)
+   {
+      %obj = %this.getSelectedObject(%i);
+      
+      %obj.setTransform(%thetransform[%i]);
+   }
 }
 
 function WorldEditor::addSelectionToAddGroup(%this)
