@@ -33,6 +33,7 @@ function HidingPlatform::onMissionReset(%data, %obj)
 
 function hidePlatform(%obj)
 {
+   info("Hiding Platform: " @ %obj);
    if (isEventPending(%obj.unhide) || isEventPending(%obj.unhide1) || isEventPending(%obj.hide))
    {
       return;
@@ -163,6 +164,7 @@ function ExplodingPlatform::onMissionReset(%data, %obj)
 
 function ExplodingPlatform::explode(%this, %obj)
 {
+   info("Exploding Platform: " @ %obj);
    if (isEventPending(%obj.hide))
    {
       return;

@@ -480,11 +480,12 @@ datablock MarbleData(MiniMarbleBall : DefaultMarble)
 
 function MarbleData::onAdd(%this, %obj)
 {
-   echo("New Marble: " @ %obj);
+   debug("New Marble: " @ %obj);
 }
 
 function MarbleData::onTrigger(%this, %obj, %triggerNum, %val)
 {
+   debug("Marble Trigger: " @ %obj @ ", " @ %triggerNum @ ", " @ %val);
 }
 
 
@@ -495,6 +496,7 @@ function MarbleData::onCollision(%this,%obj,%col)
    // Try and pickup all items
    if (%col.getClassName() $= "Item")
    {
+      info("Marble Item Collision: " @ %obj @ ", " @ %col);
       %data = %col.getDatablock();
       %obj.pickup(%col,1);
    //} else if (%col.getClassName() $= "StaticShape" && %col.getDatablock().getName() $= "GhostMarble" || %col.getDatablock().getName() $= "GhostMegaMarble")
