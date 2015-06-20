@@ -2623,7 +2623,7 @@ function Heightfield::center()
 
 function ExportHeightfield::onAction()
 {
-   error("Time to export the heightfield...");
+   debug("Time to export the heightfield...");
    if (Heightfield_operation.getSelectedId() != -1) {
       $TerraformerSaveRegister = getWord(Heightfield_operation.getValue(), 0);
       Heightfield::saveBitmap("");

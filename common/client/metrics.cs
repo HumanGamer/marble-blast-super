@@ -74,6 +74,15 @@ function waterMetricsCallback()
           "  Hz#: " @ $T2::waterHazePointCount;
 }
 
+function waterMetricsCallback()
+{
+   return fpsMetricsCallback() @
+          "  Water --"@
+          "  Tri#: " @ $T2::waterTriCount @
+          "  Pnt#: " @ $T2::waterPointCount @
+          "  Hz#: " @ $T2::waterHazePointCount;
+}
+
 function timeMetricsCallback()
 {
    return fpsMetricsCallback() @ 
@@ -125,15 +134,15 @@ function marbleCallback()
 package Metrics
 {
 
-function onFrameAdvance(%time)
-{
-   Parent::onFrameAdvance(%time);
-   if(TextOverlayControl.callback !$= "")
+   function onFrameAdvance(%time)
    {
-      eval("$frameVal = " @ TextOverlayControl.callback @ ";");
-      TextOverlayControl.setText($frameVal);
+      Parent::onFrameAdvance(%time);
+      if(TextOverlayControl.callback !$= "")
+      {
+         eval("$frameVal = " @ TextOverlayControl.callback @ ";");
+         TextOverlayControl.setText($frameVal);
+      }
    }
-}
 
 };
 

@@ -223,6 +223,23 @@ if(!isObject(GuiTextProfile)) new GuiControlProfile (GuiTextProfile)
    autoSizeHeight = true;
 };
 
+if(!isObject(GuiMetricsProfile)) new GuiControlProfile (GuiMetricsProfile)
+{
+   opaque = true;
+   fillColor = "255 255 255";
+   fillColorHL = "128 128 128";
+   border = 1;
+   borderThickness = 1;
+   borderColor = "0 0 0";
+   fontType = "EntangledMBS";
+   fontColor = "0 0 0";
+   fontColorHL = "255 255 255";
+   fontColorNA = "128 128 128";
+   textOffset = "0 2";
+   autoSizeWidth = true;
+   autoSizeHeight = true;
+};
+
 if(!isObject(EditorTextProfile)) new GuiControlProfile (EditorTextProfile)
 {
    fontType = "Arial Bold";
@@ -415,8 +432,12 @@ if(!isObject(GuiConsoleProfile)) new GuiControlProfile ("GuiConsoleProfile")
    fontColorHL = "130 130 130";
    fontColorNA = "255 0 0";
    fontColors[3] = "0 130 0";
-   fontColors[6] = "50 50 50";
-   fontColors[7] = "50 50 0";  
+   fontColors[4] = "255 128 0";
+   fontColors[5] = "0 0 130";
+   fontColors[6] = "128 128 0";
+   fontColors[7] = "255 0 0";
+   //fontColors[6] = "50 50 50";
+   //fontColors[7] = "50 50 0";  
    fontColors[8] = "0 0 50"; 
    fontColors[9] = "0 50 0";   
 };

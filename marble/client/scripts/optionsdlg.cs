@@ -538,7 +538,7 @@ function findRemapCmdIndex( %command )
 
 function OptRemapInputCtrl::onInputEvent( %this, %device, %action )
 {
-	//error( "** onInputEvent called - device = " @ %device @ ", action = " @ %action @ " **" );
+	//debug( "** onInputEvent called - device = " @ %device @ ", action = " @ %action @ " **" );
 	Canvas.popDialog( RemapDlg );
 
 	// Test for the reserved keystrokes:

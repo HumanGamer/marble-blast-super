@@ -11,19 +11,28 @@ new GuiControl(FrameOverlayGui) {
 	modal = "false";
 	helpTag = "0";
    noCursor = true;
-
-	new GuiConsoleTextCtrl(TextOverlayControl) {
-		profile = "GuiTextProfile";
-		horizSizing = "right";
-		vertSizing = "bottom";
-		position = "5 5";
-		extent = "15 18";
-		minExtent = "8 8";
-		visible = "True";
-		setFirstResponder = "True";
-		modal = "True";
-		helpTag = "0";
-		expression = "10";
-	};
+   new GuiControl(MetricsBG) {
+      profile = "GuiMetricsProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "5 5";
+      extent = "640 20";
+      minExtent = "8 8";
+      visible = "True";
+      
+      new GuiTextCtrl(TextOverlayControl) {
+         profile = "GuiMetricsProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "2 1";
+         extent = "130 18";
+         minExtent = "130 18";
+         visible = "True";
+         setFirstResponder = "True";
+         modal = "True";
+         helpTag = "0";
+         expression = "10";
+      };
+   };
 };
 //--- OBJECT WRITE END ---

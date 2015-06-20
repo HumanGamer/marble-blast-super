@@ -1,21 +1,19 @@
 new SimSet(guiClipboard) {
 
-   new GuiObjectView(HC_Water) {
-      profile = "GuiDefaultProfile";
-      horizSizing = "right";
-      vertSizing = "bottom";
-      position = "273 206";
-      extent = "69 63";
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "width";
+      vertSizing = "top";
+      position = "0 357";
+      extent = "71 20";
       minExtent = "8 8";
       visible = "1";
+      variable = "$testCheats";
       helpTag = "0";
-      cameraZRot = "0";
-      forceFOV = "0";
-      model = "marble/data/shapes/water/water.dts";
-      skin = "base";
-      cameraRotX = "0.35";
-      cameraZRotSpeed = "0.001";
-      orbitDistance = "3.82843";
-      autoSize = "1";
+      text = "Editor";
+      groupNum = "-1";
+      buttonType = "ToggleButton";
+      repeatPeriod = "1000";
+      repeatDecay = "1";
    };
 };

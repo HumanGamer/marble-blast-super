@@ -709,8 +709,9 @@ function marbleVel()
 
 function metricsMarble()
 {
-   Canvas.pushDialog(FrameOverlayGui, 1000);
-   TextOverlayControl.setValue("$MarbleVelocity");
+   //Canvas.pushDialog(FrameOverlayGui, 1000);
+   //TextOverlayControl.setValue("$MarbleVelocity");
+   metrics("marble");
 }
 
 package MarblePackage {
