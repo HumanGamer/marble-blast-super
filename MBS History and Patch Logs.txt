@@ -1,8 +1,18 @@
 =========================================================
+BETA 4.3.1
+June 14, 2015
+
+- 16 modified levels
+- Added ability to stop physics
+- Updated MBExtender, and also implemented for Mac
+- Options GUI: Fixed Resolution and Graphics options
+- Fixed HelpCredits GUI syntax error
+
+=========================================================
 BETA 4.3
 June 9, 2015
 
-- 2 new levels (Thin Path, Agility, A Different Perspective)
+- 4 new levels (Thin Path, Agility, A Different Perspective, Revealing Secrets)
 - 2 modified levels (Neon Maze, Ender's Agility)
 - 2 new game modes (Quota, SideScrolling)
 - Added achievements

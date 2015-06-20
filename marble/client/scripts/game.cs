@@ -20,9 +20,9 @@ function getBestTimes(%mis)
       if($hs[%i] $= "")
       {
          if(MissionInfo.time)
-            $hs[%i] = MissionInfo.time @ "\tMBS";
+            $hs[%i] = MissionInfo.time @ "\tAnonymous Marble";
          else
-            $hs[%i] = "5998999\tMBS";
+            $hs[%i] = "5998999\tAnonymous Marble";
       }
    }
 }
@@ -211,6 +211,15 @@ function clientCmdSetBlastEnergy(%energy, %max, %extra)
 function clientCmdHideWater()
 {
    PG_Water.setVisible(false);
+   $isUnderwater = false;
+}
+
+function clientCmdHideLava()
+{
+   PG_Lava.setVisible(false);
+   
+	PG_LavaTime.setVisible(false);
+	PG_LavaTime.setValue(1);
 }
 
 function clientCmdHidePhysMod()

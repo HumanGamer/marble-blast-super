@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(CreditsGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "~/client/backgrounds/BlockTowers.png";
+   bitmap = "~/client/backgrounds/ChampionRoad.png";
    useVariable = "0";
    tile = "0";
 
@@ -28,8 +28,8 @@ new GuiChunkedBitmapCtrl(CreditsGui) {
          profile = "GuiBigTextProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "52 45";
-         extent = "133 36";
+         position = "189 22";
+         extent = "263 36";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -41,8 +41,8 @@ new GuiChunkedBitmapCtrl(CreditsGui) {
          profile = "GuiMLTextProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "56 118";
-         extent = "527 288";
+         position = "191 57";
+         extent = "415 120";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -54,8 +54,8 @@ new GuiChunkedBitmapCtrl(CreditsGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "relative";
          vertSizing = "relative";
-         position = "428 371";
-         extent = "140 51";
+         position = "12 395";
+         extent = "108 51";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.setContent(mainMenuGui);";
@@ -67,6 +67,50 @@ new GuiChunkedBitmapCtrl(CreditsGui) {
          repeatDecay = "1";
          bitmap = "./credits/home";
       };
+      new GuiBitmapCtrl(CR_ScrollBG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 20";
+         extent = "176 373";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./play/scrollbg";
+         wrap = "0";
+
+         new GuiScrollCtrl(CR_Scroll) {
+            profile = "PlayMissionScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "4 8";
+            extent = "166 358";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "dynamic";
+            vScrollBar = "dynamic";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(CR_List) {
+               profile = "GuiTextListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "166 128";
+               minExtent = "8 8";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+      };
    };
 };
 //--- OBJECT WRITE END ---
@@ -74,18 +118,73 @@ new GuiChunkedBitmapCtrl(CreditsGui) {
 function CreditsGui::onWake(%this)
 {
    %this.bitmap = getRandomBackground();
-   CreditsGuiTitle.setText("Credits");
-   %colorName = "<color:441111>";
-   %colorUser = "<color:44CCCC>";
-   %text = "<font:Whitestone:32><tab:230>";
-   %text = %text @ %colorName @ "Stewart Inglis\t" @ %colorUser @ "StewMan46\n";
-   %text = %text @ %colorName @ "Tristan Voss\t" @ %colorUser @ "Ender\n";
-   %text = %text @ %colorName @ "David Luo\t" @ %colorUser @ "davidjl123\n";
-   %text = %text @ %colorName @ "Matthieu Parizeau\t" @ %colorUser @ "cooldudepoke\n";
-   %text = %text @ %colorName @ "Erik Martin\t" @ %colorUser @ "Neon Lightning\n";
-   %text = %text @ %colorName @ "Greg McFadden\t" @ %colorUser @ "Skail\n";
-   %text = %text @ %colorName @ "James Colsey\t" @ %colorUser @ "BlastedMarble\n";
-   %text = %text @ %colorName @ "Chris Schroeppel\t" @ %colorUser @ "Rozi\n";
+   //CreditsGuiTitle.setText("Credits");
+   //%colorName = "<color:441111>";
+   //%colorUser = "<color:44CCCC>";
+   //%text = "<font:EntangledMBS:32><tab:230>";
+   //%text = %text @ %colorName @ "Stewart Inglis\t" @ %colorUser @ "StewMan46\n";
+   //%text = %text @ %colorName @ "Tristan Voss\t" @ %colorUser @ "Ender\n";
+   //%text = %text @ %colorName @ "David Luo\t" @ %colorUser @ "davidjl123\n";
+   //%text = %text @ %colorName @ "Matthieu Parizeau\t" @ %colorUser @ "cooldudepoke\n";
+   //%text = %text @ %colorName @ "Erik Martin\t" @ %colorUser @ "Neon Lightning\n";
+   //%text = %text @ %colorName @ "Greg McFadden\t" @ %colorUser @ "Skail\n";
+   //%text = %text @ %colorName @ "James Colsey\t" @ %colorUser @ "BlastedMarble\n";
+   //%text = %text @ %colorName @ "Chris Schroeppel\t" @ %colorUser @ "Rozi\n";
    
+   CreditsGuiText.setText(%text);
+   
+   CR_List.clear();
+   CR_List.addRow(0, "Matthieu Parizeau");
+   CR_List.addRow(1, "David Luo");
+   CR_List.addRow(2, "Chris Schroeppel");
+   CR_List.addRow(3, "Tristan Voss");
+   CR_List.addRow(4, "Greg McFadden");
+   CR_List.addRow(5, "James Colsey");
+   CR_List.addRow(6, "Erik Martin");
+   CR_List.addRow(7, "Stewart Inglis");
+   
+   CR_List.setSelectedByID(0);
+}
+
+function CR_List::onSelect(%this, %index)
+{
+   CreditsGui.setPage(%index + 1);
+}
+
+function CreditsGui::setPage(%this, %page)
+{
+   switch(%page)
+   {
+      case 1: // Matthieu Parizeau (cooldudepoke)
+         %text = "<font:EntangledMBS:18>[Also known as cooldudepoke]\n\n<font:EntangledMBS:24>Leader of Marble Blast Super.\n\n" @
+                 "Also a very talented programmer who wrote most of the scripts in Marble Blast Super.\n\n" @
+                 "Makes levels for the game, as well as textures, GUIs, shapes, and many other things.";
+      break;
+      case 2: // David Luo (davidjl123)
+         %text = "<font:EntangledMBS:18>[Also known as davidjl123]\n\n<font:EntangledMBS:24>Does general fixes and tweaks to the game. He is also a level builder.";
+      break;
+      case 3: // Chris Schroeppel (Rozi)
+         %text = "<font:EntangledMBS:18>[Also known as Rozi]\n\n<font:EntangledMBS:24>A level builder.";
+      break;
+      case 4: // Tristan Voss (Ender)
+         %text = "<font:EntangledMBS:18>[Also known as Ender]\n\n<font:EntangledMBS:24>A level builder, and graphics artist.\n\n" @
+                 "Tristan was here from the beginning. If it wasn't for him, this mod wouldn't have continued.";
+      break;
+      case 5: // Greg McFadden (Skail)
+         %text = "<font:EntangledMBS:18>[Also known as Skail]\n\n<font:EntangledMBS:24>Made all the music for Marble Blast Super.";
+      break;
+      case 6: // James Colsey (BlastedMarble)
+         %text = "<font:EntangledMBS:18>[Also known as BlastedMarble]\n\n<font:EntangledMBS:24>A very talented level builder.";
+      break;
+      case 7: // Erik Martin (Neon Lightning)
+         %text = "<font:EntangledMBS:18>[Also known as Neon Lightning]\n\n<font:EntangledMBS:24>Various small changes, such as the " @
+                 "green editor. He has made atleast one level for the game, but he is mainly a tester.";
+      break;
+      case 8: // Stewart Inglis (StewMan46)
+         %text = "<font:EntangledMBS:18>[Also known as StewMan46]\n\n<font:EntangledMBS:24>Original Idea for the mod. " @
+                 "If it wasn't for him Marble Blast Super would not exist.";
+      break;
+   }
+   CreditsGuiTitle.setText(CR_List.getRowTextById(CR_List.getSelectedId()));
    CreditsGuiText.setText(%text);
 }

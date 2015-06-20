@@ -77,6 +77,8 @@ function onServerCreated()
    exec("./easter.cs");
    exec("./cannon.cs");
    exec("./water.cs");
+   exec("./lava.cs");
+	exec("./worldObjects.cs");
 
    // Platforms and interior doors
    exec("./pathedInteriors.cs");
@@ -737,6 +739,7 @@ function GameConnection::incBonusTime(%this,%dt)
 function GameConnection::onClientEnterGame(%this)
 {
    commandToClient(%this, 'HideWater');
+   commandToClient(%this, 'HideLava');
    commandToClient(%this, 'HidePhysMod');
    //setupGameRadar();
    // Matt: for some reason this doesn't work without doing it multiple times
@@ -883,8 +886,16 @@ function GameConnection::onOutOfBounds(%this)
 {
    if (%this.GameState $= "End")
       return;
-      
-   $Core::PhysicsDisabled = false;
+   
+   if (!$LavaDeath)
+   {
+      $Core::PhysicsDisabled = false;
+      error("Fucksickle");
+   }
+   else
+      error("AW SHIT!!");
+   
+   $LavaDeath = false;
       
    if (MissionInfo.gameMode $= "hunt")
    {
@@ -1081,6 +1092,8 @@ function GameConnection::respawnPlayer(%this)
    
    if (!$Client::ConnectedMultiplayer && (isObject(%this.checkPoint.pad) && %this.checkPoint.pad.getName() $= "StartPoint"))
       $resetLevel = true;
+      
+   findRealMarble().setScale("1 1 1");
       
    //if (!$resetLevel)
    //{
@@ -1328,6 +1341,9 @@ function GameConnection::createPlayer(%this, %spawnPoint)
    %player.setEnergyLevel(60);
    %player.setShapeName(%this.name);
    %player.client.status = 1;
+   
+	%player.lavaDead = false;
+	%player.lavaTime = 0;
 
    // Update the camera to start with the player
    %this.camera.setTransform(%player.getEyeTransform());

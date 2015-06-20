@@ -206,7 +206,7 @@ new SimGroup(MissionGroup) {
       position = "-34.4183 -18.9388 -141.094";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/advanced/thetriksta.dif";
+      interiorFile = "~/data/interiors/expert/thetriksta.dif";
       showTerrainInside = "0";
    };
    new ScriptObject() {

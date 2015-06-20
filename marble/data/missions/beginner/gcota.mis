@@ -178,13 +178,13 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new StaticShape() {
-      position = "-6.3418 -37.9138 -14.9559";
+      position = "-6.34904 -37.9138 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new Item() {
-      position = "3.64229 -35.8319 -14.8938";
+      position = "3.64229 -35.8905 -14.8938";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "GemItem";
@@ -201,237 +201,237 @@ new SimGroup(MissionGroup) {
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-6.33733 -35.8905 -14.9559";
+      position = "-6.34904 -35.8905 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-16.4577 -29.985 -14.9559";
+      position = "-16.35 -29.8941 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-14.3408 -29.8573 -14.9559";
+      position = "-14.3657 -29.8941 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-12.4272 -29.8941 -14.9559";
+      position = "-12.3462 -29.8941 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-16.4833 -31.8766 -14.9559";
+      position = "-16.35 -31.8511 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-14.3656 -31.8511 -14.9559";
+      position = "-14.3657 -31.8511 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-12.2575 -31.8652 -14.9559";
+      position = "-12.3462 -31.8511 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-16.4476 -33.8506 -14.9559";
+      position = "-16.35 -33.9062 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-16.4446 -35.9821 -14.9559";
+      position = "-16.35 -35.8905 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-16.4785 -37.9919 -14.9559";
+      position = "-16.35 -37.9138 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-14.3657 -33.9052 -14.9559";
+      position = "-14.3657 -33.9062 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-14.3025 -35.9693 -14.9559";
+      position = "-14.3657 -35.8905 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-14.3857 -37.9183 -14.9559";
+      position = "-14.3657 -37.9138 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-12.3926 -33.9245 -14.9559";
+      position = "-12.3462 -33.9062 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-12.328 -35.9088 -14.9559";
+      position = "-12.3462 -35.8905 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-12.3462 -37.9362 -14.9559";
+      position = "-12.3462 -37.9138 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-10.3557 -37.8753 -14.9559";
+      position = "-10.3557 -37.9138 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-10.4392 -35.8897 -14.9559";
+      position = "-10.3557 -35.8905 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-10.3786 -33.9764 -14.9559";
+      position = "-10.3557 -33.9062 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-8.36546 -37.936 -14.9559";
+      position = "-8.36546 -37.9138 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-8.34101 -35.9599 -14.9559";
+      position = "-8.36546 -35.8905 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-8.4102 -33.828 -14.9559";
+      position = "-8.36546 -33.9062 -14.9559";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "RoundBumper";
    };
    new StaticShape() {
-      position = "-6.35135 -11.9718 -10.9572";
+      position = "-6.35354 -11.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-2.45426 -9.9042 -10.9572";
+      position = "-2.35 -9.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-2.46142 -7.87203 -10.9572";
+      position = "-2.35 -7.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-6.37894 -9.88244 -10.9572";
+      position = "-6.35354 -9.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-6.35354 -7.92503 -10.9572";
+      position = "-6.35354 -7.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-4.2935 -12.0755 -10.9572";
+      position = "-4.35 -11.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-4.27362 -9.99972 -10.9572";
+      position = "-4.35 -9.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-4.3084 -7.94115 -10.9572";
+      position = "-4.35 -7.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-2.42124 -11.9609 -10.9572";
+      position = "-2.35 -11.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-10.2772 -11.9918 -10.9572";
+      position = "-10.356 -11.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-10.3333 -9.87201 -10.9572";
+      position = "-10.356 -9.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-10.356 -7.82882 -10.9572";
+      position = "-10.356 -7.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-8.28693 -11.9337 -10.9572";
+      position = "-8.37081 -11.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-8.37081 -9.9015 -10.9572";
+      position = "-8.37081 -9.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";
          resetTime = "Default";
    };
    new StaticShape() {
-      position = "-8.3828 -7.89987 -10.9572";
+      position = "-8.37081 -7.9 -10.9572";
       rotation = "1 0 0 0";
       scale = "2 2 2";
       dataBlock = "LandMine";

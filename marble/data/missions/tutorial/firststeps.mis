@@ -2,16 +2,16 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         type = "Tutorial";
          name = "First Steps";
-         level = "1";
-         hyperTime = "2300";
-         startHelpText = "Use the <func:bind moveforward><func:bind moveleft><func:bind movebackward><func:bind moveright> keys to move your marble!";
-         artist = "davidjl123";
-         time = "0";
          desc = "Welcome to Marble Blast Super! Learn how to roll in this level.";
-         goldTime = "6000";
+         type = "Tutorial";
          hasEgg = "1";
+         level = "1";
+         goldTime = "5300";
+         artist = "davidjl123";
+         hyperTime = "2750";
+         startHelpText = "Use the <func:bind moveforward><func:bind moveleft><func:bind movebackward><func:bind moveright> keys to move your marble!";
+         time = "0";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -52,110 +52,110 @@ new SimGroup(MissionGroup) {
       ambient = "0.300000 0.300000 0.400000 1.000000";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "2009";
+         time = "0";
    };
    new StaticShape(StartPoint) {
-      position = "-19.653 -22.2674 -5.1411";
+      position = "-18.6485 -22.9747 -5.1411";
       rotation = "0 0 1 180";
       scale = "0.6 0.6 0.6";
       dataBlock = "StartPad";
-         beam = "15813";
+         beam = "12519";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "1649";
+         time = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "1721";
+         time = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "2727";
+         time = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "2784";
+         time = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "4691";
+         time = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "1602";
+         time = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "1602";
+         time = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "1602";
+         time = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "1602";
+         time = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "1672";
+         time = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "1752";
+         time = "0";
    };
    new Item() {
-      position = "-35.1869 -35.9607 5.95551";
+      position = "-23.3823 -27.4214 -8.04887";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EasterEggItem";
@@ -165,12 +165,12 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "1624";
+         time = "0";
    };
    new StaticShape() {
       position = "-19.4068 -22.4423 5.85494";
@@ -179,19 +179,19 @@ new SimGroup(MissionGroup) {
       dataBlock = "SignFinish";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "1965";
+         time = "0";
    };
    new StaticShape(EndPoint) {
-      position = "-19.4068 -22.4423 -0.145061";
+      position = "-18.6485 -21.4768 -0.145061";
       rotation = "0 0 1 90";
       scale = "0.6 0.6 0.6";
       dataBlock = "EndPad";
-         beam = "15049";
+         beam = "11694";
    };
    new InteriorInstance() {
       position = "-19.6816 -22.4381 -7.2426";
@@ -201,76 +201,80 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new Trigger() {
-      position = "-34.2012 -29.9251 -5.25392";
+      position = "-35.6786 -30.4232 -5.25392";
       rotation = "1 0 0 0";
-      scale = "5 5 5";
+      scale = "6 6 5";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
          text = "Roll up the ramps to the finish!";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "1783";
-   };
-   new Item() {
-      position = "-34.4415 -34.6792 -5.30324";
-      rotation = "1 0 0 0";
-      scale = "0.4 0.4 0.4";
-      dataBlock = "HelicopterItem";
-      collideable = "0";
-      static = "1";
-      rotate = "1";
-         checkpointNum = "1";
-   };
-   new InteriorInstance() {
-      position = "-34.4222 -34.6993 -5.27349";
-      rotation = "1 0 0 0";
-      scale = "0.1 0.1 0.1";
-      interiorFile = "~/data/interiors/addon/smallplatform.dif";
-      showTerrainInside = "0";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
-         bonusTime = "0";
          time = "0";
-         pad = "1789";
-   };
-   new ScriptObject() {
-         penaltyTime = "0";
-         gemCount = "0";
-         powerUp = "0";
-         bonusTime = "0";
-         time = "0";
-         pad = "2161";
    };
    new Trigger() {
-      position = "-38.7003 -15.1744 -15.4187";
+      position = "-41.0021 -13.7889 -8.46742";
       rotation = "1 0 0 0";
-      scale = "27 25 32";
+      scale = "30 28 3";
+      dataBlock = "WaterTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new ScriptObject() {
+         gemCount = "0";
+         penaltyTime = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2125";
+         time = "0";
+   };
+   new ScriptObject() {
+         gemCount = "0";
+         penaltyTime = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "1789";
+         time = "0";
+   };
+   new ScriptObject() {
+         gemCount = "0";
+         penaltyTime = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2161";
+         time = "0";
+   };
+   new Trigger() {
+      position = "-40.7579 -13.4205 -13.8187";
+      rotation = "1 0 0 0";
+      scale = "30 28 32";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
          bonusTime = "0";
-         time = "0";
          pad = "3372";
+         time = "0";
    };
    new ScriptObject() {
-         penaltyTime = "0";
          gemCount = "0";
+         penaltyTime = "0";
          powerUp = "0";
-         time = "0";
          bonusTime = "0";
          pad = "15032";
+         time = "0";
+   };
+   new StaticShape() {
+      position = "-25.6161 -27.478 -5.39841";
+      rotation = "1 0 0 0";
+      scale = "8 8 1";
+      dataBlock = "WaterShape";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

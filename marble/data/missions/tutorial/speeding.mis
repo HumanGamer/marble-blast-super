@@ -1,0 +1,241 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         artist = "davidjl123";
+         level = "6";
+         name = "Speeding";
+         music = "Blackout.ogg";
+         type = "Tutorial";
+         time = "0";
+         desc = "Use the SuperSpeed PowerUp to cross large gaps!";
+			hyperTime = "8000";
+			goldTime = "11000";
+			startHelpText = "Get a good running start, then use the SuperSpeed to cross the gap!";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0";
+      cloudHeightPer[1] = "0";
+      cloudHeightPer[2] = "0";
+      cloudSpeed1 = "0.0001";
+      cloudSpeed2 = "0.0002";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "-1 3.92453e-040 3.48688e-040";
+      fogVolume2 = "-1 3.54069e-040 3.50482e-040";
+      fogVolume3 = "-1 2.51113e-042 2.26719e-040";
+      materialList = "~/data/skies/sky6/sky_day.dml";
+      windVelocity = "1 0 0";
+      windEffectPrecipitation = "0";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 0.000000";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.400000 0.400000 0.400000 1.000000";
+   };
+   new InteriorInstance() {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/tutorial/speeding1.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape(StartPoint) {
+      position = "19 0 -7.5";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "StartPad";
+         beam = "3514";
+   };
+   new StaticShape(EndPoint) {
+      position = "19 20 5";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "EndPad";
+         beam = "2633";
+   };
+   new Trigger(Bounds) {
+      position = "-54.8125 35.5 -7.78178";
+      rotation = "1 0 0 0";
+      scale = "87.3125 51 40.004";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new StaticShape() {
+      position = "-11.7959 10.5915 -7.58047";
+      rotation = "1 0 0 0";
+      scale = "20 10 1";
+      dataBlock = "WaterShape";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "3091";
+         time = "0";
+         gemCount = "0";
+   };
+   new StaticShape() {
+      position = "8.86406 -3.284 -7.26163";
+      rotation = "0 0 -1 90";
+      scale = "4 4 1";
+      dataBlock = "TallGrass";
+   };
+   new StaticShape() {
+      position = "11.3972 -2.32714 -7.50154";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "Flower";
+   };
+   new StaticShape() {
+      position = "4.49164 2.21735 -7.50449";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Flower";
+   };
+   new StaticShape() {
+      position = "-2.70921 17.6417 4.9994";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Flower";
+   };
+   new StaticShape() {
+      position = "2.75113 16.7874 5.24297";
+      rotation = "0 0 -1 90";
+      scale = "4 4 1";
+      dataBlock = "TallGrass";
+   };
+   new StaticShape() {
+      position = "4.04384 18.5479 4.99645";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Flower";
+   };
+   new StaticShape() {
+      position = "1.47766 21.8314 4.99542";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "Flower";
+   };
+   new StaticShape() {
+      position = "6.83402 21.5605 4.98102";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Flower";
+   };
+   new StaticShape() {
+      position = "-32.2787 -2.3085 -7.50836";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Flower";
+   };
+   new StaticShape() {
+      position = "-38.1311 16.6865 -3.36382";
+      rotation = "0 0 -1 90";
+      scale = "4 4 1";
+      dataBlock = "TallGrass";
+   };
+   new StaticShape() {
+      position = "-43.1066 21.621 -3.59842";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "Flower";
+   };
+   new StaticShape() {
+      position = "-35.4216 17.8701 -3.60939";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Flower";
+   };
+   new StaticShape() {
+      position = "-37.5554 -3.16077 -7.2628";
+      rotation = "0 0 -1 90";
+      scale = "4 4 1";
+      dataBlock = "TallGrass";
+   };
+   new StaticShape() {
+      position = "-42.4992 -1.62425 -7.522";
+      rotation = "1 0 0 0";
+      scale = "1 1 0.5";
+      dataBlock = "Tree";
+   };
+   new StaticShape() {
+      position = "-35.2798 1.39193 -7.51194";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      dataBlock = "Flower";
+   };
+   new StaticShape() {
+      position = "-38.8733 0.241548 -7.51128";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Flower";
+   };
+   new Trigger() {
+      position = "-90.902 60.5304 -67.7626";
+      rotation = "1 0 0 0";
+      scale = "160 100 60";
+      dataBlock = "WaterTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new Item() {
+      position = "-30.8415 19.996 -3.68031";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperSpeedItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new Item() {
+      position = "1.48726 -0.00446799 -7.58389";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SuperSpeedItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         checkpointNum = "1";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         powerUp = "0";
+         bonusTime = "0";
+         pad = "2631";
+         time = "0";
+         gemCount = "0";
+   };
+   new Trigger() {
+      position = "-36.8862 24.0064 -3.60775";
+      rotation = "1 0 0 0";
+      scale = "1 8 3";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Use the SuperSpeed to reach the finish!";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+};
+//--- OBJECT WRITE END ---

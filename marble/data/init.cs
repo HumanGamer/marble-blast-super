@@ -102,14 +102,14 @@ addMaterialMapping( "pattern_cool1" ,      BouncyMaterial);
 addMaterialMapping( "pattern_cool2" ,      StickyMaterial);
 addMaterialMapping( "pattern_neutral1" ,   NojumpMaterial);
 addMaterialMapping( "pattern_neutral2" ,   BoingMaterial);
-addMaterialMapping( "pattern_warm1" ,      LowFrictionMaterial);
 addMaterialMapping( "pattern_warm2" ,      DefaultMaterial);
 
+addMaterialMapping( "friction_mud" ,     LowFrictionMaterial);
 addMaterialMapping( "friction_none" ,    NoFrictionMaterial);
 addMaterialMapping( "friction_low" ,     LowFrictionMaterial);
 addMaterialMapping( "friction_high" ,    HighFrictionMaterial);
-// used for ramps in escher level
-addMaterialMapping( "friction_ramp_yellow" ,    VeryHighFrictionMaterial);
+addMaterialMapping( "friction_sand" ,    VeryHighFrictionMaterial);
+addMaterialMapping( "friction_sand_shadow" ,    VeryHighFrictionMaterial);
 
 // old textures (to be removed?)
 addMaterialMapping( "grid1" , RubberFloorMaterial);

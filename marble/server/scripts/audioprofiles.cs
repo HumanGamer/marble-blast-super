@@ -236,4 +236,11 @@ datablock AudioProfile(CheckPointSfx)
    preload = true;
 };
 
+datablock AudioProfile(LavaHissSfx)
+{
+   filename    = "~/data/sound/explode.wav";
+   description = AudioDefault3d;
+   preload = true;
+};
+
 
