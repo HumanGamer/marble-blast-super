@@ -278,10 +278,10 @@ function updateWaterEffects() {
 	//}
 	////withAll("WaterTrigger","$showWater = $showWater || isInMyWorldBox(%this);");
 	//PG_Water.setVisible($showWater);
-	if ($isUnderwater && $waterHandle $= "") {
+	if ($isUnderwater && $waterHandle $= "" && LocalClientConnection.getControlObject() $= LocalClientConnection.player) {
 		$waterHandle = alxPlay(UnderwaterSfx);
 	}
-	else if (!$isUnderwater && $waterHandle !$= "") {
+	else if ((!$isUnderwater && $waterHandle !$= "") || LocalClientConnection.getControlObject() !$= LocalClientConnection.player) {
 		alxStop($waterHandle);
 		$waterHandle = "";
 	}
