@@ -1,18 +1,6 @@
 Stuff Needed to be Changed:
 -----------------------------------------------------------
-- "MBS" on playmissiongui.gui
-
-- Manual
-
-- .gui for Options -> Camera
-
-- Buttons in Options
-
-- Text font for level select
-
-- Marble Selection
-
-- Credits
+- New MBS Logo
 
 - Take out current inserted .rec files in Replay Center
 
@@ -24,8 +12,6 @@ Stuff Needed to be Changed:
 
 - Dedicated marble to everyone in the staff
 
-- Official MBS Marble
-
 - Taking out "Potato Farm"
 
 - Redoing Level Pictures
@@ -35,8 +21,6 @@ Stuff Needed to be Changed:
 - Retaking every level picture
 
 - Change "Danger Castle"'s Skybox
-
-- Bouncy -> Tutorial
 
 - "Pick your demise!" needs to be longer
 
@@ -52,4 +36,4 @@ Stuff Needed to be Changed:
 
 - Redo the .dts shape for Start+End pads to 2x2
 
-- Resize Bumpers
+- Zones
