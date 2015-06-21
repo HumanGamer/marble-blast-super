@@ -25,6 +25,8 @@ function playMissionGui::onWake(%this)
    }
    PM_DifficultyList.setSelectedById(%id);
    
+   %skin = MS_skinGroup.getObject($pref::MarbleIndex).skin;
+   PM_MarblePicker.setModel("marble/data/shapes/balls/marble.dts", %skin);
    
    PM_DifficultyPopup.setVisible(false);
    

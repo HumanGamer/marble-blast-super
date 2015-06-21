@@ -25,6 +25,7 @@ datablock StaticShapeData(PushButton)
    category = "Buttons";
    shapeFile = "~/data/shapes/buttons/pushButton.dts";
    resetTime = 5000;
+	emap = false;
 };
 
 function PushButton::onAdd(%this, %obj)

@@ -168,7 +168,7 @@ datablock ItemData(GemItem)
    // Mission editor category
    category = "Gems";
    className = "Gem";
-	emap = false;
+	emap = true;
 
    // Basic Item properties
    shapeFile = "~/data/shapes/items/gem.dts";

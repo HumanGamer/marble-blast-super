@@ -23,6 +23,7 @@ datablock StaticShapeData(TrapDoor)
    shapeFile = "~/data/shapes/hazards/trapdoor.dts";
    resetTime = 5000;
    scopeAlways = true;
+	emap = false;
 };
 
 function TrapDoor::onAdd(%this, %obj)
@@ -86,6 +87,7 @@ datablock StaticShapeData(DuctFan)
    forceArc[0] = 0.7;         // Cos angle
 
    powerOn = true;         // Default state
+	emap = false;
 };
 
 datablock StaticShapeData(SmallDuctFan)
@@ -104,6 +106,7 @@ datablock StaticShapeData(SmallDuctFan)
    forceArc[0] = 0.7;         // Cos angle
 
    powerOn = true;         // Default state
+	emap = false;
 };
 
 function DuctFan::onAdd(%this,%obj)
@@ -165,6 +168,7 @@ datablock StaticShapeData(OilSlick)
    category = "Hazards";
    shapeFile = "~/data/shapes/hazards/oilslick.dts";
    scopeAlways = true;
+	emap = false;
 };
 
 
@@ -198,6 +202,7 @@ datablock StaticShapeData(Tornado)
    forceVector[2] = "0 0 1";
    forceStrength[2] = 250;
    forceRadius[2] = 3;
+	emap = false;
 };
 
 function Tornado::onAdd(%this,%obj)
@@ -440,6 +445,7 @@ datablock StaticShapeData(LandMine)
    explosion = LandMineExplosion;
    renderWhenDestroyed = false;
    resetTime = 5000;
+	emap = false;
 };
 
 function LandMine::onAdd(%this, %obj)
@@ -468,6 +474,7 @@ datablock StaticShapeData(LandMineMBG)
    explosion = LandMineExplosion;
    renderWhenDestroyed = false;
    resetTime = 5000;
+	emap = false;
 };
 
 function LandMineMBG::onAdd(%this, %obj)
@@ -494,6 +501,7 @@ datablock StaticShapeData(Bomb)
    category = "Hazards";
    shapeFile = "~/data/shapes/hazards/bomb.dts";
    renderWhenDestroyed = false;
+	emap = false;
 };
 
 function Bomb::onAdd(%this, %obj)

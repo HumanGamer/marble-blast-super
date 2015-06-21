@@ -6,7 +6,7 @@ datablock StaticShapeData(GemBeam)
    category = "Effects";
    
    shapeFile = "~/data/shapes/beams/gembeam.dts";
-   emap = true;
+   emap = false;
 };
 
 //-----------------------------------------------------------------------------
@@ -16,7 +16,7 @@ datablock StaticShapeData(PadBeam)
    category = "Effects";
    
    shapeFile = "~/data/shapes/beams/padbeam.dts";
-   emap = true;
+   emap = false;
 };
 
 //-----------------------------------------------------------------------------

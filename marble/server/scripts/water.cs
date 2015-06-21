@@ -142,6 +142,7 @@ datablock StaticShapeData(WaterShape)
    shapeFile = "~/data/shapes/liquid/liquid.dts";
    scopeAlways = true;
    skin = "Water";
+	emap = false;
 };
 
 function WaterShape::onAdd(%this, %obj)

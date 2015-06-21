@@ -47,7 +47,7 @@ function initClient()
    if (!$pref::QualifiedLevel["Expert"])
       $pref::QualifiedLevel["Expert"] = 1;
 		
-	$pref::environmentMaps = "0";
+	$pref::environmentMaps = "1";
 	
 	$pref::Video::displayDevice = "OpenGL";
 

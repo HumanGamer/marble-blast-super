@@ -17,7 +17,7 @@ datablock ItemData(EasterEggItem)
    category = "Items";
    
    shapeFile = "marble/data/shapes/items/easteregg.dts";
-   emap = true;
+	emap = false;
    
    pickupName = "an EasterEgg!";
    noRespawn = true;

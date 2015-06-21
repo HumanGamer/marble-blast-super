@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "~/client/backgrounds/Jumping.png";
+   bitmap = "~/client/backgrounds/gcota.png";
    useVariable = "0";
    tile = "0";
 
@@ -39,7 +39,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             horizSizing = "width";
             vertSizing = "height";
             position = "17 231";
-            extent = "473 196";
+            extent = "470 196";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -174,11 +174,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
+                  fitParentWidth = "0";
+                  clipColumnText = "0";
                   enumerate = "0";
                   resizeCell = "1";
                   columns = "0 20 165";
-                  fitParentWidth = "0";
-                  clipColumnText = "0";
 
                new GuiControl(PM_MissionID_0) {
                   profile = "GuiPMSelectedMission";
@@ -202,10 +202,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/firststeps";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -220,11 +220,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_1) {
@@ -249,10 +249,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/jump";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -267,11 +267,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_2) {
@@ -296,10 +296,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/GemCollection";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -314,11 +314,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_3) {
@@ -343,10 +343,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/atthepool";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -361,11 +361,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_4) {
@@ -390,10 +390,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/SuperJump";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -408,11 +408,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_5) {
@@ -437,10 +437,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/speeding";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -455,11 +455,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_6) {
@@ -484,10 +484,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/TimeTravel";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -502,11 +502,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_7) {
@@ -531,10 +531,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/Gravity";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -549,11 +549,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_8) {
@@ -578,10 +578,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/side_scrolling";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -596,11 +596,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_9) {
@@ -625,10 +625,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/frictionaltour1";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -643,11 +643,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_10) {
@@ -672,10 +672,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/DifferentPlatforms";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -690,11 +690,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_11) {
@@ -719,10 +719,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      helpTag = "0";
                      bitmap = "~/data/missions/tutorial/bounce";
                      wrap = "0";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -737,31 +737,31 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        buttonType = "PushButton";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
             };
          };
-         new GuiBitmapButtonCtrl() {
+         new GuiBitmapButtonCtrl(PM_play) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "404 191";
-            extent = "86 43";
+            position = "14 14";
+            extent = "283 211";
             minExtent = "8 8";
             visible = "1";
-            command = "canvas.pushdialog(marbleselectgui);";
+            command = "PM_StartMission();";
             helpTag = "0";
-            text = "marble";
+            text = "play";
             groupNum = "-1";
             buttonType = "PushButton";
             repeatPeriod = "1000";
             repeatDecay = "1";
-            bitmap = "./play/marble";
+            bitmap = "./play/play";
          };
          new GuiBitmapButtonTextCtrl(PM_DifficultyButton) {
             profile = "PlayMissionDifficultyPopupProfile";
@@ -793,10 +793,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             helpTag = "0";
             bitmap = "./play/difficultyList";
             wrap = "0";
-               text = "Select Difficulty";
                maxLength = "255";
                groupNum = "-1";
                maxPopupHeight = "200";
+               text = "Select Difficulty";
 
             new GuiScrollCtrl() {
                profile = "PlayMissionDifficultyScrollProfile";
@@ -835,7 +835,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "26 239";
-            extent = "453 185";
+            extent = "449 185";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
@@ -850,7 +850,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "0 0";
-               extent = "245 280";
+               extent = "427 266";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
@@ -911,50 +911,51 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             repeatDecay = "1";
             bitmap = "./play/record";
          };
-         new GuiBitmapCtrl(PM_overlay) {
-            profile = "GuiDefaultProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "14 8";
-            extent = "283 218";
-            minExtent = "8 8";
-            visible = "1";
-            helpTag = "0";
-            bitmap = "./play/play_n";
-            wrap = "0";
-               buttonType = "PushButton";
-               repeatPeriod = "1000";
-               repeatDecay = "1";
-               groupNum = "-1";
-         };
-         new GuiBitmapButtonCtrl(PM_play) {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "286 248";
-            extent = "150 150";
-            minExtent = "8 8";
-            visible = "1";
-            command = "PM_StartMission();";
-            helpTag = "0";
-            text = "play";
-            groupNum = "-1";
-            buttonType = "PushButton";
-            repeatPeriod = "1000";
-            repeatDecay = "1";
-            bitmap = "./play/play";
-         };
          new GuiBitmapCtrl() {
             profile = "GuiDefaultProfile";
             horizSizing = "left";
             vertSizing = "top";
-            position = "309 21";
-            extent = "184 167";
+            position = "303 21";
+            extent = "188 102";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
             bitmap = "./logo";
             wrap = "0";
+         };
+         new GuiObjectView(PM_MarblePicker) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "402 141";
+            extent = "80 80";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            cameraZRot = "0";
+            forceFOV = "0";
+            skin = "base";
+            cameraRotX = "0";
+            cameraZRotSpeed = "0.001";
+            orbitDistance = "0.5";
+            autoSize = "0";
+
+            new GuiBorderButtonCtrl() {
+               profile = "GuiBorderButtonProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "80 80";
+               minExtent = "8 8";
+               visible = "1";
+               command = "canvas.pushdialog(marbleselectgui);";
+               helpTag = "0";
+               text = "Marble";
+               groupNum = "-1";
+               buttonType = "PushButton";
+               repeatPeriod = "1000";
+               repeatDecay = "1";
+            };
          };
       };
    };
