@@ -125,6 +125,7 @@ function initClient()
    exec("./scripts/compass.cs");
    exec("./scripts/endgamegui.cs");
    exec("./scripts/achievements.cs");
+   exec("./scripts/zones.cs");
 
    // Default player key bindings
    exec("./scripts/default.bind.cs");

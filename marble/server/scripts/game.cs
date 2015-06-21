@@ -84,6 +84,7 @@ function onServerCreated()
    exec("./hidingPlatforms.cs");
    exec("./rotationPlatforms.cs");
    
+   // Other Scripts
    exec("./physics.cs");
 
    // Keep track of when the game started
@@ -195,6 +196,13 @@ function startGame()
    {
 	   hideAllGems();
       handleGems();
+   }
+   
+   if (MissionInfo.useZones)
+   {
+      $Game::ZoneName = MissionInfo.startZone;
+      if ($Game::ZoneName $= "")
+         $Game::ZoneName = "Mystery Zone";
    }
    
    onGameStartup();
