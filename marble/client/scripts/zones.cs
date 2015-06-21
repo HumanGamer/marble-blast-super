@@ -16,7 +16,7 @@ package Zones {
       }
       if ($Game::ZoneName !$= $Game::OldZoneName)
       {
-         PG_ZoneText.setText("<font:Whitestone:48><just:center><color:FFFFFF>" @ $Game::ZoneName);       
+         PG_ZoneText.setText("<font:Whitestone:36><just:center><color:FFFFFF>" @ $Game::ZoneName);       
          
          $Game::OldZoneName = $Game::ZoneName;
       }

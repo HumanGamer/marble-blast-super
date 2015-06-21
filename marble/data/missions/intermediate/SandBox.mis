@@ -2,15 +2,17 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         name = "Sand Box";
+         startZone = "Outside";
+         artist = "Rozi";
+         type = "Intermediate";
+         time = "110000";
+         goldTime = "60000";
+         useZones = "1";
+         desc = "You\'re at the end of the Intermediate levels! Make this run count!";
          hyperTime = "35000";
          level = "20";
-         name = "Sand Box";
-         type = "Intermediate";
-         goldTime = "60000";
-         time = "110000";
          startHelpText = "Remember that sand has a higher friction than a standard floor!";
-         artist = "Rozi";
-         desc = "You\'re at the end of the Intermediate levels! Make this run count!";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -58,34 +60,34 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new StaticShape() {
-      position = "-132.376 4.22954 57.9875";
+      position = "-132.376 4.22954 57.75";
       rotation = "1 0 0 0";
       scale = "1.5 1.5 2";
       dataBlock = "WaterShape";
    };
    new ScriptObject() {
-         gemCount = "0";
-         penaltyTime = "0";
          powerUp = "0";
-         bonusTime = "0";
          pad = "2331";
          time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
-         gemCount = "0";
-         penaltyTime = "0";
          powerUp = "0";
-         bonusTime = "0";
          pad = "2195";
          time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
    };
    new ScriptObject() {
-         gemCount = "0";
-         penaltyTime = "0";
          powerUp = "0";
-         bonusTime = "0";
          pad = "5222";
          time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
    };
    new InteriorInstance() {
       position = "-98.3863 -10.6713 48.2974";
@@ -99,7 +101,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 45";
       scale = "0.5 0.5 0.5";
       dataBlock = "StartPad";
-         beam = "9631";
+         beam = "3733";
    };
    new StaticShape() {
       position = "-132.469 4.06571 55.7333";
@@ -108,7 +110,7 @@ new SimGroup(MissionGroup) {
       dataBlock = "Glass_Floor";
    };
    new Trigger(SandBoxWaterTrigger) {
-      position = "-134.965 6.57692 55.4824";
+      position = "-134.965 6.57692 55.2";
       rotation = "1 0 0 0";
       scale = "5 5 2.5";
       dataBlock = "WaterTrigger";
@@ -123,7 +125,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9618";
+         node = "3720";
    };
    new Item() {
       position = "-122.219 13.952 57.9769";
@@ -133,8 +135,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
          timeBonus = "7000";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-131.942 4.48394 55.9884";
@@ -145,7 +147,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9619";
+         node = "3721";
    };
    new Trigger(SandBoxHelpTrigger) {
       position = "-142.473 -5.93876 69.9865";
@@ -174,7 +176,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9620";
+         node = "3722";
    };
    new Item() {
       position = "-131.053 11.5803 67.6778";
@@ -185,7 +187,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9621";
+         node = "3723";
    };
    new Item() {
       position = "-136.226 4.9282 66.5059";
@@ -196,7 +198,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9622";
+         node = "3724";
    };
    new Item() {
       position = "-130.891 -0.735913 67.7338";
@@ -207,7 +209,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9623";
+         node = "3725";
    };
    new Item() {
       position = "-128.387 0.0110596 66.274";
@@ -228,7 +230,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9624";
+         node = "3726";
    };
    new Item() {
       position = "-137.396 11.6085 70.2283";
@@ -239,7 +241,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9625";
+         node = "3727";
    };
    new Item() {
       position = "-125.4 3.51422 70.2283";
@@ -250,7 +252,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9626";
+         node = "3728";
    };
    new Item() {
       position = "-127.988 -1.50466 71.2268";
@@ -261,7 +263,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9627";
+         node = "3729";
    };
    new Item() {
       position = "-121.697 -49.0453 55.4442";
@@ -271,8 +273,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
          timeBonus = "3000";
+         checkpointNum = "1";
    };
    new Trigger(SandBoxHelpTrigger) {
       position = "-124.467 -5.93988 57.9924";
@@ -353,7 +355,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9628";
+         node = "3730";
    };
    new StaticShape() {
       position = "-135 10 62";
@@ -523,10 +525,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "Cannon";
          radius = "4";
-         timer = "3000";
-         ball = "7773";
-         currentTime = "2790";
          power = "5";
+         timer = "3000";
+         currentTime = "180";
+         ball = "9582";
    };
    new Item() {
       position = "-133.75 9.25 62";
@@ -537,7 +539,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9629";
+         node = "3731";
    };
    new StaticShape() {
       position = "-135 0 62";
@@ -572,7 +574,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "9630";
+         node = "3732";
    };
    new Trigger(SandBoxHelpTrigger) {
       position = "-126.3 -74.4 65.3456";
@@ -587,15 +589,15 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "6810";
+         beam = "3680";
    };
    new ScriptObject() {
-         gemCount = "0";
-         penaltyTime = "0";
          powerUp = "0";
-         bonusTime = "0";
          pad = "6181";
          time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
    };
    new Trigger(Boundaries) {
       position = "-148.668 19.7308 52.3619";
@@ -612,6 +614,62 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+   };
+   new Trigger() {
+      position = "-143.468 15.5149 57.706";
+      rotation = "1 0 0 0";
+      scale = "22 22 3.5";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "Mini Pool";
+   };
+   new Trigger() {
+      position = "-143.468 15.5149 61.706";
+      rotation = "1 0 0 0";
+      scale = "22 22 3.5";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "Slippery Hazards";
+   };
+   new Trigger() {
+      position = "-143.468 15.5149 65.706";
+      rotation = "1 0 0 0";
+      scale = "22 22 3.5";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "Slopes";
+   };
+   new ScriptObject() {
+         powerUp = "0";
+         pad = "9111";
+         time = "0";
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+   };
+   new Trigger() {
+      position = "-143.468 15.5149 69.906";
+      rotation = "1 0 0 0";
+      scale = "22 22 3.5";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "Sandy Steps";
+   };
+   new Trigger() {
+      position = "-127.068 -20.0851 55.106";
+      rotation = "1 0 0 0";
+      scale = "6 48 20";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "Mudslide";
+   };
+   new Trigger() {
+      position = "-127.468 -71.8851 65.306";
+      rotation = "1 0 0 0";
+      scale = "8 8 8";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "Intermediate Finale";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
