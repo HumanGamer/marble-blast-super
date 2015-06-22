@@ -4,11 +4,11 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          name = "Icy Slide";
          type = "Advanced";
-         time = "0";
-         artist = "Rozi";
-         desc = "Speed through the fastest level in the game!";
-         goldTime = "30000";
          level = "6";
+         desc = "Speed through the fastest level in the game!";
+         time = "0";
+         goldTime = "30000";
+         artist = "Rozi";
          hyperTime = "16000";
    };
    new MissionArea(MissionArea) {
@@ -57,10 +57,10 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          bonusTime = "0";
          gemCount = "0";
          time = "0";
-         penaltyTime = "0";
          powerUp = "0";
          pad = "3007";
    };
@@ -69,13 +69,13 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "0.7 0.7 0.7";
       dataBlock = "StartPad";
-         beam = "14348";
+         beam = "4138";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          bonusTime = "0";
          gemCount = "0";
          time = "0";
-         penaltyTime = "0";
          powerUp = "0";
          pad = "5635";
    };
@@ -90,10 +90,10 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          bonusTime = "0";
          gemCount = "0";
          time = "0";
-         penaltyTime = "0";
          powerUp = "0";
          pad = "6686";
    };
@@ -436,13 +436,13 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "1.5 1.5 1.5";
       dataBlock = "EndPad";
-         beam = "12531";
+         beam = "4122";
    };
    new ScriptObject() {
+         penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
          time = "0";
-         penaltyTime = "0";
          powerUp = "0";
          pad = "10407";
    };
@@ -450,6 +450,13 @@ new SimGroup(MissionGroup) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new Trigger() {
+      position = "6.76776 -934.933 -73.5389";
+      rotation = "1 0 0 0";
+      scale = "60 1150 400";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
 };
 //--- OBJECT WRITE END ---

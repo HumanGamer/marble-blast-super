@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          artist = "Ender";
          hyperTime = "22500";
-         desc = "Beginner Finale. Are you ready to face the challlenges medium has for you?";
+         desc = "Climb to your victory!";
          type = "Beginner";
          level = "7";
          hasEgg = "1";
