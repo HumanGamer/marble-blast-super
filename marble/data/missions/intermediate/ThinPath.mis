@@ -69,7 +69,7 @@ new SimGroup(MissionGroup) {
       position = "0.191024 -7.95855 -7.72897";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      interiorFile = "~/data/interiors/skinnyclimber.dif";
+      interiorFile = "~/data/interiors/skinnyclimberfixed.dif";
       showTerrainInside = "0";
    };
    new Item() {
