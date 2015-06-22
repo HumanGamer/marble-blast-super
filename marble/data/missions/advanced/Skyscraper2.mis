@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          name = "Skyscraper: The Second Climb";
          type = "advanced";
-         time = "240000";
+         time = "300000";
          artist = "Rozi";
          desc = "Ascend this terrifying tower!";
          goldTime = "165000";
