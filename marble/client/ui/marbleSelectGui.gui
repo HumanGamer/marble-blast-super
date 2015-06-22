@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(MarbleSelectGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = getRandomBackground();
+   bitmap = "~/client/backgrounds/Agility.png";
    useVariable = "0";
    tile = "0";
 
@@ -51,15 +51,15 @@ new GuiChunkedBitmapCtrl(MarbleSelectGui) {
          skin = "base";
          cameraRotX = "0";
          cameraZRotSpeed = "0.001";
-         orbitDistance = "1.2";
+         orbitDistance = "1.34641";
          autoSize = "1";
       };
       new GuiBitmapButtonCtrl() {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "266 341";
-         extent = "137 60";
+         position = "280 349";
+         extent = "96 45";
          minExtent = "8 8";
          visible = "1";
          command = "Canvas.setContent(playmissiongui);";
@@ -69,7 +69,7 @@ new GuiChunkedBitmapCtrl(MarbleSelectGui) {
          buttonType = "PushButton";
          repeatPeriod = "1000";
          repeatDecay = "1";
-         bitmap = "./home/back";
+         bitmap = "./play/home";
       };
       new GuiBitmapButtonCtrl(MS_Next) {
          profile = "GuiDefaultProfile";
