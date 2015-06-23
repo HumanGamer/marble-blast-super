@@ -2,16 +2,6 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-<<<<<<< HEAD
-         artist = "Rozi";
-         hyperTime = "35000";
-         time = "110000";
-         desc = "You\'re at the end of the Intermediate levels! Make this run count!";
-         name = "Sand Box";
-         level = "20";
-         type = "Intermediate";
-         goldTime = "60000";
-=======
          name = "Sand Box";
          startZone = "Outside";
          artist = "Rozi";
@@ -22,7 +12,6 @@ new SimGroup(MissionGroup) {
          desc = "You\'re at the end of the Intermediate levels! Make this run count!";
          hyperTime = "35000";
          level = "20";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
          startHelpText = "Remember that sand has a higher friction than a standard floor!";
    };
    new MissionArea(MissionArea) {
@@ -50,7 +39,7 @@ new SimGroup(MissionGroup) {
       fogVolume1 = "-1 3341.52 6.54902e-039";
       fogVolume2 = "-1 3.33514e-039 4.42466e-039";
       fogVolume3 = "-1 1.90857e-042 3.43597e+010";
-      materialList = "~/data/skies/sky9/sky_day.dml";
+      materialList = "~/data/skies/sky2/sky_day.dml";
       windVelocity = "1 0 0";
       windEffectPrecipitation = "0";
       noRenderBans = "1";
@@ -77,53 +66,28 @@ new SimGroup(MissionGroup) {
       dataBlock = "WaterShape";
    };
    new ScriptObject() {
-<<<<<<< HEAD
-         gemCount = "0";
-         time = "0";
-         penaltyTime = "0";
-=======
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
          powerUp = "0";
          pad = "2331";
-<<<<<<< HEAD
-   };
-   new ScriptObject() {
-         gemCount = "0";
-         time = "0";
-         penaltyTime = "0";
-=======
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
    };
    new ScriptObject() {
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
          powerUp = "0";
          pad = "2195";
-<<<<<<< HEAD
-   };
-   new ScriptObject() {
-         gemCount = "0";
-         time = "0";
-         penaltyTime = "0";
-=======
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
    };
    new ScriptObject() {
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
          powerUp = "0";
          pad = "5222";
-<<<<<<< HEAD
-=======
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new InteriorInstance() {
       position = "-98.3863 -10.6713 48.2974";
@@ -137,11 +101,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 45";
       scale = "0.5 0.5 0.5";
       dataBlock = "StartPad";
-<<<<<<< HEAD
-         beam = "4719";
-=======
          beam = "3733";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new StaticShape() {
       position = "-132.469 4.06571 55.7333";
@@ -165,11 +125,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4706";
-=======
          node = "3720";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Item() {
       position = "-122.219 13.952 57.9769";
@@ -191,11 +147,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4707";
-=======
          node = "3721";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Trigger(SandBoxHelpTrigger) {
       position = "-142.473 -5.93876 69.9865";
@@ -224,11 +176,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4708";
-=======
          node = "3722";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Item() {
       position = "-131.053 11.5803 67.6778";
@@ -239,11 +187,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4709";
-=======
          node = "3723";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Item() {
       position = "-136.226 4.9282 66.5059";
@@ -254,11 +198,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4710";
-=======
          node = "3724";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Item() {
       position = "-130.891 -0.735913 67.7338";
@@ -269,11 +209,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4711";
-=======
          node = "3725";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Item() {
       position = "-128.387 0.0110596 66.274";
@@ -294,11 +230,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4712";
-=======
          node = "3726";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Item() {
       position = "-137.396 11.6085 70.2283";
@@ -309,11 +241,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4713";
-=======
          node = "3727";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Item() {
       position = "-125.4 3.51422 70.2283";
@@ -324,11 +252,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4714";
-=======
          node = "3728";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Item() {
       position = "-127.988 -1.50466 71.2268";
@@ -339,11 +263,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4715";
-=======
          node = "3729";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Item() {
       position = "-121.697 -49.0453 55.4442";
@@ -435,11 +355,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4716";
-=======
          node = "3730";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new StaticShape() {
       position = "-135 10 62";
@@ -608,18 +524,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Cannon";
-         power = "5";
          radius = "4";
-<<<<<<< HEAD
-         ball = "7773";
-         currentTime = "240";
-         timer = "3000";
-=======
          power = "5";
          timer = "3000";
          currentTime = "180";
          ball = "9582";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Item() {
       position = "-133.75 9.25 62";
@@ -630,11 +539,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4717";
-=======
          node = "3731";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new StaticShape() {
       position = "-135 0 62";
@@ -669,11 +574,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-<<<<<<< HEAD
-         node = "4718";
-=======
          node = "3732";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Trigger(SandBoxHelpTrigger) {
       position = "-126.3 -74.4 65.3456";
@@ -688,27 +589,15 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPad";
-<<<<<<< HEAD
-         beam = "4672";
-   };
-   new ScriptObject() {
-         gemCount = "0";
-         time = "0";
-         penaltyTime = "0";
-=======
          beam = "3680";
    };
    new ScriptObject() {
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
          powerUp = "0";
          pad = "6181";
-<<<<<<< HEAD
-=======
          time = "0";
          penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
->>>>>>> c74d7d55f3bfece3ca11d91ed5f7cfc3cc189ce8
    };
    new Trigger(Boundaries) {
       position = "-148.668 19.7308 52.3619";
