@@ -108,7 +108,7 @@ new GuiChunkedBitmapCtrl(startMissionGui) {
          extent = "134 16";
          minExtent = "8 8";
          visible = "1";
-         variable = "$pref::Multiplayer::Name";
+         variable = "$pref::Player::Name";
          helpTag = "0";
          maxLength = "255";
          maxPixelWidth = "0";
@@ -180,7 +180,7 @@ function SM_StartMission()
          recordDemo("~/client/demos/demo.rec", %file);
       createServer(%serverType, %file);
       %conn = new GameConnection(ServerConnection);
-      %conn.setConnectArgs($pref::Multiplayer::Name, $Multiplayer::Version, $Multiplayer::GameName);
+      %conn.setConnectArgs($pref::Player::Name);
       %conn.setJoinPassword($Client::Password);
       %conn.connectLocal();
    }

@@ -29,6 +29,7 @@ function TeleportTrigger::onEnterTrigger(%this, %trigger, %obj)
    
    if (isObject(%target) && %target.getClassName() $= "Trigger" && %target.getDatablock().getName() $= "TeleportTargetTrigger")
    {
+      info("Teleporting");
       %targetPos = %target.getPosition();
       
       %obj.startFade(250, 0, true);

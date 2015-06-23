@@ -17,7 +17,7 @@ datablock ItemData(EasterEggItem)
    category = "Items";
    
    shapeFile = "marble/data/shapes/items/easteregg.dts";
-   emap = true;
+	emap = false;
    
    pickupName = "an EasterEgg!";
    noRespawn = true;
@@ -27,19 +27,11 @@ function EasterEggItem::onPickup(%this, %obj, %user, %amount)
 {
    Parent::onPickup(%this,%obj,%user,%amount);
    
-   //if (MissionInfo.type $= "custom" || MissionInfo.type $= "multiplayer")
-   //{
-   //   %found = false;
-   //} else {
-      %found = $pref::EasterEgg[$Server::MissionFile];
-      $pref::EasterEgg[$Server::MissionFile] = "1";
-      
-      $Dynamic::Achievement::FoundEasterEgg = true;
-      checkAchievements();
-      //eval("%found = $pref::EasterEgg[" @ $Server::MissionFile @ "];");// @ MissionInfo.type @ "[" @ MissionInfo.level @ "];");   
+   %found = $pref::EasterEgg[$Server::MissionFile];
+   $pref::EasterEgg[$Server::MissionFile] = "1";
    
-      //eval("$pref::EasterEgg[" @ $Server::MissionFile @ "] = \"1\";");// @ MissionInfo.type @ "[" @ MissionInfo.level @ "] = \"1\";"); 
-   //}
+   $Dynamic::Achievement::FoundEasterEgg = true;
+   checkAchievements();
    
    if (%found)
       %user.client.play2d(EasterEggAlreadySfx);

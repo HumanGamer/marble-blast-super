@@ -25,6 +25,8 @@ function playMissionGui::onWake(%this)
    }
    PM_DifficultyList.setSelectedById(%id);
    
+   %skin = MS_skinGroup.getObject($pref::MarbleIndex).skin;
+   PM_MarblePicker.setModel("marble/data/shapes/balls/marble.dts", %skin);
    
    PM_DifficultyPopup.setVisible(false);
    
@@ -73,23 +75,10 @@ function PM_ToggleDifficultyPopUp()
 
 function PM_StartMission()
 {
-   Canvas.setContent(LoadingGui);
-   clearLoading();
-   
-   schedule(100, 0, "PM_ContinueStartMission");
-}
-
-function PM_ContinueStartMission()
-{
    %id = PM_missionList.getSelectedId();
    %mission = getField(PM_missionList.getRowTextById(%id), 1);
    $LastMissionId = %id;
    $LastMissionType = %mission.type;
-
-   if ($pref::Multiplayer::isMultiplayer)
-      %serverType = "MultiPlayer";
-   else
-      %serverType = "SinglePlayer";
 
    // We need to start a server if one isn't already running
    if ($Server::ServerType $= "") {
@@ -98,7 +87,7 @@ function PM_ContinueStartMission()
          //recordDemo("~/client/demos/demo.rec", %mission.file);
          startRecordingDemo(%mission);
       } else {
-         startServer(%serverType, %mission);
+         startServer("SinglePlayer", %mission);
       }
    }
    else
@@ -429,7 +418,7 @@ function PM_setSelected(%index)
    //EG_level_fgnd.setText("<color:FFFFFF><font:Bauhaus 93:24><just:center>" @ %type @ " Level " @ %index + 1);
    PM_missionList.setSelectedById(%index);
    
-   //$CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels && %mission.gameType !$= "Multiplayer";
+   //$CurrentLevelLocked = %index > $pref::QualifiedLevel[$MissionType] && !$unlockLevels;
    
    //setLevelLocked();
    
@@ -532,9 +521,6 @@ function getMissionObject(%mission) {
       
    if (%infoObject.gameType $= "")
       %infoObject.gameType = "SinglePlayer";
-      
-   //if (LobbyGui.isAwake() && %infoObject.gameType !$= "Multiplayer")
-   //   return;
       
    if (playMissionGui.isAwake() && %infoObject.gameType !$= "SinglePlayer")
       return;

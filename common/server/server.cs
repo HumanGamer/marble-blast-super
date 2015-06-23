@@ -15,11 +15,21 @@ function portInit(%port)
       %port++; %failCount++;
    }
 }
+
+function startServer(%serverType, %mission)
+{
+   createServer(%serverType, %mission.file);
+   %conn = new GameConnection(ServerConnection);
+   RootGroup.add(ServerConnection);
+   %conn.setConnectArgs($pref::Player::Name);
+   %conn.setJoinPassword($Client::Password);
+   %conn.connectLocal();
+}
  
 function createServer(%serverType, %mission)
 {
    //if (%mission $= "") {
-   //   error("createServer: mission name unspecified");
+   //   debug("createServer: mission name unspecified");
    //   return;
    //}
 
@@ -68,13 +78,12 @@ function destroyServer()
    echo("*** DESTROYING SERVER");
    
    $Game::GameLoops = 0;
-   cancel($Multiplayer::UpdateSchedule);
-   cancel($Multiplayer::DeltaUpdate);   
-   cancel($Multiplayer::CollisionUpdate);
-   cancel($Multiplayer::OOBUpdate);
-   cancel($Multiplayer::SpeedUpdate);
+   cancel($Game::UpdateSchedule);
+   cancel($Game::DeltaUpdate);   
+   cancel($Game::CollisionUpdate);
+   cancel($Game::OOBUpdate);
    $Client::ConnectedMultiplayer = false;
-   resetGhostVars();
+   cancel($CompassUpdate);
    $Server::ServerType = "";
    $missionRunning = false;
    allowConnections(false);
@@ -106,10 +115,6 @@ function destroyServer()
 
    // Delete all the data blocks...
    deleteDataBlocks();
-   
-   // Save any server settings
-   //echo( "Exporting server prefs..." );
-   //export( "$Pref::Server::*", "~/prefs.cs", false );
 
    // Dump anything we're not using
    purgeResources();

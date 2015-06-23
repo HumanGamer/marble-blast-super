@@ -33,22 +33,13 @@ function clientCmdGameEnd()
       return;
    
    finishRecording();
-   
-   if ($Client::ConnectedMultiplayer)
-   {
-      Canvas.pushDialog(MultiplayerEndGui);  
-      
-      //checkAchievements();    
-      
-      return;
-   }
 
    getBestTimes($Server::MissionFile);
    $highScoreIndex = "";
    for(%i = 0; %i < 3; %i++)
    {
-      if($Game::ScoreTime < getField($hs[%i], 0))
-      {
+      //if($Game::ScoreTime < getField($hs[%i], 0))
+      //{
          for(%j = 2; %j > %i; %j--)
          {
             $hs[%j] = $hs[%j - 1];
@@ -56,7 +47,7 @@ function clientCmdGameEnd()
          $highScoreIndex = %i;
          $hs[%i] = $Game::ScoreTime @ "\t" @ $pref::highScoreName;
          break;
-      }
+      //}
    }
    reformatGameEndText();
    Canvas.pushDialog(EndGameGui);

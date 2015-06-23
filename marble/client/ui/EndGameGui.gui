@@ -78,7 +78,7 @@ new GuiControl(EndGameGui) {
          extent = "123 30";
          minExtent = "8 8";
          visible = "1";
-         command = "setPlayMissionGui2();"; //"nextLevel();";
+         command = "nextLevel();";
          accelerator = "enter";
          helpTag = "0";
          text = "play";

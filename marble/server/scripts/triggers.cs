@@ -73,3 +73,22 @@ function PhysicsTrigger::onLeaveTrigger(%this, %trigger, %obj)
    %var = %trigger.var;
    eval(%obj.getDataBlock().getName() @ "." @ %var @ "=" @ %obj @ ".client.physics" @ %var @ ";");
 }
+
+//-----------------------------------------------------------------------------
+
+datablock TriggerData(ZoneTrigger)
+{
+   tickPeriodMS = 100;
+};
+
+function ZoneTrigger::onEnterTrigger(%this,%trigger,%obj)
+{
+   $Game::ZoneName = %trigger.zoneName;
+}
+
+function ZoneTrigger::onLeaveTrigger(%this,%trigger,%obj)
+{
+   $Game::ZoneName = MissionInfo.startZone;
+   if ($Game::ZoneName $= "")
+      $Game::ZoneName = "Mystery Zone";
+}

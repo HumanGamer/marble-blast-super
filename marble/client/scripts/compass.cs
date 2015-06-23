@@ -9,7 +9,7 @@ function updateCompass()
 
 function getDirection()
 {
-   %rot = getCameraRotation(getMyMarble());
+   %rot = getCameraRotation(findRealMarble());
    
    //%rot = TransformtoRPY(%trans);
    

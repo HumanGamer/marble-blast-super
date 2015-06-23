@@ -50,6 +50,7 @@ datablock StaticShapeData(TriangleBumper)
    shapeFile = "~/data/shapes/bumpers/pball_tri.dts";
    scopeAlways = true;
    sound = BumperFlat;
+	emap = false;
 };
 
 datablock StaticShapeData(RoundBumper)
@@ -59,6 +60,7 @@ datablock StaticShapeData(RoundBumper)
    shapeFile = "~/data/shapes/bumpers/pball_round.dts";
    scopeAlways = true;
    sound = BumperDing;
+	emap = false;
 };
 
 

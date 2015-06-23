@@ -46,10 +46,8 @@ function initClient()
       $pref::QualifiedLevel["Advanced"] = 1;
    if (!$pref::QualifiedLevel["Expert"])
       $pref::QualifiedLevel["Expert"] = 1;
-   if (!$pref::QualifiedLevel["Multiplayer"])
-      $pref::QualifiedLevel["Multiplayer"] = 1000;
 		
-	$pref::environmentMaps = "0";
+	$pref::environmentMaps = "1";
 	
 	$pref::Video::displayDevice = "OpenGL";
 
@@ -77,22 +75,12 @@ function initClient()
    exec("./ui/presentsGui.gui");
    exec("./ui/productionGui.gui");
    exec("./ui/titleGui.gui");
-   if($DemoBuild)
-   {
-      exec("./ui/playMissionGui_demo.gui");
-      exec("./ui/mainMenuGui_demo.gui");
-      exec("./ui/ExitGui.gui");
-   }
-   else
-   {
-      exec("./ui/playMissionGui.gui");
-      exec("./ui/mainMenuGui.gui");
-   }
+   exec("./ui/playMissionGui.gui");
+   exec("./ui/mainMenuGui.gui");
    exec("./ui/creditsGui.gui");
    exec("./ui/aboutDlg.gui");
    exec("./ui/startMissionGui.gui");
    exec("./ui/chooseGui.gui");
-   //exec("./ui/joinServerGui.gui");
    exec("./ui/endGameGui.gui");
    exec("./ui/upsell/UpsellGui.gui");
    EndGameGui.preload();
@@ -106,20 +94,11 @@ function initClient()
    exec("./ui/ExitGameDlg.gui");
    exec("./ui/MiniShotGui.gui");
    exec("./ui/MegaShotGui.gui");
-   //exec("./ui/EnterIPDlg.gui");
-   //exec("./ui/MultiplayerGui.gui");
-   //exec("./ui/ConnectGui.gui");
    exec("./ui/MarbleSelectGui.gui");
-   //exec("./ui/playerListGui.gui");   
    exec("./ui/gemPopupGui.gui");
-   //exec("./ui/lobbyGui.gui");
-   //exec("./ui/MultiplayerExitGui.gui");
-   //exec("./ui/LoginGui.gui");
    exec("./ui/chatDlg.gui");
    exec("./ui/recordingDlg.gui");
    exec("./ui/replayCenterGui.gui");
-   //exec("./ui/preMissionGui.gui");
-   //exec("./ui/multiplayerEndGui.gui");
    exec("./ui/AchievementPopupDlg.gui");
 
    // Client scripts
@@ -138,23 +117,15 @@ function initClient()
    exec("./scripts/version.cs");
    exec("./scripts/demo.cs");
    exec("./scripts/playMissionGui.cs");
-   exec("./scripts/multiplayer.cs");
-   exec("./scripts/multiplayerGui.cs");
+   exec("./scripts/commands.cs");
    exec("./scripts/playerListGui.cs");
    exec("./scripts/gemPopupGui.cs");
-   //exec("./scripts/radar.cs");
-   //exec("./scripts/lobby.cs");
-   //exec("./scripts/multiplayerExitGui.cs");
-   //exec("./scripts/login.cs");
-   //exec("./scripts/register.cs");
-   exec("./scripts/chat.cs");
    exec("./scripts/recording.cs");
    exec("./scripts/replayCenter.cs");
-   //exec("./scripts/preMissionGui.cs");
    exec("./scripts/compass.cs");
    exec("./scripts/endgamegui.cs");
-   //exec("./scripts/multiplayerEndGui.cs");
    exec("./scripts/achievements.cs");
+   exec("./scripts/zones.cs");
 
    // Default player key bindings
    exec("./scripts/default.bind.cs");

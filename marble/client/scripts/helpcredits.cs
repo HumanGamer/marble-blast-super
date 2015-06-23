@@ -17,9 +17,10 @@ function HelpCreditsGui::onWake(%this)
    HC_List.addRow(7, "Hazards (Part 2/3)");
    HC_List.addRow(8, "Hazards (Part 3/3)");
    HC_List.addRow(9, "Environment");
-   HC_List.addRow(10, "About GarageGames");
-   HC_List.addRow(11, "About Torque");
-   HC_List.addRow(12, "Special Thanks");
+   HC_List.addRow(10, "Inspirations");
+   HC_List.addRow(11, "About GarageGames");
+   HC_List.addRow(12, "About Torque");
+   HC_List.addRow(13, "Special Thanks");
    
    HC_List.setSelectedByID(0);
 }
@@ -111,13 +112,16 @@ function HelpCreditsGui::setPage(%this, %page)
 		case 10: %text = "<font:Whitestone:50><color:000000><just:center>Environment<font:EntangledMBS:24><just:left>\n\n" @
                  "<lmargin:70>Water - Slows you down and you can swim in it, just like real life water!\n\nLava - you can swim in it, like water, but don't stay in too long or you'll disintegrate!";
          HC_Water.setVisible(true);
-      case 11:
+      case 11: %text = "<font:Whitestone:50><color:000000><just:center>Inspirations<font:EntangledMBS:24><just:left>\n\n" @
+                 "Many of the features in Marble Blast Super are inspired from other mods such as Platinum, PlatinumQuest, " @ 
+                 "Powered Up, Project Revolution, Plus and Elite.";
+      case 12:
          %text = "<font:Whitestone:50><color:000000><just:center>About GarageGames<font:EntangledMBS:24><just:left>\n\n" @
                  "GarageGames is a unique Internet publishing label for independent games and gamemakers.  Our mission is to provide the independent developer with tools, knowledge, co-conspirators - whatever is needed to unleash the creative spirit and get great innovative independent games to market.";
-      case 12:
+      case 13:
         %text = "<font:Whitestone:50><color:000000><just:center>About Torque<font:EntangledMBS:24><just:left>\n\n" @
                 "The Torque Game Engine (TGE) is a full featured AAA title engine with the latest in scripting, geometry, particle effects, animation and texturing, as well as award winning multi-player networking code.  For $100 per programmer, you get the source to the engine!";
-      case 13:
+      case 14:
          %text = "<font:Whitestone:50><color:000000><just:center>Special Thanks<font:EntangledMBS:24><just:left>\n\n" @
             "We'd like to thank the Marble Blast Community, for their advice, " @
             "and everyone, including the team itself, who has helped make Marble Blast Super happen."  @

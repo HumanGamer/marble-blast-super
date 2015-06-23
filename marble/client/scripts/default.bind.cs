@@ -33,40 +33,7 @@ function escapeFromGame()
       //ExitGameText.setText("<just:center><font:DomCasualD:32>Exit from this Level?");
       Canvas.pushDialog(ExitGameDlg);
    }
-   else {
-      //MessageBoxYesNo( "Disconnect", "Disconnect from the server?",
-      //   "escapeToLobby();", "");
-      MultiplayerExitGui.init();
-      Canvas.pushDialog(MultiplayerExitGui);
-   }
 }
-
-function escapeToLobby()
-{
-   $Game::GameLoops = 0;
-   cancel($Multiplayer::UpdateSchedule);
-   cancel($Multiplayer::DeltaUpdate);   
-   cancel($Multiplayer::CollisionUpdate);
-   cancel($Multiplayer::OOBUpdate);
-   cancel($Multiplayer::SpeedUpdate);
-   
-   endMission();
-   
-   Canvas.setContent(LobbyGui);
-}
-
-//function hostEscapeToLobby()
-//{
-//   if($Multiplayer::isHosting)
-//   {
-//      for (%index = 0; %index < ClientGroup.getCount(); %index++)  {
-//         %client = ClientGroup.getObject(%index);
-//         commandToClient(%client, 'SetLobby');
-//      }
-//   } else {
-//      escapeToLobby();
-//   }
-//}
 
 moveMap.bindCmd(keyboard, "escape", "", "escapeFromGame();");
 

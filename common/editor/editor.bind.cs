@@ -36,6 +36,7 @@ WorldEditorMap.bindCmd(keyboard, "delete", "wEditor.copySelection();wEditor.dele
 WorldEditorMap.bindCmd(keyboard, "ctrl c", "wEditor.copySelection();", "");
 WorldEditorMap.bindCmd(keyboard, "ctrl x", "wEditor.copySelection();wEditor.deleteSelection();", "");
 WorldEditorMap.bindCmd(keyboard, "ctrl v", "wEditor.pasteSelection();", "");
+WorldEditorMap.bindCmd(keyboard, "ctrl d", "wEditor.duplicateSelection();", "");
 
 WorldEditorMap.bindCmd(keyboard, "ctrl z", "wEditor.undo();", "");
 WorldEditorMap.bindCmd(keyboard, "ctrl y", "wEditor.redo();", "");

@@ -148,6 +148,7 @@ function lavaUpdate(%obj)
 	
 	if (%obj.lavaTime > $Lava::SurviveTime / 100)
 	{
+	   info("Lava Death");
 		stopLavaTimer();
 		$LavaDeath = true;
 		$Core::PhysicsDisabled = true;

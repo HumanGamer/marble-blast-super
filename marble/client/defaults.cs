@@ -19,7 +19,6 @@ $pref::QualifiedLevel["Tutorial"] = 1000;
 $pref::QualifiedLevel["Beginner"] = 1;
 $pref::QualifiedLevel["Intermediate"] = 1;
 $pref::QualifiedLevel["Advanced"] = 1;
-$pref::QualifiedLevel["Multiplayer"] = 1000;
 $pref::QualifiedLevel["Custom"] = 1000;
 
 $pref::checkMOTDAndVersion = "1"; // check the version by default
@@ -82,8 +81,6 @@ $pref::LastReadMOTD = "Welcome to MarbleBlast!";
 $pref::CurrentMOTD = "Welcome to MarbleBlast!";
 
 $Pref::Unix::OpenALFrequency = 44100;
-
-$pref::Multiplayer::isMultiplayer = false;
 
 $pref::ShowRadar = true;
 $pref::ShowRearView = false;

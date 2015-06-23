@@ -114,6 +114,7 @@ datablock ItemData(SuperBounceItem)
    
    image = SuperBounceImage;
    mountSlot = 0;
+	emap = false;
 };
 
 datablock AudioProfile(SuperBounceLoopSfx)
@@ -127,7 +128,7 @@ datablock ShapeBaseImageData(SuperBounceImage)
 {
    // Basic Item properties
    shapeFile = "~/data/shapes/images/glow_bounce.dts";
-   emap = true;
+	emap = false;
 
    // Specify mount point & offset for 3rd person, and eye offset
    // for first person rendering.
@@ -236,7 +237,7 @@ datablock ShapeBaseImageData(ShockAbsorberImage)
 {
    // Basic Item properties
    shapeFile = "~/data/shapes/images/glow_bounce.dts";
-   emap = true;
+	emap = false;
 
    // Specify mount point & offset for 3rd person, and eye offset
    // for first person rendering.
@@ -286,6 +287,7 @@ datablock ItemData(HelicopterItem)
    
    image = HelicopterImage;
    mountSlot = 2;
+	emap = false;
 };
 
 datablock AudioProfile(HelicopterLoopSfx)
@@ -299,7 +301,7 @@ datablock ShapeBaseImageData(HelicopterImage)
 {
    // Basic Item properties
    shapeFile = "~/data/shapes/images/helicopter.dts";
-   emap = true;
+	emap = false;
    mountPoint = 0;
    offset = "0 0 0";
    stateName[0]                     = "Rotate";
@@ -451,6 +453,7 @@ datablock ItemData(BlastItem)
    maxInventory = 1;
    
    noPickupMessage = true;
+	emap = false;
 };
 
 function BlastItem::onAdd(%this, %obj)
@@ -499,6 +502,7 @@ datablock ItemData(MegaMarbleItem)
    pickupName = "a Mega Marble PowerUp!";
    useName = "Mega Marble PowerUp";
    maxInventory = 1;
+	emap = false;
 };
 
 function MegaMarbleItem::onAdd(%this, %obj)
@@ -574,6 +578,7 @@ datablock ItemData(MiniMarbleItem)
    pickupName = "a Mini Marble PowerUp!";
    useName = "Mini Marble PowerUp";
    maxInventory = 1;
+	emap = false;
 };
 
 function MiniMarbleItem::onAdd(%this, %obj)
@@ -631,6 +636,7 @@ datablock ItemData(GravityInverterItem)
    pickupName = "a Gravity Inverter PowerUp!";
    useName = "Gravity Inverter PowerUp";
    maxInventory = 1;
+	emap = false;
 };
 
 function GravityInverterItem::onPickup(%this,%obj,%user,%amount)

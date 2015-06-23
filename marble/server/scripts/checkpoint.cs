@@ -3,6 +3,7 @@ datablock StaticShapeData(CheckPointShape)
    category = "Pads";
    //className = "CheckPointShape";
    shapeFile = "~/data/shapes/pads/checkpoint.dts";
+	emap = false;
 };
 
 function CheckPointShape::setActiveCheckPoint(%this, %obj, %flag)

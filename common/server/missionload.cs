@@ -121,36 +121,26 @@ function endMission()
 
    echo("*** ENDING MISSION");
    
-   
-   
    // Inform the game code we're done.
    onMissionEnded();
    
-   commandToAll('ResetGhostVars');
-   //commandToAll('ClearPlayerList');
-   //commandToAll('ClearRadar');
+   cancel($CompassUpdate);
 
    // Inform the clients
    for( %clientIndex = 0; %clientIndex < ClientGroup.getCount(); %clientIndex++ ) {
       // clear ghosts and paths from all clients
       %cl = ClientGroup.getObject( %clientIndex );
       
-   if (isObject(%cl.camera))
-   {
-      %cl.camera.delete();
-      %cl.camera = "";
-   }
-   if (isObject(%cl.player))
-   {
-      %cl.player.delete();
-      %cl.player = "";
-   }
-   if (isObject(%cl.ghost))
-   {
-      %cl.ghost.delete();
-      %cl.ghost = "";
-   }
-   $Multiplayer::MarbleCount--;
+      if (isObject(%cl.camera))
+      {
+         %cl.camera.delete();
+         %cl.camera = "";
+      }
+      if (isObject(%cl.player))
+      {
+         %cl.player.delete();
+         %cl.player = "";
+      }
       %cl.endMission();
       %cl.resetGhosting();
       %cl.clearPaths();

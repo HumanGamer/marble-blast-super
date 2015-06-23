@@ -9,6 +9,8 @@ new SimGroup(MissionGroup) {
          type = "Tutorial";
          time = "0";
          desc = "Use the SuperSpeed PowerUp to cross large gaps!";
+			hyperTime = "8000";
+			goldTime = "11000";
 			startHelpText = "Get a good running start, then use the SuperSpeed to cross the gap!";
    };
    new MissionArea(MissionArea) {

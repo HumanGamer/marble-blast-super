@@ -142,6 +142,7 @@ datablock StaticShapeData(WaterShape)
    shapeFile = "~/data/shapes/liquid/liquid.dts";
    scopeAlways = true;
    skin = "Water";
+	emap = false;
 };
 
 function WaterShape::onAdd(%this, %obj)
@@ -174,8 +175,17 @@ function WaterTrigger::onEnterTrigger(%this, %trigger, %obj)
 	  %proj = VectorProj($marbleVelocity,%nor);
 	  %rej = VectorRej($marbleVelocity,%nor);
 	  %rejlen = VectorLen(%rej);
-	  // user(-1.75+1.25*mPow(2,-%rejlen/30));
-	  findRealMarble().applyVelocity("0 0 0",VectorScale(%proj,-1.75+1.25*mPow(2,-%rejlen/30)));
+	  %var = -1.75+1.25*mPow(2,-%rejlen/20);
+	  info("Entering Water:");
+	  info("---------------------------------");
+     info("Velocity: " @ $MarbleVelocity);
+	  info("Gravity: " @ %nor);
+	  info("Proj: " @ %proj);
+	  info("Rej: " @ %rej);
+	  info("Rejlen: " @ %rejlen);
+	  info("Final:" @ %var);
+	  info("---------------------------------");
+	  findRealMarble().applyVelocity("0 0 0",VectorScale(%proj,%var));
 	  %emit = new ParticleEmitterNode() {
 		  position = VectorSub(%obj.position,"0 0 1");
 		  rotation = "1 0 0 0";
@@ -268,6 +278,12 @@ function stopWaterTimer(%obj)
 //}
 
 function updateWaterEffects() {
+   if (!isObject(LocalClientConnection) || !isObject(LocalClientConnection.getControlObject()))
+   {
+      alxStop($waterHandle);
+		$waterHandle = "";
+      return;
+   }
 	//$showWater = false;
 	//if (!isObject(WaterGroup))
 	//   new SimSet(WaterGroup);
@@ -278,10 +294,10 @@ function updateWaterEffects() {
 	//}
 	////withAll("WaterTrigger","$showWater = $showWater || isInMyWorldBox(%this);");
 	//PG_Water.setVisible($showWater);
-	if ($isUnderwater && $waterHandle $= "") {
+	if ($isUnderwater && $waterHandle $= "" && LocalClientConnection.getControlObject() $= LocalClientConnection.player) {
 		$waterHandle = alxPlay(UnderwaterSfx);
 	}
-	else if (!$isUnderwater && $waterHandle !$= "") {
+	else if ((!$isUnderwater && $waterHandle !$= "") || LocalClientConnection.getControlObject() !$= LocalClientConnection.player) {
 		alxStop($waterHandle);
 		$waterHandle = "";
 	}
@@ -302,6 +318,12 @@ package WaterUpdate {
 	function onFrameAdvance(%timeDelta)
 	{
 		Parent::onFrameAdvance(%timeDelta);
+		
+		//if ($showDelta)
+		//{
+		//	// SPAM THE CONSOLE LIKE MAD
+		//	echo("DELTA: " @ %timeDelta);
+		//}
 		
 		updateWaterEffects();
 	}

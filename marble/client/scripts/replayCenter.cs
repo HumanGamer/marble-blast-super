@@ -44,7 +44,7 @@ function RC_SetSelected(%index)
       %imgPath = %misPath @ "/" @ %imgBase;
       if (!isFile(%imgPath @ ".png") && !isFile(%imgPath @ ".jpg"))
       {
-         error("No Mission Preview");
+         debug("No Mission Preview");
       }
       
       RC_Preview.setBitmap(%imgPath);

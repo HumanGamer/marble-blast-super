@@ -1,19 +1,25 @@
 //--- OBJECT WRITE BEGIN ---
 new GuiControl(ConsoleDlg) {
    profile = "GuiDefaultProfile";
-   
-   new GuiWindowCtrl()
-   {
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
       profile = "GuiWindowProfile";
       position = "0 0";
-      extent = "640 370";
+      extent = "640 400";
       text = "Console";
-      
+
       new GuiScrollCtrl()
       {
          profile = "GuiScrollProfile";
          position = "0 0";
-         extent = "640 350";
+         extent = "640 357";
          hScrollBar = "alwaysOn";
          vScrollBar = "alwaysOn";
          horizSizing = "width";
@@ -25,16 +31,88 @@ new GuiControl(ConsoleDlg) {
             position = "0 0";
          };
       };
-      
-      new GuiConsoleEditCtrl("ConsoleEntry")
-      {
-         profile = "GuiTextEditProfile";
-         position = "0 350";
-         extent = "640 20";
-         historySize = 20;
-         altCommand = "ConsoleEntry::eval();";
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
          horizSizing = "width";
          vertSizing = "top";
+         position = "2 357";
+         extent = "71 20";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$testCheats";
+         helpTag = "0";
+         text = "Editor";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "width";
+         vertSizing = "top";
+         position = "75 357";
+         extent = "71 20";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$trace";
+         command = "doTrace();";
+         helpTag = "0";
+         text = "Trace";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "width";
+         vertSizing = "top";
+         position = "148 357";
+         extent = "71 20";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$showDebug";
+         helpTag = "0";
+         text = "Debug";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "width";
+         vertSizing = "top";
+         position = "221 357";
+         extent = "71 20";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$showInfo";
+         helpTag = "0";
+         text = "Info";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+         repeatPeriod = "1000";
+         repeatDecay = "1";
+      };
+      new GuiConsoleEditCtrl(ConsoleEntry) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "width";
+         vertSizing = "top";
+         position = "0 378";
+         extent = "640 18";
+         minExtent = "8 8";
+         visible = "1";
+         altCommand = "ConsoleEntry::eval();";
+         helpTag = "0";
+         maxLength = "255";
+         maxPixelWidth = "0";
+         historySize = "20";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "1";
+         useSiblingScroller = "1";
       };
    };
 };
@@ -74,8 +152,46 @@ function ToggleConsole(%make)
    }
 }
 
-// This function is to go along with echo, warn, and error
-function user(%message)
+package ConsoleOverride {
+   
+   //function echo(%message)
+   //{
+      //Parent::echo(%message);
+   //}
+   //
+   //function warn(%message)
+   //{
+      //echo("\c6" @ %message);
+   //}
+   //
+   //function error(%message)
+   //{
+      //echo("\c7" @ %message);
+   //}
+   
+   // This function is to go along with echo, warn, and error
+   function user(%message)
+   {
+      echo("\c3" @ %message);
+   }
+
+   function debug(%message)
+   {
+      if ($showDebug)
+         echo("\c4" @ %message);
+   }
+
+   function info(%message)
+   {
+      if ($showInfo)
+         echo("\c5" @ %message);
+   }
+
+};
+
+activatePackage(ConsoleOverride);
+
+function doTrace()
 {
-	echo("\c3" @ %message);
+	trace($trace);
 }

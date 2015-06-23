@@ -3,23 +3,23 @@ new SimGroup(MissionGroup) {
       canSaveDynamicFields = "1";
 
    new ScriptObject(MissionInfo) {
-         desc = "A level with a view!";
-         goldTime = "15000";
+         artist = "Matthieu Parizeau";
+         level = "9";
          gameMode = "Side";
+         startHelpText = "In this mode your camera is locked and you can only move left or right.";
+         goldTime = "15000";
+         desc = "A level with a view!";
+         gameType = "SinglePlayer";
          name = "A Different Perspective";
          type = "tutorial";
          canSaveDynamicFields = "1";
-         artist = "Matthieu Parizeau";
-         level = "9";
-         gameType = "SinglePlayer";
-         startHelpText = "In this mode your camera is locked and you can only move left or right.";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
       flightCeiling = "300";
       flightCeilingRange = "20";
-         canSaveDynamicFields = "1";
          locked = "true";
+         canSaveDynamicFields = "1";
    };
    new Sky(Sky) {
       position = "336 136 0";
@@ -47,35 +47,35 @@ new SimGroup(MissionGroup) {
       fogVolumeColor1 = "128.000000 128.000000 128.000000 274952335980479310000000000.000000";
       fogVolumeColor2 = "128.000000 128.000000 128.000000 11918.598633";
       fogVolumeColor3 = "128.000000 128.000000 128.000000 1109264997360148200000000000.000000";
-         skyGlow = "0";
-         fogStorm2 = "0";
          skyGlowColor = "-0.026242 -0.031545 0.999158 0.887938";
-         canSaveDynamicFields = "1";
-         fogStorm3 = "0";
-         hidden = "0";
-         renderBanOffsetHeight = "50";
          fogStorm1 = "0";
+         fogStorm3 = "0";
+         skyGlow = "0";
+         hidden = "0";
+         fogStorm2 = "0";
+         canSaveDynamicFields = "1";
+         renderBanOffsetHeight = "50";
    };
    new Sun() {
       direction = "-0.573201 -0.275357 -0.771764";
       color = "1.000000 1.000000 0.900000 1.000000";
       ambient = "0.400000 0.400000 0.500000 1.000000";
-         useDynamicRangeLighting = "0";
-         DRLMax = "1.4";
-         bloomAmount = "0.25";
-         castsShadows = "1";
-         DRLMin = "0.5";
-         bloomSeedAmount = "1";
-         canSaveDynamicFields = "1";
-         useBloom = "0";
-         DRLHighDynamicRange = "0";
          DRLMultiplier = "1.1";
-         azimuth = "0";
-         shadowColor = "0.000000 0.000000 0.150000 0.350000";
-         useToneMapping = "0";
+         DRLMax = "1.4";
+         bloomSeedAmount = "1";
          DRLTarget = "0.5";
+         bloomAmount = "0.25";
+         azimuth = "0";
+         useBloom = "0";
          bloomCutOff = "0.8";
+         castsShadows = "1";
+         shadowColor = "0.000000 0.000000 0.150000 0.350000";
+         useDynamicRangeLighting = "0";
+         DRLHighDynamicRange = "0";
          elevation = "35";
+         useToneMapping = "0";
+         DRLMin = "0.5";
+         canSaveDynamicFields = "1";
    };
    new InteriorInstance() {
       position = "0 0 0";
@@ -83,26 +83,26 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       interiorFile = "~/data/interiors/beginner/side_scrolling.dif";
       showTerrainInside = "0";
-         canSaveDynamicFields = "1";
          hidden = "0";
+         canSaveDynamicFields = "1";
    };
    new StaticShape(StartPoint) {
       position = "-1 0 0";
       rotation = "1 0 0 0";
       scale = "0.5 0.5 0.5";
-      dataBlock = "StartPad";
-         beam = "2407";
-         canSaveDynamicFields = "1";
+      dataBlock = "StartPadAlt2";
+         beam = "5556";
          hidden = "0";
+         canSaveDynamicFields = "1";
    };
    new StaticShape(EndPoint) {
       position = "41 0 8";
       rotation = "1 0 0 0";
       scale = "0.5 0.5 0.5";
-      dataBlock = "EndPad";
-         beam = "2390";
-         canSaveDynamicFields = "1";
+      dataBlock = "EndPadAlt2";
+         beam = "5524";
          hidden = "0";
+         canSaveDynamicFields = "1";
    };
    new Item() {
       position = "23.5 0 8";
@@ -112,9 +112,9 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         canSaveDynamicFields = "1";
          hidden = "0";
-         node = "2406";
+         canSaveDynamicFields = "1";
+         node = "5555";
    };
    new Trigger(Bounds) {
       position = "-5 4 -7";
@@ -122,8 +122,8 @@ new SimGroup(MissionGroup) {
       scale = "50 8 32";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         canSaveDynamicFields = "1";
          hidden = "0";
+         canSaveDynamicFields = "1";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

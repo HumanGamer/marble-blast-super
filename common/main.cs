@@ -95,7 +95,7 @@ function parseArgs()
 
          //--------------------
          case "-noSound":
-            error("no support yet");
+            debug("-noSound is not yet supported!");
             $argUsed[%i]++;
 
          //--------------------
