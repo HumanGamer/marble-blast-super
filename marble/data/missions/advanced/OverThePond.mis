@@ -2,15 +2,15 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         hyperTime = "15000";
-         startHelpText = "Can you pass this course?";
-         name = "Over The Pond";
-         time = "0";
-         desc = "Evade obstacles over the crystal clear, colorful pond!";
-         type = "advanced";
          level = "4";
-         artist = "Endy";
          goldTime = "20000";
+         hyperTime = "15000";
+         name = "Over the Pond";
+         artist = "Endy";
+         time = "0";
+         type = "advanced";
+         desc = "Evade obstacles over the crystal clear, colorful pond!";
+         startHelpText = "Can you pass this course?";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -60,7 +60,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 89.9544";
       scale = "0.5 0.5 0.5";
       dataBlock = "StartPad";
-         beam = "4389";
+         beam = "4185";
    };
    new InteriorInstance() {
       position = "4.00355 20.1709 -36.0469";
@@ -75,12 +75,12 @@ new SimGroup(MissionGroup) {
       };
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         time = "0";
          powerUp = "0";
          pad = "1819";
          penaltyTime = "0";
+         time = "0";
+         gemCount = "0";
+         bonusTime = "0";
    };
    new SimGroup(MustChange_g) {
 
@@ -97,12 +97,12 @@ new SimGroup(MissionGroup) {
          var = "jumpImpulse";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         time = "0";
          powerUp = "0";
          pad = "2365";
          penaltyTime = "0";
+         time = "0";
+         gemCount = "0";
+         bonusTime = "0";
    };
    new StaticShape() {
       position = "-5.32377 -23.1845 4.35957";
@@ -133,192 +133,192 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "235465";
-         hide = "235463";
-         unhide = "235464";
          skin = "greenw";
+         unhide = "235464";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "235463";
    };
    new StaticShape() {
       position = "-0.122269 5.16625 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "17819561";
-         hide = "17819559";
+         skin = "greenw";
          unhide = "17819560";
-         skin = "greenw";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "17819559";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "237225";
-         hide = "237223";
+         skin = "greenw";
          unhide = "237224";
-         skin = "greenw";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "237223";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "237222";
-         hide = "237220";
+         skin = "greenw";
          unhide = "237221";
-         skin = "greenw";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "237220";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "237219";
-         hide = "237217";
+         skin = "greenw";
          unhide = "237218";
-         skin = "greenw";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "237217";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "237216";
-         hide = "237214";
+         skin = "greenw";
          unhide = "237215";
-         skin = "greenw";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "237214";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "237213";
-         hide = "237211";
+         skin = "greenw";
          unhide = "237212";
-         skin = "greenw";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "237211";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "237210";
-         hide = "237208";
+         skin = "greenw";
          unhide = "237209";
-         skin = "greenw";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "237208";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "237207";
-         hide = "237205";
+         skin = "greenw";
          unhide = "237206";
-         skin = "greenw";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "237205";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "237204";
-         hide = "237202";
-         unhide = "237203";
          skin = "greenw";
+         unhide = "237203";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "237202";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "237201";
-         hide = "237199";
-         unhide = "237200";
          skin = "greenw";
+         unhide = "237200";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "237199";
    };
    new StaticShape() {
       position = "-0.119011 7.16684 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "237198";
-         hide = "237196";
-         unhide = "237197";
          skin = "greenw";
+         unhide = "237197";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "237196";
    };
    new StaticShape() {
       position = "-2.12162 -0.828976 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
-         unhide1 = "16994189";
-         hide = "16994187";
-         unhide = "16994188";
+         unhide1 = "249777";
          skin = "greenw";
+         unhide = "249776";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "249775";
    };
    new StaticShape() {
       position = "-2.12205 1.17133 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "16724992";
-         hide = "16724990";
-         unhide = "16724991";
          skin = "greenw";
+         unhide = "16724991";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "16724990";
    };
    new StaticShape() {
       position = "-2.12305 3.17074 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
-         unhide1 = "238881";
-         hide = "238879";
-         unhide = "238880";
+         unhide1 = "248931";
          skin = "greenw";
+         unhide = "248930";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "248929";
    };
    new StaticShape() {
       position = "-0.122485 3.16565 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         normalScale = "1 1 0.5";
-         used = "0";
          unhide1 = "16335070";
-         hide = "16335068";
-         unhide = "16335069";
          skin = "greenw";
+         unhide = "16335069";
+         used = "0";
+         normalScale = "1 1 0.5";
+         hide = "16335068";
    };
    new Trigger() {
       position = "-62.6824 44.2779 -7.36518";
@@ -412,12 +412,12 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         time = "0";
          powerUp = "0";
          pad = "2366";
          penaltyTime = "0";
+         time = "0";
+         gemCount = "0";
+         bonusTime = "0";
    };
    new InteriorInstance() {
       position = "-135.865 75.5789 0.127144";
@@ -1072,7 +1072,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "4381";
+         node = "4177";
    };
    new Item() {
       position = "-2.13038 21.5692 5.67222";
@@ -1083,7 +1083,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "4382";
+         node = "4178";
    };
    new Trigger() {
       position = "-6.74087 21.546 5.69905";
@@ -1116,7 +1116,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "2";
-         node = "4383";
+         node = "4179";
    };
    new Item() {
       position = "-32.636 12.1616 11.6837";
@@ -1127,7 +1127,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "4384";
+         node = "4180";
    };
    new Item() {
       position = "-29.6997 3.93768 12.6179";
@@ -1138,7 +1138,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "1";
-         node = "4385";
+         node = "4181";
    };
    new SimGroup(CannonBalls) {
    };
@@ -1294,8 +1294,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         timeBonus = "-2500";
          checkpointNum = "2";
+         timeBonus = "-2500";
    };
    new Item() {
       position = "-2.12471 3.2073 12.0323";
@@ -1306,7 +1306,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "2";
-         node = "4386";
+         node = "4182";
    };
    new Item() {
       position = "-0.128165 9.12331 12.0254";
@@ -1361,7 +1361,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 233.194";
       scale = "0.7 0.7 0.7";
       dataBlock = "EndPad";
-         beam = "3975";
+         beam = "3794";
    };
    new StaticShape() {
       position = "-24.6065 -13.5446 14.3649";
@@ -1378,7 +1378,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "2";
-         node = "4387";
+         node = "4183";
    };
    new Item() {
       position = "-11.7077 -11.1008 14.4419";
@@ -1389,7 +1389,7 @@ new SimGroup(MissionGroup) {
       static = "1";
       rotate = "1";
          checkpointNum = "3";
-         node = "4388";
+         node = "4184";
    };
    new Trigger() {
       position = "-67.5606 49.68 -95.6442";
@@ -1399,12 +1399,34 @@ new SimGroup(MissionGroup) {
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new ScriptObject() {
-         gemCount = "0";
-         bonusTime = "0";
-         time = "0";
          powerUp = "0";
          pad = "30801";
          penaltyTime = "0";
+         time = "0";
+         gemCount = "0";
+         bonusTime = "0";
+   };
+   new ScriptObject() {
+         powerUp = "0";
+         pad = "3613";
+         penaltyTime = "0";
+         time = "0";
+         gemCount = "0";
+         bonusTime = "0";
+   };
+   new StaticShape(check0) {
+      position = "-22.4535 12.19 7.48777";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      dataBlock = "CheckPointShape";
+   };
+   new Trigger(chack0) {
+      position = "-24.5471 14.1534 7.32447";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "check0";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";
