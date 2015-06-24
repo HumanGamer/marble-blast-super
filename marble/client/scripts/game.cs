@@ -19,10 +19,7 @@ function getBestTimes(%mis)
       $hs[%i] = $pref::highScores[%mis, %i];
       if($hs[%i] $= "")
       {
-         if(MissionInfo.time)
-            $hs[%i] = MissionInfo.time @ "\tAnonymous Marble";
-         else
-            $hs[%i] = "5998999\tAnonymous Marble";
+         $hs[%i] = "5998999\tAnonymous Marble";
       }
    }
 }
@@ -38,7 +35,7 @@ function clientCmdGameEnd()
    $highScoreIndex = "";
    for(%i = 0; %i < 3; %i++)
    {
-      if(($Game::ScoreTime < getField($hs[%i], 0))// && getField($hs[%i], 0) < MissionInfo.time) || ())
+      if($Game::ScoreTime < getField($hs[%i], 0))
       {
          for(%j = 2; %j > %i; %j--)
          {

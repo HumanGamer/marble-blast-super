@@ -10,15 +10,15 @@ new GameTSCtrl(PlayGui) {
    helpTag = "0";
    cameraZRot = "0";
    forceFOV = "0";
-      noCursor = "1";
-      timeInc = "50";
-      maxGems = "13";
-      elapsedTime = "12669";
       timerInc = "50";
+      elapsedTime = "18520";
+      maxGems = "0";
       gemCount = "0";
       bonusTime = "0";
-      timerId = "3512";
+      timeInc = "50";
       totalBonus = "0";
+      noCursor = "1";
+      timerId = "3512";
 
    new GuiBitmapCtrl(PG_Water) {
       profile = "GuiDefaultProfile";
@@ -84,7 +84,7 @@ new GameTSCtrl(PlayGui) {
       horizSizing = "center";
       vertSizing = "relative";
       position = "270 120";
-      extent = "100 48";
+      extent = "100 60";
       minExtent = "8 8";
       visible = "0";
       helpTag = "0";
@@ -173,7 +173,7 @@ new GameTSCtrl(PlayGui) {
          position = "-4 -4";
          extent = "60 60";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
          cameraZRot = "0";
          forceFOV = "0";
@@ -190,7 +190,7 @@ new GameTSCtrl(PlayGui) {
          position = "30 0";
          extent = "43 55";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
          bitmap = "./game/numbers/0.png";
          wrap = "0";
@@ -202,7 +202,7 @@ new GameTSCtrl(PlayGui) {
          position = "54 0";
          extent = "43 55";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
          bitmap = "./game/numbers/0.png";
          wrap = "0";
@@ -214,7 +214,7 @@ new GameTSCtrl(PlayGui) {
          position = "78 0";
          extent = "43 55";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
          bitmap = "./game/numbers/0.png";
          wrap = "0";
@@ -226,7 +226,7 @@ new GameTSCtrl(PlayGui) {
          position = "99 0";
          extent = "43 55";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
          bitmap = "./game/numbers/slash.png";
          wrap = "0";
@@ -238,7 +238,7 @@ new GameTSCtrl(PlayGui) {
          position = "120 0";
          extent = "43 55";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
          bitmap = "./game/numbers/0.png";
          wrap = "0";
@@ -250,9 +250,9 @@ new GameTSCtrl(PlayGui) {
          position = "144 0";
          extent = "43 55";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
-         bitmap = "./game/numbers/1.png";
+         bitmap = "./game/numbers/0.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(GemsTotalOne) {
@@ -262,9 +262,9 @@ new GameTSCtrl(PlayGui) {
          position = "168 0";
          extent = "43 55";
          minExtent = "8 8";
-         visible = "1";
+         visible = "0";
          helpTag = "0";
-         bitmap = "./game/numbers/3.png";
+         bitmap = "./game/numbers/0.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(GemsQuotaHundred) {
@@ -326,9 +326,9 @@ new GameTSCtrl(PlayGui) {
          visible = "1";
          helpTag = "0";
          maxLength = "255";
-            maxChars = "-1";
             lineSpacing = "2";
             allowColorChars = "0";
+            maxChars = "-1";
       };
    };
    new GuiProgressCtrl(PG_BlastBar) {
@@ -441,7 +441,7 @@ new GameTSCtrl(PlayGui) {
       skin = "base";
       cameraRotX = "0";
       cameraZRotSpeed = "0.001";
-      orbitDistance = "75068.3";
+      orbitDistance = "50";
       autoSize = "1";
    };
    new GuiControl(PG_Timer) {
@@ -523,7 +523,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/2.png";
+         bitmap = "./game/numbers/8.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(MinSec_Point) {
@@ -547,7 +547,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/6.png";
+         bitmap = "./game/numbers/5.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(Sec_Hundredth) {
@@ -559,7 +559,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
-         bitmap = "./game/numbers/6.png";
+         bitmap = "./game/numbers/2.png";
          wrap = "0";
       };
       new GuiBitmapCtrl(PG_NegSign) {
@@ -577,10 +577,10 @@ new GameTSCtrl(PlayGui) {
    };
    new GuiControl(PG_HelpText) {
       profile = "GuiDefaultProfile";
-      horizSizing = "center";
+      horizSizing = "width";
       vertSizing = "center";
-      position = "144 197";
-      extent = "352 86";
+      position = "9 197";
+      extent = "620 111";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
@@ -590,7 +590,7 @@ new GameTSCtrl(PlayGui) {
          horizSizing = "width";
          vertSizing = "height";
          position = "1 1";
-         extent = "352 90";
+         extent = "620 30";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -603,7 +603,7 @@ new GameTSCtrl(PlayGui) {
          horizSizing = "width";
          vertSizing = "height";
          position = "0 0";
-         extent = "352 90";
+         extent = "620 30";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -619,7 +619,7 @@ new GameTSCtrl(PlayGui) {
       position = "-2 87";
       extent = "317 72";
       minExtent = "8 8";
-      visible = "1";
+      visible = "0";
       helpTag = "0";
       bitmap = "./zones/zonebg";
       wrap = "0";
@@ -629,7 +629,7 @@ new GameTSCtrl(PlayGui) {
          horizSizing = "center";
          vertSizing = "bottom";
          position = "1 20";
-         extent = "315 36";
+         extent = "315 14";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
