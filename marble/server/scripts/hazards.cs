@@ -534,7 +534,7 @@ function Bomb::explode(%this, %obj)
    MissionCleanup.add(%explosion);
 }
 
-function checkBombs()
+function checkBombs(%timeDelta)
 {
    if (!isObject(MissionGroup))
       return;
@@ -550,7 +550,7 @@ function checkBombs()
          if (%obj.currentTime $= "")
             %obj.currentTime = 0;          
             
-         %obj.currentTime += $Game::UpdateInterval;
+         %obj.currentTime += %timeDelta * 3; //$Game::UpdateInterval;
          
          if (%obj.currentTime >= %obj.timer)
          {

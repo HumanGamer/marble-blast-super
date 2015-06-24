@@ -78,7 +78,8 @@ function destroyServer()
    echo("*** DESTROYING SERVER");
    
    $Game::GameLoops = 0;
-   cancel($Game::UpdateSchedule);
+   //cancel($Game::UpdateSchedule);
+   $doUpdateGame = 0;
    cancel($Game::DeltaUpdate);   
    cancel($Game::CollisionUpdate);
    cancel($Game::OOBUpdate);

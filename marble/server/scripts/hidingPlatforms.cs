@@ -61,7 +61,7 @@ function showPlatform(%obj)
    %obj.startFade(250, 0, false);
 }
 
-function checkHidingPlatforms()
+function checkHidingPlatforms(%timeDelta)
 {
    if (!isObject(MissionGroup))
       return;
@@ -77,7 +77,7 @@ function checkHidingPlatforms()
          if (%obj.currentTime $= "")
             %obj.currentTime = 0;          
             
-         %obj.currentTime += $Game::UpdateInterval;
+         %obj.currentTime += %timeDelta * 3; //$Game::UpdateInterval;
          
          if (%obj.currentTime >= %obj.timer)
          {

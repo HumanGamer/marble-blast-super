@@ -77,11 +77,11 @@ function Cannon::shoot(%this, %obj)
    CannonBalls.add(%cannonball);
 }
 
-function updateCannons()
+function updateCannons(%timeDelta)
 {
    if (!isObject(MissionGroup))
       return;
-   updateCannonBalls();
+   updateCannonBalls(%timeDelta);
    for (%i = 0; %i < MissionGroup.getCount(); %i++)
    {
       %obj = MissionGroup.getObject(%i);
@@ -94,7 +94,7 @@ function updateCannons()
          if (%obj.currentTime $= "")
                %obj.currentTime = 0;          
          
-         %obj.currentTime += $Game::UpdateInterval;
+         %obj.currentTime += %timeDelta; //$Game::UpdateInterval;
          
          if (%obj.currentTime >= %obj.timer)
          {

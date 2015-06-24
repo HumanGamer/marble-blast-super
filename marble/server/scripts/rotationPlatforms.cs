@@ -69,7 +69,7 @@ function getRotationByAxis(%axis)
    return "1 0 0 0.01";
 }
 
-function updateRotationPlatforms()
+function updateRotationPlatforms(%timeDelta)
 {
    if (!isObject(MissionGroup))
       return;
@@ -80,12 +80,12 @@ function updateRotationPlatforms()
       if (%obj.getClassName() $= "StaticShape" && %obj.getDatablock().getName() $= "RotationPlatform")
       {
          if (%obj.timer $= "")
-            %obj.timer = $Game::UpdateInterval;
+            %obj.timer = 1000; //$Game::UpdateInterval;
             
          if (%obj.currentTime $= "")
             %obj.currentTime = 0;          
             
-         %obj.currentTime += $Game::UpdateInterval;
+         %obj.currentTime += %timeDelta * 3; //$Game::UpdateInterval;
          
          if (%obj.currentTime >= %obj.timer)
          {

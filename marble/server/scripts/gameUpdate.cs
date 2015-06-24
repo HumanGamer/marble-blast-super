@@ -5,7 +5,8 @@ function onGameStartup()
    if (!isEventPending($CompassUpdate))
       updateCompass();
    updateDelta();
-   updateGame();
+   //updateGame();
+   $doUpdateGame = 1;
    updateDemo();
    oobUpdate();
 }
@@ -57,16 +58,27 @@ function updateDemo()
    $Game::UpdateDemo = schedule(1, 0, updateDemo);
 }
 
-function updateGame()
+package GameUpdate {
+   function onFrameAdvance(%timeDelta)
+   {
+      Parent::onFrameAdvance(%timeDelta);
+      if ($doUpdateGame)
+         updateGame(%timeDelta);
+   }
+};
+
+activatePackage(GameUpdate);
+
+function updateGame(%timeDelta)
 {
-   cancel($Game::UpdateSchedule);
+   //cancel($Game::UpdateSchedule);
    
-   checkHidingPlatforms();
-   checkBombs();
-   updateCannons();
-   updateRotationPlatforms();
+   checkHidingPlatforms(%timeDelta);
+   checkBombs(%timeDelta);
+   updateCannons(%timeDelta);
+   updateRotationPlatforms(%timeDelta);
    
-   $Game::UpdateSchedule = schedule($Game::UpdateInterval, 0, updateGame);
+   //$Game::UpdateSchedule = schedule($Game::UpdateInterval, 0, updateGame);
 }
 
 function oobUpdate()
