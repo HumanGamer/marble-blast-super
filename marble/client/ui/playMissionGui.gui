@@ -8,7 +8,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "~/client/backgrounds/gemlings.png";
+   bitmap = "~/client/backgrounds/SuperJump.png";
    useVariable = "0";
    tile = "0";
 
@@ -55,7 +55,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
-            bitmap = "~/data/missions/intermediate/ThinPath";
+            bitmap = "~/data/missions/tutorial/firststeps";
             wrap = "0";
 
             new GuiBitmapCtrl() {
@@ -127,7 +127,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "0 0";
-            extent = "80 176";
+            extent = "80 192";
             minExtent = "8 8";
             visible = "0";
             helpTag = "0";
@@ -170,18 +170,18 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "0 0";
-               extent = "114 1210";
+               extent = "114 1320";
                minExtent = "8 8";
                visible = "1";
                helpTag = "0";
+                  fitParentWidth = "0";
+                  clipColumnText = "0";
                   enumerate = "0";
                   resizeCell = "1";
                   columns = "0 20 165";
-                  fitParentWidth = "0";
-                  clipColumnText = "0";
 
                new GuiControl(PM_MissionID_0) {
-                  profile = "GuiDefaultProfile";
+                  profile = "GuiPMSelectedMission";
                   horizSizing = "center";
                   vertSizing = "bottom";
                   position = "7 0";
@@ -200,12 +200,12 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      visible = "1";
                      command = "PM_setSelected(0);";
                      helpTag = "0";
-                     bitmap = "~/data/missions/advanced/royal_hills";
+                     bitmap = "~/data/missions/tutorial/firststeps";
                      wrap = "0";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -220,11 +220,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_1) {
@@ -247,12 +247,12 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      visible = "1";
                      command = "PM_setSelected(1);";
                      helpTag = "0";
-                     bitmap = "~/data/missions/intermediate/upward";
+                     bitmap = "~/data/missions/tutorial/jump";
                      wrap = "0";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -267,11 +267,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_2) {
@@ -294,12 +294,12 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      visible = "1";
                      command = "PM_setSelected(2);";
                      helpTag = "0";
-                     bitmap = "~/data/missions/intermediate/Catwalks";
+                     bitmap = "~/data/missions/tutorial/GemCollection";
                      wrap = "0";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -314,11 +314,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_3) {
@@ -341,12 +341,12 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      visible = "1";
                      command = "PM_setSelected(3);";
                      helpTag = "0";
-                     bitmap = "~/data/missions/intermediate/riverside";
+                     bitmap = "~/data/missions/tutorial/atthepool";
                      wrap = "0";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -361,11 +361,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_4) {
@@ -388,19 +388,19 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      visible = "1";
                      command = "PM_setSelected(4);";
                      helpTag = "0";
-                     bitmap = "~/data/missions/intermediate/Revealingthecourse";
+                     bitmap = "~/data/missions/tutorial/SuperJump";
                      wrap = "0";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
                      horizSizing = "center";
                      vertSizing = "bottom";
                      position = "5 70";
-                     extent = "90 28";
+                     extent = "90 14";
                      minExtent = "8 8";
                      visible = "1";
                      command = "PM_setSelected(4);";
@@ -408,15 +408,15 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_5) {
-                  profile = "GuiPMSelectedMission";
+                  profile = "GuiDefaultProfile";
                   horizSizing = "center";
                   vertSizing = "bottom";
                   position = "7 550";
@@ -435,12 +435,12 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      visible = "1";
                      command = "PM_setSelected(5);";
                      helpTag = "0";
-                     bitmap = "~/data/missions/intermediate/ThinPath";
+                     bitmap = "~/data/missions/tutorial/speeding";
                      wrap = "0";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -455,11 +455,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_6) {
@@ -482,19 +482,19 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      visible = "1";
                      command = "PM_setSelected(6);";
                      helpTag = "0";
-                     bitmap = "~/data/missions/intermediate/orangedgems";
+                     bitmap = "~/data/missions/tutorial/TimeTravel";
                      wrap = "0";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
                      horizSizing = "center";
                      vertSizing = "bottom";
                      position = "5 70";
-                     extent = "90 14";
+                     extent = "90 28";
                      minExtent = "8 8";
                      visible = "1";
                      command = "PM_setSelected(6);";
@@ -502,11 +502,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_7) {
@@ -529,19 +529,19 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      visible = "1";
                      command = "PM_setSelected(7);";
                      helpTag = "0";
-                     bitmap = "~/data/missions/intermediate/MBSComplexityAscent";
+                     bitmap = "~/data/missions/tutorial/Gravity";
                      wrap = "0";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
                      horizSizing = "center";
                      vertSizing = "bottom";
                      position = "5 70";
-                     extent = "90 28";
+                     extent = "90 14";
                      minExtent = "8 8";
                      visible = "1";
                      command = "PM_setSelected(7);";
@@ -549,11 +549,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_8) {
@@ -576,19 +576,19 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      visible = "1";
                      command = "PM_setSelected(8);";
                      helpTag = "0";
-                     bitmap = "~/data/missions/intermediate/PillarDance";
+                     bitmap = "~/data/missions/tutorial/side_scrolling";
                      wrap = "0";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
                      horizSizing = "center";
                      vertSizing = "bottom";
                      position = "5 70";
-                     extent = "90 14";
+                     extent = "90 28";
                      minExtent = "8 8";
                      visible = "1";
                      command = "PM_setSelected(8);";
@@ -596,11 +596,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_9) {
@@ -623,19 +623,19 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      visible = "1";
                      command = "PM_setSelected(9);";
                      helpTag = "0";
-                     bitmap = "~/data/missions/intermediate/matchedRoute";
+                     bitmap = "~/data/missions/tutorial/frictionaltour1";
                      wrap = "0";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
                      horizSizing = "center";
                      vertSizing = "bottom";
                      position = "5 70";
-                     extent = "90 28";
+                     extent = "90 14";
                      minExtent = "8 8";
                      visible = "1";
                      command = "PM_setSelected(9);";
@@ -643,11 +643,11 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
                new GuiControl(PM_MissionID_10) {
@@ -670,12 +670,59 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      visible = "1";
                      command = "PM_setSelected(10);";
                      helpTag = "0";
-                     bitmap = "~/data/missions/intermediate/SandBox";
+                     bitmap = "~/data/missions/tutorial/DifferentPlatforms";
                      wrap = "0";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
+                  };
+                  new GuiMLTextCtrl(PM_LBL) {
+                     profile = "GuiMLTextProfile";
+                     horizSizing = "center";
+                     vertSizing = "bottom";
+                     position = "5 70";
+                     extent = "90 28";
+                     minExtent = "8 8";
+                     visible = "1";
+                     command = "PM_setSelected(10);";
+                     helpTag = "0";
+                     lineSpacing = "2";
+                     allowColorChars = "0";
+                     maxChars = "-1";
+                        repeatDecay = "1";
+                        groupNum = "-1";
+                        wrap = "0";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
+                  };
+               };
+               new GuiControl(PM_MissionID_11) {
+                  profile = "GuiDefaultProfile";
+                  horizSizing = "center";
+                  vertSizing = "bottom";
+                  position = "7 1210";
+                  extent = "100 100";
+                  minExtent = "8 8";
+                  visible = "1";
+                  helpTag = "0";
+
+                  new GuiBitmapCtrl() {
+                     profile = "GuiButtonProfile";
+                     horizSizing = "center";
+                     vertSizing = "bottom";
+                     position = "5 10";
+                     extent = "90 60";
+                     minExtent = "8 8";
+                     visible = "1";
+                     command = "PM_setSelected(11);";
+                     helpTag = "0";
+                     bitmap = "~/data/missions/tutorial/bounce";
+                     wrap = "0";
+                        repeatDecay = "1";
+                        groupNum = "-1";
+                        buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                   new GuiMLTextCtrl(PM_LBL) {
                      profile = "GuiMLTextProfile";
@@ -685,16 +732,16 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
                      extent = "90 14";
                      minExtent = "8 8";
                      visible = "1";
-                     command = "PM_setSelected(10);";
+                     command = "PM_setSelected(11);";
                      helpTag = "0";
                      lineSpacing = "2";
                      allowColorChars = "0";
                      maxChars = "-1";
-                        repeatPeriod = "1000";
                         repeatDecay = "1";
                         groupNum = "-1";
                         wrap = "0";
                         buttonType = "PushButton";
+                        repeatPeriod = "1000";
                   };
                };
             };
@@ -726,7 +773,7 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             visible = "1";
             command = "PM_ToggleDifficultyPopup();";
             helpTag = "0";
-            text = "Intermediate";
+            text = "Tutorial";
             groupNum = "-1";
             buttonType = "PushButton";
             repeatPeriod = "1000";
@@ -746,10 +793,10 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             helpTag = "0";
             bitmap = "./play/difficultyList";
             wrap = "0";
-               text = "Select Difficulty";
                maxLength = "255";
                groupNum = "-1";
                maxPopupHeight = "200";
+               text = "Select Difficulty";
 
             new GuiScrollCtrl() {
                profile = "PlayMissionDifficultyScrollProfile";
@@ -868,8 +915,8 @@ new GuiChunkedBitmapCtrl(playMissionGui) {
             profile = "GuiDefaultProfile";
             horizSizing = "left";
             vertSizing = "top";
-            position = "303 21";
-            extent = "188 102";
+            position = "286 21";
+            extent = "205 93";
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
