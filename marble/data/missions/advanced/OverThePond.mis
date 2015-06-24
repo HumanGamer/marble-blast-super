@@ -2,15 +2,15 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         level = "4";
-         goldTime = "20000";
-         hyperTime = "15000";
          name = "Over the Pond";
-         artist = "Endy";
+         startHelpText = "Can you pass this course?";
          time = "0";
          type = "advanced";
+         hyperTime = "15000";
+         level = "4";
+         goldTime = "20000";
+         artist = "Endy";
          desc = "Evade obstacles over the crystal clear, colorful pond!";
-         startHelpText = "Can you pass this course?";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -47,8 +47,8 @@ new SimGroup(MissionGroup) {
    };
    new Sun() {
       direction = "0.57735 0.57735 -0.57735";
-      color = "0.100000 0.100000 0.100000 1.000000";
-      ambient = "0.000000 0.220000 0.150000 0.400000";
+      color = "0.000000 0.100000 0.400000 3.000000";
+      ambient = "0.100000 0.200000 0.200000 0.200000";
    };
    new SimGroup(MustChange_g) {
 
@@ -60,7 +60,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 89.9544";
       scale = "0.5 0.5 0.5";
       dataBlock = "StartPad";
-         beam = "4185";
+         beam = "7341";
    };
    new InteriorInstance() {
       position = "4.00355 20.1709 -36.0469";
@@ -75,10 +75,10 @@ new SimGroup(MissionGroup) {
       };
    };
    new ScriptObject() {
-         powerUp = "0";
-         pad = "1819";
-         penaltyTime = "0";
          time = "0";
+         pad = "1819";
+         powerUp = "0";
+         penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
    };
@@ -93,14 +93,14 @@ new SimGroup(MissionGroup) {
       scale = "19 7 10";
       dataBlock = "PhysicsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         value = "0";
          var = "jumpImpulse";
+         value = "0";
    };
    new ScriptObject() {
-         powerUp = "0";
-         pad = "2365";
-         penaltyTime = "0";
          time = "0";
+         pad = "2365";
+         powerUp = "0";
+         penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
    };
@@ -133,192 +133,192 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "235465";
+         hide = "1573440";
+         unhide = "1573441";
          skin = "greenw";
-         unhide = "235464";
+         unhide1 = "1573442";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "235463";
    };
    new StaticShape() {
       position = "-0.122269 5.16625 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "17819561";
+         hide = "1238226";
+         unhide = "1238227";
          skin = "greenw";
-         unhide = "17819560";
+         unhide1 = "1238228";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "17819559";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "237225";
+         hide = "1575109";
+         unhide = "1575110";
          skin = "greenw";
-         unhide = "237224";
+         unhide1 = "1575111";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "237223";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "237222";
+         hide = "1575112";
+         unhide = "1575113";
          skin = "greenw";
-         unhide = "237221";
+         unhide1 = "1575114";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "237220";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "237219";
+         hide = "1575097";
+         unhide = "1575098";
          skin = "greenw";
-         unhide = "237218";
+         unhide1 = "1575099";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "237217";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "237216";
+         hide = "1575118";
+         unhide = "1575119";
          skin = "greenw";
-         unhide = "237215";
+         unhide1 = "1575120";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "237214";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "237213";
+         hide = "1575115";
+         unhide = "1575116";
          skin = "greenw";
-         unhide = "237212";
+         unhide1 = "1575117";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "237211";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "237210";
+         hide = "1575094";
+         unhide = "1575095";
          skin = "greenw";
-         unhide = "237209";
+         unhide1 = "1575096";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "237208";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "237207";
+         hide = "1575106";
+         unhide = "1575107";
          skin = "greenw";
-         unhide = "237206";
+         unhide1 = "1575108";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "237205";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "237204";
+         hide = "1575103";
+         unhide = "1575104";
          skin = "greenw";
-         unhide = "237203";
+         unhide1 = "1575105";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "237202";
    };
    new StaticShape() {
       position = "-0.121578 7.17148 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "237201";
+         hide = "1575100";
+         unhide = "1575101";
          skin = "greenw";
-         unhide = "237200";
+         unhide1 = "1575102";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "237199";
    };
    new StaticShape() {
       position = "-0.119011 7.16684 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "237198";
+         hide = "1575121";
+         unhide = "1575122";
          skin = "greenw";
-         unhide = "237197";
+         unhide1 = "1575123";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "237196";
    };
    new StaticShape() {
       position = "-2.12162 -0.828976 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "249777";
+         hide = "1829450";
+         unhide = "1829451";
          skin = "greenw";
-         unhide = "249776";
+         unhide1 = "1829452";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "249775";
    };
    new StaticShape() {
       position = "-2.12205 1.17133 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "16724992";
+         hide = "895533";
+         unhide = "895534";
          skin = "greenw";
-         unhide = "16724991";
+         unhide1 = "895535";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "16724990";
    };
    new StaticShape() {
       position = "-2.12305 3.17074 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "248931";
+         hide = "1828602";
+         unhide = "1828603";
          skin = "greenw";
-         unhide = "248930";
+         unhide1 = "1828604";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "248929";
    };
    new StaticShape() {
       position = "-0.122485 3.16565 11.8281";
       rotation = "1 0 0 0";
       scale = "1 1 0.5";
       dataBlock = "HidingPlatform";
-         unhide1 = "16335070";
+         hide = "1576820";
+         unhide = "1576821";
          skin = "greenw";
-         unhide = "16335069";
+         unhide1 = "1576822";
          used = "0";
          normalScale = "1 1 0.5";
-         hide = "16335068";
    };
    new Trigger() {
       position = "-62.6824 44.2779 -7.36518";
@@ -412,10 +412,10 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
-         powerUp = "0";
-         pad = "2366";
-         penaltyTime = "0";
          time = "0";
+         pad = "2366";
+         powerUp = "0";
+         penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
    };
@@ -1071,8 +1071,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
-         node = "4177";
+         node = "8099";
+         checkpointNum = "7";
    };
    new Item() {
       position = "-2.13038 21.5692 5.67222";
@@ -1082,8 +1082,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
-         node = "4178";
+         node = "8100";
+         checkpointNum = "7";
    };
    new Trigger() {
       position = "-6.74087 21.546 5.69905";
@@ -1103,7 +1103,7 @@ new SimGroup(MissionGroup) {
    };
    new StaticShape(check1) {
       position = "-22.5345 0.18726 12.0773";
-      rotation = "1 0 0 0";
+      rotation = "0 0 1 89.9544";
       scale = "0.5 0.5 0.5";
       dataBlock = "CheckPointShape";
    };
@@ -1115,8 +1115,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
-         node = "4179";
+         node = "7618";
+         checkpointNum = "3";
    };
    new Item() {
       position = "-32.636 12.1616 11.6837";
@@ -1126,8 +1126,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
-         node = "4180";
+         node = "7463";
+         checkpointNum = "5";
    };
    new Item() {
       position = "-29.6997 3.93768 12.6179";
@@ -1137,8 +1137,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
-         node = "4181";
+         node = "7464";
+         checkpointNum = "2";
    };
    new SimGroup(CannonBalls) {
    };
@@ -1294,8 +1294,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
          timeBonus = "-2500";
+         checkpointNum = "4";
    };
    new Item() {
       position = "-2.12471 3.2073 12.0323";
@@ -1305,8 +1305,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
-         node = "4182";
+         node = "7619";
+         checkpointNum = "3";
    };
    new Item() {
       position = "-0.128165 9.12331 12.0254";
@@ -1316,7 +1316,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
+         checkpointNum = "4";
    };
    new TSStatic() {
       position = "-39.1264 2.31912 -90.7395";
@@ -1334,7 +1334,7 @@ new SimGroup(MissionGroup) {
    };
    new StaticShape(check2) {
       position = "-4.63124 -12.0503 14.4636";
-      rotation = "1 0 0 0";
+      rotation = "0 0 -1 91.6733";
       scale = "0.5 0.5 0.5";
       dataBlock = "CheckPointShape";
    };
@@ -1354,14 +1354,14 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
+         checkpointNum = "8";
    };
    new StaticShape(EndPoint) {
       position = "-30.8455 -17.2836 18.2152";
       rotation = "0 0 1 233.194";
       scale = "0.7 0.7 0.7";
       dataBlock = "EndPad";
-         beam = "3794";
+         beam = "5383";
    };
    new StaticShape() {
       position = "-24.6065 -13.5446 14.3649";
@@ -1377,8 +1377,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "2";
-         node = "4183";
+         node = "8550";
+         checkpointNum = "8";
    };
    new Item() {
       position = "-11.7077 -11.1008 14.4419";
@@ -1388,8 +1388,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "3";
-         node = "4184";
+         node = "7921";
+         checkpointNum = "4";
    };
    new Trigger() {
       position = "-67.5606 49.68 -95.6442";
@@ -1399,24 +1399,24 @@ new SimGroup(MissionGroup) {
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
    };
    new ScriptObject() {
-         powerUp = "0";
-         pad = "30801";
-         penaltyTime = "0";
          time = "0";
+         pad = "30801";
+         powerUp = "0";
+         penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
    };
    new ScriptObject() {
-         powerUp = "0";
-         pad = "3613";
-         penaltyTime = "0";
          time = "0";
+         pad = "3613";
+         powerUp = "0";
+         penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
    };
    new StaticShape(check0) {
       position = "-22.4535 12.19 7.48777";
-      rotation = "1 0 0 0";
+      rotation = "0 0 -1 90.5273";
       scale = "0.5 0.5 0.5";
       dataBlock = "CheckPointShape";
    };
@@ -1432,6 +1432,12 @@ new SimGroup(MissionGroup) {
       fileName = "~/data/sound/Shell.ogg";
       description = "AudioMusic";
       preload = "0";
+   };
+   new StaticShape() {
+      position = "-1.7206 6.32617 13.25";
+      rotation = "0 0 1 111.336";
+      scale = "1 1 1";
+      dataBlock = "SignCautionDanger";
    };
 };
 //--- OBJECT WRITE END ---
