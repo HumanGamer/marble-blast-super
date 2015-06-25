@@ -3,7 +3,7 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          artist = "James Colsey";
-         name = "Agility";
+         name = "Agility Limit";
          time = "180000";
          desc = "Be agile as you collect the gems in this small level.";
          type = "Beginner";
