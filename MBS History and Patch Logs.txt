@@ -1,4 +1,95 @@
 =========================================================
+BETA 5.0
+June 24, 2015
+
+- 2 new levels (Over the Pond, Morning Stroll)
+- 1 modified Expert level (Champion's Road)
+- Changed Shell music to original
+- New logo
+- Added Ender Marble
+- Made main game loop run on frame advance, rather than schedules
+- Credits changes
+- Fixed "Next Level" button in EndGameGui
+- Added .map file for Danger Castle
+
+=========================================================
+BETA 4.9
+June 22, 2015
+
+- 6 modified levels
+- Added Marble and Gem Reflections
+- Added more alternate Start and End Pads
+- Revamped playMissionGui
+- New Water texture
+- Now saves scores if failed to qualify Par Time
+- Fixed Mega Marble
+- Added clipboard.gui to .gitignore
+
+=========================================================
+BETA 4.8
+June 20, 2015
+
+- 2 new levels (Icy Slide, Skyscraper: The Second Climb)
+- Removed all multiplayer code
+- Changed UltimateQuest textures
+- Changed HelpText
+- Added "Inspirations" section to Manual
+- Added Zones
+- Added buttons to ConsoleDlg
+- Added ability to make a new mission in the Mission Editor with Ctrl+N
+- Added useful debug features
+- Fixed Metrics not working
+- Fixed LoadingGui
+
+=========================================================
+BETA 4.7
+June 19, 2015
+
+- 1 new Intermediate level (Riverside)
+- 1 modified Intermediate level (Sand Box) (changed Super and Hyper Times)
+- Changed default score name to "Anonymous Marble"
+- Added Duplicate Selection to Mission Editor
+- Fixed Water physics
+- Manual changes
+
+=========================================================
+BETA 4.6
+June 18, 2015
+
+- 1 new Intermediate level (Sand Box)
+- 2 modified levels (Pick your demise!, At the Pool)
+- Added Lava
+- New water physics (sounds and water-skipping)
+- Revamped Manual and Credits
+- Added friction_sand_shadow texture
+- Updated MBExtender
+- Changed Artist Name font to EntangledMBS
+- Start and End Pads spawn at Z 10 instead of Z 100, while creating new missions
+
+=========================================================
+BETA 4.5
+June 17, 2015
+
+- 4 new levels (Oceanic Nightmare, Changing the Course of Time, First Steps, Speeding)
+- 1 modified Beginner level (Green Climb of the Amateur) (aligned Bumpers and Mines)
+- Renamed "Speeding" to "Booster Tricks" and moved to Beginner
+- Renamed some texture names
+- Added Glass, Nature, and Light Bulb shapes
+- Added grass and dirt platform interiors
+- Changed Shell music to "Turn Up the Sun"
+- Changed Artist Name font to Entangled
+
+=========================================================
+BETA 4.4
+June 16, 2015
+
+- 3 new Tutorial levels (Different Platforms, Hopping, Speeding)
+- 1 modified Tutorial level (Different Platforms) (added inBoundsTrigger)
+- Fixed Achievements GUI
+- Added Achievement icons
+- Temporarily disabled "Next Level" button going to next level, due to unknown crash bug
+
+=========================================================
 BETA 4.3.1
 June 14, 2015
 
@@ -322,14 +413,14 @@ August 31, 2014
 - Tornado fan loop replaced with original fan loop
 
 =========================================================
-BETA 2.2.1
+ALPHA 2.2.1
 August 30, 2014
 
 - Unfinished multiplayer lobby
 - Unfinished bugfix for playMissionGui.gui
 
 =========================================================
-BETA 2.2
+ALPHA 2.2
 August 30, 2014
 
 - Added gem beams, random spawns, and playerlist for multiplayer
@@ -344,7 +435,7 @@ August 30, 2014
 - Fixed various playMissionGui.gui issues
 
 =========================================================
-BETA 2.1
+ALPHA 2.1
 August 23, 2014
 
 - 2 new Beginner levels and 1 new Medium level
@@ -356,7 +447,7 @@ August 23, 2014
 - Asphalt and Plasma Floor frictions
 
 =========================================================
-BETA 2.0.1
+ALPHA 2.0.1
 August 20, 2014
 
 - Organization of interiors
@@ -365,7 +456,7 @@ August 20, 2014
 - 9 levels readded
 
 =========================================================
-BETA 2.0
+ALPHA 2.0
 August 19, 2014
 
 - All levels before 2.0 S1 removed except for Gravity Hazard Rush
@@ -381,7 +472,7 @@ August 19, 2014
 - Incomplete fixes to options screen
 
 =========================================================
-BETA 1.9.2.1.1
+ALPHA 1.9.2.1.1
 June 16, 2014
 
 - Main menu and options menu changes
@@ -389,7 +480,7 @@ June 16, 2014
 - Rear-view changes
 
 =========================================================
-BETA 1.9.2.1
+ALPHA 1.9.2.1
 June 16, 2014
 
 - Level modifications
@@ -397,7 +488,7 @@ June 16, 2014
 - Director's Cut changes
 
 =========================================================
-BETA 1.9.2
+ALPHA 1.9.2
 June 16, 2014
 
 - New background screens
@@ -412,7 +503,7 @@ June 16, 2014
 - Choose.gui not so slanted anymore
 
 =========================================================
-BETA 1.9.1.1
+ALPHA 1.9.1.1
 June 15, 2014
 
 - Level modifications
@@ -420,7 +511,7 @@ June 15, 2014
 - grid_glass textures changed
 
 =========================================================
-BETA 1.9.1
+ALPHA 1.9.1
 June 15, 2014
 
 - 25 new levels
@@ -429,7 +520,7 @@ June 15, 2014
 - Spawn sound added
 
 =========================================================
-BETA 1.9
+ALPHA 1.9
 May 29, 2014
 
 - BlastedMarble joins the team
@@ -445,7 +536,7 @@ May 29, 2014
 - friction, grid_cool, grid_super, grid_warm, grid_wavy and mbs_wall textures changed
 
 =========================================================
-BETA 1.8.6
+ALPHA 1.8.6
 September 20, 2013
 
 - 1 new level (Cold Blueness)
@@ -459,14 +550,14 @@ September 20, 2013
 - playMission.gui not messy anymore
 
 =========================================================
-BETA 1.8.5
+ALPHA 1.8.5
 August 31, 2013
 
 - Wall and brick textures changed
 - Title screen changed
 
 =========================================================
-BETA 1.8.4
+ALPHA 1.8.4
 August 24, 2013
 
 - 3 new levels (Ascent, How to: SuperGlider, How to: Gravity)
@@ -475,7 +566,7 @@ August 24, 2013
 - New loading GUI
 
 =========================================================
-BETA 1.8.3
+ALPHA 1.8.3
 August 23, 2013
 
 - 1 new level (How To: Hazards)
@@ -483,7 +574,7 @@ August 23, 2013
 - New UI textures
 
 =========================================================
-BETA 1.8.2
+ALPHA 1.8.2
 August 23, 2013
 
 - 2 modified levels (How to: SuperSpring, How to: SuperSprint)
@@ -492,13 +583,13 @@ August 23, 2013
 - New EndGame.gui
 
 =========================================================
-BETA 1.7_02
+ALPHA 1.7.2
 August 18, 2013
 
 - New level select menu
 
 =========================================================
-BETA 1.7_01
+ALPHA 1.7.1
 August 18, 2013
 
 - New backgrounds
@@ -506,7 +597,7 @@ August 18, 2013
 - Nostalgia and Stewart marble added
 
 =========================================================
-BETA 1.7
+ALPHA 1.7
 August 14, 2013
 
 - davidjl123 joins the team
@@ -523,52 +614,52 @@ August 14, 2013
 - Multiplayer level fixes
 
 =========================================================
-BETA 1.6_01
+ALPHA 1.6
 August 7, 2013
 
 - New main menu
 - Neon mod
 
 =========================================================
-BETA 1.6
+ALPHA 1.5
 August 5, 2013
 
 - Multiplayer working
 
 =========================================================
-ALPHA 1.5_01
+PRE-ALPHA 1.4
 August 3, 2013
 
 - Bugfixes
 - Improved playmissiongui
 
 =========================================================
-ALPHA 1.5
+PRE-ALPHA 1.3.1
 August 2, 2013
 
 - Bugfixes
 
 =========================================================
-ALPHA 1.4
+PRE-ALPHA 1.3
 July 31, 2013
 
 - Ralph joins the team
 - Ralph's skyboxes added
 
 =========================================================
-ALPHA 1.3_01
+PRE-ALPHA 1.2.1
 July 31, 2013
 
 - Multiplayer bugfixes
 
 =========================================================
-ALPHA 1.3
+PRE-ALPHA 1.2
 July 31, 2013
 
 - First tests of multiplayer
 
 =========================================================
-PRE-ALPHA 1.2_01
+PRE-ALPHA 1.1
 July 31, 2013
 
 - Matt (cooldudepoke) joins the team
@@ -576,25 +667,19 @@ July 31, 2013
 - 1 new level (Learning Movement)
 
 =========================================================
-PRE-ALPHA 1.2
+PRE-ALPHA 1.0.1
 July 31, 2013
 
 - Modified GUI
 
 =========================================================
-PRE-ALPHA 1.1
+PRE-ALPHA 1.0
 July 30, 2013
 
 - EnderCraft1 joins the team
 - Intro changed
 - grid_cold, grid_super, and grid_wavy textures added
 - grid_cool, grid_neutral, and grid_warm textures changed
-
-=========================================================
-PRE-ALPHA 1.0
-July 21, 2013
-
-- Marble Blast Super publically announced
 
 =========================================================
 PRE-ALPHA 0.6
