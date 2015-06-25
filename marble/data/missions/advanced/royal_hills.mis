@@ -10,6 +10,7 @@ new SimGroup(MissionGroup) {
          artist = "Matthieu Parizeau";
          hyperTime = "10000";
          hasEgg = "1";
+			music = "The Hidden Beast.ogg";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

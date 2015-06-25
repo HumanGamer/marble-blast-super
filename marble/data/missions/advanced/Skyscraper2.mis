@@ -10,6 +10,7 @@ new SimGroup(MissionGroup) {
          goldTime = "165000";
          level = "9";
          hyperTime = "135000";
+			music = "Rising to Prime Altitude.ogg";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
