@@ -10,6 +10,7 @@ new SimGroup(MissionGroup) {
          goldTime = "30000";
          artist = "Rozi";
          hyperTime = "16000";
+			music = "Quadrant of Interstellar Sunshine.ogg";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

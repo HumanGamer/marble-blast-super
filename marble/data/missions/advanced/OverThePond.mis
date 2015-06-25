@@ -11,6 +11,7 @@ new SimGroup(MissionGroup) {
          goldTime = "20000";
          artist = "Endy";
          desc = "Evade obstacles over the crystal clear, colorful pond!";
+			music = "Time Ripple.ogg";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";

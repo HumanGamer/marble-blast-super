@@ -3,13 +3,14 @@ new SimGroup(MissionGroup) {
       canSaveDynamicFields = "1";
 
    new ScriptObject(MissionInfo) {
+         hyperTime = "30000";
+         name = "Morning Stroll";
+         startHelpText = "Stroll along the 2D course!";
+         gameMode = "Side";
          desc = "Ahh... morning! Isn\'t it amazing? Make sure to stay on the course, some objects can throw you off!";
          canSaveDynamicFields = "1";
-         name = "Morning Stroll";
+         type = "advanced";
          level = "9";
-         type = "intermediate";
-         gameMode = "Side";
-         startHelpText = "Stroll along the 2D course!";
          artist = "Endy";
          goldTime = "45000";
          gameType = "SinglePlayer";
@@ -47,35 +48,35 @@ new SimGroup(MissionGroup) {
       fogVolumeColor1 = "128.000000 128.000000 128.000000 274952335980479310000000000.000000";
       fogVolumeColor2 = "128.000000 128.000000 128.000000 11918.598633";
       fogVolumeColor3 = "128.000000 128.000000 128.000000 1109264997360148200000000000.000000";
-         canSaveDynamicFields = "1";
-         skyGlowColor = "-0.026242 -0.031545 0.999158 0.887938";
-         skyGlow = "0";
-         fogStorm1 = "0";
-         fogStorm2 = "0";
-         hidden = "0";
-         renderBanOffsetHeight = "50";
          fogStorm3 = "0";
+         canSaveDynamicFields = "1";
+         skyGlow = "0";
+         skyGlowColor = "-0.026242 -0.031545 0.999158 0.887938";
+         hidden = "0";
+         fogStorm2 = "0";
+         fogStorm1 = "0";
+         renderBanOffsetHeight = "50";
    };
    new Sun() {
       direction = "-0.573201 -0.275357 -0.771764";
       color = "1.000000 1.000000 0.900000 1.000000";
       ambient = "0.400000 0.400000 0.500000 1.000000";
-         bloomAmount = "0.25";
-         elevation = "35";
-         canSaveDynamicFields = "1";
-         castsShadows = "1";
-         azimuth = "0";
-         DRLMin = "0.5";
-         bloomCutOff = "0.8";
-         DRLMax = "1.4";
-         DRLMultiplier = "1.1";
-         useBloom = "0";
-         DRLHighDynamicRange = "0";
-         DRLTarget = "0.5";
-         bloomSeedAmount = "1";
-         shadowColor = "0.000000 0.000000 0.150000 0.350000";
          useDynamicRangeLighting = "0";
          useToneMapping = "0";
+         canSaveDynamicFields = "1";
+         bloomCutOff = "0.8";
+         DRLTarget = "0.5";
+         DRLMultiplier = "1.1";
+         DRLMin = "0.5";
+         bloomAmount = "0.25";
+         DRLHighDynamicRange = "0";
+         castsShadows = "1";
+         DRLMax = "1.4";
+         azimuth = "0";
+         shadowColor = "0.000000 0.000000 0.150000 0.350000";
+         elevation = "35";
+         bloomSeedAmount = "1";
+         useBloom = "0";
    };
    new InteriorInstance() {
       position = "70.682 -92.7933 -18.4777";
@@ -89,17 +90,17 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90";
       scale = "0.5 0.5 0.5";
       dataBlock = "StartPadAlt2";
+         beam = "4210";
          canSaveDynamicFields = "1";
-         beam = "2614";
          hidden = "0";
    };
    new ScriptObject() {
+         powerUp = "0";
          pad = "3403";
          penaltyTime = "0";
+         time = "0";
          gemCount = "0";
          bonusTime = "0";
-         time = "0";
-         powerUp = "0";
    };
    new StaticShape() {
       position = "-0.271774 -10.6699 -4.36735";
@@ -114,12 +115,12 @@ new SimGroup(MissionGroup) {
       dataBlock = "Glass1";
    };
    new ScriptObject() {
+         powerUp = "0";
          pad = "2375";
          penaltyTime = "0";
+         time = "0";
          gemCount = "0";
          bonusTime = "0";
-         time = "0";
-         powerUp = "0";
    };
    new StaticShape() {
       position = "-0.703349 -43.6508 -0.223296";
@@ -128,7 +129,7 @@ new SimGroup(MissionGroup) {
       dataBlock = "Glass1";
    };
    new Item() {
-      position = "-1.08425 -10.7449 -1.44118";
+      position = "-3.23893 -130.942 -2.8573";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EasterEggItem";
@@ -248,8 +249,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2604";
          checkpointNum = "1";
+         node = "4200";
    };
    new Item() {
       position = "-3.36734 -16.3329 -0.167795";
@@ -259,8 +260,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2605";
          checkpointNum = "1";
+         node = "4201";
    };
    new Item() {
       position = "-3.28286 -23.7984 1.83968";
@@ -270,8 +271,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2606";
          checkpointNum = "1";
+         node = "4202";
    };
    new Item() {
       position = "-3.32749 -29.7399 1.78485";
@@ -291,8 +292,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2607";
          checkpointNum = "1";
+         node = "4203";
    };
    new Item() {
       position = "-3.57703 -48.5349 3.33949";
@@ -302,8 +303,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2608";
          checkpointNum = "1";
+         node = "4204";
    };
    new InteriorInstance() {
       position = "-3.23375 -8.35728 -9.63761";
@@ -727,12 +728,12 @@ new SimGroup(MissionGroup) {
       dataBlock = "TallGrass";
    };
    new ScriptObject() {
+         powerUp = "0";
          pad = "10159";
          penaltyTime = "0";
+         time = "0";
          gemCount = "0";
          bonusTime = "0";
-         time = "0";
-         powerUp = "0";
    };
    new StaticShape() {
       position = "-1.75262 -13.8365 -1.3995";
@@ -856,10 +857,13 @@ new SimGroup(MissionGroup) {
       interiorFile = "~/data/interiors/tree.dif";
       showTerrainInside = "0";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
+   new ScriptObject() {
+         powerUp = "0";
+         pad = "16514";
+         penaltyTime = "0";
+         time = "0";
+         gemCount = "0";
+         bonusTime = "0";
    };
    new StaticShape() {
       position = "-1.12792 -8.20248 -1.64771";
@@ -1060,12 +1064,12 @@ new SimGroup(MissionGroup) {
          resetTime = "Default";
    };
    new ScriptObject() {
+         powerUp = "0";
          pad = "11889";
          penaltyTime = "0";
+         time = "0";
          gemCount = "0";
          bonusTime = "0";
-         time = "0";
-         powerUp = "0";
    };
    new Item() {
       position = "-3.71394 -74.8586 -1.64924";
@@ -1075,8 +1079,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2609";
          checkpointNum = "1";
+         node = "4205";
    };
    new Item() {
       position = "-3.72062 -81.4352 -0.168709";
@@ -1086,8 +1090,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2610";
          checkpointNum = "1";
+         node = "4206";
    };
    new StaticShape() {
       position = "-4.72968 -74.064 -1.45622";
@@ -1109,8 +1113,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2611";
          checkpointNum = "1";
+         node = "4207";
    };
    new Item() {
       position = "-3.65775 -106.305 3.34846";
@@ -1120,8 +1124,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2612";
          checkpointNum = "1";
+         node = "4208";
    };
    new StaticShape() {
       position = "-3.21467 -122.486 -1.63978";
@@ -1176,23 +1180,28 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "2613";
          checkpointNum = "1";
+         node = "4209";
    };
    new StaticShape(EndPoint) {
       position = "-3.31948 -190.856 2.35536";
       rotation = "0 0 1 89.9544";
       scale = "0.5 0.5 0.5";
       dataBlock = "EndPadAlt2";
-         beam = "2536";
+         beam = "3424";
    };
    new ScriptObject() {
-         pad = "16514";
+         powerUp = "0";
+         pad = "3263";
          penaltyTime = "0";
+         time = "0";
          gemCount = "0";
          bonusTime = "0";
-         time = "0";
-         powerUp = "0";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---
