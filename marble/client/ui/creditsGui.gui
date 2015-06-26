@@ -135,8 +135,8 @@ function CreditsGui::onWake(%this)
    
    CR_List.clear();
    CR_List.addRow(0, "Matthieu Parizeau");
-   CR_List.addRow(1, "David Luo");
-   CR_List.addRow(2, "Chris Schroeppel");
+   CR_List.addRow(1, "Chris Schroeppel");
+   CR_List.addRow(2, "David Luo");
    CR_List.addRow(3, "Tristan Voss");
    CR_List.addRow(4, "Greg McFadden");
    CR_List.addRow(5, "James Colsey");
@@ -161,8 +161,8 @@ function CreditsGui::setPage(%this, %page)
                  "Definitely the core of Marble Blast Super. The mod could not be done without him.";
       break;
       case 2: // Chris Schroeppel (Rozi)
-         %text = "<font:EntangledMBS:18>[Also known as Rozi]\n\n<font:EntangledMBS:24>Chris was mainly a level builder, but every now and then he would go in and change a couple scripts, like the manual, and the credits. Most of his time when he first joined was making the tutorial levels.";
-				 "Chris one time tried out a bit of coding learned from Whirligig231, and successfully coded the achievements: "Getting Started", "5 Down", and "10 levels", and afterwards, stopping there."
+         %text = "<font:EntangledMBS:18>[Also known as Rozi]\n\n<font:EntangledMBS:24>Chris was mainly a level builder, but every now and then he would go in and change a couple scripts, like the manual, and the credits. Most of his time when he first joined was making the tutorial levels." @
+				 "Chris one time tried out a bit of coding learned from Whirligig231, and successfully coded the achievements: \"Getting Started\", \"5 Down\", and \"10 levels\", and afterwards, stopping there.";
 		 break;
       case 3: // David Luo (davidjl123)
          %text = "<font:EntangledMBS:18>[Also known as davidjl123]\n\n<font:EntangledMBS:24>David does a lot of level building a testing. He first came up of the core idea of Marble Blast Super - nature.";
@@ -175,8 +175,8 @@ function CreditsGui::setPage(%this, %page)
          %text = "<font:EntangledMBS:18>[Also known as Skail]\n\n<font:EntangledMBS:24>Greg made every piece of music found in Marble Blast Super. The mod would be really quiet without him!";
       break;
       case 6: // James Colsey (BlastedMarble)
-         %text = "<font:EntangledMBS:18>[Also known as BlastedMarble]\n\n<font:EntangledMBS:24>James took part in almost every Advanced and Expert level, and he has done a good job with them.";
-				 "Up to June, James has taken a long break from Marble Blast Super because of problems with Constructor, and a broken computer. Hopefully we will have him back soon!"
+         %text = "<font:EntangledMBS:18>[Also known as BlastedMarble]\n\n<font:EntangledMBS:24>James took part in almost every Advanced and Expert level, and he has done a good job with them." @
+				 "Up to June, James has taken a long break from Marble Blast Super because of problems with Constructor, and a broken computer. Hopefully we will have him back soon!";
       break;
       case 7: // Erik Martin (Neon Lightning)
          %text = "<font:EntangledMBS:18>[Also known as Neon Lightning]\n\n<font:EntangledMBS:24>Various small changes, such as the " @

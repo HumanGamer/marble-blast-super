@@ -313,7 +313,7 @@ function optionsDlg::applyGraphics( %this )
 //	%newRes = OptGraphicsResolutionMenu.getText();
 //	%newBpp = OptGraphicsBPPMenu.getText();
 //	%newFullScreen = OptGraphicsFullscreenToggle.getValue();
-   pauseMusic();
+   stopMusic();
 	if ($pref::Video::displayDevice !$= getDisplayDeviceName())
 	{
 		setDisplayDevice( $pref::Video::displayDevice, 
@@ -332,7 +332,7 @@ function optionsDlg::applyGraphics( %this )
    }
    else if($pref::Video::fullScreen != isFullScreen())
       toggleFullScreen();
-   resumeMusic();
+   startMusic();
 }
 
 

@@ -68,6 +68,14 @@ new AudioDescription(AudioMusic)
 
 function playMusic(%musicFileBase)
 {
+   // Hacky fix, generate jukebox list here to not break stuff
+   JB_GenerateSongList();
+   
+   %songName = strreplace(%musicFileBase, ".ogg", "");
+   %songId = getMusicId(%songName);
+   info("Playing Song: " @ %songName @ " | " @ %songId);
+   JB_SongList.setSelectedRow(%songId);
+   
    alxStop($currentMusicHandle);
    if(isObject(MusicProfile))
       MusicProfile.delete();
@@ -89,19 +97,7 @@ function playShellMusic()
 
 function playGameMusic()
 {
-   if(!$musicFound)
-   {
-      $NumMusicFiles = 0;
-      for(%file = findFirstFile("*.ogg"); %file !$= ""; %file = findNextFile("*.ogg"))
-      {
-         if(fileBase(%file) !$= "Shell")
-         {
-            $Music[$NumMusicFiles] = fileBase(%file) @ ".ogg";
-            $NumMusicFiles++;
-         }
-      }
-      $musicFound = true;
-   } 
+   findAllMusic();
 	if (MissionInfo.music !$= "")
       playMusic(MissionInfo.music);
    else if($NumMusicFiles)
@@ -110,13 +106,19 @@ function playGameMusic()
       playMusic("Shell.ogg");
 }
 
-function pauseMusic()
+function stopMusic()
 {
    alxStop($currentMusicHandle);
 }
 
-function resumeMusic()
+function startMusic()
 {
    playMusic($currentMusicBase);
+}
+
+function restartMusic()
+{
+   stopMusic();
+   startMusic();
 }
 

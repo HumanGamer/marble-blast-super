@@ -530,4 +530,4 @@ function toggleJukebox(%val)
 
 GlobalActionMap.bind(keyboard, "tilde", toggleConsole);
 GlobalActionMap.bind(keyboard, "F5", toggleJukebox);
-GlobalActionMap.bindCmd(keyboard, "alt enter", "", "pauseMusic();toggleFullScreen();resumeMusic();");
+GlobalActionMap.bindCmd(keyboard, "alt enter", "", "stopMusic();toggleFullScreen();startMusic();");

@@ -127,6 +127,7 @@ function initClient()
    exec("./scripts/endgamegui.cs");
    exec("./scripts/achievements.cs");
    exec("./scripts/zones.cs");
+   exec("./scripts/jukebox.cs");
 
    // Default player key bindings
    exec("./scripts/default.bind.cs");
