@@ -513,5 +513,21 @@ GlobalActionMap.bind(keyboard, "F9", cycleDebugRenderMode);
 // Misc.
 //------------------------------------------------------------------------------
 
+function toggleJukebox(%val)
+{
+	if (%val)
+	{
+		if (JukeboxGui.isAwake())
+		{
+			Canvas.popDialog(JukeboxGui);
+		}
+		else
+		{
+			Canvas.pushDialog(JukeboxGui);
+		}
+	}
+}
+
 GlobalActionMap.bind(keyboard, "tilde", toggleConsole);
+GlobalActionMap.bind(keyboard, "F5", toggleJukebox);
 GlobalActionMap.bindCmd(keyboard, "alt enter", "", "pauseMusic();toggleFullScreen();resumeMusic();");

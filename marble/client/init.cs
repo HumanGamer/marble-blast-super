@@ -100,6 +100,7 @@ function initClient()
    exec("./ui/recordingDlg.gui");
    exec("./ui/replayCenterGui.gui");
    exec("./ui/AchievementPopupDlg.gui");
+   exec("./ui/JukeboxGui.gui");
 
    // Client scripts
    exec("./scripts/client.cs");
