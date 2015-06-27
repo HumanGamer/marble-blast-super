@@ -200,8 +200,8 @@ function CreditsGui::setPage(%this, %page)
          %text = "<font:EntangledMBS:18>[Also known as LZX]\n\n<font:EntangledMBS:24>Lee Zi Xian was the first main level tester to join the mod. He's helped out with various other things, like suggestions, various parts of levels, and encouragement!";
       break;
       case 11: // Emile (Eguy)
-         %text = "<font:EntangledMBS:18>[Also known as Eguy]\n\n<font:EntangledMBS:24>Emile was the second level tester to join Marble Blast Super, behind Lee Zi Xian.";
-				 "Eguy took a big part of the Marble Blast Super forums topic, as he encouraged everyone else, and stood up for himself, the mod, and the rest of the team. Thank you so much!"
+         %text = "<font:EntangledMBS:18>[Also known as Eguy]\n\n<font:EntangledMBS:24>Emile was the second level tester to join Marble Blast Super, behind Lee Zi Xian."@
+				 "Eguy took a big part of the Marble Blast Super forums topic, as he encouraged everyone else, and stood up for himself, the mod, and the rest of the team. Thank you so much!";
       break;
    }
    CreditsGuiTitle.setText(CR_List.getRowTextById(CR_List.getSelectedId()));
