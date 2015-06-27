@@ -137,7 +137,7 @@ function CreditsGui::onWake(%this)
    CreditsGuiText.setText(%text);
    
    CR_List.clear();
-   CR_List.addRow(0, "Matthieu Parizeau");
+   CR_List.addRow(0, "Matthieu the Butthole");
    CR_List.addRow(1, "Chris Schroeppel");
    CR_List.addRow(2, "David Luo");
    CR_List.addRow(3, "Tristan Voss");
@@ -193,14 +193,15 @@ function CreditsGui::setPage(%this, %page)
                  "If it wasn't for him, Marble Blast Super would not exist. Huge thanks to him for starting this amazing mod!";
       break;
       case 9: // Jamie Boyd (Lucario)
-         %text = "<font:EntangledMBS:18>[Also known as Lucario]\n\n<font:EntangledMBS:24>The second music artist to join the mod. " @
-                 "He is also a tester.";
+         %text = "<font:EntangledMBS:18>[Also known as Lucario]\n\n<font:EntangledMBS:24>Jamie was the second Marble Blast Super musician, behind Greg McFadden. " @
+                 "He first represented himself on the Marble Blast Super forums topic as a musician, and he gave out links to his current songs. The staff instantly recruited him to the mod for his amazing skills at music composition.";
       break;
       case 10: // Lee Zi Xian (LZX)
-         %text = "<font:EntangledMBS:18>[Also known as LZX]\n\n<font:EntangledMBS:24>A tester.";
+         %text = "<font:EntangledMBS:18>[Also known as LZX]\n\n<font:EntangledMBS:24>Lee Zi Xian was the first main level tester to join the mod. He's helped out with various other things, like suggestions, various parts of levels, and encouragement!";
       break;
       case 11: // Emile (Eguy)
-         %text = "<font:EntangledMBS:18>[Also known as Eguy]\n\n<font:EntangledMBS:24>A tester.";
+         %text = "<font:EntangledMBS:18>[Also known as Eguy]\n\n<font:EntangledMBS:24>Emile was the second level tester to join Marble Blast Super, behind Lee Zi Xian.";
+				 "Eguy took a big part of the Marble Blast Super forums topic, as he encouraged everyone else, and stood up for himself, the mod, and the rest of the team. Thank you so much!"
       break;
    }
    CreditsGuiTitle.setText(CR_List.getRowTextById(CR_List.getSelectedId()));
