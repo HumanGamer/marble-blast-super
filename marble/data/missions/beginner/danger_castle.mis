@@ -2,14 +2,15 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         level = "8";
          goldTime = "21000";
-         name = "Danger Castle";
          type = "beginner";
+         level = "8";
          hyperTime = "12000";
-         desc = "Explore this dangerous castle!";
-         artist = "Matthieu Parizeau";
          hasEgg = "1";
+         music = "Race of the Bumblebees.ogg";
+         name = "Danger Castle";
+         artist = "Matthieu Parizeau";
+         desc = "Explore this dangerous castle!";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -61,17 +62,17 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EndPad";
-         beam = "6683";
+         beam = "2412";
    };
    new StaticShape(StartPoint) {
       position = "-4 -68 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         beam = "7049";
+         beam = "2652";
    };
    new Item() {
-      position = "12 -8 34";
+      position = "12 -8 34.1951";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "EasterEggItem";
@@ -94,8 +95,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
          timeBonus = "5000";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-28 8 0";
@@ -217,8 +218,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
          timeBonus = "5000";
+         checkpointNum = "1";
    };
    new StaticShape() {
       position = "-11 24.5 0";
@@ -309,11 +310,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Cannon";
+         currentTime = "2306";
+         ball = "2614";
+         power = "25";
          radius = "15";
          timer = "3000";
-         ball = "7021";
-         power = "25";
-         currentTime = "960";
    };
    new StaticShape() {
       position = "-22.5 10.5 34";
@@ -597,11 +598,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Cannon";
+         currentTime = "2306";
+         ball = "2629";
+         power = "25";
          radius = "15";
          timer = "3000";
-         ball = "7035";
-         power = "25";
-         currentTime = "960";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/sound/Shell.ogg";

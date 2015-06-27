@@ -1,4 +1,4 @@
-QuArKLog> QuArK started at 6/25/2015 9:29:58 PM
+QuArKLog> QuArK started at 6/27/2015 4:55:46 PM
 QuArKLog> QuArK version is QuArK 6.6 Beta 6
 QuArKLog> Loglevel is 20
 SysLog> CPU:
@@ -8,7 +8,7 @@ SysLog> Model ID: Family 6  Model 10  Stepping 7  Level 13
 SysLog> 
 SysLog> MEMORY:
 SysLog> Physical Memory Total: 4,294,967,295 Bytes
-SysLog> Physical Memory Free: 4,294,967,295 Bytes
+SysLog> Physical Memory Free: 3,407,470,592 Bytes
 SysLog> Virtual Memory Free: 2,072,129,536 Bytes
 SysLog> 
 SysLog> OS:
@@ -28,4 +28,6 @@ SysLog> Microsoft Direct3D RGB Software Emulation
 PythonLog> PYTHON:
 PythonLog> Version: 2.4.4 (#71, Oct 18 2006, 08:34:43) [MSC v.1310 32 bit (Intel)]
 PythonLog> DLL: C:\Program Files (x86)\QuArK 6.6.0 Beta 6\dlls\python.dll
-QuArKLog> QuArK closed at 6/25/2015 9:30:14 PM
+Log> Global warning: Texture 'bms12/friction_mud' not found.
+Log> Global warning: Texture 'bms12/grid_circle_cyan' not found.
+QuArKLog> QuArK closed at 6/27/2015 4:55:57 PM
