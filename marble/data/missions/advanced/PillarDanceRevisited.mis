@@ -2,7 +2,7 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         type = "Expert";
+         type = "advanced";
          name = "Pilar Dance Revisited";
          goldTime = "13000";
          artist = "James Colsey";

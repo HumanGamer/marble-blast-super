@@ -130,6 +130,9 @@ function CreditsGui::onWake(%this)
    //%text = %text @ %colorName @ "Greg McFadden\t" @ %colorUser @ "Skail\n";
    //%text = %text @ %colorName @ "James Colsey\t" @ %colorUser @ "BlastedMarble\n";
    //%text = %text @ %colorName @ "Chris Schroeppel\t" @ %colorUser @ "Rozi\n";
+   //%text = %text @ %colorName @ "Jamie Boyd\t" @ %colorUser @ "Lucario\n";
+   //%text = %text @ %colorName @ "Lee Zi Xian\t" @ %colorUser @ "LZX\n";
+   //%text = %text @ %colorName @ "Emile\t" @ %colorUser @ "Eguy\n";
    
    CreditsGuiText.setText(%text);
    
@@ -142,6 +145,9 @@ function CreditsGui::onWake(%this)
    CR_List.addRow(5, "James Colsey");
    CR_List.addRow(6, "Erik Martin");
    CR_List.addRow(7, "Stewart Inglis");
+   CR_List.addRow(8, "Jamie Boyd");
+   CR_List.addRow(9, "Lee Zi Xian");
+   CR_List.addRow(10, "Emile");
    
    CR_List.setSelectedByID(0);
 }
@@ -157,15 +163,15 @@ function CreditsGui::setPage(%this, %page)
    {
       case 1: // Matthieu Parizeau (cooldudepoke)
          %text = "<font:EntangledMBS:18>[Also known as cooldudepoke]\n\n<font:EntangledMBS:24>Matthieu is the new leader who replaced Stewart Inglis. \n\n" @
-                 "He's done the biggest part of Marble Blast Super, which includes coding, level building, and creating textures.\n\n" @
-                 "Definitely the core of Marble Blast Super. The mod could not be done without him.";
+                 "He has contributed the most to Marble Blast Super, including coding, level building, and creating textures.\n\n" @
+                 "Matt is definitely the core of Marble Blast Super. The mod could not have been done without him.";
       break;
       case 2: // Chris Schroeppel (Rozi)
          %text = "<font:EntangledMBS:18>[Also known as Rozi]\n\n<font:EntangledMBS:24>Chris was mainly a level builder, but every now and then he would go in and change a couple scripts, like the manual, and the credits. Most of his time when he first joined was making the tutorial levels." @
-				 "Chris one time tried out a bit of coding learned from Whirligig231, and successfully coded the achievements: \"Getting Started\", \"5 Down\", and \"10 levels\", and afterwards, stopping there.";
+                 "Chris one time tried out a bit of coding learned from Whirligig231, and successfully coded the achievements: \"Getting Started\", \"5 Down\", and \"10 levels\", and afterwards, stopping there.";
 		 break;
       case 3: // David Luo (davidjl123)
-         %text = "<font:EntangledMBS:18>[Also known as davidjl123]\n\n<font:EntangledMBS:24>David does a lot of level building a testing. He first came up of the core idea of Marble Blast Super - nature.";
+         %text = "<font:EntangledMBS:18>[Also known as davidjl123]\n\n<font:EntangledMBS:24>David mainly participates in level building and testing the game. He keeps organization in order, maintaining the change log, pointing out bugs/glitches, and fixing them.";
       break;
       case 4: // Tristan Voss (Ender)
          %text = "<font:EntangledMBS:18>[Also known as Ender]\n\n<font:EntangledMBS:24>A level builder, and graphics artist.\n\n" @
@@ -176,15 +182,25 @@ function CreditsGui::setPage(%this, %page)
       break;
       case 6: // James Colsey (BlastedMarble)
          %text = "<font:EntangledMBS:18>[Also known as BlastedMarble]\n\n<font:EntangledMBS:24>James took part in almost every Advanced and Expert level, and he has done a good job with them." @
-				 "Up to June, James has taken a long break from Marble Blast Super because of problems with Constructor, and a broken computer. Hopefully we will have him back soon!";
+                 "James has taken a long break from Marble Blast Super because of problems with Constructor, and a broken computer.";
       break;
       case 7: // Erik Martin (Neon Lightning)
          %text = "<font:EntangledMBS:18>[Also known as Neon Lightning]\n\n<font:EntangledMBS:24>Various small changes, such as the " @
-                 "green editor. He has made at least one level for the game, but he is mainly a tester.";
+                 "green editor. He has made at least one level for the game, but he is mainly a tester. He was absent during much of Super's development, due to not having a working computer.";
       break;
       case 8: // Stewart Inglis (StewMan46)
          %text = "<font:EntangledMBS:18>[Also known as StewMan46]\n\n<font:EntangledMBS:24>Stewart was the first leader of the mod. " @
                  "If it wasn't for him, Marble Blast Super would not exist. Huge thanks to him for starting this amazing mod!";
+      break;
+      case 9: // Jamie Boyd (Lucario)
+         %text = "<font:EntangledMBS:18>[Also known as Lucario]\n\n<font:EntangledMBS:24>The second music artist to join the mod. " @
+                 "He is also a tester.";
+      break;
+      case 10: // Lee Zi Xian (LZX)
+         %text = "<font:EntangledMBS:18>[Also known as LZX]\n\n<font:EntangledMBS:24>A tester.";
+      break;
+      case 11: // Emile (Eguy)
+         %text = "<font:EntangledMBS:18>[Also known as Eguy]\n\n<font:EntangledMBS:24>A tester.";
       break;
    }
    CreditsGuiTitle.setText(CR_List.getRowTextById(CR_List.getSelectedId()));

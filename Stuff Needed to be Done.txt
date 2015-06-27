@@ -1,7 +1,5 @@
 Stuff Needed to be Changed:
 -----------------------------------------------------------
-- New MBS Logo
-
 - Take out current inserted .rec files in Replay Center
 
 - Finish Tutorial Levels
@@ -35,5 +33,3 @@ Stuff Needed to be Changed:
 - Make new sign textures
 
 - Redo the .dts shape for Start+End pads to 2x2
-
-- Zones
