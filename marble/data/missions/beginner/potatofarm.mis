@@ -10,6 +10,7 @@ new SimGroup(MissionGroup) {
          time = "0";
          goldTime = "4000";
          desc = "This isn\'t your average potato farm.";
+			music = "Race of the Bumblebees.ogg";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
