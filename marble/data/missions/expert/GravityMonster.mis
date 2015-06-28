@@ -638,7 +638,7 @@ new SimGroup(MissionGroup) {
       scale = "4 4 3";
       dataBlock = "HelpTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
-         text = "Tip: The lower you go before acativating the Gravity inverter, the easaier it is to complete the challenge!";
+         text = "Tip: The lower you go before activating the Gravity inverter, the easier it is to complete the challenge!";
    };
    new Trigger(Introduction) {
       position = "-13.0054 2.51041 -72.7537";
