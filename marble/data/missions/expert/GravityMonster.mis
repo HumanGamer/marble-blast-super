@@ -2,14 +2,16 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
+         useZones = "1";
+         type = "expert";
          level = "1";
+         hyperTime = "75000";
+         startHelpText = "Welcome to Gravity Monster!";
+         time = "0";
          artist = "Rozi";
+         startZone = "Gravity Monster";
          goldTime = "105000";
          name = "Gravity Monster";
-         type = "expert";
-         hyperTime = "75000";
-         time = "0";
-         startHelpText = "Welcome to Gravity Monster!";
          desc = "There\'s soo many gravity modifiers! Don\'t get dizzy!";
    };
    new MissionArea(MissionArea) {
@@ -58,28 +60,28 @@ new SimGroup(MissionGroup) {
       showTerrainInside = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
+         bonusTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         time = "0";
          pad = "5483";
-         penaltyTime = "0";
-         bonusTime = "0";
-         gemCount = "0";
-         time = "0";
-         powerUp = "0";
    };
    new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+         time = "0";
          pad = "2675";
-         penaltyTime = "0";
-         gemCount = "0";
-         bonusTime = "0";
-         time = "0";
-         powerUp = "0";
    };
    new ScriptObject() {
-         pad = "0";
          penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
-         time = "0";
          powerUp = "0";
+         time = "0";
+         pad = "0";
    };
    new Item() {
       position = "18.9 1.6 -21.6628";
@@ -96,7 +98,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90";
       scale = "1 1 1";
       dataBlock = "StartPadAlt2";
-         beam = "6501";
+         beam = "3838";
    };
    new Item() {
       position = "-18 0 -68.3798";
@@ -186,8 +188,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3829";
          checkpointNum = "1";
-         node = "6492";
    };
    new Item() {
       position = "19.6459 -19.956 -21.7138";
@@ -217,16 +219,16 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3830";
          checkpointNum = "1";
-         node = "6493";
    };
    new ScriptObject() {
-         pad = "2407";
          penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
-         time = "0";
          powerUp = "0";
+         time = "0";
+         pad = "2407";
    };
    new Item() {
       position = "19.0337 -24.0408 -23.4012";
@@ -246,7 +248,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
+         checkpointNum = "2";
    };
    new Item() {
       position = "20.2532 -22.042 13.2011";
@@ -286,8 +288,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3831";
          checkpointNum = "1";
-         node = "6494";
    };
    new Item() {
       position = "-48.9719 -21.9572 19.156";
@@ -327,8 +329,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3832";
          checkpointNum = "1";
-         node = "6495";
    };
    new Item() {
       position = "-47.9787 -118.471 1.75147";
@@ -378,7 +380,7 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
+         checkpointNum = "2";
    };
    new Item() {
       position = "20.009 -22.0011 2.24908";
@@ -388,8 +390,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3833";
          checkpointNum = "1";
-         node = "6496";
    };
    new Item() {
       position = "11.9982 -15.9994 -70.7591";
@@ -399,8 +401,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3834";
          checkpointNum = "1";
-         node = "6497";
    };
    new Item() {
       position = "-27.9947 -0.0042921 -52.2602";
@@ -410,8 +412,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3835";
          checkpointNum = "1";
-         node = "6498";
    };
    new Item() {
       position = "-15.7627 2.04208 -31.8699";
@@ -424,12 +426,12 @@ new SimGroup(MissionGroup) {
          checkpointNum = "1";
    };
    new ScriptObject() {
-         pad = "3173";
          penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
-         time = "0";
          powerUp = "0";
+         time = "0";
+         pad = "3173";
    };
    new Item() {
       position = "-49.1287 -64.1178 -9.71907";
@@ -439,8 +441,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         checkpointNum = "1";
          timeBonus = "6000";
+         checkpointNum = "1";
    };
    new Item() {
       position = "-21.3502 -19.6372 9.04445";
@@ -457,7 +459,7 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "EndPadAlt2";
-         beam = "6458";
+         beam = "3232";
    };
    new Trigger(Cheater) {
       position = "-50.4902 -186.499 20.4875";
@@ -481,16 +483,16 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
+         node = "3836";
          checkpointNum = "1";
-         node = "6499";
    };
    new ScriptObject() {
-         pad = "2406";
          penaltyTime = "0";
          gemCount = "0";
          bonusTime = "0";
-         time = "0";
          powerUp = "0";
+         time = "0";
+         pad = "2406";
    };
    new Trigger(GravityMonsterHelpTrigger) {
       position = "-49.9994 -253.984 20.4676";
@@ -508,7 +510,8 @@ new SimGroup(MissionGroup) {
       collideable = "0";
       static = "1";
       rotate = "1";
-         node = "6500";
+         node = "3837";
+         checkpointNum = "1";
    };
    new Trigger(GravityMonsterHelpTrigger) {
       position = "5.9905 1.99754 -72.772";
@@ -559,7 +562,7 @@ new SimGroup(MissionGroup) {
          text = "Challenge Two: Gravity Boost";
    };
    new Trigger(GravityMonsterHelpTrigger) {
-      position = "-44.0025 1.99439 -31.7721";
+      position = "-38.0025 1.99439 -31.7721";
       rotation = "1 0 0 0";
       scale = "4 4 3";
       dataBlock = "HelpTrigger";
@@ -614,17 +617,119 @@ new SimGroup(MissionGroup) {
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
          text = "Final Challenge: Double Fall Revisited";
    };
-   new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
-      description = "AudioMusic";
-      preload = "0";
-   };
    new Trigger(Boundaries) {
-      position = "-104.976 29.9914 -81.0743";
+      position = "-108.976 29.9914 -81.0743";
       rotation = "1 0 0 0";
       scale = "200 300 150";
       dataBlock = "InBoundsTrigger";
       polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+         time = "0";
+         pad = "2390";
+   };
+   new Trigger(GravityMonsterHelpTrigger) {
+      position = "-50.0014 -33.9902 -0.249708";
+      rotation = "1 0 0 0";
+      scale = "4 4 3";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         text = "Tip: The lower you go before acativating the Gravity inverter, the easaier it is to complete the challenge!";
+   };
+   new Trigger(Introduction) {
+      position = "-13.0054 2.51041 -72.7537";
+      rotation = "1 0 0 0";
+      scale = "41.5 21 10";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "Introduction";
+   };
+   new Trigger(C2) {
+      position = "-48.5033 2.50437 -52.2587";
+      rotation = "1 0 0 0";
+      scale = "9 5 24";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "(2) Gravity Boost";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+         time = "0";
+         pad = "8371";
+   };
+   new Trigger(C1) {
+      position = "-37.9978 2.50201 -68.7275";
+      rotation = "1 0 0 0";
+      scale = "24 5 36";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "(1) Basic Gravity";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+         time = "0";
+         pad = "10814";
+   };
+   new ScriptObject() {
+         penaltyTime = "0";
+         gemCount = "0";
+         bonusTime = "0";
+         powerUp = "0";
+         time = "0";
+         pad = "11788";
+   };
+   new Trigger(C3) {
+      position = "-38.004 2.48916 -31.7562";
+      rotation = "1 0 0 0";
+      scale = "58.5 19.5 12.5";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "(2) Flight";
+   };
+   new Trigger(C4) {
+      position = "-4.50952 -17.4531 -23.7474";
+      rotation = "1 0 0 0";
+      scale = "24.5 9 36";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "(2) Flight";
+   };
+   new Trigger(C5) {
+      position = "-50.4919 -17.4683 12.2695";
+      rotation = "1 0 0 0";
+      scale = "103 9 8";
+      dataBlock = "ZoneTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         zoneName = "(2) Flight";
+   };
+   new Trigger(CPTrigger) {
+      position = "-50.0039 -18.001 -0.251917";
+      rotation = "1 0 0 0";
+      scale = "4 8 1";
+      dataBlock = "CheckPointTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         target = "GMCheckpoint";
+   };
+   new StaticShape(GMCheckpoint) {
+      position = "-47.9497 -22.0261 -0.257";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "CheckPointShape";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
    };
 };
 //--- OBJECT WRITE END ---
