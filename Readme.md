@@ -13,8 +13,6 @@ davidjl123 . . . . . . General
 
 cooldudepoke . . . . . General
 
-Neon Lightning . . . . Coding
-
 BlastedMarble .. . . . Levels
 
 Rozi . . . . . . . . . Levels
