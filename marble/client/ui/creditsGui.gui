@@ -167,7 +167,7 @@ function CreditsGui::setPage(%this, %page)
                  "Matt is definitely the core of Marble Blast Super. The mod could not have been done without him.";
       break;
       case 2: // Chris Schroeppel (Rozi)
-         %text = "<font:EntangledMBS:18>[Also known as Rozi]\n\n<font:EntangledMBS:24>Chris was mainly a level builder, but every now and then he would go in and change a couple scripts, like the manual, and the credits. Most of his time when he first joined was making the tutorial levels." @
+         %text = "<font:EntangledMBS:18>[Also known as Rozi]\n\n<font:EntangledMBS:24>Chris was mainly a level builder, but every now and then he would go in and change a couple scripts, like the manual, and the credits. Most of his time when he first joined was making the tutorial levels. The MBS team is very proud of Rozi! " @
                  "Chris one time tried out a bit of coding learned from Whirligig231, and successfully coded the achievements: \"Getting Started\", \"5 Down\", and \"10 levels\", and afterwards, stopping there.";
 		 break;
       case 3: // David Luo (davidjl123)
@@ -178,7 +178,7 @@ function CreditsGui::setPage(%this, %page)
                  "Tristan was here from the beginning. If it wasn't for him, this mod wouldn't have continued.";
       break;
       case 5: // Greg McFadden (Skail)
-         %text = "<font:EntangledMBS:18>[Also known as Skail]\n\n<font:EntangledMBS:24>Greg made every piece of music found in Marble Blast Super. The mod would be really quiet without him!";
+         %text = "<font:EntangledMBS:18>[Also known as Skail]\n\n<font:EntangledMBS:24>Greg was the 1st music artist in Marble Blast Super. The mod would be really quiet without him!";
       break;
       case 6: // James Colsey (BlastedMarble)
          %text = "<font:EntangledMBS:18>[Also known as BlastedMarble]\n\n<font:EntangledMBS:24>James took part in almost every Advanced and Expert level, and he has done a good job with them." @
@@ -193,14 +193,14 @@ function CreditsGui::setPage(%this, %page)
                  "If it wasn't for him, Marble Blast Super would not exist. Huge thanks to him for starting this amazing mod!";
       break;
       case 9: // Jamie Boyd (Lucario)
-         %text = "<font:EntangledMBS:18>[Also known as Lucario]\n\n<font:EntangledMBS:24>The second music artist to join the mod. " @
-                 "He is also a tester.";
+         %text = "<font:EntangledMBS:18>[Also known as Lucario]\n\n<font:EntangledMBS:24>Jamie Boyd was the 2nd music artist to join this mod after Skail, We are all grateful for his skills of FL Studio 10. " @
+                 "Jamie Boyd is also a tester for both levels and bugs. We are all grateful for the testers that contribute their time into MBS.";
       break;
       case 10: // Lee Zi Xian (LZX)
-         %text = "<font:EntangledMBS:18>[Also known as LZX]\n\n<font:EntangledMBS:24>A tester.";
+         %text = "<font:EntangledMBS:18>[Also known as LZX]\n\n<font:EntangledMBS:24>Lee Zi Xian is a tester for both bugs and levels. We are all grateful for the testers that contribute their time into MBS.";
       break;
       case 11: // Emile (Eguy)
-         %text = "<font:EntangledMBS:18>[Also known as Eguy]\n\n<font:EntangledMBS:24>A tester.";
+         %text = "<font:EntangledMBS:18>[Also known as Eguy]\n\n<font:EntangledMBS:24>Eguy is a tester for both bugs and levels. We are all grateful for the testers that contribute their time into MBS.";
       break;
    }
    CreditsGuiTitle.setText(CR_List.getRowTextById(CR_List.getSelectedId()));
