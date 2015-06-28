@@ -137,7 +137,7 @@ function CreditsGui::onWake(%this)
    CreditsGuiText.setText(%text);
    
    CR_List.clear();
-   CR_List.addRow(0, "Matthieu the Butthole");
+   CR_List.addRow(0, "Matthieu Parizeau");
    CR_List.addRow(1, "Chris Schroeppel");
    CR_List.addRow(2, "David Luo");
    CR_List.addRow(3, "Tristan Voss");
@@ -197,7 +197,7 @@ function CreditsGui::setPage(%this, %page)
                  "He first represented himself on the Marble Blast Super forums topic as a musician, and he gave out links to his current songs. The staff instantly recruited him to the mod for his amazing skills at music composition.";
       break;
       case 10: // Lee Zi Xian (LZX)
-         %text = "<font:EntangledMBS:18>[Also known as LZX]\n\n<font:EntangledMBS:24>Lee Zi Xian was the first main level tester to join the mod. He's helped out with various other things, like suggestions, various parts of levels, and encouragement!";
+         %text = "<font:EntangledMBS:18>[Also known as LZX]\n\n<font:EntangledMBS:24>Lee Zi Xian was the first main level tester to join the mod. He's helped out with various other things, like suggestions, various parts of levels, and endless encouragement!";
       break;
       case 11: // Emile (Eguy)
          %text = "<font:EntangledMBS:18>[Also known as Eguy]\n\n<font:EntangledMBS:24>Emile was the second level tester to join Marble Blast Super, behind Lee Zi Xian."@
