@@ -2,7 +2,7 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         name = "Changing the Course of Time";
+         name = "Training: Time Travel";
          desc = "Stop and skip time using the TimeTravel PowerUp!";
          type = "Tutorial";
          level = "8";

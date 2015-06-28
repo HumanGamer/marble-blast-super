@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          level = "11";
          startHelpText = "The Bouncy Floor will launch you upwards. Use it to complete this level.";
-         name = "Bouncy";
+         name = "Training: Bouncy Floor";
          type = "Tutorial";
          artist = "Ender";
          goldTime = "30000";

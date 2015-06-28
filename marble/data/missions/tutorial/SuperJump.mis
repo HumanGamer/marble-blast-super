@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          level = "5";
          startHelpText = "Use the SuperJump PowerUp to get boosted! Jump before using the PowerUp to gain extra height!";
-         name = "Jumping Higher";
+         name = "Training: Super Jump";
          type = "tutorial";
          artist = "Rozi";
          goldTime = "7000";

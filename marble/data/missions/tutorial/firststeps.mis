@@ -2,7 +2,7 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         name = "First Steps";
+         name = "Training: Rolling";
          desc = "Welcome to Marble Blast Super! Learn how to roll in this level.";
          type = "Tutorial";
          hasEgg = "1";

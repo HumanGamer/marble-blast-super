@@ -10,7 +10,7 @@ new SimGroup(MissionGroup) {
          artist = "Matthieu Parizeau";
          hyperTime = "7000";
          desc = "Learn how to roll with water!";
-         name = "At The Pool";
+         name = "Training: Water";
          level = "4";
    };
    new MissionArea(MissionArea) {
