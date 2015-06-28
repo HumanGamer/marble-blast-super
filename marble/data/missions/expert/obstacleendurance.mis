@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          level = "2";
          hasEgg = "1";
-         startHelpText = "Have fun!";
+         startHelpText = "Are you brave enough to pass all of the obstacles and hazards? Go! Go! Go!";
          name = "Obstacle Endurance";
          time = "0";
          artist = "Ender";
