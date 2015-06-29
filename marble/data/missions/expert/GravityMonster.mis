@@ -12,7 +12,7 @@ new SimGroup(MissionGroup) {
          startZone = "Gravity Monster";
          goldTime = "105000";
          name = "Gravity Monster";
-         desc = "There\'s soo many gravity modifiers! Don\'t get dizzy!";
+         desc = "There\'s alot of many gravity modifiers! Don\'t get dizzy!";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -727,7 +727,7 @@ new SimGroup(MissionGroup) {
       dataBlock = "CheckPointShape";
    };
    new AudioProfile(MusicProfile) {
-      fileName = "~/data/sound/Shell.ogg";
+      fileName = "~/data/sound/Dark Times Ahead.ogg";
       description = "AudioMusic";
       preload = "0";
    };
