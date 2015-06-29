@@ -10,7 +10,7 @@ new SimGroup(MissionGroup) {
          goldTime = "15000";
          desc = "A level with a view!";
          gameType = "SinglePlayer";
-         name = "Training: 2D Marble Blast";
+         name = "A Different Perspective";
          type = "tutorial";
          canSaveDynamicFields = "1";
    };

@@ -3,7 +3,7 @@ new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
          time = "0";
-         name = "Training: The Platform Trio";
+         name = "Meet the Platform Trio";
          desc = "There are three different kinds of platforms that have purposes other than giving the marble a place to roll on!";
          goldTime = "15000";
          type = "tutorial";

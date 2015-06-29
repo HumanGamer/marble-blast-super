@@ -2,7 +2,7 @@
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         name = "Training: GravityChangers And GravityInverters";
+         name = "Flipping Gravity";
          type = "tutorial";
          hasEgg = "1";
          time = "0";

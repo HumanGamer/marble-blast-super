@@ -26,7 +26,8 @@ Greg McFadden		Skail
 James Colsey		BlastedMarble
 Chris Schroeppel	Rozi
 Lee Zi Xian		LZX
-Jamie Boyd                               Lucario
+Jamie Boyd		Lucario
+Emile			Eguy
 
 Overview
 --------

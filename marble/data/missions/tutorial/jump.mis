@@ -8,7 +8,7 @@ new SimGroup(MissionGroup) {
          artist = "davidjl123";
          goldTime = "13250";
          hyperTime = "7000";
-         name = "Training: Jumping";
+         name = "Hopping";
          time = "0";
          type = "Tutorial";
          hasEgg = "1";

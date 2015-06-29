@@ -4,7 +4,7 @@ new SimGroup(MissionGroup) {
    new ScriptObject(MissionInfo) {
          artist = "davidjl123";
          level = "6";
-         name = "Training: Super Speed";
+         name = "Speeding";
          music = "Blackout.ogg";
          type = "Tutorial";
          time = "0";

@@ -6,7 +6,7 @@ new SimGroup(MissionGroup) {
          hyperTime = "6500";
          desc = "Something is keeping you from finishing the level!";
          artist = "Rozi";
-         name = "Training: Gems";
+         name = "Collection";
          type = "tutorial";
          goldTime = "10000";
          startHelpText = "You can\'t finish the level without collecting every gem. Find them all!";
