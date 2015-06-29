@@ -132,7 +132,7 @@ function CreditsGui::onWake(%this)
    //%text = %text @ %colorName @ "Chris Schroeppel\t" @ %colorUser @ "Rozi\n";
    //%text = %text @ %colorName @ "Jamie Boyd\t" @ %colorUser @ "Lucario\n";
    //%text = %text @ %colorName @ "Lee Zi Xian\t" @ %colorUser @ "LZX\n";
-   //%text = %text @ %colorName @ "Emile\t" @ %colorUser @ "Eguy\n";
+   //%text = %text @ %colorName @ "Emile Serper\t" @ %colorUser @ "Eguy\n";
    
    CreditsGuiText.setText(%text);
    
@@ -147,7 +147,7 @@ function CreditsGui::onWake(%this)
    CR_List.addRow(7, "Stewart Inglis");
    CR_List.addRow(8, "Jamie Boyd");
    CR_List.addRow(9, "Lee Zi Xian");
-   CR_List.addRow(10, "Emile");
+   CR_List.addRow(10, "Emile Serper");
    
    CR_List.setSelectedByID(0);
 }
@@ -199,7 +199,7 @@ function CreditsGui::setPage(%this, %page)
       case 10: // Lee Zi Xian (LZX)
          %text = "<font:EntangledMBS:18>[Also known as LZX]\n\n<font:EntangledMBS:24>Lee Zi Xian is a tester for both bugs and levels. We are all grateful for the testers that contribute their time into MBS.";
       break;
-      case 11: // Emile (Eguy)
+      case 11: // Emile Serper (Eguy)
          %text = "<font:EntangledMBS:18>[Also known as Eguy]\n\n<font:EntangledMBS:24>Eguy is a tester for both bugs and levels. We are all grateful for the testers that contribute their time into MBS.";
       break;
    }
