@@ -536,7 +536,7 @@ May 29, 2014
 - friction, grid_cool, grid_super, grid_warm, grid_wavy and mbs_wall textures changed
 
 =========================================================
-ALPHA 1.8.6
+ALPHA 1.8.4
 September 20, 2013
 
 - 1 new level (Cold Blueness)
@@ -550,14 +550,14 @@ September 20, 2013
 - playMission.gui not messy anymore
 
 =========================================================
-ALPHA 1.8.5
+ALPHA 1.8.3
 August 31, 2013
 
 - Wall and brick textures changed
 - Title screen changed
 
 =========================================================
-ALPHA 1.8.4
+ALPHA 1.8.2
 August 24, 2013
 
 - 3 new levels (Ascent, How to: SuperGlider, How to: Gravity)
@@ -566,7 +566,7 @@ August 24, 2013
 - New loading GUI
 
 =========================================================
-ALPHA 1.8.3
+ALPHA 1.8.1
 August 23, 2013
 
 - 1 new level (How To: Hazards)
@@ -574,7 +574,7 @@ August 23, 2013
 - New UI textures
 
 =========================================================
-ALPHA 1.8.2
+ALPHA 1.8
 August 23, 2013
 
 - 2 modified levels (How to: SuperSpring, How to: SuperSprint)
