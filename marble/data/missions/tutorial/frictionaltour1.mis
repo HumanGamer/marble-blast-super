@@ -7,7 +7,7 @@ new SimGroup(MissionGroup) {
          type = "Tutorial";
          goldTime = "16000";
          artist = "Ender";
-         name = "Training: Frictions";
+         name = "Frictional Tour";
          time = "0";
          startHelpText = "Explore all the different frictions.";
    };
